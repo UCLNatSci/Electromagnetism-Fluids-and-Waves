@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Reynolds number &#8212; Fluids</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. A title" href="demo-exercise.html" />
+    <link rel="prev" title="6. Newtonian vs non-Newtonian fluids" href="newtonian.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fluids</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mathideas.html">
+   1. Mathematical background
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualise.html">
+   2. Visualising fluid motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="helmholtz.html">
+   3. Helmholtz decomposition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="potential_flows.html">
+   4. Potential flows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="navstok.html">
+   5. Navier-Stokes Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="newtonian.html">
+   6. Newtonian vs non-Newtonian fluids
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Reynolds number
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demo-exercise.html">
+   8. A title
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fluids/reynolds.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/reynolds.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="reynolds-number">
+<h1><span class="section-number">7. </span>Reynolds number<a class="headerlink" href="#reynolds-number" title="Permalink to this headline">¶</a></h1>
+<p>Big idea: Characterising viscous and inertial effects
+The Reynolds number gives a rough indication of the relative importance of inertial and viscous effects, and a way to easily make comparisons between experiments that use different fluids (viscosities) or differently sized apparatus. High and low Reynolds number flows are found to have quite different general characteristics, which can be investigated by scaling arguments in which the flow quantities are related to powers of the Reynolds number.</p>
+<ul class="simple">
+<li><p>How are curl and div of velocity related to sliding and squashing?</p></li>
+</ul>
+<p>Non-dimensionalisation
+Consider the conservation of momentum equation we obtained previously, before non-dimensionalisation.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3e3d033a-82b2-4a03-8ff1-3f7aab0a8d75">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-3e3d033a-82b2-4a03-8ff1-3f7aab0a8d75" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla\underline{v}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}+\underline{F}.\end{equation}\]</div>
+<p>We may introduce non-dimensional variables using a characteristic length scale <span class="math notranslate nohighlight">\(L\)</span>, velocity <span class="math notranslate nohighlight">\(U\)</span>, time <span class="math notranslate nohighlight">\(T\)</span>, pressure <span class="math notranslate nohighlight">\(P\)</span> and body force <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-08e1336f-9a4e-411e-bae4-f4e0728849ef">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-08e1336f-9a4e-411e-bae4-f4e0728849ef" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{v}_*=\frac{\underline{v}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}^*=\frac{\underline{F}}{g}\end{equation}\]</div>
+<p>Making these substitutions gives:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-38d30693-5d24-4e04-872c-f8914433e8f6">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-38d30693-5d24-4e04-872c-f8914433e8f6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{v}_*}{\partial t_*}+\underline{v_*}.\nabla_* \underline{v_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{v_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
+<p>The following dimensionless parameters now appear in the normalized momentum equation:</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{St}=\frac{L}{TU}\)</span></p>
+<p>Strouhal number</p>
+<p><span class="math notranslate nohighlight">\(~\frac{\text{local accelaration}}{\text{convective acceleration}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{UL}{\nu}\)</span></p>
+<p>Reynolds number</p>
+<p><span class="math notranslate nohighlight">\(~\frac{\text{inertia}}{\text{viscous effects}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mathrm{Fr}=\frac{U^2}{gL}\)</span></p>
+<p>Froude number</p>
+<p><span class="math notranslate nohighlight">\(~\frac{\text{inertia}}{\text{body force}}\)</span></p>
+<p>If any of these quantities is large/small then we may construct an approximate solution by neglecting relevant terms in the equation. In the Navier Stokes equations presented in the previous chapter, the body force was neglected and it was assumed that the scales of local acceleration, inertia and pressure are comparable so that the following non-dimensionalisations of time and velocity are sensible:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1a85a04d-7597-4af0-967a-7860ce090a85">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-1a85a04d-7597-4af0-967a-7860ce090a85" title="Permalink to this equation">¶</a></span>\[\begin{equation}p=\frac{p_*}{\rho U^2}, \quad t=\frac{U t*}{L}.\end{equation}\]</div>
+<p>We obtain the equation given previously. The asterisks can dropped, because from now on we will always work with dimensionless quantities:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-13b9800b-7715-4c32-990e-325c85222ac9">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-13b9800b-7715-4c32-990e-325c85222ac9" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla \underline{v}=-\nabla p + \mathrm{Re}^{-1} \Delta\underline{v}\end{equation}\]</div>
+<p>The choice of characteristic length and velocity scales is somewhat arbitrary, but should be done to ensure that the physical quantities are <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span> or smaller. The characteristic length scale should be chosen as a typical distance over which the fluid velocity changes by an amount of order <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>Defining a characteristic length scale is not always easy, though fortunately practices have been established (at least for classical geometries) through years of study and enhanced understanding about flows. For instance, in the case of developed fluid flow through a pipe or channel the relevant characteristic length scale is the diameter of the enclosure. For unconfined flows, such as the flow of oncoming fluid over a flat plate it is more challenging to define a suitable length scale. We may, in that case, define the Reynolds number based on some fixed downstream reference distance from the leading edge of the plate that is applicable to the region of interest.</p>
+<p>Why we introduce the Reynolds number</p>
+<ol class="simple">
+<li><p>To simplify comparison between experiments:</p></li>
+</ol>
+<p>Example: Consider a hypothetical experiment in which fluid flows through a long channel between two walls. In this experiment we might take the characteristic velocity and length scales to to be the average velocity (determined by the mass flow rate) and the distance between the two walls (or the maximum distance if they are curved).</p>
+<br>
+<a class="reference internal image-reference" href="../_images/channel.png" id="channel"><img alt="channel flow" class="align-center" id="channel" src="../_images/channel.png" style="width: 288.0px; height: 76.0px;" /></a>
+<br>
+<p>Now suppose that we wish to repeat the experiment with the walls moved further apart. The geometry of the problem remains otherwise the same, and so the only thing that changes in the non-dimensionalised problem is the Reynolds number. The effect of moving the walls further apart is identical to the effect of either increasing the velocity or decreasing the viscosity - since each of these changes only results in an increase in the Reynolds number. This allows experimenters to use reduced scale models to investigate fluid phenomena (e.g. aerodynamic performance), by substituting the fluid (e.g. air) for a more viscous fluid (e.g. water). Broadly speaking, we can use a single parameter to compare results between multiple experiments.</p>
+<ol class="simple">
+<li><p>To quantify the relationship between viscous and inertial terms:</p></li>
+</ol>
+<p>To see why the Reynolds number is important, notice that in the dimensional form of the equations we have</p>
+<p>inertial term: <span class="math notranslate nohighlight">\(\underline{v}.\nabla\underline{v} =\mathcal{O}(U^2/L)\)</span>
+viscous term: <span class="math notranslate nohighlight">\(\nu\Delta\underline{v} =\mathcal{O}(\nu U/L^2)\)</span>
+So the ratio of inertial<span class="math notranslate nohighlight">\(/\)</span>viscous terms is <span class="math notranslate nohighlight">\(\mathcal{O}\left(\frac{U^2/L}{\nu U/L^2}\right)=\mathcal{O}(\mathrm{Re})\)</span>.</p>
+<p>The Reynolds number therefore gives a rough indication of the relative importance of inertial and viscous effects. At low Reynolds numbers (<span class="math notranslate nohighlight">\(\mathrm{Re}\ll 1)\)</span> the effects of viscosity appear to be very important whilst at high Reynolds numbers (<span class="math notranslate nohighlight">\(\mathrm{Re\gg 1}\)</span>) the effects of inertia appear to dominate.</p>
+<p>See also: <a class="reference external" href="https://ed.ted.com/lessons/human-sperm-vs-the-sperm-whale-aatish-bhatia">https://ed.ted.com/lessons/human-sperm-vs-the-sperm-whale-aatish-bhatia</a></p>
+<p>Example: Low Reynolds number flow
+If the Reynolds number is very small (e.g. for very viscous flows) then we can neglect the inertial terms <span class="math notranslate nohighlight">\(\underline{v}.\nabla\underline{v}\)</span> to leave</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9ce4c908-355b-4abf-b7da-c3acabf1a631">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-9ce4c908-355b-4abf-b7da-c3acabf1a631" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}+\underline{F}.\end{equation}\]</div>
+<p>If we are interested in steady solutions in the absence of a body force, the system reduces to the equation for Stokes flow (creeping flow):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ae239f06-ff5b-4f8d-840b-09e78757ef4d">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-ae239f06-ff5b-4f8d-840b-09e78757ef4d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{v}-\nabla p=\underline{0}, \quad \nabla.\underline{v}=0.\end{equation}\]</div>
+<p>The flow governed by this pair of equations exhibits the fascinating property of reversibility. If the boundary conditions conditions applied to the fluid are reversed, the fluid particles will return back along their previous paths. A striking demonstration of this phenomenon can be found here:</p>
+<p><a class="reference external" href="https://fyfluiddynamics.com/2012/02/the-reversibility-of-laminar-mixing-often-comes-as/">https://fyfluiddynamics.com/2012/02/the-reversibility-of-laminar-mixing-often-comes-as/</a></p>
+<p>This has important implications for the swimming of microcellular organisms, which are unable to propel themselves using flapping or “paddling” motions. The finding is known as the scallop theorem, since the opening and closing swimming mechanism used by scallops would be ineffective at low Reynolds numbers.</p>
+<p>Organisms that inhabit a low Reynolds number world employ a variety of exotic swimming techniques to overcome these limitations, such as the use of corkscrewing flagella. Discussion can be found in a delightful, original paper on Life at Low Reynolds Numbers by E.M. Purcell. I also recommend watching a portion (from 25:00) of this lecture by the legendary fluid dynamicist G.I. Taylor, given over half a century ago.</p>
+<p>We must be very careful when neglecting terms. For example, consider a cylinder placed into an oncoming highly viscous 2D fluid flow of velocity <span class="math notranslate nohighlight">\(U\)</span>, as shown in the image below. If we define <span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{Ua}{\nu}\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> is the diameter of the cylinder, then the effect of inertia will apparently be negligible near to the cylinder. However, away from the boundary the characteristic length scale associated with changes in velocity is larger, as the flow becomes more and more uniform. Therefore the effects of inertia are more important in the outer flow regions.</p>
+<p>Hele Shaw flow</p>
+<p>In fact, if the effects of inertia are neglected away from the surface of the sphere then the mathematical equations are ill-posed and it becomes impossible to satisfy appropriate boundary conditions for the far-field. This is known as Stokes’ paradox. It can be resolved by taking a different approximation away from the boundary, that includes inertial terms; and blending or “matching” the expressions obtained from each of the two approximations. The mathematics required to do this is known as matched asymptotics.</p>
+<p>It is based on the idea of starting with the full non-dimensional Navier stokes equations and constructing scaling arguments that relate fluid quantities to powers of the Reynolds number, to allow balancing of different physical effects in the equations. Different scaling laws apply in different regimes of the flow, based on physical assumptions, such as the distance from a boundary. We will not study the techniques of matched asymptotics as it is a very involved subject. Although the history of matched asymptotics is strongly associated with fluid dynamics, it has wide applications to areas including quantum mechanics. The techniques are usually first encountered in graduate level courses, and we will not attempt an investigation here, though a “toy” demonstration is given at the end of this chapter.</p>
+<p>High Reynolds number flow
+In the case of High Reynolds number flow it is the viscous effects that appear to be small. Neglecting the viscous terms <span class="math notranslate nohighlight">\(\nu\Delta \underline{v}\)</span>  results in the Euler’s equations of fluid dynamics, which we will examine in the next chapter. Again, however, we need to be extremely careful.</p>
+<p>Let us return to the idea of a cylinder placed into an oncoming flow- this time at high speed. Early experimenters and mathematicians did not have the techniques of high speed photography available to them, and there was disagreement about what happens at the fluid boundary. Many believed that fluid particles would “stick” to the boundary and transfer momentum, whilst others believed that the flow would move smoothly past the boundary.</p>
+<p>Neither approach fitted well with the equations of motion. On one hand, transfer of momentum within the fluid requires viscosity, and it would be impossible to satisfy the no-slip condition at the boundary if these effects were neglected. On the other hand, it is plain from scaling arguments that for high speed flows of low viscosity fluid (such as air) the effects of viscosity should be much less important than inertia. We will also see later in this course that ignoring the no slip condition results in D’Alembert’s paradox of zero drag, and zero lift - meaning that aeroplanes would never fly!</p>
+<p>The difficulty was eventually understood by Prandtl (1904), who reasoned for the existence of a narrow region called a boundary layer, in which the horizontal velocity increases rapidly in the direction away from the plate. In this region, viscous terms are comparable in magnitude to inertial terms, and act to decelerate the flow at the surface by diffusion of momentum. The viscous solution is then matched to the inviscid solution at the edge of the boundary layer to form a composite solution that is valid throughout the entire flow field. Matched asymptotics again!</p>
+<p>An illustration of the concept of a boundary layer is provided below. The image comes from this paper about the history of boundary layer theory, which I think is written in a way that is fairly accessible to undergraduate physicists.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/shear_layer.png" id="shear-layer"><img alt="boundary layer" class="align-center" id="shear-layer" src="../_images/shear_layer.png" style="width: 236.0px; height: 165.60000000000002px;" /></a>
+<br>
+<p>Transition to turbulence
+A key feature of interest to mathematicians and engineers is the development of models that can account for laminar-turbulent transition. A laminar flow is an orderly flow characterised by fluid layers moving smoothly past one another, whilst a turbulent state is characterised by disordered, chaotic motion occurring a variety of length scales (a “cascade” of scales). Transition between these states can occur spontaneously, as illustrated in the video example below.</p>
+<p>In the experiment, fluid under carefully controlled conditions is ran through a pipe. Dye is injected into the flow to visualise how the fluid particles behave. This type of visualisation is called a streakline. You will read about streaklines in the next chapter. In the experiment, the speed of the fluid in the pipe is gradually increased, which is seen to result in transition from a laminar to a turbulent state.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=CAM-ubZIdFg">https://www.youtube.com/watch?v=CAM-ubZIdFg</a></p>
+<p>A good understanding of the features of the conditions that lead to turbulence could help with engineers learn to control transition. For an example discussion, see this video [2:30-8:05]. Sometimes the desire may be to facilitate turbulence, for instance as an efficient mechanism of heat transfer or a means of achieving liquid-jet breakup in fuel injection systems. Conversely, in aerodynamic applications turbulent skin-friction drag can be as much as ten times that of laminar flow at the same Reynolds number, and accounts for 50% of the total drag experienced by a subsonic aircraft. This means that any reduction in turbulence offers huge potential for fuel savings as well as reduction of greenhouse gases and other pollutants.</p>
+<p>The pipe flow experiment shown in the video is a classic, which was studied by Osborne Reynolds (after whom the number is named). He conducted experiments similar to the one shown, with more rudimentary apparatus, and he also developed the mathematical theory of laminar-turbulent transition in pipe flows.</p>
+<p>The mathematical theory begins by first solving the equations of motion for steady flow in a pipe <span class="math notranslate nohighlight">\(U(r)\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> is the radial coordinate. The flow velocity is found to follow a parabolic flow profile. We will illustrate the mathematics later in this course, when we look at elementary viscous flows.</p>
+<p>It is then assumed that the steady flow is subjected to some small amplitude disturbances (perturbations) in the manner \begin{equation}\underline{v}=(U(y),0,0)+\epsilon\hat{\underline{v}},\end{equation} where <span class="math notranslate nohighlight">\(\epsilon\)</span> is a small parameter and <span class="math notranslate nohighlight">\(\hat{\underline{v}}\)</span> are motions of the sort you considered when you solved the wave equation. These additional terms represent tiny background fluid motions such as vibrations, or disturbances created at the point where dye is injected into the flow or where the fluid enters the pipe.</p>
+<p>We solve the equations of motion for the combined motion and determine what happens to the amplitude of the waves. This is called a perturbation theory. We want to establish if the perturbations are amplified or damped, with assumption that amplified perturbations will eventually become large enough to trigger a nonlinear cascade (instability).</p>
+<p>The results of the linear theory for pipe flow suggest that the flow should remain stable up to very large Reynolds numbers, meaning for flow speeds that are very fast. However, very carefully controlled experiments have indicated that a turbulent state in pipe flows occurs at much lower Reynolds numbers than what the linear theory predicts, suggesting that a nonlinear theory is required.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./fluids"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="newtonian.html" title="previous page"><span class="section-number">6. </span>Newtonian vs non-Newtonian fluids</a>
+    <a class='right-next' id="next-link" href="demo-exercise.html" title="next page"><span class="section-number">8. </span>A title</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
