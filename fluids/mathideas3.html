@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Mathematical ideas 3 &#8212; Fluids</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Navier-Stokes Equations" href="navstok.html" />
+    <link rel="prev" title="2. Mathematical ideas 2" href="mathideas2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fluids</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mathideas1.html">
+   1. Visualising fluid motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mathideas2.html">
+   2. Mathematical ideas 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Mathematical ideas 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="navstok.html">
+   4. Navier-Stokes Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demo-exercise.html">
+   5. A title
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/fluids/mathideas3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fluids/mathideas3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/mathideas3.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/fluids/mathideas3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vorticity">
+   3.1. Vorticity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-flux">
+   3.2. What is
+   <strong>
+    flux
+   </strong>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-divergence">
+   3.3. What is
+   <strong>
+    divergence
+   </strong>
+   ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   3.4.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potential-flows">
+   3.5. Potential flows
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="mathematical-ideas-3">
+<h1><span class="section-number">3. </span>Mathematical ideas 3<a class="headerlink" href="#mathematical-ideas-3" title="Permalink to this headline">¶</a></h1>
+<p><strong>In this section:</strong></p>
+<ul class="simple">
+<li><p>How can a <strong>vortex</strong> have zero <strong>vorticity</strong> ?</p></li>
+<li><p>How are curl and div of velocity related to sliding and squashing?</p></li>
+<li><p>What is a “potential flow”? [possibly move to its own section]</p></li>
+</ul>
+<div class="section" id="vorticity">
+<h2><span class="section-number">3.1. </span>Vorticity<a class="headerlink" href="#vorticity" title="Permalink to this headline">¶</a></h2>
+<p>Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector <span class="math notranslate nohighlight">\((u,v,w)\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-99d05695-1f5d-473e-b63d-f2d756d73b6b">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-99d05695-1f5d-473e-b63d-f2d756d73b6b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{v}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
+<p>An illustrated interpretation of vorticity is given below, looking only at the <span class="math notranslate nohighlight">\(z\)</span>-component for simplicity. Note that the subscript notation used on the diagram represents partial differentiation, not a vector component. We consider two fluid line elements <span class="math notranslate nohighlight">\(AB\)</span> and <span class="math notranslate nohighlight">\(AC\)</span>, which are aligned with the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, respectively. By the definition of the partial derivative, we can write</p>
+<div class="amsmath math notranslate nohighlight" id="equation-66fa2fc6-031c-4e06-85e7-859e45ccad25">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-66fa2fc6-031c-4e06-85e7-859e45ccad25" title="Permalink to this equation">¶</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
+<p>so</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v}{\partial x}\)</span> represents the instantaneous angular velocity of the fluid line element <span class="math notranslate nohighlight">\(AB\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle\frac{\partial u}{\partial y}\)</span> represents the instantaneous angular velocity of the fluid line element <span class="math notranslate nohighlight">\(AC\)</span></p></li>
+<li><p>The local anticlockwise spin about <span class="math notranslate nohighlight">\(A\)</span> is therefore given by <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\)</span>.</p></li>
+</ul>
+<p>vorticity illustration</p>
+<p>It is important to recognise that the vorticity is not related to the global rotation of the fluid. To illustrate this, we will consider the vorticity of some basic flows, which are either rotating or not rotating.</p>
+<p>Example 1: Shear flow</p>
+<p>Consider a two-dimensional “shear” velocity profile described by <span class="math notranslate nohighlight">\(\underline{v}=(u(y),0,0).\)</span></p>
+<p>This flow is a rectilinear flow; meaning that it is not rotating as a whole, as can be seen from the image below. However, the vorticity is non-zero since fluid particles are rotated by the shearing force, as would be seen by an observer following the fluid.</p>
+<p>velocity profile</p>
+<div class="amsmath math notranslate nohighlight" id="equation-96459de6-438c-498e-bf88-2dfe3a95ac49">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-96459de6-438c-498e-bf88-2dfe3a95ac49" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ u(y)&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-u^{\prime}(y)\right)\end{equation}\]</div>
+<p>We see that the fluid elements rotate about the <span class="math notranslate nohighlight">\(z\)</span> axis in a clockwise direction (due to the negative sign).</p>
+<p>Example 2: Line vortex (‘potential vortex’)</p>
+<p>Consider a flow described in cylindrical polars <span class="math notranslate nohighlight">\((\rho,\theta,z)\)</span>, by the velocity profile <span class="math notranslate nohighlight">\(\underline{v}=\left(0,\frac{k}{\rho},0\right)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is a positive constant.</p>
+<p>This flow is a swirling motion with velocity decreasing in the radial direction like <span class="math notranslate nohighlight">\(\frac{1}{\rho}\)</span>, as illustrated in the figure below</p>
+<p>line_vortex</p>
+<p>The vorticity is zero, meaning that fluid particles are swept round the origin without local rotation. To show this, we have to use the result for the gradient in cylindrical polars:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aa65e2ac-fcec-4041-aa93-f4abc61fff4f">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-aa65e2ac-fcec-4041-aa93-f4abc61fff4f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla\times \underline{v}=\frac{1}{\rho}\begin{vmatrix}\underline{e}_{\rho} &amp; \rho\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ v_{\rho}&amp;\rho v_{\theta} &amp; v_z\end{vmatrix}=\frac{1}{\rho}\begin{vmatrix}\underline{e}_{\rho} &amp; \rho\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
+<p>The surprising result occurs in this example because the slowing down of the fluid away from the origin is just the right strength to create a rotational shear that counterbalances the angular rotation of the fluid.</p>
+<p>Helmhotz decomposition (fundamental theorem of calculus)
+Any vector field that is smooth, defined everywhere in space and vanishes at infinity together with its first derivatives can be decomposed as follows:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-53740c33-684a-4f68-ac9d-aa8f3b04bb04">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-53740c33-684a-4f68-ac9d-aa8f3b04bb04" title="Permalink to this equation">¶</a></span>\[\begin{equation}F=\nabla \phi +\nabla \times A\end{equation}\]</div>
+<p>We will not prove this result, but we will use it to simplify the equations of motion in some scenarios.</p>
+<p>The first term is irrotational (curl-free) from the vector identity “curlgrad=<span class="math notranslate nohighlight">\(\underline{0}\)</span>” and the second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.</p>
+</div>
+<div class="section" id="what-is-flux">
+<h2><span class="section-number">3.2. </span>What is <strong>flux</strong>?<a class="headerlink" href="#what-is-flux" title="Permalink to this headline">¶</a></h2>
+<p>Consider a small (strictly infinitesimal) surface element <span class="math notranslate nohighlight">\(S\)</span> within a field <span class="math notranslate nohighlight">\(\underline{F}\)</span>, such that the surface normal makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> to the direction of the field, as shown. The components of the field in directions parallel and perpendicular to the surface are illustrated in blue. The perpendicular component has magnitude <span class="math notranslate nohighlight">\(F\cos{\theta}\)</span>. The parallel component remains bounded by the surface.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/flux1.png" id="flux"><img alt="alternative description" class="align-center" id="flux" src="../_images/flux1.png" style="width: 274.40000000000003px; height: 345.6px;" /></a>
+<br>
+<p>Multiplying the normal component of the field by the area of the surface element gives the volume indicated by the shaded cylinder in the image below. It is a scalar quantity, which tells us the instantaneous rate of flow through the surface per unit time. Mathematically, the flow rate across the surface <span class="math notranslate nohighlight">\(S\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0de6c937-9bba-4718-b0f1-1fc18be86013">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-0de6c937-9bba-4718-b0f1-1fc18be86013" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{\underline{n}}\)</span> is the unit normal to the surface.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/flux2.png" id="id1"><img alt="alternative description" class="align-center" id="id1" src="../_images/flux2.png" style="width: 288.0px; height: 326.40000000000003px;" /></a>
+<br>
+<p>The quantity <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> gives the flow rate <em>per unit area</em>, which is called the flux. Integrating the flux over a given finite surface area <span class="math notranslate nohighlight">\(A\)</span> is equivalent to summing the individual surface element contributions to the flow rate, in the limit. The resulting flow rate <span class="math notranslate nohighlight">\(Q\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-831997cd-5741-4686-800e-f37b44e4973e">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-831997cd-5741-4686-800e-f37b44e4973e" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
+<p>Most authors (including me!) use the terms flow rate and flux interchangeably, though flux is more pedantically defined as the flow rate per <strong>unit</strong> area. However, the intended meaning is almost always clear from the context and the surrounding text.</p>
+<div class="admonition-examples admonition">
+<p class="admonition-title">Examples</p>
+<p>Net volumetric flux is the rate of volume flow across a given area, <span class="math notranslate nohighlight">\(\displaystyle \int_A\underline{v}.d\underline{S}\)</span></p>
+<p>Net mass flux is the rate of mass flow across a given area, <span class="math notranslate nohighlight">\(\displaystyle \int_A \rho\underline{v}.d\underline{S}\)</span></p>
+</div>
+<p>Notice that the flux <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> is directly proportional to the field strength <span class="math notranslate nohighlight">\(F\)</span>. For this reason, the field strength is sometimes referred to as the <em>flux density</em>. This description fits quite well with field line depictions, since the field strength can be inferred from how close together (dense) the field lines are. However, the term flux density is more commonly used in the context of electricity and magnetism, and I will not use it in the fluids part of this module.</p>
+</div>
+<div class="section" id="what-is-divergence">
+<h2><span class="section-number">3.3. </span>What is <strong>divergence</strong>?<a class="headerlink" href="#what-is-divergence" title="Permalink to this headline">¶</a></h2>
+<p>Suppose that a given point within  a field <span class="math notranslate nohighlight">\(\underline{F}=(f_x,f_y,f_z)\)</span> is surrounded by a <strong>closed</strong> surface, <span class="math notranslate nohighlight">\(S\)</span> as illustrated below:</p>
+<a class="reference internal image-reference" href="../_images/source.png" id="source-fun"><img alt="alt text" class="align-center" id="source-fun" src="../_images/source.png" style="width: 288.0px; height: 242.4px;" /></a>
+<p>It can be shown (divergence theorem) that the flux <span class="math notranslate nohighlight">\(Q\)</span> through surface <span class="math notranslate nohighlight">\(S\)</span> is equivalent to a volume integral:</p>
+<div class="math notranslate nohighlight" id="equation-divergence-thm">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">¶</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
+<p>where the <em>divergence</em> <span class="math notranslate nohighlight">\(\nabla.\underline{F}\)</span> is given by:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-eefa1048-c05f-4c28-a6f2-ddc76b0dd645">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-eefa1048-c05f-4c28-a6f2-ddc76b0dd645" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
+<p>By applying the Fundamental Theorem of Calculus to <a class="reference internal" href="#equation-divergence-thm">(3.8)</a>, we obtain the result</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f27fa164-b089-4dea-9eeb-b128f388dc13">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-f27fa164-b089-4dea-9eeb-b128f388dc13" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
+<p>Hence, divergence can be understood as the flux per unit volume through an infinitesimally-small closed surface surrounding a point. A point with positive divergence behaves like a source, and a point with negative divergence behaves like a sink.</p>
+<div class="readmore admonition">
+<p class="admonition-title">See also</p>
+<p>For further discussion of the divergence theorem and related concepts, visit
+<a class="reference external" href="https://www.khanacademy.org/math/multivariable-calculus/greens-theorem-and-stokes-theorem/divergence-theorem-articles/a/3d-divergence-theorem">Khan Academy</a></p>
+</div>
+<div class="exercise admonition" id="ex-divergence">
+<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span> </p>
+<div class="section" id="exercise-content">
+<p>Calculate the divergence of the potential flow you looked at in <a class="reference internal" href="mathideas2.html#pot-fun"><span class="std std-numref">Exercise 2.2</span></a>, and produce a grayscale plot of the divergence on the range <span class="math notranslate nohighlight">\(-2\leq x,y \leq 2.\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">3.4. </span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Path integrals for conservative and non-conservative fields
+The result that a conservative field is irrotational can be demonstrated by considering that if the line integral of <span class="math notranslate nohighlight">\(\underline{F}\)</span> is path independent then the fundamental theorem of calculus allows us to write</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b22d8694-6c6a-45b0-a586-230c0af8edcd">
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-b22d8694-6c6a-45b0-a586-230c0af8edcd" title="Permalink to this equation">¶</a></span>\[\begin{equation}\int_C \underline{F}.\mathrm{d}\underline{s} = \int_C \frac{\mathrm{d}\phi}{\mathrm{d}t}\mathrm{d}t.\end{equation}\]</div>
+<p>And by the chain rule we may also say that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c61f9698-8172-4f59-9f35-bfc55246c040">
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-c61f9698-8172-4f59-9f35-bfc55246c040" title="Permalink to this equation">¶</a></span>\[\begin{equation} \int_C \frac{\mathrm{d}\phi}{\mathrm{d}t}\mathrm{d}t=\int_C \left(\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}t}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{\mathrm{d}t}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}t}\right)\mathrm{d}t=\int_C \nabla \phi . \frac{\mathrm{d}s}{\mathrm{d}t}\mathrm{d}t =\int_C (\nabla \phi).\mathrm{d}\underline{s}\end{equation}\]</div>
+<p>Calculus practice :</p>
+<p>(1) Show that the vector field <span class="math notranslate nohighlight">\(\underline{F}=(3x^2,3y^2,3z^2)\)</span> is irrotational (curl-free) and that it can be expressed as the gradient of a scalar potential \begin{equation}\phi=x^3+y^3+z^3 +\mathrm{const.}\end{equation}</p>
+<p>Hence, calculate the work done by this force in moving a body from point <span class="math notranslate nohighlight">\((1,2,1)\)</span> to <span class="math notranslate nohighlight">\((3,2,1)\)</span>.</p>
+<p>(2) Show that the vector field <span class="math notranslate nohighlight">\(\underline{F}=(y^2,x^2,0)\)</span> is solenoidal (divergence-free) but not irrotational.</p>
+<p>Calculate the work done by this force in moving a body from the point <span class="math notranslate nohighlight">\((1,0,0)\)</span> to <span class="math notranslate nohighlight">\((0,2,0)\)</span></p>
+<p>(i) Along the line <span class="math notranslate nohighlight">\(2x+y=2\)</span></p>
+<p>(ii) Along a piece of the parabola <span class="math notranslate nohighlight">\(4x+y^2=4\)</span></p>
+<p>Solutions:</p>
+<p>(1) <span class="math notranslate nohighlight">\(\nabla\times\underline{F}=(0,0,0), \quad \Rightarrow\quad \underline{F}=\nabla\phi = \left(\frac{\partial \phi}{\partial x},\frac{\partial \phi}{\partial y},\frac{\partial \phi}{\partial z}\right)\)</span></p>
+<p>Equating components and integrating gives <span class="math notranslate nohighlight">\(\underline{F}=x^3+y^3+z^3 +\mathrm{const.}\)</span></p>
+<p>Hence, <span class="math notranslate nohighlight">\(\displaystyle \int_{(1,2,1)}^{(3,2,1)}\underline{F}.\mathrm{d}\underline{s} = \phi(3,2,1)-\phi(1,2,1)=26\)</span> (independent of the path)</p>
+<p>(2) <span class="math notranslate nohighlight">\(\nabla.\underline{F}=0, \quad \nabla\times\underline{F}=(0,0,2x-2y)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\displaystyle W=\int_{(1,0,0)}^{(0,2,0)}\underline{F}.\mathrm{d}\underline{s}=\int_{(1,0,0)}^{(0,2,0)}(y^2\mathrm{d}x+x^2\mathrm{d}y)\)</span></p>
+<p>(i) Let <span class="math notranslate nohighlight">\(x=t,\)</span> <span class="math notranslate nohighlight">\(y=2-2t\)</span>. Then <span class="math notranslate nohighlight">\(\displaystyle W=\int_1^0\left[(2-2t)^2-2t^2\right]\mathrm{d}t=\frac{2}{3}\)</span></p>
+<p>(ii) Let <span class="math notranslate nohighlight">\(y=t,\)</span> <span class="math notranslate nohighlight">\(x=1-\frac{t^2}{4}\)</span>. Then <span class="math notranslate nohighlight">\(\displaystyle W=\int_0^2\left[t^2\left(\frac{-t}{2}\right)+\left(1-\frac{t^2}{4}\right)^2\right]\mathrm{d}t= -\frac{14}{15}\)</span></p>
+<p>The result is path-dependent.</p>
+</div>
+<div class="section" id="potential-flows">
+<h2><span class="section-number">3.5. </span>Potential flows<a class="headerlink" href="#potential-flows" title="Permalink to this headline">¶</a></h2>
+<p>Recall that if <span class="math notranslate nohighlight">\(\underline{v}\)</span> is irrotational, then it may be expressed as the gradient of a potential</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6e8bc6fe-0610-4b6b-8158-2b075421e524">
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-6e8bc6fe-0610-4b6b-8158-2b075421e524" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\nabla\phi\end{equation}\]</div>
+<p>Examples:</p>
+<p>(i) <span class="math notranslate nohighlight">\(\underline{v}=(U,0,0)\)</span> is irrotational. It has velocity potential <span class="math notranslate nohighlight">\(\phi=Ux\)</span>, since</p>
+<div class="amsmath math notranslate nohighlight" id="equation-af445779-ccf6-4e02-8fa7-3c3d071df429">
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-af445779-ccf6-4e02-8fa7-3c3d071df429" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial x}=U,\quad \frac{\partial \phi}{\partial y}=0, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}\]</div>
+<p>(ii) Stagnation point flow <span class="math notranslate nohighlight">\(\underline{v}=(\alpha x,-\alpha y,0)\)</span> is irrotational. It has velocity potential <span class="math notranslate nohighlight">\(\phi=\frac{1}{2}\alpha(x^2-y^2)\)</span>, since</p>
+<div class="amsmath math notranslate nohighlight" id="equation-820938c6-f920-49bd-bde2-964aa18cd9d5">
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-820938c6-f920-49bd-bde2-964aa18cd9d5" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial x}=\alpha x,\quad \frac{\partial \phi}{\partial y}=-\alpha t, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}\]</div>
+<p>(iii) Line vortex flow <span class="math notranslate nohighlight">\(\underline{v}=\frac{k}{r}\underline{e}_{\theta}\)</span> is irrotational everywhere except at the origin, where it is not defined.
+If we consider only the region <span class="math notranslate nohighlight">\(r\geq a\)</span> then we have a potential flow:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-50a8dd8c-e881-4ae1-90aa-c13f09f1e603">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-50a8dd8c-e881-4ae1-90aa-c13f09f1e603" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial r}=0, \quad \frac{1}{r}\frac{\partial \phi}{\partial \theta}=\frac{k}{r}, \quad \frac{\partial \phi}{\partial z} \qquad \Rightarrow \quad \phi=k\theta.\end{equation}\]</div>
+<p>Exercises</p>
+<ol class="simple">
+<li><p>Consider a two-dimensional unsteady flow given by <span class="math notranslate nohighlight">\(\underline{v}=(3 x/t^2, -2 y/t^2,0)\)</span>.</p></li>
+</ol>
+<p>(i) Show that the velocity field is irrotational and calculate its divergence.</p>
+<p>(ii) Since the velocity field is irrotational, it can be derived from a potential <span class="math notranslate nohighlight">\(\phi(x,y)\)</span>. Find an expression for this function.</p>
+<p>(iii) In which direction do the contours of the potential function <span class="math notranslate nohighlight">\(\phi\)</span> lie in relation to the velocity field?</p>
+<p>(iv) Calculate the equations of the streamlines and show that for this example the streamlines and particle paths are the same.</p>
+<ol class="simple">
+<li><p>For the steady flow <span class="math notranslate nohighlight">\(\underline{v}=(2x,3y,-5z)\)</span>, compute the trajectories of particles starting on the ring <span class="math notranslate nohighlight">\(x=\cos(\theta)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(\theta)\)</span>, <span class="math notranslate nohighlight">\(z=1\)</span>.</p></li>
+</ol>
+<p>Show that the flow is both irrotational and solenoidal, and describe the motion of the fluid particles in words.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./fluids"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="mathideas2.html" title="previous page"><span class="section-number">2. </span>Mathematical ideas 2</a>
+    <a class='right-next' id="next-link" href="navstok.html" title="next page"><span class="section-number">4. </span>Navier-Stokes Equations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
