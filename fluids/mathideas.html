@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Mathematical background &#8212; Fluids</title>
+    <title>3.2. Mathematical background &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,11 +40,14 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,12 +55,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Visualising fluid motion" href="visualise.html" />
-    <link rel="prev" title="Introduction" href="../intro.html" />
+    <link rel="next" title="3.3. Visualising fluid motion" href="visualise.html" />
+    <link rel="prev" title="3. Fluids" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -79,7 +80,7 @@
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Fluids</h1>
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -95,45 +96,181 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   1. Mathematical background
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../waves/introduction.html">
+   1. Waves
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/wavemaths.html">
+     1.1. Mathematical Preliminaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/SHM.html">
+     1.2. Harmonic and Oscillatory Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/longitudinal.html">
+     1.3. Longitudinal Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/waveequationsolns.html">
+     1.4. Solutions to the Wave Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/transverse.html">
+     1.5. Transverse Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/dispersionrelations.html">
+     1.6. Dispersion Relations and Wave Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/polarisation.html">
+     1.7. Polarisation of Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/matterwaves.html">
+     1.8. Matter Waves
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="visualise.html">
-   2. Visualising fluid motion
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../electromagnetism/introduction.html">
+   2. Electromagnetism
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.1. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
+     2.2. Solving Electrostatic Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
+     2.3. Energy in an Electric Field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
+     2.4. Electric Fields in Matter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticfields.html">
+     2.5. Magnetism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticforces.html">
+     2.6. Magnetic Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/ampereslaw.html">
+     2.7. Ampère’s Circuital Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/faradayslaw.html">
+     2.8. Faraday’s Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
+     2.9. Maxwell’s Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMwaves.html">
+     2.10. Electromagnetic Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMenergy.html">
+     2.11. Energy in an Electromagnetic field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMpotentials.html">
+     2.12. Electromagnetic Potentials and Gauge Theories*
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="helmholtz.html">
-   3. Helmholtz decomposition
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Fluids
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="potential_flows.html">
-   4. Potential flows
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="navstok.html">
-   5. Navier-Stokes Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="newtonian.html">
-   6. Newtonian vs non-Newtonian fluids
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reynolds.html">
-   7. Reynolds number
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="demo-exercise.html">
-   8. A title
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="newtonian.html">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="demo-exercise.html">
+     3.9. A title
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -244,7 +381,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-field">
-   1.1. What is a
+   3.2.1. What is a
    <strong>
     field
    </strong>
@@ -253,7 +390,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-level-set">
-   1.2. What is a
+   3.2.2. What is a
    <strong>
     level set
    </strong>
@@ -261,12 +398,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-directional-derivative">
-   1.3. The directional derivative
+   3.2.3. The directional derivative
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-gradient-direction">
-   1.4. The gradient direction
+   3.2.4. The gradient direction
   </a>
  </li>
 </ul>
@@ -281,13 +418,13 @@
               <div>
                 
   <div class="section" id="mathematical-background">
-<h1><span class="section-number">1. </span>Mathematical background<a class="headerlink" href="#mathematical-background" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.2. </span>Mathematical background<a class="headerlink" href="#mathematical-background" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What are isosurfaces and isolines, and what is their relationship to the gradient?</p></li>
 </ul>
 <div class="section" id="what-is-a-field">
-<h2><span class="section-number">1.1. </span>What is a <strong>field</strong>?<a class="headerlink" href="#what-is-a-field" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.1. </span>What is a <strong>field</strong>?<a class="headerlink" href="#what-is-a-field" title="Permalink to this headline">¶</a></h2>
 <p>A field is a map of a physical quantity at each point in space and time. You are probably already familiar with graphical representations of fields, via the example of weather maps showing temperature, pressure and wind velocity :</p>
 <table class="colwidths-auto table">
 <thead>
@@ -312,8 +449,8 @@
 </tbody>
 </table>
 <p>A <strong>scalar field</strong> can be represented using a surface plot, contour plot, or a colour/grayscale map. On weather maps the pressure is normally represented using contours (called pressure isobars) and the temperature is normally represented using a colour map. The example below shows a grayscale map of the scalar field defined by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-280aaf8d-1ac1-4c43-8e64-6050eadac764">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-280aaf8d-1ac1-4c43-8e64-6050eadac764" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ed155b10-f494-485c-b9b5-4f5bd72c55fe">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-ed155b10-f494-485c-b9b5-4f5bd72c55fe" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi(x,y)=x\ \mathrm{sinc}(x^2+y^2),\quad -3\leq x,y \leq 3.
 \end{equation}\]</div>
 <div class="cell docutils container">
@@ -346,7 +483,7 @@
 </div>
 <p>A <strong>vector field</strong> can be represented using arrows, where the length of each arrow indicates the field strength at the point. The most commonly encountered vector field quantities are velocity and force. The example below shows a plot of the vector field defined by</p>
 <div class="math notranslate nohighlight" id="equation-example-field">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-example-field" title="Permalink to this equation">¶</a></span>\[\underline{v}=(2x,-2y),\quad -2\leq x,y \leq 2.\]</div>
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-example-field" title="Permalink to this equation">¶</a></span>\[\underline{v}=(2x,-2y),\quad -2\leq x,y \leq 2.\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#x coordinates arranged on [-2,2]</span>
@@ -372,7 +509,7 @@
 <img alt="../_images/mathideas_3_0.png" class="align-center" src="../_images/mathideas_3_0.png" />
 </div>
 </div>
-<p>If you draw curves tangent to the arrows of a vector field, these are called “field lines”. The plot below shows field line for the vector field given in equation <a class="reference internal" href="#equation-example-field">(1.2)</a> . The field strength at each point is indicated by how close together the field lines are, assuming that the physical quantity being indicated by the field is <em>conserved</em>.</p>
+<p>If you draw curves tangent to the arrows of a vector field, these are called “field lines”. The plot below shows field line for the vector field given in equation <a class="reference internal" href="#equation-example-field">(3.2)</a> . The field strength at each point is indicated by how close together the field lines are, assuming that the physical quantity being indicated by the field is <em>conserved</em>.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -400,17 +537,16 @@
 </div>
 <p>In the case where the field represents velocity of a fluid, the field lines are known as “streamlines”. In the next chapter we will discuss the difference between <em>streamlines</em>, <em>streaklines</em> and <em>particle paths</em>,for the case where the fluid velocity is a time-dependent field <span class="math notranslate nohighlight">\(\underline{v}(\underline{x},t)\)</span>.</p>
 <div class="exercise admonition" id="streamlinesq">
-<p class="admonition-title"><span class="caption-number">Exercise 1.1 </span> </p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
 <div class="section" id="exercise-content">
 <p>Choosing a plot range that you think is suitable, produce both a vector plot and a streamline plot of the velocity field <span class="math notranslate nohighlight">\(\underline{v}=(2 y, 2 x,0)\)</span>. Describe the shape of the streamlines in words.</p>
 </div>
-</div>
-</div>
+</div></div>
 <div class="section" id="what-is-a-level-set">
-<h2><span class="section-number">1.2. </span>What is a <strong>level set</strong><a class="headerlink" href="#what-is-a-level-set" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.2. </span>What is a <strong>level set</strong><a class="headerlink" href="#what-is-a-level-set" title="Permalink to this headline">¶</a></h2>
 <p>A level set of a scalar function <span class="math notranslate nohighlight">\(\phi\)</span> is defined by the following relationship, where <span class="math notranslate nohighlight">\(c\)</span> is a constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7a7c240-5828-4881-aada-058b9ef01517">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-b7a7c240-5828-4881-aada-058b9ef01517" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bc206e87-0f22-417f-aac6-6ef11a359069">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-bc206e87-0f22-417f-aac6-6ef11a359069" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
 <p>The main types of level set are surfaces and curves, as outlined below.</p>
 <p><strong>Level surfaces</strong><br />
 The level sets of <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> are generally surfaces, called <em>isosurfaces</em>. As an example, consider the pressure <span class="math notranslate nohighlight">\(p(x,y,z)\)</span> in a volume of water, exposed to atmospheric pressure <span class="math notranslate nohighlight">\(p_0\)</span> at the free surface. In this case, the boundary between the water and the air is an isosurface, defined by <span class="math notranslate nohighlight">\(p(x,y,z)=p_0\)</span>. Choosing other values of the constant <span class="math notranslate nohighlight">\(c&gt;p_0\)</span> will define other pressure isosurfaces within the body of water.</p>
@@ -425,44 +561,43 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <br>
 </div>
 <div class="section" id="the-directional-derivative">
-<h2><span class="section-number">1.3. </span>The directional derivative<a class="headerlink" href="#the-directional-derivative" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.3. </span>The directional derivative<a class="headerlink" href="#the-directional-derivative" title="Permalink to this headline">¶</a></h2>
 <p>According to the multivariate chain rule for a scalar function <span class="math notranslate nohighlight">\(\phi(\underline{x})\)</span>, where <span class="math notranslate nohighlight">\(\underline{x}=(x(s),y(s),z(s))\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd0aeb46-d1d5-4423-968a-31fa18e07d1e">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-bd0aeb46-d1d5-4423-968a-31fa18e07d1e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3e69fc05-9f26-46ba-8950-0473bf5bb80e">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-3e69fc05-9f26-46ba-8950-0473bf5bb80e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
 <p>Using vectors, we can write this result as a scalar product:</p>
 <div class="math notranslate nohighlight" id="equation-mvarchain">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-mvarchain" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{v}, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),\]</div>
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-mvarchain" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{v}, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),\]</div>
 <p>where the gradient <span class="math notranslate nohighlight">\(\nabla\phi\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-gradient">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-gradient" title="Permalink to this equation">¶</a></span>\[\nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).\]</div>
-<p>Formula <a class="reference internal" href="#equation-mvarchain">(1.5)</a> looks strikingly similar to the one-dimensional chain rule, with the factor <span class="math notranslate nohighlight">\(\nabla\phi\)</span> capturing variations in <span class="math notranslate nohighlight">\(\phi\)</span> due to <span class="math notranslate nohighlight">\(\underline{x}\)</span> and the second factor <span class="math notranslate nohighlight">\(\underline{v}\)</span> capturing variations in <span class="math notranslate nohighlight">\(\underline{x}\)</span> due to <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-gradient" title="Permalink to this equation">¶</a></span>\[\nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).\]</div>
+<p>Formula <a class="reference internal" href="#equation-mvarchain">(3.5)</a> looks strikingly similar to the one-dimensional chain rule, with the factor <span class="math notranslate nohighlight">\(\nabla\phi\)</span> capturing variations in <span class="math notranslate nohighlight">\(\phi\)</span> due to <span class="math notranslate nohighlight">\(\underline{x}\)</span> and the second factor <span class="math notranslate nohighlight">\(\underline{v}\)</span> capturing variations in <span class="math notranslate nohighlight">\(\underline{x}\)</span> due to <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>If we evaluate <span class="math notranslate nohighlight">\(\nabla\phi\)</span> at a given point <span class="math notranslate nohighlight">\(\underline{x}_0\)</span>, the multivariate chain rule gives us the rate of change of <span class="math notranslate nohighlight">\(\phi\)</span> in direction <span class="math notranslate nohighlight">\(\underline{v}\)</span> at the point. Since the parameterisation <span class="math notranslate nohighlight">\(\underline{x}(s)\)</span> is arbitrary, we can choose a direction that we are interested in. This result is called the <em>directional derivative</em>. It is usually assumed that <span class="math notranslate nohighlight">\(\underline{v}\)</span> is a unit vector, so the result may be denoted as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-769c424f-5244-47fb-a6ba-13b85f0fc6bd">
-<span class="eqno">(1.7)<a class="headerlink" href="#equation-769c424f-5244-47fb-a6ba-13b85f0fc6bd" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{v}}}(\phi)=(\nabla\phi).\hat{\underline{v}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c1f91589-dff9-4741-b4d1-3a208a25879a">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-c1f91589-dff9-4741-b4d1-3a208a25879a" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{v}}}(\phi)=(\nabla\phi).\hat{\underline{v}}\end{equation}\]</div>
 <p>Notice that the result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.</p>
 <div class="exercise admonition" id="ex-dir_deriv">
-<p class="admonition-title"><span class="caption-number">Exercise 1.2 </span> </p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.2 </span></p>
 <div class="section" id="exercise-content">
 <p>Find the gradient of the function <span class="math notranslate nohighlight">\(\phi(x,y,z)=xyz\)</span> at the point <span class="math notranslate nohighlight">\(\underline{x}_0:(-2,3,4)\)</span>.</p>
 <p>What is the directional derivative of this function in the direction <span class="math notranslate nohighlight">\(\hat{\underline{v}}=\frac{1}{13}(3,-4,12)\)</span>?</p>
 </div>
-</div>
-</div>
+</div></div>
 <div class="section" id="the-gradient-direction">
-<h2><span class="section-number">1.4. </span>The gradient direction<a class="headerlink" href="#the-gradient-direction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2.4. </span>The gradient direction<a class="headerlink" href="#the-gradient-direction" title="Permalink to this headline">¶</a></h2>
 <p><strong>The gradient is perpendicular to the level sets</strong><br />
-Since level sets are defined by the relationship <span class="math notranslate nohighlight">\(\phi=c\)</span>, differentiation gives <span class="math notranslate nohighlight">\(\frac{\mathrm{d}\phi}{\mathrm{d}s}=0\)</span>. Using the result <a class="reference internal" href="#equation-mvarchain">(1.5)</a>, we find that on a level set</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce82c27d-703e-4e7c-8045-5726ff2a5e55">
-<span class="eqno">(1.8)<a class="headerlink" href="#equation-ce82c27d-703e-4e7c-8045-5726ff2a5e55" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{v}}=0, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
+Since level sets are defined by the relationship <span class="math notranslate nohighlight">\(\phi=c\)</span>, differentiation gives <span class="math notranslate nohighlight">\(\frac{\mathrm{d}\phi}{\mathrm{d}s}=0\)</span>. Using the result <a class="reference internal" href="#equation-mvarchain">(3.5)</a>, we find that on a level set</p>
+<div class="amsmath math notranslate nohighlight" id="equation-928fcf8f-b1fd-4e1a-9fa3-98e36fd6dce0">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-928fcf8f-b1fd-4e1a-9fa3-98e36fd6dce0" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{v}}=0, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\hat{\underline{v}}\)</span> is parallel to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>, the result result tells us that <span class="math notranslate nohighlight">\(\nabla\phi\)</span> is perpendicular to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <p><strong>The gradient points “uphill”</strong><br />
 From the definition of the scalar product, we know that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2dd2e5d-a450-4949-8eae-7a30a8e079b1">
-<span class="eqno">(1.9)<a class="headerlink" href="#equation-b2dd2e5d-a450-4949-8eae-7a30a8e079b1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{v}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-52bff6ec-3acd-47e6-b5ab-07b347a1d49d">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-52bff6ec-3acd-47e6-b5ab-07b347a1d49d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{v}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\nabla \phi\)</span> and the direction vector <span class="math notranslate nohighlight">\(\hat{\underline{v}}\)</span>.</p>
 <p>The result is largest when <span class="math notranslate nohighlight">\(\theta=0\)</span>. Therefore, <span class="math notranslate nohighlight">\(\nabla \phi\)</span> points in the direction of maximum increase of the function <span class="math notranslate nohighlight">\(\phi\)</span> and has magnitude equal to the rate of maximum increase.</p>
 <div class="exercise admonition" id="pot-fun">
-<p class="admonition-title"><span class="caption-number">Exercise 1.3 </span> </p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
 <div class="section" id="exercise-content">
 <p>Some velocity fields, called <em>potential fields</em>, may be defined as the gradient of a scalar potential <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span>. For example, the gravitational field <span class="math notranslate nohighlight">\(\underline{g}=(0,0,-g)\)</span> can be made to satisfy <span class="math notranslate nohighlight">\(\underline{g}=\nabla\phi\)</span> by taking <span class="math notranslate nohighlight">\(\phi=-gz\)</span>.</p>
 <p>Consider a two-dimensional velocity field <span class="math notranslate nohighlight">\(\underline{v}=(u,v)\)</span>, which is defined by a potential function</p>
@@ -475,8 +610,7 @@ From the definition of the scalar product, we know that</p>
 </ul>
 <p>The function needed to plot contours is part of the matplotlib library. Usage guidelines can be found <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html">here</a>.</p>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -504,8 +638,8 @@ From the definition of the scalar product, we know that</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Introduction</a>
-    <a class='right-next' id="next-link" href="visualise.html" title="next page"><span class="section-number">2. </span>Visualising fluid motion</a>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page"><span class="section-number">3. </span>Fluids</a>
+    <a class='right-next' id="next-link" href="visualise.html" title="next page"><span class="section-number">3.3. </span>Visualising fluid motion</a>
 
         </div>
         
@@ -515,7 +649,7 @@ From the definition of the scalar product, we know that</p>
     <div class="container">
       <p>
         
-          By Ella Metcalfe<br/>
+          By Ali Mozaffari and Ella Metcalfe<br/>
         
             &copy; Copyright 2021.<br/>
       </p>

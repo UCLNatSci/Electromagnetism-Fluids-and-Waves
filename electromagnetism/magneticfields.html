@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.5. Magnetism &#8212; Electromagnetism, Fluids and Waves</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.6. Magnetic Forces" href="magneticforces.html" />
+    <link rel="prev" title="2.4. Electric Fields in Matter" href="Efieldsmatter.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../waves/introduction.html">
+   1. Waves
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/wavemaths.html">
+     1.1. Mathematical Preliminaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/SHM.html">
+     1.2. Harmonic and Oscillatory Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/longitudinal.html">
+     1.3. Longitudinal Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/waveequationsolns.html">
+     1.4. Solutions to the Wave Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/transverse.html">
+     1.5. Transverse Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/dispersionrelations.html">
+     1.6. Dispersion Relations and Wave Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/polarisation.html">
+     1.7. Polarisation of Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/matterwaves.html">
+     1.8. Matter Waves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="introduction.html">
+   2. Electromagnetism
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="electrostatics.html">
+     2.1. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gausslawsystems.html">
+     2.2. Solving Electrostatic Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Efieldenergy.html">
+     2.3. Energy in an Electric Field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Efieldsmatter.html">
+     2.4. Electric Fields in Matter
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.5. Magnetism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="magneticforces.html">
+     2.6. Magnetic Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ampereslaw.html">
+     2.7. Ampère’s Circuital Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="faradayslaw.html">
+     2.8. Faraday’s Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="maxwelleqns.html">
+     2.9. Maxwell’s Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="EMwaves.html">
+     2.10. Electromagnetic Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="EMenergy.html">
+     2.11. Energy in an Electromagnetic field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="EMpotentials.html">
+     2.12. Electromagnetic Potentials and Gauge Theories*
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../fluids/intro.html">
+   3. Fluids
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/newtonian.html">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/demo-exercise.html">
+     3.9. A title
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/electromagnetism/magneticfields.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/magneticfields.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gausss-law-for-magnetism">
+   2.5.1. Gauss’s Law for Magnetism
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#like-and-opposite-poles">
+   2.5.2. Like and Opposite Poles*
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-fields-currents-and-biot-savart-law">
+   2.5.3. Magnetic Fields, Currents and Biot-Savart Law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-field-around-a-finite-wire">
+   2.5.4. Magnetic Field around a Finite Wire*
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#displacement-current">
+   2.5.5. Displacement Current
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="magnetism">
+<h1><span class="section-number">2.5. </span>Magnetism<a class="headerlink" href="#magnetism" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gausss-law-for-magnetism">
+<h2><span class="section-number">2.5.1. </span>Gauss’s Law for Magnetism<a class="headerlink" href="#gausss-law-for-magnetism" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have got electric fields under control, we should turn our head to magnetic fields.  There are clearly some relationships between the two, as well
+discovering currents, fields and magnets all may interact.  Lets consider a bar magnet, as shown in <a class="reference internal" href="#barmagnetbfield"><span class="std std-numref">Fig. 2.10</span></a>, the field lines show the
+circulation of magnetic field lines from the North pole and into the South pole.  A simple way we can observe this is with iron filings or a compass, to trace
+out the field lines.</p>
+<div class="figure align-default" id="barmagnetbfield">
+<img alt="../_images/BarMagnetBFields.png" src="../_images/BarMagnetBFields.png" />
+<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">{\bf Left Panel}, magnetic field lines around a bar magnet,
+{\bf Right Panel}, pattern of iron fillings indicating the magnetic field.</span><a class="headerlink" href="#barmagnetbfield" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can move from this qualitative understanding of magnetic fields to a mathematical one, using the tools we developed in Chapters 2 and 3.  Lets try and understand how
+Gauss’s law works for magnetic fields:</p>
+<div class="math notranslate nohighlight">
+\[\Phi_B = \iint_A {\bf B} \cdot \mathrm{d} {\bf A}\]</div>
+<p>We can see effect of doing this in <a class="reference internal" href="#gausslawbfield"><span class="std std-numref">Fig. 2.11</span></a>, we see that all the field lines that enter a surface also exit, meaning that the next flux is zero.  Additionally
+if we try to contain all the magnetic field lines within a surface, none of them exit and therefore the flux is zero.  Thus we find for magnetic fields:</p>
+<div class="math notranslate nohighlight" id="equation-gausslawbfield">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-gausslawbfield" title="Permalink to this equation">¶</a></span>\[\iint_A {\bf B} \cdot \mathrm{d} {\bf A} = 0 \]</div>
+<div class="figure align-default" id="gausslawbfield">
+<img alt="../_images/GaussLAwMagnetism.png" src="../_images/GaussLAwMagnetism.png" />
+<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Investigating the magnetic flux through surfaces <span class="math notranslate nohighlight">\(S_A,\, S_B\)</span> around a bar magnet.</span><a class="headerlink" href="#gausslawbfield" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can also interpret this through analogy to Gauss’s law for electric fields:</p>
+<div class="math notranslate nohighlight">
+\[\iint_A {\bf B} \cdot \mathrm{d} {\bf A} \propto \sum_i Q_{magnetic}\]</div>
+<p>Where the <span class="math notranslate nohighlight">\(Q_{magnetic}\)</span> would, from the direction of the field lines, represent an isolated north pole <span class="math notranslate nohighlight">\(N\)</span>.  However around a bar magnet, we see there are
+only magnetic dipoles, with north and south poles, hence the sum of the all the magnetic “charges” is found to be zero.  Gauss’s law for magnetism on its
+own is not a very useful way to understand magnetic systems.  However we can find the magnetic flux through <em> open surfaces </em> to be useful, as we will see later.</p>
+</div>
+<div class="section" id="like-and-opposite-poles">
+<h2><span class="section-number">2.5.2. </span>Like and Opposite Poles*<a class="headerlink" href="#like-and-opposite-poles" title="Permalink to this headline">¶</a></h2>
+<p>We can see that the addition of different magnetic poles can produce magnetic flux, as <a class="reference internal" href="#likeoppositepoles"><span class="std std-numref">Fig. 2.12</span></a> shows.  Drawing a surface between the poles
+in the middle of the diagram shows that if the net flux is zero, we have the presence of like poles.  If however there is a next flux out of (or in to) a
+surface, then there is a net presence of a north (or south pole) in or near the surface.</p>
+<div class="figure align-default" id="likeoppositepoles">
+<img alt="../_images/BarMagnetBFields2.png" src="../_images/BarMagnetBFields2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">Field lines around bar magnets with like poles (left panel) and opposite poles (right panel) nearby.</span><a class="headerlink" href="#likeoppositepoles" title="Permalink to this image">¶</a></p>
+</div>
+<p>Clearly the lowest energy configuration for a system with at least two different orientations of bar magnets is for opposite poles to be neighbouring.  These types of
+systems have been long studied, most notably the <b> Ising Model.</b>  We can consider long chains (in 1D) or lattices (in 2D or higher dimensions) of magnets as
+depicted in <a class="reference internal" href="#isingmodel"><span class="std std-numref">Fig. 2.13</span></a>.  The energy figuration of these systems can be studied using the tools of statistical mechanics.</p>
+<div class="figure align-default" id="isingmodel">
+<img alt="../_images/IsingModel.png" src="../_images/IsingModel.png" />
+<p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Ising models in 1D (left panel) and 2D (right panel)</span><a class="headerlink" href="#isingmodel" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="magnetic-fields-currents-and-biot-savart-law">
+<h2><span class="section-number">2.5.3. </span>Magnetic Fields, Currents and Biot-Savart Law<a class="headerlink" href="#magnetic-fields-currents-and-biot-savart-law" title="Permalink to this headline">¶</a></h2>
+<p>Experimentally we observe that a currents flowing in wires produce magnetic fields, as seen in <a class="reference internal" href="#bfieldcurrent"><span class="std std-numref">Fig. 2.14</span></a>.  As the iron flings pattern shows,<br />
+larger currents (here from more current carrying wire) produce stronger magnetic fields, so lets posit <span class="math notranslate nohighlight">\(B \propto I\)</span>.</p>
+<div class="figure align-default" id="bfieldcurrent">
+<img alt="../_images/WireFillings.jpg" src="../_images/WireFillings.jpg" />
+<p class="caption"><span class="caption-number">Fig. 2.14 </span><span class="caption-text">Observed magnetic field from a current carrying wire.</span><a class="headerlink" href="#bfieldcurrent" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can see that such as a system displays cylindrical symmetry, as there is rotational invariance around the current, aligned on the <span class="math notranslate nohighlight">\(z\)</span> axis. The magnetic
+fields direction appears to follow the right handed screw rule, as shown in <a class="reference internal" href="#rhscrewrule"><span class="std std-numref">Fig. 2.15</span></a>.</p>
+<div class="figure align-default" id="rhscrewrule">
+<img alt="../_images/CurrentBField.jpg" src="../_images/CurrentBField.jpg" />
+<p class="caption"><span class="caption-number">Fig. 2.15 </span><span class="caption-text">Circular magnetic field from a current carrying wire follows the right hand screw rule</span><a class="headerlink" href="#rhscrewrule" title="Permalink to this image">¶</a></p>
+</div>
+<p>How can we understand the fields created by moving currents in the wire? Lets revisit charges in a line,
+which we will approximate as a line of charge.  We considered the electrostatics of a finite line of charge in <a class="reference internal" href="gausslawsystems.html#finitelineofcharge"><span class="std std-numref">Fig. 2.8</span></a>,
+which we can modify in <a class="reference internal" href="#finitelineofcurrent"><span class="std std-numref">Fig. 2.16</span></a> with a current <span class="math notranslate nohighlight">\(I\)</span>.  Lets split up the wire into length elements <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span>,
+we can imagine contributes to the magnetic field at a given point <span class="math notranslate nohighlight">\(r\)</span> away from the wire.</p>
+<div class="figure align-default" id="finitelineofcurrent">
+<img alt="../_images/FiniteLineOfCurrent.png" src="../_images/FiniteLineOfCurrent.png" />
+<p class="caption"><span class="caption-number">Fig. 2.16 </span><span class="caption-text">Examining the fields around a finite line of current <span class="math notranslate nohighlight">\(I\)</span>, broken up into length elements <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell} = |\mathrm{d} {\bf \ell}|\,\hat{{\bf z}}\)</span>
+which are aligned along the <span class="math notranslate nohighlight">\(z\)</span> axis.}</span><a class="headerlink" href="#finitelineofcurrent" title="Permalink to this image">¶</a></p>
+</div>
+<p>If we take a conducting wire and pass an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> through it, free charges will begin to move setting up a current <span class="math notranslate nohighlight">\(I\)</span>.
+These moving charges will follow:</p>
+<div class="math notranslate nohighlight" id="equation-driftvelocity">
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-driftvelocity" title="Permalink to this equation">¶</a></span>\[I = n\,A\,v\,q\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the number density of free charges, <span class="math notranslate nohighlight">\(A\)</span> is the conductor cross sectional area, <span class="math notranslate nohighlight">\(v = |{\bf v}|\)</span> is the charge drift velocity and <span class="math notranslate nohighlight">\(q\)</span> is the
+magnitude of the charge on each charge carrier.  If we take the combination of <span class="math notranslate nohighlight">\(I\,\mathrm{d} {\bf \ell}\)</span> then:</p>
+<div class="math notranslate nohighlight">
+\[I\,\mathrm{d} {\bf \ell} = n\,A\,|\mathrm{d} {\bf \ell}|\,q\,|{\bf v}|\,\hat{{\bf z}} = \mathrm{d} N\,q\,{\bf v}  = \mathrm{d} Q\,{\bf v}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> is the number of free charges in the conductor and we have moved the vector dependence from the direction of the length element
+<span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> to the drift velocity <span class="math notranslate nohighlight">\({\bf v}\)</span>.  This suggests we have a “current momentum” <span class="math notranslate nohighlight">\(Q\,{\bf v}\)</span> in the wire.  Lets revisit
+Equation <a class="reference internal" href="gausslawsystems.html#equation-efieldwire">(2.5)</a> replacing charges <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> with moving charges <span class="math notranslate nohighlight">\(\mathrm{d} Q\,{\bf v}\)</span> and call this the <span class="math notranslate nohighlight">\({\bf B}\)</span> field:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} E = \frac{\mathrm{d} Q}{4\pi\,\epsilon_0\,|{\bf r}|^2}\frac{|{\bf r}|}{|{\bf r}|} \longrightarrow \mathrm{d} B = 
+\frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,|{\bf v}|\,|{\bf r}|}{|{\bf r}|^3}\]</div>
+<p>Note we replace the vacuum permittivity <span class="math notranslate nohighlight">\(\epsilon_0\)</span> with  vacuum permeability <span class="math notranslate nohighlight">\(\mu_0\)</span> as the “magnetic field constant”.  We see that
+<a class="reference internal" href="#finitelineofcurrent"><span class="std std-numref">Fig. 2.16</span></a> shows <span class="math notranslate nohighlight">\(r = R\sin(\theta)\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} B = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,|{\bf v}|\,|{\bf r}|\,\sin(\theta)}{|{\bf r}|^3}\]</div>
+<p>and therefore given the definition of the cross product:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf B} = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,{\bf v}\times {\bf r}}{|{\bf r}|^3} \Longrightarrow \mathrm{d} {\bf B} = 
+\frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times {\bf r}}{\,|{\bf r}|^3} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{|{\bf r}|^2}\]</div>
+<p>\noindent Thus the observed magnetic field from a wire carrying current <span class="math notranslate nohighlight">\(I\)</span> at a distance <span class="math notranslate nohighlight">\({\bf r}\)</span> is given by the <b>Biot-Savart Law:</b></p>
+<div class="math notranslate nohighlight" id="equation-bslaw">
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-bslaw" title="Permalink to this equation">¶</a></span>\[{\bf B}({\bf r}) = \frac{\mu_0}{4\pi}\int_C \frac{I \, \mathrm{d}  \ell\times\hat{{\bf r}}}{|{\bf r}|^2} \]</div>
+<p>which is depicted in <a class="reference internal" href="#biotsavart"><span class="std std-numref">Fig. 2.17</span></a>.  We see that the cylindrical symmetry is made explicit, for a wire carrying a current <span class="math notranslate nohighlight">\(I\)</span> in the
+<span class="math notranslate nohighlight">\(z\)</span> direction, we would measure (at a radial distance <span class="math notranslate nohighlight">\(r\)</span> away from the wire) a magnetic field <span class="math notranslate nohighlight">\({\bf B}\)</span> moving in the <span class="math notranslate nohighlight">\({\bf \theta}\)</span> direction -
+following the right hand screw rule.  We see that each element <span class="math notranslate nohighlight">\(\mathrm{d} \ell\)</span> along the current carrying wire contributes to the total magnetic field
+<span class="math notranslate nohighlight">\({\bf B}\)</span> at every point <span class="math notranslate nohighlight">\(r\)</span> through the line integral, not just the current element in the <span class="math notranslate nohighlight">\(z\)</span> plane with the magnetic field <span class="math notranslate nohighlight">\(B_\theta\)</span>.</p>
+<div class="figure align-default" id="biotsavart">
+<img alt="../_images/Biot-Savart.png" src="../_images/Biot-Savart.png" />
+<p class="caption"><span class="caption-number">Fig. 2.17 </span><span class="caption-text">Direction of magnetic field element <span class="math notranslate nohighlight">\(\mathrm{d} {\bf B}\)</span> produced from a wire element <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span>
+carrying current <span class="math notranslate nohighlight">\(I\)</span> at a distance <span class="math notranslate nohighlight">\({\bf r}\)</span> from the wire element.</span><a class="headerlink" href="#biotsavart" title="Permalink to this image">¶</a></p>
+</div>
+<p>The magnetic constant <span class="math notranslate nohighlight">\(\mu_0\)</span> here is used in the definition of the SI unit of current, the Ampère (<span class="math notranslate nohighlight">\(A\)</span>) and is defined to be:</p>
+<div class="math notranslate nohighlight">
+\[\mu_0 = 4\pi\times 10^{-7}\,N\,A^{-2}\]</div>
+<p>For an infinite wire, we can use Equation <a class="reference internal" href="gausslawsystems.html#equation-infinitechargelineefield">(2.4)</a> and take <span class="math notranslate nohighlight">\(\lambda \rightarrow \lambda\,|{\bf v}| = I\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-infinitewirebfield">
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-infinitewirebfield" title="Permalink to this equation">¶</a></span>\[{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}} \]</div>
+</div>
+<div class="section" id="magnetic-field-around-a-finite-wire">
+<h2><span class="section-number">2.5.4. </span>Magnetic Field around a Finite Wire*<a class="headerlink" href="#magnetic-field-around-a-finite-wire" title="Permalink to this headline">¶</a></h2>
+<p>Solving the Biot-Savart law for different situations looking tricky, however for a finite wire we can think about the system in terms of angles,
+as depicted in <a class="reference internal" href="#bslawangles"><span class="std std-numref">Fig. 2.18</span></a>.</p>
+<div class="figure align-default" id="bslawangles">
+<img alt="../_images/BSLawWire.png" src="../_images/BSLawWire.png" />
+<p class="caption"><span class="caption-number">Fig. 2.18 </span><span class="caption-text">{\bf Left Pane} - Geometry of a current carrying wire and solving for Biot-Savart law to calculate magnetic field at point <span class="math notranslate nohighlight">\(P\)</span>,
+{\bf Right Pane} - Converting system of wire elements in terms of angles at point <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#bslawangles" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this system we can think about the length element of the current as:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf \ell} \times \hat{{\bf r}} = \mathrm{d} \ell \,|\hat{{\bf r}}|\, \sin(\theta)\,\hat{{\bf \theta}} = \mathrm{d} \ell\, \cos(\alpha)\,\hat{{\bf \theta}}\]</div>
+<p>We can find an expression for <span class="math notranslate nohighlight">\(\mathrm{d} \ell\)</span> using trigonometry and calculus:</p>
+<div class="math notranslate nohighlight">
+\[\tan(\alpha) = \frac{\ell}{r} \Rightarrow \ell = r \,\tan(\alpha) \Rightarrow \mathrm{d} \ell = r \,\sec^2(\alpha)\,\mathrm{d} \alpha\]</div>
+<p>and since <span class="math notranslate nohighlight">\(r = R\, \cos(\alpha) \Rightarrow 1/R^2 = \cos^2(\alpha)/r^2\)</span>, therefore using the Biot-Savart law here:</p>
+<div class="math notranslate nohighlight" id="equation-finitewirebfield">
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-finitewirebfield" title="Permalink to this equation">¶</a></span>\[\begin{split}{\bf B} &amp;=&amp; \,\frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{R^2} = 
+\frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\sec^2(\alpha)\,\cos^2(\alpha)\,\cos(\alpha)}{r^2}\, \mathrm{d} \alpha\,\hat{{\bf \theta}} \\ 
+{\bf B} &amp;=&amp; \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{{\bf \theta}} = \frac{\mu_0\,I}{4\pi\,r}\left( \sin(\alpha_2) - 
+\sin(\alpha_1)\right)\,\hat{{\bf \theta}} \end{split}\]</div>
+<p>If we want to consider an <em> infinite</em> wire, then we can take <span class="math notranslate nohighlight">\(\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2\)</span>, giving:</p>
+<div class="math notranslate nohighlight">
+\[{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}} \]</div>
+</div>
+<div class="section" id="displacement-current">
+<h2><span class="section-number">2.5.5. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this headline">¶</a></h2>
+<p>Lets consider a simple circuit with a capacitor, as seen in <a class="reference internal" href="#displacementcurrent"><span class="std std-numref">Fig. 2.19</span></a>, we could take an Ampère’s law path from the
+current flowing in to or out of the capacitor to a path cutting through the capacitor.  This is problematic because there is no current flowing
+through the capacitor, yet the exact path taken when calculating Ampère’s law should not change the outcome of the expression!</p>
+<div class="figure align-default" id="displacementcurrent">
+<img alt="../_images/DisplacementCurrent.png" src="../_images/DisplacementCurrent.png" />
+<p class="caption"><span class="caption-number">Fig. 2.19 </span><span class="caption-text">Applying Ampère’s law to a capacitor with no direct current between the plates.</span><a class="headerlink" href="#displacementcurrent" title="Permalink to this image">¶</a></p>
+</div>
+<p>To resolve this, consider the rate of flow of charge <span class="math notranslate nohighlight">\(I = \frac{\partial Q}{\partial t}\)</span> in to or out of the capacitor.  Starting from Gauss’s law we find that:</p>
+<div class="math notranslate nohighlight">
+\[Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = 
+\frac{\partial Q}{\partial t} = \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = 
+\epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} \]</div>
+<p>where we have made use of mixed partial derivatives commuting.  Note that we drop the term <span class="math notranslate nohighlight">\(\iint {\bf E}\cdot \mathrm{d} \left(\frac{\partial {\bf A}}{\partial t}\right)\)</span>
+from the product rule, since the surface <span class="math notranslate nohighlight">\(A\)</span> is constant in time.  So our final expression for Ampère’s law may be written:</p>
+<div class="math notranslate nohighlight" id="equation-ampereslawdc">
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-ampereslawdc" title="Permalink to this equation">¶</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0 \iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\]</div>
+<p>where we have added an additional <b>Displacement Current</b> <span class="math notranslate nohighlight">\(I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\)</span> .</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./electromagnetism"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Efieldsmatter.html" title="previous page"><span class="section-number">2.4. </span>Electric Fields in Matter</a>
+    <a class='right-next' id="next-link" href="magneticforces.html" title="next page"><span class="section-number">2.6. </span>Magnetic Forces</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.4. Solutions to the Wave Equation &#8212; Electromagnetism, Fluids and Waves</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.5. Transverse Waves" href="transverse.html" />
+    <link rel="prev" title="1.3. Longitudinal Waves" href="longitudinal.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="introduction.html">
+   1. Waves
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="wavemaths.html">
+     1.1. Mathematical Preliminaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SHM.html">
+     1.2. Harmonic and Oscillatory Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="longitudinal.html">
+     1.3. Longitudinal Waves
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.4. Solutions to the Wave Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="transverse.html">
+     1.5. Transverse Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dispersionrelations.html">
+     1.6. Dispersion Relations and Wave Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polarisation.html">
+     1.7. Polarisation of Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matterwaves.html">
+     1.8. Matter Waves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../electromagnetism/introduction.html">
+   2. Electromagnetism
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.1. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
+     2.2. Solving Electrostatic Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
+     2.3. Energy in an Electric Field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
+     2.4. Electric Fields in Matter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticfields.html">
+     2.5. Magnetism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticforces.html">
+     2.6. Magnetic Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/ampereslaw.html">
+     2.7. Ampère’s Circuital Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/faradayslaw.html">
+     2.8. Faraday’s Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
+     2.9. Maxwell’s Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMwaves.html">
+     2.10. Electromagnetic Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMenergy.html">
+     2.11. Energy in an Electromagnetic field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMpotentials.html">
+     2.12. Electromagnetic Potentials and Gauge Theories*
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../fluids/intro.html">
+   3. Fluids
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/newtonian.html">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/demo-exercise.html">
+     3.9. A title
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/waves/waveequationsolns.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fwaves/waveequationsolns.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis-of-the-wave-equation-pde">
+   1.4.1. Analysis of the Wave Equation PDE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#separable-ansatz-for-wave-equation-pde">
+   1.4.2. Separable Ansatz for Wave Equation PDE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#features-of-plane-wave-solutions">
+   1.4.3. Features of Plane Wave Solutions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="solutions-to-the-wave-equation">
+<h1><span class="section-number">1.4. </span>Solutions to the Wave Equation<a class="headerlink" href="#solutions-to-the-wave-equation" title="Permalink to this headline">¶</a></h1>
+<p>The wave equation interestingly is a rare example of a partial differential equation (PDE) which exhibits
+fairly simple solutions, despite its complexity (in general PDEs are quite difficult to solve exactly).</p>
+<div class="section" id="analysis-of-the-wave-equation-pde">
+<h2><span class="section-number">1.4.1. </span>Analysis of the Wave Equation PDE<a class="headerlink" href="#analysis-of-the-wave-equation-pde" title="Permalink to this headline">¶</a></h2>
+<p>One way to find solutions is to rewrite the wave equation in a factorised form (by analogy to the difference of two squares)</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u}{\partial t^2} - c^2 \frac{\partial^2 u}{\partial x^2 } = 0 \Rightarrow 
+\left(\frac{\partial }{\partial t} - c \frac{\partial}{\partial x}\right)\left( \frac{\partial }{\partial t} + c\frac{\partial }{\partial x}\right)u = 0\]</div>
+<p>which we can rewrite in terms of an intermediate variable <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-upde">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-upde" title="Permalink to this equation">¶</a></span>\[\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = v \]</div>
+<div class="math notranslate nohighlight" id="equation-vpde">
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-vpde" title="Permalink to this equation">¶</a></span>\[\frac{\partial v}{\partial t} - c\frac{\partial v}{\partial x} = 0 \]</div>
+<p>The form of Equation <a class="reference internal" href="#equation-vpde">(1.13)</a> suggests that we can write <span class="math notranslate nohighlight">\(v = v(y)\)</span>, where <span class="math notranslate nohighlight">\(y = y(x,\,t)\)</span>, meaning that</p>
+<div class="math notranslate nohighlight" id="equation-yode">
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-yode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d} v}{\mathrm{d} y}  \left(\frac{\partial y}{\partial t} - 
+c \frac{\partial y}{\partial x}\right)= 0\]</div>
+<p>which can be satisfied by <span class="math notranslate nohighlight">\(y = x + ct\)</span> and so <span class="math notranslate nohighlight">\(v = v(x + ct)\)</span>.  Solving Equation <a class="reference internal" href="#equation-upde">(1.12)</a>, which is now a sourced PDE:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = v(x+ct)\]</div>
+<p>The function <span class="math notranslate nohighlight">\(u\)</span> here will have a homogeneous and an inhomogeneous part:</p>
+<div class="math notranslate nohighlight">
+\[u = u_h + u_{PI}\]</div>
+<p>We find <span class="math notranslate nohighlight">\(u_h\)</span> satisfies:</p>
+<div class="math notranslate nohighlight" id="equation-uhpde">
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-uhpde" title="Permalink to this equation">¶</a></span>\[\frac{\partial u_h}{\partial t} + c \frac{\partial u_h}{\partial x} = 0 \]</div>
+<p>which we can write as <span class="math notranslate nohighlight">\(u_h(z)\)</span>, where <span class="math notranslate nohighlight">\(z  = z(x,\,t)\)</span>, meaning that</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d} u_h}{\mathrm{d} z}  \left(\frac{\partial z}{\partial t} + 
+c \frac{\partial z}{\partial x}\right)= 0\]</div>
+<p>which can be satisfied by <span class="math notranslate nohighlight">\(z = x - ct\)</span> and so <span class="math notranslate nohighlight">\(u_h = u_h(x - ct)\)</span>.  For <span class="math notranslate nohighlight">\(u_{PI}\)</span> we can see that:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u_{PI}}{\partial t} + c \frac{\partial u_{PI}}{\partial x} = v(x+ct)\]</div>
+<p>and through a similar process as Equation <a class="reference internal" href="#equation-yode">(1.14)</a>, we can show that that <span class="math notranslate nohighlight">\(u_{PI} = u_{PI}(x+ct)\)</span>.<br />
+The general solution to the wave equation is therefore:</p>
+<div class="math notranslate nohighlight" id="equation-wefuncform">
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-wefuncform" title="Permalink to this equation">¶</a></span>\[u(t,x) = A(x+ ct) + B(x - ct) \]</div>
+<p>where <span class="math notranslate nohighlight">\(A,\,B\)</span> are functions that we still have not yet found!</p>
+<p>We call these sorts of solutions <b> plane wave solutions </b> and we can interpret these two functions as left and right
+moving wave solutions here, to see how consider the functions first at <span class="math notranslate nohighlight">\(t = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[u(x,0) = A(x) + B(x)\]</div>
+<p>if we now move to a time <span class="math notranslate nohighlight">\(t \rightarrow 1\)</span>, then the function has the form:</p>
+<div class="math notranslate nohighlight">
+\[u(x,1) = A(x + c) + B(x - c)\]</div>
+<p>For <span class="math notranslate nohighlight">\(u(t,x)\)</span> to stay invariant under this change:</p>
+<ul class="simple">
+<li><p>For the <span class="math notranslate nohighlight">\(A\)</span> function, <span class="math notranslate nohighlight">\(x \rightarrow x - c \)</span>, suggesting it is a <b> left moving wave</b>.</p></li>
+<li><p>For the <span class="math notranslate nohighlight">\(B\)</span> function, <span class="math notranslate nohighlight">\(x \rightarrow x + c\)</span> suggesting it is a <b> right moving wave</b>.</p></li>
+</ul>
+</div>
+<div class="section" id="separable-ansatz-for-wave-equation-pde">
+<h2><span class="section-number">1.4.2. </span>Separable Ansatz for Wave Equation PDE<a class="headerlink" href="#separable-ansatz-for-wave-equation-pde" title="Permalink to this headline">¶</a></h2>
+<p>Although this analysis gives us the functional dependence of the functions <span class="math notranslate nohighlight">\(A,\,B\)</span>, it does not narrow down
+their form.  We can however use the fact that the PDE is also separable into two ODEs to solve here, our
+ansatz for the form of <span class="math notranslate nohighlight">\(u\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u(t,x) &amp;=&amp;\,  f(x)\,g(t) \\
+u_{xx} &amp;=&amp;\,  \frac{\mathrm{d}^2 f}{\mathrm{d} x^2}\,g(t) \\
+u_{tt} &amp;=&amp;\,  f(x)\,\frac{\mathrm{d}^2 g}{\mathrm{d} t^2}\end{split}\]</div>
+<p>this allows us to separate out the variables of the wave equation into the form</p>
+<div class="math notranslate nohighlight">
+\[\frac{c^2}{f}\frac{\mathrm{d}^2 f}{\mathrm{d} x^2} = \frac{1}{g}\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} \]</div>
+<p>These two equations are also <em> equal to a constant</em>.  How? Well the LHS here does not vary when we
+change variable <span class="math notranslate nohighlight">\(t\)</span>, so the right hand side cannot either! Equally the RHS does not vary when changing
+variable <span class="math notranslate nohighlight">\(x\)</span>, so the LHS cannot either - meaning there is no dependence on <span class="math notranslate nohighlight">\(x,\,t\)</span> on either side,
+making them both equal to the same constant.  We are free to pick whichever constant we like here,
+but lets choose a negative value <span class="math notranslate nohighlight">\(-a^2,\, a\in \mathbb{R}\)</span>.  Picking the constant is mathematically
+arbitrary, but for physical oscillating solutions, we <em>need </em> a negative constant.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{c^2}{f}\frac{\mathrm{d}^2 f}{\mathrm{d} x^2} &amp;=&amp;\,  -a^2 \\ 
+\frac{1}{g}\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} &amp;=&amp;\,  -a^2\end{split}\]</div>
+<p>We can solve the first equation to find</p>
+<div class="math notranslate nohighlight">
+\[f(x) = A\,\exp\left(\frac{iax}{c}\right) + B\,\exp\left(-\frac{iax}{c}\right)\]</div>
+<p>We can do the same with <span class="math notranslate nohighlight">\(g(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[g(t) = C\,\exp(iat) + D\,\exp(-iat)\]</div>
+<p>and putting these together means we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u(x,\,t) \,&amp;&amp;= AC\,\exp\left(\frac{ia}{c}(x + ct)\right)+ BD\,\exp\left(-\frac{ia}{c}(x + ct)\right)  \\
+ &amp;&amp; + AD\,\exp\left(\frac{ia}{c}(x - ct)\right) + BC\,\exp\left(-\frac{ia}{c}(x - ct)\right) \end{split}\]</div>
+<p>where we have grouped together the first two terms as the left hand moving wave solutions and last term terms
+as the right hand moving wave solutions, which matches the functional form of Equation <a class="reference internal" href="#equation-wefuncform">(1.16)</a>.</p>
+<p>One thing we should try to take care about when writing functions like this is to endure that the
+arguments of the functions are dimensionless - consider the function <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> where <span class="math notranslate nohighlight">\(x\)</span> is a length,
+if we look at the Maclaurin expansion:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = e^x = 1 + x + x^2 + x^3 + \dots\]</div>
+<p>adding a dimensionless number to a length to an area to a volume really is meaningless!  Therefore
+we should really write functions in the form:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = e^{x/a} = 1 + \frac{x}{a} + \left(\frac{x}{a}\right)^2 + \left(\frac{x}{a}\right)^3 + \dots\]</div>
+<p>which in each case has a dimensionless quantity being manipulated and <span class="math notranslate nohighlight">\(a\)</span> carries the same units as <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>So lets rewrite <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> in the form</p>
+<div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln1">
+<span class="eqno">(1.17)<a class="headerlink" href="#equation-fullwaveeqnsoln1" title="Permalink to this equation">¶</a></span>\[\begin{split}u(x,\,t) \, &amp;&amp; =  AC \exp\left(i(kx + \omega t)\right) + BD\exp\left(-i(kx + \omega t)\right) \\
+&amp;&amp; + AD \exp\left(i(kx - \omega t)\right) + BC\exp\left(-i(kx - \omega t)\right)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is a quantity with units <span class="math notranslate nohighlight">\([\textrm{length}]^{-1}\)</span>,<span class="math notranslate nohighlight">\(\omega\)</span> is a quantity with units
+<span class="math notranslate nohighlight">\([\textrm{time}]^{-1}\)</span> and <span class="math notranslate nohighlight">\(A'\,B',\,C',\ D'\)</span> are cosntants.  We can make this change, with no less of
+generality, as we have not fixed a value of  constant <span class="math notranslate nohighlight">\(a\)</span> previously and also because it is a
+more useful way to understand wave behaviour.</p>
+<p>We can reduce the form of these wave solutions further, consider the addition of two complex exponetials:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + (A-B)i\sin(x)\]</div>
+<p>we know through trigonometric angle identites that</p>
+<div class="math notranslate nohighlight">
+\[\cos(x-\phi) = \cos(x)\cos(\phi) + \sin(x)\sin(\phi)\]</div>
+<p>and therefore we can make the association:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(A - B)i\, &amp;&amp; = \sin(\phi) \\
+A + B \,&amp;&amp; = \cos(\phi) \\
+ \Rightarrow \tan(\phi) \,&amp;&amp; = i\frac{A-B}{A+B}\end{split}\]</div>
+<p>and therefore we could write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) &amp;=&amp; \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
+\, &amp;=&amp;\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A'\)</span> is some constant to be found.  So if we use the condition that we will eventually just take
+the real parts of our complex solutions, it dramatically simplifies the form of the equations.  Therefore we rewrite
+Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(1.17)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln">
+<span class="eqno">(1.18)<a class="headerlink" href="#equation-fullwaveeqnsoln" title="Permalink to this equation">¶</a></span>\[u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) \]</div>
+<p>where <span class="math notranslate nohighlight">\(A',\, B'\)</span> are constants to be found.</p>
+</div>
+<div class="section" id="features-of-plane-wave-solutions">
+<h2><span class="section-number">1.4.3. </span>Features of Plane Wave Solutions<a class="headerlink" href="#features-of-plane-wave-solutions" title="Permalink to this headline">¶</a></h2>
+<p>Lets examine these quantities <span class="math notranslate nohighlight">\(k,\, \omega\)</span> a little more closely too, start with a right travelling wave <span class="math notranslate nohighlight">\(u\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[u(x,\,t) = u_0 \,\exp\left(i(kx - \omega t)\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(u(x=0,\, t=0) = u_0\)</span>.</p>
+<p>If we shift <span class="math notranslate nohighlight">\(t \rightarrow t + 2\pi/\omega\)</span>, then we see that <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> remains invariant, due to the
+periodic nature of <span class="math notranslate nohighlight">\(e^{i\omega t}\)</span>.  This suggests that <span class="math notranslate nohighlight">\(2\pi/\omega\)</span> is the <b> time period </b> of the
+waves oscillation <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span> and in fact it is clear that <span class="math notranslate nohighlight">\(\omega = \frac{2\pi}{T} = 2\pi f\)</span>
+is just the angular frequency of the wave.</p>
+<p>Likewise if we shift <span class="math notranslate nohighlight">\(x \rightarrow x + 2\pi/k\)</span>, then <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> remains invariant, due to the periodic nature
+of <span class="math notranslate nohighlight">\(e^{i k x}\)</span> and this suggests that <span class="math notranslate nohighlight">\(2\pi/k\)</span> is the <b> wavelength </b> of the wave, hence
+<span class="math notranslate nohighlight">\(k = \frac{2\pi}{\lambda}\)</span>.  This is known as the <b> wave vector </b> of the wave.</p>
+<p>Although it seems strange that a scalar quantity is being called a vector, this is only true in the one
+dimensional case, for a right travelling wave propagating in three dimensions:</p>
+<div class="math notranslate nohighlight">
+\[{\bf u}(x,\,t) = {\bf u_0} \exp\left(i(\bf{k}\cdot\bf{x} - \omega t)\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\({\bf k},\, \,{\bf u},\, {\bf u_0}\)</span> are now vector quantities, with <span class="math notranslate nohighlight">\({\bf k} = (k_x,\, k_y,\, k_z),\ {\bf x} = (x,\, y,\, z)\)</span>, and
+<span class="math notranslate nohighlight">\(k = |\bf{k}| = \frac{2\pi}{\lambda}\)</span>.  <span class="math notranslate nohighlight">\({\bf u_0}\)</span> is known as the waves <b>Polarisation Vector</b> (more on this later).</p>
+<p>The quantity <span class="math notranslate nohighlight">\(\Phi = kx-\omega t\)</span> is often known as the <b> phase </b> of the wave and comparing these
+between two travelling waves <span class="math notranslate nohighlight">\(|\Phi_1 - \Phi_2|\)</span> allows us to look at the <b> phase difference </b>
+between waves, which is important in phenomena such as interference.  All of these considerations also apply to left
+hand moving waves also.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="longitudinal.html" title="previous page"><span class="section-number">1.3. </span>Longitudinal Waves</a>
+    <a class='right-next' id="next-link" href="transverse.html" title="next page"><span class="section-number">1.5. </span>Transverse Waves</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
