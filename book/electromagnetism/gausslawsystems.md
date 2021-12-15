@@ -81,7 +81,7 @@ U_E(r) = -\frac{Q_S}{4\pi\,\epsilon_0} \int_{\infty}^{r}\frac{Q}{(r')^2}\,\mathr
 We can consider a uniform infinite sheet of charge, carrying a total charge $Q$ over an area $A_{tot}$, with a uniform 
 charge for unit area $\sigma = \frac{Q}{A_{tot}}$.  Here we want to find a Gauss's law surface to find the flux crossing, 
 for a sheet like this we can pick a cylinder, as we see in Figure {eq}`sheetofcharge`.  
-```{figure}
+```{figure} ../figures/sheetofcharge.png
 ---
 name: sheetofcharge
 ---

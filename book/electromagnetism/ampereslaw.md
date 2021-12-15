@@ -61,11 +61,11 @@ Lets consider a simple circuit with a capacitor, as seen in {numref}`Displacemen
 flowing in to or out of the capacitor to a path cutting through the capacitor.  This is problematic because there is no current flowing through 
 the capacitor, yet the exact path taken when calculating Ampère's law should not change the outcome of the expression!
 
-```{figure}
-    \centering
-    \includegraphics[scale = 0.5]{figures/DisplacementCurrent.png}
-    \caption{Applying Amp\`eres law to a capacitor with no direct current between the plates.}
-    :label: DisplacementCurrent}
+```{figure} ../figures/DisplacementCurrent.png
+---
+name: DisplacementCurrent
+---
+Applying Ampère's law to a capacitor with no direct current between the plates.
 ```
 
 To resolve this, consider the rate of flow of charge $I = \frac{\partial Q}{\partial t}$ in to or out of the capacitor.  Starting from Gauss's law we find that:

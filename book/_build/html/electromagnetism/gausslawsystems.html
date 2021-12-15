@@ -474,6 +474,10 @@ to the sphere, which itself carries a charge <span class="math notranslate nohig
 <p>We can consider a uniform infinite sheet of charge, carrying a total charge <span class="math notranslate nohighlight">\(Q\)</span> over an area <span class="math notranslate nohighlight">\(A_{tot}\)</span>, with a uniform
 charge for unit area <span class="math notranslate nohighlight">\(\sigma = \frac{Q}{A_{tot}}\)</span>.  Here we want to find a Gauss’s law surface to find the flux crossing,
 for a sheet like this we can pick a cylinder, as we see in Figure <code class="xref eq docutils literal notranslate"><span class="pre">sheetofcharge</span></code>.</p>
+<div class="figure align-default" id="sheetofcharge">
+<img alt="../_images/sheetofcharge.png" src="../_images/sheetofcharge.png" />
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Sheet of charge using a cylinder as our Gaussian surface.</span><a class="headerlink" href="#sheetofcharge" title="Permalink to this image">¶</a></p>
+</div>
 <p>The cylinder has three areas here, a cross sectional area <span class="math notranslate nohighlight">\(A\)</span> on each each and a long surface cylinder of side
 <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(2 \pi r L\)</span>.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet),
 these point in the <span class="math notranslate nohighlight">\(\text{sign}(z)\hat{{\bf z}}\)</span> direction, depending on which side we are on, so here our Gauss’s law dot
@@ -491,12 +495,12 @@ product looks like</p>
 <div class="math notranslate nohighlight">
 \[E_z = \frac{\sigma}{2 \epsilon_0} \longrightarrow {\bf E}= -\frac{\sigma}{2 \epsilon_0} \hat{{\bf z}}\]</div>
 <p>For an example of a sheet of charge system, consider a capacitor, here we can think of this system as two
-sheets of charge, one carrying a charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.5</span></a>.<br />
+sheets of charge, one carrying a charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.6</span></a>.<br />
 Obviously this system is idealised, because these sheets of charge are <em> finite</em>.  However if we ignore edge
 effects, the use of our expressions work fairly well!</p>
 <div class="figure align-default" id="capacitorelectricfield">
 <img alt="electromagnetism\.../figures/capacitorelectricfield1.png" src="electromagnetism\.../figures/capacitorelectricfield1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">¶</a></p>
 </div>
 <p>For two identical plates, each carrying the same magnitude of charge (but opposite signs),
 there will be a uniform electric field between the plates:</p>
@@ -522,7 +526,7 @@ is directed in the radial direction away from the charges and its the long side 
 depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">:lineofcharge</span></code>.</p>
 <div class="figure align-default" id="lineofcharge">
 <img alt="../_images/InfiniteLineOfCharges.png" src="../_images/InfiniteLineOfCharges.png" />
-<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">An infinite line of charges with a cylinder as our Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">An infinite line of charges with a cylinder as our Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
 </div>
 <p>For a cylinder of length <span class="math notranslate nohighlight">\(L\)</span>, the area of the long side of the cylinder is <span class="math notranslate nohighlight">\(2 \pi r L\)</span> and the charge enclosed in this
 area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>, so putting these facts together:</p>
@@ -537,11 +541,11 @@ area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>
 <div class="section" id="finite-lines-of-charge">
 <h3><span class="section-number">2.2.3.1. </span>Finite Lines of Charge*<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">¶</a></h3>
 <p>Equation <code class="xref std std-numref docutils literal notranslate"><span class="pre">FiniteChargeLineEField</span></code> is only true for an infinite line of charge, if we have a finite collection of charges,
-as depicted in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.7</span></a>, then we loose the symmetries of the system that we needed to simplify the Gauss’s
+as depicted in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.8</span></a>, then we loose the symmetries of the system that we needed to simplify the Gauss’s
 law expression - making it harder to solve this system using Gauss’s law, but we can consider iot from a superposition of point charges perspective.</p>
 <div class="figure align-default" id="finitelineofcharge">
 <img alt="../_images/FiniteLineOfCharges1.png" src="../_images/FiniteLineOfCharges1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">An finite line of charges with length <span class="math notranslate nohighlight">\(a + b\)</span> aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis and an element of charge <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span> indicated in red.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">An finite line of charges with length <span class="math notranslate nohighlight">\(a + b\)</span> aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis and an element of charge <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span> indicated in red.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
 </div>
 <p>With a line of large, of length <span class="math notranslate nohighlight">\(a + b\)</span>, aligned along the <span class="math notranslate nohighlight">\(x\)</span> axis and considering a radial distance <span class="math notranslate nohighlight">\(r\)</span> away.  The radial
 component of the electric field can be found by breaking up the uniform line of charge into infinitesimal chunks,
