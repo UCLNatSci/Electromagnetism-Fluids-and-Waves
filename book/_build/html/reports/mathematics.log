@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\jupyter_cache\executors\utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\nbclient\client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\nbclient\util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\nbclient\util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\asyncio\base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\nbclient\client.py", line 554, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\nbclient\client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "c:\users\ella metcalfe\anaconda3\envs\py37\lib\site-packages\nbclient\client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+render:
+  image:
+    align: "center"
+---
+fig,ax=plt.subplots(figsize=(5,5))
+ax.set_title('Field lines')
+ax.axis([-2,2,-2,2])
+ax.xaxis.set_ticks([])
+ax.yaxis.set_ticks([])
+#----------------------------------
+start=[ #start points of selected field lines
+    [-1.6,-2],[-1.1,-2],[-0.6,-2],[-0.1,-2],
+    [+1.6,-2],[+1.1,-2],[+0.6,-2],[+0.1,-2],
+    [-1.6,+2],[-1.1,+2],[-0.6,+2],[-0.1,+2],
+    [+1.6,+2],[+1.1,+2],[+0.6,+2],[+0.1,+2]]
+#----------------------------------
+
+ax.streamplot(X,Y,U,V,start_points=start,density=10) # stream plot
+
+plt.show()
+------------------
+
+[1;36m  File [1;32m"<ipython-input-3-5e55c6389838>"[1;36m, line [1;32m1[0m
+[1;33m    render:[0m
+[1;37m           ^[0m
+[1;31mSyntaxError[0m[1;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (<ipython-input-3-5e55c6389838>, line 1)
+

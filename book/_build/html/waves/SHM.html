@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2. Harmonic and Oscillatory Motion &#8212; Electromagnetism, Fluids and Waves</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.3. Longitudinal Waves" href="longitudinal.html" />
+    <link rel="prev" title="1.1. Mathematical Preliminaries" href="wavemaths.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="introduction.html">
+   1. Waves
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="wavemaths.html">
+     1.1. Mathematical Preliminaries
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2. Harmonic and Oscillatory Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="longitudinal.html">
+     1.3. Longitudinal Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waveequationsolns.html">
+     1.4. Solutions to the Wave Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="transverse.html">
+     1.5. Transverse Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dispersionrelations.html">
+     1.6. Dispersion Relations and Wave Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polarisation.html">
+     1.7. Polarisation of Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matterwaves.html">
+     1.8. Matter Waves
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../electromagnetism/introduction.html">
+   2. Electromagnetism
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.1. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
+     2.2. Solving Electrostatic Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
+     2.3. Energy in an Electric Field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
+     2.4. Electric Fields in Matter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticfields.html">
+     2.5. Magnetism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticforces.html">
+     2.6. Magnetic Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/ampereslaw.html">
+     2.7. Ampère’s Circuital Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/faradayslaw.html">
+     2.8. Faraday’s Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
+     2.9. Maxwell’s Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMwaves.html">
+     2.10. Electromagnetic Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMenergy.html">
+     2.11. Energy in an Electromagnetic field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMpotentials.html">
+     2.12. Electromagnetic Potentials and Gauge Theories*
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../fluids/intro.html">
+   3. Fluids
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/newtonian.html">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/demo-exercise.html">
+     3.9. A title
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/waves/SHM.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fwaves/SHM.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-harmonic-motion">
+   1.2.1. Simple Harmonic Motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-in-a-simple-harmonic-system">
+   1.2.2. Energy in a Simple Harmonic System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forced-harmonic-systems">
+   1.2.3. Forced Harmonic Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#damped-motion">
+   1.2.4. Damped Motion*
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="harmonic-and-oscillatory-motion">
+<h1><span class="section-number">1.2. </span>Harmonic and Oscillatory Motion<a class="headerlink" href="#harmonic-and-oscillatory-motion" title="Permalink to this headline">¶</a></h1>
+<p>Waves are connected to oscillations and describe the transfer of energy from different parts of a system through oscillating phenomena within said system.<br />
+This should be seen differently to other ways that energy may be transferred, e.g. thermodynamically or by doing work by applying a force over a distance.<br />
+The study of oscillations can be started by looking at the simplest kind of oscillating system, that of Simple Harmonic Motion (SHM) and Simple Harmonic Oscillators (SHO),
+before moving on to consider damped and forced harmonic systems.</p>
+<div class="section" id="simple-harmonic-motion">
+<h2><span class="section-number">1.2.1. </span>Simple Harmonic Motion<a class="headerlink" href="#simple-harmonic-motion" title="Permalink to this headline">¶</a></h2>
+<p>Lets consider a simple system with a mass on a idealised spring, which follows Hooke’s law <span class="math notranslate nohighlight">\(\bf{F}_H = k \bf{x}\)</span> where <span class="math notranslate nohighlight">\(\bf{F}\)</span> is
+the force applied, <span class="math notranslate nohighlight">\(x\)</span> is the extension measured in the spring from the application of the force <span class="math notranslate nohighlight">\(\bf{F}\)</span> and <span class="math notranslate nohighlight">\(k\)</span> is the spring constant, a material property of the spring.</p>
+<div class="figure align-default" id="massonaspring">
+<img alt="../_images/massonaspring.png" src="../_images/massonaspring.png" />
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Mass on a spring demonstrating SHM</span><a class="headerlink" href="#massonaspring" title="Permalink to this image">¶</a></p>
+</div>
+<p>As we see in <a class="reference internal" href="#massonaspring"><span class="std std-numref">Fig. 1.1</span></a>, a mass hanging from a spring will settle into an equilibrium position where the downward weight from the mass
+<span class="math notranslate nohighlight">\(\bf{W}\)</span> (the spring here is considered mass-less) and the upward tension <span class="math notranslate nohighlight">\(\bf{F}_H\)</span> from the spring balance out, producing no net force and
+therefore no net acceleration (by Newton’s second law).  At this equilibrium position the spring extension will be denoted by <span class="math notranslate nohighlight">\(\bf{e}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\Sigma \bf{F} = m\bf{a} \Rightarrow \bf{W} - k\bf{e}\]</div>
+<p>If we displace the mass downwards, with an additional extension <span class="math notranslate nohighlight">\(\bf{x}\)</span> (which we have denoted is the positive direction), then the Hooke’s
+law tension from the spring will be directed upwards (which will be in the negative direction)</p>
+<div class="math notranslate nohighlight">
+\[\Sigma \bf{F} = m\bf{a} \Rightarrow \bf{W} - k(\bf{e} + \bf{x}) = m\bf{a}\]</div>
+<p>we can express the acceleration <span class="math notranslate nohighlight">\(\bf{a}\)</span> in terms of a second derivative of the displacement <span class="math notranslate nohighlight">\(\bf{x}\)</span> so we can rewrite as</p>
+<div class="math notranslate nohighlight">
+\[\ddot{\bf{x}}= - \frac{k}{m}\bf{x}\]</div>
+<p>which is often rewritten as</p>
+<div class="math notranslate nohighlight">
+\[\ddot{\bf{x}} = -{\omega_0}^2\bf{x}\]</div>
+<p>where we denote <span class="math notranslate nohighlight">\(\omega_0 = \sqrt{k/m}\)</span> is the natural angular frequency of this system.<br />
+Recall from our discussions of calculus that we can solve this second order ODE to give:</p>
+<div class="math notranslate nohighlight" id="equation-shmsolution">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-shmsolution" title="Permalink to this equation">¶</a></span>\[x(t) = A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \]</div>
+<p>To solve for <span class="math notranslate nohighlight">\(A,\,B\)</span> here we need initial conditions, which we could consider from the physical situation of displacing the mass
+from equilibrium to an additional displacement <span class="math notranslate nohighlight">\(x = 1\)</span> and then releasing the mass from rest and examining the resulting motion.
+This tell us that <span class="math notranslate nohighlight">\(x(t = 0) = 1\)</span> and <span class="math notranslate nohighlight">\(\dot{x}(t=0) = v(t = 0) = 0\)</span> and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x(t) &amp;=&amp; A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \Longrightarrow x(0) = A = 1 \\
+\dot{x}(t) &amp;=&amp; - \omega_0 A \sin(\omega_0 \,t) + B  \omega_0 \cos(\omega_0 \,t)  \Longrightarrow \dot{x}(0) = B \omega_0 = 0\end{split}\]</div>
+<p>which gives us <span class="math notranslate nohighlight">\(A = 1,\, B = 0\)</span> and so</p>
+<div class="math notranslate nohighlight">
+\[x(t) = \cos(\omega_0\,t)\]</div>
+<p>We say this system presents <b>Simple Harmonic Motion (SHM)</b>, because it represents the simplest kind of harmonic
+(also called oscillating or repetitive) motion that we can have.  We put energy into the system by extending the spring
+(which is a form of potential energy <span class="math notranslate nohighlight">\(E_k = \frac{1}{2}kx^2\)</span>) and then this is converted into kinetic energy and then back into potential
+(this time as gravitational potential energy) as the mass oscillates up and down.  What is truly stunning about this system is that SHM can be
+seen a many different systems but always has the same hallmarks - there is some natural angular frequency <span class="math notranslate nohighlight">\(\omega_0\)</span> we can find from the equations
+of motion and the energy in the system oscillates between potential and kinetic.</p>
+<p>Another feature of this motion is the similarities it brings to circular motion, in fact we can see from <a class="reference internal" href="#circmotionshm"><span class="std std-numref">Fig. 1.2</span></a> that uniform
+circular motion projected into one dimension is just SHM.  The natural angular frequency of the system <span class="math notranslate nohighlight">\(\omega_0\)</span> here is now the angular speed <span class="math notranslate nohighlight">\(\omega\)</span> of
+the circular motion</p>
+<div class="math notranslate nohighlight">
+\[\omega = \frac{\textrm{d}\theta}{\textrm{d}t}\]</div>
+<div class="figure align-default" id="circmotionshm">
+<img alt="../_images/CircMotionSHM.jpg" src="../_images/CircMotionSHM.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Projection of a ball on a spinning wheel undergoing uniform circular motion, the balls shadow displays SHM - this stretched out in time shows wave motion.</span><a class="headerlink" href="#circmotionshm" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="energy-in-a-simple-harmonic-system">
+<h2><span class="section-number">1.2.2. </span>Energy in a Simple Harmonic System<a class="headerlink" href="#energy-in-a-simple-harmonic-system" title="Permalink to this headline">¶</a></h2>
+<p>Going back to the mass and spring system, we can also think about the stored energy in the system,</p>
+<div class="math notranslate nohighlight">
+\[E = KE + PE\]</div>
+<p>where the kinetic energy has the usual defintion, <span class="math notranslate nohighlight">\(KE = \frac{1}{2}mv^2 = \frac{1}{2}m{\dot{x}}^2\)</span> and the potential energy is elastic potential energy
+<span class="math notranslate nohighlight">\(PE = \frac{1}{2}kx^2\)</span>, but in a different system this could be replaced with the relevant form of potential.  Using the solutions for SHM, <a class="reference internal" href="#equation-shmsolution">(1.3)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x(t) &amp;=&amp; \, A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \\
+\dot{x}(t) &amp;=&amp; \, \omega_0(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )\\
+\Rightarrow E &amp;=&amp; \, \frac{1}{2}m{\omega_0}^2(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )^2 + \frac{1}{2}k(A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) )^2\end{split}\]</div>
+<p>Given that <span class="math notranslate nohighlight">\({\omega_0}^2 = k / m\)</span>, this can be expanded and tidied up becoming:</p>
+<div class="math notranslate nohighlight" id="equation-shmenergy">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-shmenergy" title="Permalink to this equation">¶</a></span>\[E = \frac{1}{2}k\left(A^2 + B^2\right)\]</div>
+<p>Which therefore means that the total amount of energy in the system is a constant, even if the energy flucuates between kinetic and potential in the course
+of the harmonic motion.</p>
+</div>
+<div class="section" id="forced-harmonic-systems">
+<h2><span class="section-number">1.2.3. </span>Forced Harmonic Systems<a class="headerlink" href="#forced-harmonic-systems" title="Permalink to this headline">¶</a></h2>
+<p>We can think of an oscillating system, such as an AC electrical system with a voltage <span class="math notranslate nohighlight">\(V = V_0 \cos(\Omega t)\)</span> and fixed resistance <span class="math notranslate nohighlight">\(R\)</span>, which would
+have a power of <span class="math notranslate nohighlight">\(P = V^2 / R = \frac{{V_0}^2}{R}\cos^2(\Omega t) \)</span>, which seems to suggest osciallting systems energy depends on</p>
+</div>
+<div class="section" id="damped-motion">
+<h2><span class="section-number">1.2.4. </span>Damped Motion*<a class="headerlink" href="#damped-motion" title="Permalink to this headline">¶</a></h2>
+<p>This SHM model presupposes that there are no losses in energy in this system and this is not always a good model for real world systems, usually there are
+<b> damping </b> terms in our equations of motion, often this is due to air resistance but can also be caused by frictional forces.  This has the effect of adding a
+first derivative term to the equations of motion</p>
+<div class="math notranslate nohighlight">
+\[m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + c \frac{\mathrm{d} x}{\mathrm{d} t} + kx = 0 \]</div>
+<p>and we can also put in a driving force <span class="math notranslate nohighlight">\(F(t)\)</span> into our model to represent a constant amount of energy being put into the system
+(which will be important if there are energy losses in the system).  We can rewrite in the form</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + 2\zeta\omega_0 \frac{\mathrm{d} x}{\mathrm{d} t} + {\omega_0}^2 x = F(t) \]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega_0\)</span> is the natural angular frequency of the system and <span class="math notranslate nohighlight">\(\zeta\)</span> is the damping ratio.  If energy is put into the system at a rate of <span class="math notranslate nohighlight">\(\Omega\)</span>, such as
+<span class="math notranslate nohighlight">\(F(t) = F_0 \cos(|omega t)\)</span> and this frequency conicinces with the natural frequency <span class="math notranslate nohighlight">\(\omega_0\)</span>, i.e. <span class="math notranslate nohighlight">\(|omega \rightarrow \omega_0\)</span>, this gives rise to the phenomena of
+<b> resonance </b>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="wavemaths.html" title="previous page"><span class="section-number">1.1. </span>Mathematical Preliminaries</a>
+    <a class='right-next' id="next-link" href="longitudinal.html" title="next page"><span class="section-number">1.3. </span>Longitudinal Waves</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
