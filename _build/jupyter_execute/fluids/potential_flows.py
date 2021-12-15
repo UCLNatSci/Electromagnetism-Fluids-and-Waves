@@ -159,6 +159,13 @@ plt.show()
 # ```
 # <br>
 # 
+# ## Incompressible irrotational flow
+# 
+# Incompressible flow satisfies ...
+# 
+# Laplacian ...
+# 
+# 
 # 
 # ## Another exercise
 # 

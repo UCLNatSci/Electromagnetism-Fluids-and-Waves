@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Fluids
-author: Ella Metcalfe
+title: Electromagnetism, Fluids and Waves
+author: Ali Mozaffari and Ella Metcalfe
 logo: logo.jpg
 
 # Force re-execution of notebooks on each build.

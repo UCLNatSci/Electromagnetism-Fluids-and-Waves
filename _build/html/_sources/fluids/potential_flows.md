@@ -173,6 +173,13 @@ scale: 60%
 ```
 <br>
 
+## Incompressible irrotational flow
+
+Incompressible flow satisfies ...
+
+Laplacian ...
+
+
 
 ## Another exercise
 
