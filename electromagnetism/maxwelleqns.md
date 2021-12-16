@@ -65,7 +65,7 @@ $\mathrm{d} {\bf \ell}$ in the circuit:
 ```{math}
 \mathcal{E} = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell} = \oint_c {\bf E} \cdot \mathrm{d}{\bf \ell}
 ```
-where the final sign on the integral is given by the convention for clockwise conventional current.  Figure \ref{fig:MagnetInACoil} shows that a positive 
+where the final sign on the integral is given by the convention for clockwise conventional current.  {numref}`MagnetInACoil` shows that a positive 
 change in $\Phi_B$ eventually produces current in a negative direction.  We can rewrite this using Stoke's theorem:
 ```{math}
 \oint_\ell {\bf E} \cdot \mathrm{d} \ell= \iint_A \left(\nabla \times {\bf E}\right)\cdot \mathrm{d} {\bf A} \nonumber

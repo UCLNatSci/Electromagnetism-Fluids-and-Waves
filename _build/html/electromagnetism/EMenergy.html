@@ -403,7 +403,7 @@ to an idea from the waves section, namely where are all the sources of energy in
 modify this to consider a continuous charge density <span class="math notranslate nohighlight">\(\rho({\bf r})\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[U_E = \frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i) \rightarrow U_E  = \frac{1}{2}\iiint \rho({\bf r}) \,V_E({\bf r}) \, \mathrm{d} V \]</div>
-<p>Given Equation <a class="reference internal" href="maxwelleqns.html#equation-dive">(2.19)</a>, we can rewrite this using Gauss’s law in differential form:</p>
+<p>Given Equation <a class="reference internal" href="maxwelleqns.html#equation-dive">(2.18)</a>, we can rewrite this using Gauss’s law in differential form:</p>
 <div class="math notranslate nohighlight">
 \[U_E  = \frac{1}{2}\,\epsilon_0\,\iiint V_E\,(\nabla\cdot {\bf E})\, \, \mathrm{d} V \]</div>
 <p>For some vector field <span class="math notranslate nohighlight">\({\bf A}\)</span> and scalar field <span class="math notranslate nohighlight">\(B\)</span>, we find the following vector identity applies:</p>
@@ -426,16 +426,16 @@ Then we can define the energy density <span class="math notranslate nohighlight"
 <div class="section" id="energy-flux-and-poynting-vector">
 <h2><span class="section-number">2.11.2. </span>Energy Flux and Poynting Vector<a class="headerlink" href="#energy-flux-and-poynting-vector" title="Permalink to this headline">¶</a></h2>
 <p>To find the total energy density we would need to repeat this process for <span class="math notranslate nohighlight">\({\bf B}\)</span> (which is fairly lengthy!), but we can consider this problem
-through analogy.  The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.21)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
+through analogy.  The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.20)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
 <div class="math notranslate nohighlight" id="equation-e-cb">
-<span class="eqno">(2.30)<a class="headerlink" href="#equation-e-cb" title="Permalink to this equation">¶</a></span>\[\frac{[B]}{[\textrm{Length}]} = \epsilon_0\,\mu_0\,\frac{[E]}{[\textrm{Time}]} \Rightarrow [B] = [E]\,[\textrm{Speed}]\,\epsilon_0\,\mu_0 \]</div>
-<p>Equation <a class="reference internal" href="EMwaves.html#equation-speedoflight">(2.27)</a> says <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_0\,\mu_0}\)</span>, hence using <span class="math notranslate nohighlight">\(c\)</span> as the wave speed, <span class="math notranslate nohighlight">\(u_B\)</span> has the form:</p>
+<span class="eqno">(2.29)<a class="headerlink" href="#equation-e-cb" title="Permalink to this equation">¶</a></span>\[\frac{[B]}{[\textrm{Length}]} = \epsilon_0\,\mu_0\,\frac{[E]}{[\textrm{Time}]} \Rightarrow [B] = [E]\,[\textrm{Speed}]\,\epsilon_0\,\mu_0 \]</div>
+<p>Equation <a class="reference internal" href="EMwaves.html#equation-speedoflight">(2.26)</a> says <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_0\,\mu_0}\)</span>, hence using <span class="math notranslate nohighlight">\(c\)</span> as the wave speed, <span class="math notranslate nohighlight">\(u_B\)</span> has the form:</p>
 <div class="math notranslate nohighlight">
 \[u_B = \frac{1}{2}\,\epsilon_0\,c^2\,B^2 = \frac{1}{2\,\mu_0}\,B^2\]</div>
 <p>Therefore the total intrinsic energy density of electromagnetic fields is given by:</p>
 <div class="math notranslate nohighlight">
 \[u = u_E + u_B = \frac{1}{2}\left(\epsilon_0\,E^2 + \frac{1}{\mu_0}\,B^2 \right)\]</div>
-<p>Equations for <span class="math notranslate nohighlight">\(u\)</span> also appear within Maxwell’s equations, take Equations <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.21)</a> and <a class="reference internal" href="maxwelleqns.html#equation-curle">(2.22)</a>:</p>
+<p>Equations for <span class="math notranslate nohighlight">\(u\)</span> also appear within Maxwell’s equations, take Equations <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.20)</a> and <a class="reference internal" href="maxwelleqns.html#equation-curle">(2.21)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} &amp;=&amp; \,\left({\bf J} + \epsilon_0\frac{\partial {\bf E}}{\partial t} \right)\cdot {\bf E} = 
 {\bf J} \cdot {\bf E} + \frac{\partial}{\partial t}\left( \frac{1}{2}\epsilon_0 E^2 \right) \label{eqn:Spart1}\\
@@ -457,14 +457,14 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
 </div>
 <div class="section" id="example-of-em-energy-flow-electromagnetic-plane-waves">
 <h2><span class="section-number">2.11.3. </span>Example of EM Energy Flow - Electromagnetic Plane Waves<a class="headerlink" href="#example-of-em-energy-flow-electromagnetic-plane-waves" title="Permalink to this headline">¶</a></h2>
-<p>Recall the plane wave solutions from Equation <a class="reference internal" href="EMwaves.html#equation-planewavesolns">(2.29)</a>:</p>
+<p>Recall the plane wave solutions from Equation <a class="reference internal" href="EMwaves.html#equation-planewavesolns">(2.28)</a>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf E} = \begin{bmatrix}
+\[\begin{split}{\bf E} &amp;=&amp; \,\begin{bmatrix}
  E_0 \\
  0 \\
  0 
-\end{bmatrix}\,\exp(i(k_z z - \omega t)) &amp;&amp;
-{\bf B} = \begin{bmatrix}
+\end{bmatrix}\,\exp(i(k_z z - \omega t)) \\
+{\bf B} &amp;=&amp;\, \begin{bmatrix}
  0 \\
  B_0 \\
  0
@@ -481,12 +481,12 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
  S_0
 \end{bmatrix}\,\exp(2i(k_z z  - \omega t))\end{split}\]</div>
 <p>which suggests for wave oscillations in the <span class="math notranslate nohighlight">\(({\bf x},\,{\bf y})\)</span> planes, the wave energy is transmitted in the <span class="math notranslate nohighlight">\({\bf z}\)</span> direction,
-as we see in <a class="reference internal" href="EMwaves.html#emplanewaves"><span class="std std-numref">Fig. 2.31</span></a> (we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by
+as we see in <a class="reference internal" href="EMwaves.html#emplanewaves"><span class="std std-numref">Fig. 2.30</span></a> (we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by
 <span class="math notranslate nohighlight">\(v_S = c = v_{E,\,B}\)</span> but the wavelength <span class="math notranslate nohighlight">\(\lambda_S = \frac{1}{2}\lambda_{E,\,B}\)</span> and frequency <span class="math notranslate nohighlight">\(f_S = 2\,f_{E,\,B}\)</span> are changed.</p>
 </div>
 <div class="section" id="characteristic-impedance">
 <h2><span class="section-number">2.11.4. </span>Characteristic Impedance*<a class="headerlink" href="#characteristic-impedance" title="Permalink to this headline">¶</a></h2>
-<p>Another way to view these results is through Equation <a class="reference internal" href="EMwaves.html#equation-kebperp">(2.28)</a>,</p>
+<p>Another way to view these results is through Equation <a class="reference internal" href="EMwaves.html#equation-kebperp">(2.27)</a>,</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \,\frac{1}{\mu_0}{\bf E}\times {\bf B} = \frac{1}{\mu_0}{\bf E}\times \left(\frac{1}{\omega} {\bf k} \times {\bf E}\right) 
 = \frac{1}{\omega\,\mu_0} \bigg[ \left({\bf E}\cdot {\bf E}\right){\bf k} - \left({\bf E} \cdot {\bf k} \right){\bf E} \bigg]\]</div>

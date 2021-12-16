@@ -3,7 +3,7 @@ Going back to the magnetic field due to an infinite wire in Equation {eq}`Infini
 ```{math}
 B_\theta = \frac{\mu_0\,I}{2\pi\,r}
 ```
-and recall that this expression (and it's electric field counterpart in {numref}`finitelineofcharge`) were derived by considering some bounding 
+and recall that this expression (and it's electric field counterpart in {numref}`finitelineofcharge`) is derived by considering some bounding 
 surface around the line of charge.  We found the boundary surface area from the  circumference of the cylinders cross sectional area and multiplying by the 
 cylinder length - but in essence we found a <b> bounding contour </b> for moving charges.  If we rearrange our expression for the magnetic field:
 
@@ -38,7 +38,7 @@ as depicted in Figure {numref}`AmpereLawBoundary`.  We see (akin to solving Gaus
 \oint {\bf B} \cdot \mathrm{d} {\bf \ell} = B_\theta\,(2\pi\,r) = \mu_0\,I \Rightarrow {\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}}
 ```
     
-- $r < R$ In order to find the $I_{enclosed}$ we can see from Equation \ref{eqn:driftvelocity} that for a conductor $I \propto A$ and 
+- $r < R$ In order to find the $I_{enclosed}$ we can see from Equation {eq}`driftvelocity` that for a conductor $I \propto A$ and 
 therefore we can calculate the uniform current density $\rho = I / A$.  Therefore here:
 
 ```{math}
@@ -139,7 +139,7 @@ uniform magnetic field inside a solenoid follows:
 B = \frac{\mu_0\,N\,I}{L}
 ```
 where $N$ is the number of turns on the solenoid and $L$ is the length of the coil.  Likewise it is possible to find the magnetic field 
-from a solenoid shaped like a torus, as depicted in {umref}`BFieldSolenoid`.  The magnetic field for a solenoid shaped as a torus is:
+from a solenoid shaped like a torus, as depicted in {numref}`BFieldSolenoid`.  The magnetic field for a solenoid shaped as a torus is:
 ```{math}
 B = \frac{\mu_0\,N\,I}{2\pi\,r}
 ``` 

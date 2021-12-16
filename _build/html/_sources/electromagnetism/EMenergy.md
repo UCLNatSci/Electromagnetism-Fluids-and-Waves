@@ -75,12 +75,12 @@ ${\bf J}\cdot {\bf E}$ relates to the energy given to free charges with current 
 ## Example of EM Energy Flow - Electromagnetic Plane Waves
 Recall the plane wave solutions from Equation {eq}`PlaneWaveSolns`:
 ```{math}
-{\bf E} = \begin{bmatrix}
+{\bf E} &=& \,\begin{bmatrix}
  E_0 \\
  0 \\
  0 
-\end{bmatrix}\,\exp(i(k_z z - \omega t)) &&
-{\bf B} = \begin{bmatrix}
+\end{bmatrix}\,\exp(i(k_z z - \omega t)) \\
+{\bf B} &=&\, \begin{bmatrix}
  0 \\
  B_0 \\
  0

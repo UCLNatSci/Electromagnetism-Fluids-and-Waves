@@ -416,10 +416,8 @@ and therefore <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>
 <div class="math notranslate nohighlight">
 \[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{T(x + \Delta x,t)\,\sin(\theta(x + \Delta x,\,t)) - T(x,t)\,\sin(\theta(x,\,t))}{\Delta x}\]</div>
 <p>and taking the limit of <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>, we see this is just a partial derivative:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right)\]</div>
 <div class="math notranslate nohighlight" id="equation-transversewaveyeqn">
-<span class="eqno">(1.20)<a class="headerlink" href="#equation-transversewaveyeqn" title="Permalink to this equation">¶</a></span>\[\Rightarrow \frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \]</div>
+<span class="eqno">(1.20)<a class="headerlink" href="#equation-transversewaveyeqn" title="Permalink to this equation">¶</a></span>\[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right) = \frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \]</div>
 <p>If we examine the forces in the <span class="math notranslate nohighlight">\(x\)</span> direction, we see these are balanced:</p>
 <div class="math notranslate nohighlight">
 \[T(x + \Delta x,\,t)\,\cos(\theta(x + \Delta x,\,t)) - T(x,\,t)\,\cos(\theta(x,\,t)) = 0\]</div>
@@ -444,9 +442,9 @@ and therefore <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>
 \[\frac{\partial^2 y}{\partial t^2} =  c^2\,\frac{\partial^2 y}{\partial x^2}\]</div>
 <p>We can check the units of <span class="math notranslate nohighlight">\(c\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}[T] &amp;=&amp; \, \textrm{N} = \text{kg}\,\text{m}\,\text{s}^{-2}\\
-[\rho_L] &amp;=&amp; \,\textr,{kg}\,\text{m}^{-1}\\
-\Rightarrow \sqrt{[T] / [\rho_L]} &amp;=&amp; \, \sqrt{\text{m}^2\,\text{s}^{-2}} = \text{m}\,\text{s}^{-1}\end{split}\]</div>
+\[\begin{split}[\textrm{T}] &amp;=&amp; \, \textrm{N} = \textrm{kg}\,\textrm{m}\,\textrm{s}^{-2}\\
+[\rho_L] &amp;=&amp; \,\textrm{kg}\,\textrm{m}^{-1}\\
+\Rightarrow \sqrt{[\textrm{T}] / [\rho_L]} &amp;=&amp; \, \sqrt{\textrm{m}^2\,\textrm{s}^{-2}} = \textrm{m}\,\textrm{s}^{-1}\end{split}\]</div>
 </div>
 <div class="section" id="transverse-wave-energy-and-power">
 <h2><span class="section-number">1.5.2. </span>Transverse Wave Energy and Power<a class="headerlink" href="#transverse-wave-energy-and-power" title="Permalink to this headline">¶</a></h2>
@@ -458,7 +456,7 @@ and therefore <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>
 \[\begin{split}\Delta K &amp;=&amp; \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
 \left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2}\right)\left(\frac{\partial y}{\partial t}\right)^2 \\
 \Delta U &amp;=&amp; T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)\end{split}\]</div>
-<p>Recall for transverse waves <span class="math notranslate nohighlight">\(\theta \ll 1\)</span> which therefore means that <span class="math notranslate nohighlight">\(\frac{\partial y}{\partial x} \ll 1\)</span> and therefore if we do a binomial
+<p>Recall for transverse waves <span class="math notranslate nohighlight">\(\theta \ll 1\)</span> which therefore means that <span class="math notranslate nohighlight">\(\partial y/\partial x \ll 1\)</span> and therefore if we do a binomial
 expansion:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\Delta K &amp;\simeq&amp; \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots,\quad \quad 

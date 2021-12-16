@@ -42,7 +42,7 @@ but moves in a perpendicular direction to both, due to the cross product ${\bf v
 - The magnetic force $|{\bf F}_B| = Q|{\bf v}||{\bf B}|\sin(\theta)$, which means that if $|{\bf v}| = 0$, there is no charge due to the magnetic field.  Therefore 
 we see that if there is no charge velocity, the magnetic field has no effect on charges, it is only because moving charges produce a magnetic field that an external 
 field may then interact with it.  Additionally this means if the magnetic field ${\bf B}$ is directed parallel to the charge velocity ${\bf v}$ i.e. $\theta = 0$, 
-then the magnetic field has no effect on charges.  Likewise we see a maximum force felt with $\theta = \frac{\pi}{2}$, i.e. perpendicular charge velocity to magnetic field.
+then the magnetic field has no effect on charges.  Likewise we see a maximum force felt with $\theta = \pi/2$, i.e. perpendicular charge velocity to magnetic field.
 
 
 

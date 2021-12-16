@@ -382,11 +382,6 @@
    2.5.4. Magnetic Field around a Finite Wire*
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#displacement-current">
-   2.5.5. Displacement Current
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -492,7 +487,7 @@ Equation <a class="reference internal" href="gausslawsystems.html#equation-efiel
 <div class="math notranslate nohighlight">
 \[\mathrm{d} {\bf B} = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,{\bf v}\times {\bf r}}{|{\bf r}|^3} \Longrightarrow \mathrm{d} {\bf B} = 
 \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times {\bf r}}{\,|{\bf r}|^3} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{|{\bf r}|^2}\]</div>
-<p>\noindent Thus the observed magnetic field from a wire carrying current <span class="math notranslate nohighlight">\(I\)</span> at a distance <span class="math notranslate nohighlight">\({\bf r}\)</span> is given by the <b>Biot-Savart Law:</b></p>
+<p>Thus the observed magnetic field from a wire carrying current <span class="math notranslate nohighlight">\(I\)</span> at a distance <span class="math notranslate nohighlight">\({\bf r}\)</span> is given by the <b>Biot-Savart Law:</b></p>
 <div class="math notranslate nohighlight" id="equation-bslaw">
 <span class="eqno">(2.11)<a class="headerlink" href="#equation-bslaw" title="Permalink to this equation">¶</a></span>\[{\bf B}({\bf r}) = \frac{\mu_0}{4\pi}\int_C \frac{I \, \mathrm{d}  \ell\times\hat{{\bf r}}}{|{\bf r}|^2} \]</div>
 <p>which is depicted in <a class="reference internal" href="#biotsavart"><span class="std std-numref">Fig. 2.18</span></a>.  We see that the cylindrical symmetry is made explicit, for a wire carrying a current <span class="math notranslate nohighlight">\(I\)</span> in the
@@ -535,26 +530,6 @@ as depicted in <a class="reference internal" href="#bslawangles"><span class="st
 <p>If we want to consider an <em> infinite</em> wire, then we can take <span class="math notranslate nohighlight">\(\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2\)</span>, giving:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}} \]</div>
-</div>
-<div class="section" id="displacement-current">
-<h2><span class="section-number">2.5.5. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this headline">¶</a></h2>
-<p>Lets consider a simple circuit with a capacitor, as seen in <a class="reference internal" href="#displacementcurrent"><span class="std std-numref">Fig. 2.20</span></a>, we could take an Ampère’s law path from the
-current flowing in to or out of the capacitor to a path cutting through the capacitor.  This is problematic because there is no current flowing
-through the capacitor, yet the exact path taken when calculating Ampère’s law should not change the outcome of the expression!</p>
-<div class="figure align-default" id="displacementcurrent">
-<img alt="../_images/DisplacementCurrent.png" src="../_images/DisplacementCurrent.png" />
-<p class="caption"><span class="caption-number">Fig. 2.20 </span><span class="caption-text">Applying Ampère’s law to a capacitor with no direct current between the plates.</span><a class="headerlink" href="#displacementcurrent" title="Permalink to this image">¶</a></p>
-</div>
-<p>To resolve this, consider the rate of flow of charge <span class="math notranslate nohighlight">\(I = \frac{\partial Q}{\partial t}\)</span> in to or out of the capacitor.  Starting from Gauss’s law we find that:</p>
-<div class="math notranslate nohighlight">
-\[Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = 
-\frac{\partial Q}{\partial t} = \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = 
-\epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} \]</div>
-<p>where we have made use of mixed partial derivatives commuting.  Note that we drop the term <span class="math notranslate nohighlight">\(\iint {\bf E}\cdot \mathrm{d} \left(\frac{\partial {\bf A}}{\partial t}\right)\)</span>
-from the product rule, since the surface <span class="math notranslate nohighlight">\(A\)</span> is constant in time.  So our final expression for Ampère’s law may be written:</p>
-<div class="math notranslate nohighlight" id="equation-ampereslawdc">
-<span class="eqno">(2.14)<a class="headerlink" href="#equation-ampereslawdc" title="Permalink to this equation">¶</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0 \iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\]</div>
-<p>where we have added an additional <b>Displacement Current</b> <span class="math notranslate nohighlight">\(I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\)</span> .</p>
 </div>
 </div>
 

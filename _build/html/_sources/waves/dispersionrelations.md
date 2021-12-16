@@ -95,7 +95,7 @@ E_\lambda =\frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\lambda = \pi \,c^2\,\rho_L\,k\
 Which suggests $E_\lambda \propto {u_0}^2$, which is a key result.  
 
 Also note that if we did the same analysis with a left travelling wave $u = u_0\,\exp(i(|k|x + |\omega|\,t))$, the result of Equation {eq}`energydensityplanewave` 
-would be the same,therefore for plane waves the expression for $\epsilon$ can be simplifed:
+would be the same, therefore for plane waves the expression for $\epsilon$ can be simplifed:
 ```{math}
 \epsilon = \rho_L\,c^2\,\left(\frac{\partial u}{\partial x} \right)^2 = \rho_L\,\left(\frac{\partial u}{\partial t} \right)^2
 ```
