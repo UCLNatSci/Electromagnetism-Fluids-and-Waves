@@ -82,7 +82,7 @@ in order for this expression to be true for <em> any </em> bounding volume $A$ c
 
 
 ## Maxwell's Equations
-James Clark Maxwell's big contribution to classic physics is electromagnetism - the unification of the two ideas of electricity and magnetism into one theory.  
+James Clark Maxwell's big contribution to classic physics is electromagnetism - the unification of the two ideas of electricity and magnetism into one theory. 
 In order to see this clearly, he wrote his much celebrated equations in differential form.  A lot of modern physics in the quantum realm also relies on this 
 unified formulation of electromagnetism.  We can collect together Equations {eq}`divE`, {eq}`divB`, {eq}`curlB` and {eq}`curlE` and present as 
 Maxwell's equations:
@@ -98,6 +98,7 @@ think about in terms of a bounding surface ${\bf A}$.  Another thing to notice i
 they are sourced only by the ${\bf E},\,{\bf B}$ fields, whereas the first / fourth equations are inhomogeneous, being sourced by additional 
 scalar/vector fields $\rho,\,{\bf J}$.  
 
+
 ## Maxwell's Equations in Matter*
 Recall that Equation {eq}`MaxwellsEqns` is valid in vacuum, however we know that in matter, electromagnetic fields are better described in terms of 
 ${\bf E} \rightarrow {\bf D}$ and ${\bf B} \rightarrow {\bf H}$, which means we can write Maxwell's equations in matter as:
@@ -111,8 +112,7 @@ ${\bf E} \rightarrow {\bf D}$ and ${\bf B} \rightarrow {\bf H}$, which means we 
 where $\rho_{free}$ and ${\bf J}_{free}$ represent charges that move within matter.  
 
 ## Magnetic Monopoles*
-We could add source terms to Maxwell's equations that would need to be present, if magnetic monopoles were found to exist\footnote{A good paper on magnetic 
-monopoles is \href{https://doi.org/10.1080/00107514.2012.685693}<b>Contemporary Physics 53 (2012) 195</b>}:
+We could add source terms to Maxwell's equations that would need to be present, if magnetic monopoles were found to exist: 
 ```{math}
 :label: MaxwellsEqnsBMonopole
 \nabla\cdot {\bf E} &=&\, \frac{1}{\epsilon_0}\,\rho  \\
@@ -129,8 +129,8 @@ Equation {eq}`LorentzForce` for the Lorentz force law:
 {\bf F} = Q\left( {\bf E} + {\bf v} \times {\bf B} \right) + Q_m\left( {\bf B} - \frac{1}{c^2}{\bf v} \times {\bf E} \right)
 ```
 where $Q_m$ is the size of the magnetic charge. No current evidence of these in nature, but symmetry breaking of GUT theories suggest they 
-should have existed and ideas like cosmic inflation\footnote{For more on cosmic inflation, check out any good lecture course on 
-\href{http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf}<b>cosmology</b>} are proposed to explain the non-observation just as a vast 
+should have existed and ideas like cosmic inflation are proposed to explain the non-observation just as a vast 
 dilution within our observable universe.  The observed quantisation of electric charge, into chunks no smaller than $\pm q_e$ can be 
-explained by the presence of a <em> single</em>  magnetic monopole in our universe, as Dirac proposed in 1931\footnote{Dirac's paper can 
-be found at \href{https://doi.org/10.1098/rspa.1931.0130}<b>Proc. Royal Soc. London , A133 (1931)</b>}.  
+explained by the presence of a <em> single</em>  magnetic monopole in our universe, as Dirac proposed in 1931.  A good paper on magnetic 
+monopoles is [here](https://doi.org/10.1080/00107514.2012.685693), Dirac's paper can be found [here](https://doi.org/10.1098/rspa.1931.0130) and for more on 
+cosmic inflation, check out any good lecture course on, such as these from [DMTP](http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf).

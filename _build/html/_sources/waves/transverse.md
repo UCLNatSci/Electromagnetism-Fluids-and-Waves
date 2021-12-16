@@ -2,9 +2,9 @@
 
 ## Derivation from Waves on a String
 
-Our derivation so far has been done for a <b> longitudinal waves </b> - where the direction of oscillation of the wave is parallel to the direction of propagation of the wave.  
-We could however derive the wave equation for a string, as seen in Figure 5, stretched out by a tension $\bf{T}$ and solving the equations of motion.  This results in a wave 
-that where the direction of oscillation is perpendicular to the direction of propagation - this is known as a <b> transverse wave </b>.
+Our derivation so far has been done for a <b> longitudinal waves </b> - where the direction of oscillation of the wave is parallel to the direction of propagation 
+of the wave.  We could however derive the wave equation for a string, as seen in Figure 5, stretched out by a tension $\bf{T}$ and solving the equations of 
+motion.  This results in a wave that where the direction of oscillation is perpendicular to the direction of propagation - this is known as a <b> transverse wave </b>.
 ```{figure} ../figures/TransverseWaveOnString.png
 ---
 name: TransverseWaveOnString
@@ -78,8 +78,8 @@ in the limit of $\theta \ll 1$, with $c = \sqrt{T/\rho_L}$. This reduces to the 
 ```
 We can check the units of $c$, 
 ```{math}
-[T] &=& \text{ N} &=&\, \text{kg}\,\text{m}\,\text{s}^{-2}\\
-[\rho_L] &=& \,\text{ kg}\,\text{m}^{-1}\\
+[T] &=& \, \textrm{N} = \text{kg}\,\text{m}\,\text{s}^{-2}\\
+[\rho_L] &=& \,\textr,{kg}\,\text{m}^{-1}\\
 \Rightarrow \sqrt{[T] / [\rho_L]} &=& \, \sqrt{\text{m}^2\,\text{s}^{-2}} = \text{m}\,\text{s}^{-1}
 ```
 

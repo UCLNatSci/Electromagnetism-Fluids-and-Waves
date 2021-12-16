@@ -3,7 +3,7 @@ Whilst we are now comfortable with the idea of electric and magnetic fields (and
 to an idea from the waves section, namely where are all the sources of energy in this system? 
 
 ## Deriving Intrinsic Energy from Potentials*
-Recall the intrinsic electrostatic potential energy $U_E$ from a system of charges from Equation \ref{eqn:elecpotenergy}, we can 
+Recall the intrinsic electrostatic potential energy $U_E$ from a system of charges from Equation {eq}`elecpotenergy`, we can 
 modify this to consider a continuous charge density $\rho({\bf r})$:
 ```{math}
 U_E = \frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i) \rightarrow U_E  = \frac{1}{2}\iiint \rho({\bf r}) \,V_E({\bf r}) \, \mathrm{d} V 
@@ -34,8 +34,8 @@ U_E = \iiint u_E\,\mathrm{d} V= \iiint \frac{1}{2}\,\epsilon_0\,E^2 \, \mathrm{d
 ```
 
 ## Energy Flux and Poynting Vector
-To find the total energy density we would need to repeat this process for ${\bf B}$ (which is fairly lengthy!), but we can consider this problem through analogy.  
-The form of the Equation {eq}`curlB` in vacuum reveals that the units of the ${\bf B}$ field related to the ${\bf E}$ field by:
+To find the total energy density we would need to repeat this process for ${\bf B}$ (which is fairly lengthy!), but we can consider this problem 
+through analogy.  The form of the Equation {eq}`curlB` in vacuum reveals that the units of the ${\bf B}$ field related to the ${\bf E}$ field by:
 ```{math}
 :label: E=cB
 \frac{[B]}{[\textrm{Length}]} = \epsilon_0\,\mu_0\,\frac{[E]}{[\textrm{Time}]} \Rightarrow [B] = [E]\,[\textrm{Speed}]\,\epsilon_0\,\mu_0 
@@ -98,13 +98,13 @@ If we examine the Poynting energy flux ${\bf S}= \frac{1}{\mu_0} {\bf E} \times 
  S_0
 \end{bmatrix}\,\exp(2i(k_z z  - \omega t))
 ```
-which suggests for wave oscillations in the $({\bf x},\,{\bf y})$ planes, the wave energy is transmitted in the ${\bf z}$ direction, as we see in Figure {eq}`EMPlaneWaves` 
-(we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by $v_S = c = v_{E,\,B}$ but the wavelength 
-$\lambda_S = \frac{1}{2}\lambda_{E,\,B}$ and frequency $f_S = 2\,f_{E,\,B}$ are changed.
+which suggests for wave oscillations in the $({\bf x},\,{\bf y})$ planes, the wave energy is transmitted in the ${\bf z}$ direction, 
+as we see in {numref}`EMPlaneWaves` (we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by 
+$v_S = c = v_{E,\,B}$ but the wavelength $\lambda_S = \frac{1}{2}\lambda_{E,\,B}$ and frequency $f_S = 2\,f_{E,\,B}$ are changed.
 
 
 ## Characteristic Impedance*
-Another way to view these results is through Equation {eq}`kEperpB`, 
+Another way to view these results is through Equation {eq}`kEBperp`, 
 ```{math}
 {\bf S} = \,\frac{1}{\mu_0}{\bf E}\times {\bf B} = \frac{1}{\mu_0}{\bf E}\times \left(\frac{1}{\omega} {\bf k} \times {\bf E}\right) 
 = \frac{1}{\omega\,\mu_0} \bigg[ \left({\bf E}\cdot {\bf E}\right){\bf k} - \left({\bf E} \cdot {\bf k} \right){\bf E} \bigg]
@@ -117,10 +117,11 @@ Given that $\omega / k_z = c$ here, this means we can write the expression as:
 ```{math}
 {\bf S} = \frac{1}{c\,\mu_0}\,|{\bf E}|^2\,\,\hat{{\bf z}}
 ```
-Clearly this will be a time varying expression, however from Chapter 1 we already discussed the effect of time averaging waves to find the power, therefore we find that:
+Clearly this will be a time varying expression, however from Chapter 1 we already discussed the effect of time averaging waves to find 
+the power, therefore we find that:
 ```{math}
 S_{\langle T \rangle} = \frac{1}{2 \eta}\,E^2
 ```
 where $\eta$ is the characteristic impedance of the transmission medium, which has units of resistance. In a vacuum, this takes the value 
-$\eta \simeq 377\, \Omega$, but in matter its value will vary according to $\epsilon(\omega),\,\mu(\omega)$, as mentioned in Chapters 3 and 4.
+$\eta \simeq 377\, \Omega$, but in matter its value will vary according to $\epsilon(\omega),\,\mu(\omega)$, as mentioned in previous sections.
 

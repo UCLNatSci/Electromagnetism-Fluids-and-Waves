@@ -5,7 +5,7 @@ B_\theta = \frac{\mu_0\,I}{2\pi\,r}
 ```
 and recall that this expression (and it's electric field counterpart in {numref}`finitelineofcharge`) were derived by considering some bounding 
 surface around the line of charge.  We found the boundary surface area from the  circumference of the cylinders cross sectional area and multiplying by the 
-cylinder length - but in essence we found a {\bf bounding contour} for moving charges.  If we rearrange our expression for the magnetic field:
+cylinder length - but in essence we found a <b> bounding contour </b> for moving charges.  If we rearrange our expression for the magnetic field:
 
 ```{math}
 B_\theta\,(2\pi\,r) = \mu_0\,I \Longleftrightarrow B \times (\text{boundary around I}) = \mu_0\,I_\text{{enclosed by boundary}}
@@ -68,7 +68,7 @@ name: DisplacementCurrent
 Applying Ampère's law to a capacitor with no direct current between the plates.
 ```
 
-To resolve this, consider the rate of flow of charge $I = \frac{\partial Q}{\partial t}$ in to or out of the capacitor.  Starting from Gauss's law we find that:
+To resolve this, consider the rate of flow of charge $I = \partial Q/\partial t$ in to or out of the capacitor, from Gauss's law we know that:
 ```{math}
 Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = \frac{\partial Q}{\partial t} = 
 \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = \epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} 
@@ -102,14 +102,14 @@ interested in the magnetic field at a point on the $z$ axis, the vectors $\mathr
 
 A further symmetry we can exploit is there since the direction of the current changes, the direction of $\mathrm{d} {\bf \ell}'$ is opposite to that of 
 $\mathrm{d} {\bf \ell}''$.  We find that there will a pair-wise cancellation of some of the magnetic field components therefore around the coil, as 
-shown in {numref}`BFieldCoilofWire`.  This means that the components of ${\bf B}$ that are {\it parallel} to the $z$ axis will cancel 
-(${\bf B} \sin(\theta)$) and only the net {\it perpendicular} components (${\bf B} \cos(\theta)$) will be non-zero.  Therefore the expression we need to find is:
+shown in {numref}`BFieldCoilofWire`.  This means that the components of ${\bf B}$ that are <em> parallel </em> to the $z$ axis will cancel i.e. ${\bf B} \sin(\theta)$ 
+and only the net <em> perpendicular </em> components, i.e. ${\bf B} \cos(\theta)$) will be non-zero.  Therefore the expression we need to find is:
 
 ```{math}
 {\bf B} = \int_{\mathcal{C}} \frac{\mu_0}{4\pi} \frac{I\,\cos(\theta)\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}} 
 ```
 
-Given that $\cos(\theta) = \frac{R}{\sqrt{y^2 + R^2}}$ and integrating the segment elements $\mathrm{d} \ell$ round the loop produces the circumference $2\pi\,R$:
+Given that $\cos(\theta) = R/\sqrt{y^2 + R^2}$ and integrating the segment elements $\mathrm{d} \ell$ round the loop produces the circumference $2\pi\,R$:
 
 ```{math}
 {\bf B} = \frac{\mu_0}{4\pi} \frac{I\,R}{(z^2 + R^2)^{3/2}} \,(2\pi\,R)\,\hat{{\bf z}} = \frac{\mu_0\,I\,R^2}{2(z^2 + R^2)^{3/2}} \,\hat{{\bf z}}
@@ -139,7 +139,7 @@ uniform magnetic field inside a solenoid follows:
 B = \frac{\mu_0\,N\,I}{L}
 ```
 where $N$ is the number of turns on the solenoid and $L$ is the length of the coil.  Likewise it is possible to find the magnetic field 
-from a solenoid shaped like a torus, as depicted in Figure \ref{fig:BFieldSolenoid}.  The magnetic field for a solenoid shaped as a torus is:
+from a solenoid shaped like a torus, as depicted in {umref}`BFieldSolenoid`.  The magnetic field for a solenoid shaped as a torus is:
 ```{math}
 B = \frac{\mu_0\,N\,I}{2\pi\,r}
 ``` 

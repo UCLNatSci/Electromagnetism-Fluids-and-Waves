@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -357,7 +360,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gausss-law-in-differential-form">
@@ -465,7 +468,7 @@ change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventuall
 </div>
 <div class="section" id="id1">
 <h2><span class="section-number">2.9.4. </span>Maxwell’s Equations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>James Clark Maxwell’s big contribution to classic physics is electromagnetism - the unification of the two ideas of electricity and magnetism into one theory.<br />
+<p>James Clark Maxwell’s big contribution to classic physics is electromagnetism - the unification of the two ideas of electricity and magnetism into one theory.
 In order to see this clearly, he wrote his much celebrated equations in differential form.  A lot of modern physics in the quantum realm also relies on this
 unified formulation of electromagnetism.  We can collect together Equations <a class="reference internal" href="#equation-dive">(2.19)</a>, <a class="reference internal" href="#equation-divb">(2.20)</a>, <a class="reference internal" href="#equation-curlb">(2.21)</a> and <a class="reference internal" href="#equation-curle">(2.22)</a> and present as
 Maxwell’s equations:</p>
@@ -492,8 +495,7 @@ scalar/vector fields <span class="math notranslate nohighlight">\(\rho,\,{\bf J}
 </div>
 <div class="section" id="magnetic-monopoles">
 <h2><span class="section-number">2.9.6. </span>Magnetic Monopoles*<a class="headerlink" href="#magnetic-monopoles" title="Permalink to this headline">¶</a></h2>
-<p>We could add source terms to Maxwell’s equations that would need to be present, if magnetic monopoles were found to exist\footnote{A good paper on magnetic
-monopoles is \href{<a class="reference external" href="https://doi.org/10.1080/00107514.2012.685693">https://doi.org/10.1080/00107514.2012.685693</a>}<b>Contemporary Physics 53 (2012) 195</b>}:</p>
+<p>We could add source terms to Maxwell’s equations that would need to be present, if magnetic monopoles were found to exist:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqnsbmonopole">
 <span class="eqno">(2.25)<a class="headerlink" href="#equation-maxwellseqnsbmonopole" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;=&amp;\, \frac{1}{\epsilon_0}\,\rho  \\
 \nabla \cdot {\bf B} &amp;=&amp;\, \mu_0 \,\rho_m  \\
@@ -506,11 +508,11 @@ Equation <a class="reference internal" href="magneticforces.html#equation-lorent
 <div class="math notranslate nohighlight">
 \[{\bf F} = Q\left( {\bf E} + {\bf v} \times {\bf B} \right) + Q_m\left( {\bf B} - \frac{1}{c^2}{\bf v} \times {\bf E} \right)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Q_m\)</span> is the size of the magnetic charge. No current evidence of these in nature, but symmetry breaking of GUT theories suggest they
-should have existed and ideas like cosmic inflation\footnote{For more on cosmic inflation, check out any good lecture course on
-\href{<a class="reference external" href="http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf">http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf</a>}<b>cosmology</b>} are proposed to explain the non-observation just as a vast
+should have existed and ideas like cosmic inflation are proposed to explain the non-observation just as a vast
 dilution within our observable universe.  The observed quantisation of electric charge, into chunks no smaller than <span class="math notranslate nohighlight">\(\pm q_e\)</span> can be
-explained by the presence of a <em> single</em>  magnetic monopole in our universe, as Dirac proposed in 1931\footnote{Dirac’s paper can
-be found at \href{<a class="reference external" href="https://doi.org/10.1098/rspa.1931.0130">https://doi.org/10.1098/rspa.1931.0130</a>}<b>Proc. Royal Soc. London , A133 (1931)</b>}.</p>
+explained by the presence of a <em> single</em>  magnetic monopole in our universe, as Dirac proposed in 1931.  A good paper on magnetic
+monopoles is <a class="reference external" href="https://doi.org/10.1080/00107514.2012.685693">here</a>, Dirac’s paper can be found <a class="reference external" href="https://doi.org/10.1098/rspa.1931.0130">here</a> and for more on
+cosmic inflation, check out any good lecture course on, such as these from <a class="reference external" href="http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf">DMTP</a>.</p>
 </div>
 </div>
 
@@ -537,16 +539,36 @@ be found at \href{<a class="reference external" href="https://doi.org/10.1098/rs
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="faradayslaw.html" title="previous page"><span class="section-number">2.8. </span>Faraday’s Law</a>
-    <a class='right-next' id="next-link" href="EMwaves.html" title="next page"><span class="section-number">2.10. </span>Electromagnetic Waves</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="faradayslaw.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.8. </span>Faraday’s Law</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="EMwaves.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.10. </span>Electromagnetic Waves</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

@@ -11,8 +11,8 @@ name: massspringarray
 Identical masses connected by identical springs.
 ```
 
-If the springs follow Hooke's law, then $F_{H} = k\,u(x,t) $ and equally all the masses will follow Newton's second law $F_{N} = m \,a(x,t)$.  
-We can analyse the dynamics of the middle mass, where the Hooke's law forces will from both the spring $x+h \rightarrow x+2h$ as well as the spring $x \rightarrow x+h$
+If the springs follow Hooke's law, then $F_{H} = k\,u(x,t) $ and equally all the masses will follow Newton's second law $F_{N} = m \,a(x,t)$.  We can analyse 
+the dynamics of the middle mass, where the Hooke's law forces will from both the spring $x+h \rightarrow x+2h$ as well as the spring $x \rightarrow x+h$
 ```{math}
 F_N &=& \,m \frac{\partial^2}{\partial t^2}u(x+h,t)\\
 F_H &=& \,k[u(x+2h,t) - u(x+h,t)] - k[u(x+h,t) - u(x,t)] \\
@@ -38,7 +38,7 @@ F_{tot} &=& \,k_{tot}\,x_{tot}\\
 F_1 &=& \,k_1\,x_1\\
 F_2 &=& \,k_2\,x_2
 ```
-If $x_{tot}$ can be broken up into the individual springs displacements $x_{tot} = x_1 + x_2$ then we simplify to
+If $x_{tot}$ can be broken up into the individual springs displacements $x_{tot} = x_1 + x_2$ then we simplify to:
 ```{math}
 F_{tot} = k_{tot}(x_1 + x_2)
 ```
@@ -46,19 +46,19 @@ by rearrangement this reduces to
 ```{math}
 \frac{F_{tot}}{k_{tot}} = \left(\frac{F_1}{k_1} + \frac{F_2}{k_2}\right)
 ```
-Since the springs propagate the force applied through them, all the forces are the same $F_{tot} = F_1 = F_2$, so we are finally left with
+Since the springs propagate the force applied through them, all the forces are the same $F_{tot} = F_1 = F_2$, so we are finally left with:
 ```{math}
 \frac{1}{k_{tot}} = \frac{1}{k_1} + \frac{1}{k_2}
 ```
-and therefore for two springs, the effective spring constant is 
+and therefore for two springs, the effective spring constant is:
 ```{math}
 k_{tot} = \left(\frac{1}{k_1} + \frac{1}{k_2}\right)^{-1}
 ```
-If there are $N$ springs in series, then this result takes the form
+If there are $N$ springs in series, then this result takes the form:
 ```{math}
 \frac{1}{k_{tot}} = \frac{1}{k_1} + \frac{1}{k_2} + \dots + \frac{1}{k_N}
 ``` 
-and if the springs are identical, $k_1 = k_2 = \dots = k_N = k$ this result reduces to
+and if the springs are identical, $k_1 = k_2 = \dots = k_N = k$ this result reduces to:
 ```{math}
 :label: totalspringconstant
 \frac{1}{k_{tot}} = \frac{N}{k} \Rightarrow k_{tot} = \frac{k}{N}
@@ -94,18 +94,18 @@ where $c$ is the wave speed of some form (more on this later).
 
 ## Wave Equation in higher dimensions
 
-We can extend this to higher dimensions, packaging the spatial derivatives up into the Laplacian 
+We can extend the wave equation to a higher number of dimensions, packaging the spatial derivatives up into the Laplacian 
 $\nabla^2$ (sometimes written $\Delta$)
 ```{math}
 :label: WaveEqn3D
 \nabla^2 u = \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} 
 ```
-where in cartesian coordinates 
+which in cartesian coordinates takes the form:
 ```{math}
 \nabla &=& \left(\frac{\partial}{\partial x},\,\frac{\partial}{\partial y},\, \frac{\partial}{\partial z}\right) \\
 \nabla^2 &=& \nabla\cdot \nabla
 ```
-These derivatives are sometimes repackaged up with the d'Alembertian $\Box$
+but in different coordinate systems can take other forms.  These derivatives are sometimes repackaged up with the d'Alembertian $\Box$
 ```{math}
 \Box \,u = \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} - \nabla^2 u 
 ```

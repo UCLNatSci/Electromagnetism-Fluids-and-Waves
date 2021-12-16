@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -357,7 +360,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivation-from-waves-on-a-string">
@@ -384,9 +387,9 @@
 <h1><span class="section-number">1.5. </span>Transverse Waves<a class="headerlink" href="#transverse-waves" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="derivation-from-waves-on-a-string">
 <h2><span class="section-number">1.5.1. </span>Derivation from Waves on a String<a class="headerlink" href="#derivation-from-waves-on-a-string" title="Permalink to this headline">¶</a></h2>
-<p>Our derivation so far has been done for a <b> longitudinal waves </b> - where the direction of oscillation of the wave is parallel to the direction of propagation of the wave.<br />
-We could however derive the wave equation for a string, as seen in Figure 5, stretched out by a tension <span class="math notranslate nohighlight">\(\bf{T}\)</span> and solving the equations of motion.  This results in a wave
-that where the direction of oscillation is perpendicular to the direction of propagation - this is known as a <b> transverse wave </b>.</p>
+<p>Our derivation so far has been done for a <b> longitudinal waves </b> - where the direction of oscillation of the wave is parallel to the direction of propagation
+of the wave.  We could however derive the wave equation for a string, as seen in Figure 5, stretched out by a tension <span class="math notranslate nohighlight">\(\bf{T}\)</span> and solving the equations of
+motion.  This results in a wave that where the direction of oscillation is perpendicular to the direction of propagation - this is known as a <b> transverse wave </b>.</p>
 <div class="figure align-default" id="transversewaveonstring">
 <img alt="../_images/TransverseWaveOnString.png" src="../_images/TransverseWaveOnString.png" />
 <p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Section of a string oscillating under tension <span class="math notranslate nohighlight">\(\bf{T}\)</span>, with wave behaviour occuring in the <span class="math notranslate nohighlight">\(\bf{x}\)</span> direction.</span><a class="headerlink" href="#transversewaveonstring" title="Permalink to this image">¶</a></p>
@@ -441,8 +444,8 @@ and therefore <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>
 \[\frac{\partial^2 y}{\partial t^2} =  c^2\,\frac{\partial^2 y}{\partial x^2}\]</div>
 <p>We can check the units of <span class="math notranslate nohighlight">\(c\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}[T] &amp;=&amp; \text{ N} &amp;=&amp;\, \text{kg}\,\text{m}\,\text{s}^{-2}\\
-[\rho_L] &amp;=&amp; \,\text{ kg}\,\text{m}^{-1}\\
+\[\begin{split}[T] &amp;=&amp; \, \textrm{N} = \text{kg}\,\text{m}\,\text{s}^{-2}\\
+[\rho_L] &amp;=&amp; \,\textr,{kg}\,\text{m}^{-1}\\
 \Rightarrow \sqrt{[T] / [\rho_L]} &amp;=&amp; \, \sqrt{\text{m}^2\,\text{s}^{-2}} = \text{m}\,\text{s}^{-1}\end{split}\]</div>
 </div>
 <div class="section" id="transverse-wave-energy-and-power">
@@ -499,16 +502,36 @@ expansion:</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="waveequationsolns.html" title="previous page"><span class="section-number">1.4. </span>Solutions to the Wave Equation</a>
-    <a class='right-next' id="next-link" href="dispersionrelations.html" title="next page"><span class="section-number">1.6. </span>Dispersion Relations and Wave Energy</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="waveequationsolns.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">1.4. </span>Solutions to the Wave Equation</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="dispersionrelations.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">1.6. </span>Dispersion Relations and Wave Energy</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
