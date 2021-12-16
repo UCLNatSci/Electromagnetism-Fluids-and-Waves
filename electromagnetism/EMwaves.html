@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -357,7 +360,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polarisation-of-em-waves">
@@ -406,11 +409,11 @@ Special Theory of Relativity noticing this constancy of <span class="math notran
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf E} &amp;=&amp; {\bf E}_0\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
 {\bf B} &amp;=&amp; {\bf B}_0\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\({\bf E}_0,\,{\bf B}_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.30</span></a> shows one such choice of
+<p>where <span class="math notranslate nohighlight">\({\bf E}_0,\,{\bf B}_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.31</span></a> shows one such choice of
 <span class="math notranslate nohighlight">\({\bf E}_0,\,{\bf B}_0\)</span>, for plane waves.</p>
 <div class="figure align-default" id="emplanewaves">
 <img alt="../_images/EMWaves1.png" src="../_images/EMWaves1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.30 </span><span class="caption-text"><b> Left Pane </b> - Depiction of electric and magnetic plane waves,
+<p class="caption"><span class="caption-number">Fig. 2.31 </span><span class="caption-text"><b> Left Pane </b> - Depiction of electric and magnetic plane waves,
 <b> Right Pane </b> - Depiction of electric and magnetic circularly polarised waves.</span><a class="headerlink" href="#emplanewaves" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="polarisation-of-em-waves">
@@ -456,7 +459,7 @@ dimension and clearly the wave propagates in a perpendicular <span class="math n
  0
 \end{bmatrix} \end{split}\]</div>
 <p>Other polarisation choices would be <b> Circular </b> or <b> Elliptical</b>, where we use both of <span class="math notranslate nohighlight">\((E_x,\,E_y)\)</span>, producing
-clockwise/anticlockwise polarised waves, as seen in <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.30</span></a>.</p>
+clockwise/anticlockwise polarised waves, as seen in <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.31</span></a>.</p>
 </div>
 <div class="section" id="other-solutions-to-maxwells-equations">
 <h2><span class="section-number">2.10.2. </span>Other Solutions to Maxwell’s Equations*<a class="headerlink" href="#other-solutions-to-maxwells-equations" title="Permalink to this headline">¶</a></h2>
@@ -500,16 +503,36 @@ This is often known as the <b> Drude Model.</b>  Substituting this model into Ma
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="maxwelleqns.html" title="previous page"><span class="section-number">2.9. </span>Maxwell’s Equations</a>
-    <a class='right-next' id="next-link" href="EMenergy.html" title="next page"><span class="section-number">2.11. </span>Energy in an Electromagnetic field</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="maxwelleqns.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.9. </span>Maxwell’s Equations</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="EMenergy.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.11. </span>Energy in an Electromagnetic field</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

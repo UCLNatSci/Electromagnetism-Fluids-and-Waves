@@ -128,8 +128,8 @@ So lets rewrite $u(x,\,t)$ in the form
 u(x,\,t) \, && =  AC \exp\left(i(kx + \omega t)\right) + BD\exp\left(-i(kx + \omega t)\right) \\
 && + AD \exp\left(i(kx - \omega t)\right) + BC\exp\left(-i(kx - \omega t)\right)
 ```
-where $k$ is a quantity with units $[\textrm{length}]^{-1}$,$\omega$ is a quantity with units 
-$[\textrm{time}]^{-1}$ and $A'\,B',\,C',\ D'$ are cosntants.  We can make this change, with no less of 
+where $k$ is a quantity with units $[\textrm{length}]^{-1}$ and $\omega$ is a quantity with units 
+$[\textrm{time}]^{-1}$.  We can make this change, with no less of 
 generality, as we have not fixed a value of  constant $a$ previously and also because it is a 
 more useful way to understand wave behaviour.
 

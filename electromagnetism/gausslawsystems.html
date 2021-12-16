@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -357,7 +360,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#spherical-geometries">
@@ -410,18 +413,18 @@
 <h2><span class="section-number">2.2.1. </span>Spherical Geometries<a class="headerlink" href="#spherical-geometries" title="Permalink to this headline">¶</a></h2>
 <p>Lets consider the case of a spherical insulator (the key idea here being the charges are fixed), which carries a net charge of <span class="math notranslate nohighlight">\(+Q\)</span>.<br />
 In the first instance we consider that the charge is uniformly distributed throughout the sphere, which has some radius <span class="math notranslate nohighlight">\(a\)</span>, as can
-be seen in Figure #.
-\begin{figure}[h!]
-\centering
-\includegraphics[scale = 0.5]{figures/sphericalinsulator.png}
-\caption{Left: Charged spherical insulator of radius <span class="math notranslate nohighlight">\(a\)</span>.  Middle: Cross section considering spheres <span class="math notranslate nohighlight">\(r \leq a\)</span>.  Right: Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span> }
-\label{fig:sphericalinsulator}
-\end{figure}</p>
+be seen in <a class="reference internal" href="#sphericalinsulator"><span class="std std-numref">Fig. 2.3</span></a></p>
+<div class="figure align-default" id="sphericalinsulator">
+<img alt="figures/sphericalinsulator.png}" src="figures/sphericalinsulator.png}" />
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Left: Charged spherical insulator of radius <span class="math notranslate nohighlight">\(a\)</span>.<br />
+Middle: Cross section considering spheres <span class="math notranslate nohighlight">\(r \leq a\)</span>.<br />
+Right: Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span></span><a class="headerlink" href="#sphericalinsulator" title="Permalink to this image">¶</a></p>
+</div>
 <p>Recall from our discussion of spherical geometries <span class="math notranslate nohighlight">\((r,\,\theta,\, \phi)\)</span>, the area normal <span class="math notranslate nohighlight">\(\hat{{\bf n}}\)</span> vector for this
-<b> Gaussian Sphere </b> will point in the <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> direction, radially outwards, as shown in <a class="reference internal" href="#sphereareanormal"><span class="std std-numref">Fig. 2.3</span></a>.</p>
+<b> Gaussian Sphere </b> will point in the <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> direction, radially outwards, as shown in <a class="reference internal" href="#sphereareanormal"><span class="std std-numref">Fig. 2.4</span></a>.</p>
 <div class="figure align-default" id="sphereareanormal">
 <img alt="../_images/sphereareanormal.png" src="../_images/sphereareanormal.png" />
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Area normal vector <span class="math notranslate nohighlight">\(\hat{{\bf n}} = \hat{{\bf r}}\)</span> for a sphere.</span><a class="headerlink" href="#sphereareanormal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Area normal vector <span class="math notranslate nohighlight">\(\hat{{\bf n}} = \hat{{\bf r}}\)</span> for a sphere.</span><a class="headerlink" href="#sphereareanormal" title="Permalink to this image">¶</a></p>
 </div>
 <p>To find the electric field distribution using Gauss’s law, lets break up the space into three different regimes of interest:</p>
 <ul class="simple">
@@ -455,12 +458,12 @@ density within the sphere:</p>
 \[\begin{split}Q_{enclosed} &amp;=&amp;\, \frac{3Q}{4\,\pi\, a^3}\left(\frac{4}{3}\,\pi \,r^3\right) = Q \,\left(\frac{r}{a}\right)^3 \\ 
 \iint {\bf E} \cdot \mathrm{d} {\bf A}  &amp;=&amp;\, E_r\,(4 \pi r^2) = \frac{Q}{\epsilon_0} \,\left(\frac{r}{a}\right)^3  \\ 
 {\bf E} &amp;=&amp;\, \frac{Q}{4 \pi \epsilon_0}\frac{r}{a^3}\hat{{\bf r}}\end{split}\]</div>
-<p>We plot the interior and exterior electric fields for the uniform charge insulating sphere in <a class="reference internal" href="#electricfieldsphere"><span class="std std-numref">Fig. 2.4</span></a>.<br />
+<p>We plot the interior and exterior electric fields for the uniform charge insulating sphere in <a class="reference internal" href="#electricfieldsphere"><span class="std std-numref">Fig. 2.5</span></a>.<br />
 We see that continuity of field is present at the boundary, although very different radial dependencies <span class="math notranslate nohighlight">\(E(r)\)</span> are present
 inside and outside of the sphere.</p>
 <div class="figure align-default" id="electricfieldsphere">
 <img alt="../_images/electricfieldsphere1.png" src="../_images/electricfieldsphere1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Graph of electric field for uniform insulating sphere interior and exterior.</span><a class="headerlink" href="#electricfieldsphere" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Graph of electric field for uniform insulating sphere interior and exterior.</span><a class="headerlink" href="#electricfieldsphere" title="Permalink to this image">¶</a></p>
 </div>
 <p>We can also calculate the total electrostatic energy of this charged sphere, <span class="math notranslate nohighlight">\(U_E(r)\)</span> on a charge <span class="math notranslate nohighlight">\(Q_S(r)\)</span> exterior
 to the sphere, which itself carries a charge <span class="math notranslate nohighlight">\(Q\)</span>:</p>
@@ -473,10 +476,10 @@ to the sphere, which itself carries a charge <span class="math notranslate nohig
 <h3><span class="section-number">2.2.2.1. </span>Sheets of Charge<a class="headerlink" href="#sheets-of-charge" title="Permalink to this headline">¶</a></h3>
 <p>We can consider a uniform infinite sheet of charge, carrying a total charge <span class="math notranslate nohighlight">\(Q\)</span> over an area <span class="math notranslate nohighlight">\(A_{tot}\)</span>, with a uniform
 charge for unit area <span class="math notranslate nohighlight">\(\sigma = \frac{Q}{A_{tot}}\)</span>.  Here we want to find a Gauss’s law surface to find the flux crossing,
-for a sheet like this we can pick a cylinder, as we see in Figure <code class="xref eq docutils literal notranslate"><span class="pre">sheetofcharge</span></code>.</p>
+for a sheet like this we can pick a cylinder, as we see in <a class="reference internal" href="#sheetofcharge"><span class="std std-numref">Fig. 2.6</span></a>.</p>
 <div class="figure align-default" id="sheetofcharge">
 <img alt="../_images/sheetofcharge.png" src="../_images/sheetofcharge.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Sheet of charge using a cylinder as our Gaussian surface.</span><a class="headerlink" href="#sheetofcharge" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Sheet of charge using a cylinder as our Gaussian surface.</span><a class="headerlink" href="#sheetofcharge" title="Permalink to this image">¶</a></p>
 </div>
 <p>The cylinder has three areas here, a cross sectional area <span class="math notranslate nohighlight">\(A\)</span> on each each and a long surface cylinder of side
 <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(2 \pi r L\)</span>.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet),
@@ -495,12 +498,12 @@ product looks like</p>
 <div class="math notranslate nohighlight">
 \[E_z = \frac{\sigma}{2 \epsilon_0} \longrightarrow {\bf E}= -\frac{\sigma}{2 \epsilon_0} \hat{{\bf z}}\]</div>
 <p>For an example of a sheet of charge system, consider a capacitor, here we can think of this system as two
-sheets of charge, one carrying a charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.6</span></a>.<br />
+sheets of charge, one carrying a charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.7</span></a>.<br />
 Obviously this system is idealised, because these sheets of charge are <em> finite</em>.  However if we ignore edge
 effects, the use of our expressions work fairly well!</p>
 <div class="figure align-default" id="capacitorelectricfield">
-<img alt="electromagnetism\.../figures/capacitorelectricfield1.png" src="electromagnetism\.../figures/capacitorelectricfield1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">¶</a></p>
+<img alt="../_images/capacitorelectricfield1.png" src="../_images/capacitorelectricfield1.png" />
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">¶</a></p>
 </div>
 <p>For two identical plates, each carrying the same magnitude of charge (but opposite signs),
 there will be a uniform electric field between the plates:</p>
@@ -523,10 +526,10 @@ In each case the plates can therefore carry a bigger charge and therefore will r
 <p>We can consider a uniform infinite line of charges, with charge per unit length <span class="math notranslate nohighlight">\(\lambda\)</span>.<br />
 Here we can again consider a cylinder as our Gauss’s law surface area for flux to cross, but the normal vector now
 is directed in the radial direction away from the charges and its the long side area that we are concerned with, as
-depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">:lineofcharge</span></code>.</p>
+depicted in <a class="reference internal" href="#lineofcharge"><span class="std std-numref">Fig. 2.8</span></a>.</p>
 <div class="figure align-default" id="lineofcharge">
 <img alt="../_images/InfiniteLineOfCharges.png" src="../_images/InfiniteLineOfCharges.png" />
-<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">An infinite line of charges with a cylinder as our Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">An infinite line of charges with a cylinder as our Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
 </div>
 <p>For a cylinder of length <span class="math notranslate nohighlight">\(L\)</span>, the area of the long side of the cylinder is <span class="math notranslate nohighlight">\(2 \pi r L\)</span> and the charge enclosed in this
 area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>, so putting these facts together:</p>
@@ -540,12 +543,12 @@ area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>
 <p>Solving systems with Gauss’s law with pen and paper methods usually requires some degree of symmetry,</p>
 <div class="section" id="finite-lines-of-charge">
 <h3><span class="section-number">2.2.3.1. </span>Finite Lines of Charge*<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">¶</a></h3>
-<p>Equation <code class="xref std std-numref docutils literal notranslate"><span class="pre">FiniteChargeLineEField</span></code> is only true for an infinite line of charge, if we have a finite collection of charges,
-as depicted in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.8</span></a>, then we loose the symmetries of the system that we needed to simplify the Gauss’s
+<p>Equation <code class="xref eq docutils literal notranslate"><span class="pre">FiniteChargeLineEField</span></code> is only true for an infinite line of charge, if we have a finite collection of charges,
+as depicted in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.9</span></a>, then we loose the symmetries of the system that we needed to simplify the Gauss’s
 law expression - making it harder to solve this system using Gauss’s law, but we can consider iot from a superposition of point charges perspective.</p>
 <div class="figure align-default" id="finitelineofcharge">
 <img alt="../_images/FiniteLineOfCharges1.png" src="../_images/FiniteLineOfCharges1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">An finite line of charges with length <span class="math notranslate nohighlight">\(a + b\)</span> aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis and an element of charge <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span> indicated in red.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">An finite line of charges with length <span class="math notranslate nohighlight">\(a + b\)</span> aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis and an element of charge <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span> indicated in red.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
 </div>
 <p>With a line of large, of length <span class="math notranslate nohighlight">\(a + b\)</span>, aligned along the <span class="math notranslate nohighlight">\(x\)</span> axis and considering a radial distance <span class="math notranslate nohighlight">\(r\)</span> away.  The radial
 component of the electric field can be found by breaking up the uniform line of charge into infinitesimal chunks,
@@ -595,16 +598,36 @@ each by superposition contributing <span class="math notranslate nohighlight">\(
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="electrostatics.html" title="previous page"><span class="section-number">2.1. </span>Electrostatics</a>
-    <a class='right-next' id="next-link" href="Efieldenergy.html" title="next page"><span class="section-number">2.3. </span>Energy in an Electric Field</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="electrostatics.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.1. </span>Electrostatics</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="Efieldenergy.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.3. </span>Energy in an Electric Field</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

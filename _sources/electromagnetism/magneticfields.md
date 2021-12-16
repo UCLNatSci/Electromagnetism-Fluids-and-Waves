@@ -147,8 +147,8 @@ as depicted in {numref}`BSLawAngles`.
 ---
 name: BSLawAngles
 ---
-{\bf Left Pane} - Geometry of a current carrying wire and solving for Biot-Savart law to calculate magnetic field at point $P$, 
-{\bf Right Pane} - Converting system of wire elements in terms of angles at point $P$.
+<b>Left Pane</b> - Geometry of a current carrying wire and solving for Biot-Savart law to calculate magnetic field at point $P$, 
+<b>Right Pane</b> - Converting system of wire elements in terms of angles at point $P$.
 ```
 In this system we can think about the length element of the current as:
 ```{math}

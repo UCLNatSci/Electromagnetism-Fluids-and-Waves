@@ -1,12 +1,16 @@
 # Harmonic and Oscillatory Motion
-Waves are connected to oscillations and describe the transfer of energy from different parts of a system through oscillating phenomena within said system.  
-This should be seen differently to other ways that energy may be transferred, e.g. thermodynamically or by doing work by applying a force over a distance.  
-The study of oscillations can be started by looking at the simplest kind of oscillating system, that of Simple Harmonic Motion (SHM) and Simple Harmonic Oscillators (SHO),
-before moving on to consider damped and forced harmonic systems.
+Waves are connected to oscillations and describe the transfer of energy from different parts of a system through oscillating phenomena within said system.  This 
+should be seen differently to other ways that energy may be transferred, e.g. thermodynamically or by doing work by applying a force over a distance.  The study 
+of oscillations can be started by looking at the simplest kind of oscillating system, that of Simple Harmonic Motion (SHM) and Simple Harmonic Oscillators (SHO), before 
+moving on to consider damped and forced harmonic systems.
 
 ## Simple Harmonic Motion
-Lets consider a simple system with a mass on a idealised spring, which follows Hooke's law $\bf{F}_H = k \bf{x}$ where $\bf{F}$ is 
-the force applied, $x$ is the extension measured in the spring from the application of the force $\bf{F}$ and $k$ is the spring constant, a material property of the spring. 
+Lets consider a simple system with a mass on a idealised spring, which follows Hooke's law 
+```{math}
+\bf{F}_H = k \bf{x}
+```
+where $\bf{F}$ is the force applied, $x$ is the extension measured in the spring from the application of the force $\bf{F}$ and $k$ is the spring constant, 
+a material property of the spring. 
 
 ```{figure} ../figures/massonaspring.png
 ---
@@ -93,24 +97,30 @@ E = \frac{1}{2}k\left(A^2 + B^2\right)
 Which therefore means that the total amount of energy in the system is a constant, even if the energy flucuates between kinetic and potential in the course
 of the harmonic motion.
 
-## Forced Harmonic Systems
-We can think of an oscillating system, such as an AC electrical system with a voltage $V = V_0 \cos(\Omega t)$ and fixed resistance $R$, which would 
-have a power of $P = V^2 / R = \frac{{V_0}^2}{R}\cos^2(\Omega t) $, which seems to suggest osciallting systems energy depends on 
+## Damped Motion and Forced Harmonic Systems*
 
-
-
-## Damped Motion*
 This SHM model presupposes that there are no losses in energy in this system and this is not always a good model for real world systems, usually there are 
 <b> damping </b> terms in our equations of motion, often this is due to air resistance but can also be caused by frictional forces.  This has the effect of adding a 
 first derivative term to the equations of motion 
 ```{math}
 m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + c \frac{\mathrm{d} x}{\mathrm{d} t} + kx = 0 
 ```
-and we can also put in a driving force $F(t)$ into our model to represent a constant amount of energy being put into the system 
-(which will be important if there are energy losses in the system).  We can rewrite in the form
+We could also think of oscillating systems, such as an AC electrical system with an input voltage $V = V_0 \cos(\Omega t)$, pushing round a current $I = I_0\cos(\omega t)$ and 
+with some fixed resistances $R$.  Such systems can be described as <em> forced </em> harmonic osciallators, because energy is constantly being put into and 
+given out from the system.  We can calculate the electrical power, $P = V^2 / R = {V_0}^2\,\cos^2(\Omega t)/R$ - suggesting the power and oscillation amplitude are 
+related according to $P \propto {V_0}^2$.  The most general form of these systems can be written as:
+```{math}
+a\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + b \frac{\mathrm{d} x}{\mathrm{d} t} + cx = F(t)
+```
+where $F(t)$ is the driving term. We can rewrite in the :
 ```{math}
 \frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + 2\zeta\omega_0 \frac{\mathrm{d} x}{\mathrm{d} t} + {\omega_0}^2 x = F(t) 
 ```
 where $\omega_0$ is the natural angular frequency of the system and $\zeta$ is the damping ratio.  If energy is put into the system at a rate of $\Omega$, such as 
-$F(t) = F_0 \cos(|omega t)$ and this frequency conicinces with the natural frequency $\omega_0$, i.e. $|omega \rightarrow \omega_0$, this gives rise to the phenomena of 
+$F(t) = F_0 \cos(\Omega \,t)$ and this frequency conicinces with the natural frequency $\omega_0$, i.e. $\Omega \rightarrow \omega_0$, this gives rise to the phenomena of 
 <b> resonance </b>.  
+
+
+## 
+
+

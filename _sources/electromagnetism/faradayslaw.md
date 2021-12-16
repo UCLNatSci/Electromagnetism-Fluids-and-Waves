@@ -6,20 +6,20 @@ Thinking again about the link between moving charges and magnetic fields:
 ```{math}
 Q\,{\bf v} \propto {\bf B}
 ```
-This holds whether charges are moving at a constant velocity or accelerating, in the case of the constant currents $\frac{\partial {\bf v}}{\partial t} = 0$, 
+This holds whether charges are moving at a constant velocity or accelerating, in the case of the constant currents $\partial {\bf v}/\partial t = 0$, 
 however if we consider systems now having time variance:
 ```{math}
 \frac{\partial {\bf B}}{\partial t}  \propto \frac{\partial}{\partial t}\left(Q\,{\bf v} \right)
 ```
-As we mentioned previously, we can think of $Q\,{\bf v}$ is a "current momentum", taking the time derivative would produce a "current force", 
+As we mentioned previously, we can think of $Q\,{\bf v}$ is a <b>current momentum</b>, taking the time derivative would produce a <b>current force</b>, 
 which we call the electromotive force (EMF), denoted by $\mathcal{E}$.  Another issue we need to overcome is that an element of current carrying wire 
-$I\,\mathrm{d} {\bf \ell}$ produces a plane of magnetic field, as we saw in Figure \ref{fig:BiotSavart}.  Therefore to calculate the total contribution to the EMF, 
+$I\,\mathrm{d} {\bf \ell}$ produces a plane of magnetic field, as we saw in {numref}`BiotSavart`.  Therefore to calculate the total contribution to the EMF, 
 we need to find the magnetic flux $\Phi_B$, which gives us the form of Faraday's law:
 ```{math}
 :label: FaradaysLaw
 \mathcal{E} = - \frac{\partial}{\partial t} \iint_A {\bf B}\cdot\mathrm{d}{\bf A} = -\frac{\partial \Phi_B}{\partial t} 
 ```
-If we have a coil of wire, with $N$ turns of wire, each of which cuts through magnetic field lines, as we see in Figure {\numref}`MagnetInACoil`. 
+If we have a coil of wire, with $N$ turns of wire, each of which cuts through magnetic field lines, as we see in {numref}`MagnetInACoil`. 
 Faraday's law applies to each turn, it acts like a series circuit across the field and so the EMF induced becomes an additive process, and so we have:
 ```{math}
 \mathcal{E} = -N\,\frac{\partial \Phi_B}{\partial t}
@@ -37,8 +37,6 @@ violate conservation of energy - the direction of an induced current which is pu
 field that produces it.  This means that if we push a permanent magnet into a coil of wire, as we see in {numref}`MagnetInACoil`, the EMF which will push a 
 current such that the magnetic field that Amp\`eres law predicts would be created will oppose the magnetic field of the permanent magnet.  If the current flowed in 
 then opposite direction, it would cause the magnet to be dragged into coil faster and faster, creating a flow of limitless energy (which is clearly impossible).
-
-
 
 ## Example - Electrical Transformers
 We can apply Faraday's law to investigate the flow of magnetic fields and EMF's in a transformer, as depicted in {numref}`Transformer`, where an initial 

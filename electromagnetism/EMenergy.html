@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -357,7 +360,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deriving-intrinsic-energy-from-potentials">
@@ -396,7 +399,7 @@
 to an idea from the waves section, namely where are all the sources of energy in this system?</p>
 <div class="section" id="deriving-intrinsic-energy-from-potentials">
 <h2><span class="section-number">2.11.1. </span>Deriving Intrinsic Energy from Potentials*<a class="headerlink" href="#deriving-intrinsic-energy-from-potentials" title="Permalink to this headline">¶</a></h2>
-<p>Recall the intrinsic electrostatic potential energy <span class="math notranslate nohighlight">\(U_E\)</span> from a system of charges from Equation \ref{eqn:elecpotenergy}, we can
+<p>Recall the intrinsic electrostatic potential energy <span class="math notranslate nohighlight">\(U_E\)</span> from a system of charges from Equation <a class="reference internal" href="Efieldenergy.html#equation-elecpotenergy">(2.6)</a>, we can
 modify this to consider a continuous charge density <span class="math notranslate nohighlight">\(\rho({\bf r})\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[U_E = \frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i) \rightarrow U_E  = \frac{1}{2}\iiint \rho({\bf r}) \,V_E({\bf r}) \, \mathrm{d} V \]</div>
@@ -422,8 +425,8 @@ Then we can define the energy density <span class="math notranslate nohighlight"
 </div>
 <div class="section" id="energy-flux-and-poynting-vector">
 <h2><span class="section-number">2.11.2. </span>Energy Flux and Poynting Vector<a class="headerlink" href="#energy-flux-and-poynting-vector" title="Permalink to this headline">¶</a></h2>
-<p>To find the total energy density we would need to repeat this process for <span class="math notranslate nohighlight">\({\bf B}\)</span> (which is fairly lengthy!), but we can consider this problem through analogy.<br />
-The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.21)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
+<p>To find the total energy density we would need to repeat this process for <span class="math notranslate nohighlight">\({\bf B}\)</span> (which is fairly lengthy!), but we can consider this problem
+through analogy.  The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.21)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
 <div class="math notranslate nohighlight" id="equation-e-cb">
 <span class="eqno">(2.30)<a class="headerlink" href="#equation-e-cb" title="Permalink to this equation">¶</a></span>\[\frac{[B]}{[\textrm{Length}]} = \epsilon_0\,\mu_0\,\frac{[E]}{[\textrm{Time}]} \Rightarrow [B] = [E]\,[\textrm{Speed}]\,\epsilon_0\,\mu_0 \]</div>
 <p>Equation <a class="reference internal" href="EMwaves.html#equation-speedoflight">(2.27)</a> says <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_0\,\mu_0}\)</span>, hence using <span class="math notranslate nohighlight">\(c\)</span> as the wave speed, <span class="math notranslate nohighlight">\(u_B\)</span> has the form:</p>
@@ -477,13 +480,13 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
  0\\
  S_0
 \end{bmatrix}\,\exp(2i(k_z z  - \omega t))\end{split}\]</div>
-<p>which suggests for wave oscillations in the <span class="math notranslate nohighlight">\(({\bf x},\,{\bf y})\)</span> planes, the wave energy is transmitted in the <span class="math notranslate nohighlight">\({\bf z}\)</span> direction, as we see in Figure <code class="xref eq docutils literal notranslate"><span class="pre">EMPlaneWaves</span></code>
-(we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by <span class="math notranslate nohighlight">\(v_S = c = v_{E,\,B}\)</span> but the wavelength
-<span class="math notranslate nohighlight">\(\lambda_S = \frac{1}{2}\lambda_{E,\,B}\)</span> and frequency <span class="math notranslate nohighlight">\(f_S = 2\,f_{E,\,B}\)</span> are changed.</p>
+<p>which suggests for wave oscillations in the <span class="math notranslate nohighlight">\(({\bf x},\,{\bf y})\)</span> planes, the wave energy is transmitted in the <span class="math notranslate nohighlight">\({\bf z}\)</span> direction,
+as we see in <a class="reference internal" href="EMwaves.html#emplanewaves"><span class="std std-numref">Fig. 2.31</span></a> (we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by
+<span class="math notranslate nohighlight">\(v_S = c = v_{E,\,B}\)</span> but the wavelength <span class="math notranslate nohighlight">\(\lambda_S = \frac{1}{2}\lambda_{E,\,B}\)</span> and frequency <span class="math notranslate nohighlight">\(f_S = 2\,f_{E,\,B}\)</span> are changed.</p>
 </div>
 <div class="section" id="characteristic-impedance">
 <h2><span class="section-number">2.11.4. </span>Characteristic Impedance*<a class="headerlink" href="#characteristic-impedance" title="Permalink to this headline">¶</a></h2>
-<p>Another way to view these results is through Equation <code class="xref eq docutils literal notranslate"><span class="pre">kEperpB</span></code>,</p>
+<p>Another way to view these results is through Equation <a class="reference internal" href="EMwaves.html#equation-kebperp">(2.28)</a>,</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \,\frac{1}{\mu_0}{\bf E}\times {\bf B} = \frac{1}{\mu_0}{\bf E}\times \left(\frac{1}{\omega} {\bf k} \times {\bf E}\right) 
 = \frac{1}{\omega\,\mu_0} \bigg[ \left({\bf E}\cdot {\bf E}\right){\bf k} - \left({\bf E} \cdot {\bf k} \right){\bf E} \bigg]\]</div>
@@ -493,11 +496,12 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
 <p>Given that <span class="math notranslate nohighlight">\(\omega / k_z = c\)</span> here, this means we can write the expression as:</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \frac{1}{c\,\mu_0}\,|{\bf E}|^2\,\,\hat{{\bf z}}\]</div>
-<p>Clearly this will be a time varying expression, however from Chapter 1 we already discussed the effect of time averaging waves to find the power, therefore we find that:</p>
+<p>Clearly this will be a time varying expression, however from Chapter 1 we already discussed the effect of time averaging waves to find
+the power, therefore we find that:</p>
 <div class="math notranslate nohighlight">
 \[S_{\langle T \rangle} = \frac{1}{2 \eta}\,E^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the characteristic impedance of the transmission medium, which has units of resistance. In a vacuum, this takes the value
-<span class="math notranslate nohighlight">\(\eta \simeq 377\, \Omega\)</span>, but in matter its value will vary according to <span class="math notranslate nohighlight">\(\epsilon(\omega),\,\mu(\omega)\)</span>, as mentioned in Chapters 3 and 4.</p>
+<span class="math notranslate nohighlight">\(\eta \simeq 377\, \Omega\)</span>, but in matter its value will vary according to <span class="math notranslate nohighlight">\(\epsilon(\omega),\,\mu(\omega)\)</span>, as mentioned in previous sections.</p>
 </div>
 </div>
 
@@ -524,16 +528,36 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="EMwaves.html" title="previous page"><span class="section-number">2.10. </span>Electromagnetic Waves</a>
-    <a class='right-next' id="next-link" href="EMpotentials.html" title="next page"><span class="section-number">2.12. </span>Electromagnetic Potentials and Gauge Theories*</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="EMwaves.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.10. </span>Electromagnetic Waves</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="EMpotentials.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.12. </span>Electromagnetic Potentials and Gauge Theories*</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

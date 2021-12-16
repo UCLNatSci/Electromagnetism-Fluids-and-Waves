@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -357,7 +360,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-electrical-transformers">
@@ -383,36 +386,36 @@ The next question is can we start with a magnetic field and finish with an elect
 Thinking again about the link between moving charges and magnetic fields:</p>
 <div class="math notranslate nohighlight">
 \[Q\,{\bf v} \propto {\bf B}\]</div>
-<p>This holds whether charges are moving at a constant velocity or accelerating, in the case of the constant currents <span class="math notranslate nohighlight">\(\frac{\partial {\bf v}}{\partial t} = 0\)</span>,
+<p>This holds whether charges are moving at a constant velocity or accelerating, in the case of the constant currents <span class="math notranslate nohighlight">\(\partial {\bf v}/\partial t = 0\)</span>,
 however if we consider systems now having time variance:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial {\bf B}}{\partial t}  \propto \frac{\partial}{\partial t}\left(Q\,{\bf v} \right)\]</div>
-<p>As we mentioned previously, we can think of <span class="math notranslate nohighlight">\(Q\,{\bf v}\)</span> is a “current momentum”, taking the time derivative would produce a “current force”,
+<p>As we mentioned previously, we can think of <span class="math notranslate nohighlight">\(Q\,{\bf v}\)</span> is a <b>current momentum</b>, taking the time derivative would produce a <b>current force</b>,
 which we call the electromotive force (EMF), denoted by <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>.  Another issue we need to overcome is that an element of current carrying wire
-<span class="math notranslate nohighlight">\(I\,\mathrm{d} {\bf \ell}\)</span> produces a plane of magnetic field, as we saw in Figure \ref{fig:BiotSavart}.  Therefore to calculate the total contribution to the EMF,
+<span class="math notranslate nohighlight">\(I\,\mathrm{d} {\bf \ell}\)</span> produces a plane of magnetic field, as we saw in <a class="reference internal" href="magneticfields.html#biotsavart"><span class="std std-numref">Fig. 2.18</span></a>.  Therefore to calculate the total contribution to the EMF,
 we need to find the magnetic flux <span class="math notranslate nohighlight">\(\Phi_B\)</span>, which gives us the form of Faraday’s law:</p>
 <div class="math notranslate nohighlight" id="equation-faradayslaw">
 <span class="eqno">(2.18)<a class="headerlink" href="#equation-faradayslaw" title="Permalink to this equation">¶</a></span>\[\mathcal{E} = - \frac{\partial}{\partial t} \iint_A {\bf B}\cdot\mathrm{d}{\bf A} = -\frac{\partial \Phi_B}{\partial t} \]</div>
-<p>If we have a coil of wire, with <span class="math notranslate nohighlight">\(N\)</span> turns of wire, each of which cuts through magnetic field lines, as we see in Figure {\numref}<code class="docutils literal notranslate"><span class="pre">MagnetInACoil</span></code>.
+<p>If we have a coil of wire, with <span class="math notranslate nohighlight">\(N\)</span> turns of wire, each of which cuts through magnetic field lines, as we see in <a class="reference internal" href="#magnetinacoil"><span class="std std-numref">Fig. 2.29</span></a>.
 Faraday’s law applies to each turn, it acts like a series circuit across the field and so the EMF induced becomes an additive process, and so we have:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{E} = -N\,\frac{\partial \Phi_B}{\partial t}\]</div>
 <div class="figure align-default" id="magnetinacoil">
 <img alt="../_images/MagnetInACoil1.png" src="../_images/MagnetInACoil1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.28 </span><span class="caption-text">Direction of induced EMF from a moving magnetic into a coil, <b> Left</b> - North pole moving into coil, <b> Right </b> - North pole moving out of coil.</span><a class="headerlink" href="#magnetinacoil" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.29 </span><span class="caption-text">Direction of induced EMF from a moving magnetic into a coil, <b> Left</b> - North pole moving into coil, <b> Right </b> - North pole moving out of coil.</span><a class="headerlink" href="#magnetinacoil" title="Permalink to this image">¶</a></p>
 </div>
 <p>Note that the two sides of Equation <a class="reference internal" href="#equation-faradayslaw">(2.18)</a> differ by a sign, this is known as <b> Lenz’s law</b>.  This is here to ensure that we do not
 violate conservation of energy - the direction of an induced current which is pushed by the EMF <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is always such as to oppose the change in the magnetic
-field that produces it.  This means that if we push a permanent magnet into a coil of wire, as we see in <a class="reference internal" href="#magnetinacoil"><span class="std std-numref">Fig. 2.28</span></a>, the EMF which will push a
+field that produces it.  This means that if we push a permanent magnet into a coil of wire, as we see in <a class="reference internal" href="#magnetinacoil"><span class="std std-numref">Fig. 2.29</span></a>, the EMF which will push a
 current such that the magnetic field that Amp`eres law predicts would be created will oppose the magnetic field of the permanent magnet.  If the current flowed in
 then opposite direction, it would cause the magnet to be dragged into coil faster and faster, creating a flow of limitless energy (which is clearly impossible).</p>
 <div class="section" id="example-electrical-transformers">
 <h2><span class="section-number">2.8.1. </span>Example - Electrical Transformers<a class="headerlink" href="#example-electrical-transformers" title="Permalink to this headline">¶</a></h2>
-<p>We can apply Faraday’s law to investigate the flow of magnetic fields and EMF’s in a transformer, as depicted in <a class="reference internal" href="#transformer"><span class="std std-numref">Fig. 2.29</span></a>, where an initial
+<p>We can apply Faraday’s law to investigate the flow of magnetic fields and EMF’s in a transformer, as depicted in <a class="reference internal" href="#transformer"><span class="std std-numref">Fig. 2.30</span></a>, where an initial
 voltage <span class="math notranslate nohighlight">\(V_p\)</span> typically pushes an initially large current <span class="math notranslate nohighlight">\(I_p\)</span> in the primary circuit and through the primary coil.</p>
 <div class="figure align-default" id="transformer">
 <img alt="../_images/Transformer.png" src="../_images/Transformer.png" />
-<p class="caption"><span class="caption-number">Fig. 2.29 </span><span class="caption-text">Flow of magnetic flux in a transformer - we denote the left hand coil the Primary and right hand coil the Secondary, each carries a current <span class="math notranslate nohighlight">\(I_{p,s}\)</span> and EMF <span class="math notranslate nohighlight">\(V_{p,s}\)</span>.</span><a class="headerlink" href="#transformer" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.30 </span><span class="caption-text">Flow of magnetic flux in a transformer - we denote the left hand coil the Primary and right hand coil the Secondary, each carries a current <span class="math notranslate nohighlight">\(I_{p,s}\)</span> and EMF <span class="math notranslate nohighlight">\(V_{p,s}\)</span>.</span><a class="headerlink" href="#transformer" title="Permalink to this image">¶</a></p>
 </div>
 <p>The alternating voltage in the primary circuit, say:</p>
 <div class="math notranslate nohighlight">
@@ -462,16 +465,36 @@ N_p &gt; N_s &amp;\Rightarrow&amp;\, a &gt; 1\,\, \textrm{step down}\end{split}\
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="ampereslaw.html" title="previous page"><span class="section-number">2.7. </span>Ampère’s Circuital Law</a>
-    <a class='right-next' id="next-link" href="maxwelleqns.html" title="next page"><span class="section-number">2.9. </span>Maxwell’s Equations</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="ampereslaw.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">2.7. </span>Ampère’s Circuital Law</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="maxwelleqns.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2.9. </span>Maxwell’s Equations</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
