@@ -374,14 +374,14 @@ The Reynolds number gives a rough indication of the relative importance of inert
 </ul>
 <p>Non-dimensionalisation
 Consider the conservation of momentum equation we obtained previously, before non-dimensionalisation.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e53aab6d-3a9c-40b0-a435-e2caa31c0329">
-<span class="eqno">(3.55)<a class="headerlink" href="#equation-e53aab6d-3a9c-40b0-a435-e2caa31c0329" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla\underline{v}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}+\underline{F}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-80d8e977-67eb-457e-b213-dfa1c1b24570">
+<span class="eqno">(3.55)<a class="headerlink" href="#equation-80d8e977-67eb-457e-b213-dfa1c1b24570" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla\underline{v}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}+\underline{F}.\end{equation}\]</div>
 <p>We may introduce non-dimensional variables using a characteristic length scale <span class="math notranslate nohighlight">\(L\)</span>, velocity <span class="math notranslate nohighlight">\(U\)</span>, time <span class="math notranslate nohighlight">\(T\)</span>, pressure <span class="math notranslate nohighlight">\(P\)</span> and body force <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-298aab12-9281-40f2-ad49-58d457fdd186">
-<span class="eqno">(3.56)<a class="headerlink" href="#equation-298aab12-9281-40f2-ad49-58d457fdd186" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{v}_*=\frac{\underline{v}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}^*=\frac{\underline{F}}{g}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0db4e5c4-6936-4a5d-8d3e-705b21661eaa">
+<span class="eqno">(3.56)<a class="headerlink" href="#equation-0db4e5c4-6936-4a5d-8d3e-705b21661eaa" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{v}_*=\frac{\underline{v}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}^*=\frac{\underline{F}}{g}\end{equation}\]</div>
 <p>Making these substitutions gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-312f77c7-ad61-4602-9da2-f9d8584ed354">
-<span class="eqno">(3.57)<a class="headerlink" href="#equation-312f77c7-ad61-4602-9da2-f9d8584ed354" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{v}_*}{\partial t_*}+\underline{v_*}.\nabla_* \underline{v_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{v_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-612bbbde-43b8-4e09-9e9e-48ebf5ed6cba">
+<span class="eqno">(3.57)<a class="headerlink" href="#equation-612bbbde-43b8-4e09-9e9e-48ebf5ed6cba" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{v}_*}{\partial t_*}+\underline{v_*}.\nabla_* \underline{v_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{v_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
 <p>The following dimensionless parameters now appear in the normalized momentum equation:</p>
 <p><span class="math notranslate nohighlight">\(\mathrm{St}=\frac{L}{TU}\)</span></p>
 <p>Strouhal number</p>
@@ -393,11 +393,11 @@ Consider the conservation of momentum equation we obtained previously, before no
 <p>Froude number</p>
 <p><span class="math notranslate nohighlight">\(~\frac{\text{inertia}}{\text{body force}}\)</span></p>
 <p>If any of these quantities is large/small then we may construct an approximate solution by neglecting relevant terms in the equation. In the Navier Stokes equations presented in the previous chapter, the body force was neglected and it was assumed that the scales of local acceleration, inertia and pressure are comparable so that the following non-dimensionalisations of time and velocity are sensible:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f59bf51-be67-4250-9818-bac75d0f12af">
-<span class="eqno">(3.58)<a class="headerlink" href="#equation-6f59bf51-be67-4250-9818-bac75d0f12af" title="Permalink to this equation">¶</a></span>\[\begin{equation}p=\frac{p_*}{\rho U^2}, \quad t=\frac{U t*}{L}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fad79435-cd8e-4035-a044-8fe1aa39c152">
+<span class="eqno">(3.58)<a class="headerlink" href="#equation-fad79435-cd8e-4035-a044-8fe1aa39c152" title="Permalink to this equation">¶</a></span>\[\begin{equation}p=\frac{p_*}{\rho U^2}, \quad t=\frac{U t*}{L}.\end{equation}\]</div>
 <p>We obtain the equation given previously. The asterisks can dropped, because from now on we will always work with dimensionless quantities:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08777897-a105-42b0-8421-3e65db3ae6d3">
-<span class="eqno">(3.59)<a class="headerlink" href="#equation-08777897-a105-42b0-8421-3e65db3ae6d3" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla \underline{v}=-\nabla p + \mathrm{Re}^{-1} \Delta\underline{v}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8cedcdff-4204-4da1-abde-3ba3e8b8849e">
+<span class="eqno">(3.59)<a class="headerlink" href="#equation-8cedcdff-4204-4da1-abde-3ba3e8b8849e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla \underline{v}=-\nabla p + \mathrm{Re}^{-1} \Delta\underline{v}\end{equation}\]</div>
 <p>The choice of characteristic length and velocity scales is somewhat arbitrary, but should be done to ensure that the physical quantities are <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span> or smaller. The characteristic length scale should be chosen as a typical distance over which the fluid velocity changes by an amount of order <span class="math notranslate nohighlight">\(U\)</span>.</p>
 <p>Defining a characteristic length scale is not always easy, though fortunately practices have been established (at least for classical geometries) through years of study and enhanced understanding about flows. For instance, in the case of developed fluid flow through a pipe or channel the relevant characteristic length scale is the diameter of the enclosure. For unconfined flows, such as the flow of oncoming fluid over a flat plate it is more challenging to define a suitable length scale. We may, in that case, define the Reynolds number based on some fixed downstream reference distance from the leading edge of the plate that is applicable to the region of interest.</p>
 <p>Why we introduce the Reynolds number</p>
@@ -420,11 +420,11 @@ So the ratio of inertial<span class="math notranslate nohighlight">\(/\)</span>v
 <p>See also: <a class="reference external" href="https://ed.ted.com/lessons/human-sperm-vs-the-sperm-whale-aatish-bhatia">https://ed.ted.com/lessons/human-sperm-vs-the-sperm-whale-aatish-bhatia</a></p>
 <p>Example: Low Reynolds number flow
 If the Reynolds number is very small (e.g. for very viscous flows) then we can neglect the inertial terms <span class="math notranslate nohighlight">\(\underline{v}.\nabla\underline{v}\)</span> to leave</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f39c5cd-da5b-4097-ae1a-b6268b67392a">
-<span class="eqno">(3.60)<a class="headerlink" href="#equation-6f39c5cd-da5b-4097-ae1a-b6268b67392a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}+\underline{F}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-00b0bc77-667f-4c9a-9b1d-f37d7886a9d2">
+<span class="eqno">(3.60)<a class="headerlink" href="#equation-00b0bc77-667f-4c9a-9b1d-f37d7886a9d2" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{v}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}+\underline{F}.\end{equation}\]</div>
 <p>If we are interested in steady solutions in the absence of a body force, the system reduces to the equation for Stokes flow (creeping flow):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7eeb04a9-b4f0-41f9-9627-2f0156a06c1a">
-<span class="eqno">(3.61)<a class="headerlink" href="#equation-7eeb04a9-b4f0-41f9-9627-2f0156a06c1a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{v}-\nabla p=\underline{0}, \quad \nabla.\underline{v}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cd57675f-f942-408a-b1bb-497a685aa302">
+<span class="eqno">(3.61)<a class="headerlink" href="#equation-cd57675f-f942-408a-b1bb-497a685aa302" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{v}-\nabla p=\underline{0}, \quad \nabla.\underline{v}=0.\end{equation}\]</div>
 <p>The flow governed by this pair of equations exhibits the fascinating property of reversibility. If the boundary conditions conditions applied to the fluid are reversed, the fluid particles will return back along their previous paths. A striking demonstration of this phenomenon can be found here:</p>
 <p><a class="reference external" href="https://fyfluiddynamics.com/2012/02/the-reversibility-of-laminar-mixing-often-comes-as/">https://fyfluiddynamics.com/2012/02/the-reversibility-of-laminar-mixing-often-comes-as/</a></p>
 <p>This has important implications for the swimming of microcellular organisms, which are unable to propel themselves using flapping or “paddling” motions. The finding is known as the scallop theorem, since the opening and closing swimming mechanism used by scallops would be ineffective at low Reynolds numbers.</p>

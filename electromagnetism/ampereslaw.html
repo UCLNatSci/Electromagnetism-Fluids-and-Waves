@@ -466,7 +466,9 @@ from the product rule, since the surface <span class="math notranslate nohighlig
 <div class="math notranslate nohighlight">
 \[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0 \iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}
 \label{eqn:AmperesLawDC}\]</div>
-<p>where we have added an additional <b>Displacement Current</b> <span class="math notranslate nohighlight">\(I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\)</span> .</p>
+<p>where we have added an additional <b>Displacement Current</b> <span class="math notranslate nohighlight">\(I_D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}$\]</div>
 </div>
 <div class="section" id="magnetic-fields-in-coils">
 <h2><span class="section-number">2.7.3. </span>Magnetic Fields in Coils*<a class="headerlink" href="#magnetic-fields-in-coils" title="Permalink to this headline">¶</a></h2>
@@ -474,22 +476,26 @@ from the product rule, since the surface <span class="math notranslate nohighlig
 as shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.24</span></a>.</p>
 <div class="figure align-default" id="bfieldcoilofwire">
 <img alt="../_images/CoilofCurrent1.png" src="../_images/CoilofCurrent1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.24 </span><span class="caption-text"><b> Main Pane </b> - A circular coil of current carrying wire, sitting in the <span class="math notranslate nohighlight">\(x-y\)</span> plane, centered on the origin.<br />
-<b> Bottom Pane </b> - At point <span class="math notranslate nohighlight">\(P\)</span> there is a pair-wise cancellation of the parallel magnetic field components.</span><a class="headerlink" href="#bfieldcoilofwire" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.24 </span><span class="caption-text"><b> Main Pane </b> - A circular coil of current carrying wire, sitting in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane, centered on the origin.<br />
+<b> Bottom Pane </b> - At point <span class="math notranslate nohighlight">\(P\)</span> there is a pair-wise cancellation of the magnetic field components in the <span class="math notranslate nohighlight">\((x,\,y )\)</span> plane, leaving only those in the <span class="math notranslate nohighlight">\(z\)</span> direction.</span><a class="headerlink" href="#bfieldcoilofwire" title="Permalink to this image">¶</a></p>
 </div>
-<p>In order to find the magnetic field at point <span class="math notranslate nohighlight">\(P\)</span>, we can use the Biot-Savart law.  Given that the coil sits in the <span class="math notranslate nohighlight">\(x-y\)</span> plane here and we are
+<p>In order to find the magnetic field at point <span class="math notranslate nohighlight">\(P\)</span>, we can use the Biot-Savart law.  Given that the coil sits in the <span class="math notranslate nohighlight">\((x,\, y)\)</span> plane here and we are
 interested in the magnetic field at a point on the <span class="math notranslate nohighlight">\(z\)</span> axis, the vectors <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> and <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> are perpendicular, therefore we have:</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d} {\bf B} = \frac{\mu_0}{4\pi} \frac{I\,\mathrm{d} \ell}{r^2}\,\hat{{\bf z}} = \frac{\mu_0}{4\pi} \frac{I\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}}\]</div>
 <p>A further symmetry we can exploit is there since the direction of the current changes, the direction of <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}'\)</span> is opposite to that of
 <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}''\)</span>.  We find that there will a pair-wise cancellation of some of the magnetic field components therefore around the coil, as
-shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.24</span></a>.  This means that the components of <span class="math notranslate nohighlight">\({\bf B}\)</span> that are <em> parallel </em> to the <span class="math notranslate nohighlight">\(z\)</span> axis will cancel i.e. <span class="math notranslate nohighlight">\({\bf B} \sin(\theta)\)</span>
-and only the net <em> perpendicular </em> components, i.e. <span class="math notranslate nohighlight">\({\bf B} \cos(\theta)\)</span>) will be non-zero.  Therefore the expression we need to find is:</p>
+shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.24</span></a>.  This means that the components of <span class="math notranslate nohighlight">\({\bf B}\)</span> that are <em> perpendicular </em> to the <span class="math notranslate nohighlight">\(z\)</span> axis will cancel i.e. <span class="math notranslate nohighlight">\({\bf B} \sin(\theta)\)</span>
+and only the net <em> parallel </em> components, i.e. <span class="math notranslate nohighlight">\({\bf B} \cos(\theta)\)</span> will be non-zero.  Therefore the expression we need to find is:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = \int_{\mathcal{C}} \frac{\mu_0}{4\pi} \frac{I\,\cos(\theta)\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}} \]</div>
-<p>Given that <span class="math notranslate nohighlight">\(\cos(\theta) = R/\sqrt{y^2 + R^2}\)</span> and integrating the segment elements <span class="math notranslate nohighlight">\(\mathrm{d} \ell\)</span> round the loop produces the circumference <span class="math notranslate nohighlight">\(2\pi\,R\)</span>:</p>
+<p>Given that <span class="math notranslate nohighlight">\(\cos(\theta) = R/\sqrt{z^2 + R^2}\)</span>, we can simplyify:</p>
 <div class="math notranslate nohighlight">
-\[{\bf B} = \frac{\mu_0}{4\pi} \frac{I\,R}{(z^2 + R^2)^{3/2}} \,(2\pi\,R)\,\hat{{\bf z}} = \frac{\mu_0\,I\,R^2}{2(z^2 + R^2)^{3/2}} \,\hat{{\bf z}}\]</div>
+\[{\bf B} = \frac{\mu_0\,I\,R}{4\pi\,(z^2 + R^2)^{3/2}}\,\int_{\mathcal{C}}\mathrm{d} \ell\,\hat{{\bf z}} \]</div>
+<p>Recall that we are integrating around the current loop, not over the <span class="math notranslate nohighlight">\(z\)</span> axis, so we have moved all the constant terms outside the integral, now
+integrating the segment elements <span class="math notranslate nohighlight">\(\mathrm{d} \ell\)</span> round the loop produces the circumference <span class="math notranslate nohighlight">\(2\pi\,R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[{\bf B} = \frac{\mu_0\,I\,R}{4\pi\,(z^2 + R^2)^{3/2}} \,(2\pi\,R)\,\hat{{\bf z}} = \frac{\mu_0\,I\,R^2}{2(z^2 + R^2)^{3/2}} \,\hat{{\bf z}}\]</div>
 <p>At the centre of the loop, <span class="math notranslate nohighlight">\(z = 0\)</span> and therefore:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = \frac{\mu_0\,I}{2R} \,\hat{{\bf z}}\]</div>
