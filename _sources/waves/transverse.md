@@ -42,11 +42,8 @@ Rearranging Equation {eq}`TransverseNewtons2ndLaw`, we find:
 ```
 and taking the limit of $\Delta x \rightarrow 0$, we see this is just a partial derivative:
 ```{math}
-\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right)
-```
-```{math}
 :label: Transversewaveyeqn
-\Rightarrow \frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} 
+\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right) = \frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} 
 ```
 If we examine the forces in the $x$ direction, we see these are balanced:
 ```{math}
@@ -78,9 +75,9 @@ in the limit of $\theta \ll 1$, with $c = \sqrt{T/\rho_L}$. This reduces to the 
 ```
 We can check the units of $c$, 
 ```{math}
-[T] &=& \, \textrm{N} = \text{kg}\,\text{m}\,\text{s}^{-2}\\
-[\rho_L] &=& \,\textr,{kg}\,\text{m}^{-1}\\
-\Rightarrow \sqrt{[T] / [\rho_L]} &=& \, \sqrt{\text{m}^2\,\text{s}^{-2}} = \text{m}\,\text{s}^{-1}
+[\textrm{T}] &=& \, \textrm{N} = \textrm{kg}\,\textrm{m}\,\textrm{s}^{-2}\\
+[\rho_L] &=& \,\textrm{kg}\,\textrm{m}^{-1}\\
+\Rightarrow \sqrt{[\textrm{T}] / [\rho_L]} &=& \, \sqrt{\textrm{m}^2\,\textrm{s}^{-2}} = \textrm{m}\,\textrm{s}^{-1}
 ```
 
 ## Transverse Wave Energy and Power
@@ -94,7 +91,7 @@ where $K$ is the total kinetic energy and $U$ the total potential energy.
 \left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2}\right)\left(\frac{\partial y}{\partial t}\right)^2 \\
 \Delta U &=& T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)
 ```
-Recall for transverse waves $\theta \ll 1$ which therefore means that $\frac{\partial y}{\partial x} \ll 1$ and therefore if we do a binomial 
+Recall for transverse waves $\theta \ll 1$ which therefore means that $\partial y/\partial x \ll 1$ and therefore if we do a binomial 
 expansion:
 ```{math}
 \Delta K &\simeq& \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots,\quad \quad 
@@ -112,8 +109,15 @@ If we take the limit $\Delta x \rightarrow 0$, then we can integrate up to find:
 \int_0^E \textrm{d}E' = E = \int_0^\lambda \epsilon(x,t) \,\textrm{d}x 
 ```
 ```{math}
-\epsilon(x,t) = \frac{1}{2}\,\rho_L\,\left[\left(\frac{\partial y}{\partial t}\right)^2 + c^2
+\epsilon(x,\,t) = \frac{1}{2}\,\rho_L\,\left[\left(\frac{\partial y}{\partial t}\right)^2 + c^2
 \left(\frac{\partial y}{\partial x}\right)^2\right]
 ```
 and we notice again the energy density term $\epsilon(x,\,t)$.  
+
+If we are deadling with waves propagating in two or three dimensions, with $y = y({\bf x},\, t)$ then we can switch to using the 
+gradient operator $\nabla y$:
+```{math}
+\epsilon({\bf x},\,t) = \frac{1}{2}\,\rho_L\,\left[\left(\frac{\partial y}{\partial t}\right)^2 + c^2
+|\nabla y|^2\right]
+```
 

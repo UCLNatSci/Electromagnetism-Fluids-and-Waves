@@ -113,7 +113,7 @@ and therefore given the definition of the cross product:
 \mathrm{d} {\bf B} = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,{\bf v}\times {\bf r}}{|{\bf r}|^3} \Longrightarrow \mathrm{d} {\bf B} = 
 \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times {\bf r}}{\,|{\bf r}|^3} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{|{\bf r}|^2}
 ``` 
-\noindent Thus the observed magnetic field from a wire carrying current $I$ at a distance ${\bf r}$ is given by the <b>Biot-Savart Law:</b>
+Thus the observed magnetic field from a wire carrying current $I$ at a distance ${\bf r}$ is given by the <b>Biot-Savart Law:</b>
 ```{math}
 :label: BSLAw
 {\bf B}({\bf r}) = \frac{\mu_0}{4\pi}\int_C \frac{I \, \mathrm{d}  \ell\times\hat{{\bf r}}}{|{\bf r}|^2} 
@@ -170,29 +170,3 @@ If we want to consider an <em> infinite</em> wire, then we can take $\alpha_2 \r
 ```{math}
 {\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}} 
 ```
-
-
-## Displacement Current
-Lets consider a simple circuit with a capacitor, as seen in {numref}`DisplacementCurrent`, we could take an Ampère's law path from the 
-current flowing in to or out of the capacitor to a path cutting through the capacitor.  This is problematic because there is no current flowing 
-through the capacitor, yet the exact path taken when calculating Ampère's law should not change the outcome of the expression!
-```{figure} ../figures/DisplacementCurrent.png
----
-name: DisplacementCurrent
----
-Applying Ampère's law to a capacitor with no direct current between the plates.
-```
-To resolve this, consider the rate of flow of charge $I = \frac{\partial Q}{\partial t}$ in to or out of the capacitor.  Starting from Gauss's law we find that:
-```{math}
-Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = 
-\frac{\partial Q}{\partial t} = \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = 
-\epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} 
-```
-where we have made use of mixed partial derivatives commuting.  Note that we drop the term $\iint {\bf E}\cdot \mathrm{d} \left(\frac{\partial {\bf A}}{\partial t}\right)$ 
-from the product rule, since the surface $A$ is constant in time.  So our final expression for Ampère's law may be written:
-```{math}
-:label: AmperesLawDC
-\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0 \iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}
-```
-where we have added an additional <b>Displacement Current</b> $I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}$ .
-

@@ -92,15 +92,15 @@ Other polarisation choices would be <b> Circular </b> or <b> Elliptical</b>, whe
 clockwise/anticlockwise polarised waves, as seen in {numref}`EMPlaneWaves`.
 
 
-## Other Solutions to Maxwell's Equations*
+## Other Solutions to Maxwell's Equations
 In addition to solving Maxwell's for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor, 
 with an electric field ${\bf E}$ present, we can think about Ohm's law $V = I\,R$ or terms of fields ${\bf J} = \sigma {\bf E}$ where $\sigma$ is the 
-conductivity of the material (often written in the related form of resistivity $\rho$, where $\rho = 1 / \sigma$ ) and ${\bf J}$ is the current density. 
+conductivity of the material (often written in the related form of resistivity $\rho$, where $\rho = 1 / \sigma$) and ${\bf J}$ is the current density. 
 This is often known as the <b> Drude Model.</b>  Substituting this model into Maxwell's equations and ignoring charges again, we find by solving for ${\bf E}$:
 ```{math}
 \nabla^2 {\bf E} = \mu_0 \sigma \frac{\partial {\bf E}}{\partial t} + \mu_0\epsilon_0 \frac{\partial^2 {\bf E}}{\partial t^2}
 ```
-Using the complex wave solution, we find a modified dispersion relation of the form 
+Using the wave solutions, we find a modified dispersion relation of the form: 
 ```{math}
 k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega
 ```
