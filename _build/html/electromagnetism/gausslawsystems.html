@@ -415,10 +415,10 @@
 In the first instance we consider that the charge is uniformly distributed throughout the sphere, which has some radius <span class="math notranslate nohighlight">\(a\)</span>, as can
 be seen in <a class="reference internal" href="#sphericalinsulator"><span class="std std-numref">Fig. 2.3</span></a></p>
 <div class="figure align-default" id="sphericalinsulator">
-<img alt="figures/sphericalinsulator.png}" src="figures/sphericalinsulator.png}" />
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Left: Charged spherical insulator of radius <span class="math notranslate nohighlight">\(a\)</span>.<br />
-Middle: Cross section considering spheres <span class="math notranslate nohighlight">\(r \leq a\)</span>.<br />
-Right: Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span></span><a class="headerlink" href="#sphericalinsulator" title="Permalink to this image">¶</a></p>
+<img alt="../_images/sphericalinsulator.png" src="../_images/sphericalinsulator.png" />
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text"><b> Left:</b> Charged spherical insulator of radius <span class="math notranslate nohighlight">\(a\)</span>,
+<b> Middle:</b> Cross section considering spheres <span class="math notranslate nohighlight">\(r \leq a\)</span>,<br />
+<b> Right:</b> Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span></span><a class="headerlink" href="#sphericalinsulator" title="Permalink to this image">¶</a></p>
 </div>
 <p>Recall from our discussion of spherical geometries <span class="math notranslate nohighlight">\((r,\,\theta,\, \phi)\)</span>, the area normal <span class="math notranslate nohighlight">\(\hat{{\bf n}}\)</span> vector for this
 <b> Gaussian Sphere </b> will point in the <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> direction, radially outwards, as shown in <a class="reference internal" href="#sphereareanormal"><span class="std std-numref">Fig. 2.4</span></a>.</p>
@@ -475,7 +475,7 @@ to the sphere, which itself carries a charge <span class="math notranslate nohig
 <div class="section" id="sheets-of-charge">
 <h3><span class="section-number">2.2.2.1. </span>Sheets of Charge<a class="headerlink" href="#sheets-of-charge" title="Permalink to this headline">¶</a></h3>
 <p>We can consider a uniform infinite sheet of charge, carrying a total charge <span class="math notranslate nohighlight">\(Q\)</span> over an area <span class="math notranslate nohighlight">\(A_{tot}\)</span>, with a uniform
-charge for unit area <span class="math notranslate nohighlight">\(\sigma = \frac{Q}{A_{tot}}\)</span>.  Here we want to find a Gauss’s law surface to find the flux crossing,
+charge for unit area <span class="math notranslate nohighlight">\(\sigma = Q/A_{tot}\)</span>.  Here we want to find a Gauss’s law surface to find the flux crossing,
 for a sheet like this we can pick a cylinder, as we see in <a class="reference internal" href="#sheetofcharge"><span class="std std-numref">Fig. 2.6</span></a>.</p>
 <div class="figure align-default" id="sheetofcharge">
 <img alt="../_images/sheetofcharge.png" src="../_images/sheetofcharge.png" />
@@ -498,8 +498,8 @@ product looks like</p>
 <div class="math notranslate nohighlight">
 \[E_z = \frac{\sigma}{2 \epsilon_0} \longrightarrow {\bf E}= -\frac{\sigma}{2 \epsilon_0} \hat{{\bf z}}\]</div>
 <p>For an example of a sheet of charge system, consider a capacitor, here we can think of this system as two
-sheets of charge, one carrying a charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.7</span></a>.<br />
-Obviously this system is idealised, because these sheets of charge are <em> finite</em>.  However if we ignore edge
+sheets of charge, one carrying a charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.7</span></a>.</p>
+<p>Obviously this system is idealised, because these sheets of charge are <em> finite</em>.  However if we ignore edge
 effects, the use of our expressions work fairly well!</p>
 <div class="figure align-default" id="capacitorelectricfield">
 <img alt="../_images/capacitorelectricfield1.png" src="../_images/capacitorelectricfield1.png" />
@@ -540,10 +540,13 @@ area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>
 </div>
 <div class="section" id="superposition-of-charge">
 <h2><span class="section-number">2.2.3. </span>Superposition of Charge<a class="headerlink" href="#superposition-of-charge" title="Permalink to this headline">¶</a></h2>
-<p>Solving systems with Gauss’s law with pen and paper methods usually requires some degree of symmetry,</p>
+<p>Solving systems with Gauss’s law with pen and paper methods usually requires some degree of symmetry, however if we look at some more
+realistic systems, we find that we need to loose some fo the symmetry, which makes Gauss’s law much harder to use.  However we may
+look at such systems instead using the idea of <b>superposition</b> of point charges - we can then use calculus to integrate
+over the whole chare distribution to find the total electric field contribution at a given point in space.</p>
 <div class="section" id="finite-lines-of-charge">
 <h3><span class="section-number">2.2.3.1. </span>Finite Lines of Charge*<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">¶</a></h3>
-<p>Equation <code class="xref eq docutils literal notranslate"><span class="pre">FiniteChargeLineEField</span></code> is only true for an infinite line of charge, if we have a finite collection of charges,
+<p>Equation <a class="reference internal" href="#equation-infinitechargelineefield">(2.4)</a> is only true for an infinite line of charge, if we have a finite collection of charges,
 as depicted in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.9</span></a>, then we loose the symmetries of the system that we needed to simplify the Gauss’s
 law expression - making it harder to solve this system using Gauss’s law, but we can consider iot from a superposition of point charges perspective.</p>
 <div class="figure align-default" id="finitelineofcharge">

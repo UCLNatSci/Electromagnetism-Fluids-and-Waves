@@ -452,8 +452,8 @@
 </tbody>
 </table>
 <p>A <strong>scalar field</strong> can be represented using a surface plot, contour plot, or a colour/grayscale map. On weather maps the pressure is normally represented using contours (called pressure isobars) and the temperature is normally represented using a colour map. The example below shows a grayscale map of the scalar field defined by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24b75446-37f4-4efc-b12d-1d5cd828f2d1">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-24b75446-37f4-4efc-b12d-1d5cd828f2d1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fd1354ff-cc1f-4b59-b225-46b935436b5f">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-fd1354ff-cc1f-4b59-b225-46b935436b5f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi(x,y)=x\ \mathrm{sinc}(x^2+y^2),\quad -3\leq x,y \leq 3.
 \end{equation}\]</div>
 <div class="cell docutils container">
@@ -505,7 +505,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\numpy\__init__.py:343: RuntimeWarning: 
   if not abs(x.dot(x) - 2.0) &lt; 1e-5:
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\__init__.py:343: RuntimeWarning: divide by zero encountered in absolute
   if not abs(x.dot(x) - 2.0) &lt; 1e-5:
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
   start = asanyarray(start) * 1.0
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:128: RuntimeWarning: divide by zero encountered in multiply
   stop  = asanyarray(stop)  * 1.0
@@ -525,7 +527,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\colors.py:850: RuntimeWarnin
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tri\triinterpolate.py:669: RuntimeWarning: divide by zero encountered in true_divide
   gauss_w = np.ones([9], dtype=np.float64) / 9.
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
   start = asanyarray(start) * 1.0
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:128: RuntimeWarning: divide by zero encountered in multiply
   stop  = asanyarray(stop)  * 1.0
@@ -549,9 +553,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:3427: Runtim
   y = pi * where(x == 0, 1.0e-20, x)
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:3428: RuntimeWarning: divide by zero encountered in sin
   return sin(y)/y
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:3428: RuntimeWarning: divide by zero encountered in true_divide
+C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:3428: RuntimeWarning: divide by zero encountered in true_divide
   return sin(y)/y
 C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: divide by zero encountered in multiply
   if __name__ == &#39;__main__&#39;:
@@ -607,7 +609,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1978: RuntimeW
   self._mtx[1, 2] += ty
 C:\Users\Ali\anaconda3\lib\site-packages\numpy\ma\core.py:2365: RuntimeWarning: divide by zero encountered in isfinite
   condition = ~(np.isfinite(a))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\ma\core.py:2365: RuntimeWarning: divide by zero encountered in invert
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\ma\core.py:2365: RuntimeWarning: divide by zero encountered in invert
   condition = ~(np.isfinite(a))
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_axes.py:5635: RuntimeWarning: divide by zero encountered in true_divide
   dX = np.diff(X, axis=1)/2.
@@ -649,9 +653,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\text.py:419: RuntimeWarning:
   xys = M.transform(offset_layout) - (offsetx, offsety)
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:635: RuntimeWarning: divide by zero encountered in add
   return Bbox(self._points + (tx, ty))
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\colors.py:1061: RuntimeWarning: divide by zero encountered in subtract
+C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\colors.py:1061: RuntimeWarning: divide by zero encountered in subtract
   resdat -= vmin
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\colors.py:1062: RuntimeWarning: divide by zero encountered in double_scalars
   resdat /= (vmax - vmin)
@@ -701,7 +703,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2589: RuntimeW
   self._mtx = np.array([[x_scale, 0.0    , (-inl*x_scale)],
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2590: RuntimeWarning: divide by zero encountered in double_scalars
   [0.0    , y_scale, (-inb*y_scale)],
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:1296: RuntimeWarning: divide by zero encountered in double_scalars
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:1296: RuntimeWarning: divide by zero encountered in double_scalars
   tol = (hi - lo) * 1e-5
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2076: RuntimeWarning: divide by zero encountered in double_scalars
   (x, bottom - self.labelpad * self.figure.dpi / 72)
@@ -767,7 +771,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:212:
   y = round(y + yo + yd)
 </pre></div>
 </div>
-<img alt="fun-fish" class="align-center" src="../_images/mathideas_1_4.png" />
+<img alt="fun-fish" class="align-center" src="../_images/mathideas_1_6.png" />
 </div>
 </div>
 <p>A <strong>vector field</strong> can be represented using arrows, where the length of each arrow indicates the field strength at the point. The most commonly encountered vector field quantities are velocity and force. The example below shows a plot of the vector field defined by</p>
@@ -1103,7 +1107,9 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\streamplot.py:219: RuntimeWa
   lc.sticky_edges.x[:] = [grid.x_origin, grid.x_origin + grid.width]
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\streamplot.py:220: RuntimeWarning: divide by zero encountered in double_scalars
   lc.sticky_edges.y[:] = [grid.y_origin, grid.y_origin + grid.height]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:199: RuntimeWarning: divide by zero encountered in multiply
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:199: RuntimeWarning: divide by zero encountered in multiply
   self._px = (self._cpoints.T * coeff).T
 C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:216: RuntimeWarning: divide by zero encountered in subtract
   return (np.power.outer(1 - t, self._orders[::-1])
@@ -1159,7 +1165,7 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:303: RuntimeWarnin
   in_range = np.isreal(roots) &amp; (roots &gt;= 0) &amp; (roots &lt;= 1)
 </pre></div>
 </div>
-<img alt="../_images/mathideas_5_2.png" class="align-center" src="../_images/mathideas_5_2.png" />
+<img alt="../_images/mathideas_5_3.png" class="align-center" src="../_images/mathideas_5_3.png" />
 </div>
 </div>
 <p>In the case where the field represents velocity of a fluid, the field lines are known as “streamlines”. In the next chapter we will discuss the difference between <em>streamlines</em>, <em>streaklines</em> and <em>particle paths</em>,for the case where the fluid velocity is a time-dependent field <span class="math notranslate nohighlight">\(\underline{v}(\underline{x},t)\)</span>.</p>
@@ -1174,8 +1180,8 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:303: RuntimeWarnin
 <div class="section" id="what-is-a-level-set">
 <h2><span class="section-number">3.2.2. </span>What is a <strong>level set</strong><a class="headerlink" href="#what-is-a-level-set" title="Permalink to this headline">¶</a></h2>
 <p>A level set of a scalar function <span class="math notranslate nohighlight">\(\phi\)</span> is defined by the following relationship, where <span class="math notranslate nohighlight">\(c\)</span> is a constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e140d08c-c4ac-4263-8e02-e521bdb6444f">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-e140d08c-c4ac-4263-8e02-e521bdb6444f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1e8de694-1207-4ae2-8796-505cb914d4cc">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-1e8de694-1207-4ae2-8796-505cb914d4cc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
 <p>The main types of level set are surfaces and curves, as outlined below.</p>
 <p><strong>Level surfaces</strong><br />
 The level sets of <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> are generally surfaces, called <em>isosurfaces</em>. As an example, consider the pressure <span class="math notranslate nohighlight">\(p(x,y,z)\)</span> in a volume of water, exposed to atmospheric pressure <span class="math notranslate nohighlight">\(p_0\)</span> at the free surface. In this case, the boundary between the water and the air is an isosurface, defined by <span class="math notranslate nohighlight">\(p(x,y,z)=p_0\)</span>. Choosing other values of the constant <span class="math notranslate nohighlight">\(c&gt;p_0\)</span> will define other pressure isosurfaces within the body of water.</p>
@@ -1192,8 +1198,8 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <div class="section" id="the-directional-derivative">
 <h2><span class="section-number">3.2.3. </span>The directional derivative<a class="headerlink" href="#the-directional-derivative" title="Permalink to this headline">¶</a></h2>
 <p>According to the multivariate chain rule for a scalar function <span class="math notranslate nohighlight">\(\phi(\underline{x})\)</span>, where <span class="math notranslate nohighlight">\(\underline{x}=(x(s),y(s),z(s))\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0dd6fac5-f9a2-4ad9-9724-50eb752c3724">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-0dd6fac5-f9a2-4ad9-9724-50eb752c3724" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-49bc75a5-f543-40a2-8276-7a71a9fcfb32">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-49bc75a5-f543-40a2-8276-7a71a9fcfb32" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
 <p>Using vectors, we can write this result as a scalar product:</p>
 <div class="math notranslate nohighlight" id="equation-mvarchain">
 <span class="eqno">(3.5)<a class="headerlink" href="#equation-mvarchain" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{v}, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),\]</div>
@@ -1202,8 +1208,8 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <span class="eqno">(3.6)<a class="headerlink" href="#equation-gradient" title="Permalink to this equation">¶</a></span>\[\nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).\]</div>
 <p>Formula <a class="reference internal" href="#equation-mvarchain">(3.5)</a> looks strikingly similar to the one-dimensional chain rule, with the factor <span class="math notranslate nohighlight">\(\nabla\phi\)</span> capturing variations in <span class="math notranslate nohighlight">\(\phi\)</span> due to <span class="math notranslate nohighlight">\(\underline{x}\)</span> and the second factor <span class="math notranslate nohighlight">\(\underline{v}\)</span> capturing variations in <span class="math notranslate nohighlight">\(\underline{x}\)</span> due to <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>If we evaluate <span class="math notranslate nohighlight">\(\nabla\phi\)</span> at a given point <span class="math notranslate nohighlight">\(\underline{x}_0\)</span>, the multivariate chain rule gives us the rate of change of <span class="math notranslate nohighlight">\(\phi\)</span> in direction <span class="math notranslate nohighlight">\(\underline{v}\)</span> at the point. Since the parameterisation <span class="math notranslate nohighlight">\(\underline{x}(s)\)</span> is arbitrary, we can choose a direction that we are interested in. This result is called the <em>directional derivative</em>. It is usually assumed that <span class="math notranslate nohighlight">\(\underline{v}\)</span> is a unit vector, so the result may be denoted as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21826176-62d2-4fd3-8990-dd1908e21a36">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-21826176-62d2-4fd3-8990-dd1908e21a36" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{v}}}(\phi)=(\nabla\phi).\hat{\underline{v}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a7c4732f-a54a-4e68-858f-c7f7f2410625">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-a7c4732f-a54a-4e68-858f-c7f7f2410625" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{v}}}(\phi)=(\nabla\phi).\hat{\underline{v}}\end{equation}\]</div>
 <p>Notice that the result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.</p>
 <div class="exercise admonition" id="ex-dir_deriv">
 
@@ -1218,13 +1224,13 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <h2><span class="section-number">3.2.4. </span>The gradient direction<a class="headerlink" href="#the-gradient-direction" title="Permalink to this headline">¶</a></h2>
 <p><strong>The gradient is perpendicular to the level sets</strong><br />
 Since level sets are defined by the relationship <span class="math notranslate nohighlight">\(\phi=c\)</span>, differentiation gives <span class="math notranslate nohighlight">\(\frac{\mathrm{d}\phi}{\mathrm{d}s}=0\)</span>. Using the result <a class="reference internal" href="#equation-mvarchain">(3.5)</a>, we find that on a level set</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7761112-e86f-4b91-b855-8225cab36dca">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-b7761112-e86f-4b91-b855-8225cab36dca" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{v}}=0, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9cd80866-e628-4a40-a9f7-0a20321a6499">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-9cd80866-e628-4a40-a9f7-0a20321a6499" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{v}}=0, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\hat{\underline{v}}\)</span> is parallel to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>, the result result tells us that <span class="math notranslate nohighlight">\(\nabla\phi\)</span> is perpendicular to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <p><strong>The gradient points “uphill”</strong><br />
 From the definition of the scalar product, we know that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-017f01a7-fd4c-4548-869e-e4b87c936871">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-017f01a7-fd4c-4548-869e-e4b87c936871" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{v}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ee13fa92-1daf-46cb-bdc8-4255d165b509">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-ee13fa92-1daf-46cb-bdc8-4255d165b509" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{v}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\nabla \phi\)</span> and the direction vector <span class="math notranslate nohighlight">\(\hat{\underline{v}}\)</span>.</p>
 <p>The result is largest when <span class="math notranslate nohighlight">\(\theta=0\)</span>. Therefore, <span class="math notranslate nohighlight">\(\nabla \phi\)</span> points in the direction of maximum increase of the function <span class="math notranslate nohighlight">\(\phi\)</span> and has magnitude equal to the rate of maximum increase.</p>
 <div class="exercise admonition" id="pot-fun">

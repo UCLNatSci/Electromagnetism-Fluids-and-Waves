@@ -5,13 +5,13 @@
 Lets consider the case of a spherical insulator (the key idea here being the charges are fixed), which carries a net charge of $+Q$.  
 In the first instance we consider that the charge is uniformly distributed throughout the sphere, which has some radius $a$, as can 
 be seen in {numref}`sphericalinsulator` 
-```{figure} ../figures/sphericalinsulator.png}
+```{figure} ../figures/sphericalinsulator.png
 ---
 name: sphericalinsulator
 ---
-Left: Charged spherical insulator of radius $a$.  
-Middle: Cross section considering spheres $r \leq a$.  
-Right: Cross section considering spheres size $r \geq a$
+<b> Left:</b> Charged spherical insulator of radius $a$,
+<b> Middle:</b> Cross section considering spheres $r \leq a$,  
+<b> Right:</b> Cross section considering spheres size $r \geq a$
 ```
 Recall from our discussion of spherical geometries $(r,\,\theta,\, \phi)$, the area normal $\hat{{\bf n}}$ vector for this 
 <b> Gaussian Sphere </b> will point in the $\hat{{\bf r}}$ direction, radially outwards, as shown in {numref}`sphereareanormal`.
@@ -80,7 +80,7 @@ U_E(r) = -\frac{Q_S}{4\pi\,\epsilon_0} \int_{\infty}^{r}\frac{Q}{(r')^2}\,\mathr
 
 ### Sheets of Charge
 We can consider a uniform infinite sheet of charge, carrying a total charge $Q$ over an area $A_{tot}$, with a uniform 
-charge for unit area $\sigma = \frac{Q}{A_{tot}}$.  Here we want to find a Gauss's law surface to find the flux crossing, 
+charge for unit area $\sigma = Q/A_{tot}$.  Here we want to find a Gauss's law surface to find the flux crossing, 
 for a sheet like this we can pick a cylinder, as we see in {numref}`sheetofcharge`.  
 ```{figure} ../figures/sheetofcharge.png
 ---
@@ -111,6 +111,7 @@ E_z = \frac{\sigma}{2 \epsilon_0} \longrightarrow {\bf E}= -\frac{\sigma}{2 \eps
 ```
 For an example of a sheet of charge system, consider a capacitor, here we can think of this system as two 
 sheets of charge, one carrying a charge $+Q$ and the other with a charge $-Q$, as depicted in {numref}`capacitorelectricfield`.  
+
 Obviously this system is idealised, because these sheets of charge are <em> finite</em>.  However if we ignore edge 
 effects, the use of our expressions work fairly well!
 
@@ -161,10 +162,13 @@ area is given by $\lambda L$, so putting these facts together:
 ```
 
 ## Superposition of Charge
-Solving systems with Gauss's law with pen and paper methods usually requires some degree of symmetry, 
+Solving systems with Gauss's law with pen and paper methods usually requires some degree of symmetry, however if we look at some more 
+realistic systems, we find that we need to loose some fo the symmetry, which makes Gauss's law much harder to use.  However we may
+look at such systems instead using the idea of <b>superposition</b> of point charges - we can then use calculus to integrate
+over the whole chare distribution to find the total electric field contribution at a given point in space.
 
 ### Finite Lines of Charge*
-Equation {eq}`FiniteChargeLineEField` is only true for an infinite line of charge, if we have a finite collection of charges, 
+Equation {eq}`InfiniteChargeLineEField` is only true for an infinite line of charge, if we have a finite collection of charges, 
 as depicted in {numref}`Finitelineofcharge`, then we loose the symmetries of the system that we needed to simplify the Gauss's 
 law expression - making it harder to solve this system using Gauss's law, but we can consider iot from a superposition of point charges perspective.  
 

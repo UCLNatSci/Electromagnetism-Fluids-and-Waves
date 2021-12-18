@@ -222,7 +222,7 @@ anim
 # 
 # The animation below shows a sequence of particles injected at intervals into the fluid described by equation {eq}`examplev`. Due to the changing vector field, the particles follow different trajectories depending on the time of release. The $(x,y)$ trajectory of a particle released at time $t_0$ is given in equation {eq}`ptrajectory`. The set of particles together define a streakline.
 
-# In[3]:
+# In[ ]:
 
 
 import numpy as np

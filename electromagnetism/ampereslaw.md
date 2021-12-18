@@ -79,8 +79,10 @@ from the product rule, since the surface $A$ is constant in time.  So our final 
 \oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0 \iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}
 \label{eqn:AmperesLawDC}
 ```
-where we have added an additional <b>Displacement Current</b> $I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}$ .
-
+where we have added an additional <b>Displacement Current</b> $I_D$:
+```{math}
+I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}$
+```
 
 ## Magnetic Fields in Coils*
 
@@ -90,10 +92,10 @@ as shown in {numref}`BFieldCoilofWire`.
 ---
 name: BFieldCoilofWire
 ---
-<b> Main Pane </b> - A circular coil of current carrying wire, sitting in the $x-y$ plane, centered on the origin.  
-<b> Bottom Pane </b> - At point $P$ there is a pair-wise cancellation of the parallel magnetic field components.
+<b> Main Pane </b> - A circular coil of current carrying wire, sitting in the $(x,\,y)$ plane, centered on the origin.  
+<b> Bottom Pane </b> - At point $P$ there is a pair-wise cancellation of the magnetic field components in the $(x,\,y )$ plane, leaving only those in the $z$ direction.
 ```
-In order to find the magnetic field at point $P$, we can use the Biot-Savart law.  Given that the coil sits in the $x-y$ plane here and we are 
+In order to find the magnetic field at point $P$, we can use the Biot-Savart law.  Given that the coil sits in the $(x,\, y)$ plane here and we are 
 interested in the magnetic field at a point on the $z$ axis, the vectors $\mathrm{d} {\bf \ell}$ and $\hat{{\bf r}}$ are perpendicular, therefore we have:
 
 ```{math}
@@ -102,17 +104,22 @@ interested in the magnetic field at a point on the $z$ axis, the vectors $\mathr
 
 A further symmetry we can exploit is there since the direction of the current changes, the direction of $\mathrm{d} {\bf \ell}'$ is opposite to that of 
 $\mathrm{d} {\bf \ell}''$.  We find that there will a pair-wise cancellation of some of the magnetic field components therefore around the coil, as 
-shown in {numref}`BFieldCoilofWire`.  This means that the components of ${\bf B}$ that are <em> parallel </em> to the $z$ axis will cancel i.e. ${\bf B} \sin(\theta)$ 
-and only the net <em> perpendicular </em> components, i.e. ${\bf B} \cos(\theta)$) will be non-zero.  Therefore the expression we need to find is:
+shown in {numref}`BFieldCoilofWire`.  This means that the components of ${\bf B}$ that are <em> perpendicular </em> to the $z$ axis will cancel i.e. ${\bf B} \sin(\theta)$ 
+and only the net <em> parallel </em> components, i.e. ${\bf B} \cos(\theta)$ will be non-zero.  Therefore the expression we need to find is:
 
 ```{math}
 {\bf B} = \int_{\mathcal{C}} \frac{\mu_0}{4\pi} \frac{I\,\cos(\theta)\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}} 
 ```
 
-Given that $\cos(\theta) = R/\sqrt{y^2 + R^2}$ and integrating the segment elements $\mathrm{d} \ell$ round the loop produces the circumference $2\pi\,R$:
+Given that $\cos(\theta) = R/\sqrt{z^2 + R^2}$, we can simplyify:
+```{math}
+{\bf B} = \frac{\mu_0\,I\,R}{4\pi\,(z^2 + R^2)^{3/2}}\,\int_{\mathcal{C}}\mathrm{d} \ell\,\hat{{\bf z}} 
+```
+Recall that we are integrating around the current loop, not over the $z$ axis, so we have moved all the constant terms outside the integral, now 
+integrating the segment elements $\mathrm{d} \ell$ round the loop produces the circumference $2\pi\,R$:
 
 ```{math}
-{\bf B} = \frac{\mu_0}{4\pi} \frac{I\,R}{(z^2 + R^2)^{3/2}} \,(2\pi\,R)\,\hat{{\bf z}} = \frac{\mu_0\,I\,R^2}{2(z^2 + R^2)^{3/2}} \,\hat{{\bf z}}
+{\bf B} = \frac{\mu_0\,I\,R}{4\pi\,(z^2 + R^2)^{3/2}} \,(2\pi\,R)\,\hat{{\bf z}} = \frac{\mu_0\,I\,R^2}{2(z^2 + R^2)^{3/2}} \,\hat{{\bf z}}
 ```
 
 At the centre of the loop, $z = 0$ and therefore:
