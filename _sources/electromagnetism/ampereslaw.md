@@ -81,7 +81,7 @@ from the product rule, since the surface $A$ is constant in time.  So our final 
 ```
 where we have added an additional <b>Displacement Current</b> $I_D$:
 ```{math}
-I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}$
+I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}
 ```
 
 ## Magnetic Fields in Coils*
