@@ -61,14 +61,18 @@ Tidying up these expressions we find:
 ```
 Finally through $ \nabla \cdot ({\bf A} \times {\bf B}) = (\nabla \times {\bf A}) \cdot {\bf B} - {\bf A} \cdot (\nabla \times {\bf B})$, we rewrite as:
 ```{math}
-\frac{\partial u}{\partial t} = -\nabla \cdot {\bf S} - {\bf J} \cdot {\bf E},\quad\quad {\bf S} = \frac{1}{\mu_0}{\bf E} \times {\bf B}
+\frac{\partial u}{\partial t} = -\nabla \cdot {\bf S} - {\bf J} \cdot {\bf E}
 ```
-where we identify the vector ${\bf S}$ as the <b>Poynting Vector</b>, which indicates the flow of electromagnetic energy within a system.  
-The form of this equation draws similarity with the <b> Continuity Equation:</b>
+where we identify the vector ${\bf S}$ as the <b>Poynting Vector</b>:
+```{math}
+{\bf S} = \frac{1}{\mu_0}{\bf E} \times {\bf B}
+```
+which indicates the flow of electromagnetic energy within a system - recall we talked about the flow of wave energy in the waves section with 
+a vector of this form.  The form of this equation draws similarity with the <b> Continuity Equation:</b>
 ```{math}
 \frac{\partial \rho}{\partial t} = -\nabla \cdot {\bf F} - \sigma
 ```
-where $\rho$ is the density of quantity $A$ being investigated, ${\bf F}$ is the flux of $X$ and $\sigma$ is the rate at which $X$ is 
+where $\rho$ is the density of quantity $X$ being investigated, ${\bf F}$ is the flux of $X$ and $\sigma$ is the rate at which $X$ is 
 generated per unit volume per unit time.  Thus we can see that the Poynting vector ${\bf S}$ is the electromagnetic energy flux and 
 ${\bf J}\cdot {\bf E}$ relates to the energy given to free charges with current density ${\bf J}$.
 
@@ -117,7 +121,7 @@ Given that $\omega / k_z = c$ here, this means we can write the expression as:
 ```{math}
 {\bf S} = \frac{1}{c\,\mu_0}\,|{\bf E}|^2\,\,\hat{{\bf z}}
 ```
-Clearly this will be a time varying expression, however from Chapter 1 we already discussed the effect of time averaging waves to find 
+Clearly this will be a time varying expression, however from the waves section we already discussed the effect of time averaging waves to find 
 the power, therefore we find that:
 ```{math}
 S_{\langle T \rangle} = \frac{1}{2 \eta}\,E^2

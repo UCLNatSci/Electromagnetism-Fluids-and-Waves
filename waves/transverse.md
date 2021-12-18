@@ -109,8 +109,15 @@ If we take the limit $\Delta x \rightarrow 0$, then we can integrate up to find:
 \int_0^E \textrm{d}E' = E = \int_0^\lambda \epsilon(x,t) \,\textrm{d}x 
 ```
 ```{math}
-\epsilon(x,t) = \frac{1}{2}\,\rho_L\,\left[\left(\frac{\partial y}{\partial t}\right)^2 + c^2
+\epsilon(x,\,t) = \frac{1}{2}\,\rho_L\,\left[\left(\frac{\partial y}{\partial t}\right)^2 + c^2
 \left(\frac{\partial y}{\partial x}\right)^2\right]
 ```
 and we notice again the energy density term $\epsilon(x,\,t)$.  
+
+If we are deadling with waves propagating in two or three dimensions, with $y = y({\bf x},\, t)$ then we can switch to using the 
+gradient operator $\nabla y$:
+```{math}
+\epsilon({\bf x},\,t) = \frac{1}{2}\,\rho_L\,\left[\left(\frac{\partial y}{\partial t}\right)^2 + c^2
+|\nabla y|^2\right]
+```
 

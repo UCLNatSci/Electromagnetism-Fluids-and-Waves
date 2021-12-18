@@ -446,12 +446,15 @@ through analogy.  The form of the Equation <a class="reference internal" href="m
 \[\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} - \frac{1}{\mu_0}{\bf B} \cdot \nabla \times {\bf E} = {\bf J} \cdot {\bf E} + \frac{\partial u}{\partial t}\]</div>
 <p>Finally through <span class="math notranslate nohighlight">\( \nabla \cdot ({\bf A} \times {\bf B}) = (\nabla \times {\bf A}) \cdot {\bf B} - {\bf A} \cdot (\nabla \times {\bf B})\)</span>, we rewrite as:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\partial u}{\partial t} = -\nabla \cdot {\bf S} - {\bf J} \cdot {\bf E},\quad\quad {\bf S} = \frac{1}{\mu_0}{\bf E} \times {\bf B}\]</div>
-<p>where we identify the vector <span class="math notranslate nohighlight">\({\bf S}\)</span> as the <b>Poynting Vector</b>, which indicates the flow of electromagnetic energy within a system.<br />
-The form of this equation draws similarity with the <b> Continuity Equation:</b></p>
+\[\frac{\partial u}{\partial t} = -\nabla \cdot {\bf S} - {\bf J} \cdot {\bf E}\]</div>
+<p>where we identify the vector <span class="math notranslate nohighlight">\({\bf S}\)</span> as the <b>Poynting Vector</b>:</p>
+<div class="math notranslate nohighlight">
+\[{\bf S} = \frac{1}{\mu_0}{\bf E} \times {\bf B}\]</div>
+<p>which indicates the flow of electromagnetic energy within a system - recall we talked about the flow of wave energy in the waves section with
+a vector of this form.  The form of this equation draws similarity with the <b> Continuity Equation:</b></p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \rho}{\partial t} = -\nabla \cdot {\bf F} - \sigma\]</div>
-<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the density of quantity <span class="math notranslate nohighlight">\(A\)</span> being investigated, <span class="math notranslate nohighlight">\({\bf F}\)</span> is the flux of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> is the rate at which <span class="math notranslate nohighlight">\(X\)</span> is
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the density of quantity <span class="math notranslate nohighlight">\(X\)</span> being investigated, <span class="math notranslate nohighlight">\({\bf F}\)</span> is the flux of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> is the rate at which <span class="math notranslate nohighlight">\(X\)</span> is
 generated per unit volume per unit time.  Thus we can see that the Poynting vector <span class="math notranslate nohighlight">\({\bf S}\)</span> is the electromagnetic energy flux and
 <span class="math notranslate nohighlight">\({\bf J}\cdot {\bf E}\)</span> relates to the energy given to free charges with current density <span class="math notranslate nohighlight">\({\bf J}\)</span>.</p>
 </div>
@@ -496,7 +499,7 @@ as we see in <a class="reference internal" href="EMwaves.html#emplanewaves"><spa
 <p>Given that <span class="math notranslate nohighlight">\(\omega / k_z = c\)</span> here, this means we can write the expression as:</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \frac{1}{c\,\mu_0}\,|{\bf E}|^2\,\,\hat{{\bf z}}\]</div>
-<p>Clearly this will be a time varying expression, however from Chapter 1 we already discussed the effect of time averaging waves to find
+<p>Clearly this will be a time varying expression, however from the waves section we already discussed the effect of time averaging waves to find
 the power, therefore we find that:</p>
 <div class="math notranslate nohighlight">
 \[S_{\langle T \rangle} = \frac{1}{2 \eta}\,E^2\]</div>

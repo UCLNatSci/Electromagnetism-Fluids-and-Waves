@@ -163,7 +163,7 @@ KE = \dots + \frac{1}{2}m\Big[\frac{\partial}{\partial t}u(x,t)\Big]^2 + \frac{1
 
 and so the total energy has the form:
 ```{math}
-E = \frac{1}{2}\,m\,\left(\dots + c^2\Big[\frac{\partial}{\partial x}u(x+h,t)\Big]^2 + \Big[\frac{\partial}{\partial t}u(x+2h,t)\Big]^2 +\dots \right)
+E = \frac{1}{2}\,m\,\left(\dots + c^2\Big[\frac{\partial}{\partial x}u(x+h,t)\Big]^2 + \Big[\frac{\partial}{\partial t}u(x+h,t)\Big]^2 +\dots \right)
 ```
 
 We can think of this system as a coupled harmonic oscillator, with each mass having oscillating KE and PE but the result from {eq}`SHMenergy` tell us
