@@ -43,8 +43,8 @@ These will result in an equation of the form:
 ```{math}
 A \frac{\partial \psi}{\partial t} = B\frac{\partial^2 \psi}{\partial x^2}
 ```
-where $A = i \hbar$ because $\frac{\partial \psi}{\partial t} = -i\omega \psi$ and $B = -\frac{\hbar^2}{2m}$ 
-because $\frac{\partial^2 \psi}{\partial x^2} = -k^2 \psi$ producing a one dimensional free particle equation of the form:
+where $A = i \hbar$ because $\partial \psi/\partial t = -i\omega \psi$ and $B = -\hbar^2/2m$ 
+because $\partial^2 \psi/\partial x^2 = -k^2 \psi$ producing a one dimensional free particle equation of the form:
 ```{math}
 i \hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2}
 ```
@@ -71,25 +71,37 @@ giving:
 ```
 which should look familiar as the <b>Time Independent Schrödinger Equation (TISE).</b> 
 
-## Relativistic Quantum Mechanics*
-It turns out we can write a relativistic version of the Schrödinger equation, known as the Klein-Gordon equation, 
-using the d'Alembertian, this results in:
+## Relativistic Quantum Mechanics
+Unsurprisingly quantum mechanics is not the only relevant physical theory, as bodies get larger and move at relativistic speeds, we need to add in
+special relativity, given the mass-energy-momentum relation from special relativity, 
+```{math} 
+E^2 = p^2 c^2 + {m_0}^2 c^4
+```
+we can alter the dispersion relation of the wave equation to write a relativistic version of the Schrödinger equation, known as the <b>Klein-Gordon</b> equation.
+We find this now includes the d'Alembertian operator:
 ```{math}
 \left(-\frac{1}{c^2}\frac{\partial^2}{\partial t^2} + \nabla^2 \right)\psi = -\Box \psi = \frac{m_0^2\,c^2}{\hbar^2}\psi
 ``` 
 where $m_0$ is the rest mass of some relativistic particle.  
-This equation also becomes very useful when studying quantum fields.  The dispersion relation of this equation is 
-related to the form of the mass-energy-momentum relation from special relativity, 
-```{math} 
-E^2 = p^2 c^2 + {m_0}^2 c^4
-```
+
+This equation also becomes very useful when studying quantum fields and forms the basis of the <b>Dirac</b> equation.
 
 ## Wavepackets
+Our simplest form of dispersion relation for travelling waves suggested $\omega = \pm ck$, which we can write as:
+```{math}
+u(x,\, t) &=&\, \sum_{n=1}^2 u_n \exp(i(kx-\omega_n t))\\
+\omega_n &=&\, (-1)^n\,ck 
+```
+where $u_n$ is a each waves amplitude.  We can generalise this by letting $u_n = u_n(k)$ and using a continuous spectrum of $k$ values with a general
+dispersion relation, therefore:
 
-A wave packet, also described sometimes as a wave train is a short "burst" or "envelope" of localized wave(s) 
-that travel as  one unit together. A wave packet can be considered from an infinite set of component sinusoidal 
-waves of different wavenumbers, with phases and amplitudes such that they interfere constructively only over a 
-small region of space, and destructively elsewhere.  We can see an example of this in {numref}`WavePacket`.
+```{math}
+u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k
+```
+
+We call these <b>wave packets</b> or sometimes as a wave train or burst - we can picture them as a larger wave envelope, with smaller localized waves 
+that travel as one unit together, as shown in {numref}`WavePacket`.  This infinite set of oscillating waves have different waven lengths, with phases 
+and amplitudes that constructively and destructively interfereonly over different regions of space.
 
 ```{figure} ../figures/WavePacket.png
 ---
@@ -97,17 +109,9 @@ name: WavePacket
 ---
 Schematic of a Wave Packet, with localisation near the centre of the packet.
 ```
-
-Given a wave packet will be the sum of many different wave forms, we can use an integral definition:
-```{math}
-u(x,t) = \frac{1}{\sqrt{2\pi}} \int^{\,\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k
-```
-Just like in the usual wave case, the wave packet travels to the right for $\omega(k) = kc$ and to the left for $\omega(k) = -kc$.
-
-If the packet is strongly <em> localized</em>, more frequencies are needed to allow the constructive superposition in the 
-spatial region of localization and destructive superposition outside this region. 
- 
 Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation, 
-the wave packet's profile may remain constant (no dispersion) or it may change (dispersion) while propagating. 
+the wave packet's profile may remain constant (no dispersion) or change (dispersion) while propagating. 
+
+
 
 

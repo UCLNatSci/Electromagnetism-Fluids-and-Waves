@@ -76,7 +76,7 @@ where $\rho$ is the density of quantity $X$ being investigated, ${\bf F}$ is the
 generated per unit volume per unit time.  Thus we can see that the Poynting vector ${\bf S}$ is the electromagnetic energy flux and 
 ${\bf J}\cdot {\bf E}$ relates to the energy given to free charges with current density ${\bf J}$.
 
-## Example of EM Energy Flow - Electromagnetic Plane Waves
+## Electromagnetic Plane Waves
 Recall the plane wave solutions from Equation {eq}`PlaneWaveSolns`:
 ```{math}
 {\bf E} &=& \,\begin{bmatrix}

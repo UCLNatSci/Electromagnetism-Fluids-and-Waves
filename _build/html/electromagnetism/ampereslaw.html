@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +48,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -76,10 +77,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -89,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -162,23 +159,23 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -207,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,7 +215,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -360,7 +357,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#magnetic-field-from-a-wire">
@@ -404,60 +401,67 @@
                 
   <div class="section" id="amperes-circuital-law">
 <h1><span class="section-number">2.7. </span>Ampère’s Circuital Law<a class="headerlink" href="#amperes-circuital-law" title="Permalink to this headline">¶</a></h1>
-<p>Going back to the magnetic field due to an infinite wire in Equation <a class="reference internal" href="magneticfields.html#equation-infinitewirebfield">(2.12)</a>:</p>
+<p>Going back to the magnetic field due to an infinite wire in Equation <a class="reference internal" href="magneticfields.html#equation-infinitewirebfield">(2.15)</a>:</p>
 <div class="math notranslate nohighlight">
 \[B_\theta = \frac{\mu_0\,I}{2\pi\,r}\]</div>
-<p>and recall that this expression (and it’s electric field counterpart in <a class="reference internal" href="gausslawsystems.html#finitelineofcharge"><span class="std std-numref">Fig. 2.9</span></a>) is derived by considering some bounding
+<p>and recall that this expression (and it’s electric field counterpart in <a class="reference internal" href="solvingEsystems.html#finitelineofcharge"><span class="std std-numref">Fig. 2.16</span></a>) is derived by considering some bounding
 surface around the line of charge.  We found the boundary surface area from the  circumference of the cylinders cross sectional area and multiplying by the
 cylinder length - but in essence we found a <b> bounding contour </b> for moving charges.  If we rearrange our expression for the magnetic field:</p>
 <div class="math notranslate nohighlight">
 \[B_\theta\,(2\pi\,r) = \mu_0\,I \Longleftrightarrow B \times (\text{boundary around I}) = \mu_0\,I_\text{{enclosed by boundary}}\]</div>
 <p>We can consider breaking up this boundary (containing the current <span class="math notranslate nohighlight">\(I\)</span>) into elements <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> and then through a contour integral find the LHS here,
-this would work therefore for <em> any </em> closed boundary would do, as depicted in <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 2.21</span></a>.</p>
+this would work therefore for <em> any </em> closed boundary would do, as depicted in <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 2.27</span></a>.</p>
 <div class="figure align-default" id="amperelawboundary">
 <img alt="../_images/AmperesLaw.png" src="../_images/AmperesLaw.png" />
-<p class="caption"><span class="caption-number">Fig. 2.21 </span><span class="caption-text">Depiction of Ampère’s  circuital law,
+<p class="caption"><span class="caption-number">Fig. 2.27 </span><span class="caption-text">Depiction of Ampère’s  circuital law,
 <b> Left Pane </b>  - Applying Ampère’s law on a boundary outside or inside a cylindrical conductor carrying current <span class="math notranslate nohighlight">\(I\)</span>.<br />
 <b> Right Pane </b> - Current <span class="math notranslate nohighlight">\(I\)</span> enclosed by some boundary in segments <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span>.</span><a class="headerlink" href="#amperelawboundary" title="Permalink to this image">¶</a></p>
 </div>
 <p>Thus our expression for <b>Ampère’s Law</b> is given by:</p>
 <div class="math notranslate nohighlight" id="equation-ampereslaw">
-<span class="eqno">(2.16)<a class="headerlink" href="#equation-ampereslaw" title="Permalink to this equation">¶</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I_{enclosed} \]</div>
+<span class="eqno">(2.19)<a class="headerlink" href="#equation-ampereslaw" title="Permalink to this equation">¶</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I_{enclosed} \]</div>
 <div class="section" id="magnetic-field-from-a-wire">
 <h2><span class="section-number">2.7.1. </span>Magnetic Field from a Wire<a class="headerlink" href="#magnetic-field-from-a-wire" title="Permalink to this headline">¶</a></h2>
-<p>We can approximate a thin wire to a line of charges moving, therefore the expression for a thin wire is given by Equations <a class="reference internal" href="magneticfields.html#equation-finitewirebfield">(2.13)</a> in the finite case and
-<a class="reference internal" href="magneticfields.html#equation-infinitewirebfield">(2.12)</a> in the infinite case.  However we could consider a thick wire, modelled as a cylinder of current <span class="math notranslate nohighlight">\(I\)</span> with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>,
-as depicted in Figure <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 2.21</span></a>.  We see (akin to solving Gauss’s law for electric fields) there are two regimes of interest:</p>
+<p>Now lets consider a thick wire, modelled as a cylinder of current <span class="math notranslate nohighlight">\(I\)</span> with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>, as depicted in <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 2.27</span></a>, we see
+akin to solving Gauss’s law,  that there are two regimes of interest:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(r \geq R\)</span> Applying Ampère’s law, we find the <span class="math notranslate nohighlight">\(I_{enclosed} = I\)</span> here and therefore:</p></li>
+<li><p><span class="math notranslate nohighlight">\(r \geq R\)</span></p></li>
 </ul>
+<p>Applying Ampère’s law, we find the <span class="math notranslate nohighlight">\(I_{enclosed} = I\)</span> here and therefore:</p>
 <div class="math notranslate nohighlight">
 \[\oint {\bf B} \cdot \mathrm{d} {\bf \ell} = B_\theta\,(2\pi\,r) = \mu_0\,I \Rightarrow {\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}}\]</div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(r &lt; R\)</span> In order to find the <span class="math notranslate nohighlight">\(I_{enclosed}\)</span> we can see from Equation <a class="reference internal" href="magneticfields.html#equation-driftvelocity">(2.10)</a> that for a conductor <span class="math notranslate nohighlight">\(I \propto A\)</span> and
-therefore we can calculate the uniform current density <span class="math notranslate nohighlight">\(\rho = I / A\)</span>.  Therefore here:</p></li>
+<li><p><span class="math notranslate nohighlight">\(r &lt; R\)</span></p></li>
 </ul>
+<p>In order to find the <span class="math notranslate nohighlight">\(I_{enclosed}\)</span> we can see from Equation <a class="reference internal" href="magneticfields.html#equation-driftvelocity">(2.13)</a> that for a conductor <span class="math notranslate nohighlight">\(I \propto A\)</span> and
+therefore we can calculate the uniform current density <span class="math notranslate nohighlight">\(\rho = I / A\)</span>.  Therefore here:</p>
 <div class="math notranslate nohighlight">
 \[\oint {\bf B} \cdot \mathrm{d} {\bf \ell} = B_\theta\,(2\pi\,r) = \mu_0\,I\left(\frac{\,\pi\,r^2}{\pi\,R^2}\right) \Rightarrow {\bf B} = 
 \frac{\mu_0\,I\,r}{2\pi\,R^2}\,\hat{{\bf \theta}}\]</div>
-<p>We see that at the boundary of the wire, <span class="math notranslate nohighlight">\(r = R\)</span>, these two magnetic field expressions agree.  We see a depiction of the different radial
-dependencies of the magnetic field around
-a thick wire in <a class="reference internal" href="#bfieldwire"><span class="std std-numref">Fig. 2.22</span></a>.</p>
+<p>We see that at the boundary of the wire, <span class="math notranslate nohighlight">\(r = R\)</span>, these two magnetic field expressions agree.  Therefore the magnetic field is given by the
+piecewise function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf B} = \begin{cases} 
+      \mu_0 \,I\, r / 2 \pi\, R^2 &amp; r &lt; R \\
+      \mu_0 \,I / 2 \pi\, r &amp; r \geq R 
+   \end{cases}\end{split}\]</div>
+<p>and we see a depiction of this in <a class="reference internal" href="#bfieldwire"><span class="std std-numref">Fig. 2.28</span></a>.</p>
 <div class="figure align-default" id="bfieldwire">
 <img alt="../_images/magneticfieldwire.png" src="../_images/magneticfieldwire.png" />
-<p class="caption"><span class="caption-number">Fig. 2.22 </span><span class="caption-text">Magnetic field around a thick wire, with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>.</span><a class="headerlink" href="#bfieldwire" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.28 </span><span class="caption-text">Magnetic field around a thick wire, with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>, note the agreement of the fields at the boundary.</span><a class="headerlink" href="#bfieldwire" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="displacement-current">
 <h2><span class="section-number">2.7.2. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this headline">¶</a></h2>
-<p>Lets consider a simple circuit with a capacitor, as seen in <a class="reference internal" href="#displacementcurrent"><span class="std std-numref">Fig. 2.23</span></a>, we could take an Ampère’s law path from the current
-flowing in to or out of the capacitor to a path cutting through the capacitor.  This is problematic because there is no current flowing through
-the capacitor, yet the exact path taken when calculating Ampère’s law should not change the outcome of the expression!</p>
+<p>Lets consider a simple circuit with a capacitor, as seen in <a class="reference internal" href="#displacementcurrent"><span class="std std-numref">Fig. 2.29</span></a>, we could take an Ampère’s law path from the current
+flowing in to or out of the capacitor to a path cutting through the capacitor.</p>
 <div class="figure align-default" id="displacementcurrent">
 <img alt="../_images/DisplacementCurrent.png" src="../_images/DisplacementCurrent.png" />
-<p class="caption"><span class="caption-number">Fig. 2.23 </span><span class="caption-text">Applying Ampère’s law to a capacitor with no direct current between the plates.</span><a class="headerlink" href="#displacementcurrent" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.29 </span><span class="caption-text">Applying Ampère’s law to a capacitor with no direct current between the plates.</span><a class="headerlink" href="#displacementcurrent" title="Permalink to this image">¶</a></p>
 </div>
-<p>To resolve this, consider the rate of flow of charge <span class="math notranslate nohighlight">\(I = \partial Q/\partial t\)</span> in to or out of the capacitor, from Gauss’s law we know that:</p>
+<p>This is problematic because there is no current flowing through the capacitor, yet the exact path taken when calculating Ampère’s law should not
+change the outcome of the expression!  To resolve this, consider the rate of flow of charge <span class="math notranslate nohighlight">\(I = \partial Q/\partial t\)</span> in to or out of the capacitor,
+from Gauss’s law we know that:</p>
 <div class="math notranslate nohighlight">
 \[Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = \frac{\partial Q}{\partial t} = 
 \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = \epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} \]</div>
@@ -473,10 +477,10 @@ from the product rule, since the surface <span class="math notranslate nohighlig
 <div class="section" id="magnetic-fields-in-coils">
 <h2><span class="section-number">2.7.3. </span>Magnetic Fields in Coils*<a class="headerlink" href="#magnetic-fields-in-coils" title="Permalink to this headline">¶</a></h2>
 <p>In order to make sense of solenoids and other systems with coils of wire, we need to first break down the system of a single circular coil of wire,
-as shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.24</span></a>.</p>
+as shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.30</span></a>.</p>
 <div class="figure align-default" id="bfieldcoilofwire">
 <img alt="../_images/CoilofCurrent1.png" src="../_images/CoilofCurrent1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.24 </span><span class="caption-text"><b> Main Pane </b> - A circular coil of current carrying wire, sitting in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane, centered on the origin.<br />
+<p class="caption"><span class="caption-number">Fig. 2.30 </span><span class="caption-text"><b> Main Pane </b> - A circular coil of current carrying wire, sitting in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane, centered on the origin.<br />
 <b> Bottom Pane </b> - At point <span class="math notranslate nohighlight">\(P\)</span> there is a pair-wise cancellation of the magnetic field components in the <span class="math notranslate nohighlight">\((x,\,y )\)</span> plane, leaving only those in the <span class="math notranslate nohighlight">\(z\)</span> direction.</span><a class="headerlink" href="#bfieldcoilofwire" title="Permalink to this image">¶</a></p>
 </div>
 <p>In order to find the magnetic field at point <span class="math notranslate nohighlight">\(P\)</span>, we can use the Biot-Savart law.  Given that the coil sits in the <span class="math notranslate nohighlight">\((x,\, y)\)</span> plane here and we are
@@ -485,7 +489,7 @@ interested in the magnetic field at a point on the <span class="math notranslate
 \[\mathrm{d} {\bf B} = \frac{\mu_0}{4\pi} \frac{I\,\mathrm{d} \ell}{r^2}\,\hat{{\bf z}} = \frac{\mu_0}{4\pi} \frac{I\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}}\]</div>
 <p>A further symmetry we can exploit is there since the direction of the current changes, the direction of <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}'\)</span> is opposite to that of
 <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}''\)</span>.  We find that there will a pair-wise cancellation of some of the magnetic field components therefore around the coil, as
-shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.24</span></a>.  This means that the components of <span class="math notranslate nohighlight">\({\bf B}\)</span> that are <em> perpendicular </em> to the <span class="math notranslate nohighlight">\(z\)</span> axis will cancel i.e. <span class="math notranslate nohighlight">\({\bf B} \sin(\theta)\)</span>
+shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 2.30</span></a>.  This means that the components of <span class="math notranslate nohighlight">\({\bf B}\)</span> that are <em> perpendicular </em> to the <span class="math notranslate nohighlight">\(z\)</span> axis will cancel i.e. <span class="math notranslate nohighlight">\({\bf B} \sin(\theta)\)</span>
 and only the net <em> parallel </em> components, i.e. <span class="math notranslate nohighlight">\({\bf B} \cos(\theta)\)</span> will be non-zero.  Therefore the expression we need to find is:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = \int_{\mathcal{C}} \frac{\mu_0}{4\pi} \frac{I\,\cos(\theta)\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}} \]</div>
@@ -501,26 +505,26 @@ integrating the segment elements <span class="math notranslate nohighlight">\(\m
 \[{\bf B} = \frac{\mu_0\,I}{2R} \,\hat{{\bf z}}\]</div>
 <p>If we wanted to find the magnetic field at <em> all </em> points in space, the simplification of the cross product in the Biot-Savart law would not be true and the
 calculation would be fairly complicated!  However given we know a fair amount about how magnetic fields behave, we can think about the system qualitatively, as shown
-in <a class="reference internal" href="#bfieldcoilofwirefull"><span class="std std-numref">Fig. 2.25</span></a>.</p>
+in <a class="reference internal" href="#bfieldcoilofwirefull"><span class="std std-numref">Fig. 2.31</span></a>.</p>
 <div class="figure align-default" id="bfieldcoilofwirefull">
 <img alt="../_images/FullBFieldCoilWire.png" src="../_images/FullBFieldCoilWire.png" />
-<p class="caption"><span class="caption-number">Fig. 2.25 </span><span class="caption-text">Full magnetic field are a coil of current carrying wire, the straight line through the middle of the coil represents the field calculated along the <span class="math notranslate nohighlight">\(z\)</span> axis.</span><a class="headerlink" href="#bfieldcoilofwirefull" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.31 </span><span class="caption-text">Full magnetic field are a coil of current carrying wire, the straight line through the middle of the coil represents the field calculated along the <span class="math notranslate nohighlight">\(z\)</span> axis.</span><a class="headerlink" href="#bfieldcoilofwirefull" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="magnetic-field-in-solenoids">
 <h2><span class="section-number">2.7.4. </span>Magnetic Field in Solenoids*<a class="headerlink" href="#magnetic-field-in-solenoids" title="Permalink to this headline">¶</a></h2>
-<p>Through superposition of coils, we can find the magnetic field around a solenoid, as shown in <a class="reference internal" href="#bfieldsolenoid"><span class="std std-numref">Fig. 2.26</span></a>.  The (almost)
+<p>Through superposition of coils, we can find the magnetic field around a solenoid, as shown in <a class="reference internal" href="#bfieldsolenoid"><span class="std std-numref">Fig. 2.32</span></a>.  The (almost)
 uniform magnetic field inside a solenoid follows:</p>
 <div class="math notranslate nohighlight">
 \[B = \frac{\mu_0\,N\,I}{L}\]</div>
 <p>where <span class="math notranslate nohighlight">\(N\)</span> is the number of turns on the solenoid and <span class="math notranslate nohighlight">\(L\)</span> is the length of the coil.  Likewise it is possible to find the magnetic field
-from a solenoid shaped like a torus, as depicted in <a class="reference internal" href="#bfieldsolenoid"><span class="std std-numref">Fig. 2.26</span></a>.  The magnetic field for a solenoid shaped as a torus is:</p>
+from a solenoid shaped like a torus, as depicted in <a class="reference internal" href="#bfieldsolenoid"><span class="std std-numref">Fig. 2.32</span></a>.  The magnetic field for a solenoid shaped as a torus is:</p>
 <div class="math notranslate nohighlight">
 \[B = \frac{\mu_0\,N\,I}{2\pi\,r}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the torus radius.</p>
 <div class="figure align-default" id="bfieldsolenoid">
 <img alt="../_images/BFieldSolenoid.png" src="../_images/BFieldSolenoid.png" />
-<p class="caption"><span class="caption-number">Fig. 2.26 </span><span class="caption-text"><b> Left Pane </b>-  The magnetic field around a current carrying solenoid.<br />
+<p class="caption"><span class="caption-number">Fig. 2.32 </span><span class="caption-text"><b> Left Pane </b>-  The magnetic field around a current carrying solenoid.<br />
 <b> Right Pane </b> - The magnetic field around a current carrying toroidal solenoid.  The magnetic field loops over each turn along the solenoid.</span><a class="headerlink" href="#bfieldsolenoid" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -532,15 +536,15 @@ We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> f
 \[{\bf H} = \frac{1}{\mu_0}{\bf B} - {\bf M}\]</div>
 <p>where <span class="math notranslate nohighlight">\({\bf H}\)</span> is also known as the Magnetic field strength (sometimes Magnetic field intensity), <span class="math notranslate nohighlight">\({\bf B}\)</span> is the magnetic field strength
 (also sometimes called magnetic flux density) and <span class="math notranslate nohighlight">\({\bf M}\)</span> is the magnetisation vector.  We can see the effects of each vector in a bar magnet in
-<a class="reference internal" href="#bhmfields"><span class="std std-numref">Fig. 2.27</span></a>.</p>
+<a class="reference internal" href="#bhmfields"><span class="std std-numref">Fig. 2.33</span></a>.</p>
 <div class="figure align-default" id="bhmfields">
 <img alt="../_images/BHMFields.png" src="../_images/BHMFields.png" />
-<p class="caption"><span class="caption-number">Fig. 2.27 </span><span class="caption-text">Depiction of different magnetic fields within a bar magnet.</span><a class="headerlink" href="#bhmfields" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.33 </span><span class="caption-text">Depiction of different magnetic fields within a bar magnet.</span><a class="headerlink" href="#bhmfields" title="Permalink to this image">¶</a></p>
 </div>
 <p>In different materials, it is sometimes possible to relate <span class="math notranslate nohighlight">\({\bf M}\)</span> linearly to other fields:</p>
 <div class="math notranslate nohighlight">
-\[{\bf B} = \mu_0\,({\bf H} + {\bf M}) = \mu\,{\bf H} = \mu_0\,(1 + \chi)\,{\bf H}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the relative permeability and <span class="math notranslate nohighlight">\(\chi\)</span> is the magnetic susceptibility.</p>
+\[{\bf B} = \mu_0\,({\bf H} + {\bf M}) = \mu\,{\bf H} = \mu_0\,(1 + \chi_M)\,{\bf H}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the relative permeability and <span class="math notranslate nohighlight">\(\chi_M\)</span> is the magnetic susceptibility.</p>
 </div>
 </div>
 
@@ -567,36 +571,16 @@ We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> f
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="magneticforces.html" title="previous page"><span class="section-number">2.6. </span>Magnetic Forces</a>
+    <a class='right-next' id="next-link" href="faradayslaw.html" title="next page"><span class="section-number">2.8. </span>Faraday’s Law</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="magneticforces.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">2.6. </span>Magnetic Forces</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="faradayslaw.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">2.8. </span>Faraday’s Law</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

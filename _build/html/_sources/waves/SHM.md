@@ -105,10 +105,9 @@ first derivative term to the equations of motion
 ```{math}
 m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + c \frac{\mathrm{d} x}{\mathrm{d} t} + kx = 0 
 ```
-We could also think of oscillating systems, such as an AC electrical system with an input voltage $V = V_0 \cos(\Omega t)$, pushing round a current $I = I_0\cos(\omega t)$ and 
-with some fixed resistances $R$.  Such systems can be described as <em> forced </em> harmonic osciallators, because energy is constantly being put into and 
-given out from the system.  We can calculate the electrical power, $P = V^2 / R = {V_0}^2\,\cos^2(\Omega t)/R$ - suggesting the power and oscillation amplitude are 
-related according to $P \propto {V_0}^2$.  The most general form of these systems can be written as:
+We could also think of oscillating systems, such as an AC electrical system with an input voltage $V = V_0 \cos(\Omega t)$, pushing round a current 
+$I = I_0\cos(\omega t)$ and with some fixed resistances $R$.  Such systems can be described as <em> forced </em> harmonic osciallators, because energy 
+is constantly being put into and given out from the system.  The most general form of these systems can be written as:
 ```{math}
 a\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + b \frac{\mathrm{d} x}{\mathrm{d} t} + cx = F(t)
 ```

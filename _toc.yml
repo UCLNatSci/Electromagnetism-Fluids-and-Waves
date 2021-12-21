@@ -18,16 +18,16 @@ chapters:
   - file: waves/matterwaves
 - file: electromagnetism/introduction
   sections:
+  - file: electromagnetism/EMmaths
   - file: electromagnetism/electrostatics
-  - file: electromagnetism/gausslawsystems
+  - file: electromagnetism/solvingEsystems
   - file: electromagnetism/Efieldenergy
-  - file: electromagnetism/Efieldsmatter
   - file: electromagnetism/magneticfields
   - file: electromagnetism/magneticforces
   - file: electromagnetism/ampereslaw
   - file: electromagnetism/faradayslaw
   - file: electromagnetism/maxwelleqns
-  - file: electromagnetism/EMwaves
+  - file: electromagnetism/solvingmaxwell
   - file: electromagnetism/EMenergy
   - file: electromagnetism/EMpotentials
 - file: fluids/intro

@@ -1,8 +1,7 @@
 # Faraday's Law
-Our discussion of both the Biot-Savart and Ampère's laws tells us that moving charges (currents) produce magnetic fields.  
-Since these currents are pushed by potential difference - driven by electric fields, these result in a magnetic field.  
-The next question is can we start with a magnetic field and finish with an electric field - Faraday's law tells us yes!  
-Thinking again about the link between moving charges and magnetic fields:
+Our discussion of both the Biot-Savart and Ampère's laws tells us that moving charges (currents) produce magnetic fields.  Since these currents 
+are pushed by potential difference - driven by electric fields, these result in a magnetic field.  The next question is can we start with a magnetic 
+field and finish with an electric field - Faraday's law tells us yes!  Thinking again about the link between moving charges and magnetic fields:
 ```{math}
 Q\,{\bf v} \propto {\bf B}
 ```

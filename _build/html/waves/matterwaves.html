@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +48,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -76,10 +77,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -89,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -162,23 +159,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -207,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,7 +215,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -360,11 +357,11 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#relativistic-quantum-mechanics">
-   1.8.1. Relativistic Quantum Mechanics*
+   1.8.1. Relativistic Quantum Mechanics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -415,8 +412,8 @@ and for a <span class="math notranslate nohighlight">\(\omega\)</span> term we n
 <p>These will result in an equation of the form:</p>
 <div class="math notranslate nohighlight">
 \[A \frac{\partial \psi}{\partial t} = B\frac{\partial^2 \psi}{\partial x^2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(A = i \hbar\)</span> because <span class="math notranslate nohighlight">\(\frac{\partial \psi}{\partial t} = -i\omega \psi\)</span> and <span class="math notranslate nohighlight">\(B = -\frac{\hbar^2}{2m}\)</span>
-because <span class="math notranslate nohighlight">\(\frac{\partial^2 \psi}{\partial x^2} = -k^2 \psi\)</span> producing a one dimensional free particle equation of the form:</p>
+<p>where <span class="math notranslate nohighlight">\(A = i \hbar\)</span> because <span class="math notranslate nohighlight">\(\partial \psi/\partial t = -i\omega \psi\)</span> and <span class="math notranslate nohighlight">\(B = -\hbar^2/2m\)</span>
+because <span class="math notranslate nohighlight">\(\partial^2 \psi/\partial x^2 = -k^2 \psi\)</span> producing a one dimensional free particle equation of the form:</p>
 <div class="math notranslate nohighlight">
 \[i \hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2}\]</div>
 <p>If we want to include a potential energy <span class="math notranslate nohighlight">\(V = V(x,t)\)</span> in the system, then we first rewrite the energy as KE + PE:</p>
@@ -435,35 +432,37 @@ giving:</p>
 <span class="eqno">(1.28)<a class="headerlink" href="#equation-tise" title="Permalink to this equation">¶</a></span>\[\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V\right)\psi = E\psi\]</div>
 <p>which should look familiar as the <b>Time Independent Schrödinger Equation (TISE).</b></p>
 <div class="section" id="relativistic-quantum-mechanics">
-<h2><span class="section-number">1.8.1. </span>Relativistic Quantum Mechanics*<a class="headerlink" href="#relativistic-quantum-mechanics" title="Permalink to this headline">¶</a></h2>
-<p>It turns out we can write a relativistic version of the Schrödinger equation, known as the Klein-Gordon equation,
-using the d’Alembertian, this results in:</p>
-<div class="math notranslate nohighlight">
-\[\left(-\frac{1}{c^2}\frac{\partial^2}{\partial t^2} + \nabla^2 \right)\psi = -\Box \psi = \frac{m_0^2\,c^2}{\hbar^2}\psi\]</div>
-<p>where <span class="math notranslate nohighlight">\(m_0\)</span> is the rest mass of some relativistic particle.<br />
-This equation also becomes very useful when studying quantum fields.  The dispersion relation of this equation is
-related to the form of the mass-energy-momentum relation from special relativity,</p>
+<h2><span class="section-number">1.8.1. </span>Relativistic Quantum Mechanics<a class="headerlink" href="#relativistic-quantum-mechanics" title="Permalink to this headline">¶</a></h2>
+<p>Unsurprisingly quantum mechanics is not the only relevant physical theory, as bodies get larger and move at relativistic speeds, we need to add in
+special relativity, given the mass-energy-momentum relation from special relativity,</p>
 <div class="math notranslate nohighlight">
 \[E^2 = p^2 c^2 + {m_0}^2 c^4\]</div>
+<p>we can alter the dispersion relation of the wave equation to write a relativistic version of the Schrödinger equation, known as the <b>Klein-Gordon</b> equation.
+We find this now includes the d’Alembertian operator:</p>
+<div class="math notranslate nohighlight">
+\[\left(-\frac{1}{c^2}\frac{\partial^2}{\partial t^2} + \nabla^2 \right)\psi = -\Box \psi = \frac{m_0^2\,c^2}{\hbar^2}\psi\]</div>
+<p>where <span class="math notranslate nohighlight">\(m_0\)</span> is the rest mass of some relativistic particle.</p>
+<p>This equation also becomes very useful when studying quantum fields and forms the basis of the <b>Dirac</b> equation.</p>
 </div>
 <div class="section" id="wavepackets">
 <h2><span class="section-number">1.8.2. </span>Wavepackets<a class="headerlink" href="#wavepackets" title="Permalink to this headline">¶</a></h2>
-<p>A wave packet, also described sometimes as a wave train is a short “burst” or “envelope” of localized wave(s)
-that travel as  one unit together. A wave packet can be considered from an infinite set of component sinusoidal
-waves of different wavenumbers, with phases and amplitudes such that they interfere constructively only over a
-small region of space, and destructively elsewhere.  We can see an example of this in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 1.9</span></a>.</p>
+<p>Our simplest form of dispersion relation for travelling waves suggested <span class="math notranslate nohighlight">\(\omega = \pm ck\)</span>, which we can write as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u(x,\, t) &amp;=&amp;\, \sum_{n=1}^2 u_n \exp(i(kx-\omega_n t))\\
+\omega_n &amp;=&amp;\, (-1)^n\,ck \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(u_n\)</span> is a each waves amplitude.  We can generalise this by letting <span class="math notranslate nohighlight">\(u_n = u_n(k)\)</span> and using a continuous spectrum of <span class="math notranslate nohighlight">\(k\)</span> values with a general
+dispersion relation, therefore:</p>
+<div class="math notranslate nohighlight">
+\[u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k\]</div>
+<p>We call these <b>wave packets</b> or sometimes as a wave train or burst - we can picture them as a larger wave envelope, with smaller localized waves
+that travel as one unit together, as shown in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 1.9</span></a>.  This infinite set of oscillating waves have different waven lengths, with phases
+and amplitudes that constructively and destructively interfereonly over different regions of space.</p>
 <div class="figure align-default" id="wavepacket">
 <img alt="../_images/WavePacket.png" src="../_images/WavePacket.png" />
 <p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">Schematic of a Wave Packet, with localisation near the centre of the packet.</span><a class="headerlink" href="#wavepacket" title="Permalink to this image">¶</a></p>
 </div>
-<p>Given a wave packet will be the sum of many different wave forms, we can use an integral definition:</p>
-<div class="math notranslate nohighlight">
-\[u(x,t) = \frac{1}{\sqrt{2\pi}} \int^{\,\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k\]</div>
-<p>Just like in the usual wave case, the wave packet travels to the right for <span class="math notranslate nohighlight">\(\omega(k) = kc\)</span> and to the left for <span class="math notranslate nohighlight">\(\omega(k) = -kc\)</span>.</p>
-<p>If the packet is strongly <em> localized</em>, more frequencies are needed to allow the constructive superposition in the
-spatial region of localization and destructive superposition outside this region.</p>
 <p>Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation,
-the wave packet’s profile may remain constant (no dispersion) or it may change (dispersion) while propagating.</p>
+the wave packet’s profile may remain constant (no dispersion) or change (dispersion) while propagating.</p>
 </div>
 </div>
 
@@ -490,36 +489,16 @@ the wave packet’s profile may remain constant (no dispersion) or it may change
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="polarisation.html" title="previous page"><span class="section-number">1.7. </span>Polarisation of Waves</a>
+    <a class='right-next' id="next-link" href="../electromagnetism/introduction.html" title="next page"><span class="section-number">2. </span>Electromagnetism</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="polarisation.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1.7. </span>Polarisation of Waves</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="../electromagnetism/introduction.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">2. </span>Electromagnetism</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +48,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -75,10 +76,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -88,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -161,23 +158,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -206,8 +203,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -217,7 +214,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -359,7 +356,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solutions">
@@ -384,8 +381,7 @@
 <p>Some Content</p>
 </div>
 <div class="exercise admonition" id="my-exercise">
-
-<p class="admonition-title">Exercise (MY LABEL)</p>
+<p class="admonition-title"><span>Exercise </span>(MY LABEL)</p>
 <div class="section" id="exercise-content">
 <p>Recall that <span class="math notranslate nohighlight">\(n!\)</span> is read as “<span class="math notranslate nohighlight">\(n\)</span> factorial” and defined as
 <span class="math notranslate nohighlight">\(n! = n \times (n - 1) \times \cdots \times 2 \times 1\)</span>.</p>
@@ -395,8 +391,7 @@ write our own version as an exercise.</p>
 for any positive integer <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
 </div><div class="solution dropdown admonition" id="my-solution">
-
-<p class="admonition-title"><a class="reference internal" href="#my-exercise">Solution to Exercise (MY LABEL)</a></p>
+<p class="admonition-title"><span class="caption-number"></span><a class="reference internal" href="#my-exercise"><span>Solution to MY LABEL</span></a></p>
 <div class="section" id="solution-content">
 <p>Here’s one solution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -409,10 +404,8 @@ for any positive integer <span class="math notranslate nohighlight">\(n\)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>This is a link to <a class="reference internal" href="#my-exercise"><span class="std std-ref">Exercise</span></a></p>
+</div><p>This is a link to <a class="reference internal" href="#my-exercise"><span class="std std-ref">MY LABEL</span></a></p>
 <div class="exercise admonition" id="my-exercise2">
-
 <p class="admonition-title"><span class="caption-number">Exercise 3.11 </span></p>
 <div class="section" id="exercise-content">
 <p>Recall that <span class="math notranslate nohighlight">\(n!\)</span> is read as “<span class="math notranslate nohighlight">\(n\)</span> factorial” and defined as
@@ -422,10 +415,8 @@ write our own version as an exercise.</p>
 <p>In particular, write a function <code class="docutils literal notranslate"><span class="pre">factorial</span></code> such that <code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> returns <span class="math notranslate nohighlight">\(n!\)</span>
 for any positive integer <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
-</div>
-<div class="solution dropdown admonition" id="my-solution2">
-
-<p class="admonition-title"><a class="reference internal" href="#my-exercise2">Solution to Exercise 3.11</a></p>
+</div><div class="solution dropdown admonition" id="my-solution2">
+<p class="admonition-title"><span class="caption-number"></span><a class="reference internal" href="#my-exercise2"><span>Solution to </span> Exercise 3.11</a></p>
 <div class="section" id="solution-content">
 <p>Here’s one solution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -438,11 +429,9 @@ for any positive integer <span class="math notranslate nohighlight">\(n\)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>This is a link to <a class="reference internal" href="#my-exercise2"><span class="std std-numref">Exercise 3.11</span></a></p>
+</div><p>This is a link to <a class="reference internal" href="#my-exercise2"><span class="std std-numref">Exercise 3.11</span></a></p>
 <div class="exercise admonition" id="my-exercise3">
-
-<p class="admonition-title"><span class="caption-number">Exercise 3.12 </span> (: Here is some <span class="math notranslate nohighlight">\(x^2\)</span> math)</p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.12 </span>(: Here is some <span class="math notranslate nohighlight">\(x^2\)</span> math)</p>
 <div class="section" id="exercise-content">
 <p>Recall that <span class="math notranslate nohighlight">\(n!\)</span> is read as “<span class="math notranslate nohighlight">\(n\)</span> factorial” and defined as
 <span class="math notranslate nohighlight">\(n! = n \times (n - 1) \times \cdots \times 2 \times 1\)</span>.</p>
@@ -451,10 +440,8 @@ write our own version as an exercise.</p>
 <p>In particular, write a function <code class="docutils literal notranslate"><span class="pre">factorial</span></code> such that <code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> returns <span class="math notranslate nohighlight">\(n!\)</span>
 for any positive integer <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
-</div>
-<div class="solution dropdown admonition" id="my-solution3">
-
-<p class="admonition-title"><a class="reference internal" href="#my-exercise3">Solution to Exercise 3.12 (: Here is some <span class="math notranslate nohighlight">\(x^2\)</span> math)</a></p>
+</div><div class="solution dropdown admonition" id="my-solution3">
+<p class="admonition-title"><span class="caption-number"></span><a class="reference internal" href="#my-exercise3"><span>Solution to </span> Exercise 3.12</a></p>
 <div class="section" id="solution-content">
 <p>Here’s one solution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -467,19 +454,16 @@ for any positive integer <span class="math notranslate nohighlight">\(n\)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>This is a link to <a class="reference internal" href="#my-exercise3"><span class="std std-numref">Exercise 3.12</span></a></p>
+</div><p>This is a link to <a class="reference internal" href="#my-exercise3"><span class="std std-numref">Exercise 3.12</span></a></p>
 <div class="section" id="solutions">
 <h2><span class="section-number">3.9.1. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
 <div class="solution dropdown admonition" id="fluids/demo-exercise-solution-6">
-
-<p class="admonition-title"><a class="reference internal" href="mathideas.html#ex-dir_deriv">Solution to Exercise 3.2</a></p>
+<p class="admonition-title"><span class="caption-number"></span><a class="reference internal" href="mathideas.html#ex-dir_deriv"><span>Solution to </span> Exercise 3.2</a></p>
 <div class="section" id="solution-content">
 <p><span class="math notranslate nohighlight">\(\nabla f = \left(yz,xz,xy\right) \Rightarrow (\nabla f)_M=\left(12,-8,-6\right)\)</span></p>
 <p><span class="math notranslate nohighlight">\(D_{\hat{\underline{v}}}f=\hat{\underline{v}}.(\nabla f)_M = \frac{1}{\sqrt{3^2+4^2+12^2}}\left(3,-4,12\right).\left(12,-8,-6\right)=\frac{-4}{13}\)</span></p>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -505,27 +489,15 @@ for any positive integer <span class="math notranslate nohighlight">\(n\)</span>
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="reynolds.html" title="previous page"><span class="section-number">3.8. </span>Reynolds number</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="reynolds.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">3.8. </span>Reynolds number</p>
-            </div>
-        </a>
-    </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

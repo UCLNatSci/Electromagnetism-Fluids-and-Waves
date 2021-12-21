@@ -1,4 +1,6 @@
-# Electromagnetic Waves
+# Solutions to Maxwell's Equations
+
+## Electromagnetic Waves
 Using Maxwell's equations, we can see that there are two scalar equations and two vector equations, in the form of coupled ODEs.  Lets rewrite these in terms of 
 one field and then try to solve.  Recall the Lagrange identity for $\nabla$ with a vector ${\bf A}$: 
 ```{math}
@@ -43,7 +45,7 @@ name: EMPlaneWaves
 ```
 
 ## Polarisation of EM Waves
-Plugging these solutions into Maxwell's equations in vacuum:
+Plugging in wave solutions into Maxwell's equations in vacuum:
 ```{math}
 :label: kEBperp
 \nabla \cdot {\bf E} &=& \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
@@ -92,7 +94,7 @@ Other polarisation choices would be <b> Circular </b> or <b> Elliptical</b>, whe
 clockwise/anticlockwise polarised waves, as seen in {numref}`EMPlaneWaves`.
 
 
-## Other Solutions to Maxwell's Equations
+## Drude Model
 In addition to solving Maxwell's for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor, 
 with an electric field ${\bf E}$ present, we can think about Ohm's law $V = I\,R$ or terms of fields ${\bf J} = \sigma {\bf E}$ where $\sigma$ is the 
 conductivity of the material (often written in the related form of resistivity $\rho$, where $\rho = 1 / \sigma$) and ${\bf J}$ is the current density. 
@@ -106,8 +108,9 @@ k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega
 ```
 which is now complex! 
 
-We can rewrite this in the form a relative permitivity $\epsilon_r(\omega)$, for $k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon_r$
+We can rewrite this in the form a relative permitivity $\epsilon_r(\omega)$, for $k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)$ with 
+$\epsilon = \epsilon_0\,\epsilon_r$, therefore:
 ```{math}
-\frac{\epsilon_r (\omega)}{\epsilon_0} = \underbrace{1}_{vacuum\, part} + \underbrace{i \frac{\sigma}{\epsilon_0\omega}}_{dispersion\,part} 
+\epsilon_r(\omega) = \frac{\epsilon(\omega)}{\epsilon_0} = \underbrace{1}_{vacuum\, part} + \underbrace{i \frac{\sigma}{\epsilon_0\omega}}_{dispersion\,part} 
 ```
-If we calculate the energy of waves travelling through this media, the dispersion part corresponds to energy losses of the electromagnetic field.  
+If we calculate the energy of waves travelling through this media, the dispersion part corresponds to the energy losses of the electromagnetic field.  

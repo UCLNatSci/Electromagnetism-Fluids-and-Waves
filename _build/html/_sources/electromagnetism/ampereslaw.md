@@ -30,15 +30,18 @@ Thus our expression for <b>Ampère's Law</b> is given by:
 ```
 
 ## Magnetic Field from a Wire
-We can approximate a thin wire to a line of charges moving, therefore the expression for a thin wire is given by Equations {eq}`FiniteWireBField` in the finite case and 
-{eq}`InfiniteWireBField` in the infinite case.  However we could consider a thick wire, modelled as a cylinder of current $I$ with cross sectional radius $R$, 
-as depicted in Figure {numref}`AmpereLawBoundary`.  We see (akin to solving Gauss's law for electric fields) there are two regimes of interest:
-- $r \geq R$ Applying Ampère's law, we find the $I_{enclosed} = I$ here and therefore:
+Now lets consider a thick wire, modelled as a cylinder of current $I$ with cross sectional radius $R$, as depicted in {numref}`AmpereLawBoundary`, we see 
+akin to solving Gauss's law,  that there are two regimes of interest:
+- $r \geq R$ 
+
+Applying Ampère's law, we find the $I_{enclosed} = I$ here and therefore:
 ```{math}
 \oint {\bf B} \cdot \mathrm{d} {\bf \ell} = B_\theta\,(2\pi\,r) = \mu_0\,I \Rightarrow {\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}}
 ```
     
-- $r < R$ In order to find the $I_{enclosed}$ we can see from Equation {eq}`driftvelocity` that for a conductor $I \propto A$ and 
+- $r < R$ 
+
+In order to find the $I_{enclosed}$ we can see from Equation {eq}`driftvelocity` that for a conductor $I \propto A$ and 
 therefore we can calculate the uniform current density $\rho = I / A$.  Therefore here:
 
 ```{math}
@@ -46,20 +49,25 @@ therefore we can calculate the uniform current density $\rho = I / A$.  Therefor
 \frac{\mu_0\,I\,r}{2\pi\,R^2}\,\hat{{\bf \theta}}
 ```
 
-We see that at the boundary of the wire, $r = R$, these two magnetic field expressions agree.  We see a depiction of the different radial 
-dependencies of the magnetic field around 
-a thick wire in {numref}`BfieldWire`.
+We see that at the boundary of the wire, $r = R$, these two magnetic field expressions agree.  Therefore the magnetic field is given by the 
+piecewise function:
+```{math}
+{\bf B} = \begin{cases} 
+      \mu_0 \,I\, r / 2 \pi\, R^2 & r < R \\
+      \mu_0 \,I / 2 \pi\, r & r \geq R 
+   \end{cases}
+```
+and we see a depiction of this in {numref}`BfieldWire`.
 ```{figure} ../figures/magneticfieldwire.png
 ---
 name: BfieldWire
 ---
-Magnetic field around a thick wire, with cross sectional radius $R$.
+Magnetic field around a thick wire, with cross sectional radius $R$, note the agreement of the fields at the boundary.
 ```
 
 ## Displacement Current
 Lets consider a simple circuit with a capacitor, as seen in {numref}`DisplacementCurrent`, we could take an Ampère's law path from the current 
-flowing in to or out of the capacitor to a path cutting through the capacitor.  This is problematic because there is no current flowing through 
-the capacitor, yet the exact path taken when calculating Ampère's law should not change the outcome of the expression!
+flowing in to or out of the capacitor to a path cutting through the capacitor.  
 
 ```{figure} ../figures/DisplacementCurrent.png
 ---
@@ -67,8 +75,9 @@ name: DisplacementCurrent
 ---
 Applying Ampère's law to a capacitor with no direct current between the plates.
 ```
-
-To resolve this, consider the rate of flow of charge $I = \partial Q/\partial t$ in to or out of the capacitor, from Gauss's law we know that:
+This is problematic because there is no current flowing through the capacitor, yet the exact path taken when calculating Ampère's law should not 
+change the outcome of the expression!  To resolve this, consider the rate of flow of charge $I = \partial Q/\partial t$ in to or out of the capacitor, 
+from Gauss's law we know that:
 ```{math}
 Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = \frac{\partial Q}{\partial t} = 
 \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = \epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} 
@@ -178,6 +187,6 @@ Depiction of different magnetic fields within a bar magnet.
  
 In different materials, it is sometimes possible to relate ${\bf M}$ linearly to other fields:
 ```{math}
-{\bf B} = \mu_0\,({\bf H} + {\bf M}) = \mu\,{\bf H} = \mu_0\,(1 + \chi)\,{\bf H}
+{\bf B} = \mu_0\,({\bf H} + {\bf M}) = \mu\,{\bf H} = \mu_0\,(1 + \chi_M)\,{\bf H}
 ```
-where $\mu$ is the relative permeability and $\chi$ is the magnetic susceptibility.  
+where $\mu$ is the relative permeability and $\chi_M$ is the magnetic susceptibility.  
