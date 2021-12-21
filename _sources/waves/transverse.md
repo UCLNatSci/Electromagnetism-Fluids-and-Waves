@@ -87,16 +87,16 @@ Looking at the change total energy $E$:
 ```
 where $K$ is the total kinetic energy and $U$ the total potential energy.
 ```{math}
-\Delta K &=& \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
+\Delta K &=&\, \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
 \left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2}\right)\left(\frac{\partial y}{\partial t}\right)^2 \\
-\Delta U &=& T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)
+\Delta U &=&\, T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)
 ```
-Recall for transverse waves $\theta \ll 1$ which therefore means that $\partial y/\partial x \ll 1$ and therefore if we do a binomial 
+Recall for transverse waves $\theta \ll 1$, therefore $\partial y/\partial x \ll 1$ and so we can do a binomial 
 expansion:
 ```{math}
-\Delta K &\simeq& \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots,\quad \quad 
-\Delta U \simeq T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots
-\\ \Rightarrow \Delta E &=& \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
+\Delta K &\simeq&\, \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots, \\
+\Delta U &\simeq&\,  T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots\\ 
+\Rightarrow \Delta E &=& \, \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
 \frac{T}{\rho_L}\left(\frac{\partial y}{\partial x}\right)^2\right)
 ```
 and given that  $T / \rho_L = c^2$, we can simplify:

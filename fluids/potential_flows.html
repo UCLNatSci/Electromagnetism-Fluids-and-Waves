@@ -159,23 +159,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -204,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -215,7 +215,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -455,11 +455,11 @@
 </div>
 </div>
 <p>Result (1) is immediately obtained from (3) by taking the curl and using the result “curl grad=0” :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0f74e886-c1eb-4b94-908c-51c13ac1f9a1">
-<span class="eqno">(3.30)<a class="headerlink" href="#equation-0f74e886-c1eb-4b94-908c-51c13ac1f9a1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\nabla\phi \quad \Rightarrow \quad \nabla\times\underline{v}=\nabla\times(\nabla \phi)=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0c34772a-2192-4cd4-8728-db94c6c09cff">
+<span class="eqno">(3.30)<a class="headerlink" href="#equation-0c34772a-2192-4cd4-8728-db94c6c09cff" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\nabla\phi \quad \Rightarrow \quad \nabla\times\underline{v}=\nabla\times(\nabla \phi)=\underline{0}\end{equation}\]</div>
 <p>Result (2) can be obtained from (1) by appealing to Stokes’ theorem for a surface <span class="math notranslate nohighlight">\(A\)</span> bounded by <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b440e6c8-a8c8-4183-8a62-a82b6f9447b5">
-<span class="eqno">(3.31)<a class="headerlink" href="#equation-b440e6c8-a8c8-4183-8a62-a82b6f9447b5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bc98ac37-ade4-44ed-98fd-5def79ffe407">
+<span class="eqno">(3.31)<a class="headerlink" href="#equation-bc98ac37-ade4-44ed-98fd-5def79ffe407" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \oint_{\mathcal{C}}\underline{F}.\mathrm{d}\underline{s} = \iint_A (\nabla \times \underline{F}).\mathrm{d}\underline{A} =0
 \end{equation}\]</div>
 <div class="admonition warning">
@@ -471,22 +471,22 @@
 <div class="section" id="calculating-the-velocity-potential">
 <h2><span class="section-number">3.5.2. </span>Calculating the velocity potential<a class="headerlink" href="#calculating-the-velocity-potential" title="Permalink to this headline">¶</a></h2>
 <p>To calculate a velocity potential <span class="math notranslate nohighlight">\(\phi\)</span> for an irrotational flow, we need to solve the antiderivative problem</p>
-<div class="amsmath math notranslate nohighlight" id="equation-25e912c7-8eb4-4205-bbc1-a19552a2606b">
-<span class="eqno">(3.32)<a class="headerlink" href="#equation-25e912c7-8eb4-4205-bbc1-a19552a2606b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v} = \nabla\phi\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-daf5013a-2bd9-4642-95da-31d5b14f406b">
+<span class="eqno">(3.32)<a class="headerlink" href="#equation-daf5013a-2bd9-4642-95da-31d5b14f406b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v} = \nabla\phi\end{equation}\]</div>
 <p><strong>Example 1 : Constant velocity parallel to an axis</strong></p>
 <p><span class="math notranslate nohighlight">\(\underline{v}=(U,0,0)\)</span> is irrotational. It has velocity potential <span class="math notranslate nohighlight">\(\phi=Ux\)</span>, since</p>
-<div class="amsmath math notranslate nohighlight" id="equation-488f3a60-14f0-4769-bce9-4339f99287ff">
-<span class="eqno">(3.33)<a class="headerlink" href="#equation-488f3a60-14f0-4769-bce9-4339f99287ff" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial x}=U,\quad \frac{\partial \phi}{\partial y}=0, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6212eddb-58d8-499e-8579-5f3e9ebed44e">
+<span class="eqno">(3.33)<a class="headerlink" href="#equation-6212eddb-58d8-499e-8579-5f3e9ebed44e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial x}=U,\quad \frac{\partial \phi}{\partial y}=0, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}\]</div>
 <p><strong>Example 2: Stagnation point flow</strong></p>
 <p><span class="math notranslate nohighlight">\(\underline{v}=(\alpha x,-\alpha y,0)\)</span> is irrotational. It has velocity potential <span class="math notranslate nohighlight">\(\phi=\frac{1}{2}\alpha(x^2-y^2)\)</span>, since</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d28fd427-23c0-4714-b70d-20e0f4c21310">
-<span class="eqno">(3.34)<a class="headerlink" href="#equation-d28fd427-23c0-4714-b70d-20e0f4c21310" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial x}=\alpha x,\quad \frac{\partial \phi}{\partial y}=-\alpha t, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d5eebb8c-ba08-4670-abfb-24f34a5ca82b">
+<span class="eqno">(3.34)<a class="headerlink" href="#equation-d5eebb8c-ba08-4670-abfb-24f34a5ca82b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial x}=\alpha x,\quad \frac{\partial \phi}{\partial y}=-\alpha t, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}\]</div>
 </div>
 <div class="section" id="line-integrals-for-irrotational-flows">
 <h2><span class="section-number">3.5.3. </span>Line integrals for irrotational flows<a class="headerlink" href="#line-integrals-for-irrotational-flows" title="Permalink to this headline">¶</a></h2>
 <p>The line integral for an irrotational flow is independent of the path. The result can be obtained from a vector potential:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-77a63312-4a85-44d4-9e37-8d296e16c548">
-<span class="eqno">(3.35)<a class="headerlink" href="#equation-77a63312-4a85-44d4-9e37-8d296e16c548" title="Permalink to this equation">¶</a></span>\[\begin{equation}\int_{\mathcal{C}}\underline{v}.\mathrm{d}\underline{s}=\int_{\underline{x}_0}^{\underline{x}_1}\nabla\phi.\mathrm{d}\underline{s} = \phi(\underline{x}_1)-\phi(\underline{x}_0) \end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-056a33ca-f3df-475d-9a0c-f71a2b06440f">
+<span class="eqno">(3.35)<a class="headerlink" href="#equation-056a33ca-f3df-475d-9a0c-f71a2b06440f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\int_{\mathcal{C}}\underline{v}.\mathrm{d}\underline{s}=\int_{\underline{x}_0}^{\underline{x}_1}\nabla\phi.\mathrm{d}\underline{s} = \phi(\underline{x}_1)-\phi(\underline{x}_0) \end{equation}\]</div>
 <div class="exercise admonition" id="ex-112">
 <p class="admonition-title"><span class="caption-number">Exercise 3.9 </span></p>
 <div class="section" id="exercise-content">
@@ -552,11 +552,11 @@ Hence, $\displaystyle \int_{(1,2,1)}^{(3,2,1)}\underline{v}.\mathrm{d}\underline
 <p><strong>Example 4: Line vortex flow (a special example)</strong></p>
 <p>Line vortex flow <span class="math notranslate nohighlight">\(\underline{v}=\frac{k}{r}\underline{e}_{\theta}\)</span> is irrotational everywhere except at the origin, where it is not defined.
 If we consider only the region <span class="math notranslate nohighlight">\(r\geq a\)</span> then we have a potential flow:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-190a41c1-ea8f-40af-8c96-5fe2d22aa23f">
-<span class="eqno">(3.36)<a class="headerlink" href="#equation-190a41c1-ea8f-40af-8c96-5fe2d22aa23f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial r}=0, \quad \frac{1}{r}\frac{\partial \phi}{\partial \theta}=\frac{k}{r}, \quad \frac{\partial \phi}{\partial z} \qquad \Rightarrow \quad \phi=k\theta.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cea32b75-c53a-4864-8255-40a5dfbc5da7">
+<span class="eqno">(3.36)<a class="headerlink" href="#equation-cea32b75-c53a-4864-8255-40a5dfbc5da7" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \phi}{\partial r}=0, \quad \frac{1}{r}\frac{\partial \phi}{\partial \theta}=\frac{k}{r}, \quad \frac{\partial \phi}{\partial z} \qquad \Rightarrow \quad \phi=k\theta.\end{equation}\]</div>
 <p>we have a field that is irrotational on <span class="math notranslate nohighlight">\(r\geq a\)</span>, but it is not conservative. If we calculate the circulation around a closed circuit <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> then we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aebb56a3-51d7-480a-8a98-9fdbc3594932">
-<span class="eqno">(3.37)<a class="headerlink" href="#equation-aebb56a3-51d7-480a-8a98-9fdbc3594932" title="Permalink to this equation">¶</a></span>\[\begin{equation}\Gamma=\int_{\mathcal{C}}(\nabla\phi).d\underline{x}= \int_{\mathcal{C}}\frac{k}{r}r\mathrm{d}\theta = \biggr[k\theta\biggr]_{\mathcal{C}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2fcfa02b-c1cc-4392-93de-d16084cdd1b5">
+<span class="eqno">(3.37)<a class="headerlink" href="#equation-2fcfa02b-c1cc-4392-93de-d16084cdd1b5" title="Permalink to this equation">¶</a></span>\[\begin{equation}\Gamma=\int_{\mathcal{C}}(\nabla\phi).d\underline{x}= \int_{\mathcal{C}}\frac{k}{r}r\mathrm{d}\theta = \biggr[k\theta\biggr]_{\mathcal{C}}\end{equation}\]</div>
 <p>As we go around any circuit that does not enclose <span class="math notranslate nohighlight">\(r=a\)</span> then <span class="math notranslate nohighlight">\(\theta\)</span> and hence <span class="math notranslate nohighlight">\(\phi\)</span> will return to its original value, so the path integral is zero. However, any closed curve that winds round the origin will have circulation <span class="math notranslate nohighlight">\(\Gamma=2\pi k\)</span>. An illustration is provided below. In the first image, the circulation indicated is 0. In the second image, the circulation is <span class="math notranslate nohighlight">\(2\pi k\)</span> and in the third image the circulation is <span class="math notranslate nohighlight">\(4\pi k\)</span>.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/circulation.png" id="circulation"><img alt="circulation diagrams" class="align-center" id="circulation" src="../_images/circulation.png" style="width: 720.0px; height: 180.0px;" /></a>

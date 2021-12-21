@@ -49,14 +49,15 @@ which can be satisfied by $z = x - ct$ and so $u_h = u_h(x - ct)$.  For $u_{PI}$
 \frac{\partial u_{PI}}{\partial t} + c \frac{\partial u_{PI}}{\partial x} = v(x+ct)
 ```
 and through a similar process as Equation {eq}`yODE`, we can show that that $u_{PI} = u_{PI}(x+ct)$.  
+
 The general solution to the wave equation is therefore:
 ```{math}
 :label: WEfuncform
 u(t,x) = A(x+ ct) + B(x - ct) 
 ```
-where $A,\,B$ are functions that we still have not yet found!
+where $A,\,B$ are functions that we still have not yet found.
 
-We call these sorts of solutions <b> plane wave solutions </b> and we can interpret these two functions as left and right
+We call these <b>travelling wave</b> solutions and we can interpret these two functions as left and right
  moving wave solutions here, to see how consider the functions first at $t = 0$:
 ```{math}
 u(x,0) = A(x) + B(x)
@@ -152,16 +153,18 @@ and therefore we could write:
 f(x) &=& \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
 \, &=&\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]
 ``` 
-where $A'$ is some constant to be found.  So if we use the condition that we will eventually just take 
-the real parts of our complex solutions, it dramatically simplifies the form of the equations.  Therefore we rewrite
-Equation {eq}`fullwaveeqnsoln1`:
+where $A'$ is some constant to be found.  So if we use the condition that we will eventually just take the real parts 
+of our complex solutions, it dramatically simplifies the form of the equations.  We call this complex representation
+of oscillating functions a <b>phasor</b>.
+
+Therefore we rewrite Equation {eq}`fullwaveeqnsoln1`:
 ```{math}
 :label: fullwaveeqnsoln
 u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) 
 ```
 where $A',\, B'$ are constants to be found.
 
-## Features of Plane Wave Solutions
+## Features of Wave Solutions
 Lets examine these quantities $k,\, \omega$ a little more closely too, start with a right travelling wave $u$:
 ```{math}
 u(x,\,t) = u_0 \,\exp\left(i(kx - \omega t)\right)
@@ -170,12 +173,12 @@ where $u(x=0,\, t=0) = u_0$.
 
 If we shift $t \rightarrow t + 2\pi/\omega$, then we see that $u(x,\,t)$ remains invariant, due to the 
 periodic nature of $e^{i\omega t}$.  This suggests that $2\pi/\omega$ is the <b> time period </b> of the 
-waves oscillation $T = \frac{2\pi}{\omega}$ and in fact it is clear that $\omega = \frac{2\pi}{T} = 2\pi f$ 
+waves oscillation $T = 2\pi/\omega$ and in fact it is clear that $\omega = 2\pi/T = 2\pi f$ 
 is just the angular frequency of the wave.  
 
 Likewise if we shift $x \rightarrow x + 2\pi/k$, then $u(x,\,t)$ remains invariant, due to the periodic nature 
 of $e^{i k x}$ and this suggests that $2\pi/k$ is the <b> wavelength </b> of the wave, hence 
-$k = \frac{2\pi}{\lambda}$.  This is known as the <b> wave vector </b> of the wave.  
+$k = 2\pi/\lambda$.  This is known as the <b> wave vector </b> of the wave.  
 
 Although it seems strange that a scalar quantity is being called a vector, this is only true in the one 
 dimensional case, for a right travelling wave propagating in three dimensions:
@@ -183,11 +186,9 @@ dimensional case, for a right travelling wave propagating in three dimensions:
 {\bf u}(x,\,t) = {\bf u_0} \exp\left(i(\bf{k}\cdot\bf{x} - \omega t)\right)
 ```
 where ${\bf k},\, \,{\bf u},\, {\bf u_0}$ are now vector quantities, with ${\bf k} = (k_x,\, k_y,\, k_z),\ {\bf x} = (x,\, y,\, z)$, and 
-$k = |\bf{k}| = \frac{2\pi}{\lambda}$.  ${\bf u_0}$ is known as the waves <b>Polarisation Vector</b> (more on this later).
+$k = |\bf{k}| = 2\pi/\lambda$.  ${\bf u_0}$ is known as the waves <b>Polarisation Vector</b> (more on this later).
 
 The quantity $\Phi = kx-\omega t$ is often known as the <b> phase </b> of the wave and comparing these 
 between two travelling waves $|\Phi_1 - \Phi_2|$ allows us to look at the <b> phase difference </b> 
 between waves, which is important in phenomena such as interference.  All of these considerations also apply to left 
 hand moving waves also.
-
-

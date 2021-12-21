@@ -1,6 +1,5 @@
-# Electromagnetic Potentials and Gauge Theories*
+# Electromagnetic Scalar and Vector Potentials
 
-## Scalar and Vector Potentials
 There is a different way to view these equations of electromagnetism, using the rules of vector calculus. Lets begin simply by expressing the 
 electric field ${\bf E}$ in terms of a potential:
 ```{math}
@@ -11,7 +10,7 @@ where $\phi = \phi(x,\,y,\,z)$ is the scalar electric potential.  Gauss's law $\
 ```{math}
 \nabla^2\phi = -\frac{\rho}{\epsilon_0}
 ```
-However the issue with Equation (\ref{eqn:electricpotential1}) is that it lacks are time dependence, which to solve Faraday's law 
+However the issue with Equation {eq}`electricpotential1` is that it lacks are time dependence, which to solve Faraday's law 
 $\nabla \times {\bf E} = -\partial {\bf B}/\partial t$ can cause issues:
 ```{math}
 \nabla \times {\bf E} = -\nabla \times \nabla \phi = 0 

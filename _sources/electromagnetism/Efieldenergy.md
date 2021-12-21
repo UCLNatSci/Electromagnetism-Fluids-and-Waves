@@ -20,6 +20,7 @@ U_E = -\,\frac{Q\,Q_s}{4\pi\,\epsilon_0}\int_{\infty}^r \frac{\hat{{\bf r}}'}{(r
 ```
 This gives rise to the idea of <b> Electric Potential </b> $V_E$,
 ```{math}
+:label: EFieldpotential
 V_E({\bf r}) = -\int_c {\bf E} \cdot \mathrm{d}{\bf \ell}
 ```
 Here $V_E$ is amount of energy per unit charge given to $Q$ when moving on some path $C$ through an electric field from a 
@@ -66,13 +67,10 @@ We can also think about this in terms of potentials, e.g. $V_E({\bf r}_1)$ is as
 ```{math} 
 U_E = \frac{1}{2}\bigg[Q_2\,{V_E}_1({\bf r}_2) + Q_1\,{V_E}_2({\bf r}_1)\bigg] 
 ```
-where the $\frac{1}{2}$ factor is to avoid the over counting of the interaction field $Q_1 \rightarrow Q_2$ and $Q_2 \rightarrow Q_1$.  
-These expressions can be generalised for $N$ point charges:
+where the $1/2$ factor is to avoid the over counting of the interaction field $Q_1 \rightarrow Q_2$ and $Q_2 \rightarrow Q_1$.  These 
+expressions can be generalised for $N$ point charges:
 ```{math}
 :label: intrinsicelecpotenergy
 U_E &=& \,\frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i)  \\ 
 &=&  \,\frac{1}{2}\left(\frac{1}{4\pi\,\epsilon_0}\right)\sum_{i=1}^N Q_i\, \sum_{j=1}^{N(j \neq i)} \frac{Q_j}{|r_i-r_j|}
 ```
-
-
-

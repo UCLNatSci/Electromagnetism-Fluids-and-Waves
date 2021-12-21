@@ -159,23 +159,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -204,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -215,7 +215,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -414,8 +414,8 @@ For a Newtonian fluid with zero body force,</p>
 <p>where <span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{U L}{\nu}\)</span> is a parameter called the Reynolds number.</p>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <p>Written out in full, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c623e70-692b-477a-a410-107d4f543dce">
-<span class="eqno">(3.54)<a class="headerlink" href="#equation-2c623e70-692b-477a-a410-107d4f543dce" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e662630d-fb13-4b34-951e-7446bf10a945">
+<span class="eqno">(3.54)<a class="headerlink" href="#equation-e662630d-fb13-4b34-951e-7446bf10a945" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
 <p>It is helpful to classify the study of fluids as follows:</p>
 <p>Incompressible	Compressible
 Inviscid	This course	Acoustics (high speed)

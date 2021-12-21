@@ -37,7 +37,7 @@ Where the $Q_{magnetic}$ would, from the direction of the field lines, represent
 only magnetic dipoles, with north and south poles, hence the sum of the all the magnetic "charges" is found to be zero.  Gauss's law for magnetism on its 
 own is not a very useful way to understand magnetic systems.  However we can find the magnetic flux through <em> open surfaces </em> to be useful, as we will see later.
 
-## Like and Opposite Poles*
+## Like and Opposite Poles
 We can see that the addition of different magnetic poles can produce magnetic flux, as {numref}`LikeOppositePoles` shows.  Drawing a surface between the poles 
 in the middle of the diagram shows that if the net flux is zero, we have the presence of like poles.  If however there is a next flux out of (or in to) a 
 surface, then there is a net presence of a north (or south pole) in or near the surface.  
@@ -140,19 +140,20 @@ For an infinite wire, we can use Equation {eq}`InfiniteChargeLineEField` and tak
 ```
 
 
-## Magnetic Field around a Finite Wire*
+## Magnetic Field around a Finite Wire
 Solving the Biot-Savart law for different situations looking tricky, however for a finite wire we can think about the system in terms of angles, 
 as depicted in {numref}`BSLawAngles`.
 ```{figure} ../figures/BSLawWire.png
 ---
 name: BSLawAngles
 ---
-<b>Left Pane</b> - Geometry of a current carrying wire and solving for Biot-Savart law to calculate magnetic field at point $P$, 
-<b>Right Pane</b> - Converting system of wire elements in terms of angles at point $P$.
+<b>Left Pane</b> - Geometry of a current carrying wire and solving for Biot-Savart law to calculate magnetic field at $P$, 
+<b>Right Pane</b> - Converting system of wire elements into angles at $P$.
 ```
 In this system we can think about the length element of the current as:
 ```{math}
-\mathrm{d} {\bf \ell} \times \hat{{\bf r}} = \mathrm{d} \ell \,|\hat{{\bf r}}|\, \sin(\theta)\,\hat{{\bf \theta}} = \mathrm{d} \ell\, \cos(\alpha)\,\hat{{\bf \theta}}
+\mathrm{d} {\bf \ell} \times \hat{{\bf r}} &=&\, \mathrm{d} \ell \,|\hat{{\bf r}}|\, \sin(\theta)\,\hat{{\bf \theta}} \\ 
+&=&\, \mathrm{d} \ell\, \cos(\alpha)\,\hat{{\bf \theta}}
 ```
 We can find an expression for $\mathrm{d} \ell$ using trigonometry and calculus:
 ```{math}
@@ -161,10 +162,10 @@ We can find an expression for $\mathrm{d} \ell$ using trigonometry and calculus:
 and since $r = R\, \cos(\alpha) \Rightarrow 1/R^2 = \cos^2(\alpha)/r^2$, therefore using the Biot-Savart law here:
 ```{math}
 :label: FiniteWireBField
-{\bf B} &=& \,\frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{R^2} = 
-\frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\sec^2(\alpha)\,\cos^2(\alpha)\,\cos(\alpha)}{r^2}\, \mathrm{d} \alpha\,\hat{{\bf \theta}} \\ 
-{\bf B} &=& \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{{\bf \theta}} = \frac{\mu_0\,I}{4\pi\,r}\left( \sin(\alpha_2) - 
-\sin(\alpha_1)\right)\,\hat{{\bf \theta}} 
+{\bf B} &=& \,\frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{R^2} \\ 
+&=&\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\sec^2(\alpha)\,\cos^2(\alpha)\,\cos(\alpha)}{r^2}\, \mathrm{d} \alpha\,\hat{{\bf \theta}} \\ 
+&=& \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{{\bf \theta}} \\
+&=&\, \frac{\mu_0\,I}{4\pi\,r}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{{\bf \theta}} 
 ```
 If we want to consider an <em> infinite</em> wire, then we can take $\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2$, giving:
 ```{math}

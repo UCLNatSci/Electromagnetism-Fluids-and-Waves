@@ -159,23 +159,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -204,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -215,7 +215,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -370,8 +370,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#features-of-plane-wave-solutions">
-   1.4.3. Features of Plane Wave Solutions
+  <a class="reference internal nav-link" href="#features-of-wave-solutions">
+   1.4.3. Features of Wave Solutions
   </a>
  </li>
 </ul>
@@ -420,12 +420,12 @@ c \frac{\partial z}{\partial x}\right)= 0\]</div>
 <p>which can be satisfied by <span class="math notranslate nohighlight">\(z = x - ct\)</span> and so <span class="math notranslate nohighlight">\(u_h = u_h(x - ct)\)</span>.  For <span class="math notranslate nohighlight">\(u_{PI}\)</span> we can see that:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial u_{PI}}{\partial t} + c \frac{\partial u_{PI}}{\partial x} = v(x+ct)\]</div>
-<p>and through a similar process as Equation <a class="reference internal" href="#equation-yode">(1.14)</a>, we can show that that <span class="math notranslate nohighlight">\(u_{PI} = u_{PI}(x+ct)\)</span>.<br />
-The general solution to the wave equation is therefore:</p>
+<p>and through a similar process as Equation <a class="reference internal" href="#equation-yode">(1.14)</a>, we can show that that <span class="math notranslate nohighlight">\(u_{PI} = u_{PI}(x+ct)\)</span>.</p>
+<p>The general solution to the wave equation is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-wefuncform">
 <span class="eqno">(1.16)<a class="headerlink" href="#equation-wefuncform" title="Permalink to this equation">¶</a></span>\[u(t,x) = A(x+ ct) + B(x - ct) \]</div>
-<p>where <span class="math notranslate nohighlight">\(A,\,B\)</span> are functions that we still have not yet found!</p>
-<p>We call these sorts of solutions <b> plane wave solutions </b> and we can interpret these two functions as left and right
+<p>where <span class="math notranslate nohighlight">\(A,\,B\)</span> are functions that we still have not yet found.</p>
+<p>We call these <b>travelling wave</b> solutions and we can interpret these two functions as left and right
 moving wave solutions here, to see how consider the functions first at <span class="math notranslate nohighlight">\(t = 0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[u(x,0) = A(x) + B(x)\]</div>
@@ -504,32 +504,33 @@ A + B \,&amp;&amp; = \cos(\phi) \\
 <div class="math notranslate nohighlight">
 \[\begin{split}f(x) &amp;=&amp; \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
 \, &amp;=&amp;\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(A'\)</span> is some constant to be found.  So if we use the condition that we will eventually just take
-the real parts of our complex solutions, it dramatically simplifies the form of the equations.  Therefore we rewrite
-Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(1.17)</a>:</p>
+<p>where <span class="math notranslate nohighlight">\(A'\)</span> is some constant to be found.  So if we use the condition that we will eventually just take the real parts
+of our complex solutions, it dramatically simplifies the form of the equations.  We call this complex representation
+of oscillating functions a <b>phasor</b>.</p>
+<p>Therefore we rewrite Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(1.17)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln">
 <span class="eqno">(1.18)<a class="headerlink" href="#equation-fullwaveeqnsoln" title="Permalink to this equation">¶</a></span>\[u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) \]</div>
 <p>where <span class="math notranslate nohighlight">\(A',\, B'\)</span> are constants to be found.</p>
 </div>
-<div class="section" id="features-of-plane-wave-solutions">
-<h2><span class="section-number">1.4.3. </span>Features of Plane Wave Solutions<a class="headerlink" href="#features-of-plane-wave-solutions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="features-of-wave-solutions">
+<h2><span class="section-number">1.4.3. </span>Features of Wave Solutions<a class="headerlink" href="#features-of-wave-solutions" title="Permalink to this headline">¶</a></h2>
 <p>Lets examine these quantities <span class="math notranslate nohighlight">\(k,\, \omega\)</span> a little more closely too, start with a right travelling wave <span class="math notranslate nohighlight">\(u\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[u(x,\,t) = u_0 \,\exp\left(i(kx - \omega t)\right)\]</div>
 <p>where <span class="math notranslate nohighlight">\(u(x=0,\, t=0) = u_0\)</span>.</p>
 <p>If we shift <span class="math notranslate nohighlight">\(t \rightarrow t + 2\pi/\omega\)</span>, then we see that <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> remains invariant, due to the
 periodic nature of <span class="math notranslate nohighlight">\(e^{i\omega t}\)</span>.  This suggests that <span class="math notranslate nohighlight">\(2\pi/\omega\)</span> is the <b> time period </b> of the
-waves oscillation <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span> and in fact it is clear that <span class="math notranslate nohighlight">\(\omega = \frac{2\pi}{T} = 2\pi f\)</span>
+waves oscillation <span class="math notranslate nohighlight">\(T = 2\pi/\omega\)</span> and in fact it is clear that <span class="math notranslate nohighlight">\(\omega = 2\pi/T = 2\pi f\)</span>
 is just the angular frequency of the wave.</p>
 <p>Likewise if we shift <span class="math notranslate nohighlight">\(x \rightarrow x + 2\pi/k\)</span>, then <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> remains invariant, due to the periodic nature
 of <span class="math notranslate nohighlight">\(e^{i k x}\)</span> and this suggests that <span class="math notranslate nohighlight">\(2\pi/k\)</span> is the <b> wavelength </b> of the wave, hence
-<span class="math notranslate nohighlight">\(k = \frac{2\pi}{\lambda}\)</span>.  This is known as the <b> wave vector </b> of the wave.</p>
+<span class="math notranslate nohighlight">\(k = 2\pi/\lambda\)</span>.  This is known as the <b> wave vector </b> of the wave.</p>
 <p>Although it seems strange that a scalar quantity is being called a vector, this is only true in the one
 dimensional case, for a right travelling wave propagating in three dimensions:</p>
 <div class="math notranslate nohighlight">
 \[{\bf u}(x,\,t) = {\bf u_0} \exp\left(i(\bf{k}\cdot\bf{x} - \omega t)\right)\]</div>
 <p>where <span class="math notranslate nohighlight">\({\bf k},\, \,{\bf u},\, {\bf u_0}\)</span> are now vector quantities, with <span class="math notranslate nohighlight">\({\bf k} = (k_x,\, k_y,\, k_z),\ {\bf x} = (x,\, y,\, z)\)</span>, and
-<span class="math notranslate nohighlight">\(k = |\bf{k}| = \frac{2\pi}{\lambda}\)</span>.  <span class="math notranslate nohighlight">\({\bf u_0}\)</span> is known as the waves <b>Polarisation Vector</b> (more on this later).</p>
+<span class="math notranslate nohighlight">\(k = |\bf{k}| = 2\pi/\lambda\)</span>.  <span class="math notranslate nohighlight">\({\bf u_0}\)</span> is known as the waves <b>Polarisation Vector</b> (more on this later).</p>
 <p>The quantity <span class="math notranslate nohighlight">\(\Phi = kx-\omega t\)</span> is often known as the <b> phase </b> of the wave and comparing these
 between two travelling waves <span class="math notranslate nohighlight">\(|\Phi_1 - \Phi_2|\)</span> allows us to look at the <b> phase difference </b>
 between waves, which is important in phenomena such as interference.  All of these considerations also apply to left

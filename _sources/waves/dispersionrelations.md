@@ -1,29 +1,31 @@
 # Dispersion Relations and Wave Energy
 
 Now that we have our complex wave solutions to the equation, we can see that plugging in the solutions 
-to the wave equation produce their own equations.  The simplest solution is 
-
+to the wave equation produce their own equations.  Lets start with the simplest wave solution, a 1D right hand moving wave:
 ```{math}
 :label: waveform
-u &=& \,u_0\,\exp(i(kx-\omega t))\\
-u_{xx} &=& \,-k^2 \,u\\ 
-u_{tt} &=& \, -\omega^2 \,u
+u = u_0\,\exp(i(kx-\omega t))
 ```
+Plugging this into the wave equation:
 ```{math}
-c^2 u_{xx} = u_{tt} \Rightarrow \omega^2 &=& \,c^2 k^2 \\
-\omega &=& \,\pm\, c k
+u_{xx} &=& \,-k^2 \,u\\ 
+u_{tt} &=& \, -\omega^2 \,u \\
+c^2 u_{xx} &=& \, u_{tt} \\
+-\omega^2 \,u &=& \, -c^2\,k^2\,u \Rightarrow \omega^2 &=& \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k
 ```
-where each root here corresponds to waves propagating in different directions.  Therefore we don't need to write two 
-different wave solutions, we can just use {eq}`waveform` with the proviso that $\omega = \omega(k)$.
+Since we have two roots for $\omega$ here, we can see that these correspond to either left or right hand moving waves.  
+Therefore if we usee {eq}`waveform` with the proviso that $\omega = \omega(k) = \pm c\, k$, this describes the travelling wave solutions
+in {eq}`fullwaveeqnsoln`.
 
-We call the function $\omega = \omega(k)$ a <b>dispersion relation</b>, notice in this case it is linear but in 
-general it could be any function of $k$.  We can also rewrite this linear expression in terms of $f = \omega/2\pi, \,\lambda = 2\pi/k$
+The function $\omega = \omega(k)$ is known as a <b>dispersion relation</b>.  In this case, $\omega(k)$ is a linear function of $k$, but in 
+general it could be <em>any</em> function of $k$.  We can also rewrite this linear expression in terms of frequency and wavelegnth 
+$f = \omega/2\pi, \,\lambda = 2\pi/k$:
 ```{math}
 c = f \,\lambda
 ```
-a very familiar result! 
+which is of course a familiar result! 
 
-Looking at the combination of $\omega/k$, notice it has units of
+Looking at the combination of $\omega/k$, notice it has units of:0
 ```{math}
 \frac{[\omega]}{[k]} = \frac{s^{-1}}{m^{-1}} = m\,s^{-1} = [\textrm{speed}]
 ```
@@ -43,8 +45,7 @@ v_g = \frac{\partial \omega}{\partial k}
 ```
 this is known as the <b> group velocity </b> of the wave and describes the velocity with which the overall 
 envelope shape of the wave's amplitudes (known as the modulation or envelope of the wave) propagates 
-through space (more on this later when we discuss wave packets).  We can extend this to two and higher 
-dimensions using the gradient operator
+through space.  We can extend this to two and higher dimensions using the gradient operator
 ```{math}
 \bf{v_p} &=& \,\frac{\bf{\hat{k}}}{|\bf{k}|}\omega \\
 \bf{v_g} &=& \,\nabla_k \omega 
@@ -53,8 +54,7 @@ Usually these vectors point in the same direction, but there are examples in nat
 the anisotropic structure within a crystal, where the two vectors are not parallel. 
 
 
-## Energy and Power of Plane Waves
-
+## Energy and Power of Travelling Waves
 Lets again start with a travelling wave $u$:
 ```{math}
 u(x,\,t) = \mathrm{Re}\Big[u_0\, \exp\left(i(kx - \omega t)\right)\Big] = u_0\,\cos\left(kx - \omega t\right)
@@ -66,7 +66,7 @@ the energy density will be given by:
 ```
 and since $\omega^2 = c^2\,k^2$, this simplifies to:
 ```{math}
-:label: energydensityplanewave
+:label: energydensitytravelwave
 \epsilon = \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)
 ```
 {numref}`WaveEnergy` shows the difference in phase between $u(x,\,t)$ and $\epsilon(x,\,t)$.  
@@ -94,7 +94,7 @@ E_\lambda =\frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\lambda = \pi \,c^2\,\rho_L\,k\
 ```
 Which suggests $E_\lambda \propto {u_0}^2$, which is a key result.  
 
-Also note that if we did the same analysis with a left travelling wave $u = u_0\,\exp(i(|k|x + |\omega|\,t))$, the result of Equation {eq}`energydensityplanewave` 
+Also note that if we did the same analysis with a left travelling wave $u = u_0\,\exp(i(|k|x + |\omega|\,t))$, the result of Equation {eq}`energydensitytravelwave` 
 would be the same, therefore for plane waves the expression for $\epsilon$ can be simplifed:
 ```{math}
 \epsilon = \rho_L\,c^2\,\left(\frac{\partial u}{\partial x} \right)^2 = \rho_L\,\left(\frac{\partial u}{\partial t} \right)^2
@@ -116,4 +116,8 @@ where we use $\omega T = 2\pi$ and by the cyclic nature of $\cos(x)$, these term
 ```{math}
 \langle P \rangle_T = \frac{1}{2}\rho_L\,\omega^2\,c\,{u_0}^2 = \frac{1}{2}\rho_L\,c^3\,k^2\,{u_0}^2
 ```
-and here we see that $\langle P \rangle_T\propto {u_0}^2$.
+and here we see that $\langle P \rangle_T\propto {u_0}^2$.  
+
+If we think back to oscilaating electrical systems, for an oscillating voltage $v = V_0\cos(\Omega t)$, the electrical power would be
+$P = V^2 / R = {V_0}^2\,\cos^2(\Omega t)/R$ - suggesting the power and oscillation amplitude are related according to $P \propto {V_0}^2$, which we see is a general 
+fact of travelling wave systems.

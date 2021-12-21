@@ -159,23 +159,23 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -204,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../electromagnetism/EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -215,7 +215,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -450,15 +450,15 @@ and therefore <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>
 \[\Delta E = \Delta K + \Delta U\]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the total kinetic energy and <span class="math notranslate nohighlight">\(U\)</span> the total potential energy.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Delta K &amp;=&amp; \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
+\[\begin{split}\Delta K &amp;=&amp;\, \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
 \left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2}\right)\left(\frac{\partial y}{\partial t}\right)^2 \\
-\Delta U &amp;=&amp; T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)\end{split}\]</div>
-<p>Recall for transverse waves <span class="math notranslate nohighlight">\(\theta \ll 1\)</span> which therefore means that <span class="math notranslate nohighlight">\(\partial y/\partial x \ll 1\)</span> and therefore if we do a binomial
+\Delta U &amp;=&amp;\, T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)\end{split}\]</div>
+<p>Recall for transverse waves <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>, therefore <span class="math notranslate nohighlight">\(\partial y/\partial x \ll 1\)</span> and so we can do a binomial
 expansion:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Delta K &amp;\simeq&amp; \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots,\quad \quad 
-\Delta U \simeq T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots
-\\ \Rightarrow \Delta E &amp;=&amp; \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
+\[\begin{split}\Delta K &amp;\simeq&amp;\, \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots, \\
+\Delta U &amp;\simeq&amp;\,  T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots\\ 
+\Rightarrow \Delta E &amp;=&amp; \, \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
 \frac{T}{\rho_L}\left(\frac{\partial y}{\partial x}\right)^2\right)\end{split}\]</div>
 <p>and given that  <span class="math notranslate nohighlight">\(T / \rho_L = c^2\)</span>, we can simplify:</p>
 <div class="math notranslate nohighlight">

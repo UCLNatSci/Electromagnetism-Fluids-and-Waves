@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.12. Electromagnetic Potentials and Gauge Theories* &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>2.12. Electromagnetic Scalar and Vector Potentials &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -159,23 +159,23 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="electrostatics.html">
-     2.1. Electrostatics
+    <a class="reference internal" href="EMmaths.html">
+     2.1. Mathematical Preliminaries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gausslawsystems.html">
-     2.2. Solving Electrostatic Systems
+    <a class="reference internal" href="electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Efieldenergy.html">
-     2.3. Energy in an Electric Field
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Efieldsmatter.html">
-     2.4. Electric Fields in Matter
+     2.4. Energy in an Electric Field
     </a>
    </li>
    <li class="toctree-l2">
@@ -204,8 +204,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="EMwaves.html">
-     2.10. Electromagnetic Waves
+    <a class="reference internal" href="solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -215,7 +215,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.12. Electromagnetic Potentials and Gauge Theories*
+     2.12. Electromagnetic Scalar and Vector Potentials
     </a>
    </li>
   </ul>
@@ -354,19 +354,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scalar-and-vector-potentials">
-   2.12.1. Scalar and Vector Potentials
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -375,18 +362,16 @@
         
               <div>
                 
-  <div class="section" id="electromagnetic-potentials-and-gauge-theories">
-<h1><span class="section-number">2.12. </span>Electromagnetic Potentials and Gauge Theories*<a class="headerlink" href="#electromagnetic-potentials-and-gauge-theories" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="scalar-and-vector-potentials">
-<h2><span class="section-number">2.12.1. </span>Scalar and Vector Potentials<a class="headerlink" href="#scalar-and-vector-potentials" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="electromagnetic-scalar-and-vector-potentials">
+<h1><span class="section-number">2.12. </span>Electromagnetic Scalar and Vector Potentials<a class="headerlink" href="#electromagnetic-scalar-and-vector-potentials" title="Permalink to this headline">¶</a></h1>
 <p>There is a different way to view these equations of electromagnetism, using the rules of vector calculus. Lets begin simply by expressing the
 electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> in terms of a potential:</p>
 <div class="math notranslate nohighlight" id="equation-electricpotential1">
-<span class="eqno">(2.30)<a class="headerlink" href="#equation-electricpotential1" title="Permalink to this equation">¶</a></span>\[{\bf E} = -\nabla \phi\]</div>
+<span class="eqno">(2.33)<a class="headerlink" href="#equation-electricpotential1" title="Permalink to this equation">¶</a></span>\[{\bf E} = -\nabla \phi\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi = \phi(x,\,y,\,z)\)</span> is the scalar electric potential.  Gauss’s law <span class="math notranslate nohighlight">\(\nabla\cdot {\bf E} = \rho/\epsilon_0\)</span> means this now forms a Poisson equation:</p>
 <div class="math notranslate nohighlight">
 \[\nabla^2\phi = -\frac{\rho}{\epsilon_0}\]</div>
-<p>However the issue with Equation (\ref{eqn:electricpotential1}) is that it lacks are time dependence, which to solve Faraday’s law
+<p>However the issue with Equation <a class="reference internal" href="#equation-electricpotential1">(2.33)</a> is that it lacks are time dependence, which to solve Faraday’s law
 <span class="math notranslate nohighlight">\(\nabla \times {\bf E} = -\partial {\bf B}/\partial t\)</span> can cause issues:</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times {\bf E} = -\nabla \times \nabla \phi = 0 \]</div>
@@ -438,7 +423,6 @@ is still unconstrained.  Thus we can use different choices of <span class="math 
 <p>Writing electromagnetism in this way allows for quantum ideas and conceptual issues within these theories to be seen as physical effects,
 one way these are seen physically is through the Aharonov-Bohm (AB) effect.  For more information on the AB effect, check out
 <a class="reference external" href="https://www.damtp.cam.ac.uk/user/tong/qhe/qhe.pdf">these DAMTP notes</a>.</p>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
