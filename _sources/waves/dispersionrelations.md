@@ -25,7 +25,7 @@ c = f \,\lambda
 ```
 which is of course a familiar result! 
 
-Looking at the combination of $\omega/k$, notice it has units of:0
+Looking at the combination of $\omega/k$, notice it has units of:
 ```{math}
 \frac{[\omega]}{[k]} = \frac{s^{-1}}{m^{-1}} = m\,s^{-1} = [\textrm{speed}]
 ```
