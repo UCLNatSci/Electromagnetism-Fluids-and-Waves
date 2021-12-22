@@ -15,7 +15,7 @@ non-examinable extensions of some ideas (denoted with a * at the start of the su
 
 2. Electromagnetism
 	1. Introduction electrostatics and Gauss's law
-	2. Beginnings of magnetism up to Amp\`ere's law
+	2. Beginnings of magnetism up to Ampère's law
 	3. Electromagnetic induction and Faraday's law
 	4. Deriving Maxwell’s equations
 	5. Electromagnetic waves
