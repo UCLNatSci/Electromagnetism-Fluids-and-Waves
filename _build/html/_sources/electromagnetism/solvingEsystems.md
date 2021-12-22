@@ -236,11 +236,14 @@ $R = \sqrt{x^2 + r^2}$,  our final result has the form:
 ```
 Using a trigonometric substitution, $x = r \tan (\theta)$, we find:
 ```{math}
-    E_r &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\int_{x=-a}^{x=b} \cos(\theta)\,\mathrm{d} \theta = 
-	\frac{\lambda}{4\pi\,\epsilon_0\,r} \Bigg[\sin(\theta)\Bigg]_{x=-a}^{x=b} \\
-    &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r} \left[\frac{x}{\sqrt{x^2+r^2}}\right]_{-a}^{b} = 
+    E_r = \frac{\lambda}{4\pi\,\epsilon_0\,r}\int_{x=-a}^{x=b} \cos(\theta)\,\mathrm{d} \theta = 
+	\frac{\lambda}{4\pi\,\epsilon_0\,r} \Big[\sin(\theta)\Big]_{x=-a}^{x=b}
+```
+If $x = r \tan (\theta)$, then $\sin (\theta) = x / \sqrt{x^2 + r^2}$:
+```{math}
+    E_r &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r} \left[\frac{x}{\sqrt{x^2+r^2}}\right]_{-a}^{b} = 
 	\frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\\ 
-	{\bf E} &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\hat{{\bf r}}
+	\Rightarrow {\bf E} &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\hat{{\bf r}}
 ```
 A somewhat messy result, but consider the large $a,\,b$ limit:
 ```{math}

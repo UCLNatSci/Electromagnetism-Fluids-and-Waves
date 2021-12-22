@@ -14,11 +14,11 @@ We can see that the cross sectional area is perpendicular to the velocity in thi
 {\bf A} = A\,\hat{\bf n}
 ```
 where $\hat{\bf n}$ is a unit vector normal to the surface area $A$.  We can find the rate of mass flowing through the pipe, which is sometimes 
-called the {\bf Mass Current} $I_m$ of the water flow, with units of $[\textrm{mass}][\textrm{time}]^{-1}$:
+called the <b>Mass Current</b> $I_m$ of the water flow, with units of $[\textrm{mass}][\textrm{time}]^{-1}$:
 ```{math}
 I_m = \rho {\bf v} \cdot {\bf A}
 ```
-and so we can find the {\bf Mass Flux} $\Phi_m$, with units of $[\textrm{mass}][\textrm{length}]^{-2}[\textrm{time}]^{-1}$
+and so we can find the <b>Mass Flux</b> $\Phi_m$, with units of $[\textrm{mass}][\textrm{length}]^{-2}[\textrm{time}]^{-1}$
 ```{math}
 \Phi_m = \rho {\bf v}
 ```
@@ -49,8 +49,7 @@ we can define a surface normal $\bf n$ and then just resolve $\bf F$ into $\bf F
 ---
 name: flux3D
 ---
-A vector $\bf F$ passes through some surface (depicted in the green).  
-<b>Left panel,</b> the situation for a flat surface, <b>Right panel</b> the situation for a curved surface. 
+A vector $\bf F$ passes through some surface (depicted in the green), <b>Left panel,</b> the situation for a flat surface, <b>Right panel</b> the situation for a curved surface.
 Notice that in each case the setting up a surface normal vector at each position and resolving the vector $\bf F$ into parallel $\bf F_\parallel$ and 
 perpendicular $\bf F_\perp$ components. 
 ```

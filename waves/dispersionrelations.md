@@ -10,7 +10,7 @@ Plugging this into the wave equation:
 ```{math}
 u_{xx} &=& \,-k^2 \,u\\ 
 u_{tt} &=& \, -\omega^2 \,u \\
-c^2 u_{xx} &=& \, u_{tt} \\
+u_{tt} &=& \, c^2\,u_{xx} \\
 -\omega^2 \,u &=& \, -c^2\,k^2\,u \Rightarrow \omega^2 &=& \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k
 ```
 Since we have two roots for $\omega$ here, we can see that these correspond to either left or right hand moving waves.  
@@ -105,7 +105,7 @@ P(x,\,t) &=& \, \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x =
 2\rho_L\,{u_0}^2\,\omega^3\,\int\sin\left(kx - \omega t\right)\cos\left(kx - \omega t\right)\,\mathrm{d}x \\
 &=& \, \frac{1}{k}\rho_L\,{u_0}^2\,\omega^3\,\sin^2\left(kx - \omega t\right) = \rho_L\,{u_0}^2\,\omega^2\,c\,\sin^2\left(kx - \omega t\right)
 ```
-Notice that this result is related to {eq}`energydensityplanewave` by $P = c\,\epsilon$ and so the time averaged power is:
+Notice that this result is related to {eq}`energydensitytravelwave` by $P = c\,\epsilon$ and so the time averaged power is:
 ```{math}
 \langle P \rangle_T &=&\, \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t = \frac{1}{T}\,\rho_L\,{u_0}^2\,\omega^2\,c\,\int_0^T \sin^2\left(kx - \omega t\right)\,\mathrm{d}t \\
 &=& \,  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\int_0^T \left(1 - \cos\left(2kx - 2\omega t\right)\right)\,\mathrm{d}t \\

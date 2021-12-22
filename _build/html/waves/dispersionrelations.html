@@ -220,58 +220,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../fluids/intro.html">
-   3. Fluids
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/mathideas.html">
-     3.2. Mathematical background
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/visualise.html">
-     3.3. Visualising fluid motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/helmholtz.html">
-     3.4. Helmholtz decomposition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/potential_flows.html">
-     3.5. Potential flows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/navstok.html">
-     3.6. Navier-Stokes Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/newtonian.html">
-     3.7. Newtonian vs non-Newtonian fluids
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/reynolds.html">
-     3.8. Reynolds number
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/demo-exercise.html">
-     3.9. A title
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -385,7 +333,7 @@ to the wave equation produce their own equations.  Lets start with the simplest 
 <div class="math notranslate nohighlight">
 \[\begin{split}u_{xx} &amp;=&amp; \,-k^2 \,u\\ 
 u_{tt} &amp;=&amp; \, -\omega^2 \,u \\
-c^2 u_{xx} &amp;=&amp; \, u_{tt} \\
+u_{tt} &amp;=&amp; \, c^2\,u_{xx} \\
 -\omega^2 \,u &amp;=&amp; \, -c^2\,k^2\,u \Rightarrow \omega^2 &amp;=&amp; \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k\end{split}\]</div>
 <p>Since we have two roots for <span class="math notranslate nohighlight">\(\omega\)</span> here, we can see that these correspond to either left or right hand moving waves.<br />
 Therefore if we usee <a class="reference internal" href="#equation-waveform">(1.21)</a> with the proviso that <span class="math notranslate nohighlight">\(\omega = \omega(k) = \pm c\, k\)</span>, this describes the travelling wave solutions
@@ -456,7 +404,7 @@ would be the same, therefore for plane waves the expression for <span class="mat
 \[\begin{split}P(x,\,t) &amp;=&amp; \, \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x = 
 2\rho_L\,{u_0}^2\,\omega^3\,\int\sin\left(kx - \omega t\right)\cos\left(kx - \omega t\right)\,\mathrm{d}x \\
 &amp;=&amp; \, \frac{1}{k}\rho_L\,{u_0}^2\,\omega^3\,\sin^2\left(kx - \omega t\right) = \rho_L\,{u_0}^2\,\omega^2\,c\,\sin^2\left(kx - \omega t\right)\end{split}\]</div>
-<p>Notice that this result is related to <code class="xref eq docutils literal notranslate"><span class="pre">energydensityplanewave</span></code> by <span class="math notranslate nohighlight">\(P = c\,\epsilon\)</span> and so the time averaged power is:</p>
+<p>Notice that this result is related to <a class="reference internal" href="#equation-energydensitytravelwave">(1.22)</a> by <span class="math notranslate nohighlight">\(P = c\,\epsilon\)</span> and so the time averaged power is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\langle P \rangle_T &amp;=&amp;\, \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t = \frac{1}{T}\,\rho_L\,{u_0}^2\,\omega^2\,c\,\int_0^T \sin^2\left(kx - \omega t\right)\,\mathrm{d}t \\
 &amp;=&amp; \,  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\int_0^T \left(1 - \cos\left(2kx - 2\omega t\right)\right)\,\mathrm{d}t \\

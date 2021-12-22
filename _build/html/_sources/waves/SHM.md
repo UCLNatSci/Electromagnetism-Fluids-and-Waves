@@ -118,8 +118,3 @@ where $F(t)$ is the driving term. We can rewrite in the :
 where $\omega_0$ is the natural angular frequency of the system and $\zeta$ is the damping ratio.  If energy is put into the system at a rate of $\Omega$, such as 
 $F(t) = F_0 \cos(\Omega \,t)$ and this frequency conicinces with the natural frequency $\omega_0$, i.e. $\Omega \rightarrow \omega_0$, this gives rise to the phenomena of 
 <b> resonance </b>.  
-
-
-## 
-
-
