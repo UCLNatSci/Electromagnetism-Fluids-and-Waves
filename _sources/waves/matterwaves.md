@@ -99,8 +99,8 @@ dispersion relation, therefore:
 u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k
 ```
 
-We call these <b>wave packets</b> or sometimes as a wave train or burst - we can picture them as a larger wave envelope, with smaller localized waves 
-that travel as one unit together, as shown in {numref}`WavePacket`.  This infinite set of oscillating waves have different waven lengths, with phases 
+We call these <b>wave packets</b>, also known sometimes as wave trains or bursts - we can picture them as a larger wave envelope, with smaller localized waves 
+that travel as one unit together, as shown in {numref}`WavePacket`.  This infinite set of oscillating waves have different wavelengths, with phases 
 and amplitudes that constructively and destructively interfereonly over different regions of space.
 
 ```{figure} ../figures/WavePacket.png

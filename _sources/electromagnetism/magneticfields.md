@@ -9,8 +9,8 @@ out the field lines.
 ---
 name: BarMagnetBField
 ---
-{\bf Left Panel}, magnetic field lines around a bar magnet, 
-{\bf Right Panel}, pattern of iron fillings indicating the magnetic field.
+<b> Left Panel</b>, magnetic field lines around a bar magnet, 
+<b> Right Panel</b>, pattern of iron fillings indicating the magnetic field.
 ```
 We can move from this qualitative understanding of magnetic fields to a mathematical one, using the tools we developed in Chapters 2 and 3.  Lets try and understand how 
 Gauss's law works for magnetic fields:

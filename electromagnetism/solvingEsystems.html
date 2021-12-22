@@ -220,58 +220,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../fluids/intro.html">
-   3. Fluids
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/mathideas.html">
-     3.2. Mathematical background
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/visualise.html">
-     3.3. Visualising fluid motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/helmholtz.html">
-     3.4. Helmholtz decomposition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/potential_flows.html">
-     3.5. Potential flows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/navstok.html">
-     3.6. Navier-Stokes Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/newtonian.html">
-     3.7. Newtonian vs non-Newtonian fluids
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/reynolds.html">
-     3.8. Reynolds number
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/demo-exercise.html">
-     3.9. A title
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -614,11 +562,13 @@ each by superposition contributing <span class="math notranslate nohighlight">\(
 \[    E_r = \frac{\lambda\,r}{4\pi\,\epsilon_0}\int_{-a}^{b} \frac{\mathrm{d} x}{(x^2 + r^2)^{3/2}}\]</div>
 <p>Using a trigonometric substitution, <span class="math notranslate nohighlight">\(x = r \tan (\theta)\)</span>, we find:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}    E_r &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\int_{x=-a}^{x=b} \cos(\theta)\,\mathrm{d} \theta = 
-	\frac{\lambda}{4\pi\,\epsilon_0\,r} \Bigg[\sin(\theta)\Bigg]_{x=-a}^{x=b} \\
-    &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r} \left[\frac{x}{\sqrt{x^2+r^2}}\right]_{-a}^{b} = 
+\[    E_r = \frac{\lambda}{4\pi\,\epsilon_0\,r}\int_{x=-a}^{x=b} \cos(\theta)\,\mathrm{d} \theta = 
+	\frac{\lambda}{4\pi\,\epsilon_0\,r} \Big[\sin(\theta)\Big]_{x=-a}^{x=b}\]</div>
+<p>If <span class="math notranslate nohighlight">\(x = r \tan (\theta)\)</span>, then <span class="math notranslate nohighlight">\(\sin (\theta) = x / \sqrt{x^2 + r^2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}    E_r &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r} \left[\frac{x}{\sqrt{x^2+r^2}}\right]_{-a}^{b} = 
 	\frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\\ 
-	{\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\hat{{\bf r}}\end{split}\]</div>
+	\Rightarrow {\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\hat{{\bf r}}\end{split}\]</div>
 <p>A somewhat messy result, but consider the large <span class="math notranslate nohighlight">\(a,\,b\)</span> limit:</p>
 <div class="math notranslate nohighlight">
 \[    \lim_{a,\,b\rightarrow \infty}\left[\left(1+\frac{r^2}{b^2}\right)^{-1/2} + \left(1+\frac{r^2}{a^2}\right)^{-1/2}\right] = 2 

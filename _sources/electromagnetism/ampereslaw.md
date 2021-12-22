@@ -32,14 +32,14 @@ Thus our expression for <b>Ampère's Law</b> is given by:
 ## Magnetic Field from a Wire
 Now lets consider a thick wire, modelled as a cylinder of current $I$ with cross sectional radius $R$, as depicted in {numref}`AmpereLawBoundary`, we see 
 akin to solving Gauss's law,  that there are two regimes of interest:
-- $r \geq R$ 
+- REGION I: $r \geq R$ 
 
 Applying Ampère's law, we find the $I_{enclosed} = I$ here and therefore:
 ```{math}
 \oint {\bf B} \cdot \mathrm{d} {\bf \ell} = B_\theta\,(2\pi\,r) = \mu_0\,I \Rightarrow {\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}}
 ```
     
-- $r < R$ 
+- REGION II: $r < R$ 
 
 In order to find the $I_{enclosed}$ we can see from Equation {eq}`driftvelocity` that for a conductor $I \propto A$ and 
 therefore we can calculate the uniform current density $\rho = I / A$.  Therefore here:
@@ -53,8 +53,8 @@ We see that at the boundary of the wire, $r = R$, these two magnetic field expre
 piecewise function:
 ```{math}
 {\bf B} = \begin{cases} 
-      \mu_0 \,I\, r / 2 \pi\, R^2 & r < R \\
-      \mu_0 \,I / 2 \pi\, r & r \geq R 
+      \mu_0 \,I\, r / 2 \pi\, R^2 \,\hat{\bf \theta} & r < R \\
+      \mu_0 \,I / 2 \pi\, r \,\hat{\bf \theta} & r \geq R 
    \end{cases}
 ```
 and we see a depiction of this in {numref}`BfieldWire`.
@@ -93,7 +93,7 @@ where we have added an additional <b>Displacement Current</b> $I_D$:
 I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}
 ```
 
-## Magnetic Fields in Coils*
+## Magnetic Fields in Coils
 
 In order to make sense of solenoids and other systems with coils of wire, we need to first break down the system of a single circular coil of wire, 
 as shown in {numref}`BFieldCoilofWire`.
@@ -120,7 +120,7 @@ and only the net <em> parallel </em> components, i.e. ${\bf B} \cos(\theta)$ wil
 {\bf B} = \int_{\mathcal{C}} \frac{\mu_0}{4\pi} \frac{I\,\cos(\theta)\,\mathrm{d} \ell}{z^2 + R^2}\,\hat{{\bf z}} 
 ```
 
-Given that $\cos(\theta) = R/\sqrt{z^2 + R^2}$, we can simplyify:
+Given that $\cos(\theta) = R/\sqrt{z^2 + R^2}$, we can simplify:
 ```{math}
 {\bf B} = \frac{\mu_0\,I\,R}{4\pi\,(z^2 + R^2)^{3/2}}\,\int_{\mathcal{C}}\mathrm{d} \ell\,\hat{{\bf z}} 
 ```
@@ -155,7 +155,7 @@ uniform magnetic field inside a solenoid follows:
 B = \frac{\mu_0\,N\,I}{L}
 ```
 where $N$ is the number of turns on the solenoid and $L$ is the length of the coil.  Likewise it is possible to find the magnetic field 
-from a solenoid shaped like a torus, as depicted in {numref}`BFieldSolenoid`.  The magnetic field for a solenoid shaped as a torus is:
+from a solenoid shaped like a torus, as depicted in {numref}`BFieldSolenoid`:
 ```{math}
 B = \frac{\mu_0\,N\,I}{2\pi\,r}
 ``` 
@@ -165,11 +165,12 @@ where $r$ is the torus radius.
 name: BFieldSolenoid
 ---
 <b> Left Pane </b>-  The magnetic field around a current carrying solenoid.  
-<b> Right Pane </b> - The magnetic field around a current carrying toroidal solenoid.  The magnetic field loops over each turn along the solenoid.
+<b> Right Pane </b> - The magnetic field around a current carrying toroidal solenoid.  
+The magnetic field loops over each turn along the solenoid.
 
 ```
  
-## Magnetism in Matter - the ${\bf H}$ Field*
+## Magnetism in Matter - the $\bf H$ Field*
 We might rightly now ask what is the magnetostatic equivalent of the ${\bf D}$ field from electrostatics, describing how magnetic fields permeate through matter. 
 We call this the ${\bf H}$ field and it may be defined as:
 ```{math}

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Fluids &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>Fluids &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -57,8 +57,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.2. Mathematical background" href="mathideas.html" />
-    <link rel="prev" title="2.12. Electromagnetic Scalar and Vector Potentials" href="../electromagnetism/EMpotentials.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,7 +93,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -220,58 +218,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   3. Fluids
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mathideas.html">
-     3.2. Mathematical background
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="visualise.html">
-     3.3. Visualising fluid motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="helmholtz.html">
-     3.4. Helmholtz decomposition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="potential_flows.html">
-     3.5. Potential flows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="navstok.html">
-     3.6. Navier-Stokes Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="newtonian.html">
-     3.7. Newtonian vs non-Newtonian fluids
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="reynolds.html">
-     3.8. Reynolds number
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="demo-exercise.html">
-     3.9. A title
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -361,7 +307,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-continuum-hypothesis">
-   3.1. The continuum hypothesis
+   The continuum hypothesis
   </a>
  </li>
 </ul>
@@ -376,7 +322,7 @@
               <div>
                 
   <div class="section" id="fluids">
-<h1><span class="section-number">3. </span>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
+<h1>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
 <p>Fluid dynamics is the study of flow. Since anything that flows can be thought of as a fluid, this field of study covers a tremendous range of applications, including aerodynamics, meteorology, hydraulics, oceanography, astrophysical dynamics, acoustics, hemodynamics (blood flow) and mucus flows. Principles of fluid dynamics have even been applied to the study of granular flows, such as dry sand, vehicular traffic and crowd dynamics.</p>
 <p>Despite the vast range of applications, most of these phenomena can be examined by just three unifying principles:</p>
 <ul class="simple">
@@ -386,15 +332,13 @@
 </ul>
 <p>For many flows (this course), we can neglect thermodynamic effects, and in that case we can also get by without conservation of energy. This chapter introduces the equations of conservation of mass and conservation of momentum.</p>
 <div class="section" id="the-continuum-hypothesis">
-<h2><span class="section-number">3.1. </span>The continuum hypothesis<a class="headerlink" href="#the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
+<h2>The continuum hypothesis<a class="headerlink" href="#the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
 <p>So that we can use the tools of calculus, we treat the fluid as if it were continuous in structure and we regard physical quantities as locally uniform. This also means we can treat gases and liquids in the same way, since the equations of motion are independent of the particle structure.</p>
 <p>An illustration of the idea is shown below, applied to measurements of density. We ignore molecular fluctuations, and consider a locally averaged measure of density based on the mean free path between atoms.</p>
 <br>
 <a class="reference internal image-reference" href="fluids\fluids/navstok_img/continuum_hypothesis.png" id="continuum-hypothesis"><img alt="some alternative text" class="align-center" id="continuum-hypothesis" src="fluids\fluids/navstok_img/continuum_hypothesis.png" /></a>
 <br>
 <p>In actuality, the concept of “density” does not apply very meaningfully at the microscopic level, since the density at each point is defined by either being “inside” or “outside” an atom.</p>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -423,8 +367,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../electromagnetism/EMpotentials.html" title="previous page"><span class="section-number">2.12. </span>Electromagnetic Scalar and Vector Potentials</a>
-    <a class='right-next' id="next-link" href="mathideas.html" title="next page"><span class="section-number">3.2. </span>Mathematical background</a>
 
         </div>
         

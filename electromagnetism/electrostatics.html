@@ -220,58 +220,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../fluids/intro.html">
-   3. Fluids
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/mathideas.html">
-     3.2. Mathematical background
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/visualise.html">
-     3.3. Visualising fluid motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/helmholtz.html">
-     3.4. Helmholtz decomposition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/potential_flows.html">
-     3.5. Potential flows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/navstok.html">
-     3.6. Navier-Stokes Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/newtonian.html">
-     3.7. Newtonian vs non-Newtonian fluids
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/reynolds.html">
-     3.8. Reynolds number
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/demo-exercise.html">
-     3.9. A title
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -443,9 +391,9 @@ of the electric field is crossing the spherical boundary here, clearly the flux 
 around the charge <span class="math notranslate nohighlight">\(Q\)</span> we find that the area normal vector is <span class="math notranslate nohighlight">\({\bf A} = A_r\,\hat{{\bf r}}\)</span>.  The surface integral term therefore reduces to:</p>
 <div class="math notranslate nohighlight">
 \[\iint {\bf E}\cdot \mathrm{d} {\bf A} = \iint E_r \,\mathrm{d} A_r\]</div>
-<p>where we used</p>
+<p>where we decomposed <span class="math notranslate nohighlight">\(\bf E\)</span> in to components:</p>
 <div class="math notranslate nohighlight">
-\[{\bf E} = E_r \hat{{\bf r}} +E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}$\]</div>
+\[{\bf E} = E_r \hat{{\bf r}} +E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}\]</div>
 <p>By symmetry therefore the electric field does not have an angular <span class="math notranslate nohighlight">\((\theta,\, \phi)\)</span> dependence - this makes sense physically because
 whether a charge is on our left or right hand side does not charge the force felt if it is at the same fixed distance.  Calculating
 <span class="math notranslate nohighlight">\(\iint {\bf E}\cdot \mathrm{d} {\bf A}\)</span> is straightforward on a sphere:</p>

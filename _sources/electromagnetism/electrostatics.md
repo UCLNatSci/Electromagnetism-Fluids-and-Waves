@@ -71,9 +71,9 @@ around the charge $Q$ we find that the area normal vector is ${\bf A} = A_r\,\ha
 ```{math}
 \iint {\bf E}\cdot \mathrm{d} {\bf A} = \iint E_r \,\mathrm{d} A_r
 ``` 
-where we used 
+where we decomposed $\bf E$ in to components:
 ```{math}
-{\bf E} = E_r \hat{{\bf r}} +E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}$
+{\bf E} = E_r \hat{{\bf r}} +E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}
 ```
 By symmetry therefore the electric field does not have an angular $(\theta,\, \phi)$ dependence - this makes sense physically because 
 whether a charge is on our left or right hand side does not charge the force felt if it is at the same fixed distance.  Calculating 

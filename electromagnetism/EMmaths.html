@@ -220,58 +220,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../fluids/intro.html">
-   3. Fluids
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/mathideas.html">
-     3.2. Mathematical background
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/visualise.html">
-     3.3. Visualising fluid motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/helmholtz.html">
-     3.4. Helmholtz decomposition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/potential_flows.html">
-     3.5. Potential flows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/navstok.html">
-     3.6. Navier-Stokes Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/newtonian.html">
-     3.7. Newtonian vs non-Newtonian fluids
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/reynolds.html">
-     3.8. Reynolds number
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fluids/demo-exercise.html">
-     3.9. A title
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -399,10 +347,10 @@ area <span class="math notranslate nohighlight">\(A\)</span> with a velocity of 
 <div class="math notranslate nohighlight">
 \[{\bf A} = A\,\hat{\bf n}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{\bf n}\)</span> is a unit vector normal to the surface area <span class="math notranslate nohighlight">\(A\)</span>.  We can find the rate of mass flowing through the pipe, which is sometimes
-called the {\bf Mass Current} <span class="math notranslate nohighlight">\(I_m\)</span> of the water flow, with units of <span class="math notranslate nohighlight">\([\textrm{mass}][\textrm{time}]^{-1}\)</span>:</p>
+called the <b>Mass Current</b> <span class="math notranslate nohighlight">\(I_m\)</span> of the water flow, with units of <span class="math notranslate nohighlight">\([\textrm{mass}][\textrm{time}]^{-1}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[I_m = \rho {\bf v} \cdot {\bf A}\]</div>
-<p>and so we can find the {\bf Mass Flux} <span class="math notranslate nohighlight">\(\Phi_m\)</span>, with units of <span class="math notranslate nohighlight">\([\textrm{mass}][\textrm{length}]^{-2}[\textrm{time}]^{-1}\)</span></p>
+<p>and so we can find the <b>Mass Flux</b> <span class="math notranslate nohighlight">\(\Phi_m\)</span>, with units of <span class="math notranslate nohighlight">\([\textrm{mass}][\textrm{length}]^{-2}[\textrm{time}]^{-1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\Phi_m = \rho {\bf v}\]</div>
 <p>If we increase or decrease the size of the hose, we can figure out the flow rate of the resulting water flow using this mass flux, as we illustrate
@@ -426,8 +374,7 @@ the area into smaller surface elements <span class="math notranslate nohighlight
 we can define a surface normal <span class="math notranslate nohighlight">\(\bf n\)</span> and then just resolve <span class="math notranslate nohighlight">\(\bf F\)</span> into <span class="math notranslate nohighlight">\(\bf F_\parallel\)</span> and <span class="math notranslate nohighlight">\(\bf F_\perp\)</span> components, as shown in <a class="reference internal" href="#flux3d"><span class="std std-numref">Fig. 2.4</span></a>.</p>
 <div class="figure align-default" id="flux3d">
 <img alt="../_images/flux3D.png" src="../_images/flux3D.png" />
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">A vector <span class="math notranslate nohighlight">\(\bf F\)</span> passes through some surface (depicted in the green).<br />
-<b>Left panel,</b> the situation for a flat surface, <b>Right panel</b> the situation for a curved surface.
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">A vector <span class="math notranslate nohighlight">\(\bf F\)</span> passes through some surface (depicted in the green), <b>Left panel,</b> the situation for a flat surface, <b>Right panel</b> the situation for a curved surface.
 Notice that in each case the setting up a surface normal vector at each position and resolving the vector <span class="math notranslate nohighlight">\(\bf F\)</span> into parallel <span class="math notranslate nohighlight">\(\bf F_\parallel\)</span> and
 perpendicular <span class="math notranslate nohighlight">\(\bf F_\perp\)</span> components.</span><a class="headerlink" href="#flux3d" title="Permalink to this image">¶</a></p>
 </div>

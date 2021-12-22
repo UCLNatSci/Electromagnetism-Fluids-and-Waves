@@ -82,10 +82,7 @@ in order for this expression to be true for <em> any </em> bounding volume $A$ c
 
 
 ## Maxwell's Equations
-James Clark Maxwell's big contribution to classic physics is electromagnetism - the unification of the two ideas of electricity and magnetism into one theory. 
-In order to see this clearly, he wrote his much celebrated equations in differential form.  A lot of modern physics in the quantum realm also relies on this 
-unified formulation of electromagnetism.  We can collect together Equations {eq}`divE`, {eq}`divB`, {eq}`curlB` and {eq}`curlE` and present as 
-Maxwell's equations:
+We can collect together Equations {eq}`divE`, {eq}`divB`, {eq}`curlB` and {eq}`curlE` and present as Maxwell's equations:
 ```{math}
 :label: MaxwellsEqns
 \nabla\cdot {\bf E} &=&\, \frac{\rho}{\epsilon_0}    \\
