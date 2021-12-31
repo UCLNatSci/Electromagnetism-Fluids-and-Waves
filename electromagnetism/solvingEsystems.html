@@ -146,6 +146,11 @@
      1.8. Matter Waves
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/dopplershift.html">
+     1.9. Doppler Shift
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -360,8 +365,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gausss-law">
-   2.3.1. Gauss’s Law
+  <a class="reference internal nav-link" href="#the-tools">
+   2.3.1. The Tools
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -390,18 +395,25 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#superposition-of-charge">
-   2.3.7. Superposition of Charge
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#finite-lines-of-charge">
-   2.3.8. Finite Lines of Charge
+   2.3.7. Finite Lines of Charge
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#semicircular-arc">
+     2.3.7.1. Semicircular Arc
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rectilinear-rod">
+     2.3.7.2. Rectilinear Rod
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bf-d-field">
-   2.3.9.
+   2.3.8.
    <span class="math notranslate nohighlight">
     \({\bf D}\)
    </span>
@@ -421,13 +433,29 @@
                 
   <div class="section" id="solving-electrostatic-systems">
 <h1><span class="section-number">2.3. </span>Solving Electrostatic Systems<a class="headerlink" href="#solving-electrostatic-systems" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="gausss-law">
-<h2><span class="section-number">2.3.1. </span>Gauss’s Law<a class="headerlink" href="#gausss-law" title="Permalink to this headline">¶</a></h2>
-<p>Our first tool for solving electric field system is Gauss’s law:</p>
+<div class="section" id="the-tools">
+<h2><span class="section-number">2.3.1. </span>The Tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Our first tool for solving electric field system is <em>Gauss’s law</em>:</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q_{enclosed}}{\epsilon_0}\]</div>
 <p>In these systems we have to identify the symmetries present in order to use the right co-ordinate system for the bounding surface area <span class="math notranslate nohighlight">\(\bf A\)</span> as well as
 understand the charge distribution enclosed by this area, <span class="math notranslate nohighlight">\(Q_{enclosed}\)</span>.</p>
+<ul class="simple">
+<li><p>Our second tool is <em>superposition of charge</em>, making use of the linearity property of electric fields.</p></li>
+</ul>
+<p>This is usually a good fallback if the system does not have the higher degrees of syummetry that makes using Gauss’s law straightforward.  At a point
+<span class="math notranslate nohighlight">\(\bf r\)</span>, in space, the electric field from <span class="math notranslate nohighlight">\(N\)</span> point charges <span class="math notranslate nohighlight">\(Q_i\)</span> at positions <span class="math notranslate nohighlight">\(\bf r_i\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E}_{total} = \frac{1}{4 \pi \epsilon_0}\sum_{i=1}^N \frac{Q_i}{|{\bf r-r_i}|^2}\frac{\bf r-r_i}{|\bf r-r_i|}\]</div>
+<p>where the final term gives us the unit vector in the relevent direction.  If we centre ourselves on the origin, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E}_{total} = \frac{1}{4 \pi \,\epsilon_0}\sum_{i=1}^N \frac{Q_i}{|{\bf r_i}|^2}\,\hat{\bf r_i}\]</div>
+<p>We can also extend this to a continuous distribution of charge:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E}_{total} = \frac{1}{4 \pi \,\epsilon_0}\int_0^Q \frac{\mathrm{d} Q'}{|{\bf r_i}|^2}\,\hat{\bf r_i}\]</div>
+<p>and understanding the spatial distribution of <span class="math notranslate nohighlight">\(Q\)</span> can help us to calculate this integral.</p>
 </div>
 <div class="section" id="spheres-of-charge">
 <h2><span class="section-number">2.3.2. </span>Spheres of Charge<a class="headerlink" href="#spheres-of-charge" title="Permalink to this headline">¶</a></h2>
@@ -439,7 +467,7 @@ instance we consider that the charge is uniformly distributed throughout the sph
 <b> Middle:</b> Cross section considering spheres <span class="math notranslate nohighlight">\(r \leq a\)</span>,<br />
 <b> Right:</b> Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span></span><a class="headerlink" href="#sphericalinsulator" title="Permalink to this image">¶</a></p>
 </div>
-<p>Recall from our discussion of spherical geometries <span class="math notranslate nohighlight">\((r,\,\theta,\, \phi)\)</span>, the area normal <span class="math notranslate nohighlight">\(\hat{{\bf n}}\)</span> vector for this <b> Gaussian Sphere </b>
+<p>Recall from our discussion of spherical geometries <span class="math notranslate nohighlight">\((r,\,\theta,\, \phi)\)</span>, the area normal <span class="math notranslate nohighlight">\(\hat{{\bf n}}\)</span> vector for this <b>Gaussian Sphere</b>
 will point in the <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> direction, radially outwards, as shown in <a class="reference internal" href="#sphereareanormal"><span class="std std-numref">Fig. 2.10</span></a>.</p>
 <div class="figure align-default" id="sphereareanormal">
 <img alt="../_images/sphereareanormal.png" src="../_images/sphereareanormal.png" />
@@ -579,56 +607,108 @@ flux to cross, but the normal vector now is directed in the radial direction awa
 as depicted in <a class="reference internal" href="#lineofcharge"><span class="std std-numref">Fig. 2.15</span></a>.</p>
 <div class="figure align-default" id="lineofcharge">
 <img alt="../_images/InfiniteLineOfCharges.png" src="../_images/InfiniteLineOfCharges.png" />
-<p class="caption"><span class="caption-number">Fig. 2.15 </span><span class="caption-text">An infinite line of charges with a cylinder as our Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.15 </span><span class="caption-text">An infinite line of charges, which goes through the origin, with a cylindrical Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
 </div>
 <p>For a cylinder of length <span class="math notranslate nohighlight">\(L\)</span>, the area of the long side of the cylinder is <span class="math notranslate nohighlight">\(2 \pi r L\)</span> and the charge enclosed in this
 area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>, so putting these facts together:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\iint {\bf E} \cdot \mathrm{d} {\bf A} &amp;=&amp;\, \iint E_r \,\mathrm{d} A_r = E_r \,(2\pi\, r\, L) = \frac{\lambda L}{\epsilon_0} \\
+\Rightarrow E_r &amp;=&amp;\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} \end{split}\]</div>
+<p>This gives us an expression for the electric field around an infinite line of charge:</p>
 <div class="math notranslate nohighlight" id="equation-infinitechargelineefield">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-infinitechargelineefield" title="Permalink to this equation">¶</a></span>\[\begin{split}\iint {\bf E} \cdot \mathrm{d} {\bf A} &amp;=&amp;\, \iint E_r \,\mathrm{d} A_r = E_r \,(2\pi\, r\, L) = \frac{\lambda L}{\epsilon_0} \\
-&amp;=&amp;\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} \Longrightarrow {\bf E} = \frac{\lambda}{2\pi\, \epsilon_0 \,r} \hat{{\bf r}}\end{split}\]</div>
-</div>
-<div class="section" id="superposition-of-charge">
-<h2><span class="section-number">2.3.7. </span>Superposition of Charge<a class="headerlink" href="#superposition-of-charge" title="Permalink to this headline">¶</a></h2>
-<p>Solving systems with Gauss’s law with pen and paper methods usually requires some degree of symmetry, however if we look at some more
-realistic systems, we find that we need to loose some fo the symmetry, which makes Gauss’s law much harder to use.  However we may
-look at such systems instead using the idea of <b>superposition</b> of point charges - we can then use calculus to integrate
-over the whole chare distribution to find the total electric field contribution at a given point in space.</p>
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-infinitechargelineefield" title="Permalink to this equation">¶</a></span>\[{\bf E} = \frac{\lambda}{2\pi\, \epsilon_0 \,r} \hat{{\bf r}}\]</div>
+<p>Clearly such an object is theoertical, although for very long and thin wires we can approximate the eldctric field for most of the space using
+this expression.</p>
 </div>
 <div class="section" id="finite-lines-of-charge">
-<h2><span class="section-number">2.3.8. </span>Finite Lines of Charge<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">¶</a></h2>
-<p>Equation <a class="reference internal" href="#equation-infinitechargelineefield">(2.6)</a> is only true for an infinite line of charge, if we have a finite collection of charges,
-as depicted in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.16</span></a>, then we loose the symmetries of the system that we needed to simplify the Gauss’s
-law expression - making it harder to solve this system using Gauss’s law, but we can consider iot from a superposition of point charges perspective.</p>
+<h2><span class="section-number">2.3.7. </span>Finite Lines of Charge<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">¶</a></h2>
+<p>Equation <a class="reference internal" href="#equation-infinitechargelineefield">(2.6)</a> is only true for an infinite line of charge, if we have a finite collection of charges, as depicted in
+<a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.16</span></a>, then we loose some of the symmetries of the system, however the superposition method is a better way to proceed here.</p>
 <div class="figure align-default" id="finitelineofcharge">
-<img alt="../_images/FiniteLineOfCharges1.png" src="../_images/FiniteLineOfCharges1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.16 </span><span class="caption-text">An finite line of charges with length <span class="math notranslate nohighlight">\(a + b\)</span> aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis and an element of charge <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span> indicated in red.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
+<img alt="../_images/FiniteLineOfCharges2.png" src="../_images/FiniteLineOfCharges2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.16 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
 </div>
-<p>With a line of large, of length <span class="math notranslate nohighlight">\(a + b\)</span>, aligned along the <span class="math notranslate nohighlight">\(x\)</span> axis and considering a radial distance <span class="math notranslate nohighlight">\(r\)</span> away.  The radial
-component of the electric field can be found by breaking up the uniform line of charge into infinitesimal chunks,
-each by superposition contributing <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> charge, which we can then integrate over to find the total field:</p>
+<div class="section" id="semicircular-arc">
+<h3><span class="section-number">2.3.7.1. </span>Semicircular Arc<a class="headerlink" href="#semicircular-arc" title="Permalink to this headline">¶</a></h3>
+<p>Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in <a class="reference internal" href="#semicirculararcofcharge"><span class="std std-numref">Fig. 2.17</span></a></p>
+<div class="figure align-default" id="semicirculararcofcharge">
+<img alt="../_images/SemiCircularArcofCharge.png" src="../_images/SemiCircularArcofCharge.png" />
+<p class="caption"><span class="caption-number">Fig. 2.17 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, arranged in a semicircular arc of length <span class="math notranslate nohighlight">\(L\)</span> and centered on the origin.</span><a class="headerlink" href="#semicirculararcofcharge" title="Permalink to this image">¶</a></p>
+</div>
+<p>What are the symmetries of this semicircular system? Well if we consider a section of the arc, it will carry a charge <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> which we can rewrite as
+<span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \mathrm{d} \ell\)</span>.  Given that for a circular arc <span class="math notranslate nohighlight">\(\ell = r \theta\)</span> and since <span class="math notranslate nohighlight">\(L = \pi r\)</span>, therefore</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} Q = \frac{\lambda\,L}{\pi} \mathrm{d} \theta\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is an angle that moves round the arc, as we define in <a class="reference internal" href="#angulararcofcharge"><span class="std std-numref">Fig. 2.18</span></a>.</p>
+<div class="figure align-default" id="angulararcofcharge">
+<img alt="../_images/SemiCircularArcofCharge2.png" src="../_images/SemiCircularArcofCharge2.png" />
+<p class="caption"><span class="caption-number">Fig. 2.18 </span><span class="caption-text">Semicircular arc of charges, centered on the origin, with charge element <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span>, length <span class="math notranslate nohighlight">\(L\)</span>, radius <span class="math notranslate nohighlight">\(r\)</span> and angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#angulararcofcharge" title="Permalink to this image">¶</a></p>
+</div>
+<p>Clearly now we want to integrate over all the charges <span class="math notranslate nohighlight">\(\mathrm{d}Q\)</span> which will involve integrating over all angles <span class="math notranslate nohighlight">\(\mathrm{d} \theta\)</span>.  Since we are treating
+these infitesimal charge elements as point charges, the magnitude of the electric field has the form:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} E = \frac{\mathrm{d}Q}{4 \pi\,\epsilon_0\,r^2} = \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2}\]</div>
+<p>The direction of the field components however will change depending on whereabouts along the ring we are, clearly are <span class="math notranslate nohighlight">\(\theta = 0\)</span>, the field is directed along the <span class="math notranslate nohighlight">\(x\)</span>-axis only:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf E}_{\theta = 0} = \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf i} + 0 \,\hat{\bf j}\]</div>
+<p>Whilst if we examine the field at <span class="math notranslate nohighlight">\(\theta = -\pi/2\)</span> and <span class="math notranslate nohighlight">\(\theta = \pi/2\)</span>, we notice that the electric field will be aligned in the positive and negative <span class="math notranslate nohighlight">\(y\)</span>-axis directions (respectively):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf E}_{\theta = -\pi/2} &amp;=&amp;\, 0 \,\hat{\bf i} + \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \\
+\mathrm{d}{\bf E}_{\theta =\pi/2} &amp;=&amp;\, 0 \,\hat{\bf i} - \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \end{split}\]</div>
+<p>In fact we see that there will always be a cancellation of the <span class="math notranslate nohighlight">\(y\)</span> components of the electric field from the arc, we can always pair up the components over
+<span class="math notranslate nohighlight">\(-\pi/2 \leq \theta \leq \pi/2\)</span>, this leaves just the <span class="math notranslate nohighlight">\(x\)</span> components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf E}_{\theta} &amp;=&amp;\, \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \Big[ \cos(\theta) \,\hat{\bf i} + \sin(\theta) \,\hat{\bf j} \Big] \\
+\int_0^{\bf E} \mathrm{d}{\bf E}_{\theta} &amp;=&amp;\,  \frac{\pi}{4\,\epsilon_0\,L^2} \frac{\lambda\,L}{\pi} \int_{-\pi/2}^{\pi/2} \Big(\cos(\theta)\,\hat{\bf i} + 
+\sin(\theta)\,\hat{\bf j} \Big)\,\mathrm{d} \theta\\
+{\bf E} &amp;=&amp;\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}\end{split}\]</div>
+</div>
+<div class="section" id="rectilinear-rod">
+<h3><span class="section-number">2.3.7.2. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this headline">¶</a></h3>
+<p>Lets return to the rod in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 2.16</span></a>, we can set this system up in <a class="reference internal" href="#finitelineofcharge2"><span class="std std-numref">Fig. 2.19</span></a>, trying to make the rod as symmetric as possible:</p>
+<div class="figure align-default" id="finitelineofcharge2">
+<img alt="../_images/FiniteLineOfCharges3.png" src="../_images/FiniteLineOfCharges3.png" />
+<p class="caption"><span class="caption-number">Fig. 2.19 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, symmetrically aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis. We pick out an element of charge indicated
+in red, so here <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span>.</span><a class="headerlink" href="#finitelineofcharge2" title="Permalink to this image">¶</a></p>
+</div>
+<p>With a line of charge, of length <span class="math notranslate nohighlight">\(L\)</span>, aligned along the <span class="math notranslate nohighlight">\(x\)</span> axis, we can look at a point at a distance <span class="math notranslate nohighlight">\(R\)</span> away, aligned halfway along the rod.  Once again we can break up this
+line of charge into infinitesimal chunks, each contributing <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> charge and then the overall electric field will be found by superposition.  The magnitude of the electric
+field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod appears to be given by:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} E = \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\]</div>
+<p>where the length <span class="math notranslate nohighlight">\(r\)</span> can take values between <span class="math notranslate nohighlight">\(R \leq r \leq \sqrt{R^2 + L^2 / 4}\)</span>.</p>
+<p>In this system, we find that at <span class="math notranslate nohighlight">\(x = 0\)</span>, the electric field is only aligned in the <span class="math notranslate nohighlight">\(y\)</span> direction:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf E}_{x = L/2} = 0\,\hat{\bf i} + \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,R^2}\,\hat{\bf j}\]</div>
+<p>whereas the <span class="math notranslate nohighlight">\(x\)</span> components of the electric field for all the lengths at <span class="math notranslate nohighlight">\(-L/2 \leq x &lt; 0\)</span> and <span class="math notranslate nohighlight">\(0 &gt; x \leq L/2\)</span> will pair up, to cancel out, leaving only the <span class="math notranslate nohighlight">\(y\)</span> components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d} {\bf E} &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2} \Big (\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Big)\\
+\int_0^{\bf E} \mathrm{d} {\bf E}' &amp;=&amp;\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
+{\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x \end{split}\]</div>
+<p>Where we have used the substitutions <span class="math notranslate nohighlight">\(\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{X^2 + R^2}\)</span>.  We can also use the substitution
+<span class="math notranslate nohighlight">\(x = R \,\tan(\theta) \Rightarrow \mathrm{d}x = \)</span>,\sec^2(\theta)$ to find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
+\frac{R}{R^3\,\sec^3(\theta)}\,\hat{\bf j}\Big) R\,\sec^2(\theta)\,\mathrm{d} \theta \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \int_{x = -L/2}^{x = L/2}\Bigg(\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Bigg)\,\mathrm{d} \theta \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\cos(\theta)\,\hat{\bf i} + \sin(\theta)\,\hat{\bf j}\Big]_{x = -L/2}^{x = L/2} \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\frac{R}{(x^2 + R^2)^{1/2}}\,\hat{\bf i} + \frac{x}{(x^2 + R^2)^{1/2}}\,\hat{\bf j}\Big]_{-L/2}^{L/2} \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big( 0 \,\hat{\bf i} + \frac{L}{(L^2/4 + R^2)^{1/2}}\,\hat{\bf j}\Big) \end{split}\]</div>
+<p>Which results in:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E} = \frac{\lambda\,L }{4\pi \,\epsilon_0\,R\,\sqrt{L^2/4 + R^2}}\,\hat{\bf j}\]</div>
+<p>Notice that in the limit of <span class="math notranslate nohighlight">\(L \gg 1\)</span>, this would look like:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E} \rightarrow \frac{\lambda}{2\pi \,\epsilon_0\,R}\,\hat{\bf j}\]</div>
+<p>which is essentially the result for the infinite line of charge in Equation <a class="reference internal" href="#equation-infinitechargelineefield">(2.6)</a>.</p>
+<p>We note therefore that the relevant expression for the magnitude of the electric field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod is found from just the <span class="math notranslate nohighlight">\(y\)</span> component:</p>
 <div class="math notranslate nohighlight" id="equation-efieldwire">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">¶</a></span>\[    \mathrm{d} E_r = \frac{\mathrm{d} Q}{4\pi\,\epsilon_0\,R^2}\frac{r}{R} \]</div>
-<p>where the <span class="math notranslate nohighlight">\(r/R\)</span> term is from resolving in the <span class="math notranslate nohighlight">\(E_r\)</span> direction.  Since <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda\,\mathrm{d} x\)</span> and we can convert
-<span class="math notranslate nohighlight">\(R = \sqrt{x^2 + r^2}\)</span>,  our final result has the form:</p>
-<div class="math notranslate nohighlight">
-\[    E_r = \frac{\lambda\,r}{4\pi\,\epsilon_0}\int_{-a}^{b} \frac{\mathrm{d} x}{(x^2 + r^2)^{3/2}}\]</div>
-<p>Using a trigonometric substitution, <span class="math notranslate nohighlight">\(x = r \tan (\theta)\)</span>, we find:</p>
-<div class="math notranslate nohighlight">
-\[    E_r = \frac{\lambda}{4\pi\,\epsilon_0\,r}\int_{x=-a}^{x=b} \cos(\theta)\,\mathrm{d} \theta = 
-	\frac{\lambda}{4\pi\,\epsilon_0\,r} \Big[\sin(\theta)\Big]_{x=-a}^{x=b}\]</div>
-<p>If <span class="math notranslate nohighlight">\(x = r \tan (\theta)\)</span>, then <span class="math notranslate nohighlight">\(\sin (\theta) = x / \sqrt{x^2 + r^2}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}    E_r &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r} \left[\frac{x}{\sqrt{x^2+r^2}}\right]_{-a}^{b} = 
-	\frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\\ 
-	\Rightarrow {\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\hat{{\bf r}}\end{split}\]</div>
-<p>A somewhat messy result, but consider the large <span class="math notranslate nohighlight">\(a,\,b\)</span> limit:</p>
-<div class="math notranslate nohighlight">
-\[    \lim_{a,\,b\rightarrow \infty}\left[\left(1+\frac{r^2}{b^2}\right)^{-1/2} + \left(1+\frac{r^2}{a^2}\right)^{-1/2}\right] = 2 
-	\Rightarrow {\bf E} = \frac{\lambda}{2\pi\,\epsilon_0\,r}\hat{{\bf r}}\]</div>
-<p>which is exactly the uniform infinite line of charge result!</p>
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathrm{d} E &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+\Rightarrow E &amp;=&amp;\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[\frac{x}{\sqrt{x^2+R^2}}\Big]_{rod}\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="bf-d-field">
-<h2><span class="section-number">2.3.9. </span><span class="math notranslate nohighlight">\({\bf D}\)</span> Field*<a class="headerlink" href="#bf-d-field" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.8. </span><span class="math notranslate nohighlight">\({\bf D}\)</span> Field*<a class="headerlink" href="#bf-d-field" title="Permalink to this headline">¶</a></h2>
 <p>We find it is possible to have conductors carry a net charge, say <span class="math notranslate nohighlight">\(+Q\)</span>, however electrostatic fields do not permeate far through a conductor, the charge is
 essentially carried at the surface.  If we have an oscillating electric field <span class="math notranslate nohighlight">\({\bf E}(\omega)\)</span>, then the <b>Skin Effect</b> is observed in a conductor and
 there is a measurable <b>Skin Depth</b>, <span class="math notranslate nohighlight">\(\delta(\omega)\)</span> of the field in the conductor.</p>

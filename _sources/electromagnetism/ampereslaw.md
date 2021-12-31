@@ -32,14 +32,14 @@ Thus our expression for <b>Ampère's Law</b> is given by:
 ## Magnetic Field from a Wire
 Now lets consider a thick wire, modelled as a cylinder of current $I$ with cross sectional radius $R$, as depicted in {numref}`AmpereLawBoundary`, we see 
 akin to solving Gauss's law,  that there are two regimes of interest:
-- REGION I: $r \geq R$ 
+- <b>REGION I: $r \geq R$ </b>
 
 Applying Ampère's law, we find the $I_{enclosed} = I$ here and therefore:
 ```{math}
 \oint {\bf B} \cdot \mathrm{d} {\bf \ell} = B_\theta\,(2\pi\,r) = \mu_0\,I \Rightarrow {\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}}
 ```
     
-- REGION II: $r < R$ 
+- <b>REGION II: $r < R$ </b>
 
 In order to find the $I_{enclosed}$ we can see from Equation {eq}`driftvelocity` that for a conductor $I \propto A$ and 
 therefore we can calculate the uniform current density $\rho = I / A$.  Therefore here:
@@ -57,7 +57,7 @@ piecewise function:
       \mu_0 \,I / 2 \pi\, r \,\hat{\bf \theta} & r \geq R 
    \end{cases}
 ```
-and we see a depiction of this in {numref}`BfieldWire`.
+and we see a depiction of this in {numref}`BfieldWire`.  Note that once again the fields expression coincide at the boundary $r = R$.
 ```{figure} ../figures/magneticfieldwire.png
 ---
 name: BfieldWire
@@ -76,8 +76,9 @@ name: DisplacementCurrent
 Applying Ampère's law to a capacitor with no direct current between the plates.
 ```
 This is problematic because there is no current flowing through the capacitor, yet the exact path taken when calculating Ampère's law should not 
-change the outcome of the expression!  To resolve this, consider the rate of flow of charge $I = \partial Q/\partial t$ in to or out of the capacitor, 
-from Gauss's law we know that:
+change the outcome of the expression!  What we do see however is an electric field flowing within the capacity, this results in a current flowing at 
+the other end of the capacitor, so we would expect some form of magnetic field contribution. To resolve this, consider the rate of flow of charge 
+$I = \partial Q/\partial t$ in to or out of the capacitor, from Gauss's law we know that:
 ```{math}
 Q = \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A} \Longrightarrow I_{capacitor} = \frac{\partial Q}{\partial t} = 
 \frac{ \partial}{\partial t}\left( \epsilon_0 \iint {\bf E} \cdot \mathrm{d} {\bf A}\right) = \epsilon_0 \iint \frac{ \partial {\bf E}}{\partial t} \cdot \mathrm{d} {\bf A} 

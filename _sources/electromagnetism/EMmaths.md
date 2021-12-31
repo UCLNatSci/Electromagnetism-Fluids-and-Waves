@@ -85,10 +85,11 @@ name: stokestheorem
 A pictorial look at a vector ${\bf F}$ on the boundary $\ell$ which can be related to the curl $\nabla \times {\bf F}$ within the area $A$.
 ```
 
-##  Helmholtz Decomposition}
-The Helmholtz decomposition, shown in Equation {eq}`HelmholtzDecomp` states that a suitably smooth vector field $\bf F$ can be decomposed into:
+##  Helmholtz Decomposition
+The Helmholtz decomposition, shown in Equation {eq}`HelmholtzDecomp` states that a suitably smooth vector field $\bf F$ can, in general, be decomposed 
+into two components:
 ```{math}
 :label: HelmholtzDecomp
 {\bf F} = -\nabla \phi + \nabla \times {\bf A}
 ```
-where $\phi$ is s scalar field, called the <b>Scalar Potential</b>, and $\bf A$ is a vector field, called the <b>Vector Potential</b>.
+where $\phi$ is a scalar field, also called the <b>Scalar Potential</b>, and $\bf A$ is a vector field, also called the <b>Vector Potential</b>.

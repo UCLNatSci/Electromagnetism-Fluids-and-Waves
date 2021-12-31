@@ -82,8 +82,8 @@ we can imagine contributes to the magnetic field at a given point $r$ away from 
 ---
 name: finitelineofcurrent
 ---
-Examining the fields around a finite line of current $I$, broken up into length elements $\mathrm{d} {\bf \ell} = |\mathrm{d} {\bf \ell}|\,\hat{{\bf z}}$ 
-which are aligned along the $z$ axis.}
+Examining the fields around a finite line of current $I$, broken up into length elements $\mathrm{\bf d}\ell = \mathrm{d} \ell\,\hat{\bf z}$ 
+which are aligned along the $z$ axis.
 ```
 If we take a conducting wire and pass an electric field ${\bf E}$ through it, free charges will begin to move setting up a current $I$. 
 These moving charges will follow:
@@ -94,29 +94,28 @@ I = n\,A\,v\,q
 where $n$ is the number density of free charges, $A$ is the conductor cross sectional area, $v = |{\bf v}|$ is the charge drift velocity and $q$ is the 
 magnitude of the charge on each charge carrier.  If we take the combination of $I\,\mathrm{d} {\bf \ell}$ then:
 ```{math}
-I\,\mathrm{d} {\bf \ell} = n\,A\,|\mathrm{d} {\bf \ell}|\,q\,|{\bf v}|\,\hat{{\bf z}} = \mathrm{d} N\,q\,{\bf v}  = \mathrm{d} Q\,{\bf v}
+I\,\mathrm{\bf d} \ell = n\,A\,\mathrm{d} \ell\,q\,|{\bf v}|\,\hat{\bf z} = \mathrm{d} N\,q\,{\bf v}  = \mathrm{d} Q\,{\bf v}
 ```
 where $N$ is the number of free charges in the conductor and we have moved the vector dependence from the direction of the length element 
-$\mathrm{d} {\bf \ell}$ to the drift velocity ${\bf v}$.  This suggests we have a "current momentum" $Q\,{\bf v}$ in the wire.  Lets revisit 
-Equation {eq}`EFieldWire` replacing charges $\mathrm{d} Q$ with moving charges $\mathrm{d} Q\,{\bf v}$ and call this the ${\bf B}$ field:
+$\mathrm{\bf d} \ell$ to the drift velocity $\bf v$.  This suggests we have a <em>current momentum</em> $Q\,{\bf v}$ in the wire.  Lets revisit 
+Equation {eq}`EFieldWire` replacing static charges $\mathrm{d} Q$ with moving charges $\mathrm{d} Q\,{\bf v}$ and call this the ${\bf B}$ field:
 ```{math}
-\mathrm{d} E = \frac{\mathrm{d} Q}{4\pi\,\epsilon_0\,|{\bf r}|^2}\frac{|{\bf r}|}{|{\bf r}|} \longrightarrow \mathrm{d} B = 
-\frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,|{\bf v}|\,|{\bf r}|}{|{\bf r}|^3}
+\mathrm{d} E = \frac{1}{4\pi\,\epsilon_0}\frac{\mathrm{d} Q \,|{\bf R}|}{|{\bf r}|^3} 
+\longrightarrow \mathrm{d} B = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,|{\bf v}|\,|{\bf R}|}{|{\bf r}|^3}
 ```
-Note we replace the vacuum permittivity $\epsilon_0$ with  vacuum permeability $\mu_0$ as the "magnetic field constant".  We see that 
-{numref}`finitelineofcurrent` shows $r = R\sin(\theta)$, hence:
+Note also that we replaced the electric field constant $\epsilon_0$ with a magnetic field constant $\mu_0$.  {numref}`finitelineofcurrent` shows $R = r\sin(\theta)$, hence:
 ```{math}
 \mathrm{d} B = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,|{\bf v}|\,|{\bf r}|\,\sin(\theta)}{|{\bf r}|^3}
 ```
-and therefore given the definition of the cross product:
+and therefore given the definition of the cross product, we can convert this in to a vector equation:
 ```{math}
 \mathrm{d} {\bf B} = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,{\bf v}\times {\bf r}}{|{\bf r}|^3} \Longrightarrow \mathrm{d} {\bf B} = 
-\frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times {\bf r}}{\,|{\bf r}|^3} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{|{\bf r}|^2}
+\frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{\bf d}\ell\,\times {\bf r}}{\,|{\bf r}|^3} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{\bf d}\ell\,\times \hat{{\bf r}}}{|{\bf r}|^2}
 ``` 
 Thus the observed magnetic field from a wire carrying current $I$ at a distance ${\bf r}$ is given by the <b>Biot-Savart Law:</b>
 ```{math}
 :label: BSLAw
-{\bf B}({\bf r}) = \frac{\mu_0}{4\pi}\int_C \frac{I \, \mathrm{d}  \ell\times\hat{{\bf r}}}{|{\bf r}|^2} 
+{\bf B}({\bf r}) = \frac{\mu_0}{4\pi}\int_C \frac{I \, \mathrm{\bf d}\ell\times\hat{{\bf r}}}{|{\bf r}|^2} 
 ```
 which is depicted in {numref}`BiotSavart`.  We see that the cylindrical symmetry is made explicit, for a wire carrying a current $I$ in the 
 $z$ direction, we would measure (at a radial distance $r$ away from the wire) a magnetic field ${\bf B}$ moving in the ${\bf \theta}$ direction - 
@@ -129,7 +128,7 @@ name: BiotSavart
 Direction of magnetic field element $\mathrm{d} {\bf B}$ produced from a wire element $\mathrm{d} {\bf \ell}$ 
 carrying current $I$ at a distance ${\bf r}$ from the wire element.
 ```
-The magnetic constant $\mu_0$ here is used in the definition of the SI unit of current, the Ampère ($A$) and is defined to be:
+The <em>magnetic field constant</em> $\mu_0$, also known as the <b>vacuum permeability </b> here is used in the definition of the SI current unit, the Ampère ($A$) which is defined to be:
 ```{math}
 \mu_0 = 4\pi\times 10^{-7}\,N\,A^{-2}
 ```
@@ -150,24 +149,24 @@ name: BSLawAngles
 <b>Left Pane</b> - Geometry of a current carrying wire and solving for Biot-Savart law to calculate magnetic field at $P$, 
 <b>Right Pane</b> - Converting system of wire elements into angles at $P$.
 ```
-In this system we can think about the length element of the current as:
+In this system we can think about the length element of the current, $ \mathrm{\bf d}  \ell = \mathrm{d} \ell\,\hat{\bf z}$
 ```{math}
-\mathrm{d} {\bf \ell} \times \hat{{\bf r}} &=&\, \mathrm{d} \ell \,|\hat{{\bf r}}|\, \sin(\theta)\,\hat{{\bf \theta}} \\ 
-&=&\, \mathrm{d} \ell\, \cos(\alpha)\,\hat{{\bf \theta}}
+\mathrm{\bf d}\ell \times \hat{{\bf r}} = \mathrm{d} \ell \,|\hat{\bf z}|\,|\hat{{\bf r}}|\, \sin(\theta)\,\hat{{\bf \theta}} = \cos(\alpha)\,\mathrm{d} \ell\, \hat{{\bf \theta}}
 ```
-We can find an expression for $\mathrm{d} \ell$ using trigonometry and calculus:
+Applying Biot-Savart law here:
 ```{math}
-\tan(\alpha) = \frac{\ell}{r} \Rightarrow \ell = r \,\tan(\alpha) \Rightarrow \mathrm{d} \ell = r \,\sec^2(\alpha)\,\mathrm{d} \alpha
+{\bf B} = \frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{\bf d}\ell \,\times \hat{{\bf r}}}{R^2} = 
+\frac{\mu_0\,I}{4\pi}\int_{\mathcal{C}}\frac{\cos(\alpha)}{R^2} \,\mathrm{d} \ell\,\hat{\theta}
 ```
-and since $r = R\, \cos(\alpha) \Rightarrow 1/R^2 = \cos^2(\alpha)/r^2$, therefore using the Biot-Savart law here:
+Given $\ell = r \tan(\alpha) \Rightarrow \mathrm{d} \ell = r\,\sec^2(\alpha)\,\mathrm{d}\alpha$ and given $r = R\, \cos(\alpha) \Rightarrow R = r / \cos(\alpha)$:
 ```{math}
 :label: FiniteWireBField
-{\bf B} &=& \,\frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{d} {\bf \ell}\,\times \hat{{\bf r}}}{R^2} \\ 
-&=&\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\sec^2(\alpha)\,\cos^2(\alpha)\,\cos(\alpha)}{r^2}\, \mathrm{d} \alpha\,\hat{{\bf \theta}} \\ 
-&=& \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{{\bf \theta}} \\
-&=&\, \frac{\mu_0\,I}{4\pi\,r}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{{\bf \theta}} 
+{\bf B} &=&\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\cos(\alpha)\,\cos^2(\alpha)}{r^2}\sec^2(\alpha)\, \mathrm{d} \alpha\,\hat{ \theta} \\ 
+&=& \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{ \theta} \\
+&=&\, \frac{\mu_0\,I}{4\pi\,r}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{ \theta}
 ```
-If we want to consider an <em> infinite</em> wire, then we can take $\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2$, giving:
+Notice that if we take $\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2$:
 ```{math}
-{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}} 
+{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{\theta}
 ```
+then we find the infinite wire result from Equation {eq}`InfiniteWireBField`.
