@@ -36,7 +36,7 @@ U_E = Q\,V_E
 ``` 
 For a point charge $Q_S$ producing an electric field, the electrical potential is given by:
 ```{math}
-V_E = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\hat{{\bf r}'}}{(r')^2}\cdot\mathrm{d}{\bf r}' 
+V_E = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\hat{\bf r}'}{(r')^2}\cdot\mathrm{d}{\bf r}' 
 = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\mathrm{d} r'}{(r')^2} = \frac{Q_S}{4\pi\,\epsilon_0}\frac{1}{r}
 ```
 The term <b> Potential Difference </b> is given to the difference between the electric potentials $\Delta V_E$ between 

@@ -16,6 +16,7 @@ chapters:
   - file: waves/dispersionrelations
   - file: waves/polarisation
   - file: waves/matterwaves
+  - file: waves/dopplershift
 - file: electromagnetism/introduction
   sections:
   - file: electromagnetism/EMmaths

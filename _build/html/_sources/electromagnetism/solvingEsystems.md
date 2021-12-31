@@ -1,12 +1,30 @@
 # Solving Electrostatic Systems
 
-## Gauss's Law
-Our first tool for solving electric field system is Gauss's law:
+## The Tools
+- Our first tool for solving electric field system is <em>Gauss's law</em>:
 ```{math}
 \iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q_{enclosed}}{\epsilon_0}
 ```
 In these systems we have to identify the symmetries present in order to use the right co-ordinate system for the bounding surface area $\bf A$ as well as 
 understand the charge distribution enclosed by this area, $Q_{enclosed}$.  
+
+
+- Our second tool is <em>superposition of charge</em>, making use of the linearity property of electric fields.  
+
+This is usually a good fallback if the system does not have the higher degrees of syummetry that makes using Gauss's law straightforward.  At a point 
+$\bf r$, in space, the electric field from $N$ point charges $Q_i$ at positions $\bf r_i$ is given by:
+```{math}
+{\bf E}_{total} = \frac{1}{4 \pi \epsilon_0}\sum_{i=1}^N \frac{Q_i}{|{\bf r-r_i}|^2}\frac{\bf r-r_i}{|\bf r-r_i|}
+```
+where the final term gives us the unit vector in the relevent direction.  If we centre ourselves on the origin, this simplifies to:
+```{math}
+{\bf E}_{total} = \frac{1}{4 \pi \,\epsilon_0}\sum_{i=1}^N \frac{Q_i}{|{\bf r_i}|^2}\,\hat{\bf r_i}
+```
+We can also extend this to a continuous distribution of charge:
+```{math}
+{\bf E}_{total} = \frac{1}{4 \pi \,\epsilon_0}\int_0^Q \frac{\mathrm{d} Q'}{|{\bf r_i}|^2}\,\hat{\bf r_i}
+```
+and understanding the spatial distribution of $Q$ can help us to calculate this integral.
 
 ## Spheres of Charge
 
@@ -20,7 +38,7 @@ name: sphericalinsulator
 <b> Middle:</b> Cross section considering spheres $r \leq a$,  
 <b> Right:</b> Cross section considering spheres size $r \geq a$
 ```
-Recall from our discussion of spherical geometries $(r,\,\theta,\, \phi)$, the area normal $\hat{{\bf n}}$ vector for this <b> Gaussian Sphere </b> 
+Recall from our discussion of spherical geometries $(r,\,\theta,\, \phi)$, the area normal $\hat{{\bf n}}$ vector for this <b>Gaussian Sphere</b> 
 will point in the $\hat{{\bf r}}$ direction, radially outwards, as shown in {numref}`sphereareanormal`.
 ```{figure} ../figures/sphereareanormal.png
 ---
@@ -193,64 +211,130 @@ as depicted in {numref}`lineofcharge`.
 ---
 name: lineofcharge
 ---
-An infinite line of charges with a cylinder as our Gaussian surface.
+An infinite line of charges, which goes through the origin, with a cylindrical Gaussian surface.
 ```
    
 For a cylinder of length $L$, the area of the long side of the cylinder is $2 \pi r L$ and the charge enclosed in this 
 area is given by $\lambda L$, so putting these facts together: 
 ```{math}
-:label: InfiniteChargeLineEField
 \iint {\bf E} \cdot \mathrm{d} {\bf A} &=&\, \iint E_r \,\mathrm{d} A_r = E_r \,(2\pi\, r\, L) = \frac{\lambda L}{\epsilon_0} \\
-&=&\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} \Longrightarrow {\bf E} = \frac{\lambda}{2\pi\, \epsilon_0 \,r} \hat{{\bf r}}
+\Rightarrow E_r &=&\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} 
 ```
-
-
-## Superposition of Charge
-Solving systems with Gauss's law with pen and paper methods usually requires some degree of symmetry, however if we look at some more 
-realistic systems, we find that we need to loose some fo the symmetry, which makes Gauss's law much harder to use.  However we may
-look at such systems instead using the idea of <b>superposition</b> of point charges - we can then use calculus to integrate
-over the whole chare distribution to find the total electric field contribution at a given point in space.
+This gives us an expression for the electric field around an infinite line of charge:
+```{math}
+:label: InfiniteChargeLineEField
+{\bf E} = \frac{\lambda}{2\pi\, \epsilon_0 \,r} \hat{{\bf r}}
+```
+Clearly such an object is theoertical, although for very long and thin wires we can approximate the eldctric field for most of the space using 
+this expression.
 
 ## Finite Lines of Charge
-Equation {eq}`InfiniteChargeLineEField` is only true for an infinite line of charge, if we have a finite collection of charges, 
-as depicted in {numref}`Finitelineofcharge`, then we loose the symmetries of the system that we needed to simplify the Gauss's 
-law expression - making it harder to solve this system using Gauss's law, but we can consider iot from a superposition of point charges perspective.  
+Equation {eq}`InfiniteChargeLineEField` is only true for an infinite line of charge, if we have a finite collection of charges, as depicted in 
+{numref}`Finitelineofcharge`, then we loose some of the symmetries of the system, however the superposition method is a better way to proceed here.
 
-```{figure} ../figures/FiniteLineOfCharges1.png
+```{figure} ../figures/FiniteLineOfCharges2.png
 ---
 name: Finitelineofcharge
 ---
-An finite line of charges with length $a + b$ aligned over the $x$ axis and an element of charge $\mathrm{d} Q = \lambda \,\mathrm{d} x$ indicated in red.
+An finite line of charges, with charge density $\lambda$, with length $L$, aligned over the $x$ axis.
 ```
-With a line of large, of length $a + b$, aligned along the $x$ axis and considering a radial distance $r$ away.  The radial 
-component of the electric field can be found by breaking up the uniform line of charge into infinitesimal chunks, 
-each by superposition contributing $\mathrm{d} Q$ charge, which we can then integrate over to find the total field:
+
+### Semicircular Arc
+Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in {numref}`SemiCircularArcofCharge`
+```{figure} ../figures/SemiCircularArcofCharge.png
+---
+name: SemiCircularArcofCharge
+---
+An finite line of charges, with charge density $\lambda$, arranged in a semicircular arc of length $L$ and centered on the origin.
+```
+What are the symmetries of this semicircular system? Well if we consider a section of the arc, it will carry a charge $\mathrm{d} Q$ which we can rewrite as 
+$\mathrm{d} Q = \lambda \mathrm{d} \ell$.  Given that for a circular arc $\ell = r \theta$ and since $L = \pi r$, therefore 
+```{math}
+\mathrm{d} Q = \frac{\lambda\,L}{\pi} \mathrm{d} \theta
+```
+where $\theta$ is an angle that moves round the arc, as we define in {numref}`AngularArcofCharge`.
+```{figure} ../figures/SemiCircularArcofCharge2.png
+---
+name: AngularArcofCharge
+---
+Semicircular arc of charges, centered on the origin, with charge element $\mathrm{d} Q$, length $L$, radius $r$ and angle $\theta$.
+```
+Clearly now we want to integrate over all the charges $\mathrm{d}Q$ which will involve integrating over all angles $\mathrm{d} \theta$.  Since we are treating 
+these infitesimal charge elements as point charges, the magnitude of the electric field has the form:
+```{math}
+\mathrm{d} E = \frac{\mathrm{d}Q}{4 \pi\,\epsilon_0\,r^2} = \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2}
+```
+The direction of the field components however will change depending on whereabouts along the ring we are, clearly are $\theta = 0$, the field is directed along the $x$-axis only:
+```{math}
+\mathrm{d}{\bf E}_{\theta = 0} = \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf i} + 0 \,\hat{\bf j}
+```
+Whilst if we examine the field at $\theta = -\pi/2$ and $\theta = \pi/2$, we notice that the electric field will be aligned in the positive and negative $y$-axis directions (respectively):
+```{math}
+\mathrm{d}{\bf E}_{\theta = -\pi/2} &=&\, 0 \,\hat{\bf i} + \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \\
+\mathrm{d}{\bf E}_{\theta =\pi/2} &=&\, 0 \,\hat{\bf i} - \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} 
+```
+In fact we see that there will always be a cancellation of the $y$ components of the electric field from the arc, we can always pair up the components over 
+$-\pi/2 \leq \theta \leq \pi/2$, this leaves just the $x$ components:
+```{math}
+\mathrm{d}{\bf E}_{\theta} &=&\, \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \Big[ \cos(\theta) \,\hat{\bf i} + \sin(\theta) \,\hat{\bf j} \Big] \\
+\int_0^{\bf E} \mathrm{d}{\bf E}_{\theta} &=&\,  \frac{\pi}{4\,\epsilon_0\,L^2} \frac{\lambda\,L}{\pi} \int_{-\pi/2}^{\pi/2} \Big(\cos(\theta)\,\hat{\bf i} + 
+\sin(\theta)\,\hat{\bf j} \Big)\,\mathrm{d} \theta\\
+{\bf E} &=&\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}
+```
+### Rectilinear Rod
+Lets return to the rod in {numref}`Finitelineofcharge`, we can set this system up in {numref}`Finitelineofcharge2`, trying to make the rod as symmetric as possible:
+
+```{figure} ../figures/FiniteLineOfCharges3.png
+---
+name: Finitelineofcharge2
+---
+An finite line of charges, with charge density $\lambda$, with length $L$, symmetrically aligned over the $x$ axis. We pick out an element of charge indicated 
+in red, so here $\mathrm{d} Q = \lambda \,\mathrm{d} x$.
+```
+With a line of charge, of length $L$, aligned along the $x$ axis, we can look at a point at a distance $R$ away, aligned halfway along the rod.  Once again we can break up this 
+line of charge into infinitesimal chunks, each contributing $\mathrm{d} Q$ charge and then the overall electric field will be found by superposition.  The magnitude of the electric 
+field at a distance $R$ from the rod appears to be given by:
+```{math}
+\mathrm{d} E = \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}
+```
+where the length $r$ can take values between $R \leq r \leq \sqrt{R^2 + L^2 / 4}$. 
+
+In this system, we find that at $x = 0$, the electric field is only aligned in the $y$ direction:
+```{math}
+\mathrm{d} {\bf E}_{x = L/2} = 0\,\hat{\bf i} + \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,R^2}\,\hat{\bf j}
+```
+whereas the $x$ components of the electric field for all the lengths at $-L/2 \leq x < 0$ and $0 > x \leq L/2$ will pair up, to cancel out, leaving only the $y$ components:
+```{math}
+\mathrm{d} {\bf E} &=&\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2} \Big (\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Big)\\
+\int_0^{\bf E} \mathrm{d} {\bf E}' &=&\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
+{\bf E} &=&\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x 
+```
+Where we have used the substitutions $\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{X^2 + R^2}$.  We can also use the substitution 
+$x = R \,\tan(\theta) \Rightarrow \mathrm{d}x = $\,\sec^2(\theta)$ to find:
+```{math}
+{\bf E} &=&\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
+\frac{R}{R^3\,\sec^3(\theta)}\,\hat{\bf j}\Big) R\,\sec^2(\theta)\,\mathrm{d} \theta \\
+ &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \int_{x = -L/2}^{x = L/2}\Bigg(\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Bigg)\,\mathrm{d} \theta \\
+ &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\cos(\theta)\,\hat{\bf i} + \sin(\theta)\,\hat{\bf j}\Big]_{x = -L/2}^{x = L/2} \\
+ &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\frac{R}{(x^2 + R^2)^{1/2}}\,\hat{\bf i} + \frac{x}{(x^2 + R^2)^{1/2}}\,\hat{\bf j}\Big]_{-L/2}^{L/2} \\
+ &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big( 0 \,\hat{\bf i} + \frac{L}{(L^2/4 + R^2)^{1/2}}\,\hat{\bf j}\Big) 
+```
+Which results in:
+```{math}
+{\bf E} = \frac{\lambda\,L }{4\pi \,\epsilon_0\,R\,\sqrt{L^2/4 + R^2}}\,\hat{\bf j}
+```
+Notice that in the limit of $L \gg 1$, this would look like:
+```{math}
+{\bf E} \rightarrow \frac{\lambda}{2\pi \,\epsilon_0\,R}\,\hat{\bf j}
+```
+which is essentially the result for the infinite line of charge in Equation {eq}`InfiniteChargeLineEField`.
+
+We note therefore that the relevant expression for the magnitude of the electric field at a distance $R$ from the rod is found from just the $y$ component:
 ```{math}
 :label: EFieldWire
-    \mathrm{d} E_r = \frac{\mathrm{d} Q}{4\pi\,\epsilon_0\,R^2}\frac{r}{R} 
+\mathrm{d} E &=&\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+\Rightarrow E &=&\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[\frac{x}{\sqrt{x^2+R^2}}\Big]_{rod}
 ```
-where the $r/R$ term is from resolving in the $E_r$ direction.  Since $\mathrm{d} Q = \lambda\,\mathrm{d} x$ and we can convert 
-$R = \sqrt{x^2 + r^2}$,  our final result has the form:
-```{math}
-    E_r = \frac{\lambda\,r}{4\pi\,\epsilon_0}\int_{-a}^{b} \frac{\mathrm{d} x}{(x^2 + r^2)^{3/2}}
-```
-Using a trigonometric substitution, $x = r \tan (\theta)$, we find:
-```{math}
-    E_r = \frac{\lambda}{4\pi\,\epsilon_0\,r}\int_{x=-a}^{x=b} \cos(\theta)\,\mathrm{d} \theta = 
-	\frac{\lambda}{4\pi\,\epsilon_0\,r} \Big[\sin(\theta)\Big]_{x=-a}^{x=b}
-```
-If $x = r \tan (\theta)$, then $\sin (\theta) = x / \sqrt{x^2 + r^2}$:
-```{math}
-    E_r &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r} \left[\frac{x}{\sqrt{x^2+r^2}}\right]_{-a}^{b} = 
-	\frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\\ 
-	\Rightarrow {\bf E} &=&\, \frac{\lambda}{4\pi\,\epsilon_0\,r}\left( \frac{b}{\sqrt{b^2+r^2}} + \frac{a}{\sqrt{a^2+r^2}}\right)\hat{{\bf r}}
-```
-A somewhat messy result, but consider the large $a,\,b$ limit:
-```{math}
-    \lim_{a,\,b\rightarrow \infty}\left[\left(1+\frac{r^2}{b^2}\right)^{-1/2} + \left(1+\frac{r^2}{a^2}\right)^{-1/2}\right] = 2 
-	\Rightarrow {\bf E} = \frac{\lambda}{2\pi\,\epsilon_0\,r}\hat{{\bf r}}
-```
-which is exactly the uniform infinite line of charge result!
 
 
 ## ${\bf D}$ Field*
