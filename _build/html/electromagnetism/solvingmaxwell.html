@@ -58,7 +58,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.11. Energy in an Electromagnetic field" href="EMenergy.html" />
-    <link rel="prev" title="2.9. Maxwell’s Equations" href="maxwelleqns.html" />
+    <link rel="prev" title="2.9. Differential Forms and Maxwell’s Equations" href="maxwelleqns.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -205,7 +205,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="maxwelleqns.html">
-     2.9. Maxwell’s Equations
+     2.9. Differential Forms and Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -370,8 +370,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#polarisation-of-em-waves">
-   2.10.2. Polarisation of EM Waves
+  <a class="reference internal nav-link" href="#polarisation-of-waves">
+   2.10.2. Polarisation of Waves
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -398,43 +398,43 @@
 one field and then try to solve.  Recall the Lagrange identity for <span class="math notranslate nohighlight">\(\nabla\)</span> with a vector <span class="math notranslate nohighlight">\({\bf A}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times \left(\nabla \times {\bf A}\right) = \nabla (\nabla \cdot {\bf A}) - \nabla^2 {\bf A} \]</div>
-<p>If we take the curl of Equation <a class="reference internal" href="maxwelleqns.html#equation-curle">(2.24)</a>:</p>
+<p>If we take the curl of Equation <a class="reference internal" href="maxwelleqns.html#equation-curle">(2.26)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times \left(\nabla \times {\bf E}\right) = \nabla (\nabla \cdot {\bf E}) - \nabla^2 {\bf E} = 
 \nabla \times \left(  -\frac{\partial {\bf B}}{\partial t}\right)  = -\frac{\partial}{\partial t}\left(\nabla \times {\bf B} \right)\]</div>
 <p>where we have used the fact that the order of mixed partial derivatives doesn’t matter for any well behaved function in the last step.  This allows us to
-substitute in Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.23)</a> and so decouple the <span class="math notranslate nohighlight">\({\bf B}\)</span> field:</p>
+substitute in Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.25)</a> and so decouple the <span class="math notranslate nohighlight">\({\bf B}\)</span> field:</p>
 <div class="math notranslate nohighlight">
 \[\nabla (\nabla \cdot {\bf E}) - \nabla^2 {\bf E} = -\mu_0\frac{\partial\, {\bf J}}{\partial t} - \mu_0\epsilon_0 \frac{\partial^2\, {\bf E}}{\partial t^2}\]</div>
 <p>If we then assume vacuum conditions, with no charges <span class="math notranslate nohighlight">\(\rho = 0\)</span> or currents <span class="math notranslate nohighlight">\({\bf J} = (0,0,0)\)</span> present, then <span class="math notranslate nohighlight">\(\nabla \cdot {\bf E} = 0\)</span> and this equation becomes</p>
 <div class="math notranslate nohighlight" id="equation-emwaveeqn">
-<span class="eqno">(2.28)<a class="headerlink" href="#equation-emwaveeqn" title="Permalink to this equation">¶</a></span>\[\nabla^2 {\bf E} = \mu_0\epsilon_0 \frac{\partial^2\, {\bf E}}{\partial t^2} \]</div>
+<span class="eqno">(2.30)<a class="headerlink" href="#equation-emwaveeqn" title="Permalink to this equation">¶</a></span>\[\nabla^2 {\bf E} = \mu_0\epsilon_0 \frac{\partial^2\, {\bf E}}{\partial t^2} \]</div>
 <p>which is a wave equation!  Comparing this with Equation <a class="reference internal" href="../waves/longitudinal.html#equation-waveeqn3d">(1.9)</a> we can associate:</p>
 <div class="math notranslate nohighlight" id="equation-speedoflight">
-<span class="eqno">(2.29)<a class="headerlink" href="#equation-speedoflight" title="Permalink to this equation">¶</a></span>\[c = \frac{1}{\sqrt{\mu_0\epsilon_0}} \]</div>
-<p>and we can also find wave solutions for <span class="math notranslate nohighlight">\({\bf B}\)</span>, with the same constant wave speed <span class="math notranslate nohighlight">\(c\)</span>.\footnote{Einstein was led in part to his celebrated
-Special Theory of Relativity noticing this constancy of <span class="math notranslate nohighlight">\(c\)</span>.}</p>
-<p>If we solve for <span class="math notranslate nohighlight">\({\bf E},\ {\bf B}\)</span> from Equation <a class="reference internal" href="#equation-emwaveeqn">(2.28)</a>, these produce:</p>
+<span class="eqno">(2.31)<a class="headerlink" href="#equation-speedoflight" title="Permalink to this equation">¶</a></span>\[c = \frac{1}{\sqrt{\mu_0\epsilon_0}} \]</div>
+<p>and we can also find wave solutions for <span class="math notranslate nohighlight">\(\bf B\)</span>, with the same constant wave speed <span class="math notranslate nohighlight">\(c\)</span>.  Einstein was led (in part) to his celebrated Special Theory of Relativity by
+noticing that the speed of light <span class="math notranslate nohighlight">\(c\)</span> is related to two vacuum parameters that are thought to be constant.</p>
+<p>If we solve for <span class="math notranslate nohighlight">\(\bf E,\ B\)</span> from Equation <a class="reference internal" href="#equation-emwaveeqn">(2.30)</a>, these produce:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf E} &amp;=&amp; {\bf E}_0\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
-{\bf B} &amp;=&amp; {\bf B}_0\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\({\bf E}_0,\,{\bf B}_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.39</span></a> shows one such choice of
-<span class="math notranslate nohighlight">\({\bf E}_0,\,{\bf B}_0\)</span>, for plane waves.</p>
+\[\begin{split}{\bf E} &amp;=&amp; {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
+{\bf B} &amp;=&amp; {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.41</span></a> shows some different choices of <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> for plane
+polarised and circularly polariesed waves.</p>
 <div class="figure align-default" id="emplanewaves">
 <img alt="../_images/EMWaves1.png" src="../_images/EMWaves1.png" />
-<p class="caption"><span class="caption-number">Fig. 2.39 </span><span class="caption-text"><b> Left Pane </b> - Depiction of electric and magnetic plane waves,
+<p class="caption"><span class="caption-number">Fig. 2.41 </span><span class="caption-text"><b> Left Pane </b> - Depiction of electric and magnetic plane waves,
 <b> Right Pane </b> - Depiction of electric and magnetic circularly polarised waves.</span><a class="headerlink" href="#emplanewaves" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="polarisation-of-em-waves">
-<h2><span class="section-number">2.10.2. </span>Polarisation of EM Waves<a class="headerlink" href="#polarisation-of-em-waves" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="polarisation-of-waves">
+<h2><span class="section-number">2.10.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">¶</a></h2>
 <p>Plugging in wave solutions into Maxwell’s equations in vacuum:</p>
 <div class="math notranslate nohighlight" id="equation-kebperp">
-<span class="eqno">(2.30)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
+<span class="eqno">(2.32)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
 \nabla \cdot {\bf B} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
 \nabla \times {\bf E} &amp;=&amp; \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 \end{split}\]</div>
-<p>These first two equations means <span class="math notranslate nohighlight">\({\bf k} \perp {\bf E}\)</span> and <span class="math notranslate nohighlight">\({\bf k} \perp {\bf B}\)</span> and the third that <span class="math notranslate nohighlight">\({\bf B} \perp ({\bf k},\,{\bf E})\)</span> implying <span class="math notranslate nohighlight">\({\bf E} \perp {\bf B}\)</span>.<br />
-Therefore once we pick a direction of oscillation for <span class="math notranslate nohighlight">\({\bf E}\)</span>, then <span class="math notranslate nohighlight">\({\bf B}\)</span> is also set.  Choosing to orientate along the <span class="math notranslate nohighlight">\({\bf z}\)</span> axis, Equation <a class="reference internal" href="#equation-kebperp">(2.30)</a>
+<p>These first two equations means <span class="math notranslate nohighlight">\(\bf k \perp E\)</span> and <span class="math notranslate nohighlight">\(\bf k \perp  B\)</span> and the third that <span class="math notranslate nohighlight">\(\bf B \perp (k,\, E)\)</span> implying <span class="math notranslate nohighlight">\(\bf E \perp B\)</span>.</p>
+<p>Therefore once we pick a direction of oscillation for <span class="math notranslate nohighlight">\(\bf E\)</span>, then <span class="math notranslate nohighlight">\(\bf B\)</span> is also set (and vice-versa).  Choosing to orientate along the <span class="math notranslate nohighlight">\(z\)</span> axis, Equation <a class="reference internal" href="#equation-kebperp">(2.32)</a>
 implies in general:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf k} = \begin{bmatrix}
@@ -448,10 +448,10 @@ implies in general:</p>
  E_y \\
  0
 \end{bmatrix}\end{split}\]</div>
-<p>The simplest set of solutions here would be picking one of <span class="math notranslate nohighlight">\(E_x,\,E_y\)</span> to be zero, such that the oscillations are only in {\it one}
-dimension and clearly the wave propagates in a perpendicular <span class="math notranslate nohighlight">\(k_z\)</span> dimension.  So lets pick <span class="math notranslate nohighlight">\(E_y = 0\)</span>, which results in:</p>
+<p>For plane polarised solutions, we must pick one of <span class="math notranslate nohighlight">\(E_x,\,E_y\)</span> to be zero, such that the oscillations are only in <em>on</em> dimension and clearly the wave propagates
+in a perpendicular <span class="math notranslate nohighlight">\(z\)</span> dimension.  So lets pick <span class="math notranslate nohighlight">\(E_y = 0\)</span>, which results in:</p>
 <div class="math notranslate nohighlight" id="equation-planewavesolns">
-<span class="eqno">(2.31)<a class="headerlink" href="#equation-planewavesolns" title="Permalink to this equation">¶</a></span>\[\begin{split}vE_0 = 
+<span class="eqno">(2.33)<a class="headerlink" href="#equation-planewavesolns" title="Permalink to this equation">¶</a></span>\[\begin{split}vE_0 = 
 \begin{bmatrix}
  E_x \\
  0 \\
@@ -468,18 +468,22 @@ dimension and clearly the wave propagates in a perpendicular <span class="math n
  B_y \\
  0
 \end{bmatrix} \end{split}\]</div>
-<p>Other polarisation choices would be <b> Circular </b> or <b> Elliptical</b>, where we use both of <span class="math notranslate nohighlight">\((E_x,\,E_y)\)</span>, producing
-clockwise/anticlockwise polarised waves, as seen in <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 2.39</span></a>.</p>
 </div>
 <div class="section" id="drude-model">
 <h2><span class="section-number">2.10.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this headline">¶</a></h2>
 <p>In addition to solving Maxwell’s for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor,
-with an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> present, we can think about Ohm’s law <span class="math notranslate nohighlight">\(V = I\,R\)</span> or terms of fields <span class="math notranslate nohighlight">\({\bf J} = \sigma {\bf E}\)</span> where <span class="math notranslate nohighlight">\(\sigma\)</span> is the
-conductivity of the material (often written in the related form of resistivity <span class="math notranslate nohighlight">\(\rho\)</span>, where <span class="math notranslate nohighlight">\(\rho = 1 / \sigma\)</span>) and <span class="math notranslate nohighlight">\({\bf J}\)</span> is the current density.
-This is often known as the <b> Drude Model.</b>  Substituting this model into Maxwell’s equations and ignoring charges again, we find by solving for <span class="math notranslate nohighlight">\({\bf E}\)</span>:</p>
+with an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> present, we can think about Ohm’s law</p>
+<div class="math notranslate nohighlight">
+\[V = I\,R\]</div>
+<p>or terms of fields this is written:</p>
+<div class="math notranslate nohighlight">
+\[{\bf J} = \sigma {\bf E}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the conductivity of the material (often written in the related form of resistivity <span class="math notranslate nohighlight">\(\rho\)</span>, where <span class="math notranslate nohighlight">\(\rho = 1 / \sigma\)</span>) and <span class="math notranslate nohighlight">\(\bf J\)</span> is the current density.
+This is often known as the <b>Drude Model</b>.</p>
+<p>Substituting this model into Maxwell’s equations, we can now source <span class="math notranslate nohighlight">\(\bf J\)</span> with this relation, if we choose to ignore free charges again <span class="math notranslate nohighlight">\(\rho = 0\)</span> and by solving for <span class="math notranslate nohighlight">\(\bf E\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla^2 {\bf E} = \mu_0 \sigma \frac{\partial {\bf E}}{\partial t} + \mu_0\epsilon_0 \frac{\partial^2 {\bf E}}{\partial t^2}\]</div>
-<p>Using the wave solutions, we find a modified dispersion relation of the form:</p>
+<p>Which should look familiar as a damped hoarmonic osciallator from the Waves section.  Using the wave solutions, we find a modified dispersion relation of the form:</p>
 <div class="math notranslate nohighlight">
 \[k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega\]</div>
 <p>which is now complex!</p>
@@ -516,7 +520,7 @@ This is often known as the <b> Drude Model.</b>  Substituting this model into Ma
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="maxwelleqns.html" title="previous page"><span class="section-number">2.9. </span>Maxwell’s Equations</a>
+    <a class='left-prev' id="prev-link" href="maxwelleqns.html" title="previous page"><span class="section-number">2.9. </span>Differential Forms and Maxwell’s Equations</a>
     <a class='right-next' id="next-link" href="EMenergy.html" title="next page"><span class="section-number">2.11. </span>Energy in an Electromagnetic field</a>
 
         </div>

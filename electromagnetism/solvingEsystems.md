@@ -133,8 +133,8 @@ name: sheetofcharge
 Sheet of charge using a cylinder as our Gaussian surface.
 ```
 
-The cylinder has three areas here, a cross sectional area $A$ on each each and a long surface cylinder of side 
-$L$, $2 \pi r L$.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet), 
+The cylinder has three areas here, two cross sectional area $A_{r} = \pi\,r^2$ - one for each face and one surface area along the length 
+$L$ of the cylinder, $A_{L}2 \pi r L$.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet), 
 these point in the $\text{sign}(z)\hat{{\bf z}}$ direction, depending on which side we are on, so here our Gauss's law dot 
 product looks like
 ```{math}
@@ -162,9 +162,9 @@ Therefore the electric field is given by the piecewise function:
 ```
 
 ## Capacitors 
-For an example of a sheet of charge system, consider a capacitor, here we can think of this system as two sheets of charge, one carrying a 
-charge $+Q$ and the other with a charge $-Q$, as depicted in {numref}`capacitorelectricfield`.  Obviously this system is idealised, because 
-these sheets of charge are <em> finite</em> - however here we will ignore edge effects.
+A good example for a system where sheets of charge play a role is a capacitor, which we can think of as two sheets of charge, each one carrying an 
+equal and opposite sets of charges $\pm Q$ as depicted in {numref}`capacitorelectricfield`.  Obviously this system is idealised, because these sheets of 
+charge are <em>finite</em> - however here we will ignore edge effects.
 
 ```{figure} ../figures/capacitorelectricfield1.png
 ---
@@ -172,15 +172,16 @@ name: capacitorelectricfield
 ---
 Electric field $E$ within a capacitor, two plates of area $A$, top plate at $z = d$, bottom plate at $z = 0$, carrying a charge $\pm Q$.
 ```
-For two identical plates, each carrying the same magnitude of charge (but opposite signs):
+For two identical plates, each carrying an equal but opposite amount of charge:
 ```{math}
 {\bf E} = {\bf E}_{Q+} + {\bf E}_{Q-}
 ```
-and so there will be a uniform electric field between the plates:
+and so there will be a uniform electric field between the plates, in this case in the negative $z$ direction:
 ```{math}
 {\bf E} = -\frac{\sigma}{2\epsilon_0}\hat{{\bf z}}  + \frac{(-\sigma)}{2\epsilon_0}\hat{{\bf z}} = -\frac{\sigma}{\epsilon_0}\hat{\bf z}
 ```
 The electric field outside of the plates is zero, since net charge enclosed will be $- Q + Q = 0$.  
+
 Therefore the electric field is given by the piecewise function:
 ```{math}
 {\bf E} = \begin{cases} 
@@ -309,8 +310,8 @@ whereas the $x$ components of the electric field for all the lengths at $-L/2 \l
 \int_0^{\bf E} \mathrm{d} {\bf E}' &=&\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
 {\bf E} &=&\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x 
 ```
-Where we have used the substitutions $\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{X^2 + R^2}$.  We can also use the substitution 
-$x = R \,\tan(\theta) \Rightarrow \mathrm{d}x = $\,\sec^2(\theta)$ to find:
+Where we have used the substitutions $\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{x^2 + R^2}$.  We can also use the substitution 
+$x = R\,\tan(\theta) \Rightarrow \mathrm{d}x = R\,\sec^2(\theta)$ to find:
 ```{math}
 {\bf E} &=&\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
 \frac{R}{R^3\,\sec^3(\theta)}\,\hat{\bf j}\Big) R\,\sec^2(\theta)\,\mathrm{d} \theta \\
@@ -332,8 +333,8 @@ which is essentially the result for the infinite line of charge in Equation {eq}
 We note therefore that the relevant expression for the magnitude of the electric field at a distance $R$ from the rod is found from just the $y$ component:
 ```{math}
 :label: EFieldWire
-\mathrm{d} E &=&\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
-\Rightarrow E &=&\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[\frac{x}{\sqrt{x^2+R^2}}\Big]_{rod}
+\mathrm{d} E &=&\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+\Rightarrow E &=&\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\,\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Bigg[\frac{x}{\sqrt{x^2+R^2}}\Bigg]_{rod}
 ```
 
 

@@ -94,7 +94,7 @@ where we have added an additional <b>Displacement Current</b> $I_D$:
 I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}
 ```
 
-## Magnetic Fields in Coils
+## Magnetic Fields in Coils*
 
 In order to make sense of solenoids and other systems with coils of wire, we need to first break down the system of a single circular coil of wire, 
 as shown in {numref}`BFieldCoilofWire`.

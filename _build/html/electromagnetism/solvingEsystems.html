@@ -205,7 +205,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="maxwelleqns.html">
-     2.9. Maxwell’s Equations
+     2.9. Differential Forms and Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -543,8 +543,8 @@ for a sheet like this we can pick a cylinder, as we see in <a class="reference i
 <img alt="../_images/sheetofcharge.png" src="../_images/sheetofcharge.png" />
 <p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Sheet of charge using a cylinder as our Gaussian surface.</span><a class="headerlink" href="#sheetofcharge" title="Permalink to this image">¶</a></p>
 </div>
-<p>The cylinder has three areas here, a cross sectional area <span class="math notranslate nohighlight">\(A\)</span> on each each and a long surface cylinder of side
-<span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(2 \pi r L\)</span>.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet),
+<p>The cylinder has three areas here, two cross sectional area <span class="math notranslate nohighlight">\(A_{r} = \pi\,r^2\)</span> - one for each face and one surface area along the length
+<span class="math notranslate nohighlight">\(L\)</span> of the cylinder, <span class="math notranslate nohighlight">\(A_{L}2 \pi r L\)</span>.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet),
 these point in the <span class="math notranslate nohighlight">\(\text{sign}(z)\hat{{\bf z}}\)</span> direction, depending on which side we are on, so here our Gauss’s law dot
 product looks like</p>
 <div class="math notranslate nohighlight">
@@ -568,21 +568,21 @@ product looks like</p>
 </div>
 <div class="section" id="capacitors">
 <h2><span class="section-number">2.3.5. </span>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">¶</a></h2>
-<p>For an example of a sheet of charge system, consider a capacitor, here we can think of this system as two sheets of charge, one carrying a
-charge <span class="math notranslate nohighlight">\(+Q\)</span> and the other with a charge <span class="math notranslate nohighlight">\(-Q\)</span>, as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.14</span></a>.  Obviously this system is idealised, because
-these sheets of charge are <em> finite</em> - however here we will ignore edge effects.</p>
+<p>A good example for a system where sheets of charge play a role is a capacitor, which we can think of as two sheets of charge, each one carrying an
+equal and opposite sets of charges <span class="math notranslate nohighlight">\(\pm Q\)</span> as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 2.14</span></a>.  Obviously this system is idealised, because these sheets of
+charge are <em>finite</em> - however here we will ignore edge effects.</p>
 <div class="figure align-default" id="capacitorelectricfield">
 <img alt="../_images/capacitorelectricfield1.png" src="../_images/capacitorelectricfield1.png" />
 <p class="caption"><span class="caption-number">Fig. 2.14 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">¶</a></p>
 </div>
-<p>For two identical plates, each carrying the same magnitude of charge (but opposite signs):</p>
+<p>For two identical plates, each carrying an equal but opposite amount of charge:</p>
 <div class="math notranslate nohighlight">
 \[{\bf E} = {\bf E}_{Q+} + {\bf E}_{Q-}\]</div>
-<p>and so there will be a uniform electric field between the plates:</p>
+<p>and so there will be a uniform electric field between the plates, in this case in the negative <span class="math notranslate nohighlight">\(z\)</span> direction:</p>
 <div class="math notranslate nohighlight">
 \[{\bf E} = -\frac{\sigma}{2\epsilon_0}\hat{{\bf z}}  + \frac{(-\sigma)}{2\epsilon_0}\hat{{\bf z}} = -\frac{\sigma}{\epsilon_0}\hat{\bf z}\]</div>
-<p>The electric field outside of the plates is zero, since net charge enclosed will be <span class="math notranslate nohighlight">\(- Q + Q = 0\)</span>.<br />
-Therefore the electric field is given by the piecewise function:</p>
+<p>The electric field outside of the plates is zero, since net charge enclosed will be <span class="math notranslate nohighlight">\(- Q + Q = 0\)</span>.</p>
+<p>Therefore the electric field is given by the piecewise function:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf E} = \begin{cases} 
       0 &amp; z &lt; 0 \\
@@ -685,8 +685,8 @@ field at a distance <span class="math notranslate nohighlight">\(R\)</span> from
 \[\begin{split}\mathrm{d} {\bf E} &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2} \Big (\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Big)\\
 \int_0^{\bf E} \mathrm{d} {\bf E}' &amp;=&amp;\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
 {\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x \end{split}\]</div>
-<p>Where we have used the substitutions <span class="math notranslate nohighlight">\(\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{X^2 + R^2}\)</span>.  We can also use the substitution
-<span class="math notranslate nohighlight">\(x = R \,\tan(\theta) \Rightarrow \mathrm{d}x = \)</span>,\sec^2(\theta)$ to find:</p>
+<p>Where we have used the substitutions <span class="math notranslate nohighlight">\(\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{x^2 + R^2}\)</span>.  We can also use the substitution
+<span class="math notranslate nohighlight">\(x = R\,\tan(\theta) \Rightarrow \mathrm{d}x = R\,\sec^2(\theta)\)</span> to find:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
 \frac{R}{R^3\,\sec^3(\theta)}\,\hat{\bf j}\Big) R\,\sec^2(\theta)\,\mathrm{d} \theta \\
@@ -703,8 +703,8 @@ field at a distance <span class="math notranslate nohighlight">\(R\)</span> from
 <p>which is essentially the result for the infinite line of charge in Equation <a class="reference internal" href="#equation-infinitechargelineefield">(2.6)</a>.</p>
 <p>We note therefore that the relevant expression for the magnitude of the electric field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod is found from just the <span class="math notranslate nohighlight">\(y\)</span> component:</p>
 <div class="math notranslate nohighlight" id="equation-efieldwire">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathrm{d} E &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
-\Rightarrow E &amp;=&amp;\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[\frac{x}{\sqrt{x^2+R^2}}\Big]_{rod}\end{split}\]</div>
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathrm{d} E &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+\Rightarrow E &amp;=&amp;\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\,\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Bigg[\frac{x}{\sqrt{x^2+R^2}}\Bigg]_{rod}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="bf-d-field">

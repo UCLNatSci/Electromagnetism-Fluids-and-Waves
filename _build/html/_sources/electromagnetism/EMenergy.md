@@ -68,7 +68,9 @@ where we identify the vector ${\bf S}$ as the <b>Poynting Vector</b>:
 {\bf S} = \frac{1}{\mu_0}{\bf E} \times {\bf B}
 ```
 which indicates the flow of electromagnetic energy within a system - recall we talked about the flow of wave energy in the waves section with 
-a vector of this form.  The form of this equation draws similarity with the <b> Continuity Equation:</b>
+a vector of this form.  
+
+The form of this equation draws similarity with the <b> Continuity Equation:</b>
 ```{math}
 \frac{\partial \rho}{\partial t} = -\nabla \cdot {\bf F} - \sigma
 ```
@@ -113,7 +115,7 @@ Another way to view these results is through Equation {eq}`kEBperp`,
 {\bf S} = \,\frac{1}{\mu_0}{\bf E}\times {\bf B} = \frac{1}{\mu_0}{\bf E}\times \left(\frac{1}{\omega} {\bf k} \times {\bf E}\right) 
 = \frac{1}{\omega\,\mu_0} \bigg[ \left({\bf E}\cdot {\bf E}\right){\bf k} - \left({\bf E} \cdot {\bf k} \right){\bf E} \bigg]
 ```
-where we have used the triple vector product expression, and given Equation \ref{eqn:kEperp}:
+where we have used the triple vector product expression, and given Equation {eq}`kEBperp` shows that $\bf E,\, k$ are perpendicular:
 ```{math}
 {\bf S} = \frac{1}{\omega\,\mu_0}|{\bf E}|^2\,\,{\bf k} = \frac{k_z}{\omega\,\mu_0}|{\bf E}|^2\,\,\hat{{\bf z}}
 ```
@@ -121,11 +123,18 @@ Given that $\omega / k_z = c$ here, this means we can write the expression as:
 ```{math}
 {\bf S} = \frac{1}{c\,\mu_0}\,|{\bf E}|^2\,\,\hat{{\bf z}}
 ```
-Clearly this will be a time varying expression, however from the waves section we already discussed the effect of time averaging waves to find 
-the power, therefore we find that:
+For a plane wave this will be a time varying expression, however recall in the Waves section we discussed time averaging waves when finding 
+their power. For the plane wave propograting along the $z$ axis in {eq}`PlaneWaveSolns`:
 ```{math}
-S_{\langle T \rangle} = \frac{1}{2 \eta}\,E^2
+{\bf E} = \textrm{Re}\Big[{\bf E_0}\,\exp(i({\bf k \cdot x} - \omega t))\Big] = {\bf E_0}\,\cos(k_z x - \omega t)
 ```
-where $\eta$ is the characteristic impedance of the transmission medium, which has units of resistance. In a vacuum, this takes the value 
-$\eta \simeq 377\, \Omega$, but in matter its value will vary according to $\epsilon(\omega),\,\mu(\omega)$, as mentioned in previous sections.
+therefore we find that:
+```{math}
+S_{\langle T \rangle} &=&\, \frac{1}{\eta}{E_0}^2\left(\frac{1}{T}\int_0^T\,\cos^2(k_z x - \omega t)\,\mathrm{d}t\right) \\
+&=&\, \frac{{E_0}^2}{2\,\eta\,T}\left(\int_0^T\,\left(\cos(2(k_z x - \omega t))+1\right)\,\mathrm{d}t\right)\\ 
+&=&\, \frac{{E_0}^2}{2\,\eta\,T}\left[\frac{1}{2\omega}\sin(2(k_z x - \omega t))+t\right]_0^T\\
+&=&\, \frac{1}{2 \eta}\,{E_0}^2
+```
+where $\eta$ is the characteristic impedance of the transmission medium, which has units of electrical resistance $\Omega$. In a vacuum, this takes the value 
+$\eta \simeq 377\, \Omega$, but in matter its value will vary according to $\epsilon(\omega),\,\mu(\omega)$, as mentioned previously.
 
