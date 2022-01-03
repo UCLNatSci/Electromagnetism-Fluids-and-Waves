@@ -1,31 +1,31 @@
 # Energy in an Electric Field
 We can see that if we have charges that are free to move in space and some are at rest, the presence of a moving 
 charge or uniform electric field will cause a force to act on these free charges to move, pick up kinetic energy 
-and have non-zero momentum.  Therefore an electric field carries <b> Electric Potential Energy</b>.  The work done 
-$\mathrm{d} W$ on a charge $Q$ in the presence of an electric field ${\bf E}$ moving a distance $\mathrm{d} {\bf r}$ 
-in the field would be given by:
+and have non-zero momentum.  Therefore an electric field carries <b>Electric Potential Energy</b>.  The work done 
+$\mathrm{d} W$ on a charge $Q$ in the presence of an electric field $\bf E$ moving a distance $\bf \mathrm{\bf d} r$ in the 
+field would be given by:
 ```{math}
-\mathrm{d} W = Q\,{\bf E}\,\cdot \mathrm{d} {\bf r}
+\mathrm{d} W = Q\,\bf E\,\cdot \mathrm{\bf d} r
 ```
 and therefore the change in electric potential energy $\mathrm{d} U_E$ is found to be:
 ```{math}
 :label: elecpotenergy
-\mathrm{d} U_E = - Q\,{\bf E}\,\cdot \mathrm{d} {\bf r} \Rightarrow U_E = -\int_{\mathcal{C}} Q\,{\bf E}\,\cdot \mathrm{d} {\bf r} 
+\mathrm{d} U_E = - Q\,{\bf E\,\cdot \mathrm{\bf d} r} \Rightarrow U_E = -\int_{\mathcal{C}} Q\,{\bf E\,\cdot \mathrm{\bf d} r}
 ```
-For a point charge $Q_s$ producing the electric field, then for a charge moving in from $r \rightarrow \infty$ 
-up to a distance $r$, the potential energy required is:
+For a point charge $Q$, centered on the origin, producing an electric field, then a charge moving in from $r \rightarrow \infty$ 
+up to a distance $r$, the potential energy is:
 ```{math}
-U_E = -\,\frac{Q\,Q_s}{4\pi\,\epsilon_0}\int_{\infty}^r \frac{\hat{{\bf r}}'}{(r')^2}\,\cdot \mathrm{d} {\bf r}' = 
+U_E = -\,\frac{Q\,Q_s}{4\pi\,\epsilon_0}\int_{\infty}^r \frac{\hat{{\bf r}}'}{(r')^2}\,\cdot \mathrm{\bf d} {\bf r}' = 
 \frac{Q\,Q_s}{4\pi\,\epsilon_0}\frac{1}{r}
 ```
 This gives rise to the idea of <b> Electric Potential </b> $V_E$,
 ```{math}
 :label: EFieldpotential
-V_E({\bf r}) = -\int_c {\bf E} \cdot \mathrm{d}{\bf \ell}
+V_E({\bf r}) = -\int_c {\bf E} \cdot \mathrm{\bf d}\ell
 ```
 Here $V_E$ is amount of energy per unit charge given to $Q$ when moving on some path $C$ through an electric field from a 
-point with zero potential to position ${\bf r}$.  By the Helmholtz decomposition theorem, the field ${\bf E}$ will (in general) 
-have divergence and curl components, however if ${\bf E}$ is curl free, then we can write:
+point with zero potential to position $\bf r$.  By the Helmholtz decomposition theorem, the field $\bf E$ will (in general) 
+have divergence and curl components, however if $\bf E$ is curl free, then we can write:
 ```{math}
 :label: Efieldgradpotential
 {\bf E} = -\nabla V_E 
@@ -36,23 +36,24 @@ U_E = Q\,V_E
 ``` 
 For a point charge $Q_S$ producing an electric field, the electrical potential is given by:
 ```{math}
-V_E = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\hat{\bf r}'}{(r')^2}\cdot\mathrm{d}{\bf r}' 
+V_E = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\hat{\bf r}'}{(r')^2}\cdot\mathrm{\bf d}{\bf r}' 
 = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\mathrm{d} r'}{(r')^2} = \frac{Q_S}{4\pi\,\epsilon_0}\frac{1}{r}
 ```
-The term <b> Potential Difference </b> is given to the difference between the electric potentials $\Delta V_E$ between 
-two points $({\bf r}_1,\,{\bf r}_2)$ in an electrostatic system:
+The term <b>Potential Difference</b> is given to the difference between the electric potentials $\Delta V_E$ between 
+two points $({\bf r_1,\, r_2} )$ in an electrostatic system:
 ```{math}
-\Delta V_E = {V_E}_2 - {V_E}_1 &=&\, -\int_{{\bf r}_0}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell} - 
-\left (- \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{d}{\bf \ell}\right) 
-= \int_{{\bf r}_2}^{{\bf r}_0} {\bf E} \cdot \mathrm{d}{\bf \ell} + \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{d}{\bf \ell} \\ 
-&=&\,  \int_{{\bf r}_2}^{{\bf r}_1} {\bf E} \cdot \mathrm{d}{\bf \ell} = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell}
+\Delta V_E = {V_E}_2 - {V_E}_1 &=&\, -\int_{{\bf r}_0}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell - 
+\left (- \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell\right) 
+= \int_{{\bf r}_2}^{{\bf r}_0} {\bf E} \cdot \mathrm{\bf d} \ell + \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell \\ 
+&=&\, \int_{{\bf r}_2}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell
 ```
-Suppose we have a system of two charges, how does $U_E$ change?  $Q_1({\bf r}_1)$ and $Q_2({\bf r}_1)$ will each produce an 
+Suppose we have a system of two charges, how does $U_E$ change?  $Q_1$ and $Q_2$ will each produce an 
 electrostatic field which a test charge $Q$ coming in from $r \rightarrow \infty$ will feel and therefore $U_E$ has the form:
 ```{math}
 U_E = \frac{Q}{4 \pi\,\epsilon_0}\left(\frac{Q_1}{r_1} + \frac{Q_2}{r_2}\right)
 ```
-which we can generalise for $N$ point charges $Q_1({\bf r}_1), \,Q_2({\bf r}_2), \,\dots,\, Q_N({\bf r}_N)$:
+where $r_1,\, r_2$ are the distances between the charges $Q_1,\, Q_2$ and the test charge.  We can generalise this for $N$ point charges 
+$Q_1, \,Q_2, \, \dots,\, Q_N$:
 ```{math}
 U_E = \frac{Q}{4 \pi\,\epsilon_0}\left(\frac{Q_1}{r_1} + \frac{Q_2}{r_2} + \dots + \frac{Q_N}{r_N}\right) = 
 \frac{Q}{4 \pi\,\epsilon_0}\,\sum_{i=1}^N \frac{Q_i}{r_i}
@@ -63,7 +64,7 @@ also pairs of charges mutually interacting:
 ```{math}
 U_E = \frac{1}{4\pi\,\epsilon_0}\frac{Q_1\,Q_2}{|r_1-r_2|}
 ```
-We can also think about this in terms of potentials, e.g. $V_E({\bf r}_1)$ is as a result of charge $Q_1({\bf r}_1)$, therefore here:
+We can also think about this in terms of potentials, e.g. $V_E({\bf r_1})$ is as a result of charge $Q_1({\bf r_1})$, therefore here:
 ```{math} 
 U_E = \frac{1}{2}\bigg[Q_2\,{V_E}_1({\bf r}_2) + Q_1\,{V_E}_2({\bf r}_1)\bigg] 
 ```

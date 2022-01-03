@@ -205,7 +205,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="maxwelleqns.html">
-     2.9. Maxwell’s Equations
+     2.9. Differential Forms and Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -405,7 +405,7 @@ to an idea from the waves section, namely where are all the sources of energy in
 modify this to consider a continuous charge density <span class="math notranslate nohighlight">\(\rho({\bf r})\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[U_E = \frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i) \rightarrow U_E  = \frac{1}{2}\iiint \rho({\bf r}) \,V_E({\bf r}) \, \mathrm{d} V \]</div>
-<p>Given Equation <a class="reference internal" href="maxwelleqns.html#equation-dive">(2.21)</a>, we can rewrite this using Gauss’s law in differential form:</p>
+<p>Given Equation <a class="reference internal" href="maxwelleqns.html#equation-dive">(2.23)</a>, we can rewrite this using Gauss’s law in differential form:</p>
 <div class="math notranslate nohighlight">
 \[U_E  = \frac{1}{2}\,\epsilon_0\,\iiint V_E\,(\nabla\cdot {\bf E})\, \, \mathrm{d} V \]</div>
 <p>For some vector field <span class="math notranslate nohighlight">\({\bf A}\)</span> and scalar field <span class="math notranslate nohighlight">\(B\)</span>, we find the following vector identity applies:</p>
@@ -428,16 +428,16 @@ Then we can define the energy density <span class="math notranslate nohighlight"
 <div class="section" id="energy-flux-and-poynting-vector">
 <h2><span class="section-number">2.11.2. </span>Energy Flux and Poynting Vector<a class="headerlink" href="#energy-flux-and-poynting-vector" title="Permalink to this headline">¶</a></h2>
 <p>To find the total energy density we would need to repeat this process for <span class="math notranslate nohighlight">\({\bf B}\)</span> (which is fairly lengthy!), but we can consider this problem
-through analogy.  The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.23)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
+through analogy.  The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.25)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
 <div class="math notranslate nohighlight" id="equation-e-cb">
-<span class="eqno">(2.32)<a class="headerlink" href="#equation-e-cb" title="Permalink to this equation">¶</a></span>\[\frac{[B]}{[\textrm{Length}]} = \epsilon_0\,\mu_0\,\frac{[E]}{[\textrm{Time}]} \Rightarrow [B] = [E]\,[\textrm{Speed}]\,\epsilon_0\,\mu_0 \]</div>
-<p>Equation <a class="reference internal" href="solvingmaxwell.html#equation-speedoflight">(2.29)</a> says <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_0\,\mu_0}\)</span>, hence using <span class="math notranslate nohighlight">\(c\)</span> as the wave speed, <span class="math notranslate nohighlight">\(u_B\)</span> has the form:</p>
+<span class="eqno">(2.34)<a class="headerlink" href="#equation-e-cb" title="Permalink to this equation">¶</a></span>\[\frac{[B]}{[\textrm{Length}]} = \epsilon_0\,\mu_0\,\frac{[E]}{[\textrm{Time}]} \Rightarrow [B] = [E]\,[\textrm{Speed}]\,\epsilon_0\,\mu_0 \]</div>
+<p>Equation <a class="reference internal" href="solvingmaxwell.html#equation-speedoflight">(2.31)</a> says <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_0\,\mu_0}\)</span>, hence using <span class="math notranslate nohighlight">\(c\)</span> as the wave speed, <span class="math notranslate nohighlight">\(u_B\)</span> has the form:</p>
 <div class="math notranslate nohighlight">
 \[u_B = \frac{1}{2}\,\epsilon_0\,c^2\,B^2 = \frac{1}{2\,\mu_0}\,B^2\]</div>
 <p>Therefore the total intrinsic energy density of electromagnetic fields is given by:</p>
 <div class="math notranslate nohighlight">
 \[u = u_E + u_B = \frac{1}{2}\left(\epsilon_0\,E^2 + \frac{1}{\mu_0}\,B^2 \right)\]</div>
-<p>Equations for <span class="math notranslate nohighlight">\(u\)</span> also appear within Maxwell’s equations, take Equations <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.23)</a> and <a class="reference internal" href="maxwelleqns.html#equation-curle">(2.24)</a>:</p>
+<p>Equations for <span class="math notranslate nohighlight">\(u\)</span> also appear within Maxwell’s equations, take Equations <a class="reference internal" href="maxwelleqns.html#equation-curlb">(2.25)</a> and <a class="reference internal" href="maxwelleqns.html#equation-curle">(2.26)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} &amp;=&amp; \,\left({\bf J} + \epsilon_0\frac{\partial {\bf E}}{\partial t} \right)\cdot {\bf E} = 
 {\bf J} \cdot {\bf E} + \frac{\partial}{\partial t}\left( \frac{1}{2}\epsilon_0 E^2 \right) \label{eqn:Spart1}\\
@@ -453,7 +453,8 @@ through analogy.  The form of the Equation <a class="reference internal" href="m
 <div class="math notranslate nohighlight">
 \[{\bf S} = \frac{1}{\mu_0}{\bf E} \times {\bf B}\]</div>
 <p>which indicates the flow of electromagnetic energy within a system - recall we talked about the flow of wave energy in the waves section with
-a vector of this form.  The form of this equation draws similarity with the <b> Continuity Equation:</b></p>
+a vector of this form.</p>
+<p>The form of this equation draws similarity with the <b> Continuity Equation:</b></p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \rho}{\partial t} = -\nabla \cdot {\bf F} - \sigma\]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the density of quantity <span class="math notranslate nohighlight">\(X\)</span> being investigated, <span class="math notranslate nohighlight">\({\bf F}\)</span> is the flux of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> is the rate at which <span class="math notranslate nohighlight">\(X\)</span> is
@@ -462,7 +463,7 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
 </div>
 <div class="section" id="electromagnetic-plane-waves">
 <h2><span class="section-number">2.11.3. </span>Electromagnetic Plane Waves<a class="headerlink" href="#electromagnetic-plane-waves" title="Permalink to this headline">¶</a></h2>
-<p>Recall the plane wave solutions from Equation <a class="reference internal" href="solvingmaxwell.html#equation-planewavesolns">(2.31)</a>:</p>
+<p>Recall the plane wave solutions from Equation <a class="reference internal" href="solvingmaxwell.html#equation-planewavesolns">(2.33)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf E} &amp;=&amp; \,\begin{bmatrix}
  E_0 \\
@@ -486,27 +487,33 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
  S_0
 \end{bmatrix}\,\exp(2i(k_z z  - \omega t))\end{split}\]</div>
 <p>which suggests for wave oscillations in the <span class="math notranslate nohighlight">\(({\bf x},\,{\bf y})\)</span> planes, the wave energy is transmitted in the <span class="math notranslate nohighlight">\({\bf z}\)</span> direction,
-as we see in <a class="reference internal" href="solvingmaxwell.html#emplanewaves"><span class="std std-numref">Fig. 2.39</span></a> (we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by
+as we see in <a class="reference internal" href="solvingmaxwell.html#emplanewaves"><span class="std std-numref">Fig. 2.41</span></a> (we knew this from the Waves chapter).  Interestingly the energy flux speed is also given by
 <span class="math notranslate nohighlight">\(v_S = c = v_{E,\,B}\)</span> but the wavelength <span class="math notranslate nohighlight">\(\lambda_S = \frac{1}{2}\lambda_{E,\,B}\)</span> and frequency <span class="math notranslate nohighlight">\(f_S = 2\,f_{E,\,B}\)</span> are changed.</p>
 </div>
 <div class="section" id="characteristic-impedance">
 <h2><span class="section-number">2.11.4. </span>Characteristic Impedance*<a class="headerlink" href="#characteristic-impedance" title="Permalink to this headline">¶</a></h2>
-<p>Another way to view these results is through Equation <a class="reference internal" href="solvingmaxwell.html#equation-kebperp">(2.30)</a>,</p>
+<p>Another way to view these results is through Equation <a class="reference internal" href="solvingmaxwell.html#equation-kebperp">(2.32)</a>,</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \,\frac{1}{\mu_0}{\bf E}\times {\bf B} = \frac{1}{\mu_0}{\bf E}\times \left(\frac{1}{\omega} {\bf k} \times {\bf E}\right) 
 = \frac{1}{\omega\,\mu_0} \bigg[ \left({\bf E}\cdot {\bf E}\right){\bf k} - \left({\bf E} \cdot {\bf k} \right){\bf E} \bigg]\]</div>
-<p>where we have used the triple vector product expression, and given Equation \ref{eqn:kEperp}:</p>
+<p>where we have used the triple vector product expression, and given Equation <a class="reference internal" href="solvingmaxwell.html#equation-kebperp">(2.32)</a> shows that <span class="math notranslate nohighlight">\(\bf E,\, k\)</span> are perpendicular:</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \frac{1}{\omega\,\mu_0}|{\bf E}|^2\,\,{\bf k} = \frac{k_z}{\omega\,\mu_0}|{\bf E}|^2\,\,\hat{{\bf z}}\]</div>
 <p>Given that <span class="math notranslate nohighlight">\(\omega / k_z = c\)</span> here, this means we can write the expression as:</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \frac{1}{c\,\mu_0}\,|{\bf E}|^2\,\,\hat{{\bf z}}\]</div>
-<p>Clearly this will be a time varying expression, however from the waves section we already discussed the effect of time averaging waves to find
-the power, therefore we find that:</p>
+<p>For a plane wave this will be a time varying expression, however recall in the Waves section we discussed time averaging waves when finding
+their power. For the plane wave propograting along the <span class="math notranslate nohighlight">\(z\)</span> axis in <a class="reference internal" href="solvingmaxwell.html#equation-planewavesolns">(2.33)</a>:</p>
 <div class="math notranslate nohighlight">
-\[S_{\langle T \rangle} = \frac{1}{2 \eta}\,E^2\]</div>
-<p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the characteristic impedance of the transmission medium, which has units of resistance. In a vacuum, this takes the value
-<span class="math notranslate nohighlight">\(\eta \simeq 377\, \Omega\)</span>, but in matter its value will vary according to <span class="math notranslate nohighlight">\(\epsilon(\omega),\,\mu(\omega)\)</span>, as mentioned in previous sections.</p>
+\[{\bf E} = \textrm{Re}\Big[{\bf E_0}\,\exp(i({\bf k \cdot x} - \omega t))\Big] = {\bf E_0}\,\cos(k_z x - \omega t)\]</div>
+<p>therefore we find that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_{\langle T \rangle} &amp;=&amp;\, \frac{1}{\eta}{E_0}^2\left(\frac{1}{T}\int_0^T\,\cos^2(k_z x - \omega t)\,\mathrm{d}t\right) \\
+&amp;=&amp;\, \frac{{E_0}^2}{2\,\eta\,T}\left(\int_0^T\,\left(\cos(2(k_z x - \omega t))+1\right)\,\mathrm{d}t\right)\\ 
+&amp;=&amp;\, \frac{{E_0}^2}{2\,\eta\,T}\left[\frac{1}{2\omega}\sin(2(k_z x - \omega t))+t\right]_0^T\\
+&amp;=&amp;\, \frac{1}{2 \eta}\,{E_0}^2\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the characteristic impedance of the transmission medium, which has units of electrical resistance <span class="math notranslate nohighlight">\(\Omega\)</span>. In a vacuum, this takes the value
+<span class="math notranslate nohighlight">\(\eta \simeq 377\, \Omega\)</span>, but in matter its value will vary according to <span class="math notranslate nohighlight">\(\epsilon(\omega),\,\mu(\omega)\)</span>, as mentioned previously.</p>
 </div>
 </div>
 

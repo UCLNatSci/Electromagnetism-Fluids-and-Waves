@@ -146,6 +146,11 @@
      1.8. Matter Waves
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/dopplershift.html">
+     1.9. Doppler Shift
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -200,7 +205,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="maxwelleqns.html">
-     2.9. Maxwell’s Equations
+     2.9. Differential Forms and Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -402,27 +407,27 @@ directly to the size of the charges and to the inverse square of the distance be
 as the force per unit charge, in this case we can find the electric field due to the charge <span class="math notranslate nohighlight">\(Q_1\)</span> measured at <span class="math notranslate nohighlight">\({\bf r}_2\)</span> as:</p>
 <div class="math notranslate nohighlight" id="equation-efieldcharge">
 <span class="eqno">(2.3)<a class="headerlink" href="#equation-efieldcharge" title="Permalink to this equation">¶</a></span>\[{\bf E} = \frac{{\bf F}_c}{Q_2} = \frac{Q_1}{4\,\pi\,\epsilon_0}\frac{1}{|{\bf r}_1-{\bf r}_2|^2}\,\hat{{\bf r}}_{12}\]</div>
-<p>This expression has <span class="math notranslate nohighlight">\(Q_1\)</span> taking the role of a <b> Source Charge </b>.  If we have a point charge, we can draw the electric field around it,
+<p>This expression has <span class="math notranslate nohighlight">\(Q_1\)</span> taking the role of a <b>Source Charge</b>.  If we have a point charge, we can draw the electric field around it,
 as shown in <a class="reference internal" href="#positivechargeefield"><span class="std std-numref">Fig. 2.7</span></a>.</p>
 <div class="figure align-default" id="positivechargeefield">
 <img alt="../_images/PositiveChargeEField.png" src="../_images/PositiveChargeEField.png" />
 <p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Electric fields lines from a positive charge</span><a class="headerlink" href="#positivechargeefield" title="Permalink to this image">¶</a></p>
 </div>
 <p>Our field lines radiate outwards radially, depending only on the distance from a point to the charge (here we are just assuming a point charge)
-and in the direction a positive charge would follow (here outwards as like charges repel).  These are all very sound ideas that we have no doubt
-learnt before, the question is whilst Coulombs law is a very effective tool to empirically describe electric fields from point charges, where
-does is arrive from? Will it work in more complicated situations?</p>
+and in the direction a positive charge would follow (here outwards as like charges repel).</p>
+<p>These are all very sound ideas that we have no doubt learnt before, the question is whilst Coulombs law is a very effective tool to empirically
+describe electric fields from point charges, where does is arrive from? Will it work in more complicated situations?</p>
 </div>
 <div class="section" id="gausss-law">
 <h2><span class="section-number">2.2.2. </span>Gauss’s Law<a class="headerlink" href="#gausss-law" title="Permalink to this headline">¶</a></h2>
 <p>Lets now look at electric fields from the point of view of an a containing surface and flux crossing the surface boundary.  Starting with a charge
-<span class="math notranslate nohighlight">\(Q\)</span>, we can surround this in three dimensions by a sphere, as seen in Figure <a href="#id1"><span class="problematic" id="id2">:nameref:`EFieldFlux`</span></a>.</p>
+<span class="math notranslate nohighlight">\(Q\)</span>, we can surround this in three dimensions by a sphere, as seen in Figure <a class="reference internal" href="#efieldflux"><span class="std std-numref">Fig. 2.8</span></a>.</p>
 <div class="figure align-default" id="efieldflux">
 <img alt="../_images/EFieldFlux2.png" src="../_images/EFieldFlux2.png" />
 <p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Flux of the electric field from a point charge <span class="math notranslate nohighlight">\(+q\)</span> passing through a spherical surface.</span><a class="headerlink" href="#efieldflux" title="Permalink to this image">¶</a></p>
 </div>
 <p>Now we have field lines perpendicular to the surface, here a sphere, so a similar situation to hose pipe and the water.  But now we have
-to think about “how close” the field lines get over the spheres surface - they should really be thought of as infinitesimally small, so we use
+to think about <em>how close</em> the field lines get over the spheres surface - they should really be thought of as infinitesimally small, so we use
 an area integral summing up the flux crossing the bounding surface area <span class="math notranslate nohighlight">\(A\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\Phi_E = \iint_A {\bf E}\cdot \mathrm{d}{\bf A}\]</div>
@@ -443,16 +448,22 @@ of the electric field is crossing the spherical boundary here, clearly the flux 
 around the charge <span class="math notranslate nohighlight">\(Q\)</span> we find that the area normal vector is <span class="math notranslate nohighlight">\({\bf A} = A_r\,\hat{{\bf r}}\)</span>.  The surface integral term therefore reduces to:</p>
 <div class="math notranslate nohighlight">
 \[\iint {\bf E}\cdot \mathrm{d} {\bf A} = \iint E_r \,\mathrm{d} A_r\]</div>
-<p>where we decomposed <span class="math notranslate nohighlight">\(\bf E\)</span> in to components:</p>
+<p>where we decomposed the electric field <span class="math notranslate nohighlight">\(\bf E\)</span> in to components:</p>
 <div class="math notranslate nohighlight">
-\[{\bf E} = E_r \hat{{\bf r}} +E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}\]</div>
+\[{\bf E} = E_r \hat{{\bf r}} + E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}\]</div>
 <p>By symmetry therefore the electric field does not have an angular <span class="math notranslate nohighlight">\((\theta,\, \phi)\)</span> dependence - this makes sense physically because
-whether a charge is on our left or right hand side does not charge the force felt if it is at the same fixed distance.  Calculating
-<span class="math notranslate nohighlight">\(\iint {\bf E}\cdot \mathrm{d} {\bf A}\)</span> is straightforward on a sphere:</p>
+whether a charge is on our left or right hand side does not charge the force felt if it is at the same fixed distance.</p>
+<p>Calculating <span class="math notranslate nohighlight">\(\iint {\bf E}\cdot \mathrm{d} {\bf A}\)</span> is straightforward on a sphere:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\iint E_r\, \mathrm{d} A_r = \iint E_r \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi &amp;=&amp; \,E_r \,(4 \pi r^2) = k Q\\
-\Rightarrow {\bf E} &amp;=&amp; \,E_r \,\hat{{\bf r}} = \frac{k Q}{4 \,\pi\,r^2} \,\hat{{\bf r}}\end{split}\]</div>
-<p>Comparing this result with Coulomb’s law in Equation <a class="reference internal" href="#equation-coulombslaw">(2.2)</a>, we fix <span class="math notranslate nohighlight">\(k = 1/\epsilon_0\)</span> (which also has the required units, check
+\[\iint E_r\, \mathrm{d} A_r = \iint E_r \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi\]</div>
+<p>Since <span class="math notranslate nohighlight">\(E_r\)</span> only has <span class="math notranslate nohighlight">\(r\)</span> dep[endence, we can factorise this out of the integral:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}E_r \iint  \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi = E_r(4 \pi\,r^2) &amp;=&amp;\, kQ \\
+\Rightarrow E_r &amp;=&amp;\, \frac{kQ}{4\pi\,r^2}\end{split}\]</div>
+<p>Finally we can write this in vector form:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E} = \,E_r \,\hat{{\bf r}} = \frac{k Q}{4\pi\,r^2} \,\hat{{\bf r}}\]</div>
+<p>Comparing this result with Coulomb’s law in Equation <a class="reference internal" href="#equation-coulombslaw">(2.2)</a>, we find we can fix <span class="math notranslate nohighlight">\(k = 1/\epsilon_0\)</span> (which also has the required units, check
 this for yourself!).  So our final expression, which is known as <b>Gauss’s Law</b>, can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-gausslaw">
 <span class="eqno">(2.4)<a class="headerlink" href="#equation-gausslaw" title="Permalink to this equation">¶</a></span>\[\iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q}{\epsilon_0} \]</div>
@@ -464,8 +475,9 @@ we should really write Gauss’s law as:</p>
 </div>
 <div class="section" id="gravitational-analogue">
 <h2><span class="section-number">2.2.3. </span>Gravitational Analogue<a class="headerlink" href="#gravitational-analogue" title="Permalink to this headline">¶</a></h2>
-<p>One aspect of the equations of electrostatics to notice is that the original consideration of Coulomb’s law could be extended over
-to discuss Newton’s law of gravitation.  We notice that the equations are essentially just a redefinition of fields and constants:</p>
+<p>One of the grand goals of physics is to understand nature through the same equations but on different scales - so called <b>universality</b>.  We
+find that the equations in electrostatics can be used to discuss Newton’s law of gravitation.  We notice that the equations are essentially just a
+redefinition of fields and constants:</p>
 <div class="math notranslate nohighlight">
 \[F_C = \frac{1}{4\pi \epsilon_0}\frac{Q_1\,Q_2}{r^2} \Longleftrightarrow F_G = -G\frac{\,M_1\,M_2}{r^2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(F_G\)</span> is negative as it is only an attractive force, these suggest that by analogy:</p>

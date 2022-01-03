@@ -58,14 +58,16 @@ Ising models in 1D (left panel) and 2D (right panel)
 ```
 
 ## Magnetic Fields, Currents and Biot-Savart Law
-Experimentally we observe that a currents flowing in wires produce magnetic fields, as seen in {numref}`BfieldCurrent`.  As the iron flings pattern shows,  
-larger currents (here from more current carrying wire) produce stronger magnetic fields, so lets posit $B \propto I$.
+Experimentally we observe that a currents flowing in wires produce magnetic fields, as seen in {numref}`BfieldCurrent`.  As the iron flings pattern shows,  larger currents 
+(here from more current carrying wire) produce stronger magnetic fields, so lets posit $B \propto I$.
+
 ```{figure} ../figures/WireFillings.jpg
 ---
 name: BfieldCurrent
 ---
 Observed magnetic field from a current carrying wire.
 ```
+
 We can see that such as a system displays cylindrical symmetry, as there is rotational invariance around the current, aligned on the $z$ axis. The magnetic 
 fields direction appears to follow the right handed screw rule, as shown in {numref}`RHScrewRule`.
 ```{figure} ../figures/CurrentBField.jpg
@@ -94,6 +96,7 @@ I = n\,A\,v\,q
 where $n$ is the number density of free charges, $A$ is the conductor cross sectional area, $v = |{\bf v}|$ is the charge drift velocity and $q$ is the 
 magnitude of the charge on each charge carrier.  If we take the combination of $I\,\mathrm{d} {\bf \ell}$ then:
 ```{math}
+:label: IdlvdQ
 I\,\mathrm{\bf d} \ell = n\,A\,\mathrm{d} \ell\,q\,|{\bf v}|\,\hat{\bf z} = \mathrm{d} N\,q\,{\bf v}  = \mathrm{d} Q\,{\bf v}
 ```
 where $N$ is the number of free charges in the conductor and we have moved the vector dependence from the direction of the length element 
@@ -109,8 +112,9 @@ Note also that we replaced the electric field constant $\epsilon_0$ with a magne
 ```
 and therefore given the definition of the cross product, we can convert this in to a vector equation:
 ```{math}
-\mathrm{d} {\bf B} = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,{\bf v}\times {\bf r}}{|{\bf r}|^3} \Longrightarrow \mathrm{d} {\bf B} = 
-\frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{\bf d}\ell\,\times {\bf r}}{\,|{\bf r}|^3} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{\bf d}\ell\,\times \hat{{\bf r}}}{|{\bf r}|^2}
+\Rightarrow\mathrm{d} {\bf B} = \frac{\mu_0}{4\pi}\,\frac{\mathrm{d} Q\,{\bf v}\times {\bf r}}{|{\bf r}|^3} = 
+\frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{\bf d}\ell\,\times {\bf r}}{\,|{\bf r}|^3} = 
+\frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{\bf d}\ell\,\times \hat{{\bf r}}}{|{\bf r}|^2}
 ``` 
 Thus the observed magnetic field from a wire carrying current $I$ at a distance ${\bf r}$ is given by the <b>Biot-Savart Law:</b>
 ```{math}

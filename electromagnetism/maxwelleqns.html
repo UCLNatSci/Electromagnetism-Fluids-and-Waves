@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.9. Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>2.9. Differential Forms and Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -205,7 +205,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.9. Maxwell’s Equations
+     2.9. Differential Forms and Maxwell’s Equations
     </a>
    </li>
    <li class="toctree-l2">
@@ -380,8 +380,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   2.9.4. Maxwell’s Equations
+  <a class="reference internal nav-link" href="#maxwells-equations-in-vacuum">
+   2.9.4. Maxwell’s Equations in Vacuum
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -405,14 +405,15 @@
         
               <div>
                 
-  <div class="section" id="maxwells-equations">
-<h1><span class="section-number">2.9. </span>Maxwell’s Equations<a class="headerlink" href="#maxwells-equations" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="differential-forms-and-maxwells-equations">
+<h1><span class="section-number">2.9. </span>Differential Forms and Maxwell’s Equations<a class="headerlink" href="#differential-forms-and-maxwells-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="gausss-law-in-differential-form">
 <h2><span class="section-number">2.9.1. </span>Gauss’s Law in Differential Form<a class="headerlink" href="#gausss-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
 <p>Lets revisit what we have learnt about Gauss’s law for electric charges</p>
 <div class="math notranslate nohighlight">
 \[\iint_A  {\bf E} \cdot\,\mathrm{d} {\bf A} = \frac{Q_{encl}}{\epsilon_0}\]</div>
-<p>since the charge <span class="math notranslate nohighlight">\(Q_{encl}\)</span> is enclosed within some closed surface area, that is the boundary to a volume, we can equally think about a charge density inside that volume</p>
+<p>since the charge <span class="math notranslate nohighlight">\(Q_{encl}\)</span> is enclosed within some closed surface area, that is the boundary to a volume, we can equally think about a charge density inside that
+volume:</p>
 <div class="math notranslate nohighlight">
 \[\iint_A  {\bf E} \cdot\,\mathrm{d} {\bf A} = \iiint_V \frac{\rho}{\epsilon_0}\,\mathrm{d} V\]</div>
 <p>If we recall the divergence theorem, it states that the flux of a vector field passing a closed surface area is related to the divergence of the vector field
@@ -424,10 +425,10 @@ within the volume, so for an electric field</p>
 \[\iiint_V \left(\nabla \cdot {\bf E} - \frac{\rho}{\epsilon_0}\right)\,\mathrm{d} V = 0\]</div>
 <p>in order for this expression to be true for <em> any </em>  volume <span class="math notranslate nohighlight">\(V\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>
 <div class="math notranslate nohighlight" id="equation-dive">
-<span class="eqno">(2.21)<a class="headerlink" href="#equation-dive" title="Permalink to this equation">¶</a></span>\[\nabla \cdot {\bf E} = \frac{\rho}{\epsilon_0} \]</div>
+<span class="eqno">(2.23)<a class="headerlink" href="#equation-dive" title="Permalink to this equation">¶</a></span>\[\nabla \cdot {\bf E} = \frac{\rho}{\epsilon_0} \]</div>
 <p>Likewise we can do the same for magnetic fields, which in the absence of magnetic monopoles will look like:</p>
 <div class="math notranslate nohighlight" id="equation-divb">
-<span class="eqno">(2.22)<a class="headerlink" href="#equation-divb" title="Permalink to this equation">¶</a></span>\[\nabla \cdot {\bf B} = 0 \]</div>
+<span class="eqno">(2.24)<a class="headerlink" href="#equation-divb" title="Permalink to this equation">¶</a></span>\[\nabla \cdot {\bf B} = 0 \]</div>
 </div>
 <div class="section" id="amperes-law-in-differential-form">
 <h2><span class="section-number">2.9.2. </span>Ampère’s Law in Differential Form<a class="headerlink" href="#amperes-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
@@ -445,7 +446,7 @@ within the volume, so for an electric field</p>
 \[\iint_A \left( \nabla \times {\bf B} - \mu_0 {\bf J} - \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\right)\cdot\mathrm{d}{\bf A} = 0\]</div>
 <p>in order for this expression to be true for <em> any </em> bounding area <span class="math notranslate nohighlight">\(A\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>
 <div class="math notranslate nohighlight" id="equation-curlb">
-<span class="eqno">(2.23)<a class="headerlink" href="#equation-curlb" title="Permalink to this equation">¶</a></span>\[\nabla \times {\bf B} = \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\]</div>
+<span class="eqno">(2.25)<a class="headerlink" href="#equation-curlb" title="Permalink to this equation">¶</a></span>\[\nabla \times {\bf B} = \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\]</div>
 </div>
 <div class="section" id="faradays-law-in-differential-form">
 <h2><span class="section-number">2.9.3. </span>Faraday’s Law in Differential Form<a class="headerlink" href="#faradays-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
@@ -457,7 +458,7 @@ causing a current to flow.  We can write <span class="math notranslate nohighlig
 <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> in the circuit:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{E} = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell} = \oint_c {\bf E} \cdot \mathrm{d}{\bf \ell}\]</div>
-<p>where the final sign on the integral is given by the convention for clockwise conventional current.  <a class="reference internal" href="faradayslaw.html#magnetinacoil"><span class="std std-numref">Fig. 2.37</span></a> shows that a positive
+<p>where the final sign on the integral is given by the convention for clockwise conventional current.  <a class="reference internal" href="faradayslaw.html#magnetinacoil"><span class="std std-numref">Fig. 2.39</span></a> shows that a positive
 change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventually produces current in a negative direction.  We can rewrite this using Stoke’s theorem:</p>
 <div class="math notranslate nohighlight">
 \[\oint_\ell {\bf E} \cdot \mathrm{d} \ell= \iint_A \left(\nabla \times {\bf E}\right)\cdot \mathrm{d} {\bf A} \nonumber\]</div>
@@ -466,27 +467,27 @@ change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventuall
 \[\iint_A \left(\nabla \times {\bf E} + \frac{\partial {\bf B}}{\partial t}\right)\cdot \mathrm{d} {\bf A} = 0\]</div>
 <p>in order for this expression to be true for <em> any </em> bounding volume <span class="math notranslate nohighlight">\(A\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>
 <div class="math notranslate nohighlight" id="equation-curle">
-<span class="eqno">(2.24)<a class="headerlink" href="#equation-curle" title="Permalink to this equation">¶</a></span>\[\nabla \times {\bf E} = - \frac{\partial {\bf B}}{\partial t} \]</div>
+<span class="eqno">(2.26)<a class="headerlink" href="#equation-curle" title="Permalink to this equation">¶</a></span>\[\nabla \times {\bf E} = - \frac{\partial {\bf B}}{\partial t} \]</div>
 </div>
-<div class="section" id="id1">
-<h2><span class="section-number">2.9.4. </span>Maxwell’s Equations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>We can collect together Equations <a class="reference internal" href="#equation-dive">(2.21)</a>, <a class="reference internal" href="#equation-divb">(2.22)</a>, <a class="reference internal" href="#equation-curlb">(2.23)</a> and <a class="reference internal" href="#equation-curle">(2.24)</a> and present as Maxwell’s equations:</p>
+<div class="section" id="maxwells-equations-in-vacuum">
+<h2><span class="section-number">2.9.4. </span>Maxwell’s Equations in Vacuum<a class="headerlink" href="#maxwells-equations-in-vacuum" title="Permalink to this headline">¶</a></h2>
+<p>We can collect together Equations <a class="reference internal" href="#equation-dive">(2.23)</a>, <a class="reference internal" href="#equation-divb">(2.24)</a>, <a class="reference internal" href="#equation-curlb">(2.25)</a> and <a class="reference internal" href="#equation-curle">(2.26)</a> and present as Maxwell’s equations:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqns">
-<span class="eqno">(2.25)<a class="headerlink" href="#equation-maxwellseqns" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;=&amp;\, \frac{\rho}{\epsilon_0}    \\
+<span class="eqno">(2.27)<a class="headerlink" href="#equation-maxwellseqns" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;=&amp;\, \frac{\rho}{\epsilon_0}    \\
 \nabla \cdot {\bf B} &amp;=&amp;\, 0   \\
 \nabla \times {\bf E} &amp;=&amp;\, -\frac{\partial {\bf B}}{\partial t}   \\
 \nabla \times {\bf B} &amp;=&amp;\, \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t} \end{split}\]</div>
-<p>These are <b>local</b> equations, they can be solved at points in space <span class="math notranslate nohighlight">\({\bf r}\)</span>, rather than the integral form <b>global</b> equations, which we had to
-think about in terms of a bounding surface <span class="math notranslate nohighlight">\({\bf A}\)</span>.  Another thing to notice is that the second / third of Maxwell’s equations are <em> homogeneous</em>,
-they are sourced only by the <span class="math notranslate nohighlight">\({\bf E},\,{\bf B}\)</span> fields, whereas the first / fourth equations are inhomogeneous, being sourced by additional
-scalar/vector fields <span class="math notranslate nohighlight">\(\rho,\,{\bf J}\)</span>.</p>
+<p>These are <b>local</b> equations, they can be solved at points in space <span class="math notranslate nohighlight">\({\bf r}\)</span>, rather than the integral form of each which are <b>global</b> equations - this
+is because they require us to think in terms of the bounding surfaces <span class="math notranslate nohighlight">\(\bf A\)</span>.  Another thing to notice is that the second / third of Maxwell’s equations
+are <em>homogeneous</em>, they are sourced only by the <span class="math notranslate nohighlight">\({\bf E},\,{\bf B}\)</span> fields, whereas the first / fourth equations are <em>inhomogeneous</em>, being
+sourced by additional scalar/vector fields <span class="math notranslate nohighlight">\(\rho,\,{\bf J}\)</span>.</p>
 </div>
 <div class="section" id="maxwells-equations-in-matter">
 <h2><span class="section-number">2.9.5. </span>Maxwell’s Equations in Matter*<a class="headerlink" href="#maxwells-equations-in-matter" title="Permalink to this headline">¶</a></h2>
-<p>Recall that Equation <a class="reference internal" href="#equation-maxwellseqns">(2.25)</a> is valid in vacuum, however we know that in matter, electromagnetic fields are better described in terms of
-<span class="math notranslate nohighlight">\({\bf E} \rightarrow {\bf D}\)</span> and <span class="math notranslate nohighlight">\({\bf B} \rightarrow {\bf H}\)</span>, which means we can write Maxwell’s equations in matter as:</p>
+<p>Recall that all the Maxwell equations in <a class="reference internal" href="#equation-maxwellseqns">(2.27)</a> are only valid in vacuum, within matter however electromagnetic fields are better described in terms of the
+<span class="math notranslate nohighlight">\({\bf E} \rightarrow {\bf D}\)</span> and <span class="math notranslate nohighlight">\({\bf B} \rightarrow {\bf H}\)</span> fields, which we use to rewrite Maxwell’s equations in matter as:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqnsmatter">
-<span class="eqno">(2.26)<a class="headerlink" href="#equation-maxwellseqnsmatter" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf D} &amp;=&amp;\,\rho_{free}   \\
+<span class="eqno">(2.28)<a class="headerlink" href="#equation-maxwellseqnsmatter" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf D} &amp;=&amp;\,\rho_{free}   \\
 \nabla \cdot {\bf H} &amp;=&amp;\, 0   \\
 \nabla \times {\bf E} &amp;=&amp;\, -\frac{\partial {\bf B}}{\partial t} \\
 \nabla \times {\bf H} &amp;=&amp;\,  {\bf J}_{free} + \frac{\partial {\bf D}}{\partial t} \end{split}\]</div>
@@ -494,22 +495,21 @@ scalar/vector fields <span class="math notranslate nohighlight">\(\rho,\,{\bf J}
 </div>
 <div class="section" id="magnetic-monopoles">
 <h2><span class="section-number">2.9.6. </span>Magnetic Monopoles*<a class="headerlink" href="#magnetic-monopoles" title="Permalink to this headline">¶</a></h2>
-<p>We could add source terms to Maxwell’s equations that would need to be present, if magnetic monopoles were found to exist:</p>
+<p>If magnetic monopoles were found to exist, then we could add the additional terms to Maxwell’s equations that would need to be present:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqnsbmonopole">
-<span class="eqno">(2.27)<a class="headerlink" href="#equation-maxwellseqnsbmonopole" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;=&amp;\, \frac{1}{\epsilon_0}\,\rho  \\
-\nabla \cdot {\bf B} &amp;=&amp;\, \mu_0 \,\rho_m  \\
-\nabla \times {\bf E} &amp;=&amp;\, - {\bf J}_m -\frac{\partial {\bf B}}{\partial t}  \\
-\nabla \times {\bf B} &amp;=&amp;\, \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\rho_m\)</span> is the monopole charge density and <span class="math notranslate nohighlight">\({\bf J}_m\)</span> is the monopole current density.  We notice the increase degree of symmetry between the
-equations here now - all the equations are now inhomogeneous.</p>
-<p>Additionally if there are <span class="math notranslate nohighlight">\(Q_m\)</span> which could move under magnetic and electric fields, we would have to amend the expression from
-Equation <a class="reference internal" href="magneticforces.html#equation-lorentzforce">(2.17)</a> for the Lorentz force law:</p>
+<span class="eqno">(2.29)<a class="headerlink" href="#equation-maxwellseqnsbmonopole" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;=&amp;\, \frac{1}{\epsilon_0}\,\rho_E  \\
+\nabla \cdot {\bf B} &amp;=&amp;\, \mu_0 \,\rho_B  \\
+\nabla \times {\bf E} &amp;=&amp;\, - {\bf J}_B -\frac{\partial {\bf B}}{\partial t}  \\
+\nabla \times {\bf B} &amp;=&amp;\, \mu_0 {\bf J}_E + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_B\)</span> is the monopole charge density and <span class="math notranslate nohighlight">\(\bf J_B\)</span> is the monopole current density, which are the magnetic couterparts to the familar electric field
+<span class="math notranslate nohighlight">\(\rho_E,\, {\bf J_E}\)</span>.  We notice the increase degree of symmetry between the equations here now - all the equations are now inhomogeneous.</p>
+<p>Additionally if there are <span class="math notranslate nohighlight">\(Q_B = \iiint \rho_B\,\mathrm{d}V\)</span> which could move under magnetic (and therefore also electric) fields, we would have to amend the expression
+for the Lorentz force law in Equation <a class="reference internal" href="magneticforces.html#equation-lorentzforce">(2.18)</a> :</p>
 <div class="math notranslate nohighlight">
-\[{\bf F} = Q\left( {\bf E} + {\bf v} \times {\bf B} \right) + Q_m\left( {\bf B} - \frac{1}{c^2}{\bf v} \times {\bf E} \right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(Q_m\)</span> is the size of the magnetic charge. No current evidence of these in nature, but symmetry breaking of GUT theories suggest they
-should have existed and ideas like cosmic inflation are proposed to explain the non-observation just as a vast
-dilution within our observable universe.  The observed quantisation of electric charge, into chunks no smaller than <span class="math notranslate nohighlight">\(\pm q_e\)</span> can be
-explained by the presence of a <em> single</em>  magnetic monopole in our universe, as Dirac proposed in 1931.  A good paper on magnetic
+\[{\bf F} = Q_E\left( {\bf E} + {\bf v} \times {\bf B} \right) + Q_B\left( {\bf B} - \frac{1}{c^2}{\bf v} \times {\bf E} \right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_B\)</span> is a magnetic charge. No current evidence of these in nature, but symmetry breaking of GUT theories suggest they <em>should have existed</em> and ideas like
+cosmic inflation are proposed to explain the non-observation just as a vast dilution within our observable universe.  The observed quantisation of electric charge, into
+chunks no smaller than <span class="math notranslate nohighlight">\(\pm e\)</span> can be explained by the presence of a <em>single</em> magnetic monopole in our universe, as Dirac proposed in 1931.  A good paper on magnetic
 monopoles is <a class="reference external" href="https://doi.org/10.1080/00107514.2012.685693">here</a>, Dirac’s paper can be found <a class="reference external" href="https://doi.org/10.1098/rspa.1931.0130">here</a> and for more on
 cosmic inflation, check out any good lecture course on, such as these from <a class="reference external" href="http://www.damtp.cam.ac.uk/user/tong/cosmo/cosmo.pdf">DMTP</a>.</p>
 </div>

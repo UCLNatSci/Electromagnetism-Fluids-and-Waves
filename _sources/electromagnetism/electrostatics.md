@@ -20,7 +20,7 @@ as the force per unit charge, in this case we can find the electric field due to
 :label: EFieldCharge
 {\bf E} = \frac{{\bf F}_c}{Q_2} = \frac{Q_1}{4\,\pi\,\epsilon_0}\frac{1}{|{\bf r}_1-{\bf r}_2|^2}\,\hat{{\bf r}}_{12}
 ```
-This expression has $Q_1$ taking the role of a <b> Source Charge </b>.  If we have a point charge, we can draw the electric field around it, 
+This expression has $Q_1$ taking the role of a <b>Source Charge</b>.  If we have a point charge, we can draw the electric field around it, 
 as shown in {numref}`PositiveChargeEField`.
 ```{figure} ../figures/PositiveChargeEField.png
 ---
@@ -30,13 +30,14 @@ Electric fields lines from a positive charge
 ```
 
 Our field lines radiate outwards radially, depending only on the distance from a point to the charge (here we are just assuming a point charge) 
-and in the direction a positive charge would follow (here outwards as like charges repel).  These are all very sound ideas that we have no doubt 
-learnt before, the question is whilst Coulombs law is a very effective tool to empirically describe electric fields from point charges, where 
-does is arrive from? Will it work in more complicated situations?  
+and in the direction a positive charge would follow (here outwards as like charges repel).  
+
+These are all very sound ideas that we have no doubt learnt before, the question is whilst Coulombs law is a very effective tool to empirically 
+describe electric fields from point charges, where does is arrive from? Will it work in more complicated situations?  
 
 ## Gauss's Law
 Lets now look at electric fields from the point of view of an a containing surface and flux crossing the surface boundary.  Starting with a charge 
-$Q$, we can surround this in three dimensions by a sphere, as seen in Figure {nameref}`EFieldFlux`.
+$Q$, we can surround this in three dimensions by a sphere, as seen in Figure {numref}`EFieldFlux`.
 ```{figure} ../figures/EFieldFlux2.png
 ---
 name: EFieldFlux
@@ -45,7 +46,7 @@ Flux of the electric field from a point charge $+q$ passing through a spherical 
 ```
 
 Now we have field lines perpendicular to the surface, here a sphere, so a similar situation to hose pipe and the water.  But now we have 
-to think about "how close" the field lines get over the spheres surface - they should really be thought of as infinitesimally small, so we use 
+to think about <em>how close</em> the field lines get over the spheres surface - they should really be thought of as infinitesimally small, so we use 
 an area integral summing up the flux crossing the bounding surface area $A$:  
 ```{math}
 \Phi_E = \iint_A {\bf E}\cdot \mathrm{d}{\bf A}
@@ -71,18 +72,27 @@ around the charge $Q$ we find that the area normal vector is ${\bf A} = A_r\,\ha
 ```{math}
 \iint {\bf E}\cdot \mathrm{d} {\bf A} = \iint E_r \,\mathrm{d} A_r
 ``` 
-where we decomposed $\bf E$ in to components:
+where we decomposed the electric field $\bf E$ in to components:
 ```{math}
-{\bf E} = E_r \hat{{\bf r}} +E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}
+{\bf E} = E_r \hat{{\bf r}} + E_\theta \hat{{\bf \theta}} + E_\phi \hat{{\bf \phi}}
 ```
 By symmetry therefore the electric field does not have an angular $(\theta,\, \phi)$ dependence - this makes sense physically because 
-whether a charge is on our left or right hand side does not charge the force felt if it is at the same fixed distance.  Calculating 
-$\iint {\bf E}\cdot \mathrm{d} {\bf A}$ is straightforward on a sphere:
+whether a charge is on our left or right hand side does not charge the force felt if it is at the same fixed distance.  
+
+Calculating $\iint {\bf E}\cdot \mathrm{d} {\bf A}$ is straightforward on a sphere:
 ```{math}
-\iint E_r\, \mathrm{d} A_r = \iint E_r \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi &=& \,E_r \,(4 \pi r^2) = k Q\\
-\Rightarrow {\bf E} &=& \,E_r \,\hat{{\bf r}} = \frac{k Q}{4 \,\pi\,r^2} \,\hat{{\bf r}}
+\iint E_r\, \mathrm{d} A_r = \iint E_r \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi
 ```
-Comparing this result with Coulomb's law in Equation {eq}`CoulombsLaw`, we fix $k = 1/\epsilon_0$ (which also has the required units, check 
+Since $E_r$ only has $r$ dep[endence, we can factorise this out of the integral:
+```{math}
+E_r \iint  \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi = E_r(4 \pi\,r^2) &=&\, kQ \\
+\Rightarrow E_r &=&\, \frac{kQ}{4\pi\,r^2}
+```
+Finally we can write this in vector form:
+```{math}
+{\bf E} = \,E_r \,\hat{{\bf r}} = \frac{k Q}{4\pi\,r^2} \,\hat{{\bf r}}
+```
+Comparing this result with Coulomb's law in Equation {eq}`CoulombsLaw`, we find we can fix $k = 1/\epsilon_0$ (which also has the required units, check 
 this for yourself!).  So our final expression, which is known as <b>Gauss's Law</b>, can be written as:
 ```{math}
 :label: GaussLaw
@@ -96,8 +106,9 @@ we should really write Gauss's law as:
 ```
 
 ## Gravitational Analogue
-One aspect of the equations of electrostatics to notice is that the original consideration of Coulomb's law could be extended over 
-to discuss Newton's law of gravitation.  We notice that the equations are essentially just a redefinition of fields and constants:
+One of the grand goals of physics is to understand nature through the same equations but on different scales - so called <b>universality</b>.  We
+find that the equations in electrostatics can be used to discuss Newton's law of gravitation.  We notice that the equations are essentially just a 
+redefinition of fields and constants:
 ```{math}
 F_C = \frac{1}{4\pi \epsilon_0}\frac{Q_1\,Q_2}{r^2} \Longleftrightarrow F_G = -G\frac{\,M_1\,M_2}{r^2}
 ```

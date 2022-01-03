@@ -26,16 +26,16 @@ which is a wave equation!  Comparing this with Equation {eq}`WaveEqn3D` we can a
 :label: SpeedOfLight
 c = \frac{1}{\sqrt{\mu_0\epsilon_0}} 
 ```
-and we can also find wave solutions for ${\bf B}$, with the same constant wave speed $c$.\footnote{Einstein was led in part to his celebrated 
-Special Theory of Relativity noticing this constancy of $c$.}  
+and we can also find wave solutions for $\bf B$, with the same constant wave speed $c$.  Einstein was led (in part) to his celebrated Special Theory of Relativity by 
+noticing that the speed of light $c$ is related to two vacuum parameters that are thought to be constant.
 
-If we solve for ${\bf E},\ {\bf B}$ from Equation {eq}`EMwaveeqn`, these produce:
+If we solve for $\bf E,\ B$ from Equation {eq}`EMwaveeqn`, these produce:
 ```{math}
-{\bf E} &=& {\bf E}_0\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
-{\bf B} &=& {\bf B}_0\,\exp(i({\bf k}\cdot {\bf x} - \omega t))
+{\bf E} &=& {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
+{\bf B} &=& {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))
 ```
-where ${\bf E}_0,\,{\bf B}_0$ are the polarization vectors of the electric and magnetic field, {numref}`EMPlaneWaves` shows one such choice of 
-${\bf E}_0,\,{\bf B}_0$, for plane waves.
+where $\bf E_0,\, B_0$ are the polarization vectors of the electric and magnetic field, {numref}`EMPlaneWaves` shows some different choices of $\bf E_0,\, B_0$ for plane 
+polarised and circularly polariesed waves.
 ```{figure} ../figures/EMWaves1.png
 ---
 name: EMPlaneWaves
@@ -44,7 +44,7 @@ name: EMPlaneWaves
 <b> Right Pane </b> - Depiction of electric and magnetic circularly polarised waves.
 ```
 
-## Polarisation of EM Waves
+## Polarisation of Waves
 Plugging in wave solutions into Maxwell's equations in vacuum:
 ```{math}
 :label: kEBperp
@@ -52,8 +52,9 @@ Plugging in wave solutions into Maxwell's equations in vacuum:
 \nabla \cdot {\bf B} &=& \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
 \nabla \times {\bf E} &=& \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 
 ```
-These first two equations means ${\bf k} \perp {\bf E}$ and ${\bf k} \perp {\bf B}$ and the third that ${\bf B} \perp ({\bf k},\,{\bf E})$ implying ${\bf E} \perp {\bf B}$.  
-Therefore once we pick a direction of oscillation for ${\bf E}$, then ${\bf B}$ is also set.  Choosing to orientate along the ${\bf z}$ axis, Equation {eq}`kEBperp` 
+These first two equations means $\bf k \perp E$ and $\bf k \perp  B$ and the third that $\bf B \perp (k,\, E)$ implying $\bf E \perp B$.  
+
+Therefore once we pick a direction of oscillation for $\bf E$, then $\bf B$ is also set (and vice-versa).  Choosing to orientate along the $z$ axis, Equation {eq}`kEBperp` 
 implies in general:
 ```{math}
 {\bf k} = \begin{bmatrix}
@@ -68,8 +69,8 @@ implies in general:
  0
 \end{bmatrix}
 ```
-The simplest set of solutions here would be picking one of $E_x,\,E_y$ to be zero, such that the oscillations are only in {\it one} 
-dimension and clearly the wave propagates in a perpendicular $k_z$ dimension.  So lets pick $E_y = 0$, which results in:
+For plane polarised solutions, we must pick one of $E_x,\,E_y$ to be zero, such that the oscillations are only in <em>on</em> dimension and clearly the wave propagates 
+in a perpendicular $z$ dimension.  So lets pick $E_y = 0$, which results in:
 ```{math}
 :label: PlaneWaveSolns
 vE_0 = 
@@ -90,19 +91,26 @@ vE_0 =
  0
 \end{bmatrix} 
 ```
-Other polarisation choices would be <b> Circular </b> or <b> Elliptical</b>, where we use both of $(E_x,\,E_y)$, producing 
-clockwise/anticlockwise polarised waves, as seen in {numref}`EMPlaneWaves`.
-
 
 ## Drude Model
 In addition to solving Maxwell's for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor, 
-with an electric field ${\bf E}$ present, we can think about Ohm's law $V = I\,R$ or terms of fields ${\bf J} = \sigma {\bf E}$ where $\sigma$ is the 
-conductivity of the material (often written in the related form of resistivity $\rho$, where $\rho = 1 / \sigma$) and ${\bf J}$ is the current density. 
-This is often known as the <b> Drude Model.</b>  Substituting this model into Maxwell's equations and ignoring charges again, we find by solving for ${\bf E}$:
+with an electric field ${\bf E}$ present, we can think about Ohm's law 
+```{math}
+V = I\,R
+```
+or terms of fields this is written:
+```{math}
+{\bf J} = \sigma {\bf E}
+```
+where $\sigma$ is the conductivity of the material (often written in the related form of resistivity $\rho$, where $\rho = 1 / \sigma$) and $\bf J$ is the current density. 
+This is often known as the <b>Drude Model</b>.  
+
+Substituting this model into Maxwell's equations, we can now source $\bf J$ with this relation, if we choose to ignore free charges again $\rho = 0$ and by solving for $\bf E$:
 ```{math}
 \nabla^2 {\bf E} = \mu_0 \sigma \frac{\partial {\bf E}}{\partial t} + \mu_0\epsilon_0 \frac{\partial^2 {\bf E}}{\partial t^2}
 ```
-Using the wave solutions, we find a modified dispersion relation of the form: 
+Which should look familiar as a damped hoarmonic osciallator from the Waves section.  Using the wave solutions, we find a modified dispersion relation of the form: 
+
 ```{math}
 k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega
 ```
