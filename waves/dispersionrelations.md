@@ -64,7 +64,7 @@ the energy density will be given by:
 \epsilon &=&\, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right] \\
 &=&\, \frac{1}{2}\,\rho_L\,{u_0}^2\,\sin^2\left(kx - \omega t\right)\left[c^2 k^2 + \omega^2 \right]
 ```
-and since $\omega^2 = c^2\,k^2$, this simplifies to:
+and since $\omega^2 = c^2\,k^2$ for travelling waves, this simplifies to:
 ```{math}
 :label: energydensitytravelwave
 \epsilon = \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)
@@ -82,7 +82,7 @@ Calculating the energy carried over one wavelength:
 E_\lambda &=& \, \int_0^\lambda \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)\,\mathrm{d}x \\
 &=& \,  \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\int_0^\lambda \left[1 - \cos\left(2kx - 2\omega t\right)\right]\,\mathrm{d}x
 ```
-where the second step used a trig identity to help evaluate the integral:
+where the second step used a double angle trigonometric identity to evaluate the integral:
 ```{math}
 E_\lambda &=&\, \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left[x - \frac{1}{2k}\sin\left(2kx - 2\omega t\right)\right]_0^\lambda \\
 &=&\, \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left(\lambda - \frac{1}{2k}\sin\left(4\pi - 2\omega t\right) - 0 + \frac{1}{2k}\sin\left(- 2\omega t\right)\right)
@@ -95,7 +95,7 @@ E_\lambda =\frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\lambda = \pi \,c^2\,\rho_L\,k\
 Which suggests $E_\lambda \propto {u_0}^2$, which is a key result.  
 
 Also note that if we did the same analysis with a left travelling wave $u = u_0\,\exp(i(|k|x + |\omega|\,t))$, the result of Equation {eq}`energydensitytravelwave` 
-would be the same, therefore for plane waves the expression for $\epsilon$ can be simplifed:
+would be the same, therefore for travelling waves the expression for $\epsilon$ can be simplifed:
 ```{math}
 \epsilon = \rho_L\,c^2\,\left(\frac{\partial u}{\partial x} \right)^2 = \rho_L\,\left(\frac{\partial u}{\partial t} \right)^2
 ```

@@ -385,7 +385,7 @@
 <p>Now that we have our complex wave solutions to the equation, we can see that plugging in the solutions
 to the wave equation produce their own equations.  Lets start with the simplest wave solution, a 1D right hand moving wave:</p>
 <div class="math notranslate nohighlight" id="equation-waveform">
-<span class="eqno">(1.21)<a class="headerlink" href="#equation-waveform" title="Permalink to this equation">¶</a></span>\[u = u_0\,\exp(i(kx-\omega t))\]</div>
+<span class="eqno">(1.22)<a class="headerlink" href="#equation-waveform" title="Permalink to this equation">¶</a></span>\[u = u_0\,\exp(i(kx-\omega t))\]</div>
 <p>Plugging this into the wave equation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}u_{xx} &amp;=&amp; \,-k^2 \,u\\ 
@@ -393,8 +393,8 @@ u_{tt} &amp;=&amp; \, -\omega^2 \,u \\
 u_{tt} &amp;=&amp; \, c^2\,u_{xx} \\
 -\omega^2 \,u &amp;=&amp; \, -c^2\,k^2\,u \Rightarrow \omega^2 &amp;=&amp; \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k\end{split}\]</div>
 <p>Since we have two roots for <span class="math notranslate nohighlight">\(\omega\)</span> here, we can see that these correspond to either left or right hand moving waves.<br />
-Therefore if we usee <a class="reference internal" href="#equation-waveform">(1.21)</a> with the proviso that <span class="math notranslate nohighlight">\(\omega = \omega(k) = \pm c\, k\)</span>, this describes the travelling wave solutions
-in <a class="reference internal" href="waveequationsolns.html#equation-fullwaveeqnsoln">(1.18)</a>.</p>
+Therefore if we usee <a class="reference internal" href="#equation-waveform">(1.22)</a> with the proviso that <span class="math notranslate nohighlight">\(\omega = \omega(k) = \pm c\, k\)</span>, this describes the travelling wave solutions
+in <a class="reference internal" href="waveequationsolns.html#equation-fullwaveeqnsoln">(1.19)</a>.</p>
 <p>The function <span class="math notranslate nohighlight">\(\omega = \omega(k)\)</span> is known as a <b>dispersion relation</b>.  In this case, <span class="math notranslate nohighlight">\(\omega(k)\)</span> is a linear function of <span class="math notranslate nohighlight">\(k\)</span>, but in
 general it could be <em>any</em> function of <span class="math notranslate nohighlight">\(k\)</span>.  We can also rewrite this linear expression in terms of frequency and wavelegnth
 <span class="math notranslate nohighlight">\(f = \omega/2\pi, \,\lambda = 2\pi/k\)</span>:</p>
@@ -432,9 +432,9 @@ the anisotropic structure within a crystal, where the two vectors are not parall
 <div class="math notranslate nohighlight">
 \[\begin{split}\epsilon &amp;=&amp;\, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right] \\
 &amp;=&amp;\, \frac{1}{2}\,\rho_L\,{u_0}^2\,\sin^2\left(kx - \omega t\right)\left[c^2 k^2 + \omega^2 \right]\end{split}\]</div>
-<p>and since <span class="math notranslate nohighlight">\(\omega^2 = c^2\,k^2\)</span>, this simplifies to:</p>
+<p>and since <span class="math notranslate nohighlight">\(\omega^2 = c^2\,k^2\)</span> for travelling waves, this simplifies to:</p>
 <div class="math notranslate nohighlight" id="equation-energydensitytravelwave">
-<span class="eqno">(1.22)<a class="headerlink" href="#equation-energydensitytravelwave" title="Permalink to this equation">¶</a></span>\[\epsilon = \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)\]</div>
+<span class="eqno">(1.23)<a class="headerlink" href="#equation-energydensitytravelwave" title="Permalink to this equation">¶</a></span>\[\epsilon = \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)\]</div>
 <p><a class="reference internal" href="#waveenergy"><span class="std std-numref">Fig. 1.6</span></a> shows the difference in phase between <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> and <span class="math notranslate nohighlight">\(\epsilon(x,\,t)\)</span>.</p>
 <div class="figure align-default" id="waveenergy">
 <img alt="../_images/WaveEnergy.png" src="../_images/WaveEnergy.png" />
@@ -444,16 +444,16 @@ the anisotropic structure within a crystal, where the two vectors are not parall
 <div class="math notranslate nohighlight">
 \[\begin{split}E_\lambda &amp;=&amp; \, \int_0^\lambda \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)\,\mathrm{d}x \\
 &amp;=&amp; \,  \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\int_0^\lambda \left[1 - \cos\left(2kx - 2\omega t\right)\right]\,\mathrm{d}x\end{split}\]</div>
-<p>where the second step used a trig identity to help evaluate the integral:</p>
+<p>where the second step used a double angle trigonometric identity to evaluate the integral:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}E_\lambda &amp;=&amp;\, \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left[x - \frac{1}{2k}\sin\left(2kx - 2\omega t\right)\right]_0^\lambda \\
 &amp;=&amp;\, \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left(\lambda - \frac{1}{2k}\sin\left(4\pi - 2\omega t\right) - 0 + \frac{1}{2k}\sin\left(- 2\omega t\right)\right)\end{split}\]</div>
 <p>and we use <span class="math notranslate nohighlight">\(k\lambda = 2\pi\)</span> and by the cyclic nature of <span class="math notranslate nohighlight">\(\sin(x)\)</span>, these terms cancel, leaving:</p>
 <div class="math notranslate nohighlight" id="equation-energywavelength">
-<span class="eqno">(1.23)<a class="headerlink" href="#equation-energywavelength" title="Permalink to this equation">¶</a></span>\[E_\lambda =\frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\lambda = \pi \,c^2\,\rho_L\,k\,{u_0}^2\]</div>
+<span class="eqno">(1.24)<a class="headerlink" href="#equation-energywavelength" title="Permalink to this equation">¶</a></span>\[E_\lambda =\frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\lambda = \pi \,c^2\,\rho_L\,k\,{u_0}^2\]</div>
 <p>Which suggests <span class="math notranslate nohighlight">\(E_\lambda \propto {u_0}^2\)</span>, which is a key result.</p>
-<p>Also note that if we did the same analysis with a left travelling wave <span class="math notranslate nohighlight">\(u = u_0\,\exp(i(|k|x + |\omega|\,t))\)</span>, the result of Equation <a class="reference internal" href="#equation-energydensitytravelwave">(1.22)</a>
-would be the same, therefore for plane waves the expression for <span class="math notranslate nohighlight">\(\epsilon\)</span> can be simplifed:</p>
+<p>Also note that if we did the same analysis with a left travelling wave <span class="math notranslate nohighlight">\(u = u_0\,\exp(i(|k|x + |\omega|\,t))\)</span>, the result of Equation <a class="reference internal" href="#equation-energydensitytravelwave">(1.23)</a>
+would be the same, therefore for travelling waves the expression for <span class="math notranslate nohighlight">\(\epsilon\)</span> can be simplifed:</p>
 <div class="math notranslate nohighlight">
 \[\epsilon = \rho_L\,c^2\,\left(\frac{\partial u}{\partial x} \right)^2 = \rho_L\,\left(\frac{\partial u}{\partial t} \right)^2\]</div>
 <p><em> Note </em> this is not true for other types of waves!  Likewise the wave power comes out to be:</p>
@@ -461,7 +461,7 @@ would be the same, therefore for plane waves the expression for <span class="mat
 \[\begin{split}P(x,\,t) &amp;=&amp; \, \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x = 
 2\rho_L\,{u_0}^2\,\omega^3\,\int\sin\left(kx - \omega t\right)\cos\left(kx - \omega t\right)\,\mathrm{d}x \\
 &amp;=&amp; \, \frac{1}{k}\rho_L\,{u_0}^2\,\omega^3\,\sin^2\left(kx - \omega t\right) = \rho_L\,{u_0}^2\,\omega^2\,c\,\sin^2\left(kx - \omega t\right)\end{split}\]</div>
-<p>Notice that this result is related to <a class="reference internal" href="#equation-energydensitytravelwave">(1.22)</a> by <span class="math notranslate nohighlight">\(P = c\,\epsilon\)</span> and so the time averaged power is:</p>
+<p>Notice that this result is related to <a class="reference internal" href="#equation-energydensitytravelwave">(1.23)</a> by <span class="math notranslate nohighlight">\(P = c\,\epsilon\)</span> and so the time averaged power is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\langle P \rangle_T &amp;=&amp;\, \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t = \frac{1}{T}\,\rho_L\,{u_0}^2\,\omega^2\,c\,\int_0^T \sin^2\left(kx - \omega t\right)\,\mathrm{d}t \\
 &amp;=&amp; \,  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\int_0^T \left(1 - \cos\left(2kx - 2\omega t\right)\right)\,\mathrm{d}t \\
