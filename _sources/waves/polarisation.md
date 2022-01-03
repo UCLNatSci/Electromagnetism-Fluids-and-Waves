@@ -23,7 +23,7 @@ direction of oscillation, such that:
 ```{math}
 {\bf k} \cdot {\bf u_0} = 0
 ```
-if we for instance align a wave to propogate along the $x$ axis, then we find:
+If we for instance align a wave to propogate along the $x$ axis, then we find:
 ```{math}
 \begin{bmatrix}
 k_x \\

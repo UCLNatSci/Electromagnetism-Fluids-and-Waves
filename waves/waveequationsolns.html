@@ -402,14 +402,14 @@ fairly simple solutions, despite its complexity (in general PDEs are quite diffi
 \left(\frac{\partial }{\partial t} - c \frac{\partial}{\partial x}\right)\left( \frac{\partial }{\partial t} + c\frac{\partial }{\partial x}\right)u = 0\]</div>
 <p>which we can rewrite in terms of an intermediate variable <span class="math notranslate nohighlight">\(v\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-upde">
-<span class="eqno">(1.12)<a class="headerlink" href="#equation-upde" title="Permalink to this equation">¶</a></span>\[\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = v \]</div>
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-upde" title="Permalink to this equation">¶</a></span>\[\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = v \]</div>
 <div class="math notranslate nohighlight" id="equation-vpde">
-<span class="eqno">(1.13)<a class="headerlink" href="#equation-vpde" title="Permalink to this equation">¶</a></span>\[\frac{\partial v}{\partial t} - c\frac{\partial v}{\partial x} = 0 \]</div>
-<p>The form of Equation <a class="reference internal" href="#equation-vpde">(1.13)</a> suggests that we can write <span class="math notranslate nohighlight">\(v = v(y)\)</span>, where <span class="math notranslate nohighlight">\(y = y(x,\,t)\)</span>, meaning that</p>
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-vpde" title="Permalink to this equation">¶</a></span>\[\frac{\partial v}{\partial t} - c\frac{\partial v}{\partial x} = 0 \]</div>
+<p>The form of Equation <a class="reference internal" href="#equation-vpde">(1.14)</a> suggests that we can write <span class="math notranslate nohighlight">\(v = v(y)\)</span>, where <span class="math notranslate nohighlight">\(y = y(x,\,t)\)</span>, meaning that</p>
 <div class="math notranslate nohighlight" id="equation-yode">
-<span class="eqno">(1.14)<a class="headerlink" href="#equation-yode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d} v}{\mathrm{d} y}  \left(\frac{\partial y}{\partial t} - 
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-yode" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d} v}{\mathrm{d} y}  \left(\frac{\partial y}{\partial t} - 
 c \frac{\partial y}{\partial x}\right)= 0\]</div>
-<p>which can be satisfied by <span class="math notranslate nohighlight">\(y = x + ct\)</span> and so <span class="math notranslate nohighlight">\(v = v(x + ct)\)</span>.  Solving Equation <a class="reference internal" href="#equation-upde">(1.12)</a>, which is now a sourced PDE:</p>
+<p>which can be satisfied by <span class="math notranslate nohighlight">\(y = x + ct\)</span> and so <span class="math notranslate nohighlight">\(v = v(x + ct)\)</span>.  Solving Equation <a class="reference internal" href="#equation-upde">(1.13)</a>, which is now a sourced PDE:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = v(x+ct)\]</div>
 <p>The function <span class="math notranslate nohighlight">\(u\)</span> here will have a homogeneous and an inhomogeneous part:</p>
@@ -417,7 +417,7 @@ c \frac{\partial y}{\partial x}\right)= 0\]</div>
 \[u = u_h + u_{PI}\]</div>
 <p>We find <span class="math notranslate nohighlight">\(u_h\)</span> satisfies:</p>
 <div class="math notranslate nohighlight" id="equation-uhpde">
-<span class="eqno">(1.15)<a class="headerlink" href="#equation-uhpde" title="Permalink to this equation">¶</a></span>\[\frac{\partial u_h}{\partial t} + c \frac{\partial u_h}{\partial x} = 0 \]</div>
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-uhpde" title="Permalink to this equation">¶</a></span>\[\frac{\partial u_h}{\partial t} + c \frac{\partial u_h}{\partial x} = 0 \]</div>
 <p>which we can write as <span class="math notranslate nohighlight">\(u_h(z)\)</span>, where <span class="math notranslate nohighlight">\(z  = z(x,\,t)\)</span>, meaning that</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm{d} u_h}{\mathrm{d} z}  \left(\frac{\partial z}{\partial t} + 
@@ -425,10 +425,10 @@ c \frac{\partial z}{\partial x}\right)= 0\]</div>
 <p>which can be satisfied by <span class="math notranslate nohighlight">\(z = x - ct\)</span> and so <span class="math notranslate nohighlight">\(u_h = u_h(x - ct)\)</span>.  For <span class="math notranslate nohighlight">\(u_{PI}\)</span> we can see that:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial u_{PI}}{\partial t} + c \frac{\partial u_{PI}}{\partial x} = v(x+ct)\]</div>
-<p>and through a similar process as Equation <a class="reference internal" href="#equation-yode">(1.14)</a>, we can show that that <span class="math notranslate nohighlight">\(u_{PI} = u_{PI}(x+ct)\)</span>.</p>
+<p>and through a similar process as Equation <a class="reference internal" href="#equation-yode">(1.15)</a>, we can show that that <span class="math notranslate nohighlight">\(u_{PI} = u_{PI}(x+ct)\)</span>.</p>
 <p>The general solution to the wave equation is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-wefuncform">
-<span class="eqno">(1.16)<a class="headerlink" href="#equation-wefuncform" title="Permalink to this equation">¶</a></span>\[u(t,x) = A(x+ ct) + B(x - ct) \]</div>
+<span class="eqno">(1.17)<a class="headerlink" href="#equation-wefuncform" title="Permalink to this equation">¶</a></span>\[u(t,x) = A(x+ ct) + B(x - ct) \]</div>
 <p>where <span class="math notranslate nohighlight">\(A,\,B\)</span> are functions that we still have not yet found.</p>
 <p>We call these <b>travelling wave</b> solutions and we can interpret these two functions as left and right
 moving wave solutions here, to see how consider the functions first at <span class="math notranslate nohighlight">\(t = 0\)</span>:</p>
@@ -475,7 +475,7 @@ arbitrary, but for physical oscillating solutions, we <em>need </em> a negative 
 \[\begin{split}u(x,\,t) \,&amp;&amp;= AC\,\exp\left(\frac{ia}{c}(x + ct)\right)+ BD\,\exp\left(-\frac{ia}{c}(x + ct)\right)  \\
  &amp;&amp; + AD\,\exp\left(\frac{ia}{c}(x - ct)\right) + BC\,\exp\left(-\frac{ia}{c}(x - ct)\right) \end{split}\]</div>
 <p>where we have grouped together the first two terms as the left hand moving wave solutions and last term terms
-as the right hand moving wave solutions, which matches the functional form of Equation <a class="reference internal" href="#equation-wefuncform">(1.16)</a>.</p>
+as the right hand moving wave solutions, which matches the functional form of Equation <a class="reference internal" href="#equation-wefuncform">(1.17)</a>.</p>
 <p>One thing we should try to take care about when writing functions like this is to endure that the
 arguments of the functions are dimensionless - consider the function <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> where <span class="math notranslate nohighlight">\(x\)</span> is a length,
 if we look at the Maclaurin expansion:</p>
@@ -488,7 +488,7 @@ we should really write functions in the form:</p>
 <p>which in each case has a dimensionless quantity being manipulated and <span class="math notranslate nohighlight">\(a\)</span> carries the same units as <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>So lets rewrite <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> in the form</p>
 <div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln1">
-<span class="eqno">(1.17)<a class="headerlink" href="#equation-fullwaveeqnsoln1" title="Permalink to this equation">¶</a></span>\[\begin{split}u(x,\,t) \, &amp;&amp; =  AC \exp\left(i(kx + \omega t)\right) + BD\exp\left(-i(kx + \omega t)\right) \\
+<span class="eqno">(1.18)<a class="headerlink" href="#equation-fullwaveeqnsoln1" title="Permalink to this equation">¶</a></span>\[\begin{split}u(x,\,t) \, &amp;&amp; =  AC \exp\left(i(kx + \omega t)\right) + BD\exp\left(-i(kx + \omega t)\right) \\
 &amp;&amp; + AD \exp\left(i(kx - \omega t)\right) + BC\exp\left(-i(kx - \omega t)\right)\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k\)</span> is a quantity with units <span class="math notranslate nohighlight">\([\textrm{length}]^{-1}\)</span> and <span class="math notranslate nohighlight">\(\omega\)</span> is a quantity with units
 <span class="math notranslate nohighlight">\([\textrm{time}]^{-1}\)</span>.  We can make this change, with no less of
@@ -512,9 +512,9 @@ A + B \,&amp;&amp; = \cos(\phi) \\
 <p>where <span class="math notranslate nohighlight">\(A'\)</span> is some constant to be found.  So if we use the condition that we will eventually just take the real parts
 of our complex solutions, it dramatically simplifies the form of the equations.  We call this complex representation
 of oscillating functions a <b>phasor</b>.</p>
-<p>Therefore we rewrite Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(1.17)</a>:</p>
+<p>Therefore we rewrite Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(1.18)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln">
-<span class="eqno">(1.18)<a class="headerlink" href="#equation-fullwaveeqnsoln" title="Permalink to this equation">¶</a></span>\[u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) \]</div>
+<span class="eqno">(1.19)<a class="headerlink" href="#equation-fullwaveeqnsoln" title="Permalink to this equation">¶</a></span>\[u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) \]</div>
 <p>where <span class="math notranslate nohighlight">\(A',\, B'\)</span> are constants to be found.</p>
 </div>
 <div class="section" id="features-of-wave-solutions">

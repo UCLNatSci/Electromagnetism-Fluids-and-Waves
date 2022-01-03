@@ -395,16 +395,16 @@ is related to the de Broglie wavelength <span class="math notranslate nohighligh
 \[\lambda = \frac{h}{p} \]</div>
 <p>which we can rewrite in terms of wavevector <span class="math notranslate nohighlight">\(k = |{\bf k}| = \frac{2\pi}{\lambda}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-debrogliep">
-<span class="eqno">(1.24)<a class="headerlink" href="#equation-debrogliep" title="Permalink to this equation">¶</a></span>\[p = \hbar k\]</div>
+<span class="eqno">(1.25)<a class="headerlink" href="#equation-debrogliep" title="Permalink to this equation">¶</a></span>\[p = \hbar k\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hbar = \frac{h}{2\pi}\)</span> is the reduced Planck’s constant.  Likewise the Planck equation for energy <span class="math notranslate nohighlight">\(E\)</span> and
 frequency <span class="math notranslate nohighlight">\(f\)</span>, can be rewritten using the angular frequency <span class="math notranslate nohighlight">\(\omega = 2 \pi f\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-plancke">
-<span class="eqno">(1.25)<a class="headerlink" href="#equation-plancke" title="Permalink to this equation">¶</a></span>\[E = hf = \hbar \omega\]</div>
+<span class="eqno">(1.26)<a class="headerlink" href="#equation-plancke" title="Permalink to this equation">¶</a></span>\[E = hf = \hbar \omega\]</div>
 <p>For a free particle, moving with velocity <span class="math notranslate nohighlight">\({\bf v}\)</span>, the only contribution to the energy <span class="math notranslate nohighlight">\(E\)</span> is the kinetic energy
 <span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span> where <span class="math notranslate nohighlight">\(v^2 = {\bf v}\cdot{\bf v}\)</span> and since <span class="math notranslate nohighlight">\({\bf p} = m{\bf v}\)</span>, this means we can rewrite</p>
 <div class="math notranslate nohighlight">
 \[E = \frac{p^2}{2m}\]</div>
-<p>where <span class="math notranslate nohighlight">\(p^2 = {\bf p}\cdot{\bf p}\)</span>.  Substituting in the quantum equations <a class="reference internal" href="#equation-debrogliep">(1.24)</a>-<a class="reference internal" href="#equation-plancke">(1.25)</a> here gives:</p>
+<p>where <span class="math notranslate nohighlight">\(p^2 = {\bf p}\cdot{\bf p}\)</span>.  Substituting in the quantum equations <a class="reference internal" href="#equation-debrogliep">(1.25)</a>-<a class="reference internal" href="#equation-plancke">(1.26)</a> here gives:</p>
 <div class="math notranslate nohighlight">
 \[\hbar \omega = \frac{\hbar^2 k^2}{2m}\]</div>
 <p>producing a radically different dispersion relation to those we seen up to this point. Indeed this will produce some radically
@@ -423,18 +423,18 @@ because <span class="math notranslate nohighlight">\(\partial^2 \psi/\partial x^
 \[i \hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2}\]</div>
 <p>If we want to include a potential energy <span class="math notranslate nohighlight">\(V = V(x,t)\)</span> in the system, then we first rewrite the energy as KE + PE:</p>
 <div class="math notranslate nohighlight" id="equation-totalenergy">
-<span class="eqno">(1.26)<a class="headerlink" href="#equation-totalenergy" title="Permalink to this equation">¶</a></span>\[E = \frac{p^2}{2m} + V\]</div>
+<span class="eqno">(1.27)<a class="headerlink" href="#equation-totalenergy" title="Permalink to this equation">¶</a></span>\[E = \frac{p^2}{2m} + V\]</div>
 <p>which results in a modified dispersion relation</p>
 <div class="math notranslate nohighlight">
 \[\hbar \omega = \frac{\hbar^2 k^2}{2m} + V\]</div>
 <p>and a modified wave equation of the form:</p>
 <div class="math notranslate nohighlight" id="equation-tdse">
-<span class="eqno">(1.27)<a class="headerlink" href="#equation-tdse" title="Permalink to this equation">¶</a></span>\[i \hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V\psi\]</div>
+<span class="eqno">(1.28)<a class="headerlink" href="#equation-tdse" title="Permalink to this equation">¶</a></span>\[i \hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V\psi\]</div>
 <p>which should look familiar as the <b>Time Dependent Schrödinger Equation (TDSE).</b>  If we consider the form of the energy
-from Equation <a class="reference internal" href="#equation-totalenergy">(1.26)</a>, we can interpret the RHS of <a class="reference internal" href="#equation-tdse">(1.27)</a> as an energy operator acting of the wave function <span class="math notranslate nohighlight">\(\hat{E}\psi = E\psi\)</span>,
+from Equation <a class="reference internal" href="#equation-totalenergy">(1.27)</a>, we can interpret the RHS of <a class="reference internal" href="#equation-tdse">(1.28)</a> as an energy operator acting of the wave function <span class="math notranslate nohighlight">\(\hat{E}\psi = E\psi\)</span>,
 giving:</p>
 <div class="math notranslate nohighlight" id="equation-tise">
-<span class="eqno">(1.28)<a class="headerlink" href="#equation-tise" title="Permalink to this equation">¶</a></span>\[\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V\right)\psi = E\psi\]</div>
+<span class="eqno">(1.29)<a class="headerlink" href="#equation-tise" title="Permalink to this equation">¶</a></span>\[\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V\right)\psi = E\psi\]</div>
 <p>which should look familiar as the <b>Time Independent Schrödinger Equation (TISE).</b></p>
 <div class="section" id="relativistic-quantum-mechanics">
 <h2><span class="section-number">1.8.1. </span>Relativistic Quantum Mechanics<a class="headerlink" href="#relativistic-quantum-mechanics" title="Permalink to this headline">¶</a></h2>

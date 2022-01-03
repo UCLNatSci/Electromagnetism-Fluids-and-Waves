@@ -125,13 +125,13 @@ E = KE + PE
 ```
 where $KE$ is the total kinetic energy and $PE$ the total potential energy. 
 
-Lets go back to the masses and springs model, the potential energy of each mass shown in Figure 3 would be given by:
+Gping back to the masses and springs model, the potential energy of each mass shown in {numref}`massspringarray` would be:
 ```{math}
 PE = \dots + \frac{1}{2}k\Big[u(x+h,t) - u(x,t)\Big]^2 + \frac{1}{2}k\Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots
 ```
-where each of the springs in the chain will contribute to the PE of two masses, depending on their orientation.  Notice that we don't in this model
-have any terms like $PE \sim \frac{1}{2}k u^2(x,t)$, this is because we haven't considered the effects at either end of the chain - although these
-<em> edge effects </em> are really important in real world systems, we will omit them here.  
+where each of the springs in the chain will contribute to the PE of two masses, depending on their orientation.  Notice here that there are not any terms 
+like $PE \sim \frac{1}{2}k u^2(x,t)$, this is because we haven't considered the effects at either end of the chain - although these<em> edge effects </em> 
+are really important in real world systems, we will omit them here.  
 
 Using the springs in series result from {eq}`totalspringconstant`, we can rewrite the PE in the form:
 ```{math}
@@ -174,10 +174,11 @@ E = \frac{1}{2}\,m\,N\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + 
 ```
 sometimes this is more usefully presented in terms of the energy per unit length or energy density $\epsilon(x,\,t)$:
 ```{math}
-\epsilon = \frac{E}{L} &=& \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
+:label: massdensity
+\epsilon(x,\,t) = \frac{E}{L} &=& \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
 &=& \, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]
 ```
-where $\rho_L$ is the mass per unit length or <b> mass density </b> of the mass and spring chain.  We can use this expression to find the total energy 
+where $\rho_L$ is the mass per unit length or <b>mass density</b> of the mass and spring chain.  We can use this expression to find the total energy 
 transferred over a wavelength:
 ```{math}
 :label: waveenergy
