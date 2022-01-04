@@ -434,7 +434,7 @@ within the volume, so for an electric field</p>
 <h2><span class="section-number">2.9.2. </span>Ampère’s Law in Differential Form<a class="headerlink" href="#amperes-law-in-differential-form" title="Permalink to this headline">¶</a></h2>
 <p>We can revisit Amp`ere’s law, with the displacement current:</p>
 <div class="math notranslate nohighlight">
-\[\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0\iint_A \frac{\partial {\bf E}}{\partial t}\,\mathrm{d}{\bf A}\]</div>
+\[\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0\iint_A \frac{\partial {\bf E}}{\partial t}\cdot\mathrm{d}{\bf A}\]</div>
 <p>Given we know the Stoke’s theorem tells us that the summing of a vector field around a closed loop will be related to the curl of the field, for the magnetic field:</p>
 <div class="math notranslate nohighlight">
 \[\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \iint_A \left(\nabla \times {\bf B}\right)\cdot\mathrm{d}{\bf A}\]</div>
@@ -459,10 +459,11 @@ causing a current to flow.  We can write <span class="math notranslate nohighlig
 <div class="math notranslate nohighlight">
 \[\mathcal{E} = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell} = \oint_c {\bf E} \cdot \mathrm{d}{\bf \ell}\]</div>
 <p>where the final sign on the integral is given by the convention for clockwise conventional current.  <a class="reference internal" href="faradayslaw.html#magnetinacoil"><span class="std std-numref">Fig. 2.39</span></a> shows that a positive
-change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventually produces current in a negative direction.  We can rewrite this using Stoke’s theorem:</p>
+change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventually produces current in a negative direction.</p>
+<p>We can rewrite this using Stoke’s theorem:</p>
 <div class="math notranslate nohighlight">
 \[\oint_\ell {\bf E} \cdot \mathrm{d} \ell= \iint_A \left(\nabla \times {\bf E}\right)\cdot \mathrm{d} {\bf A} \nonumber\]</div>
-<p>and so this can all be written as</p>
+<p>and so this can all be written as:</p>
 <div class="math notranslate nohighlight">
 \[\iint_A \left(\nabla \times {\bf E} + \frac{\partial {\bf B}}{\partial t}\right)\cdot \mathrm{d} {\bf A} = 0\]</div>
 <p>in order for this expression to be true for <em> any </em> bounding volume <span class="math notranslate nohighlight">\(A\)</span> considered, the expression within the integrand must equal zero, meaning that:</p>

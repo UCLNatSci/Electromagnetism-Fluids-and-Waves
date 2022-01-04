@@ -370,13 +370,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wave-equation-in-higher-dimensions">
-   1.3.2. Wave Equation in higher dimensions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#energy-and-power-of-a-wave">
-   1.3.3. Energy and Power of a Wave
+  <a class="reference internal nav-link" href="#longitundinal-wave-energy-and-power">
+   1.3.2. Longitundinal Wave Energy and Power
   </a>
  </li>
 </ul>
@@ -458,27 +453,8 @@ the form of the partial derivative in Equation <a class="reference internal" hre
 <span class="eqno">(1.8)<a class="headerlink" href="#equation-waveeqn1d" title="Permalink to this equation">¶</a></span>\[\frac{\partial^2 u}{\partial t^2} = c^2 \frac{\partial^2 u}{\partial x^2} \]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is the wave speed of some form (more on this later).</p>
 </div>
-<div class="section" id="wave-equation-in-higher-dimensions">
-<h2><span class="section-number">1.3.2. </span>Wave Equation in higher dimensions<a class="headerlink" href="#wave-equation-in-higher-dimensions" title="Permalink to this headline">¶</a></h2>
-<p>We can extend the wave equation to a higher number of dimensions, packaging the spatial derivatives up into the Laplacian
-<span class="math notranslate nohighlight">\(\nabla^2\)</span> (sometimes written <span class="math notranslate nohighlight">\(\Delta\)</span>)</p>
-<div class="math notranslate nohighlight" id="equation-waveeqn3d">
-<span class="eqno">(1.9)<a class="headerlink" href="#equation-waveeqn3d" title="Permalink to this equation">¶</a></span>\[\nabla^2 u = \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} \]</div>
-<p>which in cartesian coordinates takes the form:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\nabla &amp;=&amp; \left(\frac{\partial}{\partial x},\,\frac{\partial}{\partial y},\, \frac{\partial}{\partial z}\right) \\
-\nabla^2 &amp;=&amp; \nabla\cdot \nabla\end{split}\]</div>
-<p>but in different coordinate systems can take other forms.  These derivatives are sometimes repackaged up with the d’Alembertian <span class="math notranslate nohighlight">\(\Box\)</span></p>
-<div class="math notranslate nohighlight">
-\[\Box \,u = \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} - \nabla^2 u \]</div>
-<p>and therefore the wave equation here has the form:</p>
-<div class="math notranslate nohighlight">
-\[\Box \,u = 0\]</div>
-<p>We notice that this equation is homogeneous - we could also add a source term on the RHS, although
-then it would admit both wave like solutions AND inhomogeous solutions.</p>
-</div>
-<div class="section" id="energy-and-power-of-a-wave">
-<h2><span class="section-number">1.3.3. </span>Energy and Power of a Wave<a class="headerlink" href="#energy-and-power-of-a-wave" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="longitundinal-wave-energy-and-power">
+<h2><span class="section-number">1.3.2. </span>Longitundinal Wave Energy and Power<a class="headerlink" href="#longitundinal-wave-energy-and-power" title="Permalink to this headline">¶</a></h2>
 <p>Given that waves are a method of propogating energy, it is an important question to ask how much and what parameters does a waves energy depend on!</p>
 <p>Lets look at the total energy <span class="math notranslate nohighlight">\(E\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -520,21 +496,21 @@ that the total amount of energy for each mass is fixed, so by symmetry over the 
 = \frac{1}{2}\,m_{tot}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\]</div>
 <p>sometimes this is more usefully presented in terms of the energy per unit length or energy density <span class="math notranslate nohighlight">\(\epsilon(x,\,t)\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-massdensity">
-<span class="eqno">(1.10)<a class="headerlink" href="#equation-massdensity" title="Permalink to this equation">¶</a></span>\[\begin{split}\epsilon(x,\,t) = \frac{E}{L} &amp;=&amp; \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-massdensity" title="Permalink to this equation">¶</a></span>\[\begin{split}\epsilon(x,\,t) = \frac{E}{L} &amp;=&amp; \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
 &amp;=&amp; \, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\rho_L\)</span> is the mass per unit length or <b>mass density</b> of the mass and spring chain.  We can use this expression to find the total energy
-transferred over a wavelength:</p>
+<p>where <span class="math notranslate nohighlight">\(\rho_L\)</span> is the mass per unit length or <b>mass density</b> of the mass and spring chain.</p>
+<p>We can use this expression to find the total energy transferred over a wavelength:</p>
 <div class="math notranslate nohighlight" id="equation-waveenergy">
-<span class="eqno">(1.11)<a class="headerlink" href="#equation-waveenergy" title="Permalink to this equation">¶</a></span>\[E_\lambda = \int_0^\lambda \epsilon(x,\,t) \,\mathrm{d}x \]</div>
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-waveenergy" title="Permalink to this equation">¶</a></span>\[E_\lambda = \int_0^\lambda \epsilon(x,\,t) \,\mathrm{d}x \]</div>
 <p>Likewise to find the power or rate of energy flow over a wave, we can use the definition of power:</p>
 <div class="math notranslate nohighlight">
 \[P = \frac{\partial E}{\partial t}\]</div>
 <p>In order to get a sensible physical quantity, we can find the time varying power:</p>
-<div class="math notranslate nohighlight">
-\[P(x,\,t) = \frac{\partial}{\partial t}\left(\int \epsilon(x,\,t) \,\mathrm{d}x\right) = \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x \]</div>
-<p>and then average the power over the time period <span class="math notranslate nohighlight">\(T\)</span>, using the definition for the average value of a function:</p>
 <div class="math notranslate nohighlight" id="equation-wavepower">
-<span class="eqno">(1.12)<a class="headerlink" href="#equation-wavepower" title="Permalink to this equation">¶</a></span>\[\langle P \rangle_T = \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t \]</div>
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-wavepower" title="Permalink to this equation">¶</a></span>\[P(x,\,t) = \frac{\partial}{\partial t}\left(\int \epsilon(x,\,t) \,\mathrm{d}x\right) = \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x \]</div>
+<p>and then average the power over the time period <span class="math notranslate nohighlight">\(T\)</span>, using the definition for the average value of a function:</p>
+<div class="math notranslate nohighlight" id="equation-averagewavepower">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-averagewavepower" title="Permalink to this equation">¶</a></span>\[\langle P \rangle_T = \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t \]</div>
 </div>
 </div>
 

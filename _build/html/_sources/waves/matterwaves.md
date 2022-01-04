@@ -107,7 +107,7 @@ and amplitudes that constructively and destructively interfereonly over differen
 ---
 name: WavePacket
 ---
-Schematic of a Wave Packet, with localisation near the centre of the packet.
+Schematic of a wave packet, with localisation near the centre of the packet.
 ```
 Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation, 
 the wave packet's profile may remain constant (no dispersion) or change (dispersion) while propagating. 

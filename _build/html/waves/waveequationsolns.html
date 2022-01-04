@@ -447,24 +447,26 @@ moving wave solutions here, to see how consider the functions first at <span cla
 <h2><span class="section-number">1.4.2. </span>Separable Ansatz for Wave Equation PDE<a class="headerlink" href="#separable-ansatz-for-wave-equation-pde" title="Permalink to this headline">¶</a></h2>
 <p>Although this analysis gives us the functional dependence of the functions <span class="math notranslate nohighlight">\(A,\,B\)</span>, it does not narrow down
 their form.  We can however use the fact that the PDE is also separable into two ODEs to solve here, our
-ansatz for the form of <span class="math notranslate nohighlight">\(u\)</span> is</p>
+ansatz for the form of <span class="math notranslate nohighlight">\(u\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}u(t,x) &amp;=&amp;\,  f(x)\,g(t) \\
-u_{xx} &amp;=&amp;\,  \frac{\mathrm{d}^2 f}{\mathrm{d} x^2}\,g(t) \\
+\[u(t,x) =  f(x)\,g(t)\]</div>
+<p>Plugging this into the different sides of the wave equation, we find two ODEs result:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u_{xx} &amp;=&amp;\,  \frac{\mathrm{d}^2 f}{\mathrm{d} x^2}\,g(t) \\
 u_{tt} &amp;=&amp;\,  f(x)\,\frac{\mathrm{d}^2 g}{\mathrm{d} t^2}\end{split}\]</div>
-<p>this allows us to separate out the variables of the wave equation into the form</p>
+<p>this allows us to separate out the variables of the wave equation, which we will write in the form:</p>
 <div class="math notranslate nohighlight">
 \[\frac{c^2}{f}\frac{\mathrm{d}^2 f}{\mathrm{d} x^2} = \frac{1}{g}\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} \]</div>
 <p>These two equations are also <em> equal to a constant</em>.  How? Well the LHS here does not vary when we
 change variable <span class="math notranslate nohighlight">\(t\)</span>, so the right hand side cannot either! Equally the RHS does not vary when changing
 variable <span class="math notranslate nohighlight">\(x\)</span>, so the LHS cannot either - meaning there is no dependence on <span class="math notranslate nohighlight">\(x,\,t\)</span> on either side,
-making them both equal to the same constant.  We are free to pick whichever constant we like here,
-but lets choose a negative value <span class="math notranslate nohighlight">\(-a^2,\, a\in \mathbb{R}\)</span>.  Picking the constant is mathematically
-arbitrary, but for physical oscillating solutions, we <em>need </em> a negative constant.</p>
+making them both equal to the same constant.</p>
+<p>We are free to pick whichever constant we like here, but lets choose a negative value <span class="math notranslate nohighlight">\(-a^2,\, a\in \mathbb{R}\)</span>.<br />
+Picking the constant is mathematically arbitrary, but for physical oscillating solutions, we <em>need</em> a negative constant.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\frac{c^2}{f}\frac{\mathrm{d}^2 f}{\mathrm{d} x^2} &amp;=&amp;\,  -a^2 \\ 
 \frac{1}{g}\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} &amp;=&amp;\,  -a^2\end{split}\]</div>
-<p>We can solve the first equation to find</p>
+<p>We can solve for <span class="math notranslate nohighlight">\(f(x)\)</span> equation to find:</p>
 <div class="math notranslate nohighlight">
 \[f(x) = A\,\exp\left(\frac{iax}{c}\right) + B\,\exp\left(-\frac{iax}{c}\right)\]</div>
 <p>We can do the same with <span class="math notranslate nohighlight">\(g(t)\)</span>:</p>
@@ -486,7 +488,7 @@ we should really write functions in the form:</p>
 <div class="math notranslate nohighlight">
 \[f(x) = e^{x/a} = 1 + \frac{x}{a} + \left(\frac{x}{a}\right)^2 + \left(\frac{x}{a}\right)^3 + \dots\]</div>
 <p>which in each case has a dimensionless quantity being manipulated and <span class="math notranslate nohighlight">\(a\)</span> carries the same units as <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p>So lets rewrite <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> in the form</p>
+<p>So lets rewrite <span class="math notranslate nohighlight">\(u(x,\,t)\)</span> in the form:</p>
 <div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln1">
 <span class="eqno">(1.18)<a class="headerlink" href="#equation-fullwaveeqnsoln1" title="Permalink to this equation">¶</a></span>\[\begin{split}u(x,\,t) \, &amp;&amp; =  AC \exp\left(i(kx + \omega t)\right) + BD\exp\left(-i(kx + \omega t)\right) \\
 &amp;&amp; + AD \exp\left(i(kx - \omega t)\right) + BC\exp\left(-i(kx - \omega t)\right)\end{split}\]</div>
@@ -494,24 +496,24 @@ we should really write functions in the form:</p>
 <span class="math notranslate nohighlight">\([\textrm{time}]^{-1}\)</span>.  We can make this change, with no less of
 generality, as we have not fixed a value of  constant <span class="math notranslate nohighlight">\(a\)</span> previously and also because it is a
 more useful way to understand wave behaviour.</p>
-<p>We can reduce the form of these wave solutions further, consider the addition of two complex exponetials:</p>
+<p>We can reduce the form of these wave solutions further, consider the addition of two complex exponentials:</p>
 <div class="math notranslate nohighlight">
-\[f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + (A-B)i\sin(x)\]</div>
-<p>we know through trigonometric angle identites that</p>
+\[f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + i(A-B)\sin(x)\]</div>
+<p>since we know through trigonometric angle identites that:</p>
 <div class="math notranslate nohighlight">
 \[\cos(x-\phi) = \cos(x)\cos(\phi) + \sin(x)\sin(\phi)\]</div>
 <p>and therefore we can make the association:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}(A - B)i\, &amp;&amp; = \sin(\phi) \\
+\[\begin{split}i(A - B)\, &amp;&amp; = \sin(\phi) \\
 A + B \,&amp;&amp; = \cos(\phi) \\
  \Rightarrow \tan(\phi) \,&amp;&amp; = i\frac{A-B}{A+B}\end{split}\]</div>
-<p>and therefore we could write:</p>
+<p>and therefore we can write:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f(x) &amp;=&amp; \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
 \, &amp;=&amp;\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(A'\)</span> is some constant to be found.  So if we use the condition that we will eventually just take the real parts
-of our complex solutions, it dramatically simplifies the form of the equations.  We call this complex representation
-of oscillating functions a <b>phasor</b>.</p>
+of our complex solutions, it dramatically simplifies the form of the equations.  We call writing our complex solutions
+of oscillating functions in this way the <b>phasor</b> representation.</p>
 <p>Therefore we rewrite Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(1.18)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln">
 <span class="eqno">(1.19)<a class="headerlink" href="#equation-fullwaveeqnsoln" title="Permalink to this equation">¶</a></span>\[u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) \]</div>

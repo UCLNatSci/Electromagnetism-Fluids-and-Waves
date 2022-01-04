@@ -45,9 +45,11 @@ v_g = \frac{\partial \omega}{\partial k}
 ```
 this is known as the <b> group velocity </b> of the wave and describes the velocity with which the overall 
 envelope shape of the wave's amplitudes (known as the modulation or envelope of the wave) propagates 
-through space.  We can extend this to two and higher dimensions using the gradient operator
+through space.  
+
+We can extend this to two and higher dimensions using the gradient operator
 ```{math}
-\bf{v_p} &=& \,\frac{\bf{\hat{k}}}{|\bf{k}|}\omega \\
+\bf{v_p} &=& \,\frac{\bf \hat{k} }{|\bf{k}|}\omega \\
 \bf{v_g} &=& \,\nabla_k \omega 
 ```
 Usually these vectors point in the same direction, but there are examples in nature, for instance 
