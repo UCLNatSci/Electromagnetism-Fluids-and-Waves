@@ -390,12 +390,12 @@ electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> in 
 <p>which neatly suggests that:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = \nabla \times {\bf A}\]</div>
-<p>which again through vector calculus identities satisfies <span class="math notranslate nohighlight">\(\nabla \cdot {\bf B} = 0\)</span>.  If we re-examine Gauss’s and Amp’ere’s law’s in light of these additions we find:</p>
+<p>which again through vector calculus identities satisfies <span class="math notranslate nohighlight">\(\nabla \cdot {\bf B} = 0\)</span>.  If we re-examine Gauss’s and Ampère’s law’s in light of these additions we find:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla \cdot {\bf E} &amp;=&amp; \,-\frac{\partial}{\partial t}\left( \nabla \cdot {\bf A}\right) - \nabla^2\phi = \frac{\rho}{\epsilon_0}\\
 \nabla \times {\bf B} &amp;=&amp;\, \nabla \left( \nabla \times {\bf A} \right) = \mu_0 {\bf J} + \mu_0 \epsilon_0 \frac{\partial {\bf E}}{\partial t} \\ 
 &amp;=&amp; \,\mu_0 {\bf J} - \mu_0 \epsilon_0 \frac{\partial}{\partial t} \nabla \phi - \mu_0 \epsilon_0 \frac{\partial^2 {\bf A}}{\partial t^2}\end{split}\]</div>
-<p>which we can rearrange, collect together terms and use vector identities:</p>
+<p>which we can rearrange, collect together terms and use vector identities to find a modified wave equation:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{c^2}\frac{\partial^2 {\bf A}}{\partial t^2} = 
 \nabla^2 {\bf A} - \nabla \left(\nabla \cdot {\bf A} + \frac{1}{c^2}\frac{\partial \phi}{\partial t} \right) + \mu_0 {\bf J}\]</div>
@@ -411,7 +411,8 @@ then they should NOT change the electric and magnetic fields overall, which mean
 {\bf B} &amp; \rightarrow&amp; \nabla \times \left( {\bf A} + \alpha\right) = \nabla {\bf A} + \nabla \times \alpha = {\bf B} + \nabla \times \alpha \end{split}\]</div>
 <p>and hence for unchanged fields, we must simultaneously satisfy:</p>
 <div class="math notranslate nohighlight">
-\[\nabla \times \alpha = 0 \,\,\, \frac{\partial \alpha}{\partial t} + \nabla f = 0\]</div>
+\[\begin{split}\nabla \times \alpha &amp;=&amp;\, 0 \\
+\frac{\partial \alpha}{\partial t} + \nabla f &amp;=&amp;\, 0\end{split}\]</div>
 <p>Given that we can write an vector field with vanishing curl as a gradient of a scalar,</p>
 <div class="math notranslate nohighlight">
 \[\alpha = \nabla \lambda\]</div>
@@ -422,9 +423,9 @@ then they should NOT change the electric and magnetic fields overall, which mean
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf A} &amp; \rightarrow&amp;\, {\bf A} + \nabla \lambda\\
 \phi &amp;\rightarrow&amp;\, \phi - \frac{\partial \lambda}{\partial t}\end{split}\]</div>
-<p>Despite these transformations leaving <span class="math notranslate nohighlight">\({\bf E},\,{\bf B}\)</span> unchanged, the equations for Gauss’s and Amp’eres law are not invariant, since <span class="math notranslate nohighlight">\(\nabla \cdot {\bf A}\)</span>
+<p>Despite these transformations leaving <span class="math notranslate nohighlight">\({\bf E},\,{\bf B}\)</span> unchanged, the equations for Gauss’s and Ampères law are not invariant, since <span class="math notranslate nohighlight">\(\nabla \cdot {\bf A}\)</span>
 is still unconstrained.  Thus we can use different choices of <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\({\bf A}\)</span> here to simplify solving these.  These different choices are known as
-<b> Gauge Choices.</b></p>
+<b>Gauge Choices</b>.</p>
 <p>Writing electromagnetism in this way allows for quantum ideas and conceptual issues within these theories to be seen as physical effects,
 one way these are seen physically is through the Aharonov-Bohm (AB) effect.  For more information on the AB effect, check out
 <a class="reference external" href="https://www.damtp.cam.ac.uk/user/tong/qhe/qhe.pdf">these DAMTP notes</a>.</p>

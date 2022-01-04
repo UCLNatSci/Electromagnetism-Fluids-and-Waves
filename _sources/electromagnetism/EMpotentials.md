@@ -28,13 +28,13 @@ which neatly suggests that:
 ```{math}
 {\bf B} = \nabla \times {\bf A}
 ```
-which again through vector calculus identities satisfies $\nabla \cdot {\bf B} = 0$.  If we re-examine Gauss's and Amp\'ere's law's in light of these additions we find:
+which again through vector calculus identities satisfies $\nabla \cdot {\bf B} = 0$.  If we re-examine Gauss's and Ampère's law's in light of these additions we find:
 ```{math}
 \nabla \cdot {\bf E} &=& \,-\frac{\partial}{\partial t}\left( \nabla \cdot {\bf A}\right) - \nabla^2\phi = \frac{\rho}{\epsilon_0}\\
 \nabla \times {\bf B} &=&\, \nabla \left( \nabla \times {\bf A} \right) = \mu_0 {\bf J} + \mu_0 \epsilon_0 \frac{\partial {\bf E}}{\partial t} \\ 
 &=& \,\mu_0 {\bf J} - \mu_0 \epsilon_0 \frac{\partial}{\partial t} \nabla \phi - \mu_0 \epsilon_0 \frac{\partial^2 {\bf A}}{\partial t^2}
 ```
-which we can rearrange, collect together terms and use vector identities:
+which we can rearrange, collect together terms and use vector identities to find a modified wave equation:
 ```{math}
 \frac{1}{c^2}\frac{\partial^2 {\bf A}}{\partial t^2} = 
 \nabla^2 {\bf A} - \nabla \left(\nabla \cdot {\bf A} + \frac{1}{c^2}\frac{\partial \phi}{\partial t} \right) + \mu_0 {\bf J}
@@ -53,7 +53,8 @@ then they should NOT change the electric and magnetic fields overall, which mean
 ```
 and hence for unchanged fields, we must simultaneously satisfy:
 ```{math}
-\nabla \times \alpha = 0 \,\,\, \frac{\partial \alpha}{\partial t} + \nabla f = 0
+\nabla \times \alpha &=&\, 0 \\
+\frac{\partial \alpha}{\partial t} + \nabla f &=&\, 0
 ```
 Given that we can write an vector field with vanishing curl as a gradient of a scalar, 
 ```{math}
@@ -68,9 +69,9 @@ which we can rewrite our initial transformations in terms of
 {\bf A} & \rightarrow&\, {\bf A} + \nabla \lambda\\
 \phi &\rightarrow&\, \phi - \frac{\partial \lambda}{\partial t}
 ```
-Despite these transformations leaving ${\bf E},\,{\bf B}$ unchanged, the equations for Gauss's and Amp\'eres law are not invariant, since $\nabla \cdot {\bf A}$ 
+Despite these transformations leaving ${\bf E},\,{\bf B}$ unchanged, the equations for Gauss's and Ampères law are not invariant, since $\nabla \cdot {\bf A}$ 
 is still unconstrained.  Thus we can use different choices of $\phi$ and ${\bf A}$ here to simplify solving these.  These different choices are known as 
-<b> Gauge Choices.</b>
+<b>Gauge Choices</b>.
 
 Writing electromagnetism in this way allows for quantum ideas and conceptual issues within these theories to be seen as physical effects, 
 one way these are seen physically is through the Aharonov-Bohm (AB) effect.  For more information on the AB effect, check out 
