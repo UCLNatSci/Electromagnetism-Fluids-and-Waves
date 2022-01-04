@@ -522,16 +522,16 @@ as depicted in <a class="reference internal" href="#bslawangles"><span class="st
 \[\mathrm{\bf d}\ell \times \hat{{\bf r}} = \mathrm{d} \ell \,|\hat{\bf z}|\,|\hat{{\bf r}}|\, \sin(\theta)\,\hat{{\bf \theta}} = \cos(\alpha)\,\mathrm{d} \ell\, \hat{{\bf \theta}}\]</div>
 <p>Applying Biot-Savart law here:</p>
 <div class="math notranslate nohighlight">
-\[{\bf B} = \frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{\bf d}\ell \,\times \hat{{\bf r}}}{R^2} = 
-\frac{\mu_0\,I}{4\pi}\int_{\mathcal{C}}\frac{\cos(\alpha)}{R^2} \,\mathrm{d} \ell\,\hat{\theta}\]</div>
-<p>Given <span class="math notranslate nohighlight">\(\ell = r \tan(\alpha) \Rightarrow \mathrm{d} \ell = r\,\sec^2(\alpha)\,\mathrm{d}\alpha\)</span> and given <span class="math notranslate nohighlight">\(r = R\, \cos(\alpha) \Rightarrow R = r / \cos(\alpha)\)</span>:</p>
+\[{\bf B} = \frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{\bf d}\ell \,\times \hat{{\bf r}}}{r^2} = 
+\frac{\mu_0\,I}{4\pi}\int_{\mathcal{C}}\frac{\cos(\alpha)}{r^2} \,\mathrm{d} \ell\,\hat{\theta}\]</div>
+<p>Given <span class="math notranslate nohighlight">\(\ell = R \tan(\alpha) \Rightarrow \mathrm{d} \ell = R\,\sec^2(\alpha)\,\mathrm{d}\alpha\)</span> and given <span class="math notranslate nohighlight">\(R = r\, \cos(\alpha) \Rightarrow r = R / \cos(\alpha)\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-finitewirebfield">
-<span class="eqno">(2.17)<a class="headerlink" href="#equation-finitewirebfield" title="Permalink to this equation">¶</a></span>\[\begin{split}{\bf B} &amp;=&amp;\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\cos(\alpha)\,\cos^2(\alpha)}{r^2}\sec^2(\alpha)\, \mathrm{d} \alpha\,\hat{ \theta} \\ 
-&amp;=&amp; \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{ \theta} \\
-&amp;=&amp;\, \frac{\mu_0\,I}{4\pi\,r}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{ \theta}\end{split}\]</div>
+<span class="eqno">(2.17)<a class="headerlink" href="#equation-finitewirebfield" title="Permalink to this equation">¶</a></span>\[\begin{split}{\bf B} &amp;=&amp;\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{\cos(\alpha)\,\cos^2(\alpha)}{R^2}\,R\,\sec^2(\alpha)\, \mathrm{d} \alpha\,\hat{ \theta} \\ 
+&amp;=&amp; \,\frac{\mu_0\,I}{4\pi\,R}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{ \theta} \\
+&amp;=&amp;\, \frac{\mu_0\,I}{4\pi\,R}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{ \theta}\end{split}\]</div>
 <p>Notice that if we take <span class="math notranslate nohighlight">\(\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{\theta}\]</div>
+\[{\bf B} = \frac{\mu_0\,I}{2\pi\,R}\,\hat{\theta}\]</div>
 <p>then we find the infinite wire result from Equation <a class="reference internal" href="#equation-infinitewirebfield">(2.16)</a>.</p>
 </div>
 </div>
