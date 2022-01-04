@@ -23,9 +23,9 @@ This gives rise to the idea of <b> Electric Potential </b> $V_E$,
 :label: EFieldpotential
 V_E({\bf r}) = -\int_c {\bf E} \cdot \mathrm{\bf d}\ell
 ```
-Here $V_E$ is amount of energy per unit charge given to $Q$ when moving on some path $C$ through an electric field from a 
-point with zero potential to position $\bf r$.  By the Helmholtz decomposition theorem, the field $\bf E$ will (in general) 
-have divergence and curl components, however if $\bf E$ is curl free, then we can write:
+Here $V_E$ is amount of energy per unit charge given to $Q$ when moving on some path $C$ through an electric field from a point with 
+zero potential to position $\bf r$.  As the Helmholtz decomposition theorem in Equation {eq}`HelmholtzDecomp` shows, $\bf E$ would
+in general have divergence and curl components, however if $\bf E$ is curl free, then we can write:
 ```{math}
 :label: Efieldgradpotential
 {\bf E} = -\nabla V_E 

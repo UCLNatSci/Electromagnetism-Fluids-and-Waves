@@ -159,18 +159,18 @@ In this system we can think about the length element of the current, $ \mathrm{\
 ```
 Applying Biot-Savart law here:
 ```{math}
-{\bf B} = \frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{\bf d}\ell \,\times \hat{{\bf r}}}{R^2} = 
-\frac{\mu_0\,I}{4\pi}\int_{\mathcal{C}}\frac{\cos(\alpha)}{R^2} \,\mathrm{d} \ell\,\hat{\theta}
+{\bf B} = \frac{\mu_0}{4\pi}\int_{\mathcal{C}}\frac{I\,\mathrm{\bf d}\ell \,\times \hat{{\bf r}}}{r^2} = 
+\frac{\mu_0\,I}{4\pi}\int_{\mathcal{C}}\frac{\cos(\alpha)}{r^2} \,\mathrm{d} \ell\,\hat{\theta}
 ```
-Given $\ell = r \tan(\alpha) \Rightarrow \mathrm{d} \ell = r\,\sec^2(\alpha)\,\mathrm{d}\alpha$ and given $r = R\, \cos(\alpha) \Rightarrow R = r / \cos(\alpha)$:
+Given $\ell = R \tan(\alpha) \Rightarrow \mathrm{d} \ell = R\,\sec^2(\alpha)\,\mathrm{d}\alpha$ and given $R = r\, \cos(\alpha) \Rightarrow r = R / \cos(\alpha)$:
 ```{math}
 :label: FiniteWireBField
-{\bf B} &=&\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{r\,\cos(\alpha)\,\cos^2(\alpha)}{r^2}\sec^2(\alpha)\, \mathrm{d} \alpha\,\hat{ \theta} \\ 
-&=& \,\frac{\mu_0\,I}{4\pi\,r}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{ \theta} \\
-&=&\, \frac{\mu_0\,I}{4\pi\,r}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{ \theta}
+{\bf B} &=&\, \frac{\mu_0\,I}{4\pi}\int_{\alpha_1}^{\alpha_2} \frac{\cos(\alpha)\,\cos^2(\alpha)}{R^2}\,R\,\sec^2(\alpha)\, \mathrm{d} \alpha\,\hat{ \theta} \\ 
+&=& \,\frac{\mu_0\,I}{4\pi\,R}\int_{\alpha_1}^{\alpha_2} \cos(\alpha)\,\mathrm{d} \alpha\,\hat{ \theta} \\
+&=&\, \frac{\mu_0\,I}{4\pi\,R}\Big[ \sin(\alpha_2) - \sin(\alpha_1)\Big]\,\hat{ \theta}
 ```
 Notice that if we take $\alpha_2 \rightarrow \pi/2,\, \alpha_1 \rightarrow -\pi/2$:
 ```{math}
-{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{\theta}
+{\bf B} = \frac{\mu_0\,I}{2\pi\,R}\,\hat{\theta}
 ```
 then we find the infinite wire result from Equation {eq}`InfiniteWireBField`.

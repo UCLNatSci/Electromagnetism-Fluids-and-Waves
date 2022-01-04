@@ -92,7 +92,7 @@ vE_0 =
 \end{bmatrix} 
 ```
 
-## Drude Model
+## Drude Model *
 In addition to solving Maxwell's for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor, 
 with an electric field ${\bf E}$ present, we can think about Ohm's law 
 ```{math}

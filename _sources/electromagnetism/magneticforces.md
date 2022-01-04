@@ -49,17 +49,17 @@ then the magnetic field has no effect on charges.  Likewise we see a maximum for
 
 ## Laplace Force
 If we put a wire carrying a current $I$, which has electrons moving with a drift velocity $v$, in a magnetic field $\bf B$, then by Ampère's law the currents magnetic 
-field $\bf B$ should interact, producing some reaction force $F}$ on the wire.  From Equation {eq}`IdlvdQ`, we find:
+field $\bf B$ should interact, producing some reaction force $\bf F$ on the wire.  From Equation {eq}`IdlvdQ`, we find:
 ```{math}
 :label: IdlvdQ2
 \int_0^{Q_{tot}}{\bf v}\,\mathrm{d}Q = \int_0^{\bf L} I\,\mathrm{\bf d}\ell \Rightarrow Q_{tot}\,{\bf v} = I\,{\bf L}
 ```
-therefore using the Lorentz force law, the force on a wire of length $\bf L$ within a magnetic field ${\bf B}_{\textrm ext}$:
+therefore using the Lorentz force law, the force on a wire of length $L = |\bf L|$ within a magnetic field $\bf B$ will follow:
 ```{math}
 {\bf F} = Q\,{\bf v} \times {\bf B} = I\,{\bf L} \times {\bf B}
 ```
-which we depict in {numref}`FisBIL`, showing a straight wire meeting a uniform magnetic field at an angle $\alpha$. This is sometimes known under the name of the <b>Laplace Force</b> 
-or colloquially as <em>F is BIL</em>.
+which we depict in {numref}`FisBIL`, showing a straight wire meeting a uniform magnetic field at an angle $\alpha$. This is sometimes known under the name of 
+the <b>Laplace Force</b> or colloquially as <em>F is BIL</em>.
 ```{figure} ../figures/FisBIL.png
 ---
 name: FisBIL
@@ -69,7 +69,7 @@ Right-hand rule for the force $\bf F$ on a wire carrying a current $I$ in a unif
 ```
 Likewise if we wish to calculate the force on wire that is not straight, we can use the expression from Equation {eq}`IdlvdQ2`:
 ```{math}
-{\bf F} = Q\,{\bf v} \times {\bf B} = \int_0^{\bf L} I\,\mathrm{\bf d} \ell \times {\bf B}
+{\bf F} = \left(\int_0^{Q_{tot}}{\bf v}\,\mathrm{d}Q\right) \times {\bf B} = \left(\int_0^{\bf L} I\,\mathrm{\bf d} \ell\right) \times {\bf B}
 ```
 where we consider the line segments $\mathrm{\bf d} \ell$ over the length of the wire and then integrate up.
 
