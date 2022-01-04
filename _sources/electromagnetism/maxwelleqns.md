@@ -34,7 +34,7 @@ Likewise we can do the same for magnetic fields, which in the absence of magneti
 ## Ampère's Law in Differential Form
 We can revisit Amp\`ere's law, with the displacement current:
 ```{math}
-\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0\iint_A \frac{\partial {\bf E}}{\partial t}\,\mathrm{d}{\bf A}
+\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0\iint_A \frac{\partial {\bf E}}{\partial t}\cdot\mathrm{d}{\bf A}
 ```
 Given we know the Stoke's theorem tells us that the summing of a vector field around a closed loop will be related to the curl of the field, for the magnetic field:
 ```{math}
@@ -67,11 +67,13 @@ $\mathrm{d} {\bf \ell}$ in the circuit:
 \mathcal{E} = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{d}{\bf \ell} = \oint_c {\bf E} \cdot \mathrm{d}{\bf \ell}
 ```
 where the final sign on the integral is given by the convention for clockwise conventional current.  {numref}`MagnetInACoil` shows that a positive 
-change in $\Phi_B$ eventually produces current in a negative direction.  We can rewrite this using Stoke's theorem:
+change in $\Phi_B$ eventually produces current in a negative direction.  
+
+We can rewrite this using Stoke's theorem:
 ```{math}
 \oint_\ell {\bf E} \cdot \mathrm{d} \ell= \iint_A \left(\nabla \times {\bf E}\right)\cdot \mathrm{d} {\bf A} \nonumber
 ```
-and so this can all be written as
+and so this can all be written as:
 ```{math}
 \iint_A \left(\nabla \times {\bf E} + \frac{\partial {\bf B}}{\partial t}\right)\cdot \mathrm{d} {\bf A} = 0
 ```

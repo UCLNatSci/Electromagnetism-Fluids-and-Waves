@@ -92,31 +92,7 @@ This results in the well known form of the wave equation in one dimension:
 ``` 
 where $c$ is the wave speed of some form (more on this later).  
 
-## Wave Equation in higher dimensions
-
-We can extend the wave equation to a higher number of dimensions, packaging the spatial derivatives up into the Laplacian 
-$\nabla^2$ (sometimes written $\Delta$)
-```{math}
-:label: WaveEqn3D
-\nabla^2 u = \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} 
-```
-which in cartesian coordinates takes the form:
-```{math}
-\nabla &=& \left(\frac{\partial}{\partial x},\,\frac{\partial}{\partial y},\, \frac{\partial}{\partial z}\right) \\
-\nabla^2 &=& \nabla\cdot \nabla
-```
-but in different coordinate systems can take other forms.  These derivatives are sometimes repackaged up with the d'Alembertian $\Box$
-```{math}
-\Box \,u = \frac{1}{c^2} \frac{\partial^2 u}{\partial t^2} - \nabla^2 u 
-```
-and therefore the wave equation here has the form:
-```{math} 
-\Box \,u = 0
-```
-We notice that this equation is homogeneous - we could also add a source term on the RHS, although 
-then it would admit both wave like solutions AND inhomogeous solutions.
-
-## Energy and Power of a Wave
+## Longitundinal Wave Energy and Power
 Given that waves are a method of propogating energy, it is an important question to ask how much and what parameters does a waves energy depend on!
 
 Lets look at the total energy $E$:
@@ -178,8 +154,9 @@ sometimes this is more usefully presented in terms of the energy per unit length
 \epsilon(x,\,t) = \frac{E}{L} &=& \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
 &=& \, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]
 ```
-where $\rho_L$ is the mass per unit length or <b>mass density</b> of the mass and spring chain.  We can use this expression to find the total energy 
-transferred over a wavelength:
+where $\rho_L$ is the mass per unit length or <b>mass density</b> of the mass and spring chain.  
+
+We can use this expression to find the total energy transferred over a wavelength:
 ```{math}
 :label: waveenergy
 E_\lambda = \int_0^\lambda \epsilon(x,\,t) \,\mathrm{d}x 
@@ -190,10 +167,11 @@ P = \frac{\partial E}{\partial t}
 ```
 In order to get a sensible physical quantity, we can find the time varying power:
 ```{math}
+:label: wavepower
 P(x,\,t) = \frac{\partial}{\partial t}\left(\int \epsilon(x,\,t) \,\mathrm{d}x\right) = \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x 
 ```
 and then average the power over the time period $T$, using the definition for the average value of a function:
 ```{math}
-:label: wavepower
+:label: averagewavepower
 \langle P \rangle_T = \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t 
 ```

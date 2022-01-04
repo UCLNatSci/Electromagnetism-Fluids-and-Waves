@@ -74,27 +74,31 @@ For $u(t,x)$ to stay invariant under this change:
 
 Although this analysis gives us the functional dependence of the functions $A,\,B$, it does not narrow down 
 their form.  We can however use the fact that the PDE is also separable into two ODEs to solve here, our 
-ansatz for the form of $u$ is 
+ansatz for the form of $u$:
 ```{math}
-u(t,x) &=&\,  f(x)\,g(t) \\
+u(t,x) =  f(x)\,g(t)
+```
+Plugging this into the different sides of the wave equation, we find two ODEs result:
+```{math}
 u_{xx} &=&\,  \frac{\mathrm{d}^2 f}{\mathrm{d} x^2}\,g(t) \\
 u_{tt} &=&\,  f(x)\,\frac{\mathrm{d}^2 g}{\mathrm{d} t^2}
 ```
-this allows us to separate out the variables of the wave equation into the form
+this allows us to separate out the variables of the wave equation, which we will write in the form:
 ```{math}
 \frac{c^2}{f}\frac{\mathrm{d}^2 f}{\mathrm{d} x^2} = \frac{1}{g}\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} 
 ```
 These two equations are also <em> equal to a constant</em>.  How? Well the LHS here does not vary when we 
 change variable $t$, so the right hand side cannot either! Equally the RHS does not vary when changing 
 variable $x$, so the LHS cannot either - meaning there is no dependence on $x,\,t$ on either side, 
-making them both equal to the same constant.  We are free to pick whichever constant we like here, 
-but lets choose a negative value $-a^2,\, a\in \mathbb{R}$.  Picking the constant is mathematically 
-arbitrary, but for physical oscillating solutions, we <em>need </em> a negative constant.
+making them both equal to the same constant.  
+
+We are free to pick whichever constant we like here, but lets choose a negative value $-a^2,\, a\in \mathbb{R}$.  
+Picking the constant is mathematically arbitrary, but for physical oscillating solutions, we <em>need</em> a negative constant.
 ```{math}
 \frac{c^2}{f}\frac{\mathrm{d}^2 f}{\mathrm{d} x^2} &=&\,  -a^2 \\ 
 \frac{1}{g}\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} &=&\,  -a^2
 ```
-We can solve the first equation to find 
+We can solve for $f(x)$ equation to find:
 ```{math}
 f(x) = A\,\exp\left(\frac{iax}{c}\right) + B\,\exp\left(-\frac{iax}{c}\right)
 ```
@@ -123,7 +127,7 @@ f(x) = e^{x/a} = 1 + \frac{x}{a} + \left(\frac{x}{a}\right)^2 + \left(\frac{x}{a
 ```
 which in each case has a dimensionless quantity being manipulated and $a$ carries the same units as $x$.
 
-So lets rewrite $u(x,\,t)$ in the form 
+So lets rewrite $u(x,\,t)$ in the form:
 ```{math}
 :label: fullwaveeqnsoln1
 u(x,\,t) \, && =  AC \exp\left(i(kx + \omega t)\right) + BD\exp\left(-i(kx + \omega t)\right) \\
@@ -134,28 +138,28 @@ $[\textrm{time}]^{-1}$.  We can make this change, with no less of
 generality, as we have not fixed a value of  constant $a$ previously and also because it is a 
 more useful way to understand wave behaviour.
 
-We can reduce the form of these wave solutions further, consider the addition of two complex exponetials:
+We can reduce the form of these wave solutions further, consider the addition of two complex exponentials:
 ```{math}
-f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + (A-B)i\sin(x)
+f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + i(A-B)\sin(x)
 ```
-we know through trigonometric angle identites that
+since we know through trigonometric angle identites that:
 ```{math}
 \cos(x-\phi) = \cos(x)\cos(\phi) + \sin(x)\sin(\phi)
 ```
 and therefore we can make the association:
 ```{math}
-(A - B)i\, && = \sin(\phi) \\
+i(A - B)\, && = \sin(\phi) \\
 A + B \,&& = \cos(\phi) \\
  \Rightarrow \tan(\phi) \,&& = i\frac{A-B}{A+B}
 ```
-and therefore we could write:
+and therefore we can write:
 ```{math}
 f(x) &=& \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
 \, &=&\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]
 ``` 
 where $A'$ is some constant to be found.  So if we use the condition that we will eventually just take the real parts 
-of our complex solutions, it dramatically simplifies the form of the equations.  We call this complex representation
-of oscillating functions a <b>phasor</b>.
+of our complex solutions, it dramatically simplifies the form of the equations.  We call writing our complex solutions
+of oscillating functions in this way the <b>phasor</b> representation.
 
 Therefore we rewrite Equation {eq}`fullwaveeqnsoln1`:
 ```{math}
