@@ -1,19 +1,21 @@
 # Matter Waves
 
+## Deriving the Schrödinger Equation
+
 So far we have used the wave equation to construct the dispersion relation for travelling waves, but we can also try to 
 "reverse engineer" this process to construct the wave equation from the form of the dispersion relation.  
 
-Lets start with some basic quantum physics, for a particle moving with momentum ${\bf p}$, its magnitude $p = |{\bf p}|$ 
+Lets start with some basic quantum physics, for a particle moving with momentum $\bf p$, its magnitude $p = |{\bf p}|$ 
 is related to the de Broglie wavelength $\lambda$ by:
 ```{math}
 \lambda = \frac{h}{p} 
 ```
-which we can rewrite in terms of wavevector $k = |{\bf k}| = \frac{2\pi}{\lambda}$
+which we can rewrite in terms of wavevector $k = |{\bf k}| = 2\pi/\lambda$
 ```{math}
 :label: debrogliep
 p = \hbar k
 ```
-where $\hbar = \frac{h}{2\pi}$ is the reduced Planck's constant.  Likewise the Planck equation for energy $E$ and 
+where $\hbar = h/2\pi$ is the reduced Planck's constant.  Likewise the Planck equation for energy $E$ and 
 frequency $f$, can be rewritten using the angular frequency $\omega = 2 \pi f$:
 ```{math}
 :label: planckE
