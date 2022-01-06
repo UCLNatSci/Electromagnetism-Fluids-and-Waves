@@ -51,11 +51,23 @@ To find the electric field distribution using Gauss's law, lets break up the spa
  
 - <b> REGION I: $r > a$ </b>
 
-First here the charge enclosed by the radius $r>a$ is the entire charge $+Q$ carried by the sphere, thus $Q_{enclosed} = Q$.  
+Gauss's law tells us that:
+```{math}
+\iint {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q_{enclosed}}{\epsilon_0}
+```
+Firstly here the charge enclosed by the radius $r > a$ is the entire charge $+Q$ carried by the sphere, thus $Q_{enclosed} = Q$:
+```{math}
+\iint {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q}{\epsilon_0}
+```
+secondly the electric field ${\bf E}$ only has a radial term and no angular dependence:
+```{math}
+\iint {\bf E} \cdot \mathrm{d} {\bf A} = \iint E_r\mathrm{d} A_r =  E_r\iint\mathrm{d} A_r = E_r\,(4 \pi r^2)
+```
+putting these two facts together we find:
 ```{math}
 E_r\,(4 \pi r^2) = \frac{Q}{\epsilon_0} \Rightarrow E_r = \frac{Q}{4 \pi \epsilon_0 r^2} 
 ``` 
-The electric field ${\bf E}$ only has a radial term and no angular dependence, therefore the full vector expression is:
+therefore the full vector expression is:
 ```{math}
 {\bf E} = \frac{Q}{4 \pi \epsilon_0 r^2}\hat{{\bf r} }
 ```
