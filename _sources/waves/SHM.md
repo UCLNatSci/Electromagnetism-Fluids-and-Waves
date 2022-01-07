@@ -63,18 +63,19 @@ We say this system presents <b>Simple Harmonic Motion (SHM)</b>, because it repr
 seen a many different systems but always has the same hallmarks - there is some natural angular frequency $\omega_0$ we can find from the equations 
 of motion and the energy in the system oscillates between potential and kinetic.  
 
-Another feature of this motion is the similarities it brings to circular motion, in fact we can see from {numref}`CircMotionSHM` that uniform 
-circular motion projected into one dimension is just SHM.  The natural angular frequency of the system $\omega_0$ here is now the angular speed $\omega$ of 
-the circular motion 
-```{math}
-\omega = \frac{\textrm{d}\theta}{\textrm{d}t}
-```
 
 ```{figure} ../figures/CircMotionSHM.jpg
 ---
 name: CircMotionSHM
 ---
 Projection of a ball on a spinning wheel undergoing uniform circular motion, the balls shadow displays SHM - this stretched out in time shows wave motion.
+```
+
+Another feature of this motion is the similarities it brings to circular motion, in fact we can see from {numref}`CircMotionSHM` that uniform 
+circular motion projected into one dimension is just SHM.  The natural angular frequency of the system $\omega_0$ here is now the angular speed $\omega$ of 
+the circular motion 
+```{math}
+\omega = \frac{\textrm{d}\theta}{\textrm{d}t}
 ```
 
 ## Energy in a Simple Harmonic System
