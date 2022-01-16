@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.9. Matter Waves &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>1.10. Matter Waves &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +48,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -56,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.10. Doppler Shift" href="dopplershift.html" />
-    <link rel="prev" title="1.8. Polarisation of Waves" href="polarisation.html" />
+    <link rel="next" title="1.11. Doppler Shift" href="dopplershift.html" />
+    <link rel="prev" title="1.9. Polarisation of Waves" href="polarisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -76,10 +77,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -89,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -140,18 +137,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="standingwaves.html">
+     1.8. Standing Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="polarisation.html">
-     1.8. Polarisation of Waves
+     1.9. Polarisation of Waves
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.9. Matter Waves
+     1.10. Matter Waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dopplershift.html">
-     1.10. Doppler Shift
+     1.11. Doppler Shift
     </a>
    </li>
   </ul>
@@ -224,6 +226,58 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
      2.12. Electromagnetic Scalar and Vector Potentials
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../fluids/intro.html">
+   3. Fluids
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/newtonian.html">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/demo-exercise.html">
+     3.9. A title
     </a>
    </li>
   </ul>
@@ -313,21 +367,21 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deriving-the-schrodinger-equation">
-   1.9.1. Deriving the Schrödinger Equation
+   1.10.1. Deriving the Schrödinger Equation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#relativistic-quantum-mechanics">
-   1.9.2. Relativistic Quantum Mechanics
+   1.10.2. Relativistic Quantum Mechanics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wavepackets">
-   1.9.3. Wavepackets
+   1.10.3. Wavepackets
   </a>
  </li>
 </ul>
@@ -342,9 +396,9 @@
               <div>
                 
   <div class="section" id="matter-waves">
-<h1><span class="section-number">1.9. </span>Matter Waves<a class="headerlink" href="#matter-waves" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.10. </span>Matter Waves<a class="headerlink" href="#matter-waves" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="deriving-the-schrodinger-equation">
-<h2><span class="section-number">1.9.1. </span>Deriving the Schrödinger Equation<a class="headerlink" href="#deriving-the-schrodinger-equation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.10.1. </span>Deriving the Schrödinger Equation<a class="headerlink" href="#deriving-the-schrodinger-equation" title="Permalink to this headline">¶</a></h2>
 <p>So far we have used the wave equation to construct the dispersion relation for travelling waves, but we can also try to
 “reverse engineer” this process to construct the wave equation from the form of the dispersion relation.</p>
 <p>Lets start with some basic quantum physics, for a particle moving with momentum <span class="math notranslate nohighlight">\(\bf p\)</span>, its magnitude <span class="math notranslate nohighlight">\(p = |{\bf p}|\)</span>
@@ -396,7 +450,7 @@ giving:</p>
 <p>which should look familiar as the <b>Time Independent Schrödinger Equation (TISE).</b></p>
 </div>
 <div class="section" id="relativistic-quantum-mechanics">
-<h2><span class="section-number">1.9.2. </span>Relativistic Quantum Mechanics<a class="headerlink" href="#relativistic-quantum-mechanics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.10.2. </span>Relativistic Quantum Mechanics<a class="headerlink" href="#relativistic-quantum-mechanics" title="Permalink to this headline">¶</a></h2>
 <p>Unsurprisingly quantum mechanics is not the only relevant physical theory, as bodies get larger and move at relativistic speeds, we need to add in
 special relativity, given the mass-energy-momentum relation from special relativity,</p>
 <div class="math notranslate nohighlight">
@@ -409,7 +463,7 @@ We find this now includes the d’Alembertian operator:</p>
 <p>This equation also becomes very useful when studying quantum fields and forms the basis of the <b>Dirac</b> equation.</p>
 </div>
 <div class="section" id="wavepackets">
-<h2><span class="section-number">1.9.3. </span>Wavepackets<a class="headerlink" href="#wavepackets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.10.3. </span>Wavepackets<a class="headerlink" href="#wavepackets" title="Permalink to this headline">¶</a></h2>
 <p>Our simplest form of dispersion relation for travelling waves suggested <span class="math notranslate nohighlight">\(\omega = \pm ck\)</span>, which we can write as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}u(x,\, t) &amp;=&amp;\, \sum_{n=1}^2 u_n \exp(i(kx-\omega_n t))\\
@@ -419,11 +473,11 @@ dispersion relation, therefore:</p>
 <div class="math notranslate nohighlight">
 \[u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k\]</div>
 <p>We call these <b>wave packets</b>, also known sometimes as wave trains or bursts - we can picture them as a larger wave envelope, with smaller localized waves
-that travel as one unit together, as shown in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 1.9</span></a>.  This infinite set of oscillating waves have different wavelengths, with phases
+that travel as one unit together, as shown in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 1.10</span></a>.  This infinite set of oscillating waves have different wavelengths, with phases
 and amplitudes that constructively and destructively interfereonly over different regions of space.</p>
 <div class="figure align-default" id="wavepacket">
 <img alt="../_images/WavePacket.png" src="../_images/WavePacket.png" />
-<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">Schematic of a wave packet, with localisation near the centre of the packet.</span><a class="headerlink" href="#wavepacket" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">Schematic of a wave packet, with localisation near the centre of the packet.</span><a class="headerlink" href="#wavepacket" title="Permalink to this image">¶</a></p>
 </div>
 <p>Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation,
 the wave packet’s profile may remain constant (no dispersion) or change (dispersion) while propagating.</p>
@@ -453,41 +507,16 @@ the wave packet’s profile may remain constant (no dispersion) or change (dispe
               </div>
               
         
+        <div class='prev-next-bottom'>
             
-<<<<<<< HEAD
-    <a class='left-prev' id="prev-link" href="polarisation.html" title="previous page"><span class="section-number">1.8. </span>Polarisation of Waves</a>
-    <a class='right-next' id="next-link" href="dopplershift.html" title="next page"><span class="section-number">1.10. </span>Doppler Shift</a>
-=======
->>>>>>> 6b95e6e6c1ee864f08a362e09b2834f353b498c4
+    <a class='left-prev' id="prev-link" href="polarisation.html" title="previous page"><span class="section-number">1.9. </span>Polarisation of Waves</a>
+    <a class='right-next' id="next-link" href="dopplershift.html" title="next page"><span class="section-number">1.11. </span>Doppler Shift</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="polarisation.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1.7. </span>Polarisation of Waves</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="dopplershift.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">1.9. </span>Doppler Shift</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.8. Polarisation of Waves &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>1.9. Polarisation of Waves &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +48,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -56,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.9. Matter Waves" href="matterwaves.html" />
-    <link rel="prev" title="1.6. Dispersion Relations and Wave Energy" href="dispersionrelations.html" />
+    <link rel="next" title="1.10. Matter Waves" href="matterwaves.html" />
+    <link rel="prev" title="1.8. Standing Waves" href="standingwaves.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -76,10 +77,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -89,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -139,19 +136,24 @@
      1.6. Dispersion Relations and Wave Energy
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="standingwaves.html">
+     1.8. Standing Waves
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.8. Polarisation of Waves
+     1.9. Polarisation of Waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="matterwaves.html">
-     1.9. Matter Waves
+     1.10. Matter Waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dopplershift.html">
-     1.10. Doppler Shift
+     1.11. Doppler Shift
     </a>
    </li>
   </ul>
@@ -224,6 +226,58 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
      2.12. Electromagnetic Scalar and Vector Potentials
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../fluids/intro.html">
+   3. Fluids
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/newtonian.html">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fluids/demo-exercise.html">
+     3.9. A title
     </a>
    </li>
   </ul>
@@ -319,16 +373,16 @@
               <div>
                 
   <div class="section" id="polarisation-of-waves">
-<h1><span class="section-number">1.8. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.9. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">¶</a></h1>
 <p>In our discussion of transverse waves, we outlined that the direction of propogation is perpendicular to the direction of oscillation. In a two dimensional system
 this means we could align a wave along the <span class="math notranslate nohighlight">\((x,\,y)\)</span> axes, however if we look at three dimensions we see this leaves an ambiguity as <em> any </em> oscillation
 orientation in the <span class="math notranslate nohighlight">\((y,\,z)\)</span> plane is perpendicular to a wave propogation along the <span class="math notranslate nohighlight">\(x\)</span> axis.  The proces of fixing the specific geometric orientation is known
 as the wave <b> Polarisation. </b></p>
 <div class="figure align-default" id="wavepolarisation">
 <img alt="../_images/WavePolarisation.png" src="../_images/WavePolarisation.png" />
-<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Schematic of two different wave polarisations in the <span class="math notranslate nohighlight">\(y\)</span> (red wave) or <span class="math notranslate nohighlight">\(z\)</span> (blue wave) axes, with wave propogating along the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#wavepolarisation" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">Schematic of two different wave polarisations in the <span class="math notranslate nohighlight">\(y\)</span> (red wave) or <span class="math notranslate nohighlight">\(z\)</span> (blue wave) axes, with wave propogating along the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#wavepolarisation" title="Permalink to this image">¶</a></p>
 </div>
-<p>As <a class="reference internal" href="#wavepolarisation"><span class="std std-numref">Fig. 1.7</span></a> shows, we can make different choices for the orientation and many materials have the property of being able to filter out or
+<p>As <a class="reference internal" href="#wavepolarisation"><span class="std std-numref">Fig. 1.8</span></a> shows, we can make different choices for the orientation and many materials have the property of being able to filter out or
 rotate the plane of plane polarised light.  But what is the mathematical description of such a phenomena?  Lets go back to a travelling wave in three dimensions:</p>
 <div class="math notranslate nohighlight">
 \[{\bf u}(x,\,t) = {\bf u_0} \,\exp\left(i({\bf k}\cdot {\bf x} - \omega t)\right)\]</div>
@@ -349,10 +403,10 @@ u_z
 \end{bmatrix} = 0\end{split}\]</div>
 <p>If we pick one of <span class="math notranslate nohighlight">\(u_y,\, u_z\)</span> to be zero also, then the waves are confined to the <span class="math notranslate nohighlight">\(z,\, y\)</span> axes repsectively, giving a <b> Linear </b> polarisation.  This condition is
 not the only solution though, for both <span class="math notranslate nohighlight">\(u_y,\, u_z\)</span> non-zero, these waves can have an alternative polariation state, that of <b> Circular </b> or <b> Elliptical </b>
-polarisation, as shown in <a class="reference internal" href="#circpolarisation"><span class="std std-numref">Fig. 1.8</span></a>.</p>
+polarisation, as shown in <a class="reference internal" href="#circpolarisation"><span class="std std-numref">Fig. 1.9</span></a>.</p>
 <div class="figure align-default" id="circpolarisation">
 <img alt="../_images/CircPolarisation.png" src="../_images/CircPolarisation.png" />
-<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">Schematic of two different types of wave polarisations, plane polarisation in green and blue and circular polarisation in red.</span><a class="headerlink" href="#circpolarisation" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">Schematic of two different types of wave polarisations, plane polarisation in green and blue and circular polarisation in red.</span><a class="headerlink" href="#circpolarisation" title="Permalink to this image">¶</a></p>
 </div>
 <p>If we take the triple vector product of the wave vector and polarisation vector, we find a vector <span class="math notranslate nohighlight">\({\bf S}\)</span> which indicates the flow of energy in the system:</p>
 <div class="math notranslate nohighlight">
@@ -409,41 +463,16 @@ k_x &amp; 0 &amp; 0 \\
               </div>
               
         
+        <div class='prev-next-bottom'>
             
-<<<<<<< HEAD
-    <a class='left-prev' id="prev-link" href="dispersionrelations.html" title="previous page"><span class="section-number">1.6. </span>Dispersion Relations and Wave Energy</a>
-    <a class='right-next' id="next-link" href="matterwaves.html" title="next page"><span class="section-number">1.9. </span>Matter Waves</a>
-=======
->>>>>>> 6b95e6e6c1ee864f08a362e09b2834f353b498c4
+    <a class='left-prev' id="prev-link" href="standingwaves.html" title="previous page"><span class="section-number">1.8. </span>Standing Waves</a>
+    <a class='right-next' id="next-link" href="matterwaves.html" title="next page"><span class="section-number">1.10. </span>Matter Waves</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="dispersionrelations.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1.6. </span>Dispersion Relations and Wave Energy</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="matterwaves.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">1.8. </span>Matter Waves</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

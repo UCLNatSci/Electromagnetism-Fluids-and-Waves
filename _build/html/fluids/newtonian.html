@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Newtonian vs non-Newtonian fluids &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.7. Newtonian vs non-Newtonian fluids &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,17 +22,17 @@
       
 
     
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,6 +40,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -47,7 +48,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -56,6 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.8. Reynolds number" href="reynolds.html" />
+    <link rel="prev" title="3.6. Navier-Stokes Equations" href="navstok.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,10 +77,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -87,7 +86,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -96,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -138,18 +137,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../waves/standingwaves.html">
+     1.8. Standing Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../waves/polarisation.html">
-     1.7. Polarisation of Waves
+     1.9. Polarisation of Waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../waves/matterwaves.html">
-     1.8. Matter Waves
+     1.10. Matter Waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../waves/dopplershift.html">
-     1.9. Doppler Shift
+     1.11. Doppler Shift
     </a>
    </li>
   </ul>
@@ -222,6 +226,58 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../electromagnetism/EMpotentials.html">
      2.12. Electromagnetic Scalar and Vector Potentials
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Fluids
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="helmholtz.html">
+     3.4. Helmholtz decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potential_flows.html">
+     3.5. Potential flows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="navstok.html">
+     3.6. Navier-Stokes Equations
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.7. Newtonian vs non-Newtonian fluids
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="reynolds.html">
+     3.8. Reynolds number
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="demo-exercise.html">
+     3.9. A title
     </a>
    </li>
   </ul>
@@ -311,16 +367,16 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fun-demonstrations">
-   Fun demonstrations:
+   3.7.1. Fun demonstrations:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#challenge-yourself">
-   Challenge yourself:
+   3.7.2. Challenge yourself:
   </a>
  </li>
 </ul>
@@ -335,10 +391,10 @@
               <div>
                 
   <div class="section" id="newtonian-vs-non-newtonian-fluids">
-<h1>Newtonian vs non-Newtonian fluids<a class="headerlink" href="#newtonian-vs-non-newtonian-fluids" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.7. </span>Newtonian vs non-Newtonian fluids<a class="headerlink" href="#newtonian-vs-non-newtonian-fluids" title="Permalink to this headline">¶</a></h1>
 <p>In a so-called “Newtonian” fluid the shear stress is linearly proportional to the velocity gradient, which may be written as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom5">
-<span class="eqno">()<a class="headerlink" href="#equation-consofmom5" title="Permalink to this equation">¶</a></span>\[\underline{\tau}_{i,j}=-\mu\left(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\right)\]</div>
+<span class="eqno">(3.50)<a class="headerlink" href="#equation-consofmom5" title="Permalink to this equation">¶</a></span>\[\underline{\tau}_{i,j}=-\mu\left(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\right)\]</div>
 <p>The figure below illustrates a flow profile with a strong velocity gradient <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v_1}{\partial x_2}\)</span>. We will see later on that this type of flow profile tends to arise near to a solid boundary, due to fluid particles “sticking” to the boundary.</p>
 <p>a strong shear</p>
 <p>The constant of proportionality <span class="math notranslate nohighlight">\(\mu\)</span> appearing in the formula above is called the viscosity (or “dynamic viscosity”), measured in <span class="math notranslate nohighlight">\(\mathrm{Pa.s}\)</span> (Pascal-seconds). It measures the tendency for fluid layers to be dragged by their neighbours and can therefore be thought of as a measure of the “diffusivity of momentum”. It is a material property of the fluid under particular conditions (e.g. temperature). A list of viscosities of common fluids (and some not-so-common) can be found at: <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_viscosities">https://en.wikipedia.org/wiki/List_of_viscosities</a></p>
@@ -347,7 +403,7 @@
 <p>Non-Newtonian fluids are those which have nonlinear relationship between stress and velocity gradient. Examples  of shear-thinning fluids include paint, whipped cream, blood, saliva*, lava and toothpaste, whilst examples of shear-thickening fluid is oobleck (a mixture of cornstarch and water), and the synovial fluid that lubricates our joints. Some fluids are non-Newtonian only above/below a certain threshold.</p>
 <p>*Due to the abundance of long-chain polymers in biological fluids, Newtonian behaviour may be the exception in biological contexts, rather than the rule.</p>
 <div class="section" id="fun-demonstrations">
-<h2>Fun demonstrations:<a class="headerlink" href="#fun-demonstrations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.1. </span>Fun demonstrations:<a class="headerlink" href="#fun-demonstrations" title="Permalink to this headline">¶</a></h2>
 <p>How to put ketchup on your fries like a pro: <a class="reference external" href="https://www.youtube.com/watch?v=KB43fM_ozKQ">https://www.youtube.com/watch?v=KB43fM_ozKQ</a>
 Oobleck in a pool : <a class="reference external" href="https://thekidshouldseethis.com/post/oobleck-pool">https://thekidshouldseethis.com/post/oobleck-pool</a>
 Oobleck on a speaker: <a class="reference external" href="https://www.youtube.com/watch?v=3zoTKXXNQIU">https://www.youtube.com/watch?v=3zoTKXXNQIU</a>
@@ -356,27 +412,27 @@ Boger fluids: <a class="reference external" href="https://www.insidescience.org/
 <p>Navier-Stokes for Newtonian fluids
 For a Newtonian fluid with zero body force,</p>
 <div class="math notranslate nohighlight" id="equation-navstoknewt">
-<span class="eqno">()<a class="headerlink" href="#equation-navstoknewt" title="Permalink to this equation">¶</a></span>\[\frac{D\underline{v}}{D t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}, \qquad \Delta=\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\]</div>
+<span class="eqno">(3.51)<a class="headerlink" href="#equation-navstoknewt" title="Permalink to this equation">¶</a></span>\[\frac{D\underline{v}}{D t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{v}, \qquad \Delta=\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p\)</span> is the hydrostatic pressure (mean normal stress), and <span class="math notranslate nohighlight">\(\nu=\frac{\mu}{\rho}\)</span> is called the kinematic viscosity.</p>
 <p>The equations can be non-dimensionalised by scaling quantities with respect to characteristic scales of velocity <span class="math notranslate nohighlight">\(U\)</span> and length <span class="math notranslate nohighlight">\(L\)</span> (see next subchapter) to obtain the final conservation of momentum equations given in the box below.</p>
 <p>Navier Stokes equations</p>
 <p>For an incompressible, Newtonian fluid, in the absence of any body forces:</p>
 <div class="math notranslate nohighlight" id="equation-navstoknondimconsofmom">
-<span class="eqno">()<a class="headerlink" href="#equation-navstoknondimconsofmom" title="Permalink to this equation">¶</a></span>\[\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla \underline{v}=-\nabla p + \mathrm{Re}^{-1} \Delta\underline{v}\]</div>
+<span class="eqno">(3.52)<a class="headerlink" href="#equation-navstoknondimconsofmom" title="Permalink to this equation">¶</a></span>\[\frac{\partial\underline{v}}{\partial t}+\underline{v}.\nabla \underline{v}=-\nabla p + \mathrm{Re}^{-1} \Delta\underline{v}\]</div>
 <div class="math notranslate nohighlight" id="equation-navstoknondimincompress">
-<span class="eqno">()<a class="headerlink" href="#equation-navstoknondimincompress" title="Permalink to this equation">¶</a></span>\[\nabla.\underline{v}=0\]</div>
+<span class="eqno">(3.53)<a class="headerlink" href="#equation-navstoknondimincompress" title="Permalink to this equation">¶</a></span>\[\nabla.\underline{v}=0\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{U L}{\nu}\)</span> is a parameter called the Reynolds number.</p>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <p>Written out in full, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4526a009-a354-466f-8b4a-888d44b2df82">
-<span class="eqno">()<a class="headerlink" href="#equation-4526a009-a354-466f-8b4a-888d44b2df82" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ddd694db-1a9f-42e4-a8c6-b630c88f73b5">
+<span class="eqno">(3.54)<a class="headerlink" href="#equation-ddd694db-1a9f-42e4-a8c6-b630c88f73b5" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
 <p>It is helpful to classify the study of fluids as follows:</p>
 <p>Incompressible	Compressible
 Inviscid	This course	Acoustics (high speed)
 Viscous	This course in part	Research only!</p>
 </div>
 <div class="section" id="challenge-yourself">
-<h2>Challenge yourself:<a class="headerlink" href="#challenge-yourself" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.2. </span>Challenge yourself:<a class="headerlink" href="#challenge-yourself" title="Permalink to this headline">¶</a></h2>
 <p>After you have read the notes for this subsection, try to complete the worksheet below without looking at any resources</p>
 <blockquote>
 <div><blockquote>
@@ -418,18 +474,16 @@ Viscous	This course in part	Research only!</p>
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="navstok.html" title="previous page"><span class="section-number">3.6. </span>Navier-Stokes Equations</a>
+    <a class='right-next' id="next-link" href="reynolds.html" title="next page"><span class="section-number">3.8. </span>Reynolds number</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
