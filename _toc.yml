@@ -31,15 +31,15 @@ chapters:
   - file: electromagnetism/solvingmaxwell
   - file: electromagnetism/EMenergy
   - file: electromagnetism/EMpotentials
-- file: fluids/intro
-  sections:
-  - file: fluids/mathideas
-  - file: fluids/visualise
-  - file: fluids/helmholtz
-  - file: fluids/potential_flows
-  - file: fluids/navstok
-  - file: fluids/newtonian
-  - file: fluids/reynolds
-  - file: fluids/demo-exercise
+#- file: fluids/intro
+#  sections:
+#  - file: fluids/mathideas
+#  - file: fluids/visualise
+#  - file: fluids/helmholtz
+#  - file: fluids/potential_flows
+#  - file: fluids/navstok
+#  - file: fluids/newtonian
+#  - file: fluids/reynolds
+#  - file: fluids/demo-exercise
 
 
