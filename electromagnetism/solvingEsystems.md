@@ -146,7 +146,7 @@ Sheet of charge using a cylinder as our Gaussian surface.
 ```
 
 The cylinder has three areas here, two cross sectional area $A_{r} = \pi\,r^2$ - one for each face and one surface area along the length 
-$L$ of the cylinder, $A_{L}2 \pi r L$.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet), 
+$L$ of the cylinder, $A_{z} = 2 \pi r L$.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet), 
 these point in the $\text{sign}(z)\hat{{\bf z}}$ direction, depending on which side we are on, so here our Gauss's law dot 
 product looks like
 ```{math}

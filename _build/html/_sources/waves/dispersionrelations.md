@@ -1,4 +1,4 @@
-# Dispersion Relations and Wave Energy
+## Dispersion Relations and Wave Energy
 
 Now that we have our complex wave solutions to the equation, we can see that plugging in the solutions 
 to the wave equation produce their own equations.  Lets start with the simplest wave solution, a 1D right hand moving wave:
