@@ -22,17 +22,17 @@
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
@@ -40,7 +40,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -48,7 +47,7 @@
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -57,8 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.9. Polarisation of Waves" href="polarisation.html" />
-    <link rel="prev" title="1.6. Dispersion Relations and Wave Energy" href="dispersionrelations.html" />
+    <link rel="next" title="1.9. Matter Waves" href="matterwaves.html" />
+    <link rel="prev" title="1.7. Polarisation of Waves" href="polarisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -77,6 +76,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -86,7 +89,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -136,24 +139,24 @@
      1.6. Dispersion Relations and Wave Energy
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="polarisation.html">
+     1.7. Polarisation of Waves
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      1.8. Standing Waves
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="polarisation.html">
-     1.9. Polarisation of Waves
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="matterwaves.html">
-     1.10. Matter Waves
+     1.9. Matter Waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dopplershift.html">
-     1.11. Doppler Shift
+     1.10. Doppler Shift
     </a>
    </li>
   </ul>
@@ -322,12 +325,12 @@
                 
   <div class="section" id="standing-waves">
 <h1><span class="section-number">1.8. </span>Standing Waves<a class="headerlink" href="#standing-waves" title="Permalink to this headline">¶</a></h1>
-<p>A standing wave, sometimes called a stationary wave, is a wave that remains in a constant position, as seen in <a class="reference internal" href="#standingwave"><span class="std std-numref">Fig. 1.7</span></a>.  This can occur
+<p>A standing wave, sometimes called a stationary wave, is a wave that remains in a constant position, as seen in <a class="reference internal" href="#standingwave"><span class="std std-numref">Fig. 1.9</span></a>.  This can occur
 because in a stationary medium, two waves are traveling in opposite directions and end up interfering with each other or the medium is moving in the opposite
 direction to the wave.</p>
 <div class="figure align-default" id="standingwave">
 <img alt="../_images/StandingWave.png" src="../_images/StandingWave.png" />
-<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">A closed standing wave on a string, with pattern oscillating back and forth between the top, middle and bottom panels.  We identify nodes, i.e. points that
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">A closed standing wave on a string, with pattern oscillating back and forth between the top, middle and bottom panels.  We identify nodes, i.e. points that
 remain stationary, with points along the string.</span><a class="headerlink" href="#standingwave" title="Permalink to this image">¶</a></p>
 </div>
 <p>Standing waves can arise when some kind of boundary blocks waves propagating and this causes the wave to get reflected and now there are two waves moving in
@@ -393,16 +396,36 @@ phase is <span class="math notranslate nohighlight">\(2\pi\)</span> etc, hence w
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="dispersionrelations.html" title="previous page"><span class="section-number">1.6. </span>Dispersion Relations and Wave Energy</a>
-    <a class='right-next' id="next-link" href="polarisation.html" title="next page"><span class="section-number">1.9. </span>Polarisation of Waves</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="polarisation.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">1.7. </span>Polarisation of Waves</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="matterwaves.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">1.9. </span>Matter Waves</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
