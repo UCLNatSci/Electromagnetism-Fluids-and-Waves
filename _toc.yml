@@ -14,8 +14,8 @@ chapters:
   - file: waves/waveequationsolns
   - file: waves/transverse
   - file: waves/dispersionrelations
-  - file: waves/standingwaves
   - file: waves/polarisation
+  - file: waves/standingwaves
   - file: waves/matterwaves
   - file: waves/dopplershift
 - file: electromagnetism/introduction

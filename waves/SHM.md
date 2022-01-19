@@ -20,7 +20,8 @@ Mass on a spring demonstrating SHM
 ```
 As we see in {numref}`massonaspring`, a mass hanging from a spring will settle into an equilibrium position where the downward weight from the mass 
 $\bf{W}$ (the spring here is considered mass-less) and the upward tension $\bf{F}_H$ from the spring balance out, producing no net force and 
-therefore no net acceleration (by Newton's second law).  At this equilibrium position the spring extension will be denoted by $\bf{e}$
+therefore no net acceleration (by Newton's second law).  At this equilibrium position the spring extension will be denoted by $\bf{e}$:
+
 ```{math}
 \Sigma \bf{F} = m\bf{a} \Rightarrow \bf{W} - k\bf{e}
 ```
@@ -39,6 +40,7 @@ which is often rewritten as
 \ddot{\bf{x}} = -{\omega_0}^2\bf{x}
 ```
 where we denote $\omega_0 = \sqrt{k/m}$ is the natural angular frequency of this system.  
+
 Recall from our discussions of calculus that we can solve this second order ODE to give:
 ```{math}
 :label: SHMsolution
