@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shear stress and viscosity &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.7. Shear stress and viscosity &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,6 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.8. Scaling arguments" href="scaling.html" />
+    <link rel="prev" title="3.6. Conservation law derivations" href="conservation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,7 +98,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -231,6 +233,93 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Fluids
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mathideas.html">
+     3.2. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visualise.html">
+     3.3. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="helmholtz.html">
+     3.4. Divergence and vorticity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potential.html">
+     3.5. The velocity potential
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conservation.html">
+     3.6. Conservation law derivations
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.7. Shear stress and viscosity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scaling.html">
+     3.8. Scaling arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steadysoln.html">
+     3.9. Steady Euler solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bernoulli.html">
+     3.10. Bernoulli’s equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="asymptotic.html">
+     3.11. Perturbations and asymptotics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vorticity.html">
+     3.12. Vortex transport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waterwaves.html">
+     3.13. Unsteady: Water waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soundwaves.html">
+     3.14. Unsteady: Sound waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rotfram.html">
+     3.15. Rotational reference frames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ekman.html">
+     3.16. Geophysical phenomena
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -320,39 +409,39 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-inviscid-case">
-   The inviscid case
+   3.7.1. The inviscid case
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-newtonian-case">
-   The Newtonian case
+   3.7.2. The Newtonian case
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-non-newtonian-case">
-   The non-Newtonian case
+   3.7.3. The non-Newtonian case
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nonlinear-response-to-shear">
-     Nonlinear response to shear
+     3.7.3.1. Nonlinear response to shear
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#viscoelasticity">
-     Viscoelasticity
+     3.7.3.2. Viscoelasticity
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-equations">
-   Navier-Stokes equations
+   3.7.4. Navier-Stokes equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-in-cylindrical-coordinates">
-   Navier-Stokes in cylindrical coordinates
+   3.7.5. Navier-Stokes in cylindrical coordinates
   </a>
  </li>
 </ul>
@@ -367,7 +456,7 @@
               <div>
                 
   <div class="section" id="shear-stress-and-viscosity">
-<h1>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.7. </span>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What does the viscosity of a fluid measure?</p></li>
@@ -376,10 +465,10 @@
 <li><p>Do the famous Navier-Stokes equations apply to all fluids?</p></li>
 </ul>
 <div class="section" id="the-inviscid-case">
-<h2>The inviscid case<a class="headerlink" href="#the-inviscid-case" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.1. </span>The inviscid case<a class="headerlink" href="#the-inviscid-case" title="Permalink to this headline">¶</a></h2>
 <p>At the end of the last section we saw that if there is no shear stress within the fluid then we obtain the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-consofmom7">
-<span class="eqno">()<a class="headerlink" href="#equation-consofmom7" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
+<span class="eqno">(3.51)<a class="headerlink" href="#equation-consofmom7" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
 <p>This circumstance would occur within a body of fluid that is moving uniformly, as shown in the flow profile below. Each fluid element moves in perfect lockstep with its neighbours and so no shear force is exerted.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/uniform.png" id="uniform-flow"><img alt="alternative description" class="align-center" id="uniform-flow" src="../_images/uniform.png" style="width: 288.0px; height: 179.20000000000002px;" /></a>
@@ -395,10 +484,10 @@
 </div>
 </div>
 <div class="section" id="the-newtonian-case">
-<span id="newtonian-case"></span><h2>The Newtonian case<a class="headerlink" href="#the-newtonian-case" title="Permalink to this headline">¶</a></h2>
+<span id="newtonian-case"></span><h2><span class="section-number">3.7.2. </span>The Newtonian case<a class="headerlink" href="#the-newtonian-case" title="Permalink to this headline">¶</a></h2>
 <p>The amount of internal friction depends on properties of the fluid. In a so-called “Newtonian” fluid the shear stress is linearly proportional to the velocity gradient, which may be written as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom6">
-<span class="eqno">()<a class="headerlink" href="#equation-consofmom6" title="Permalink to this equation">¶</a></span>\[\underline{\tau}_{i,j}=\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)\]</div>
+<span class="eqno">(3.52)<a class="headerlink" href="#equation-consofmom6" title="Permalink to this equation">¶</a></span>\[\underline{\tau}_{i,j}=\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)\]</div>
 <p>The figure below illustrates a flow profile with a nonlinear shear velocity gradient <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial z}\)</span>. We will see later on that this type of flow profile tends to arise near to a solid boundary, due to fluid particles “sticking” to the boundary.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/blasius.png" id="strong-shear"><img alt="a strong shear" class="align-center" id="strong-shear" src="../_images/blasius.png" style="width: 288.0px; height: 233.60000000000002px;" /></a>
@@ -411,10 +500,10 @@
 </div>
 </div>
 <div class="section" id="the-non-newtonian-case">
-<h2>The non-Newtonian case<a class="headerlink" href="#the-non-newtonian-case" title="Permalink to this headline">¶</a></h2>
-<p>The Newtonian fluid relationship <a class="reference internal" href="#equation-consofmom6">()</a> is an experimental result. It holds under a wide range of conditions for a wide range of fluids, including air, water and most oils and syrups. However, it does not hold for all fluids under all conditions. In fact, due to the abundance of long-chain polymers in biological fluids, Newtonian behaviour may be the exception in biological contexts, rather than the rule.</p>
+<h2><span class="section-number">3.7.3. </span>The non-Newtonian case<a class="headerlink" href="#the-non-newtonian-case" title="Permalink to this headline">¶</a></h2>
+<p>The Newtonian fluid relationship <a class="reference internal" href="#equation-consofmom6">(3.52)</a> is an experimental result. It holds under a wide range of conditions for a wide range of fluids, including air, water and most oils and syrups. However, it does not hold for all fluids under all conditions. In fact, due to the abundance of long-chain polymers in biological fluids, Newtonian behaviour may be the exception in biological contexts, rather than the rule.</p>
 <div class="section" id="nonlinear-response-to-shear">
-<h3>Nonlinear response to shear<a class="headerlink" href="#nonlinear-response-to-shear" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.3.1. </span>Nonlinear response to shear<a class="headerlink" href="#nonlinear-response-to-shear" title="Permalink to this headline">¶</a></h3>
 <p>In real fluids there may be a nonlinear relationship between the shear stress and the velocity gradient. This may also be interpreted as an increase/decrease in the effective viscosity under application of shear. Examples  of shear-thinning fluids include paint, whipped cream, blood, saliva, lava and toothpaste. Examples of shear-thickening fluid include oobleck (which is a mixture of cornstarch and water) and the synovial fluid that lubricates our joints. Some fluids exhibit these properties only above/below a certain shear threshold.</p>
 <p><strong>Fun demonstrations:</strong></p>
 <ul class="simple">
@@ -424,7 +513,7 @@
 </ul>
 </div>
 <div class="section" id="viscoelasticity">
-<h3>Viscoelasticity<a class="headerlink" href="#viscoelasticity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.3.2. </span>Viscoelasticity<a class="headerlink" href="#viscoelasticity" title="Permalink to this headline">¶</a></h3>
 <p>Some fluids become elastic when they are compressed or stretched, in the manner of an elastic solid. For these fluids, the application of a strain results in a stress in the same direction. Such fluids are called <em>viscoelastic</em> fluids. Examples include polyelectrolytes in which the electrostatic forces resist a change of shape, and liquid polymers in which the tangled polymers act as springs.</p>
 <p>The relationship between stress and strain is generally Hookean (i.e. linear) and so the equations of motion can be modified adding a stress term that is proportional to the strain.</p>
 <p><strong>Fun demonstrations:</strong></p>
@@ -434,7 +523,7 @@
 </ul>
 <div class="exercise admonition" id="fluids/navstok-exercise-0">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.14 </span></p>
 <div class="section" id="exercise-content">
 <p>Research one example of a non-Newtonian fluid, and write 150 words about why it is non-Newtonian.</p>
 </div>
@@ -442,12 +531,12 @@
 </div>
 </div>
 <div class="section" id="navier-stokes-equations">
-<span id="navstokeqn"></span><h2>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">¶</a></h2>
+<span id="navstokeqn"></span><h2><span class="section-number">3.7.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">¶</a></h2>
 <p>The conservation of momentum equation for a Newtonian fluid, together with the conservation of mass equation for incompressible flow are called the Navier-Stokes equations. The equations are given below, where <span class="math notranslate nohighlight">\(p\)</span> is the hydrostatic pressure (mean normal stress), and <span class="math notranslate nohighlight">\(\nu=\frac{\mu}{\rho}\)</span> is called the kinematic viscosity.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4808a863-7c63-4406-b682-d87b15cf14f1">
-<span class="eqno">()<a class="headerlink" href="#equation-4808a863-7c63-4406-b682-d87b15cf14f1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-9d9894d1-104f-4de0-8233-b1318052e334">
-<span class="eqno">()<a class="headerlink" href="#equation-9d9894d1-104f-4de0-8233-b1318052e334" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bb4e3cb5-ff4c-4587-a3ea-03af37e4ed65">
+<span class="eqno">(3.53)<a class="headerlink" href="#equation-bb4e3cb5-ff4c-4587-a3ea-03af37e4ed65" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6cb00fcd-7036-4dbe-a37d-3a79d802d05e">
+<span class="eqno">(3.54)<a class="headerlink" href="#equation-6cb00fcd-7036-4dbe-a37d-3a79d802d05e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <div class="theorem admonition">
 <p class="admonition-title">Euler’s equations</p>
@@ -456,24 +545,24 @@
 <p>These equations were first derived and studied in the 1800s. However, despite many decades of research it has still not been proven that the problem is well-defined in the sense of having smooth solutions in all geometries. At the turn of the century the Clay Mathematics institute announced this unsolved problem as one of its seven “<a class="reference external" href="https://www.claymath.org/millennium-problems">Millennium Prize Problems</a>”, with $1 million offered for a solution. The problem remains unsolved today. Nevertheless, mathematicians, scientists and engineers have been using them for nearly 200 years to very good effect for modelling fluid behaviour. The equations have been used for nearly any fluid phenomenon you can think of, from modelling mucous transport to making racing cars as good as they can be, to studying sunspots or the rings of Jupiter!</p>
 <div class="exercise admonition" id="ex-navstok">
 
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.15 </span></p>
 <div class="section" id="exercise-content">
 <p>Taking the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> to be zero, write out the Navier-Stokes equations in component form, where <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span> and <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span>. For the conservation of momentum equation, you may write each of the <span class="math notranslate nohighlight">\((x,y,z)\)</span> components as a separate equation.</p>
 </div>
 </div>
 </div>
 <div class="section" id="navier-stokes-in-cylindrical-coordinates">
-<span id="navstok-cylindrical"></span><h2>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">¶</a></h2>
+<span id="navstok-cylindrical"></span><h2><span class="section-number">3.7.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">¶</a></h2>
 <p>Written out in cylindrical coordinates, the components of the Navier-Stokes equations for <span class="math notranslate nohighlight">\(\underline{u}=(u_r,u_{\theta},u_z)\)</span> are given by</p>
 <p><strong>Conservation of momentum:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-94f615fb-af27-44fd-979d-d54d1348db29">
-<span class="eqno">()<a class="headerlink" href="#equation-94f615fb-af27-44fd-979d-d54d1348db29" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9c7ce885-fad8-4457-aacb-292036c42b75">
+<span class="eqno">(3.55)<a class="headerlink" href="#equation-9c7ce885-fad8-4457-aacb-292036c42b75" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
 <p><strong>Incompressibility:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-157bb33c-5f86-4b32-83d4-cf1ec9cb4148">
-<span class="eqno">()<a class="headerlink" href="#equation-157bb33c-5f86-4b32-83d4-cf1ec9cb4148" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-708f98fa-6089-459c-8aec-ee11574ded1f">
+<span class="eqno">(3.56)<a class="headerlink" href="#equation-708f98fa-6089-459c-8aec-ee11574ded1f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
 <p>where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57d2b54a-e3c6-45f5-a186-cc3ed104028e">
-<span class="eqno">()<a class="headerlink" href="#equation-57d2b54a-e3c6-45f5-a186-cc3ed104028e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-382912ce-006c-4348-abec-a3f496492c00">
+<span class="eqno">(3.57)<a class="headerlink" href="#equation-382912ce-006c-4348-abec-a3f496492c00" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
 </div>
 </div>
 
@@ -506,6 +595,24 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="conservation.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">3.6. </span>Conservation law derivations</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="scaling.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">3.8. </span>Scaling arguments</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
