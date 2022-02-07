@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divergence and vorticity &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.3. Divergence and vorticity &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -45,17 +45,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.4. The velocity potential" href="potential.html" />
+    <link rel="prev" title="3.2. Visualising fluid motion" href="visualise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,10 +76,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -87,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -96,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -231,6 +229,93 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Fluids
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mathideas.html">
+     3.1. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visualise.html">
+     3.2. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.3. Divergence and vorticity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potential.html">
+     3.4. The velocity potential
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conservation.html">
+     3.5. Conservation law derivations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="navstok.html">
+     3.6. Shear stress and viscosity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scaling.html">
+     3.7. Scaling arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steadysoln.html">
+     3.8. Steady Euler solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bernoulli.html">
+     3.9. Bernoulli’s equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="asymptotic.html">
+     3.10. Perturbations and asymptotics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vorticity.html">
+     3.11. Vortex transport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waterwaves.html">
+     3.12. Unsteady: Water waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soundwaves.html">
+     3.13. Unsteady: Sound waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rotfram.html">
+     3.14. Rotational reference frames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ekman.html">
+     3.15. Geophysical phenomena
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -336,11 +421,11 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-flux">
-   What is
+   3.3.1. What is
    <strong>
     flux
    </strong>
@@ -349,7 +434,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-divergence">
-   What is
+   3.3.2. What is
    <strong>
     divergence
    </strong>
@@ -358,7 +443,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-vorticity">
-   What is
+   3.3.3. What is
    <strong>
     vorticity
    </strong>
@@ -367,7 +452,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#helmhotz-decomposition">
-   Helmhotz decomposition
+   3.3.4. Helmhotz decomposition
   </a>
  </li>
 </ul>
@@ -382,28 +467,28 @@
               <div>
                 
   <div class="section" id="divergence-and-vorticity">
-<h1>Divergence and vorticity<a class="headerlink" href="#divergence-and-vorticity" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.3. </span>Divergence and vorticity<a class="headerlink" href="#divergence-and-vorticity" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>Can divergence be inferred from looking at a plot of the vector field?</p></li>
 <li><p>How can a vortex have zero vorticity ?</p></li>
 </ul>
 <div class="section" id="what-is-flux">
-<h2>What is <strong>flux</strong>?<a class="headerlink" href="#what-is-flux" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3.1. </span>What is <strong>flux</strong>?<a class="headerlink" href="#what-is-flux" title="Permalink to this headline">¶</a></h2>
 <p>Consider a small (strictly infinitesimal) surface element <span class="math notranslate nohighlight">\(S\)</span> within a field <span class="math notranslate nohighlight">\(\underline{F}\)</span>, such that the surface normal makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> to the direction of the field, as shown. The components of the field in directions parallel and perpendicular to the surface are illustrated in blue. The perpendicular component has magnitude <span class="math notranslate nohighlight">\(F\cos{\theta}\)</span>. The parallel component remains bounded by the surface.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/flux1.png" id="flux1"><img alt="alternative description" class="align-center" id="flux1" src="../_images/flux1.png" style="width: 274.40000000000003px; height: 345.6px;" /></a>
 <br>
 <p>Multiplying the normal component of the field by the area of the surface element gives the volume indicated by the shaded cylinder in the image below. It is a scalar quantity, which tells us the instantaneous rate of flow through the surface per unit time. Mathematically, the flow rate across the surface <span class="math notranslate nohighlight">\(S\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a66bec6-2b22-4c56-876b-8acae28ba005">
-<span class="eqno">()<a class="headerlink" href="#equation-1a66bec6-2b22-4c56-876b-8acae28ba005" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7b3543c0-fb8c-4740-b25d-f44b81a1a4b0">
+<span class="eqno">(3.20)<a class="headerlink" href="#equation-7b3543c0-fb8c-4740-b25d-f44b81a1a4b0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{\underline{n}}\)</span> is the unit normal to the surface.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/flux2.png" id="flux2"><img alt="alternative description" class="align-center" id="flux2" src="../_images/flux2.png" style="width: 288.0px; height: 326.40000000000003px;" /></a>
 <br>
 <p>The quantity <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> gives the flow rate <em>per unit area</em>, which is called the flux. Integrating the flux over a given finite surface area <span class="math notranslate nohighlight">\(A\)</span> is equivalent to summing the individual surface element contributions to the flow rate, in the limit. The resulting flow rate <span class="math notranslate nohighlight">\(Q\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fd4b2f6b-1c79-4fb3-ad0a-36735b9d81a0">
-<span class="eqno">()<a class="headerlink" href="#equation-fd4b2f6b-1c79-4fb3-ad0a-36735b9d81a0" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-174332ec-c393-49e4-a70a-f2434ff3f19a">
+<span class="eqno">(3.21)<a class="headerlink" href="#equation-174332ec-c393-49e4-a70a-f2434ff3f19a" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
 <p>Most authors (including me!) use the terms flow rate and flux interchangeably, though flux is more pedantically defined as the flow rate per <strong>unit</strong> area. However, the intended meaning is almost always clear from the context and the surrounding text.</p>
 <p><strong>Examples</strong></p>
 <ul class="simple">
@@ -417,18 +502,18 @@
 </div>
 </div>
 <div class="section" id="what-is-divergence">
-<h2>What is <strong>divergence</strong>?<a class="headerlink" href="#what-is-divergence" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3.2. </span>What is <strong>divergence</strong>?<a class="headerlink" href="#what-is-divergence" title="Permalink to this headline">¶</a></h2>
 <p>Suppose that a given point within  a field <span class="math notranslate nohighlight">\(\underline{F}=(f_x,f_y,f_z)\)</span> is surrounded by a <strong>closed</strong> surface, <span class="math notranslate nohighlight">\(S\)</span> as illustrated below:</p>
 <a class="reference internal image-reference" href="../_images/source.png" id="source-fun"><img alt="alt text" class="align-center" id="source-fun" src="../_images/source.png" style="width: 288.0px; height: 242.4px;" /></a>
 <p>It can be shown (divergence theorem) that the flux <span class="math notranslate nohighlight">\(Q\)</span> through surface <span class="math notranslate nohighlight">\(S\)</span> is equivalent to a volume integral:</p>
 <div class="math notranslate nohighlight" id="equation-divergence-thm">
-<span class="eqno">()<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">¶</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
+<span class="eqno">(3.22)<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">¶</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
 <p>where the <em>divergence</em> <span class="math notranslate nohighlight">\(\nabla.\underline{F}\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6a348aa1-ea90-4753-824d-144ed5e243c3">
-<span class="eqno">()<a class="headerlink" href="#equation-6a348aa1-ea90-4753-824d-144ed5e243c3" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
-<p>By applying the Fundamental Theorem of Calculus to <a class="reference internal" href="#equation-divergence-thm">()</a>, we obtain the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f369479-1206-447c-87ac-e2b1f38a9c0a">
-<span class="eqno">()<a class="headerlink" href="#equation-7f369479-1206-447c-87ac-e2b1f38a9c0a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a49e437a-40f8-4be3-816e-c2ff33671b5a">
+<span class="eqno">(3.23)<a class="headerlink" href="#equation-a49e437a-40f8-4be3-816e-c2ff33671b5a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
+<p>By applying the Fundamental Theorem of Calculus to <a class="reference internal" href="#equation-divergence-thm">(3.22)</a>, we obtain the result</p>
+<div class="amsmath math notranslate nohighlight" id="equation-32855ce1-3641-4451-b4b2-439309095ddb">
+<span class="eqno">(3.24)<a class="headerlink" href="#equation-32855ce1-3641-4451-b4b2-439309095ddb" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
 <p>Hence, divergence can be understood as the flux per unit volume through an infinitesimally-small closed surface surrounding a point. A point with positive divergence behaves like a source, and a point with negative divergence behaves like a sink.</p>
 <div class="readmore admonition">
 <p class="admonition-title">See also</p>
@@ -436,21 +521,20 @@
 <a class="reference external" href="https://www.khanacademy.org/math/multivariable-calculus/greens-theorem-and-stokes-theorem/divergence-theorem-articles/a/3d-divergence-theorem">Khan Academy</a></p>
 </div>
 <div class="exercise admonition" id="ex-divergence">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.7 </span> </p>
 <div class="section" id="exercise-content">
-<p>Calculate the divergence of the potential flow you looked at in <code class="xref std std-numref docutils literal notranslate"><span class="pre">pot-fun</span></code>, and produce a grayscale plot of the divergence on the range <span class="math notranslate nohighlight">\(-2\leq x,y \leq 2.\)</span></p>
+<p>Calculate the divergence of the potential flow you looked at in <a class="reference internal" href="mathideas.html#pot-fun"><span class="std std-numref">Exercise 3.3</span></a>, and produce a grayscale plot of the divergence on the range <span class="math notranslate nohighlight">\(-2\leq x,y \leq 2.\)</span></p>
 </div>
 </div>
 </div>
 <div class="section" id="what-is-vorticity">
-<h2>What is <strong>vorticity</strong>?<a class="headerlink" href="#what-is-vorticity" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3.3. </span>What is <strong>vorticity</strong>?<a class="headerlink" href="#what-is-vorticity" title="Permalink to this headline">¶</a></h2>
 <p>Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector <span class="math notranslate nohighlight">\((u,v,w)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1547b9c5-5db1-457e-90d1-83b0d204fd43">
-<span class="eqno">()<a class="headerlink" href="#equation-1547b9c5-5db1-457e-90d1-83b0d204fd43" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a2b14052-6190-4f8b-bf2d-35561be801dc">
+<span class="eqno">(3.25)<a class="headerlink" href="#equation-a2b14052-6190-4f8b-bf2d-35561be801dc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
 <p>An illustrated interpretation of vorticity is given below, looking only at the <span class="math notranslate nohighlight">\(z\)</span>-component for simplicity. Note that the subscript notation used on the diagram represents partial differentiation, not a vector component. We consider two fluid line elements <span class="math notranslate nohighlight">\(AB\)</span> and <span class="math notranslate nohighlight">\(AC\)</span>, which are aligned with the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, respectively. By the definition of the partial derivative, we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-79636b54-6116-4e3f-8e04-5ad0a6413aa1">
-<span class="eqno">()<a class="headerlink" href="#equation-79636b54-6116-4e3f-8e04-5ad0a6413aa1" title="Permalink to this equation">¶</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-815932bf-7e30-4980-9d3b-f66900865750">
+<span class="eqno">(3.26)<a class="headerlink" href="#equation-815932bf-7e30-4980-9d3b-f66900865750" title="Permalink to this equation">¶</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
 <p>so</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v}{\partial x}\)</span> represents the instantaneous angular velocity of the fluid line element <span class="math notranslate nohighlight">\(AB\)</span></p></li>
@@ -485,264 +569,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:172: RuntimeWarning: divide by zero encountered in exp2
-  eps=exp2(ld(-112)),
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:51: RuntimeWarning: divide by zero encountered in log10
-  self.precision = int(-log10(self.eps))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:52: RuntimeWarning: divide by zero encountered in power
-  self.resolution = float_to_float(float_conv(10) ** (-self.precision))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:184: RuntimeWarning: divide by zero encountered in exp2
-  epsneg_f80 = exp2(ld(-64))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:185: RuntimeWarning: divide by zero encountered in exp2
-  tiny_f80 = exp2(ld(-16382))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:199: RuntimeWarning: divide by zero encountered in exp2
-  eps=exp2(ld(-63)),
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:212: RuntimeWarning: divide by zero encountered in nextafter
-  if hasattr(umath, &#39;nextafter&#39;)  # Missing on some platforms?
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:224: RuntimeWarning: divide by zero encountered in exp2
-  eps=exp2(ld(-105)),
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:225: RuntimeWarning: divide by zero encountered in exp2
-  epsneg= exp2(ld(-106)),
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\getlimits.py:227: RuntimeWarning: divide by zero encountered in exp2
-  tiny=exp2(ld(-1022)))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\__init__.py:343: RuntimeWarning: divide by zero encountered in subtract
-  if not abs(x.dot(x) - 2.0) &lt; 1e-5:
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\__init__.py:343: RuntimeWarning: divide by zero encountered in absolute
-  if not abs(x.dot(x) - 2.0) &lt; 1e-5:
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
-  start = asanyarray(start) * 1.0
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:128: RuntimeWarning: divide by zero encountered in multiply
-  stop  = asanyarray(stop)  * 1.0
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:134: RuntimeWarning: divide by zero encountered in double_scalars
-  delta = stop - start
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:141: RuntimeWarning: divide by zero encountered in double_scalars
-  step = delta / div
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:56: RuntimeWarning: divide by zero encountered in reduce
-  return umr_any(a, axis, dtype, out, keepdims)
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:151: RuntimeWarning: divide by zero encountered in multiply
-  y *= step
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:161: RuntimeWarning: divide by zero encountered in add
-  y += start
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\colors.py:850: RuntimeWarning: divide by zero encountered in double_scalars
-  [(1.0 - x, y1, y0) for x, y0, y1 in reversed(data)])
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tri\triinterpolate.py:669: RuntimeWarning: divide by zero encountered in true_divide
-  gauss_w = np.ones([9], dtype=np.float64) / 9.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
-  start = asanyarray(start) * 1.0
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:128: RuntimeWarning: divide by zero encountered in multiply
-  stop  = asanyarray(stop)  * 1.0
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:134: RuntimeWarning: divide by zero encountered in double_scalars
-  delta = stop - start
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:141: RuntimeWarning: divide by zero encountered in double_scalars
-  step = delta / div
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:56: RuntimeWarning: divide by zero encountered in reduce
-  return umr_any(a, axis, dtype, out, keepdims)
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:151: RuntimeWarning: divide by zero encountered in multiply
-  y *= step
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\function_base.py:161: RuntimeWarning: divide by zero encountered in add
-  y += start
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:8: RuntimeWarning: divide by zero encountered in sqrt
-  
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:321: RuntimeWarning: divide by zero encountered in isfinite
-  if not np.isfinite(figsize).all() or (np.array(figsize) &lt; 0).any():
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:62: RuntimeWarning: divide by zero encountered in reduce
-  return umr_all(a, axis, dtype, out, keepdims)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:321: RuntimeWarning: divide by zero encountered in less
-  if not np.isfinite(figsize).all() or (np.array(figsize) &lt; 0).any():
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1996: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 0] *= sx
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1997: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 1] *= sx
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1998: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 2] *= sx
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1999: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 0] *= sy
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2000: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 1] *= sy
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2001: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 2] *= sy
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\gridspec.py:203: RuntimeWarning: divide by zero encountered in subtract
-  fig_tops, fig_bottoms = (top - cell_hs).reshape((-1, 2)).T
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\gridspec.py:204: RuntimeWarning: divide by zero encountered in add
-  fig_lefts, fig_rights = (left + cell_ws).reshape((-1, 2)).T
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:43: RuntimeWarning: divide by zero encountered in reduce
-  return umr_minimum(a, axis, None, out, keepdims, initial, where)
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:39: RuntimeWarning: divide by zero encountered in reduce
-  return umr_maximum(a, axis, None, out, keepdims, initial, where)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:361: RuntimeWarning: divide by zero encountered in double_scalars
-  return points[1, 0] - points[0, 0]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:367: RuntimeWarning: divide by zero encountered in double_scalars
-  return points[1, 1] - points[0, 1]
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:1281: RuntimeWarning: divide by zero encountered in subtract
-  a = op(a[slice1], a[slice2])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\ticker.py:2165: RuntimeWarning: divide by zero encountered in less_equal
-  if np.any(np.diff(steps) &lt;= 0) or steps[-1] &gt; 10 or steps[0] &lt; 1:
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:87: RuntimeWarning: divide by zero encountered in reduce
-  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\ticker.py:2179: RuntimeWarning: divide by zero encountered in multiply
-  flights = (0.1 * steps[:-1], steps, 10 * steps[1])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\ticker.py:2179: RuntimeWarning: divide by zero encountered in double_scalars
-  flights = (0.1 * steps[:-1], steps, 10 * steps[1])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:3210: RuntimeWarning: divide by zero encountered in isfinite
-  and not np.isfinite(converted_limit)):
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2792: RuntimeWarning: divide by zero encountered in isfinite
-  if (not np.isfinite(vmin)) or (not np.isfinite(vmax)):
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2805: RuntimeWarning: divide by zero encountered in double_scalars
-  if maxabsvalue &lt; (1e6 / tiny) * np.finfo(float).tiny:
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1977: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 2] += tx
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1978: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 2] += ty
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\lines.py:70: RuntimeWarning: divide by zero encountered in long_scalars
-  scaled_offset = offset * lw
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\ma\core.py:2365: RuntimeWarning: divide by zero encountered in isfinite
-  condition = ~(np.isfinite(a))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\ma\core.py:2365: RuntimeWarning: divide by zero encountered in invert
-  condition = ~(np.isfinite(a))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\ma\core.py:1753: RuntimeWarning: divide by zero encountered in logical_or
-  return make_mask(umath.logical_or(m1, m2), copy=copy, shrink=shrink)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:1712: RuntimeWarning: divide by zero encountered in equal
-  return np.all(self.get_matrix() == other.get_matrix())
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2142: RuntimeWarning: divide by zero encountered in isfinite
-  if not np.any(np.isfinite(xys)):
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel\pylab\backend_inline.py:195: RuntimeWarning: divide by zero encountered in greater
-  return rgbaArr[:,:3].dot((.299, .587, .114)) &gt; .5
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:373: RuntimeWarning: divide by zero encountered in subtract
-  return points[1] - points[0]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:813: RuntimeWarning: divide by zero encountered in double_scalars
-  return Bbox.from_extents(x0, y0, x0 + width, y0 + height)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:993: RuntimeWarning: divide by zero encountered in not_equal
-  if np.any(self._points != other.get_points()):
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:379: RuntimeWarning: divide by zero encountered in double_scalars
-  return (x0, y0, x1 - x0, y1 - y0)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:648: RuntimeWarning: divide by zero encountered in multiply
-  uv = (U + V * 1j)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:648: RuntimeWarning: divide by zero encountered in add
-  uv = (U + V * 1j)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:664: RuntimeWarning: divide by zero encountered in absolute
-  a = np.abs(uv)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:686: RuntimeWarning: divide by zero encountered in multiply
-  length = a * (widthu_per_lenu / (self.scale * self.width))
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:96: RuntimeWarning: divide by zero encountered in isnan
-  return um.isnan(a)
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:112: RuntimeWarning: divide by zero encountered in clip
-  return ufunc(*args, out=out, **kwargs)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:721: RuntimeWarning: divide by zero encountered in multiply
-  x = x + np.array([0, 1, 1, 1]) * length
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:721: RuntimeWarning: divide by zero encountered in add
-  x = x + np.array([0, 1, 1, 1]) * length
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:722: RuntimeWarning: divide by zero encountered in multiply
-  y = 0.5 * np.array([1, 1, self.headwidth, 0], np.float64)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:727: RuntimeWarning: divide by zero encountered in multiply
-  y0 = 0.5 * np.array([1, 1, self.headwidth, 0], np.float64)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:731: RuntimeWarning: divide by zero encountered in multiply
-  Y[:, 3:-1] *= -1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:734: RuntimeWarning: divide by zero encountered in multiply
-  Y0[3:-1] *= -1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:735: RuntimeWarning: divide by zero encountered in true_divide
-  shrink = length / minsh if minsh != 0. else 0.
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:736: RuntimeWarning: divide by zero encountered in multiply
-  X0 = shrink * X0[np.newaxis, :]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:737: RuntimeWarning: divide by zero encountered in multiply
-  Y0 = shrink * Y0[np.newaxis, :]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:738: RuntimeWarning: divide by zero encountered in less
-  short = np.repeat(length &lt; minsh, 8, axis=1)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:751: RuntimeWarning: divide by zero encountered in less
-  tooshort = length &lt; self.minlength
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:754: RuntimeWarning: divide by zero encountered in multiply
-  th = np.arange(0, 8, 1, np.float64) * (np.pi / 3.0)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:755: RuntimeWarning: divide by zero encountered in cos
-  x1 = np.cos(th) * self.minlength * 0.5
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:755: RuntimeWarning: divide by zero encountered in multiply
-  x1 = np.cos(th) * self.minlength * 0.5
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:756: RuntimeWarning: divide by zero encountered in sin
-  y1 = np.sin(th) * self.minlength * 0.5
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:756: RuntimeWarning: divide by zero encountered in multiply
-  y1 = np.sin(th) * self.minlength * 0.5
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:1482: RuntimeWarning: divide by zero encountered in arctan2
-  a = arctan2(zimag, zreal)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:695: RuntimeWarning: divide by zero encountered in multiply
-  xy = (X + Y * 1j) * np.exp(1j * theta) * self.width
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:695: RuntimeWarning: divide by zero encountered in add
-  xy = (X + Y * 1j) * np.exp(1j * theta) * self.width
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:695: RuntimeWarning: divide by zero encountered in exp
-  xy = (X + Y * 1j) * np.exp(1j * theta) * self.width
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\collections.py:922: RuntimeWarning: divide by zero encountered in sqrt
-  scale = np.sqrt(self._sizes) * dpi / 72.0 * self._factor
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\collections.py:922: RuntimeWarning: divide by zero encountered in multiply
-  scale = np.sqrt(self._sizes) * dpi / 72.0 * self._factor
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\collections.py:922: RuntimeWarning: divide by zero encountered in true_divide
-  scale = np.sqrt(self._sizes) * dpi / 72.0 * self._factor
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:1296: RuntimeWarning: divide by zero encountered in double_scalars
-  tol = (hi - lo) * 1e-5
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2587: RuntimeWarning: divide by zero encountered in double_scalars
-  x_scale = 1.0 / inw
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2588: RuntimeWarning: divide by zero encountered in double_scalars
-  y_scale = 1.0 / inh
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2589: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx = np.array([[x_scale, 0.0    , (-inl*x_scale)],
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:2590: RuntimeWarning: divide by zero encountered in double_scalars
-  [0.0    , y_scale, (-inb*y_scale)],
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2076: RuntimeWarning: divide by zero encountered in double_scalars
-  (x, bottom - self.labelpad * self.figure.dpi / 72)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2108: RuntimeWarning: divide by zero encountered in double_scalars
-  y = bottom - self.OFFSETTEXTPAD * self.figure.dpi / 72
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2367: RuntimeWarning: divide by zero encountered in double_scalars
-  (left - self.labelpad * self.figure.dpi / 72, y)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axis.py:2393: RuntimeWarning: divide by zero encountered in double_scalars
-  (x, top + self.OFFSETTEXTPAD * self.figure.dpi / 72)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:678: RuntimeWarning: divide by zero encountered in maximum
-  x0 = np.maximum(bbox1.xmin, bbox2.xmin)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:679: RuntimeWarning: divide by zero encountered in minimum
-  x1 = np.minimum(bbox1.xmax, bbox2.xmax)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:680: RuntimeWarning: divide by zero encountered in maximum
-  y0 = np.maximum(bbox1.ymin, bbox2.ymin)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:681: RuntimeWarning: divide by zero encountered in minimum
-  y1 = np.minimum(bbox1.ymax, bbox2.ymax)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:4196: RuntimeWarning: divide by zero encountered in equal
-  if np.all(clip_extent.extents == axbbox.extents):
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:195: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.x0 = bb0.x0 - padout
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:196: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.x1 = bb0.x1 + padin
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:198: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.y0 = bb0.y0 - padout
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:199: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.y1 = bb0.y1 + padin
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:327: RuntimeWarning: divide by zero encountered in not_equal
-  mask[1:] = aux[1:] != aux[:-1]
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:432: RuntimeWarning: divide by zero encountered in equal
-  mask = aux[1:] == aux[:-1]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:594: RuntimeWarning: divide by zero encountered in not_equal
-  xys = self.vertices[self.codes != Path.CLOSEPOLY]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\figure.py:2521: RuntimeWarning: divide by zero encountered in isfinite
-  if (np.isfinite(b.width) and np.isfinite(b.height)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:631: RuntimeWarning: divide by zero encountered in add
-  return Bbox(points + [[-p, -p], [p, p]])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:65: RuntimeWarning: divide by zero encountered in double_scalars
-  w1, h1 = fig.bbox.width * dpi_scale, fig.bbox.height * dpi_scale
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:71: RuntimeWarning: divide by zero encountered in double_scalars
-  fig.patch.set_bounds(x0 / w1, y0 / h1,
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:72: RuntimeWarning: divide by zero encountered in double_scalars
-  fig.bbox.width / w1, fig.bbox.height / h1)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:778: RuntimeWarning: divide by zero encountered in double_scalars
-  self._x1 = self._x0 + self._width
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:781: RuntimeWarning: divide by zero encountered in double_scalars
-  self._y1 = self._y0 + self._height
-</pre></div>
-</div>
-<img alt="../_images/helmholtz_1_4.png" class="align-center" src="../_images/helmholtz_1_4.png" />
+<img alt="../_images/helmholtz_1_0.png" class="align-center" src="../_images/helmholtz_1_0.png" />
 </div>
 </div>
 <p>The vorticity of this flow is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6078fa07-4ee1-48d2-853b-2e13f0957b44">
-<span class="eqno">()<a class="headerlink" href="#equation-6078fa07-4ee1-48d2-853b-2e13f0957b44" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5e5a99a9-c940-449d-9c4f-55863ded5159">
+<span class="eqno">(3.27)<a class="headerlink" href="#equation-5e5a99a9-c940-449d-9c4f-55863ded5159" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
 <p>We see that the fluid elements rotate about the <span class="math notranslate nohighlight">\(z\)</span> axis. The negative sign indicates that the particles rotate in a clockwise direction, which agrees with intuition.</p>
 <p><strong>Example 2: Line vortex (‘potential vortex’)</strong></p>
 <p>Consider a flow described in cylindrical polars <span class="math notranslate nohighlight">\((r,\theta,z)\)</span>, by the velocity profile <span class="math notranslate nohighlight">\(\underline{u}=\left(0,\frac{k}{r},0\right)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is a positive constant.</p>
@@ -772,309 +604,24 @@ C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:781: RuntimeWarni
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:9: RuntimeWarning: divide by zero encountered in true_divide
-  if __name__ == &#39;__main__&#39;:
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:11: RuntimeWarning: divide by zero encountered in cos
-  # This is added back by InteractiveShellApp.init_path()
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:11: RuntimeWarning: divide by zero encountered in multiply
-  # This is added back by InteractiveShellApp.init_path()
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:11: RuntimeWarning: divide by zero encountered in sin
-  # This is added back by InteractiveShellApp.init_path()
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:11: RuntimeWarning: divide by zero encountered in subtract
-  # This is added back by InteractiveShellApp.init_path()
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: divide by zero encountered in sin
-  if sys.path[0] == &#39;&#39;:
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: divide by zero encountered in multiply
-  if sys.path[0] == &#39;&#39;:
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: divide by zero encountered in cos
-  if sys.path[0] == &#39;&#39;:
-C:\Users\Ali\anaconda3\lib\site-packages\ipykernel_launcher.py:12: RuntimeWarning: divide by zero encountered in add
-  if sys.path[0] == &#39;&#39;:
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:790: RuntimeWarning: divide by zero encountered in deg2rad
-  self._default_rlabel_position = np.deg2rad(rlabel_position)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:909: RuntimeWarning: divide by zero encountered in floor
-  eta2 = theta2 - 360 * np.floor((theta2 - theta1) / 360)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:909: RuntimeWarning: divide by zero encountered in double_scalars
-  eta2 = theta2 - 360 * np.floor((theta2 - theta1) / 360)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:913: RuntimeWarning: divide by zero encountered in double_scalars
-  eta2 += 360
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:914: RuntimeWarning: divide by zero encountered in deg2rad
-  eta1, eta2 = np.deg2rad([eta1, eta2])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:918: RuntimeWarning: divide by zero encountered in double_scalars
-  n = int(2 ** np.ceil((eta2 - eta1) / halfpi))
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:918: RuntimeWarning: divide by zero encountered in ceil
-  n = int(2 ** np.ceil((eta2 - eta1) / halfpi))
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:922: RuntimeWarning: divide by zero encountered in double_scalars
-  deta = (eta2 - eta1) / n
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:923: RuntimeWarning: divide by zero encountered in double_scalars
-  t = np.tan(0.5 * deta)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:923: RuntimeWarning: divide by zero encountered in tan
-  t = np.tan(0.5 * deta)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:924: RuntimeWarning: divide by zero encountered in sin
-  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:924: RuntimeWarning: divide by zero encountered in double_scalars
-  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:924: RuntimeWarning: divide by zero encountered in sqrt
-  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:927: RuntimeWarning: divide by zero encountered in cos
-  cos_eta = np.cos(steps)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:928: RuntimeWarning: divide by zero encountered in sin
-  sin_eta = np.sin(steps)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:932: RuntimeWarning: divide by zero encountered in negative
-  xA_dot = -yA
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:937: RuntimeWarning: divide by zero encountered in negative
-  xB_dot = -yB
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:958: RuntimeWarning: divide by zero encountered in multiply
-  vertices[vertex_offset:end:3, 0] = xA + alpha * xA_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:958: RuntimeWarning: divide by zero encountered in add
-  vertices[vertex_offset:end:3, 0] = xA + alpha * xA_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:959: RuntimeWarning: divide by zero encountered in multiply
-  vertices[vertex_offset:end:3, 1] = yA + alpha * yA_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:959: RuntimeWarning: divide by zero encountered in add
-  vertices[vertex_offset:end:3, 1] = yA + alpha * yA_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:960: RuntimeWarning: divide by zero encountered in multiply
-  vertices[vertex_offset+1:end:3, 0] = xB - alpha * xB_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:960: RuntimeWarning: divide by zero encountered in subtract
-  vertices[vertex_offset+1:end:3, 0] = xB - alpha * xB_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:961: RuntimeWarning: divide by zero encountered in multiply
-  vertices[vertex_offset+1:end:3, 1] = yB - alpha * yB_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\path.py:961: RuntimeWarning: divide by zero encountered in subtract
-  vertices[vertex_offset+1:end:3, 1] = yB - alpha * yB_dot
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:318: RuntimeWarning: divide by zero encountered in double_scalars
-  angle = loc * axes.get_theta_direction() + axes.get_theta_offset()
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:319: RuntimeWarning: divide by zero encountered in rad2deg
-  text_angle = np.rad2deg(angle) % 360 - 90
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:319: RuntimeWarning: divide by zero encountered in double_scalars
-  text_angle = np.rad2deg(angle) % 360 - 90
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:320: RuntimeWarning: divide by zero encountered in double_scalars
-  angle -= np.pi / 2
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:358: RuntimeWarning: divide by zero encountered in double_scalars
-  self._loc * axes.get_theta_direction() +
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:359: RuntimeWarning: divide by zero encountered in double_scalars
-  axes.get_theta_offset())
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:308: RuntimeWarning: divide by zero encountered in cos
-  padx = pad * np.cos(angle) / 72
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:308: RuntimeWarning: divide by zero encountered in double_scalars
-  padx = pad * np.cos(angle) / 72
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:309: RuntimeWarning: divide by zero encountered in sin
-  pady = pad * np.sin(angle) / 72
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:309: RuntimeWarning: divide by zero encountered in double_scalars
-  pady = pad * np.sin(angle) / 72
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1029: RuntimeWarning: divide by zero encountered in rad2deg
-  return np.rad2deg(self.viewLim.xmin)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1021: RuntimeWarning: divide by zero encountered in rad2deg
-  return np.rad2deg(self.viewLim.xmax)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:592: RuntimeWarning: divide by zero encountered in rad2deg
-  offset = np.rad2deg(offset_rad)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:708: RuntimeWarning: divide by zero encountered in double_scalars
-  return abs(abs(thetamax - thetamin) - 360.0) &lt; 1e-12
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:600: RuntimeWarning: divide by zero encountered in double_scalars
-  angle = (thetamin * direction + offset) % 360 - 90
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:602: RuntimeWarning: divide by zero encountered in deg2rad
-  tick_angle = np.deg2rad(angle)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:605: RuntimeWarning: divide by zero encountered in double_scalars
-  text_angle = (angle + 90) % 180 - 90  # between -90 and +90.
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:636: RuntimeWarning: divide by zero encountered in double_scalars
-  angle = (thetamax * direction + offset) % 360 - 90
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:638: RuntimeWarning: divide by zero encountered in deg2rad
-  tick_angle = np.deg2rad(angle)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:641: RuntimeWarning: divide by zero encountered in double_scalars
-  text_angle = (angle + 90) % 180 - 90  # between -90 and +90.
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:717: RuntimeWarning: divide by zero encountered in double_scalars
-  return abs(abs(thetamax - thetamin) - 2 * np.pi) &lt; 1.74e-14
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:1149: RuntimeWarning: divide by zero encountered in multiply
-  v *= self.r
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:1150: RuntimeWarning: divide by zero encountered in add
-  v += np.asarray(self.center)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1279: RuntimeWarning: divide by zero encountered in rad2deg
-  return np.rad2deg(self._r_label_position.get_matrix()[0, 2])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:596: RuntimeWarning: divide by zero encountered in double_scalars
-  angle = (axes.get_rlabel_position() * direction +
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:597: RuntimeWarning: divide by zero encountered in double_scalars
-  offset) % 360 - 90
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:1599: RuntimeWarning: divide by zero encountered in double_scalars
-  fig_aspect = fig_height / fig_width
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:558: RuntimeWarning: divide by zero encountered in double_scalars
-  H = w * box_aspect / fig_aspect
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:562: RuntimeWarning: divide by zero encountered in double_scalars
-  W = h * fig_aspect / box_aspect
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:565: RuntimeWarning: divide by zero encountered in add
-  self._points[0] + (W, H)])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:529: RuntimeWarning: divide by zero encountered in double_scalars
-  [(l + cx * (w - W)) - L,
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:530: RuntimeWarning: divide by zero encountered in double_scalars
-  (b + cy * (h - H)) - B])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\transforms.py:530: RuntimeWarning: divide by zero encountered in add
-  (b + cy * (h - H)) - B])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2521: RuntimeWarning: divide by zero encountered in isfinite
-  finite_dl = [d for d in dl if np.isfinite(d).all()]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2526: RuntimeWarning: divide by zero encountered in isfinite
-  if (np.isfinite(d.intervalx).all() and
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2529: RuntimeWarning: divide by zero encountered in isfinite
-  if (np.isfinite(d.intervaly).all() and
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2550: RuntimeWarning: divide by zero encountered in int_scalars
-  i0 = stickies.searchsorted(x0 + tol) - 1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2563: RuntimeWarning: divide by zero encountered in double_scalars
-  delta = (x1t - x0t) * margin
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2564: RuntimeWarning: divide by zero encountered in isfinite
-  if not np.isfinite(delta):
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2566: RuntimeWarning: divide by zero encountered in double_scalars
-  x0, x1 = inverse_trans.transform([x0t - delta, x1t + delta])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:953: RuntimeWarning: divide by zero encountered in rad2deg
-  thetamin, thetamax = np.rad2deg(self._realViewLim.intervalx)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:956: RuntimeWarning: divide by zero encountered in subtract
-  rmin, rmax = ((self._realViewLim.intervaly - self.get_rorigin()) *
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1199: RuntimeWarning: divide by zero encountered in double_scalars
-  return np.sign(self._originViewLim.y1 - self._originViewLim.y0)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1199: RuntimeWarning: divide by zero encountered in sign
-  return np.sign(self._originViewLim.y1 - self._originViewLim.y0)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:957: RuntimeWarning: divide by zero encountered in multiply
-  self.get_rsign())
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:747: RuntimeWarning: divide by zero encountered in multiply
-  points[:, 0] *= 180 / np.pi
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:752: RuntimeWarning: divide by zero encountered in subtract
-  points[:, 1] -= self._originLim.y0
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:755: RuntimeWarning: divide by zero encountered in double_scalars
-  rscale = 0.5 / points[1, 1]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:756: RuntimeWarning: divide by zero encountered in multiply
-  points[:, 1] *= rscale
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:757: RuntimeWarning: divide by zero encountered in double_scalars
-  width = min(points[1, 1] - points[0, 1], 0.5)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:1125: RuntimeWarning: divide by zero encountered in double_scalars
-  if abs((self.theta2 - self.theta1) - 360) &lt;= 1e-12:
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:1139: RuntimeWarning: divide by zero encountered in double_scalars
-  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:1139: RuntimeWarning: divide by zero encountered in multiply
-  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\patches.py:1139: RuntimeWarning: divide by zero encountered in true_divide
-  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:766: RuntimeWarning: divide by zero encountered in subtract
-  w, h = self._points[1] - self._points[0]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:767: RuntimeWarning: divide by zero encountered in double_scalars
-  deltah = max(w - h, 0) / 2
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:768: RuntimeWarning: divide by zero encountered in double_scalars
-  deltaw = max(h - w, 0) / 2
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:769: RuntimeWarning: divide by zero encountered in add
-  self._points += np.array([[-deltaw, -deltah], [deltaw, deltah]])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:967: RuntimeWarning: divide by zero encountered in double_scalars
-  radius = edge - center[0]
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:968: RuntimeWarning: divide by zero encountered in double_scalars
-  width = min(radius * (rmax - rmin) / rmax, radius)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:972: RuntimeWarning: divide by zero encountered in double_scalars
-  inner_width = radius - width
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:541: RuntimeWarning: divide by zero encountered in double_scalars
-  self.width = 0.06 * self.span / sn
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:75: RuntimeWarning: divide by zero encountered in int_scalars
-  items *= arr.shape[mu.normalize_axis_index(ax, arr.ndim)]
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:178: RuntimeWarning: divide by zero encountered in reduce
-  ret = umr_sum(arr, axis, dtype, out, keepdims, where=where)
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\core\_methods.py:188: RuntimeWarning: divide by zero encountered in double_scalars
-  ret = ret.dtype.type(ret / rcount)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:673: RuntimeWarning: divide by zero encountered in double_scalars
-  scale = 1.8 * amean * sn / self.span
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\quiver.py:686: RuntimeWarning: divide by zero encountered in double_scalars
-  length = a * (widthu_per_lenu / (self.scale * self.width))
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:47: RuntimeWarning: divide by zero encountered in subtract
-  r = (r - self._axis.get_rorigin()) * self._axis.get_rsign()
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:47: RuntimeWarning: divide by zero encountered in multiply
-  r = (r - self._axis.get_rorigin()) * self._axis.get_rsign()
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:48: RuntimeWarning: divide by zero encountered in greater_equal
-  r = np.where(r &gt;= 0, r, np.nan)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:49: RuntimeWarning: divide by zero encountered in cos
-  return np.column_stack([r * np.cos(t), r * np.sin(t)])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:49: RuntimeWarning: divide by zero encountered in multiply
-  return np.column_stack([r * np.cos(t), r * np.sin(t)])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:49: RuntimeWarning: divide by zero encountered in sin
-  return np.column_stack([r * np.cos(t), r * np.sin(t)])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:134: RuntimeWarning: divide by zero encountered in double_scalars
-  yscale = limits_scaled.ymax - limits_scaled.ymin
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\projections\polar.py:136: RuntimeWarning: divide by zero encountered in double_scalars
-  .scale(0.5 / yscale) \
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:315: RuntimeWarning: divide by zero encountered in double_scalars
-  low = low * direction + offset
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:316: RuntimeWarning: divide by zero encountered in double_scalars
-  high = high * direction + offset
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:320: RuntimeWarning: divide by zero encountered in rad2deg
-  self._path = mpath.Path.arc(np.rad2deg(low), np.rad2deg(high))
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\spines.py:328: RuntimeWarning: divide by zero encountered in double_scalars
-  scaled_diameter = (rmin - rorigin) / (rmax - rorigin)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:199: RuntimeWarning: divide by zero encountered in multiply
-  self._px = (self._cpoints.T * coeff).T
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:216: RuntimeWarning: divide by zero encountered in subtract
-  return (np.power.outer(1 - t, self._orders[::-1])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:216: RuntimeWarning: divide by zero encountered in power
-  return (np.power.outer(1 - t, self._orders[::-1])
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:217: RuntimeWarning: divide by zero encountered in power
-  * np.power.outer(t, self._orders)) @ self._px
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:217: RuntimeWarning: divide by zero encountered in multiply
-  * np.power.outer(t, self._orders)) @ self._px
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:217: RuntimeWarning: divide by zero encountered in matmul
-  * np.power.outer(t, self._orders)) @ self._px
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:271: RuntimeWarning: divide by zero encountered in add
-  prefactor = (-1)**(i + j) * _comb(j, i)  # j on axis 0, i on axis 1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:271: RuntimeWarning: divide by zero encountered in power
-  prefactor = (-1)**(i + j) * _comb(j, i)  # j on axis 0, i on axis 1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:20: RuntimeWarning: divide by zero encountered in long_scalars
-  k = min(k, n - k)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:21: RuntimeWarning: divide by zero encountered in long_scalars
-  i = np.arange(1, k + 1)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:22: RuntimeWarning: divide by zero encountered in long_scalars
-  return np.prod((n + 1 - i)/i).astype(int)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:22: RuntimeWarning: divide by zero encountered in subtract
-  return np.prod((n + 1 - i)/i).astype(int)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:22: RuntimeWarning: divide by zero encountered in true_divide
-  return np.prod((n + 1 - i)/i).astype(int)
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\function_base.py:2197: RuntimeWarning: divide by zero encountered in _comb (vectorized)
-  outputs = ufunc(*inputs)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:271: RuntimeWarning: divide by zero encountered in multiply
-  prefactor = (-1)**(i + j) * _comb(j, i)  # j on axis 0, i on axis 1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:272: RuntimeWarning: divide by zero encountered in multiply
-  return _comb(n, j) * prefactor @ P  # j on axis 0, self.dimension on 1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:272: RuntimeWarning: divide by zero encountered in matmul
-  return _comb(n, j) * prefactor @ P  # j on axis 0, self.dimension on 1
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:294: RuntimeWarning: divide by zero encountered in multiply
-  dCj = np.arange(1, n+1)[:, None] * Cj[1:]
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\polynomial.py:241: RuntimeWarning: divide by zero encountered in int_scalars
-  trailing_zeros = len(p) - non_zero[-1] - 1
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\polynomial.py:254: RuntimeWarning: divide by zero encountered in negative
-  A[0,:] = -p[1:] / p[0]
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\polynomial.py:254: RuntimeWarning: divide by zero encountered in true_divide
-  A[0,:] = -p[1:] / p[0]
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\linalg\linalg.py:207: RuntimeWarning: divide by zero encountered in isfinite
-  if not isfinite(a).all():
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\linalg\linalg.py:1071: RuntimeWarning: divide by zero encountered in equal
-  if all(w.imag == 0):
-C:\Users\Ali\anaconda3\lib\site-packages\numpy\lib\type_check.py:276: RuntimeWarning: divide by zero encountered in equal
-  return imag(x) == 0
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:303: RuntimeWarning: divide by zero encountered in greater_equal
-  in_range = np.isreal(roots) &amp; (roots &gt;= 0) &amp; (roots &lt;= 1)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:303: RuntimeWarning: divide by zero encountered in bitwise_and
-  in_range = np.isreal(roots) &amp; (roots &gt;= 0) &amp; (roots &lt;= 1)
-C:\Users\Ali\anaconda3\lib\site-packages\matplotlib\bezier.py:303: RuntimeWarning: divide by zero encountered in less_equal
-  in_range = np.isreal(roots) &amp; (roots &gt;= 0) &amp; (roots &lt;= 1)
-</pre></div>
-</div>
-<img alt="../_images/helmholtz_3_2.png" class="align-center" src="../_images/helmholtz_3_2.png" />
+<img alt="../_images/helmholtz_3_0.png" class="align-center" src="../_images/helmholtz_3_0.png" />
 </div>
 </div>
 <p>The vorticity is zero, meaning that fluid particles are swept round the origin without local rotation. To show this, we have to use the result for the gradient in cylindrical polars:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cbc9cad8-c6e7-44f7-9df7-b8948712fb0c">
-<span class="eqno">()<a class="headerlink" href="#equation-cbc9cad8-c6e7-44f7-9df7-b8948712fb0c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9d515479-ef26-40b1-a11a-50c0011997e8">
+<span class="eqno">(3.28)<a class="headerlink" href="#equation-9d515479-ef26-40b1-a11a-50c0011997e8" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
 <p>The surprising result occurs in this example because the slowing down of the fluid away from the origin is just the right strength to create a rotational shear that counterbalances the angular rotation of the fluid.</p>
 </div>
 <div class="section" id="helmhotz-decomposition">
-<h2>Helmhotz decomposition<a class="headerlink" href="#helmhotz-decomposition" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3.4. </span>Helmhotz decomposition<a class="headerlink" href="#helmhotz-decomposition" title="Permalink to this headline">¶</a></h2>
 <p>The Helmholtz decomposition theorem is also known as the <strong>Fundamental Theorem of Vector Calculus</strong>. It states that any vector field that is smooth, defined everywhere in space and vanishes at infinity together with its first derivatives can be decomposed as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b74c37bd-e2d9-431a-acc2-73211b49210e">
-<span class="eqno">()<a class="headerlink" href="#equation-b74c37bd-e2d9-431a-acc2-73211b49210e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0b63b61e-27f4-48ec-bc99-2ce11d10b156">
+<span class="eqno">(3.29)<a class="headerlink" href="#equation-0b63b61e-27f4-48ec-bc99-2ce11d10b156" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
 <p>The first term is irrotational (curl-free) from the vector identity “curlgrad=<span class="math notranslate nohighlight">\(\underline{0}\)</span>”
 The second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.</p>
 <p>We will not prove this result, but we will use it to simplify the equations of motion in some scenarios. The full version of Helmholtz’ theorem also tells us how to calculate <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\underline{A}\)</span>, but we will not need those results.</p>
 <div class="exercise admonition" id="ex-3d-straining">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.8 </span> </p>
 <div class="section" id="exercise-content">
 <p>For the steady flow <span class="math notranslate nohighlight">\(\underline{u}=(2x,3y,-5z)\)</span>, determine the trajectories of particles starting on the ring defined by <span class="math notranslate nohighlight">\(x=\cos(\theta)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(\theta)\)</span>, <span class="math notranslate nohighlight">\(z=1\)</span>.</p>
 <p>Show that the flow is both irrotational and solenoidal, and describe the motion of the fluid particles in words.</p>
@@ -1107,18 +654,16 @@ The second term is solenoidal (divergence-free) from the vector identity “divc
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="visualise.html" title="previous page"><span class="section-number">3.2. </span>Visualising fluid motion</a>
+    <a class='right-next' id="next-link" href="potential.html" title="next page"><span class="section-number">3.4. </span>The velocity potential</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
