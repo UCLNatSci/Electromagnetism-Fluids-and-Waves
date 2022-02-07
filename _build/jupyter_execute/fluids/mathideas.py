@@ -13,7 +13,7 @@
 # | :---        |    :----:   |          ---: | ---: |
 # | Temperature | $T(x,y,z,t)$       | Scalar (magnitude only)  |
 # | Pressure | $p(x,y,z,t)$       | Scalar (magnitude only)  |
-# | Wind velocity  | $\underline{v}(x,y,z,t)$        | Vector (magnitude and direction) |
+# | Wind velocity  | $\underline{u}(x,y,z,t)$        | Vector (magnitude and direction) |
 # 
 # A **scalar field** can be represented using a surface plot, contour plot, or a colour/grayscale map. On weather maps the pressure is normally represented using contours (called pressure isobars) and the temperature is normally represented using a colour map. The example below shows a grayscale map of the scalar field defined by
 # \begin{equation}
@@ -47,7 +47,7 @@ plt.show()
 # A **vector field** can be represented using arrows, where the length of each arrow indicates the field strength at the point. The most commonly encountered vector field quantities are velocity and force. The example below shows a plot of the vector field defined by
 # ```{math}
 # :label: example_field
-# \underline{v}=(2x,-2y),\quad -2\leq x,y \leq 2.
+# \underline{u}=(2x,-2y),\quad -2\leq x,y \leq 2.
 # ```
 
 # In[2]:
@@ -94,11 +94,11 @@ ax.streamplot(X,Y,U,V,start_points=start,density=10) # stream plot
 plt.show()
 
 
-# In the case where the field represents velocity of a fluid, the field lines are known as "streamlines". In the next chapter we will discuss the difference between *streamlines*, *streaklines* and *particle paths*,for the case where the fluid velocity is a time-dependent field $\underline{v}(\underline{x},t)$.
+# In the case where the field represents velocity of a fluid, the field lines are known as "streamlines". In the next chapter we will discuss the difference between *streamlines*, *streaklines* and *particle paths*,for the case where the fluid velocity is a time-dependent field $\underline{u}(\underline{x},t)$.
 # 
 # ````{exercise}
 # :label: streamlinesq
-# Choosing a plot range that you think is suitable, produce both a vector plot and a streamline plot of the velocity field $\underline{v}=(2 y, 2 x,0)$. Describe the shape of the streamlines in words.
+# Choosing a plot range that you think is suitable, produce both a vector plot and a streamline plot of the velocity field $\underline{u}=(2 y, 2 x,0)$. Describe the shape of the streamlines in words.
 # ````
 # 
 # ## What is a **level set**
@@ -142,7 +142,7 @@ plt.show()
 # ```
 # <br>
 # 
-# 
+# (dir-deriv)=
 # ## The directional derivative
 # 
 # According to the multivariate chain rule for a scalar function $\phi(\underline{x})$, where $\underline{x}=(x(s),y(s),z(s))$,
@@ -153,7 +153,7 @@ plt.show()
 # 
 # ```{math}
 # :label: mvarchain
-# \frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{v}, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),
+# \frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{u}, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),
 # ```
 # 
 # where the gradient $\nabla\phi$ is given by
@@ -163,11 +163,11 @@ plt.show()
 # \nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).
 # ```
 # 
-# Formula {eq}`mvarchain` looks strikingly similar to the one-dimensional chain rule, with the factor $\nabla\phi$ capturing variations in $\phi$ due to $\underline{x}$ and the second factor $\underline{v}$ capturing variations in $\underline{x}$ due to $s$.  
+# Formula {eq}`mvarchain` looks strikingly similar to the one-dimensional chain rule, with the factor $\nabla\phi$ capturing variations in $\phi$ due to $\underline{x}$ and the second factor $\underline{u}$ capturing variations in $\underline{x}$ due to $s$.  
 # 
-# If we evaluate $\nabla\phi$ at a given point $\underline{x}_0$, the multivariate chain rule gives us the rate of change of $\phi$ in direction $\underline{v}$ at the point. Since the parameterisation $\underline{x}(s)$ is arbitrary, we can choose a direction that we are interested in. This result is called the *directional derivative*. It is usually assumed that $\underline{v}$ is a unit vector, so the result may be denoted as follows:
+# If we evaluate $\nabla\phi$ at a given point $\underline{x}_0$, the multivariate chain rule gives us the rate of change of $\phi$ in direction $\underline{u}$ at the point. Since the parameterisation $\underline{x}(s)$ is arbitrary, we can choose a direction that we are interested in. This result is called the *directional derivative*. It is usually assumed that $\underline{u}$ is a unit vector, so the result may be denoted as follows:
 # 
-# \begin{equation}D_{\hat{\underline{v}}}(\phi)=(\nabla\phi).\hat{\underline{v}}\end{equation}.
+# \begin{equation}D_{\hat{\underline{u}}}(\phi)=(\nabla\phi).\hat{\underline{u}}\end{equation}.
 # 
 # Notice that the result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.
 # 
@@ -176,7 +176,7 @@ plt.show()
 # 
 # Find the gradient of the function $\phi(x,y,z)=xyz$ at the point $\underline{x}_0:(-2,3,4)$.
 # 
-# What is the directional derivative of this function in the direction $\hat{\underline{v}}=\frac{1}{13}(3,-4,12)$?
+# What is the directional derivative of this function in the direction $\hat{\underline{u}}=\frac{1}{13}(3,-4,12)$?
 # ```
 # 
 # 
@@ -186,17 +186,17 @@ plt.show()
 # **The gradient is perpendicular to the level sets**  
 # Since level sets are defined by the relationship $\phi=c$, differentiation gives $\frac{\mathrm{d}\phi}{\mathrm{d}s}=0$. Using the result {eq}`mvarchain`, we find that on a level set
 # 
-# \begin{equation}(\nabla\phi).\hat{\underline{v}}=0, \qquad \underline{v}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}
+# \begin{equation}(\nabla\phi).\hat{\underline{u}}=0, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}
 # 
-# Since $\hat{\underline{v}}$ is parallel to the level sets of $\phi$, the result result tells us that $\nabla\phi$ is perpendicular to the level sets of $\phi$.  
+# Since $\hat{\underline{u}}$ is parallel to the level sets of $\phi$, the result result tells us that $\nabla\phi$ is perpendicular to the level sets of $\phi$.  
 # 
 # 
 # **The gradient points "uphill"**  
 # From the definition of the scalar product, we know that
 # 
-# \begin{equation}\biggr|D_{\hat{\underline{v}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}
+# \begin{equation}\biggr|D_{\hat{\underline{u}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}
 # 
-# where $\theta$ is the angle between $\nabla \phi$ and the direction vector $\hat{\underline{v}}$.
+# where $\theta$ is the angle between $\nabla \phi$ and the direction vector $\hat{\underline{u}}$.
 # 
 # The result is largest when $\theta=0$. Therefore, $\nabla \phi$ points in the direction of maximum increase of the function $\phi$ and has magnitude equal to the rate of maximum increase.  
 # 
@@ -204,13 +204,13 @@ plt.show()
 # :label: pot-fun
 # Some velocity fields, called *potential fields*, may be defined as the gradient of a scalar potential $\phi(x,y,z)$. For example, the gravitational field $\underline{g}=(0,0,-g)$ can be made to satisfy $\underline{g}=\nabla\phi$ by taking $\phi=-gz$.
 # 
-# Consider a two-dimensional velocity field $\underline{v}=(u,v)$, which is defined by a potential function
+# Consider a two-dimensional velocity field $\underline{u}=(u,v)$, which is defined by a potential function
 # ```{math}
 # \phi=x e^{-x^2-y^2}.
 # ```
 # * Produce a vector plot of this field on the range $-2\leq x,y \leq 2$.
 # * On the same plot, illustrate some of the contours of the scalar potential.
-# * In which direction are the contours of $\phi$, relative to $\underline{v}$ ?
+# * In which direction are the contours of $\phi$, relative to $\underline{u}$ ?
 # 
 # The function needed to plot contours is part of the matplotlib library. Usage guidelines can be found [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html).
 # ````

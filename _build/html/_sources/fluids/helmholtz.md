@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Helmholtz decomposition
+# Divergence and vorticity
 
 **In this section:**
 * Can divergence be inferred from looking at a plot of the vector field?
@@ -27,7 +27,7 @@ Consider a small (strictly infinitesimal) surface element $S$ within a field $\u
 
 ```{image} navstok_img/flux1.png
 ---
-name: flux
+name: flux1
 alt: alternative description
 align: center
 scale: 80%
@@ -44,7 +44,7 @@ where $\hat{\underline{n}}$ is the unit normal to the surface.
 
 ```{image} navstok_img/flux2.png
 ---
-name: flux
+name: flux2
 alt: alternative description
 align: center
 scale: 80%
@@ -58,13 +58,19 @@ The quantity $\underline{F}.\hat{\underline{n}}$ gives the flow rate *per unit a
 
 Most authors (including me!) use the terms flow rate and flux interchangeably, though flux is more pedantically defined as the flow rate per **unit** area. However, the intended meaning is almost always clear from the context and the surrounding text.
 
-```{admonition} Examples
-Net volumetric flux is the rate of volume flow across a given area, $\displaystyle \int_A\underline{v}.d\underline{S}$
+**Examples**
 
-Net mass flux is the rate of mass flow across a given area, $\displaystyle \int_A \rho\underline{v}.d\underline{S}$
+* Net volumetric flux is the rate of volume flow across a given area, $\displaystyle \int_A\underline{u}.d\underline{S}$
+
+* Net mass flux is the rate of mass flow across a given area, $\displaystyle \int_A r\underline{u}.d\underline{S}$
+
+
+```{admonition} Flux density
+:class: theorem
+Notice that the flux $\underline{F}.\hat{\underline{n}}$ is directly proportional to the field strength $F$. For this reason, the field strength is sometimes referred to as the *flux density*.
+
+This description fits quite well with field line depictions, since the field strength can be inferred from how close together (dense) the field lines are. However, the term flux density is mainly reserved for the context of electricity and magnetism.
 ```
-
-Notice that the flux $\underline{F}.\hat{\underline{n}}$ is directly proportional to the field strength $F$. For this reason, the field strength is sometimes referred to as the *flux density*. This description fits quite well with field line depictions, since the field strength can be inferred from how close together (dense) the field lines are. However, the term flux density is more commonly used in the context of electricity and magnetism, and I will not use it in the fluids part of this module.
 
 ## What is **divergence**?
 Suppose that a given point within  a field $\underline{F}=(f_x,f_y,f_z)$ is surrounded by a **closed** surface, $S$ as illustrated below:
@@ -105,7 +111,7 @@ Calculate the divergence of the potential flow you looked at in {numref}`pot-fun
 ## What is **vorticity**?
 Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector $(u,v,w)$:
 
-\begin{equation}\underline{\omega} = \nabla\times\underline{v}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}
+\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}
 
 An illustrated interpretation of vorticity is given below, looking only at the $z$-component for simplicity. Note that the subscript notation used on the diagram represents partial differentiation, not a vector component. We consider two fluid line elements $AB$ and $AC$, which are aligned with the $x$ and $y$ axes, respectively. By the definition of the partial derivative, we can write
 
@@ -119,12 +125,12 @@ so
 
 <br>
 
-```{image} navstok_img/vorticity.png
+```{image} navstok_img/vorticity2.png
 ---
 name: vorticity
 alt: vorticity illustration
 align: center
-scale: 80%
+scale: 15%
 ---
 ```
 <br>
@@ -134,7 +140,7 @@ It is important to recognise that the vorticity is not related to the global rot
 
 **Example 1: Shear flow**
 
-Consider a two-dimensional "shear" velocity profile described by $\underline{v}=(\sqrt{y},0,0).$
+Consider a two-dimensional "shear" velocity profile described by $\underline{u}=(\sqrt{y},0,0).$
 
 This flow is a rectilinear flow; meaning that it is not rotating as a whole, as can be seen from the image below. However, the vorticity is non-zero since fluid particles are rotated by the shearing force, as would be seen by an observer following the fluid.
 
@@ -172,9 +178,9 @@ We see that the fluid elements rotate about the $z$ axis. The negative sign indi
 
 **Example 2: Line vortex ('potential vortex')**
 
-Consider a flow described in cylindrical polars $(\rho,\theta,z)$, by the velocity profile $\underline{v}=\left(0,\frac{k}{\rho},0\right)$, where $k$ is a positive constant.
+Consider a flow described in cylindrical polars $(r,\theta,z)$, by the velocity profile $\underline{u}=\left(0,\frac{k}{r},0\right)$, where $k$ is a positive constant.
 
-This flow is a swirling motion with velocity decreasing in the radial direction like $\frac{1}{\rho}$, as illustrated in the figure below for the case where $k=1$.
+This flow is a swirling motion with velocity decreasing in the radial direction like $\frac{1}{r}$, as illustrated in the figure below for the case where $k=1$.
 
 ```{code-cell}
 ---
@@ -205,7 +211,7 @@ plt.show()
 
 The vorticity is zero, meaning that fluid particles are swept round the origin without local rotation. To show this, we have to use the result for the gradient in cylindrical polars:
 
-\begin{equation}\nabla\times \underline{v}=\frac{1}{\rho}\begin{vmatrix}\underline{e}_{\rho} & \rho\underline{e}_{\theta}& \underline{e}_z\\\frac{\partial }{\partial r}&\frac{\partial}{\partial \theta}&\frac{\partial}{\partial z}\\ v_{\rho}&\rho v_{\theta} & v_z\end{vmatrix}=\frac{1}{\rho}\begin{vmatrix}\underline{e}_{\rho} & \rho\underline{e}_{\theta}& \underline{e}_z\\\frac{\partial }{\partial r}&\frac{\partial}{\partial \theta}&\frac{\partial}{\partial z}\\ 0&k & 0\end{vmatrix}=\underline{0}\end{equation}
+\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} & r\underline{e}_{\theta}& \underline{e}_z\\\frac{\partial }{\partial r}&\frac{\partial}{\partial \theta}&\frac{\partial}{\partial z}\\ u_{r}&r u_{\theta} & u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} & r\underline{e}_{\theta}& \underline{e}_z\\\frac{\partial }{\partial r}&\frac{\partial}{\partial \theta}&\frac{\partial}{\partial z}\\ 0&k & 0\end{vmatrix}=\underline{0}\end{equation}
 
 The surprising result occurs in this example because the slowing down of the fluid away from the origin is just the right strength to create a rotational shear that counterbalances the angular rotation of the fluid.
 
@@ -225,7 +231,7 @@ We will not prove this result, but we will use it to simplify the equations of m
 
 ```{exercise}
 :label: ex-3d-straining
-For the steady flow $\underline{v}=(2x,3y,-5z)$, determine the trajectories of particles starting on the ring defined by $x=\cos(\theta)$, $y=\sin(\theta)$, $z=1$.
+For the steady flow $\underline{u}=(2x,3y,-5z)$, determine the trajectories of particles starting on the ring defined by $x=\cos(\theta)$, $y=\sin(\theta)$, $z=1$.
 
 Show that the flow is both irrotational and solenoidal, and describe the motion of the fluid particles in words.
 ```

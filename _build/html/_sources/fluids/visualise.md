@@ -21,13 +21,13 @@ kernelspec:
 
 ## Streamlines
 
-A streamline is a curve that is parallel to the velocity field $\underline{v}(\underline{x},t)$ at a given, **fixed time** $t$ and passes through a given point $\underline{x}_0$. A family of streamlines at time $t$ provides a snapshot of the velocity field.
+A streamline is a curve that is parallel to the velocity field $\underline{u}(\underline{x},t)$ at a given, **fixed time** $t$ and passes through a given point $\underline{x}_0$. A family of streamlines at time $t$ provides a snapshot of the velocity field.
 
 To illustrate the concepts, we will take
 
 ```{math}
 :label: examplev
-\underline{v}=(1,-2te^{-t^2}).
+\underline{u}=(1,-2te^{-t^2}).
 ```
 
 This field has no spatial dependence, so the streamlines are straight lines with slope $-2t e^{-t^2}$. The direction of the streamlines changes at each instant, as shown in the figure below. The upper plot shows the slope function plotted against the time. The second row of plots shows the streamlines at intervals $t=[0.00,0.75,1.50,2.25,3.00]$.
@@ -77,7 +77,7 @@ plt.show()
 
 To find an equation governing each streamline, we assume a parameterisation of the form $\underline{x}(s)=(x(s),y(s)_,z(s))$. Since the streamline is tangent to the velocity field it must satisfy the following equation, where $t$ is treated as constant:
 
-\begin{equation}\frac{\mathrm{d}\underline{x}}{\mathrm{d}s}=\underline{v}(\underline{x},t).\end{equation}
+\begin{equation}\frac{\mathrm{d}\underline{x}}{\mathrm{d}s}=\underline{u}(\underline{x},t).\end{equation}
 
 Integrating the problem gives a family of streamlines. For the example given in equation {eq}`examplev`, the streamlines satisfy
 
@@ -89,29 +89,29 @@ The solution that passes through a given point $(x_0,y_0)$ is given by
 
 ````{exercise}
 :label: ex-streams
-Find a parameterisation governing the streamlines of the flow $\underline{v}=(2x,2yt)$.
+Find a parameterisation governing the streamlines of the flow $\underline{u}=(2x,2yt)$.
 ````
 
 ## The stream function
 
-The stream function is a useful mathematical tool that can be used to find the streamlines for some types of flow. It applies only to two-dimensional flows $\underline{v}(\underline{x},t)$ that satisfy $\nabla.\underline{v}=0$. The latter condition means that the fluid is *incompressible*. We will explore the incompressibility condition in later sections of the notes.  
+The stream function is a useful mathematical tool that can be used to find the streamlines for some types of flow. It applies only to two-dimensional flows $\underline{u}(\underline{x},t)$ that satisfy $\nabla.\underline{u}=0$. The latter condition means that the fluid is *incompressible*. We will explore the incompressibility condition in later sections of the notes.  
 
 The stream function $\psi(x,y)$ satisfies
 
 ```{math}
 :label: streamfun
-\underline{v}=\left(\frac{\partial\psi}{\partial y},-\frac{\partial\psi}{\partial x}\right)
+\underline{u}=\left(\frac{\partial\psi}{\partial y},-\frac{\partial\psi}{\partial x}\right)
 ```
 
-The incompressibility condition $\nabla.\underline{v}=0$ is required for consistency, due to the equivalence of the mixed second derivatives (Schwarz' condition):
+The incompressibility condition $\nabla.\underline{u}=0$ is required for consistency, due to the equivalence of the mixed second derivatives (Schwarz' condition):
 
-\begin{equation}\nabla.\underline{v}=\frac{\partial^2\psi}{\partial x\partial y}-\frac{\partial^2 \psi}{\partial y\partial x}=0\end{equation}
+\begin{equation}\nabla.\underline{u}=\frac{\partial^2\psi}{\partial x\partial y}-\frac{\partial^2 \psi}{\partial y\partial x}=0\end{equation}
 
-The stream function also satisfies $\underline{v}.\nabla\psi=0$ :
+The stream function also satisfies $\underline{u}.\nabla\psi=0$ :
 
-\begin{equation}\underline{v}.\nabla\psi=\frac{\partial\psi}{\partial y}\frac{\partial\psi}{\partial x}+ \left(-\frac{\partial\psi}{\partial x}\right)\frac{\partial\psi}{\partial y}=0\end{equation}
+\begin{equation}\underline{u}.\nabla\psi=\frac{\partial\psi}{\partial y}\frac{\partial\psi}{\partial x}+ \left(-\frac{\partial\psi}{\partial x}\right)\frac{\partial\psi}{\partial y}=0\end{equation}
 
-Therefore, $\nabla\psi$ is perpendicular to $\underline{v}$, and so the contours of $\psi$ are **parallel** to $\underline{v}$.
+Therefore, $\nabla\psi$ is perpendicular to $\underline{u}$, and so the contours of $\psi$ are **parallel** to $\underline{u}$.
 
 In conclusion, the contours of $\psi$ are streamlines of the flow.
 
@@ -119,7 +119,7 @@ In conclusion, the contours of $\psi$ are streamlines of the flow.
 ```{exercise}
 :label: ex-strfun
 
-Find the stream function for the flow $\underline{v}=\left(x^2y,-xy^2\right)$.  
+Find the stream function for the flow $\underline{u}=\left(x^2y,-xy^2\right)$.  
 Use the stream function to produce a contour plot of the flow on $-2\leq x,y\leq 2$.
 ```
 
@@ -212,7 +212,7 @@ anim
 
 According to the definition of velocity, we can find the particle paths by solving the problem
 
-\begin{equation}\frac{\mathrm{d}\underline{x}}{\mathrm{d}t}=\underline{v}(\underline{x},t).\end{equation}
+\begin{equation}\frac{\mathrm{d}\underline{x}}{\mathrm{d}t}=\underline{u}(\underline{x},t).\end{equation}
 
 For the example given in equation {eq}`examplev`, the particle paths satisfy
 
@@ -229,7 +229,7 @@ In this example, the velocity approaches a constant value $(1,0)$ as $t$ increas
 
 ````{exercise}
 :label: ex-ppaths
-Find the particle paths for the flow $\underline{v}=(\alpha,\beta t,0)$, where $\alpha, \beta$ are positive constants. Describe the shape of your solutions.
+Find the particle paths for the flow $\underline{u}=(\alpha,\beta t,0)$, where $\alpha, \beta$ are positive constants. Describe the shape of your solutions.
 ````
 
 
