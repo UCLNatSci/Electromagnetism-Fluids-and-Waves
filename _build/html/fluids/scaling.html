@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scaling arguments &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.7. Scaling arguments &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -45,17 +45,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.8. Steady Euler solutions" href="steadysoln.html" />
+    <link rel="prev" title="3.6. Shear stress and viscosity" href="navstok.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,10 +76,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -87,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -96,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -231,6 +229,93 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Fluids
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mathideas.html">
+     3.1. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visualise.html">
+     3.2. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="helmholtz.html">
+     3.3. Divergence and vorticity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potential.html">
+     3.4. The velocity potential
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conservation.html">
+     3.5. Conservation law derivations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="navstok.html">
+     3.6. Shear stress and viscosity
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.7. Scaling arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steadysoln.html">
+     3.8. Steady Euler solutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bernoulli.html">
+     3.9. Bernoulli’s equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="asymptotic.html">
+     3.10. Perturbations and asymptotics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vorticity.html">
+     3.11. Vortex transport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waterwaves.html">
+     3.12. Unsteady: Water waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soundwaves.html">
+     3.13. Unsteady: Sound waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rotfram.html">
+     3.14. Rotational reference frames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ekman.html">
+     3.15. Geophysical phenomena
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -316,43 +401,43 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#non-dimensionalisation">
-   Non-dimensionalisation
+   3.7.1. Non-dimensionalisation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#technique">
-     Technique
+     3.7.1.1. Technique
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#froude-number">
-     Froude number
+     3.7.1.2. Froude number
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#strouhal-number">
-     Strouhal number
+     3.7.1.3. Strouhal number
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reynolds-number">
-     Reynolds number
+     3.7.1.4. Reynolds number
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-equations-for-viscous-flow">
-   Navier-Stokes equations for viscous flow
+   3.7.2. Navier-Stokes equations for viscous flow
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#low-reynolds-number-flow">
-   Low Reynolds number flow
+   3.7.3. Low Reynolds number flow
   </a>
  </li>
 </ul>
@@ -367,7 +452,7 @@
               <div>
                 
   <div class="section" id="scaling-arguments">
-<h1>Scaling arguments<a class="headerlink" href="#scaling-arguments" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.7. </span>Scaling arguments<a class="headerlink" href="#scaling-arguments" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>How does non-dimensionalisation help experimenters and theoreticians?</p></li>
@@ -375,17 +460,17 @@
 <li><p>What can scaling arguments tell us about biological life at microscopic scales?</p></li>
 </ul>
 <div class="section" id="non-dimensionalisation">
-<h2>Non-dimensionalisation<a class="headerlink" href="#non-dimensionalisation" title="Permalink to this headline">¶</a></h2>
-<p>We now return to the Navier-Stokes (NS) equations, given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">navstokeqn</span></code>. The quantities involved in these equations contain units of length, time, and force. The presence of these different units makes it difficult to compare different scenarios, such as a full-size aeroplane wing and a small scale replica. It is not immediately obvious from the dimensional form of the NS equations that decreasing the characteristic length scale or velocity scale of the problem has the same effect as increasing the fluid viscosity.</p>
+<h2><span class="section-number">3.7.1. </span>Non-dimensionalisation<a class="headerlink" href="#non-dimensionalisation" title="Permalink to this headline">¶</a></h2>
+<p>We now return to the Navier-Stokes (NS) equations, given in <a class="reference internal" href="navstok.html#navstokeqn"><span class="std std-numref">Section 3.6.4</span></a>. The quantities involved in these equations contain units of length, time, and force. The presence of these different units makes it difficult to compare different scenarios, such as a full-size aeroplane wing and a small scale replica. It is not immediately obvious from the dimensional form of the NS equations that decreasing the characteristic length scale or velocity scale of the problem has the same effect as increasing the fluid viscosity.</p>
 <p>In this section, we introduce new <em>non-dimensional</em> versions of each quantity appearing in the NS equations, by scaling them with respect to characteristic units of measure. We then gather together the characteristic units in the NS equations to form dimensionless parameters such as the <em>Reynolds number</em>. We can use such dimensionless parameters to compare different geometries and to make inferences about the relative importance of different dynamic effects such as viscous diffusion, body forces or inertia.</p>
 <div class="section" id="technique">
-<h3>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.1.1. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
 <p>We introduce non-dimensional variables using a characteristic length scale <span class="math notranslate nohighlight">\(L\)</span>, velocity <span class="math notranslate nohighlight">\(U\)</span>, time <span class="math notranslate nohighlight">\(T\)</span>, pressure <span class="math notranslate nohighlight">\(P\)</span> and body force <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2d4a4dc-8453-4055-90d9-381e88f7ce21">
-<span class="eqno">()<a class="headerlink" href="#equation-c2d4a4dc-8453-4055-90d9-381e88f7ce21" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{u}_*=\frac{\underline{u}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}_*=\frac{\underline{F}}{g}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-49da34a3-9030-4e46-b028-e4dff7c4c2fc">
+<span class="eqno">(3.58)<a class="headerlink" href="#equation-49da34a3-9030-4e46-b028-e4dff7c4c2fc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{u}_*=\frac{\underline{u}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}_*=\frac{\underline{F}}{g}\end{equation}\]</div>
 <p>Making these substitutions gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ea39c23c-dc11-4e91-8515-50d9283fc3b6">
-<span class="eqno">()<a class="headerlink" href="#equation-ea39c23c-dc11-4e91-8515-50d9283fc3b6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{u}_*}{\partial t_*}+\underline{u_*}.\nabla_* \underline{u_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{u_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f618d7fd-1a1d-4aaf-8580-2fb8dc3ec85a">
+<span class="eqno">(3.59)<a class="headerlink" href="#equation-f618d7fd-1a1d-4aaf-8580-2fb8dc3ec85a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{u}_*}{\partial t_*}+\underline{u_*}.\nabla_* \underline{u_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{u_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
 <p>The following dimensionless parameters now appear in the normalized momentum equation. If any of these quantities is large/small then we may construct an approximate solution by neglecting relevant terms in the equation.</p>
 <br>
 <table class="colwidths-auto table">
@@ -421,17 +506,17 @@
 </div>
 </div>
 <div class="section" id="froude-number">
-<h3>Froude number<a class="headerlink" href="#froude-number" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.1.2. </span>Froude number<a class="headerlink" href="#froude-number" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>Froude number</strong> is named after William Froude (1810-1879), who was an English engineer, hydrodynamicist and naval architect. It is used to study surface waves on flows of finite depth, such as open channel flows, spillways and weirs. It has a role comparable with that of the Mach number that we saw for incompressible flows. When <span class="math notranslate nohighlight">\(Fr&lt;1\)</span> the velocity of surface gravity waves exceeds the characteristic flow velocity and so a wave caused by an obstruction in the flow can travel upstream. This is referred to as the subcritical case. When <span class="math notranslate nohighlight">\(Fr&gt;1\)</span> waves cannot be propagated upstream and this is referred to as the supercritical case. Transition from a supercritical to a subcritical state leads to the formation of a <a class="reference external" href="https://www.youtube.com/watch?v=BH3BIHkekgE">hydraulic jump</a>, characterised by a sudden rise in water surface elevation.</p>
 <p>The Froude number is also relevant in the design of ships’ hulls, where the characteristic length and velocity scales are taken to be the hull length and the speed with which it moves through the water. Transverse waves are generated in the wake by extracting energy from the ship’s motion. This <em>wavemaking resistance</em> is a form drag, distinct from viscous drag. The amount of drag is proportional to the amplitude of the waves, which increases with the Froude number up to a critical value beyond which it falls effectively to zero. A tremendous amount of propulsion is required to exceed the critical Froude number.</p>
 </div>
 <div class="section" id="strouhal-number">
-<h3>Strouhal number<a class="headerlink" href="#strouhal-number" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.1.3. </span>Strouhal number<a class="headerlink" href="#strouhal-number" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>Strouhal number</strong> is named afer the Czech physicist Vincenc Strouhal (1850-1922), who first investigated the “humming” or “singing” of telegraph wires in 1878. It is used in the study of flows characterised by periodic motion, such as the shedding of vortices from alternate sides of a bluff body in a <a class="reference external" href="https://www.youtube.com/watch?v=SawKLWT1bDA">Von Kármán vortex street</a>. We take <span class="math notranslate nohighlight">\(f=1/T\)</span> to be the frequency of the oscillations. This frequency is usually determined from experiment or numeric simulation. The vortex street is a viscous phenomenon and the Strouhal number depends on the Reynolds number. It is found to be close to 0.2 for a wide range of Reynolds numbers. Periodic vortex shedding leads to periodic changes in the pressure distribution, which can cause vibrations of cables and other structures. This dynamics was involved in the well know Tacoma Narrows disaster. Nowadays, wind tunnel testing is used in the design of structures such as supertall buildings to reduce the effects of vortex shedding.</p>
 <p>The Strouhal number has also been <a class="reference external" href="https://www.nature.com/articles/nature02000">used</a> in the experimental study of swimming and flying animals, where the relevant scales are the frequency and amplitude of flapping, and the background flow rate</p>
 </div>
 <div class="section" id="reynolds-number">
-<h3>Reynolds number<a class="headerlink" href="#reynolds-number" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.7.1.4. </span>Reynolds number<a class="headerlink" href="#reynolds-number" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>Reynolds number</strong> was named after Osborne Reynolds (1842–1912). He was not the first person to introduce this non-dimensionalisation, but did popularise its use through his work. Reynolds famously conducted experiments to investigate the behaviour of water flowing through a pipe under carefully controlled conditions. By injecting a layer of dye into the water he showed that at low flow rates the fluid could be made to maintain a smooth, “laminar” flow structure, whilst at higher flow rates the fluid would exhibit a spontaneous transition to a turbulent, disorganised state. The transition from a laminar to a turbulent state occurs in a manner that can be predicted by experiment, but the underlying mechanism governing the transition is still not fully understood.
 The Reynolds number indicates the relative importance of inertial and viscous effects. It provides a way to easily make comparisons between experiments that use different fluids (viscosities) or differently sized apparatus.</p>
 <div class="admonition-example admonition">
@@ -444,8 +529,7 @@ The Reynolds number indicates the relative importance of inertial and viscous ef
 </div>
 <p>The Reynolds number is sometimes used in conjunction with other non-dimensional quantities. For instance, the Froude and Reynolds numbers may be used together to model the transition from laminar to turbulent flow in open channels or to model the combined effects of viscous and non-viscous drag.</p>
 <div class="exercise admonition" id="fluids/scaling-exercise-0">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.16 </span> </p>
 <div class="section" id="exercise-content">
 <p>An incompressible fluid of uniform density <span class="math notranslate nohighlight">\(\rho\)</span> and viscosity <span class="math notranslate nohighlight">\(\nu\)</span> flows steadily past a long, flat plate at <span class="math notranslate nohighlight">\(y=0\)</span>, which is parallel to the free stream velocity <span class="math notranslate nohighlight">\((U_{\infty},0)\)</span> as shown.</p>
 <br>
@@ -469,16 +553,16 @@ The Reynolds number indicates the relative importance of inertial and viscous ef
 </div>
 </div>
 <div class="section" id="navier-stokes-equations-for-viscous-flow">
-<h2>Navier-Stokes equations for viscous flow<a class="headerlink" href="#navier-stokes-equations-for-viscous-flow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.2. </span>Navier-Stokes equations for viscous flow<a class="headerlink" href="#navier-stokes-equations-for-viscous-flow" title="Permalink to this headline">¶</a></h2>
 <p>We assume that the scales of local acceleration, inertia and pressure are comparable so that the following non-dimensionalisations of time and velocity are sensible:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e84c067f-b637-4584-9bed-c956cd9af90d">
-<span class="eqno">()<a class="headerlink" href="#equation-e84c067f-b637-4584-9bed-c956cd9af90d" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_*=\frac{p}{\rho U^2}, \quad t_*=\frac{U t}{L}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0faa801e-9f4b-4a2a-8c9c-3552d79a4d63">
+<span class="eqno">(3.60)<a class="headerlink" href="#equation-0faa801e-9f4b-4a2a-8c9c-3552d79a4d63" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_*=\frac{p}{\rho U^2}, \quad t_*=\frac{U t}{L}.\end{equation}\]</div>
 <p>This finally gives the equation below. The asterisks have been dropped, because from now on we will always work with dimensionless quantities:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a8c7682c-1632-4f53-b2fe-d567d73107f6">
-<span class="eqno">()<a class="headerlink" href="#equation-a8c7682c-1632-4f53-b2fe-d567d73107f6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla \underline{u}=-\nabla p + \frac{1}{\mathrm{Re}} \nabla^2\underline{u}+\frac{1}{\mathrm{Fr}^2}\underline{F}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c126545b-8ad3-470c-bc96-00c5ec3428f8">
+<span class="eqno">(3.61)<a class="headerlink" href="#equation-c126545b-8ad3-470c-bc96-00c5ec3428f8" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla \underline{u}=-\nabla p + \frac{1}{\mathrm{Re}} \nabla^2\underline{u}+\frac{1}{\mathrm{Fr}^2}\underline{F}\end{equation}\]</div>
 <p>In many scenarios, the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> can be safely neglected. Written out in component form without the body force terms, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-23cec134-7245-4519-9160-b960e604603d">
-<span class="eqno">()<a class="headerlink" href="#equation-23cec134-7245-4519-9160-b960e604603d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe40ab34-60f2-462c-946d-da3545ac07e3">
+<span class="eqno">(3.62)<a class="headerlink" href="#equation-fe40ab34-60f2-462c-946d-da3545ac07e3" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\frac{1}{\mathrm{Re}}\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\frac{1}{\mathrm{Re}}\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\frac{1}{\mathrm{Re}}\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
@@ -492,13 +576,13 @@ The Reynolds number indicates the relative importance of inertial and viscous ef
 </div>
 </div>
 <div class="section" id="low-reynolds-number-flow">
-<h2>Low Reynolds number flow<a class="headerlink" href="#low-reynolds-number-flow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.3. </span>Low Reynolds number flow<a class="headerlink" href="#low-reynolds-number-flow" title="Permalink to this headline">¶</a></h2>
 <p>If the Reynolds number is very small (e.g. for very viscous flows) then we can neglect the inertial terms <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}\)</span> to leave</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e63d5029-0a33-4773-93c9-627c9dd30c47">
-<span class="eqno">()<a class="headerlink" href="#equation-e63d5029-0a33-4773-93c9-627c9dd30c47" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{u}+\underline{F}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3919b61d-bece-4359-9515-9395c63f0b44">
+<span class="eqno">(3.63)<a class="headerlink" href="#equation-3919b61d-bece-4359-9515-9395c63f0b44" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{u}+\underline{F}.\end{equation}\]</div>
 <p>If we are interested in steady solutions in the absence of a body force, the system reduces to the equation for Stokes flow (creeping flow):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22a8b41a-bbc2-4d1c-80f7-66d86ce20b48">
-<span class="eqno">()<a class="headerlink" href="#equation-22a8b41a-bbc2-4d1c-80f7-66d86ce20b48" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{u}-\nabla p=\underline{0}, \quad \nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e2b288cd-2b64-4e6e-b0bb-d5a869a97c99">
+<span class="eqno">(3.64)<a class="headerlink" href="#equation-e2b288cd-2b64-4e6e-b0bb-d5a869a97c99" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{u}-\nabla p=\underline{0}, \quad \nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The flow governed by this pair of equations exhibits the fascinating property of reversibility. If the boundary conditions conditions applied to the fluid are reversed, the fluid particles will return back along their previous paths. A striking demonstration of this phenomenon can be found at <a class="reference external" href="https://fyfluiddynamics.com/2012/02/the-reversibility-of-laminar-mixing-often-comes-as/">this link</a></p>
 <p>This has important implications for the swimming of microcellular organisms, which are unable to propel themselves using flapping or “paddling” motions. The finding is known as the scallop theorem, since the opening and closing swimming mechanism used by scallops would be ineffective at low Reynolds numbers.</p>
 <div class="readmore admonition">
@@ -532,18 +616,16 @@ The Reynolds number indicates the relative importance of inertial and viscous ef
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="navstok.html" title="previous page"><span class="section-number">3.6. </span>Shear stress and viscosity</a>
+    <a class='right-next' id="next-link" href="steadysoln.html" title="next page"><span class="section-number">3.8. </span>Steady Euler solutions</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

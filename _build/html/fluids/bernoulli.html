@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bernoulli’s equation &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.9. Bernoulli’s equation &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -45,17 +45,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.10. Perturbations and asymptotics" href="asymptotic.html" />
+    <link rel="prev" title="3.8. Steady Euler solutions" href="steadysoln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,10 +76,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -87,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -96,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -231,6 +229,93 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   3. Fluids
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="mathideas.html">
+     3.1. Mathematical background
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="visualise.html">
+     3.2. Visualising fluid motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="helmholtz.html">
+     3.3. Divergence and vorticity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potential.html">
+     3.4. The velocity potential
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conservation.html">
+     3.5. Conservation law derivations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="navstok.html">
+     3.6. Shear stress and viscosity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scaling.html">
+     3.7. Scaling arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="steadysoln.html">
+     3.8. Steady Euler solutions
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.9. Bernoulli’s equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="asymptotic.html">
+     3.10. Perturbations and asymptotics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="vorticity.html">
+     3.11. Vortex transport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="waterwaves.html">
+     3.12. Unsteady: Water waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="soundwaves.html">
+     3.13. Unsteady: Sound waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rotfram.html">
+     3.14. Rotational reference frames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ekman.html">
+     3.15. Geophysical phenomena
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -316,36 +401,36 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#statement">
-   Statement
+   3.9.1. Statement
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#derivation">
-   Derivation
+   3.9.2. Derivation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#applications">
-   Applications
+   3.9.3. Applications
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#venturi-effect">
-     Venturi effect
+     3.9.3.1. Venturi effect
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attaching-a-manometer">
-     Attaching a manometer
+     3.9.3.2. Attaching a manometer
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-rotating-bucket">
-     A rotating bucket
+     3.9.3.3. A rotating bucket
     </a>
    </li>
   </ul>
@@ -362,17 +447,17 @@
               <div>
                 
   <div class="section" id="bernoullis-equation">
-<h1>Bernoulli’s equation<a class="headerlink" href="#bernoullis-equation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.9. </span>Bernoulli’s equation<a class="headerlink" href="#bernoullis-equation" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>Under what conditions does Bernoulli’s theorem hold?</p></li>
 <li><p>If you partially cover the hole of an escaping water jet with your finger, what happens to the pressure?</p></li>
 </ul>
 <div class="section" id="statement">
-<h2>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9.1. </span>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
 <p>If we assume no viscosity, steady flow, constant density, then the following result applies on a streamline:</p>
 <div class="math notranslate nohighlight" id="equation-bernoulli">
-<span class="eqno">()<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">¶</a></span>\[\frac{p}{\rho}+\phi +\frac{1}{2}v^2=\text{const}\]</div>
+<span class="eqno">(3.86)<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">¶</a></span>\[\frac{p}{\rho}+\phi +\frac{1}{2}v^2=\text{const}\]</div>
 <p>In the special case where the body force is gravity, we have <span class="math notranslate nohighlight">\(\phi=gz\)</span></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -382,67 +467,65 @@
 <p><em>Note: There is also a version of Bernoulli’s equation that applies to unsteady potential flows, but we do not consider it here</em></p>
 </div>
 <div class="section" id="derivation">
-<span id="bernoulli-derivation"></span><h2>Derivation<a class="headerlink" href="#derivation" title="Permalink to this headline">¶</a></h2>
+<span id="bernoulli-derivation"></span><h2><span class="section-number">3.9.2. </span>Derivation<a class="headerlink" href="#derivation" title="Permalink to this headline">¶</a></h2>
 <p>We start with the inviscid form of the momentum equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
 <p>Recall that if the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> is conservative (does no work), then it can be expressed as the gradient of a scalar potential. By convention, we usually introduce a negative sign, so that that work done against <span class="math notranslate nohighlight">\(\underline{F}\)</span> increases the potential, while work done by <span class="math notranslate nohighlight">\(\underline{F}\)</span> decreases the potential:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-96ae932c-b647-4184-98ef-3f01933862d2">
-<span class="eqno">()<a class="headerlink" href="#equation-96ae932c-b647-4184-98ef-3f01933862d2" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=-\nabla\phi.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a42462af-c83b-4a30-9931-4795fd522461">
+<span class="eqno">(3.87)<a class="headerlink" href="#equation-a42462af-c83b-4a30-9931-4795fd522461" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=-\nabla\phi.\end{equation}\]</div>
 <p>Now, let us further assume that the fluid is uniform density, <span class="math notranslate nohighlight">\(\rho\)</span> is constant, so that we may write:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6dbb4c13-d7a5-4f2e-b7f9-2b328c90a6b1">
-<span class="eqno">()<a class="headerlink" href="#equation-6dbb4c13-d7a5-4f2e-b7f9-2b328c90a6b1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\nabla\left(\frac{p}{\rho}+\phi\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-99400346-8084-44ba-bef7-ef0a5e31d0fe">
+<span class="eqno">(3.88)<a class="headerlink" href="#equation-99400346-8084-44ba-bef7-ef0a5e31d0fe" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\nabla\left(\frac{p}{\rho}+\phi\right).\end{equation}\]</div>
 <p>Using the vector identity <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}=(\nabla\times\underline{u})\times\underline{u}+\nabla\left(\frac{1}{2}\underline{u}.\underline{u}\right)=(\underline{\omega}\times\underline{u})+\nabla\left(\frac{1}{2}v^2\right)\)</span> then gives</p>
 <div class="math notranslate nohighlight" id="equation-vorticity-head">
-<span class="eqno">()<a class="headerlink" href="#equation-vorticity-head" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times \underline{u})=-\nabla H, \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2\]</div>
+<span class="eqno">(3.89)<a class="headerlink" href="#equation-vorticity-head" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times \underline{u})=-\nabla H, \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(H\)</span> is known as the “head”.</p>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-0">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.18 </span> </p>
 <div class="section" id="exercise-content">
 <p>Try to prove the strange-looking vector identity for <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}\)</span>, by writing out each expression in component form.</p>
 </div>
 </div>
 <p>We may yet further simplify if we assume that the flow is steady, so <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial \underline{u}}{\partial t}=0\)</span>, and by taking the scalar product with vector <span class="math notranslate nohighlight">\(\underline{u}\)</span> to eliminate the vorticity term:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0973ba01-456c-4471-b379-3d908eeba011">
-<span class="eqno">()<a class="headerlink" href="#equation-0973ba01-456c-4471-b379-3d908eeba011" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-4ec57684-f96c-4c43-a96c-998557f9d696">
+<span class="eqno">(3.90)<a class="headerlink" href="#equation-4ec57684-f96c-4c43-a96c-998557f9d696" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\underline{a}.(\underline{b}\times\underline{a})=0\)</span> for any vectors <span class="math notranslate nohighlight">\(\underline{a},\underline{b}\)</span> this can be simplified to <span class="math notranslate nohighlight">\(\underline{u}.\nabla H=0\)</span>. The result says that the head remains constant on a streamline, since the directional derivative along <span class="math notranslate nohighlight">\(\underline{u}\)</span> is zero.</p>
 </div>
 <div class="section" id="applications">
-<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="venturi-effect">
-<h3>Venturi effect<a class="headerlink" href="#venturi-effect" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.9.3.1. </span>Venturi effect<a class="headerlink" href="#venturi-effect" title="Permalink to this headline">¶</a></h3>
 <p>The Venturi effect is the name given to the observed phenomenon that through a constricted section of pipe there is an increase in velocity and hence a decrease in pressure. In the illustration below and in the accompanying analysis, the flow has been idealised such that it is assumed to be steady and laminar (smooth). For a more realistic depiction, see for example <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0020746200001049?via%3Dihub">this paper</a> - especially figure 9, which gives a treatment in two dimensions using finite difference numeric methods.</p>
 <p>On the diagram, <span class="math notranslate nohighlight">\(A,B\)</span> denote the cross-sectional areas at the narrowest and widest points of the tube. The pressure and flow speed on a streamline through the centre of the pipe are denoted <span class="math notranslate nohighlight">\(p_0,u_0\)</span> at the narrowest point and by <span class="math notranslate nohighlight">\(p_1,u_1\)</span> at the widest point. The density <span class="math notranslate nohighlight">\(\rho\)</span> is assumed to be constant.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/venturi.png" id="venturi"><img alt="a particle moving through a potential field" class="align-center" id="venturi" src="../_images/venturi.png" style="width: 288.0px; height: 115.2px;" /></a>
 <br>
 <p>By conservation of mass, we may write down the following result for the volumetric flow rate:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6fa19aac-6bff-4b9f-979d-a230aed5ed69">
-<span class="eqno">()<a class="headerlink" href="#equation-6fa19aac-6bff-4b9f-979d-a230aed5ed69" title="Permalink to this equation">¶</a></span>\[\begin{equation}A u_0 = B u_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-16af1d95-dcdb-41c1-b3b5-3491ad3074be">
+<span class="eqno">(3.91)<a class="headerlink" href="#equation-16af1d95-dcdb-41c1-b3b5-3491ad3074be" title="Permalink to this equation">¶</a></span>\[\begin{equation}A u_0 = B u_1.\end{equation}\]</div>
 <p>By Bernoulli’s theorem for the central streamline we may also say that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6e0ffe4e-e362-4f17-b051-34d70ca11ce9">
-<span class="eqno">()<a class="headerlink" href="#equation-6e0ffe4e-e362-4f17-b051-34d70ca11ce9" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_0+\frac{1}{2}\rho u_0^2=p_1+\frac{1}{2}\rho u_1^2.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e2248ded-2816-441b-b5e5-26d81e06e793">
+<span class="eqno">(3.92)<a class="headerlink" href="#equation-e2248ded-2816-441b-b5e5-26d81e06e793" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_0+\frac{1}{2}\rho u_0^2=p_1+\frac{1}{2}\rho u_1^2.\end{equation}\]</div>
 <p>Rearranging the two results together gives (for example)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-33f4af9c-e405-4c39-95e1-d0b1f6081e9a">
-<span class="eqno">()<a class="headerlink" href="#equation-33f4af9c-e405-4c39-95e1-d0b1f6081e9a" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1-p_0 = \frac{1}{2}\rho u_0^2\left(1-\frac{A^2}{B^2}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a34303fa-3e7a-48c0-b75e-885316bb889d">
+<span class="eqno">(3.93)<a class="headerlink" href="#equation-a34303fa-3e7a-48c0-b75e-885316bb889d" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1-p_0 = \frac{1}{2}\rho u_0^2\left(1-\frac{A^2}{B^2}\right).\end{equation}\]</div>
 <p>We can see that through the choke point there will be an increase in velocity and a decrease in pressure compared to the inlet/outlet.</p>
 <p>In general, when we observe bunching of streamlines the constrainment in volume implies a velocity increase due to mass conservation, since to maintain the same flux through a surface the velocity must increase. As a result, if the assumptions of Bernoulli are met, we see a pressure decrease. This result is sometimes used to explain the lift over an airfoil or the magnus effect on a rotating cylinder.</p>
 <p><strong>However, we must be careful as Bernoulli’s theorem assumes inviscid fluid, and it turns out the viscosity is very important when fluid moves past a boundary.</strong></p>
 </div>
 <div class="section" id="attaching-a-manometer">
-<h3>Attaching a manometer<a class="headerlink" href="#attaching-a-manometer" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.9.3.2. </span>Attaching a manometer<a class="headerlink" href="#attaching-a-manometer" title="Permalink to this headline">¶</a></h3>
 <p>We now attach a second tube as shown in the diagram below, and allow the fluid in the second tube to come to rest as shown.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/manometer.png" id="manometer"><img alt="a particle moving through a potential field" class="align-center" id="manometer" src="../_images/manometer.png" style="width: 288.0px; height: 144.0px;" /></a>
 <br>
 <p>According to Bernoulli’s theorem <span class="math notranslate nohighlight">\(p_1-p_0=\rho g h\)</span>, so using the result for the pressure difference that we obtained previously gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-734ff86e-13ce-422a-8125-40944fc1d969">
-<span class="eqno">()<a class="headerlink" href="#equation-734ff86e-13ce-422a-8125-40944fc1d969" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d8732f74-1efc-4f94-9d15-051d5ddc0d08">
+<span class="eqno">(3.94)<a class="headerlink" href="#equation-d8732f74-1efc-4f94-9d15-051d5ddc0d08" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}\]</div>
 <p>If we know the ratio of the two cross-sectional areas, then by measuring height <span class="math notranslate nohighlight">\(h\)</span> in the fluid column we may determine the flow speed through the narrow part of the pipe.</p>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-1">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.19 </span> </p>
 <div class="section" id="exercise-content">
 <p>Water flows along a horizontal pipe, through a contraction and out into the atmosphere, as shown. Given that the volumetric flow rate is <span class="math notranslate nohighlight">\(Q\)</span>, estimate the maximum height <span class="math notranslate nohighlight">\(h\)</span> for which water can be drawn into the main flow from a lower reservoir that is open to the atmosphere.</p>
 <br>
@@ -452,22 +535,21 @@
 </div>
 </div>
 <div class="section" id="a-rotating-bucket">
-<h3>A rotating bucket<a class="headerlink" href="#a-rotating-bucket" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.9.3.3. </span>A rotating bucket<a class="headerlink" href="#a-rotating-bucket" title="Permalink to this headline">¶</a></h3>
 <p>Consider an ideal fluid of zero viscosity, rotating under gravity <span class="math notranslate nohighlight">\(g\)</span> about the <span class="math notranslate nohighlight">\(z\)</span> axis with constant angular velocity <span class="math notranslate nohighlight">\(\Omega=\dot{\theta}\)</span>.
 The particle paths for this motion satisfy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68c365f0-706f-4db1-a8da-266729a1e611">
-<span class="eqno">()<a class="headerlink" href="#equation-68c365f0-706f-4db1-a8da-266729a1e611" title="Permalink to this equation">¶</a></span>\[\begin{equation}x=r\cos(\theta), \quad y=r\sin(\theta),\quad z=\mathrm{constant,}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e4a551a3-42c0-423a-9cd2-1e527b9b117c">
+<span class="eqno">(3.95)<a class="headerlink" href="#equation-e4a551a3-42c0-423a-9cd2-1e527b9b117c" title="Permalink to this equation">¶</a></span>\[\begin{equation}x=r\cos(\theta), \quad y=r\sin(\theta),\quad z=\mathrm{constant,}\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\dot{r}=0\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}=\Omega\)</span>. From these results we may obtain the velocity field relative to Cartesian axes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dbaf9a10-4058-4478-a791-de64de9210d7">
-<span class="eqno">()<a class="headerlink" href="#equation-dbaf9a10-4058-4478-a791-de64de9210d7" title="Permalink to this equation">¶</a></span>\[\begin{equation}\dot{x}=-\dot{\theta}r\sin(\theta)=-\Omega y, \quad \dot{y}=\dot{\theta}r\cos(\theta)=\Omega x \quad \Rightarrow \underline{u}=\Omega(-y,x,0).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-98f1d2b8-9d86-457a-8fba-c9703833594f">
+<span class="eqno">(3.96)<a class="headerlink" href="#equation-98f1d2b8-9d86-457a-8fba-c9703833594f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\dot{x}=-\dot{\theta}r\sin(\theta)=-\Omega y, \quad \dot{y}=\dot{\theta}r\cos(\theta)=\Omega x \quad \Rightarrow \underline{u}=\Omega(-y,x,0).\end{equation}\]</div>
 <p>This is an example of vortex flow. You are encouraged to verify that the vorticity for this fluid is <span class="math notranslate nohighlight">\(\omega\)</span> and that the flow is divergence-free. Verify also that <span class="math notranslate nohighlight">\(\dot{\underline{u}}=\underline{0}\)</span> and so the streamlines are the same as the particle paths.</p>
-<p>Bernoulli’s equation <a class="reference internal" href="#equation-bernoulli">()</a> applies on a streamline, but the constant of integration varies from streamline to streamline since the flow is not irrotational. Therefore solving the equation for <span class="math notranslate nohighlight">\(h\)</span> in terms of <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(p_0\)</span> will not give us the shape of the fluid surface. If you try this, it would suggest that the shape of the fluid surface is an upturned parabola, which is exactly the opposite of what we observe when we spin a bucket!</p>
+<p>Bernoulli’s equation <a class="reference internal" href="#equation-bernoulli">(3.86)</a> applies on a streamline, but the constant of integration varies from streamline to streamline since the flow is not irrotational. Therefore solving the equation for <span class="math notranslate nohighlight">\(h\)</span> in terms of <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(p_0\)</span> will not give us the shape of the fluid surface. If you try this, it would suggest that the shape of the fluid surface is an upturned parabola, which is exactly the opposite of what we observe when we spin a bucket!</p>
 <p>To find the fluid surface, we can go back to Euler’s formula, which applies throughout the fluid, not only on a streamline:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-61e5a4e9-e702-40b3-a38c-e0c7618d49f0">
-<span class="eqno">()<a class="headerlink" href="#equation-61e5a4e9-e702-40b3-a38c-e0c7618d49f0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{f}, \qquad \underline{f}=(0,0,-g)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d1e628f0-17ee-442f-bebe-7553fb94bf79">
+<span class="eqno">(3.97)<a class="headerlink" href="#equation-d1e628f0-17ee-442f-bebe-7553fb94bf79" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{f}, \qquad \underline{f}=(0,0,-g)\end{equation}\]</div>
 <div class="exercise admonition" id="bucket-exercise">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.20 </span> </p>
 <div class="section" id="exercise-content">
 <p>Substitute in the velocity field <span class="math notranslate nohighlight">\(\underline{u}=\Omega(-y,x,0)\)</span> and solve for each component to deduce the result</p>
 <div class="math notranslate nohighlight">
@@ -479,8 +561,7 @@ The particle paths for this motion satisfy</p>
 <a class="reference internal image-reference" href="../_images/bucket.png" id="bucket"><img alt="a particle moving through a potential field" class="align-center" id="bucket" src="../_images/bucket.png" style="width: 672.0px; height: 504.0px;" /></a>
 <br>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-3">
-
-<p class="admonition-title"></p>
+<p class="admonition-title"><span class="caption-number">Exercise 3.21 </span> </p>
 <div class="section" id="exercise-content">
 <p>Produce a figure similar to the one above, by plotting the vector field, streamlines and isosurface in Python. You can take arbitrary values for <span class="math notranslate nohighlight">\(p_0,\Omega,\rho,g\)</span>, since they do not affect the shape.</p>
 </div>
@@ -512,18 +593,16 @@ The particle paths for this motion satisfy</p>
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="steadysoln.html" title="previous page"><span class="section-number">3.8. </span>Steady Euler solutions</a>
+    <a class='right-next' id="next-link" href="asymptotic.html" title="next page"><span class="section-number">3.10. </span>Perturbations and asymptotics</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-
-</div>
+        </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
