@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Fluids &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.3. Fluids &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.2. Mathematical background" href="mathideas.html" />
-    <link rel="prev" title="2.12. Electromagnetic Scalar and Vector Potentials" href="../electromagnetism/EMpotentials.html" />
+    <link rel="next" title="3.4. Mathematical background" href="mathideas.html" />
+    <link rel="prev" title="3. Introduction" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -232,88 +232,93 @@
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   3. Fluids
+  <a class="reference internal" href="intro.html">
+   3. Introduction
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.3. Fluids
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mathideas.html">
-     3.2. Mathematical background
+     3.4. Mathematical background
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="visualise.html">
-     3.3. Visualising fluid motion
+     3.5. Visualising fluid motion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="helmholtz.html">
-     3.4. Divergence and vorticity
+     3.6. Divergence and vorticity
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="potential.html">
-     3.5. The velocity potential
+     3.7. The velocity potential
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="conservation.html">
-     3.6. Conservation law derivations
+     3.8. Conservation law derivations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="navstok.html">
-     3.7. Shear stress and viscosity
+     3.9. Shear stress and viscosity
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="scaling.html">
-     3.8. Scaling arguments
+     3.10. Scaling arguments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="steadysoln.html">
-     3.9. Steady Euler solutions
+     3.11. Steady Euler solutions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="bernoulli.html">
-     3.10. Bernoulli’s equation
+     3.12. Bernoulli’s equation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="asymptotic.html">
-     3.11. Perturbations and asymptotics
+     3.13. Perturbations and asymptotics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="vorticity.html">
-     3.12. Vortex transport
+     3.14. Vortex transport
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="waterwaves.html">
-     3.13. Unsteady: Water waves
+     3.15. Unsteady: Water waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="soundwaves.html">
-     3.14. Unsteady: Sound waves
+     3.16. Unsteady: Sound waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rotfram.html">
-     3.15. Rotational reference frames
+     3.17. Rotational reference frames
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ekman.html">
-     3.16. Geophysical phenomena
+     3.18. Geophysical phenomena
     </a>
    </li>
   </ul>
@@ -407,7 +412,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-continuum-hypothesis">
-   3.1. The continuum hypothesis
+   3.3.1. The continuum hypothesis
   </a>
  </li>
 </ul>
@@ -422,7 +427,7 @@
               <div>
                 
   <div class="section" id="fluids">
-<h1><span class="section-number">3. </span>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.3. </span>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
 <p>Fluid dynamics is the study of flow. Since anything that flows can be thought of as a fluid, this field of study covers a tremendous range of applications, including aerodynamics, meteorology, hydraulics, oceanography, astrophysical dynamics, acoustics, hemodynamics (blood flow) and mucus flows. Principles of fluid dynamics have even been applied to the study of granular flows, such as dry sand, vehicular traffic and crowd dynamics.</p>
 <p>Despite the vast range of applications, most of these phenomena can be examined by just three unifying principles:</p>
 <ul class="simple">
@@ -432,15 +437,13 @@
 </ul>
 <p>For many flows (this course), we can neglect thermodynamic effects, and in that case we can also get by without conservation of energy. This chapter introduces the equations of conservation of mass and conservation of momentum.</p>
 <div class="section" id="the-continuum-hypothesis">
-<h2><span class="section-number">3.1. </span>The continuum hypothesis<a class="headerlink" href="#the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3.1. </span>The continuum hypothesis<a class="headerlink" href="#the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
 <p>So that we can use the tools of calculus, we treat the fluid as if it were continuous in structure and we regard physical quantities as locally uniform. This also means we can treat gases and liquids in the same way, since the equations of motion are independent of the particle structure.</p>
 <p>An illustration of the idea is shown below, applied to measurements of density. We ignore molecular fluctuations, and consider a locally averaged measure of density based on the mean free path between atoms.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/continuum_hypothesis.png" id="continuum-hypothesis"><img alt="some alternative text" class="align-center" id="continuum-hypothesis" src="../_images/continuum_hypothesis.png" style="width: 374.40000000000003px; height: 240.0px;" /></a>
 <br>
 <p>In actuality, the concept of “density” does not apply very meaningfully at the microscopic level, since the density at each point is defined by either being “inside” or “outside” an atom.</p>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -474,11 +477,11 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../electromagnetism/EMpotentials.html" title="previous page">
+        <a class="left-prev" href="intro.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">2.12. </span>Electromagnetic Scalar and Vector Potentials</p>
+                <p class="prevnext-title"><span class="section-number">3. </span>Introduction</p>
             </div>
         </a>
     </div>
@@ -486,7 +489,7 @@
         <a class="right-next" href="mathideas.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">3.2. </span>Mathematical background</p>
+                <p class="prevnext-title"><span class="section-number">3.4. </span>Mathematical background</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
