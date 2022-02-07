@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsteady: Sound waves &#8212; Electromagnetism, Fluids and Waves</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Electromagnetism, Fluids and Waves</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../waves/introduction.html">
+   1. Waves
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/wavemaths.html">
+     1.1. Mathematical Preliminaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/SHM.html">
+     1.2. Harmonic and Oscillatory Motion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/longitudinal.html">
+     1.3. Longitudinal Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/waveequationsolns.html">
+     1.4. Solutions to the Wave Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/transverse.html">
+     1.5. Transverse Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/dispersionrelations.html">
+     1.6. Dispersion Relations and Wave Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/polarisation.html">
+     1.7. Polarisation of Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/standingwaves.html">
+     1.8. Standing Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/matterwaves.html">
+     1.9. Matter Waves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../waves/dopplershift.html">
+     1.10. Doppler Shift
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../electromagnetism/introduction.html">
+   2. Electromagnetism
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMmaths.html">
+     2.1. Mathematical Preliminaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/electrostatics.html">
+     2.2. Electrostatics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
+     2.3. Solving Electrostatic Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
+     2.4. Energy in an Electric Field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticfields.html">
+     2.5. Magnetism
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/magneticforces.html">
+     2.6. Magnetic Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/ampereslaw.html">
+     2.7. Ampère’s Circuital Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/faradayslaw.html">
+     2.8. Faraday’s Law
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
+     2.9. Differential Forms and Maxwell’s Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
+     2.10. Solutions to Maxwell’s Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMenergy.html">
+     2.11. Energy in an Electromagnetic field
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../electromagnetism/EMpotentials.html">
+     2.12. Electromagnetic Scalar and Vector Potentials
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fluids/soundwaves.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/soundwaves.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Sound waves
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boundary-conditions">
+     Boundary conditions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-supersonic-airfoil">
+   The supersonic airfoil
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#speed-of-sound-derivation">
+   Speed of sound derivation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Thermal physics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#small-amplitude-perturbations">
+     Small amplitude perturbations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="unsteady-sound-waves">
+<span id="sound-waves"></span><h1>Unsteady: Sound waves<a class="headerlink" href="#unsteady-sound-waves" title="Permalink to this headline">¶</a></h1>
+<p><strong>In this section:</strong></p>
+<ul class="simple">
+<li><p>Derivation of the 3D wave equation from linearised conservation of mass and momentum</p></li>
+<li><p>How the speed of sound arises from a linear relationship between pressure and density</p></li>
+<li><p>Under what conditions can we safely treat a fluid as incompressible?</p></li>
+</ul>
+<div class="section" id="id1">
+<h2>Sound waves<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>We begin with the equations of mass and momentum. Crucially, this time we do NOT assume that the fluid is incompressible, but we neglect viscosity. We assume a constant background <span class="math notranslate nohighlight">\(p_0, \rho_0\)</span>, which is perturbed by a small disturbance <span class="math notranslate nohighlight">\(p_1, \rho_1, \underline{u}_1\)</span> so that</p>
+<div class="math notranslate nohighlight" id="equation-perturbations">
+<span class="eqno">()<a class="headerlink" href="#equation-perturbations" title="Permalink to this equation">¶</a></span>\[\underline{u}=\underline{u}_1, \qquad
+p=p_0+p_1,\qquad
+\rho=\rho_0+\rho_1.\]</div>
+<p>Linearising the equations of motion means keeping only the terms that are linearly proportional to any of <span class="math notranslate nohighlight">\(\underline{u}_1\)</span>, <span class="math notranslate nohighlight">\(p_1\)</span>, <span class="math notranslate nohighlight">\(\rho_1\)</span>. Nonlinear products of these quantities are assumed to be much smaller. We obtain</p>
+<div class="math notranslate nohighlight" id="equation-linearsound">
+<span class="eqno">()<a class="headerlink" href="#equation-linearsound" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+\frac{\partial \rho}{\partial t}+\nabla.(\rho \underline{u})&amp;=0 \qquad &amp;\Rightarrow &amp;&amp; \qquad \frac{\partial \rho_1}{\partial t}+\rho_0\nabla .\underline{u}_1&amp;=0,\\
+\rho\left(\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}\right)&amp;=-\nabla p \qquad &amp;\Rightarrow &amp;&amp; \qquad \rho_0\frac{\partial \underline{u}_1}{\partial t}&amp;=-\nabla p_1.
+\end{align}\end{split}\]</div>
+<p>We can take the divergence of the first equation and combine with the second equation to eliminate <span class="math notranslate nohighlight">\(\nabla.\underline{u}_1\)</span>. This gives</p>
+<div class="math notranslate nohighlight" id="equation-lineq">
+<span class="eqno">()<a class="headerlink" href="#equation-lineq" title="Permalink to this equation">¶</a></span>\[\frac{\partial^2 \rho_1}{\partial t}=-\nabla^2 p_1.\]</div>
+<p>To obtain the result fully in terms of a single quantity, we consult the Taylor expansion for <span class="math notranslate nohighlight">\(p\)</span> about <span class="math notranslate nohighlight">\(\rho=\rho_0\)</span>, which gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e164231c-5993-45eb-9802-0f7a7970f7c8">
+<span class="eqno">()<a class="headerlink" href="#equation-e164231c-5993-45eb-9802-0f7a7970f7c8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+p&amp;=p(\rho_0)+(\rho-\rho_0)\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}+\dots \\
+&amp;= p_0+\rho_1\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}+\dots
+\end{align}\]</div>
+<p>Thus, we have</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0af89953-fb73-44ba-8d13-a0bbd5612f02">
+<span class="eqno">()<a class="headerlink" href="#equation-0af89953-fb73-44ba-8d13-a0bbd5612f02" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1=\rho_1 a_0^2, \qquad a_0^2=\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}\end{equation}\]</div>
+<p>We can finally use this result to eliminate <span class="math notranslate nohighlight">\(\rho_1\)</span> from <a class="reference internal" href="#equation-lineq">()</a>, from which we obtain the 3D wave equation for waves travelling with velocity <span class="math notranslate nohighlight">\(a_0\)</span> :</p>
+<div class="math notranslate nohighlight" id="equation-waveeqn">
+<span class="eqno">()<a class="headerlink" href="#equation-waveeqn" title="Permalink to this equation">¶</a></span>\[\frac{\partial p_1}{\partial t^2}=a_0^2\nabla^2 p_1.\]</div>
+<div class="exercise admonition" id="fluids/soundwaves-exercise-0">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+<p>It is trivial to show that the pressure <span class="math notranslate nohighlight">\(\rho_1\)</span> satisfies <a class="reference internal" href="#equation-waveeqn">()</a>. It can also be shown that if the flow is irrotational then both the velocity and the velocity potential also satisfy this equation. Can you do it?</p>
+<p>Hint: Take the gradient of the first expression in <a class="reference internal" href="#equation-linearsound">()</a> and use the following vector identity:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\nabla(\nabla.\underline{u})=\nabla^2\underline{u}+\nabla\times(\nabla\times \underline{u})
+\end{equation*}\]</div>
+</div>
+</div>
+<p>The speed at which sound waves travel is found to be</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d67eef3f-cb2e-4aae-9bd9-5316314b0954">
+<span class="eqno">()<a class="headerlink" href="#equation-d67eef3f-cb2e-4aae-9bd9-5316314b0954" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+a_0=\sqrt{\frac{\gamma p_0}{\rho_0}},
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_0, \rho_0\)</span> are the background pressure and density, and <span class="math notranslate nohighlight">\(\gamma\)</span> is constant for the gas in question. The derivation requires some tricky thermodynamics, which uses the first and second laws of thermodynamics, along with the ideal gas law and isentropic assumption. These assumptions were shown by Laplace to produce an estimate for the speed of sound in a gas that closely matches observation. You don’t need to know the details of the derivation, but they are given in <code class="xref std std-numref docutils literal notranslate"><span class="pre">thermal-physics</span></code> for anyone interested.</p>
+<div class="theorem admonition">
+<p class="admonition-title">Incompressibility assumption</p>
+<p>From an order of magnitude estimate in <a class="reference internal" href="#equation-waveeqn">()</a> we can see that the term on the left side scales as <span class="math notranslate nohighlight">\(U^2/L^2\)</span> and the term on the right scales as <span class="math notranslate nohighlight">\(a_0^2/L^2\)</span>, where <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(L\)</span> are characteristic velocity and length scales of motion. Thus, if <span class="math notranslate nohighlight">\(U^2 \ll a_0^2\)</span> then the fractional change in pressure due to the fluid motion will be small and will result in little expansion or compression of fluid elements. Incompressible flow theory is aerodynamically useful of the flow speed is much smaller than the speed of sound.</p>
+</div>
+<div class="section" id="boundary-conditions">
+<h3>Boundary conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h3>
+<p>There are two types of boundary conditions that are normally given when solving sound wave problems. Either the pressure is specified at the boundary or the velocity is specified at the boundary.</p>
+<p>The second case is equivalent to providing the derivative of the pressure at the boundary, using the relationship that we found in <a class="reference internal" href="#equation-linearsound">()</a> :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f9455078-cafd-4478-82d5-20c5911ac6f1">
+<span class="eqno">()<a class="headerlink" href="#equation-f9455078-cafd-4478-82d5-20c5911ac6f1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{\partial p_1}{\partial t}=-\rho_0 \nabla.\underline{u}_1
+\end{equation}\]</div>
+<div class="exercise admonition" id="fluids/soundwaves-exercise-1">
+
+<p class="admonition-title"></p>
+<div class="section" id="exercise-content">
+<p>The human ear canal can be modelled as a straight 1D tube between <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=L\)</span>, which is open at the ear lobe end and closed at the ear drum end. A sound wave in the air surrounding the ear produces a pressure fluctuation <span class="math notranslate nohighlight">\(Pe^{-i\Gamma t}\)</span> at the ear lobe end.</p>
+<p>Verify that the following results satisfies the equation of motion and use suitable boundary conditions to find expressions for the amplitudes <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-da646ea5-524b-4811-8f96-d9a44056a6d7">
+<span class="eqno">()<a class="headerlink" href="#equation-da646ea5-524b-4811-8f96-d9a44056a6d7" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1=Ae^{i\Gamma(x/c-t)}+Be^{-i\Gamma(x/c+t)}\end{equation}\]</div>
+<p>Under what conditions does resonance occur? Find the fundamental resonant frequency, given that the human ear canal is approximately 2.5cm long and that the speed of sound in air is approximately 340ms<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-supersonic-airfoil">
+<h2>The supersonic airfoil<a class="headerlink" href="#the-supersonic-airfoil" title="Permalink to this headline">¶</a></h2>
+<p>If the derivation above is repeated for the case of steady two-dimensional flow with uniform background motion <span class="math notranslate nohighlight">\(\underline{u}=(U,0,0)\)</span> then the equation of motion reduces to</p>
+<div class="amsmath math notranslate nohighlight" id="equation-db58a300-a12f-4871-b23f-f674081b34f8">
+<span class="eqno">()<a class="headerlink" href="#equation-db58a300-a12f-4871-b23f-f674081b34f8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+(1-M^2)\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial y^2}=0, \qquad M=\frac{U}{a_0}.
+\end{equation}\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(M\)</span> is called the Mach number. If this value is much smaller than smaller than 1, then the result is the solution can be well approximated by taking <span class="math notranslate nohighlight">\(M=0\)</span> so that the result reduces to the case of incompressible flow.</p>
+<p>The value <span class="math notranslate nohighlight">\(M=1\)</span> is a critical value at which the streamlines for the flow take on a different pattern. For values in the range <span class="math notranslate nohighlight">\(M\geq 1\)</span> there is no disturbance to the fluid ahead of a cone extending backwards from the leading edge of the airfoil. This is related to the phenomenon of a <a class="reference external" href="https://www.youtube.com/watch?v=JO4_VHM69oI">sonic boom</a>.</p>
+</div>
+<div class="section" id="speed-of-sound-derivation">
+<span id="thermal-physics"></span><h2>Speed of sound derivation<a class="headerlink" href="#speed-of-sound-derivation" title="Permalink to this headline">¶</a></h2>
+<p><em>The material in this subsection is optional.</em></p>
+<div class="section" id="id2">
+<h3>Thermal physics<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>According to the first law of thermodynamics, the total change of internal energy of a system is given by the relationship below, where <span class="math notranslate nohighlight">\(\mathrm{d}Q\)</span> is the change in heat energy and <span class="math notranslate nohighlight">\(p\mathrm{d}V\)</span> represents work done by pressure:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f3be979c-9bf6-4cfb-a4da-eac82423a93e">
+<span class="eqno">()<a class="headerlink" href="#equation-f3be979c-9bf6-4cfb-a4da-eac82423a93e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\mathrm{d}U=\mathrm{d}Q-p\mathrm{d}V,
+\end{equation}\]</div>
+<p>The change in heat energy can be related to the change in entropy <span class="math notranslate nohighlight">\(\mathrm{d}S\)</span> by the second law of thermodynamics <span class="math notranslate nohighlight">\(\mathrm{d}S=\frac{\mathrm{d}Q}{T}\)</span>, and the total change of internal energy can be replaced by the change of enthalpy <span class="math notranslate nohighlight">\(H=U+pV\)</span> to give</p>
+<div class="math notranslate nohighlight" id="equation-entropy">
+<span class="eqno">()<a class="headerlink" href="#equation-entropy" title="Permalink to this equation">¶</a></span>\[\mathrm{d}S=\frac{1}{T}\mathrm{d}H-\frac{V}{T}\mathrm{d}p.\]</div>
+<p>For an ideal gas, the following relationships also hold, in which where <span class="math notranslate nohighlight">\(c_p\)</span> is the specific heat capacity at constant temperature and <span class="math notranslate nohighlight">\(c_v\)</span> is the specific heat capacity at constant volume:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0400d822-df68-4658-9c7e-c6e9ec7c5d36">
+<span class="eqno">()<a class="headerlink" href="#equation-0400d822-df68-4658-9c7e-c6e9ec7c5d36" title="Permalink to this equation">¶</a></span>\[\begin{equation}pV=nRT, \qquad nR=(c_p-c_v), \qquad c_p=\frac{\mathrm{d}H}{\mathrm{d}T}, \qquad c_v=\frac{\mathrm{d}U}{\mathrm{d}T}\end{equation}\]</div>
+<p>Thus, we can rewrite <a class="reference internal" href="#equation-entropy">()</a> as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-af4f1244-4f25-4a16-8e3c-92ccb78b6723">
+<span class="eqno">()<a class="headerlink" href="#equation-af4f1244-4f25-4a16-8e3c-92ccb78b6723" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\mathrm{d}S=\frac{c_p}{T}\mathrm{d}T-\frac{(c_p-c_v)}{p}\mathrm{d}p.
+\end{equation}\]</div>
+<p>For an adiabatic process, there is no change in entropy, <span class="math notranslate nohighlight">\(\mathrm{d}S=0\)</span>, and so integrating this expression gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-903c0405-c4c2-4ceb-a707-5989882ec477">
+<span class="eqno">()<a class="headerlink" href="#equation-903c0405-c4c2-4ceb-a707-5989882ec477" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+c_p\ln(T/T_0)=(c_p-c_v)\ln(p/p_0)
+\end{equation}\]</div>
+<p>Finally, by using the relationship <span class="math notranslate nohighlight">\(p=\rho R T\)</span> to eliminate <span class="math notranslate nohighlight">\(T/T_0\)</span>, we may write the result</p>
+<div class="math notranslate nohighlight" id="equation-isentropic">
+<span class="eqno">()<a class="headerlink" href="#equation-isentropic" title="Permalink to this equation">¶</a></span>\[p\rho^{-\gamma}=\mathrm{const}, \qquad \gamma=\frac{c_p}{c_v}.\]</div>
+<p>The value of <span class="math notranslate nohighlight">\(\gamma\)</span> is approximately 1.40 for dry air at atmospheric pressure.</p>
+</div>
+<div class="section" id="small-amplitude-perturbations">
+<h3>Small amplitude perturbations<a class="headerlink" href="#small-amplitude-perturbations" title="Permalink to this headline">¶</a></h3>
+<p>Taking the small perturbation approach used in <a class="reference internal" href="#equation-perturbations">()</a> and substituting into the isentropic relation <a class="reference internal" href="#equation-isentropic">()</a> gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a1fb8af9-20e6-46db-b451-c3235098c282">
+<span class="eqno">()<a class="headerlink" href="#equation-a1fb8af9-20e6-46db-b451-c3235098c282" title="Permalink to this equation">¶</a></span>\[\begin{align}
+p\rho^{-\gamma}&amp;=p_0\rho_0^{-\gamma}\left(1+\frac{p_1}{p_0}\right)\left(1+\frac{\rho_1}{\rho_0}\right)^{-\gamma}\\
+&amp;=p_0\rho_0^{-\gamma}\left(1+\frac{p_1}{p_0}\right)\left(1-\gamma\frac{\rho_1}{\rho_0}+\dots\right)\\
+&amp;=p_0\rho_0^{-\gamma}\left(1+\left(\frac{p_1}{p_0}-\gamma\frac{\rho_1}{\rho_0}\right)+\dots\right)
+\end{align}\]</div>
+<p>Since the result should be constant, the first order (linear) approximation shows that</p>
+<div class="math notranslate nohighlight" id="equation-soundspeed">
+<span class="eqno">()<a class="headerlink" href="#equation-soundspeed" title="Permalink to this equation">¶</a></span>\[\frac{p_1}{p_0}=\gamma\frac{\rho_1}{\rho_0}\quad \Rightarrow p_1=a_0^2\rho_1, \qquad a_0^2=\frac{\gamma p_0}{\rho_0}.\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./fluids"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
