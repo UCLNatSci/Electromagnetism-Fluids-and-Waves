@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.5. Conservation law derivations &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>3.7. Conservation law derivations &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,8 +56,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.6. Shear stress and viscosity" href="navstok.html" />
-    <link rel="prev" title="3.4. The velocity potential" href="potential.html" />
+    <link rel="next" title="3.8. Shear stress and viscosity" href="navstok.html" />
+    <link rel="prev" title="3.6. The velocity potential" href="potential.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -231,7 +231,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="intro.html">
-   3. Fluids
+   3. Introduction
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -241,77 +241,77 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="mathideas.html">
-     3.1. Mathematical background
+     3.3. Mathematical background
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="visualise.html">
-     3.2. Visualising fluid motion
+     3.4. Visualising fluid motion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="helmholtz.html">
-     3.3. Divergence and vorticity
+     3.5. Divergence and vorticity
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="potential.html">
-     3.4. The velocity potential
+     3.6. The velocity potential
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3.5. Conservation law derivations
+     3.7. Conservation law derivations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="navstok.html">
-     3.6. Shear stress and viscosity
+     3.8. Shear stress and viscosity
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="scaling.html">
-     3.7. Scaling arguments
+     3.9. Scaling arguments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="steadysoln.html">
-     3.8. Steady Euler solutions
+     3.10. Steady Euler solutions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="bernoulli.html">
-     3.9. Bernoulli’s equation
+     3.11. Bernoulli’s equation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="asymptotic.html">
-     3.10. Perturbations and asymptotics
+     3.12. Perturbations and asymptotics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="vorticity.html">
-     3.11. Vortex transport
+     3.13. Vortex transport
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="waterwaves.html">
-     3.12. Unsteady: Water waves
+     3.14. Unsteady: Water waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="soundwaves.html">
-     3.13. Unsteady: Sound waves
+     3.15. Unsteady: Sound waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rotfram.html">
-     3.14. Rotational reference frames
+     3.16. Rotational reference frames
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ekman.html">
-     3.15. Geophysical phenomena
+     3.17. Geophysical phenomena
     </a>
    </li>
   </ul>
@@ -405,22 +405,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-material-derivative">
-   3.5.1. The material derivative
+   3.7.1. The material derivative
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mass-transport-continuity">
-   3.5.2. Mass transport (continuity)
+   3.7.2. Mass transport (continuity)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cauchy-stress-theorem">
-   3.5.3. Cauchy stress theorem
+   3.7.3. Cauchy stress theorem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conservation-of-momentum">
-   3.5.4. Conservation of momentum
+   3.7.4. Conservation of momentum
   </a>
  </li>
 </ul>
@@ -435,15 +435,15 @@
               <div>
                 
   <div class="section" id="conservation-law-derivations">
-<h1><span class="section-number">3.5. </span>Conservation law derivations<a class="headerlink" href="#conservation-law-derivations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.7. </span>Conservation law derivations<a class="headerlink" href="#conservation-law-derivations" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What is measured by the material derivative?</p></li>
 <li><p>What do the terms in the mass and momentum conservation equations mean?</p></li>
 </ul>
 <div class="section" id="the-material-derivative">
-<h2><span class="section-number">3.5.1. </span>The material derivative<a class="headerlink" href="#the-material-derivative" title="Permalink to this headline">¶</a></h2>
-<p>In <a class="reference internal" href="mathideas.html#dir-deriv"><span class="std std-numref">Section 3.1.3</span></a> (<a class="reference internal" href="mathideas.html#dir-deriv"><span class="std std-ref">The directional derivative</span></a>) we found that the rate of change of a steady (time-independent) field <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> in a given direction <span class="math notranslate nohighlight">\(\underline{u}\)</span> can be found by a scalar projection:</p>
+<h2><span class="section-number">3.7.1. </span>The material derivative<a class="headerlink" href="#the-material-derivative" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="reference internal" href="mathideas.html#dir-deriv"><span class="std std-numref">Section 3.3.3</span></a> (<a class="reference internal" href="mathideas.html#dir-deriv"><span class="std std-ref">The directional derivative</span></a>) we found that the rate of change of a steady (time-independent) field <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> in a given direction <span class="math notranslate nohighlight">\(\underline{u}\)</span> can be found by a scalar projection:</p>
 <div class="math notranslate nohighlight">
 \[D_{\underline{u}}\phi(\underline{x})=\underline{u}.\nabla\phi.\]</div>
 <p>Now, suppose that the background field is non-steady, so that <span class="math notranslate nohighlight">\(\phi=\phi(\underline{x},t)\)</span>. Proceeding as before by using the multi-variate chain rule, we immediately obtain</p>
@@ -459,7 +459,7 @@
 </div>
 </div>
 <div class="section" id="mass-transport-continuity">
-<h2><span class="section-number">3.5.2. </span>Mass transport (continuity)<a class="headerlink" href="#mass-transport-continuity" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.2. </span>Mass transport (continuity)<a class="headerlink" href="#mass-transport-continuity" title="Permalink to this headline">¶</a></h2>
 <p>Consider the mass flow through an arbitrary volume at a fixed location, like the “bag” shown in the image on the left. We assume matter is neither created or destroyed.</p>
 <a class="reference internal image-reference" href="../_images/massflux.png" id="mass-flux"><img alt="illustration of fluid element" class="align-left" id="mass-flux" src="../_images/massflux.png" style="width: 284.0px; height: 180.8px;" /></a>
 <p>The following statement says that the change in mass of the fluid parcel is equal to the net mass flow into the enclosing surface <span class="math notranslate nohighlight">\(\delta A\)</span> per unit time.</p>
@@ -493,7 +493,7 @@
 </div>
 </div>
 <div class="section" id="cauchy-stress-theorem">
-<h2><span class="section-number">3.5.3. </span>Cauchy stress theorem<a class="headerlink" href="#cauchy-stress-theorem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.3. </span>Cauchy stress theorem<a class="headerlink" href="#cauchy-stress-theorem" title="Permalink to this headline">¶</a></h2>
 <p>“Stress” is a measure of the internal forces, such as pressure or friction acting between neighbouring fluid elements. We cannot discuss stress without first defining a particular surface that the stress acts on, since friction and pressure depend on the surface orientation.</p>
 <p>However, the stress for a given surface can be expressed as a vector of components parallel to each coordinate direction, and according to Cauchy’s stress theorem, the stress vector on any plane through a point can be found by knowing the stress vector on each of three mutually perpendicular planes. We will consider planes perpendicular to the coordinate axes.</p>
 <p>The Cauchy stress tensor (deviatoric stress tensor)</p>
@@ -516,7 +516,7 @@
 <span class="eqno">(3.46)<a class="headerlink" href="#equation-deviatoricstress3" title="Permalink to this equation">¶</a></span>\[\underline{T}^{(n)}=\underline{\sigma}.\hat{\underline{n}}.\]</div>
 </div>
 <div class="section" id="conservation-of-momentum">
-<h2><span class="section-number">3.5.4. </span>Conservation of momentum<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7.4. </span>Conservation of momentum<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">¶</a></h2>
 <p>By Newton’s second law, the change in momentum is given by the sum of all forces acting on the volume:</p>
 <div class="math notranslate nohighlight" id="equation-consofmom1">
 <span class="eqno">(3.47)<a class="headerlink" href="#equation-consofmom1" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}t}\iiint_{\delta V}\rho\underline{u}\ \mathrm{d}V=\iiint_{\delta V}\rho\underline{F}\ \mathrm{d}V+\iint_{\delta S}\underline{\sigma}(t,\underline{x}).\hat{\underline{n}}\mathrm{d}S\]</div>
@@ -576,8 +576,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="potential.html" title="previous page"><span class="section-number">3.4. </span>The velocity potential</a>
-    <a class='right-next' id="next-link" href="navstok.html" title="next page"><span class="section-number">3.6. </span>Shear stress and viscosity</a>
+    <a class='left-prev' id="prev-link" href="potential.html" title="previous page"><span class="section-number">3.6. </span>The velocity potential</a>
+    <a class='right-next' id="next-link" href="navstok.html" title="next page"><span class="section-number">3.8. </span>Shear stress and viscosity</a>
 
         </div>
         

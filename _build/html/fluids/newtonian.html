@@ -229,7 +229,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="intro.html">
-   3. Fluids
+   3. Introduction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -239,77 +239,77 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="mathideas.html">
-     3.1. Mathematical background
+     3.3. Mathematical background
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="visualise.html">
-     3.2. Visualising fluid motion
+     3.4. Visualising fluid motion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="helmholtz.html">
-     3.3. Divergence and vorticity
+     3.5. Divergence and vorticity
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="potential.html">
-     3.4. The velocity potential
+     3.6. The velocity potential
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="conservation.html">
-     3.5. Conservation law derivations
+     3.7. Conservation law derivations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="navstok.html">
-     3.6. Shear stress and viscosity
+     3.8. Shear stress and viscosity
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="scaling.html">
-     3.7. Scaling arguments
+     3.9. Scaling arguments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="steadysoln.html">
-     3.8. Steady Euler solutions
+     3.10. Steady Euler solutions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="bernoulli.html">
-     3.9. Bernoulli’s equation
+     3.11. Bernoulli’s equation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="asymptotic.html">
-     3.10. Perturbations and asymptotics
+     3.12. Perturbations and asymptotics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="vorticity.html">
-     3.11. Vortex transport
+     3.13. Vortex transport
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="waterwaves.html">
-     3.12. Unsteady: Water waves
+     3.14. Unsteady: Water waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="soundwaves.html">
-     3.13. Unsteady: Sound waves
+     3.15. Unsteady: Sound waves
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="rotfram.html">
-     3.14. Rotational reference frames
+     3.16. Rotational reference frames
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ekman.html">
-     3.15. Geophysical phenomena
+     3.17. Geophysical phenomena
     </a>
    </li>
   </ul>
@@ -456,8 +456,8 @@ For a Newtonian fluid with zero body force,</p>
 <p>where <span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{U L}{\nu}\)</span> is a parameter called the Reynolds number.</p>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <p>Written out in full, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-924a890e-d322-4317-afd0-72840c29a158">
-<span class="eqno">()<a class="headerlink" href="#equation-924a890e-d322-4317-afd0-72840c29a158" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-07a166d7-968d-432f-a885-4d25cb6a59a1">
+<span class="eqno">()<a class="headerlink" href="#equation-07a166d7-968d-432f-a885-4d25cb6a59a1" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
 <p>It is helpful to classify the study of fluids as follows:</p>
 <p>Incompressible	Compressible
 Inviscid	This course	Acoustics (high speed)
