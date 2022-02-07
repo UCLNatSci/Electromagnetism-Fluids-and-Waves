@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Fluids &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>Fluids &#8212; Electromagnetism, Fluids and Waves</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.2. Mathematical background" href="mathideas.html" />
-    <link rel="prev" title="2.12. Electromagnetic Scalar and Vector Potentials" href="../electromagnetism/EMpotentials.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../waves/introduction.html">
    1. Waves
@@ -231,93 +229,6 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   3. Fluids
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mathideas.html">
-     3.2. Mathematical background
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="visualise.html">
-     3.3. Visualising fluid motion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="helmholtz.html">
-     3.4. Divergence and vorticity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="potential.html">
-     3.5. The velocity potential
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conservation.html">
-     3.6. Conservation law derivations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="navstok.html">
-     3.7. Shear stress and viscosity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="scaling.html">
-     3.8. Scaling arguments
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="steadysoln.html">
-     3.9. Steady Euler solutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="bernoulli.html">
-     3.10. Bernoulli’s equation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="asymptotic.html">
-     3.11. Perturbations and asymptotics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="vorticity.html">
-     3.12. Vortex transport
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="waterwaves.html">
-     3.13. Unsteady: Water waves
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="soundwaves.html">
-     3.14. Unsteady: Sound waves
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rotfram.html">
-     3.15. Rotational reference frames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ekman.html">
-     3.16. Geophysical phenomena
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -400,19 +311,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-continuum-hypothesis">
-   3.1. The continuum hypothesis
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -422,7 +320,7 @@
               <div>
                 
   <div class="section" id="fluids">
-<h1><span class="section-number">3. </span>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
+<h1>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
 <p>Fluid dynamics is the study of flow. Since anything that flows can be thought of as a fluid, this field of study covers a tremendous range of applications, including aerodynamics, meteorology, hydraulics, oceanography, astrophysical dynamics, acoustics, hemodynamics (blood flow) and mucus flows. Principles of fluid dynamics have even been applied to the study of granular flows, such as dry sand, vehicular traffic and crowd dynamics.</p>
 <p>Despite the vast range of applications, most of these phenomena can be examined by just three unifying principles:</p>
 <ul class="simple">
@@ -430,18 +328,23 @@
 <li><p>Conservation of momentum</p></li>
 <li><p>Conservation of energy</p></li>
 </ul>
-<p>For many flows (this course), we can neglect thermodynamic effects, and in that case we can also get by without conservation of energy. This chapter introduces the equations of conservation of mass and conservation of momentum.</p>
-<div class="section" id="the-continuum-hypothesis">
-<h2><span class="section-number">3.1. </span>The continuum hypothesis<a class="headerlink" href="#the-continuum-hypothesis" title="Permalink to this headline">¶</a></h2>
+<p>For many flows (this course), we can neglect thermodynamic effects, and in that case we can also get by without conservation of energy.</p>
+<p><b>The continuum hypothesis</b></p>
 <p>So that we can use the tools of calculus, we treat the fluid as if it were continuous in structure and we regard physical quantities as locally uniform. This also means we can treat gases and liquids in the same way, since the equations of motion are independent of the particle structure.</p>
 <p>An illustration of the idea is shown below, applied to measurements of density. We ignore molecular fluctuations, and consider a locally averaged measure of density based on the mean free path between atoms.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/continuum_hypothesis.png" id="continuum-hypothesis"><img alt="some alternative text" class="align-center" id="continuum-hypothesis" src="../_images/continuum_hypothesis.png" style="width: 374.40000000000003px; height: 240.0px;" /></a>
 <br>
 <p>In actuality, the concept of “density” does not apply very meaningfully at the microscopic level, since the density at each point is defined by either being “inside” or “outside” an atom.</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<p><b>About this book:</b></p>
+<p>In <strong>chapters 1-4</strong> we introduce some of the mathematical ideas that are required to discuss and mathematically analyse fluid behaviours. We consider different ways of describing fluid motion and distinguish between streamlines and particle paths. We introduce the important concepts of divergence, vorticity, potential flow.</p>
+<p>In <strong>chapters 5-6</strong> the equations of motion are introduced from first principles. The concept of viscosity is given a detailed treatment, through which we start to consider the interesting behaviours of some fluids such as ketchup, paint, and blood.</p>
+<p>In <strong>chapter 7</strong> we begin to consider how scaling arguments can be used to compare the results of different experiments and to simplify the theory by establishing rational ways to make approximations. Here, we introduce the famous Reynolds number, as well as some other non-dimensional parameters of interest.</p>
+<p>In <strong>chapters 8-9</strong> we neglect viscosity. This allows us first to derive solutions for some steady flows in simple geometries. By making further simplifying assumptions we derive Bernoulli’s equation, which relates pressure and velocity along a streamline.</p>
+<p>In <strong>chapter 10</strong> we briefly introduce perturbation techniques that can be used to investigate nearly steady flows and develop models of laminar-turbulent transition. We also introduce the important concept of a boundary layer, and touch upon a mathematical technique that is used to identify and study different layers in the fluid.</p>
+<p>In <strong>chapter 11</strong> it is shown that vorticity can only arise in a viscous flow, and that by neglecting viscosity we encounter the unphysical result that an aeroplane can fly without experiencing any drag. Nevertheless, the inviscid result is useful here and helps us to understand where lift comes from.</p>
+<p>In <strong>chapters 12-13</strong> we take a brief look at water waves and sound waves. These two types of waves are generated by very different mechanisms. Surface water waves are gravity driven and can be treated by assuming that the fluid is both incompressible and irrotational. Sound waves are pressure driven and require compressibility to be taken into account.</p>
+<p>In <strong>chapters 14-15</strong> we some geophysical phenomena that relate to rotating fluids such as hurricanes, tornadoes and ocean gyres. We also explain the famous “tea leaf paradox”. The material in these two chapters it is not strictly necessary for this course, and could be skimmed or skipped entirely, though it will be discussed in lecture.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -473,24 +376,6 @@
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="../electromagnetism/EMpotentials.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">2.12. </span>Electromagnetic Scalar and Vector Potentials</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="mathideas.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">3.2. </span>Mathematical background</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
