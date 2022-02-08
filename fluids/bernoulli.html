@@ -472,11 +472,11 @@
 <div class="math notranslate nohighlight">
 \[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
 <p>Recall that if the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> is conservative (does no work), then it can be expressed as the gradient of a scalar potential. By convention, we usually introduce a negative sign, so that that work done against <span class="math notranslate nohighlight">\(\underline{F}\)</span> increases the potential, while work done by <span class="math notranslate nohighlight">\(\underline{F}\)</span> decreases the potential:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-624d2425-e25c-4c41-97d5-8fe01e631bb4">
-<span class="eqno">(3.87)<a class="headerlink" href="#equation-624d2425-e25c-4c41-97d5-8fe01e631bb4" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=-\nabla\phi.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5e1a4c39-7d3d-403e-bc11-701d76b94119">
+<span class="eqno">(3.87)<a class="headerlink" href="#equation-5e1a4c39-7d3d-403e-bc11-701d76b94119" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=-\nabla\phi.\end{equation}\]</div>
 <p>Now, let us further assume that the fluid is uniform density, <span class="math notranslate nohighlight">\(\rho\)</span> is constant, so that we may write:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22a8487d-3710-46ec-8896-68e613915fec">
-<span class="eqno">(3.88)<a class="headerlink" href="#equation-22a8487d-3710-46ec-8896-68e613915fec" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\nabla\left(\frac{p}{\rho}+\phi\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-02bb6421-9804-4035-9f2c-d1e5757f5d17">
+<span class="eqno">(3.88)<a class="headerlink" href="#equation-02bb6421-9804-4035-9f2c-d1e5757f5d17" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\nabla\left(\frac{p}{\rho}+\phi\right).\end{equation}\]</div>
 <p>Using the vector identity <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}=(\nabla\times\underline{u})\times\underline{u}+\nabla\left(\frac{1}{2}\underline{u}.\underline{u}\right)=(\underline{\omega}\times\underline{u})+\nabla\left(\frac{1}{2}v^2\right)\)</span> then gives</p>
 <div class="math notranslate nohighlight" id="equation-vorticity-head">
 <span class="eqno">(3.89)<a class="headerlink" href="#equation-vorticity-head" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times \underline{u})=-\nabla H, \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2\]</div>
@@ -488,8 +488,8 @@
 </div>
 </div>
 <p>We may yet further simplify if we assume that the flow is steady, so <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial \underline{u}}{\partial t}=0\)</span>, and by taking the scalar product with vector <span class="math notranslate nohighlight">\(\underline{u}\)</span> to eliminate the vorticity term:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cbedecaa-783a-4916-b36d-ffd750cf01bc">
-<span class="eqno">(3.90)<a class="headerlink" href="#equation-cbedecaa-783a-4916-b36d-ffd750cf01bc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-76c1fe9e-b13c-413f-89ac-3963d9c0a5b7">
+<span class="eqno">(3.90)<a class="headerlink" href="#equation-76c1fe9e-b13c-413f-89ac-3963d9c0a5b7" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\underline{a}.(\underline{b}\times\underline{a})=0\)</span> for any vectors <span class="math notranslate nohighlight">\(\underline{a},\underline{b}\)</span> this can be simplified to <span class="math notranslate nohighlight">\(\underline{u}.\nabla H=0\)</span>. The result says that the head remains constant on a streamline, since the directional derivative along <span class="math notranslate nohighlight">\(\underline{u}\)</span> is zero.</p>
 </div>
 <div class="section" id="applications">
@@ -502,14 +502,14 @@
 <a class="reference internal image-reference" href="../_images/venturi.png" id="venturi"><img alt="a particle moving through a potential field" class="align-center" id="venturi" src="../_images/venturi.png" style="width: 288.0px; height: 115.2px;" /></a>
 <br>
 <p>By conservation of mass, we may write down the following result for the volumetric flow rate:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cda72f40-08f6-4e40-82ab-23b108767f03">
-<span class="eqno">(3.91)<a class="headerlink" href="#equation-cda72f40-08f6-4e40-82ab-23b108767f03" title="Permalink to this equation">¶</a></span>\[\begin{equation}A u_0 = B u_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f3f91c16-6db1-4134-8a31-3fab756056eb">
+<span class="eqno">(3.91)<a class="headerlink" href="#equation-f3f91c16-6db1-4134-8a31-3fab756056eb" title="Permalink to this equation">¶</a></span>\[\begin{equation}A u_0 = B u_1.\end{equation}\]</div>
 <p>By Bernoulli’s theorem for the central streamline we may also say that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-67977424-0812-40ae-b77e-fb322dd10ed7">
-<span class="eqno">(3.92)<a class="headerlink" href="#equation-67977424-0812-40ae-b77e-fb322dd10ed7" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_0+\frac{1}{2}\rho u_0^2=p_1+\frac{1}{2}\rho u_1^2.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-4cd2e547-8904-41b4-a533-acd489762157">
+<span class="eqno">(3.92)<a class="headerlink" href="#equation-4cd2e547-8904-41b4-a533-acd489762157" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_0+\frac{1}{2}\rho u_0^2=p_1+\frac{1}{2}\rho u_1^2.\end{equation}\]</div>
 <p>Rearranging the two results together gives (for example)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-346fafee-3ff2-4f2d-873c-2a45138de41a">
-<span class="eqno">(3.93)<a class="headerlink" href="#equation-346fafee-3ff2-4f2d-873c-2a45138de41a" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1-p_0 = \frac{1}{2}\rho u_0^2\left(1-\frac{A^2}{B^2}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9ca8ef26-ec80-4290-bbb2-c6a34b4e252c">
+<span class="eqno">(3.93)<a class="headerlink" href="#equation-9ca8ef26-ec80-4290-bbb2-c6a34b4e252c" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1-p_0 = \frac{1}{2}\rho u_0^2\left(1-\frac{A^2}{B^2}\right).\end{equation}\]</div>
 <p>We can see that through the choke point there will be an increase in velocity and a decrease in pressure compared to the inlet/outlet.</p>
 <p>In general, when we observe bunching of streamlines the constrainment in volume implies a velocity increase due to mass conservation, since to maintain the same flux through a surface the velocity must increase. As a result, if the assumptions of Bernoulli are met, we see a pressure decrease. This result is sometimes used to explain the lift over an airfoil or the magnus effect on a rotating cylinder.</p>
 <p><strong>However, we must be careful as Bernoulli’s theorem assumes inviscid fluid, and it turns out the viscosity is very important when fluid moves past a boundary.</strong></p>
@@ -521,8 +521,8 @@
 <a class="reference internal image-reference" href="../_images/manometer.png" id="manometer"><img alt="a particle moving through a potential field" class="align-center" id="manometer" src="../_images/manometer.png" style="width: 288.0px; height: 144.0px;" /></a>
 <br>
 <p>According to Bernoulli’s theorem <span class="math notranslate nohighlight">\(p_1-p_0=\rho g h\)</span>, so using the result for the pressure difference that we obtained previously gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-82d213c1-78cd-48ce-b304-53b8f38d38d2">
-<span class="eqno">(3.94)<a class="headerlink" href="#equation-82d213c1-78cd-48ce-b304-53b8f38d38d2" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-53ca8b8f-3267-4f8d-9507-d7e327c28173">
+<span class="eqno">(3.94)<a class="headerlink" href="#equation-53ca8b8f-3267-4f8d-9507-d7e327c28173" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}\]</div>
 <p>If we know the ratio of the two cross-sectional areas, then by measuring height <span class="math notranslate nohighlight">\(h\)</span> in the fluid column we may determine the flow speed through the narrow part of the pipe.</p>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-1">
 <p class="admonition-title"><span class="caption-number">Exercise 3.19 </span> </p>
@@ -538,16 +538,16 @@
 <h3><span class="section-number">3.9.3.3. </span>A rotating bucket<a class="headerlink" href="#a-rotating-bucket" title="Permalink to this headline">¶</a></h3>
 <p>Consider an ideal fluid of zero viscosity, rotating under gravity <span class="math notranslate nohighlight">\(g\)</span> about the <span class="math notranslate nohighlight">\(z\)</span> axis with constant angular velocity <span class="math notranslate nohighlight">\(\Omega=\dot{\theta}\)</span>.
 The particle paths for this motion satisfy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3fd965f4-e6f4-43e1-8a28-b9ebab084dbb">
-<span class="eqno">(3.95)<a class="headerlink" href="#equation-3fd965f4-e6f4-43e1-8a28-b9ebab084dbb" title="Permalink to this equation">¶</a></span>\[\begin{equation}x=r\cos(\theta), \quad y=r\sin(\theta),\quad z=\mathrm{constant,}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-4cf200f5-c668-4ee3-a39e-08da366096b7">
+<span class="eqno">(3.95)<a class="headerlink" href="#equation-4cf200f5-c668-4ee3-a39e-08da366096b7" title="Permalink to this equation">¶</a></span>\[\begin{equation}x=r\cos(\theta), \quad y=r\sin(\theta),\quad z=\mathrm{constant,}\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\dot{r}=0\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}=\Omega\)</span>. From these results we may obtain the velocity field relative to Cartesian axes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3da4b6fa-6fb0-4416-bde0-c9b77fd8d96b">
-<span class="eqno">(3.96)<a class="headerlink" href="#equation-3da4b6fa-6fb0-4416-bde0-c9b77fd8d96b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\dot{x}=-\dot{\theta}r\sin(\theta)=-\Omega y, \quad \dot{y}=\dot{\theta}r\cos(\theta)=\Omega x \quad \Rightarrow \underline{u}=\Omega(-y,x,0).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2e01497c-445c-44ca-9f58-d353423f241f">
+<span class="eqno">(3.96)<a class="headerlink" href="#equation-2e01497c-445c-44ca-9f58-d353423f241f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\dot{x}=-\dot{\theta}r\sin(\theta)=-\Omega y, \quad \dot{y}=\dot{\theta}r\cos(\theta)=\Omega x \quad \Rightarrow \underline{u}=\Omega(-y,x,0).\end{equation}\]</div>
 <p>This is an example of vortex flow. You are encouraged to verify that the vorticity for this fluid is <span class="math notranslate nohighlight">\(\omega\)</span> and that the flow is divergence-free. Verify also that <span class="math notranslate nohighlight">\(\dot{\underline{u}}=\underline{0}\)</span> and so the streamlines are the same as the particle paths.</p>
 <p>Bernoulli’s equation <a class="reference internal" href="#equation-bernoulli">(3.86)</a> applies on a streamline, but the constant of integration varies from streamline to streamline since the flow is not irrotational. Therefore solving the equation for <span class="math notranslate nohighlight">\(h\)</span> in terms of <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(p_0\)</span> will not give us the shape of the fluid surface. If you try this, it would suggest that the shape of the fluid surface is an upturned parabola, which is exactly the opposite of what we observe when we spin a bucket!</p>
 <p>To find the fluid surface, we can go back to Euler’s formula, which applies throughout the fluid, not only on a streamline:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-73416d6c-41b5-4902-827d-90dd987c6421">
-<span class="eqno">(3.97)<a class="headerlink" href="#equation-73416d6c-41b5-4902-827d-90dd987c6421" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{f}, \qquad \underline{f}=(0,0,-g)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a475eb21-6956-419c-9feb-dad55933fc2f">
+<span class="eqno">(3.97)<a class="headerlink" href="#equation-a475eb21-6956-419c-9feb-dad55933fc2f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{f}, \qquad \underline{f}=(0,0,-g)\end{equation}\]</div>
 <div class="exercise admonition" id="bucket-exercise">
 <p class="admonition-title"><span class="caption-number">Exercise 3.20 </span> </p>
 <div class="section" id="exercise-content">
