@@ -33,7 +33,7 @@ We can take the divergence of the first equation and combine with the second equ
 
 ```{math}
 :label: lineq
-\frac{\partial^2 \rho_1}{\partial t}=-\nabla^2 p_1.
+\frac{\partial^2 \rho_1}{\partial t^2}=-\nabla^2 p_1.
 ```
 
 To obtain the result fully in terms of a single quantity, we consult the Taylor expansion for $p$ about $\rho=\rho_0$, which gives
@@ -51,7 +51,7 @@ We can finally use this result to eliminate $\rho_1$ from {eq}`lineq`, from whic
 
 ```{math}
 :label: waveeqn
-\frac{\partial p_1}{\partial t^2}=a_0^2\nabla^2 p_1.
+\frac{\partial p_1^2}{\partial t^2}=a_0^2\nabla^2 p_1.
 ```
 
 ```{exercise}
