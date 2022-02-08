@@ -9,7 +9,7 @@ Despite the vast range of applications, most of these phenomena can be examined 
 
 For many flows (this course), we can neglect thermodynamic effects, and in that case we can also get by without conservation of energy.
 
-<b>The continuum hypothesis</b>
+<h2>The continuum hypothesis</h2>
 
 So that we can use the tools of calculus, we treat the fluid as if it were continuous in structure and we regard physical quantities as locally uniform. This also means we can treat gases and liquids in the same way, since the equations of motion are independent of the particle structure.
 
@@ -30,7 +30,7 @@ scale: 80%
 
 In actuality, the concept of "density" does not apply very meaningfully at the microscopic level, since the density at each point is defined by either being "inside" or "outside" an atom.
 
-<b> About this book: <\b>
+<h2> About this book: </h2>
 
 In **chapters 1-4** we introduce some of the mathematical ideas that are required to discuss and mathematically analyse fluid behaviours. We consider different ways of describing fluid motion and distinguish between streamlines and particle paths. We introduce the important concepts of divergence, vorticity, potential flow.
 
