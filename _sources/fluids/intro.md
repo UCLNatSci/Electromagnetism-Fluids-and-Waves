@@ -17,7 +17,7 @@ An illustration of the idea is shown below, applied to measurements of density. 
 
 <br>
 
-```{image} fluids/navstok_img/continuum_hypothesis.png
+```{image} navstok_img/continuum_hypothesis.png
 ---
 name: continuum_hypothesis
 alt: some alternative text
