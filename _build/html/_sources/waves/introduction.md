@@ -1,4 +1,4 @@
-# Waves
+# Introduction
 
 Oscillating and wave behaviour are some of the most common ways in which energy is transferred in nature, whether it is the light waves that our eyes have evolved to see 
 or the water waves that batter our coastlines, these all have one fundamental, universal concept at their foundation, waves and wave-like phenomena.

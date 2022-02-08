@@ -5,47 +5,53 @@ format: jb-book
 root: intro
 options:
   numbered: True
-chapters:
-- file: waves/introduction
-  sections:
-  - file: waves/wavemaths
-  - file: waves/SHM
-  - file: waves/longitudinal
-  - file: waves/waveequationsolns
-  - file: waves/transverse
-  - file: waves/dispersionrelations
-  - file: waves/polarisation
-  - file: waves/standingwaves
-  - file: waves/matterwaves
-  - file: waves/dopplershift
-- file: electromagnetism/introduction
-  sections:
-  - file: electromagnetism/EMmaths
-  - file: electromagnetism/electrostatics
-  - file: electromagnetism/solvingEsystems
-  - file: electromagnetism/Efieldenergy
-  - file: electromagnetism/magneticfields
-  - file: electromagnetism/magneticforces
-  - file: electromagnetism/ampereslaw
-  - file: electromagnetism/faradayslaw
-  - file: electromagnetism/maxwelleqns
-  - file: electromagnetism/solvingmaxwell
-  - file: electromagnetism/EMenergy
-  - file: electromagnetism/EMpotentials
-- file: fluids/intro
-  sections:
-  - file: fluids/mathideas
-  - file: fluids/visualise
-  - file: fluids/helmholtz
-  - file: fluids/potential
-  - file: fluids/conservation
-  - file: fluids/navstok
-  - file: fluids/scaling
-  - file: fluids/steadysoln
-  - file: fluids/bernoulli
-  - file: fluids/asymptotic
-  - file: fluids/vorticity
-  - file: fluids/waterwaves
-  - file: fluids/soundwaves
-  - file: fluids/rotfram
-  - file: fluids/ekman
+parts:
+  - caption: Waves
+    numbered: True
+    chapters:
+      - file: waves/introduction
+      - file: waves/wavemaths
+      - file: waves/SHM
+      - file: waves/longitudinal
+      - file: waves/waveequationsolns
+      - file: waves/transverse
+      - file: waves/dispersionrelations
+      - file: waves/polarisation
+      - file: waves/standingwaves
+      - file: waves/matterwaves
+      - file: waves/dopplershift
+  - caption: Electromagnetism
+    numbered: True
+    chapters:
+      - file: electromagnetism/introduction
+      - file: electromagnetism/EMmaths
+      - file: electromagnetism/electrostatics
+      - file: electromagnetism/solvingEsystems
+      - file: electromagnetism/Efieldenergy
+      - file: electromagnetism/magneticfields
+      - file: electromagnetism/magneticforces
+      - file: electromagnetism/ampereslaw
+      - file: electromagnetism/faradayslaw
+      - file: electromagnetism/maxwelleqns
+      - file: electromagnetism/solvingmaxwell
+      - file: electromagnetism/EMenergy
+      - file: electromagnetism/EMpotentials
+  - caption: Fluids
+    numbered: True
+    chapters:
+      - file: fluids/intro
+      - file: fluids/mathideas
+      - file: fluids/visualise
+      - file: fluids/helmholtz
+      - file: fluids/potential
+      - file: fluids/conservation
+      - file: fluids/navstok
+      - file: fluids/scaling
+      - file: fluids/steadysoln
+      - file: fluids/bernoulli
+      - file: fluids/asymptotic
+      - file: fluids/vorticity
+      - file: fluids/waterwaves
+      - file: fluids/soundwaves
+      - file: fluids/rotfram
+      - file: fluids/ekman
