@@ -456,24 +456,24 @@
 <div class="math notranslate nohighlight" id="equation-press-balance">
 <span class="eqno">(40.1)<a class="headerlink" href="#equation-press-balance" title="Permalink to this equation">¶</a></span>\[-\frac{1}{\rho}\nabla p_R+\underline{f}=0, \qquad p_R=p-\frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2, \qquad \underline{f}=-\nabla(\rho g z).\]</div>
 <p>We see that the centrifugal acceleration is balanced by a radial pressure gradient so that the streamlines remain circular. For the centrifugal term we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d042fb7-a273-416d-906b-a330f6828308">
-<span class="eqno">(40.2)<a class="headerlink" href="#equation-7d042fb7-a273-416d-906b-a330f6828308" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b78a9157-38c2-4053-811b-468740fb9e15">
+<span class="eqno">(40.2)<a class="headerlink" href="#equation-b78a9157-38c2-4053-811b-468740fb9e15" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2=\frac{1}{2}\rho\Omega^2(x^2+y^2) = \frac{1}{2}\rho\Omega^2 r^2.
 \end{equation}\]</div>
 <p>Integrating equation <a class="reference internal" href="#equation-press-balance">(40.1)</a> gives the same result obtained in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 34.3</span></a>. The pressure gradient varies linearly in the radial direction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-95dcb33d-a785-4b4b-a282-aea83636e66c">
-<span class="eqno">(40.3)<a class="headerlink" href="#equation-95dcb33d-a785-4b4b-a282-aea83636e66c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9a93d574-3fce-4415-96a5-fc0830d9bb01">
+<span class="eqno">(40.3)<a class="headerlink" href="#equation-9a93d574-3fce-4415-96a5-fc0830d9bb01" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\partial p}{\partial r}=\rho\Omega^2 r.
 \end{equation}\]</div>
 </div>
 <div class="section" id="almost-uniform-rotation">
 <h2><span class="section-number">40.2. </span>Almost uniform rotation<a class="headerlink" href="#almost-uniform-rotation" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the case of a body of fluid that undergoes weak motion relative to a frame rotating at constant angular velocity <span class="math notranslate nohighlight">\(\underline{\Omega}.\)</span> Taking <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(L\)</span> to be characteristic length and velocity scales of the motion allows us to compare the size of the inertial term relative to the Coriolis term:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce247e8a-98a2-4a3b-85b3-0bd611201f18">
-<span class="eqno">(40.4)<a class="headerlink" href="#equation-ce247e8a-98a2-4a3b-85b3-0bd611201f18" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-70df2471-a219-4b21-8e03-8108addd134f">
+<span class="eqno">(40.4)<a class="headerlink" href="#equation-70df2471-a219-4b21-8e03-8108addd134f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
 <p>If this ratio is much smaller than one then the inertial term can be neglected to a first approximation. We will also suppose that viscous effects may be neglected in the interior of the fluid (i.e. away from any boundaries), and we will look for steady solutions. The equations of motion then simplify to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-59df7f4f-b358-4397-a8c8-24a7400db478">
-<span class="eqno">(40.5)<a class="headerlink" href="#equation-59df7f4f-b358-4397-a8c8-24a7400db478" title="Permalink to this equation">¶</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
+<div class="amsmath math notranslate nohighlight" id="equation-8bbb9e57-e374-4d4c-8a27-02c456adda6f">
+<span class="eqno">(40.5)<a class="headerlink" href="#equation-8bbb9e57-e374-4d4c-8a27-02c456adda6f" title="Permalink to this equation">¶</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
 \nabla.\underline{u}&amp;=0,\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_R\)</span> denotes the reduced pressure. The prevailing winds <span class="math notranslate nohighlight">\(\underline{u}\)</span> are due to a balance between the Coriolis force and pressure, known as geostrophic balance.</p>
 <p>Taking the angular velocity to be <span class="math notranslate nohighlight">\(\underline{\Omega}=(0,0,\Omega)\)</span> and denoting the velocity by <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span> gives the following scalar (component) form:</p>
@@ -507,8 +507,8 @@
 &amp;\frac{\partial w}{\partial z} =0
 \end{align}\end{split}\]</div>
 <p>By solving these equations and <em>matching</em> the solution to the inviscid profile found in the inner fluid layer, it can be deduced that the boundary layer thickness scales as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74708c50-58bc-414c-b69a-1025c4713e1a">
-<span class="eqno">(40.8)<a class="headerlink" href="#equation-74708c50-58bc-414c-b69a-1025c4713e1a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-125b6a57-2e3c-42ff-9409-b8c1f3f74e34">
+<span class="eqno">(40.8)<a class="headerlink" href="#equation-125b6a57-2e3c-42ff-9409-b8c1f3f74e34" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta = \sqrt{\frac{\nu}{\Omega}}
 \end{equation}\]</div>
 <p>The kinematic viscosity of water is approximately <span class="math notranslate nohighlight">\(10^{-6}\mathrm{ms}^{-1}\)</span>. Therefore for a cup of water rotating at <span class="math notranslate nohighlight">\(1\mathrm{rad/s}\)</span> the Ekman layer thickness is estimated to be around 1mm.</p>
@@ -521,8 +521,8 @@
 <a class="reference internal image-reference" href="../_images/teacup.png" id="teacup"><img alt="secondary circulation" class="align-center" id="teacup" src="../_images/teacup.png" style="width: 563.2px; height: 240.8px;" /></a>
 <br>
 <p>The continual pumping action of fluid from the inviscid main body into the viscous boundary also means that viscous effects become apparent on a much shorter timescale than would be expected due to viscous diffusion alone. By dimensional analysis, the timescales for viscous diffusion and Ekman pumping are found to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c5e493f3-ef14-408b-82bb-bd7208dca48f">
-<span class="eqno">(40.9)<a class="headerlink" href="#equation-c5e493f3-ef14-408b-82bb-bd7208dca48f" title="Permalink to this equation">¶</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-45d6a753-8eb2-402f-abdb-2578b714a6e5">
+<span class="eqno">(40.9)<a class="headerlink" href="#equation-45d6a753-8eb2-402f-abdb-2578b714a6e5" title="Permalink to this equation">¶</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(L\)</span> is a characteristic lengtscale of the motion. For a teacup the viscous diffusion timescale gives a spindown time of about an hour, whilst the Ekman diffusion timescale is about a minute.</p>
 </div>
 <div class="section" id="oceanography">

@@ -491,8 +491,8 @@
 </tbody>
 </table>
 <p>A <strong>scalar field</strong> can be represented using a surface plot, contour plot, or a colour/grayscale map. On weather maps the pressure is normally represented using contours (called pressure isobars) and the temperature is normally represented using a colour map. The example below shows a grayscale map of the scalar field defined by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93185fff-ce0f-439a-a6e0-073f29a046bd">
-<span class="eqno">(26.1)<a class="headerlink" href="#equation-93185fff-ce0f-439a-a6e0-073f29a046bd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-92e65038-70ba-4570-9c76-f092263baac5">
+<span class="eqno">(26.1)<a class="headerlink" href="#equation-92e65038-70ba-4570-9c76-f092263baac5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi(x,y)=x\ \mathrm{sinc}(x^2+y^2),\quad -3\leq x,y \leq 3.
 \end{equation}\]</div>
 <div class="cell docutils container">
@@ -588,8 +588,8 @@
 <div class="section" id="what-is-a-level-set">
 <h2><span class="section-number">26.2. </span>What is a <strong>level set</strong><a class="headerlink" href="#what-is-a-level-set" title="Permalink to this headline">¶</a></h2>
 <p>A level set of a scalar function <span class="math notranslate nohighlight">\(\phi\)</span> is defined by the following relationship, where <span class="math notranslate nohighlight">\(c\)</span> is a constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e90214c6-72f7-4c0a-86ca-ac4dc822a37d">
-<span class="eqno">(26.3)<a class="headerlink" href="#equation-e90214c6-72f7-4c0a-86ca-ac4dc822a37d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-11279103-773a-4d9a-bcad-706bdee3d962">
+<span class="eqno">(26.3)<a class="headerlink" href="#equation-11279103-773a-4d9a-bcad-706bdee3d962" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
 <p>The main types of level set are surfaces and curves, as outlined below.</p>
 <p><strong>Level surfaces</strong><br />
 The level sets of <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> are generally surfaces, called <em>isosurfaces</em>. As an example, consider the pressure <span class="math notranslate nohighlight">\(p(x,y,z)\)</span> in a volume of water, exposed to atmospheric pressure <span class="math notranslate nohighlight">\(p_0\)</span> at the free surface. In this case, the boundary between the water and the air is an isosurface, defined by <span class="math notranslate nohighlight">\(p(x,y,z)=p_0\)</span>. Choosing other values of the constant <span class="math notranslate nohighlight">\(c&gt;p_0\)</span> will define other pressure isosurfaces within the body of water.</p>
@@ -606,8 +606,8 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <div class="section" id="the-directional-derivative">
 <span id="dir-deriv"></span><h2><span class="section-number">26.3. </span>The directional derivative<a class="headerlink" href="#the-directional-derivative" title="Permalink to this headline">¶</a></h2>
 <p>According to the multivariate chain rule for a scalar function <span class="math notranslate nohighlight">\(\phi(\underline{x})\)</span>, where <span class="math notranslate nohighlight">\(\underline{x}=(x(s),y(s),z(s))\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-65b5f6a6-87e2-4a55-bb80-fd16a5a772cd">
-<span class="eqno">(26.4)<a class="headerlink" href="#equation-65b5f6a6-87e2-4a55-bb80-fd16a5a772cd" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b86ddd61-c991-4514-8ce0-935ef729173e">
+<span class="eqno">(26.4)<a class="headerlink" href="#equation-b86ddd61-c991-4514-8ce0-935ef729173e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
 <p>Using vectors, we can write this result as a scalar product:</p>
 <div class="math notranslate nohighlight" id="equation-mvarchain">
 <span class="eqno">(26.5)<a class="headerlink" href="#equation-mvarchain" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{u}, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),\]</div>
@@ -616,8 +616,8 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <span class="eqno">(26.6)<a class="headerlink" href="#equation-gradient" title="Permalink to this equation">¶</a></span>\[\nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).\]</div>
 <p>Formula <a class="reference internal" href="#equation-mvarchain">(26.5)</a> looks strikingly similar to the one-dimensional chain rule, with the factor <span class="math notranslate nohighlight">\(\nabla\phi\)</span> capturing variations in <span class="math notranslate nohighlight">\(\phi\)</span> due to <span class="math notranslate nohighlight">\(\underline{x}\)</span> and the second factor <span class="math notranslate nohighlight">\(\underline{u}\)</span> capturing variations in <span class="math notranslate nohighlight">\(\underline{x}\)</span> due to <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>If we evaluate <span class="math notranslate nohighlight">\(\nabla\phi\)</span> at a given point <span class="math notranslate nohighlight">\(\underline{x}_0\)</span>, the multivariate chain rule gives us the rate of change of <span class="math notranslate nohighlight">\(\phi\)</span> in direction <span class="math notranslate nohighlight">\(\underline{u}\)</span> at the point. Since the parameterisation <span class="math notranslate nohighlight">\(\underline{x}(s)\)</span> is arbitrary, we can choose a direction that we are interested in. This result is called the <em>directional derivative</em>. It is usually assumed that <span class="math notranslate nohighlight">\(\underline{u}\)</span> is a unit vector, so the result may be denoted as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aeb6f630-8262-4f20-9791-cec9fc75a916">
-<span class="eqno">(26.7)<a class="headerlink" href="#equation-aeb6f630-8262-4f20-9791-cec9fc75a916" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{u}}}(\phi)=(\nabla\phi).\hat{\underline{u}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1e7d56a2-6251-4521-9dbd-403dbba7a27d">
+<span class="eqno">(26.7)<a class="headerlink" href="#equation-1e7d56a2-6251-4521-9dbd-403dbba7a27d" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{u}}}(\phi)=(\nabla\phi).\hat{\underline{u}}\end{equation}\]</div>
 <p>Notice that the result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.</p>
 <div class="exercise admonition" id="ex-dir_deriv">
 <p class="admonition-title"><span class="caption-number">Exercise 26.2 </span> </p>
@@ -631,13 +631,13 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <h2><span class="section-number">26.4. </span>The gradient direction<a class="headerlink" href="#the-gradient-direction" title="Permalink to this headline">¶</a></h2>
 <p><strong>The gradient is perpendicular to the level sets</strong><br />
 Since level sets are defined by the relationship <span class="math notranslate nohighlight">\(\phi=c\)</span>, differentiation gives <span class="math notranslate nohighlight">\(\frac{\mathrm{d}\phi}{\mathrm{d}s}=0\)</span>. Using the result <a class="reference internal" href="#equation-mvarchain">(26.5)</a>, we find that on a level set</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b8bed8e-ddda-4943-b44d-4cdb00d8ecd6">
-<span class="eqno">(26.8)<a class="headerlink" href="#equation-8b8bed8e-ddda-4943-b44d-4cdb00d8ecd6" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{u}}=0, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-444248eb-50b2-4514-8b1e-064ea8e211f0">
+<span class="eqno">(26.8)<a class="headerlink" href="#equation-444248eb-50b2-4514-8b1e-064ea8e211f0" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{u}}=0, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\hat{\underline{u}}\)</span> is parallel to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>, the result result tells us that <span class="math notranslate nohighlight">\(\nabla\phi\)</span> is perpendicular to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <p><strong>The gradient points “uphill”</strong><br />
 From the definition of the scalar product, we know that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c908a36a-99f2-4ef5-be36-1b8db8022fc6">
-<span class="eqno">(26.9)<a class="headerlink" href="#equation-c908a36a-99f2-4ef5-be36-1b8db8022fc6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{u}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e5c1595e-13da-413a-862f-373769c77cac">
+<span class="eqno">(26.9)<a class="headerlink" href="#equation-e5c1595e-13da-413a-862f-373769c77cac" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{u}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\nabla \phi\)</span> and the direction vector <span class="math notranslate nohighlight">\(\hat{\underline{u}}\)</span>.</p>
 <p>The result is largest when <span class="math notranslate nohighlight">\(\theta=0\)</span>. Therefore, <span class="math notranslate nohighlight">\(\nabla \phi\)</span> points in the direction of maximum increase of the function <span class="math notranslate nohighlight">\(\phi\)</span> and has magnitude equal to the rate of maximum increase.</p>
 <div class="exercise admonition" id="pot-fun">

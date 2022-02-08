@@ -471,14 +471,14 @@ p=p_0+p_1,\qquad
 <div class="math notranslate nohighlight" id="equation-lineq">
 <span class="eqno">(38.3)<a class="headerlink" href="#equation-lineq" title="Permalink to this equation">¶</a></span>\[\frac{\partial^2 \rho_1}{\partial t}=-\nabla^2 p_1.\]</div>
 <p>To obtain the result fully in terms of a single quantity, we consult the Taylor expansion for <span class="math notranslate nohighlight">\(p\)</span> about <span class="math notranslate nohighlight">\(\rho=\rho_0\)</span>, which gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d767652-0445-4f5a-8daa-984597a3e85a">
-<span class="eqno">(38.4)<a class="headerlink" href="#equation-3d767652-0445-4f5a-8daa-984597a3e85a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1e6d33b2-ef70-4aea-ab7e-e075d8289094">
+<span class="eqno">(38.4)<a class="headerlink" href="#equation-1e6d33b2-ef70-4aea-ab7e-e075d8289094" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p&amp;=p(\rho_0)+(\rho-\rho_0)\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}+\dots \\
 &amp;= p_0+\rho_1\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}+\dots
 \end{align}\]</div>
 <p>Thus, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a631199-8687-45e3-b68f-2b9510ea169c">
-<span class="eqno">(38.5)<a class="headerlink" href="#equation-7a631199-8687-45e3-b68f-2b9510ea169c" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1=\rho_1 a_0^2, \qquad a_0^2=\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-50bc4fca-edd3-4295-9f00-8d65f6b68614">
+<span class="eqno">(38.5)<a class="headerlink" href="#equation-50bc4fca-edd3-4295-9f00-8d65f6b68614" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1=\rho_1 a_0^2, \qquad a_0^2=\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\rho_0}\end{equation}\]</div>
 <p>We can finally use this result to eliminate <span class="math notranslate nohighlight">\(\rho_1\)</span> from <a class="reference internal" href="#equation-lineq">(38.3)</a>, from which we obtain the 3D wave equation for waves travelling with velocity <span class="math notranslate nohighlight">\(a_0\)</span> :</p>
 <div class="math notranslate nohighlight" id="equation-waveeqn">
 <span class="eqno">(38.6)<a class="headerlink" href="#equation-waveeqn" title="Permalink to this equation">¶</a></span>\[\frac{\partial p_1}{\partial t^2}=a_0^2\nabla^2 p_1.\]</div>
@@ -494,8 +494,8 @@ p&amp;=p(\rho_0)+(\rho-\rho_0)\frac{\mathrm{d}p}{\mathrm{d}\rho}\biggr|_{\rho=\r
 </div>
 </div>
 <p>The speed at which sound waves travel is found to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1c9a330a-7981-4aee-8ed6-7f31f9b24695">
-<span class="eqno">(38.7)<a class="headerlink" href="#equation-1c9a330a-7981-4aee-8ed6-7f31f9b24695" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-57a3ec41-db6b-4745-8ddc-55d7c62b2e83">
+<span class="eqno">(38.7)<a class="headerlink" href="#equation-57a3ec41-db6b-4745-8ddc-55d7c62b2e83" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 a_0=\sqrt{\frac{\gamma p_0}{\rho_0}},
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_0, \rho_0\)</span> are the background pressure and density, and <span class="math notranslate nohighlight">\(\gamma\)</span> is constant for the gas in question. The derivation requires some tricky thermodynamics, which uses the first and second laws of thermodynamics, along with the ideal gas law and isentropic assumption. These assumptions were shown by Laplace to produce an estimate for the speed of sound in a gas that closely matches observation. You don’t need to know the details of the derivation, but they are given in <a class="reference internal" href="#thermal-physics"><span class="std std-numref">Section 38.3</span></a> for anyone interested.</p>
@@ -507,8 +507,8 @@ a_0=\sqrt{\frac{\gamma p_0}{\rho_0}},
 <h3><span class="section-number">38.1.1. </span>Boundary conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h3>
 <p>There are two types of boundary conditions that are normally given when solving sound wave problems. Either the pressure is specified at the boundary or the velocity is specified at the boundary.</p>
 <p>The second case is equivalent to providing the derivative of the pressure at the boundary, using the relationship that we found in <a class="reference internal" href="#equation-linearsound">(38.2)</a> :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b783d1e7-c368-46c7-b3a3-aee84eba311a">
-<span class="eqno">(38.8)<a class="headerlink" href="#equation-b783d1e7-c368-46c7-b3a3-aee84eba311a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-17f52b8a-4bda-42a6-b952-3f1c68978d26">
+<span class="eqno">(38.8)<a class="headerlink" href="#equation-17f52b8a-4bda-42a6-b952-3f1c68978d26" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\partial p_1}{\partial t}=-\rho_0 \nabla.\underline{u}_1
 \end{equation}\]</div>
 <div class="exercise admonition" id="fluids/soundwaves-exercise-1">
@@ -516,8 +516,8 @@ a_0=\sqrt{\frac{\gamma p_0}{\rho_0}},
 <div class="section" id="exercise-content">
 <p>The human ear canal can be modelled as a straight 1D tube between <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=L\)</span>, which is open at the ear lobe end and closed at the ear drum end. A sound wave in the air surrounding the ear produces a pressure fluctuation <span class="math notranslate nohighlight">\(Pe^{-i\Gamma t}\)</span> at the ear lobe end.</p>
 <p>Verify that the following results satisfies the equation of motion and use suitable boundary conditions to find expressions for the amplitudes <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f016a6fa-4643-4b4c-aeef-a38b64fda369">
-<span class="eqno">(38.9)<a class="headerlink" href="#equation-f016a6fa-4643-4b4c-aeef-a38b64fda369" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1=Ae^{i\Gamma(x/c-t)}+Be^{-i\Gamma(x/c+t)}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0e54dfbd-6227-4201-ba6b-5edd416e197e">
+<span class="eqno">(38.9)<a class="headerlink" href="#equation-0e54dfbd-6227-4201-ba6b-5edd416e197e" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1=Ae^{i\Gamma(x/c-t)}+Be^{-i\Gamma(x/c+t)}\end{equation}\]</div>
 <p>Under what conditions does resonance occur? Find the fundamental resonant frequency, given that the human ear canal is approximately 2.5cm long and that the speed of sound in air is approximately 340ms<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p>
 </div>
 </div>
@@ -526,8 +526,8 @@ a_0=\sqrt{\frac{\gamma p_0}{\rho_0}},
 <div class="section" id="the-supersonic-airfoil">
 <h2><span class="section-number">38.2. </span>The supersonic airfoil<a class="headerlink" href="#the-supersonic-airfoil" title="Permalink to this headline">¶</a></h2>
 <p>If the derivation above is repeated for the case of steady two-dimensional flow with uniform background motion <span class="math notranslate nohighlight">\(\underline{u}=(U,0,0)\)</span> then the equation of motion reduces to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8428d29b-61e6-45cc-8356-08b5278e9f10">
-<span class="eqno">(38.10)<a class="headerlink" href="#equation-8428d29b-61e6-45cc-8356-08b5278e9f10" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-71da05b6-4d4d-46aa-afb4-7b51edc5fc04">
+<span class="eqno">(38.10)<a class="headerlink" href="#equation-71da05b6-4d4d-46aa-afb4-7b51edc5fc04" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 (1-M^2)\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial y^2}=0, \qquad M=\frac{U}{a_0}.
 \end{equation}\]</div>
 <p>The quantity <span class="math notranslate nohighlight">\(M\)</span> is called the Mach number. If this value is much smaller than smaller than 1, then the result is the solution can be well approximated by taking <span class="math notranslate nohighlight">\(M=0\)</span> so that the result reduces to the case of incompressible flow.</p>
@@ -539,24 +539,24 @@ a_0=\sqrt{\frac{\gamma p_0}{\rho_0}},
 <div class="section" id="id2">
 <h3><span class="section-number">38.3.1. </span>Thermal physics<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>According to the first law of thermodynamics, the total change of internal energy of a system is given by the relationship below, where <span class="math notranslate nohighlight">\(\mathrm{d}Q\)</span> is the change in heat energy and <span class="math notranslate nohighlight">\(p\mathrm{d}V\)</span> represents work done by pressure:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e8c416d1-bbc7-4e70-b003-66171cabe705">
-<span class="eqno">(38.11)<a class="headerlink" href="#equation-e8c416d1-bbc7-4e70-b003-66171cabe705" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-901f1415-6dec-4b33-b254-4fd0c4ec1197">
+<span class="eqno">(38.11)<a class="headerlink" href="#equation-901f1415-6dec-4b33-b254-4fd0c4ec1197" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \mathrm{d}U=\mathrm{d}Q-p\mathrm{d}V,
 \end{equation}\]</div>
 <p>The change in heat energy can be related to the change in entropy <span class="math notranslate nohighlight">\(\mathrm{d}S\)</span> by the second law of thermodynamics <span class="math notranslate nohighlight">\(\mathrm{d}S=\frac{\mathrm{d}Q}{T}\)</span>, and the total change of internal energy can be replaced by the change of enthalpy <span class="math notranslate nohighlight">\(H=U+pV\)</span> to give</p>
 <div class="math notranslate nohighlight" id="equation-entropy">
 <span class="eqno">(38.12)<a class="headerlink" href="#equation-entropy" title="Permalink to this equation">¶</a></span>\[\mathrm{d}S=\frac{1}{T}\mathrm{d}H-\frac{V}{T}\mathrm{d}p.\]</div>
 <p>For an ideal gas, the following relationships also hold, in which where <span class="math notranslate nohighlight">\(c_p\)</span> is the specific heat capacity at constant temperature and <span class="math notranslate nohighlight">\(c_v\)</span> is the specific heat capacity at constant volume:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d306fcf-39de-4a46-b2c8-4a9f13b62240">
-<span class="eqno">(38.13)<a class="headerlink" href="#equation-3d306fcf-39de-4a46-b2c8-4a9f13b62240" title="Permalink to this equation">¶</a></span>\[\begin{equation}pV=nRT, \qquad nR=(c_p-c_v), \qquad c_p=\frac{\mathrm{d}H}{\mathrm{d}T}, \qquad c_v=\frac{\mathrm{d}U}{\mathrm{d}T}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-32d650de-d0f3-4d94-a03c-360d30395a08">
+<span class="eqno">(38.13)<a class="headerlink" href="#equation-32d650de-d0f3-4d94-a03c-360d30395a08" title="Permalink to this equation">¶</a></span>\[\begin{equation}pV=nRT, \qquad nR=(c_p-c_v), \qquad c_p=\frac{\mathrm{d}H}{\mathrm{d}T}, \qquad c_v=\frac{\mathrm{d}U}{\mathrm{d}T}\end{equation}\]</div>
 <p>Thus, we can rewrite <a class="reference internal" href="#equation-entropy">(38.12)</a> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-82bd5f15-1b8e-46c2-8922-70b469a40258">
-<span class="eqno">(38.14)<a class="headerlink" href="#equation-82bd5f15-1b8e-46c2-8922-70b469a40258" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-05db682d-45a0-47be-9908-fc7e42e36193">
+<span class="eqno">(38.14)<a class="headerlink" href="#equation-05db682d-45a0-47be-9908-fc7e42e36193" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \mathrm{d}S=\frac{c_p}{T}\mathrm{d}T-\frac{(c_p-c_v)}{p}\mathrm{d}p.
 \end{equation}\]</div>
 <p>For an adiabatic process, there is no change in entropy, <span class="math notranslate nohighlight">\(\mathrm{d}S=0\)</span>, and so integrating this expression gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0a6cf156-de2d-45d4-b59d-295601e52574">
-<span class="eqno">(38.15)<a class="headerlink" href="#equation-0a6cf156-de2d-45d4-b59d-295601e52574" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a9bcb1ab-8666-4ca4-bdbd-85dca97e7459">
+<span class="eqno">(38.15)<a class="headerlink" href="#equation-a9bcb1ab-8666-4ca4-bdbd-85dca97e7459" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 c_p\ln(T/T_0)=(c_p-c_v)\ln(p/p_0)
 \end{equation}\]</div>
 <p>Finally, by using the relationship <span class="math notranslate nohighlight">\(p=\rho R T\)</span> to eliminate <span class="math notranslate nohighlight">\(T/T_0\)</span>, we may write the result</p>
@@ -567,8 +567,8 @@ c_p\ln(T/T_0)=(c_p-c_v)\ln(p/p_0)
 <div class="section" id="small-amplitude-perturbations">
 <h3><span class="section-number">38.3.2. </span>Small amplitude perturbations<a class="headerlink" href="#small-amplitude-perturbations" title="Permalink to this headline">¶</a></h3>
 <p>Taking the small perturbation approach used in <a class="reference internal" href="#equation-perturbations">(38.1)</a> and substituting into the isentropic relation <a class="reference internal" href="#equation-isentropic">(38.16)</a> gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9bdb1aa2-f3c7-411c-94c0-589ee4cce44b">
-<span class="eqno">(38.17)<a class="headerlink" href="#equation-9bdb1aa2-f3c7-411c-94c0-589ee4cce44b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-509655e4-90ba-42ee-8c2a-1bee4c0da225">
+<span class="eqno">(38.17)<a class="headerlink" href="#equation-509655e4-90ba-42ee-8c2a-1bee4c0da225" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p\rho^{-\gamma}&amp;=p_0\rho_0^{-\gamma}\left(1+\frac{p_1}{p_0}\right)\left(1+\frac{\rho_1}{\rho_0}\right)^{-\gamma}\\
 &amp;=p_0\rho_0^{-\gamma}\left(1+\frac{p_1}{p_0}\right)\left(1-\gamma\frac{\rho_1}{\rho_0}+\dots\right)\\
 &amp;=p_0\rho_0^{-\gamma}\left(1+\left(\frac{p_1}{p_0}-\gamma\frac{\rho_1}{\rho_0}\right)+\dots\right)
