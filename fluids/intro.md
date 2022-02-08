@@ -48,8 +48,11 @@ In **chapters 12-13** we take a brief look at water waves and sound waves. These
 
 In **chapters 14-15** we look at some geophysical phenomena that relate to rotating fluids such as hurricanes, tornadoes and ocean gyres. We also explain the famous "tea leaf paradox". The material in these two chapters it is not strictly necessary for this course, and could be skimmed or skipped entirely, though it will be discussed in lecture.
 
-<h2>Please kindly note</h2>
+<br>
 
-These notes on fluid dynamics are new. Therefore it is highly likely that they will contain some errors and omissions. If you spot anything in the notes that seems *suspect*, please let me know so that it can be corrected or explained.
+```{admonition} Please kindly note
+:class: danger
+These notes on fluid dynamics are new (2022). Therefore it is highly likely that they will contain some errors and omissions. If you spot anything in the notes that seems *suspect*, please let me know so that it can be corrected or explained.
 
 --Ella.
+```
