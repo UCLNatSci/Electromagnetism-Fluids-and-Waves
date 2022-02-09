@@ -51,7 +51,7 @@ We can finally use this result to eliminate $\rho_1$ from {eq}`lineq`, from whic
 
 ```{math}
 :label: waveeqn
-\frac{\partial p_1^2}{\partial t^2}=a_0^2\nabla^2 p_1.
+\frac{\partial^2 p_1}{\partial t^2}=a_0^2\nabla^2 p_1.
 ```
 
 ```{exercise}
@@ -61,6 +61,22 @@ Hint: Take the gradient of the first expression in {eq}`linearsound` and use the
 \begin{equation*}
 \nabla(\nabla.\underline{u})=\nabla^2\underline{u}+\nabla\times(\nabla\times \underline{u})
 \end{equation*}
+```
+
+
+```{toggle}
+Taking the gradient of the first expression in {eq}`linearsound` gives
+
+\begin{equation*}\frac{\partial}{\partial t}\left(\nabla \rho_1\right)+\rho_0\nabla^2\underline{u}_1+\nabla\times(\nabla\times\underline{u}_1)\end{equation*}
+
+If the flow is irrotational then $(\nabla\times\underline{u})=0$. We can also use the result $p_1=\rho_1 a_0^2$, to obtain
+
+\begin{equation*}\frac{1}{a_0^2}\frac{\partial}{\partial t}\left(\nabla p_1\right)+\rho_0\nabla^2 \underline{u}_1\end{equation*}
+
+Finally, using the result for $\nabla p_1$ from the second expression in {eq}`linearsound` gives
+
+\begin{equation*}\frac{\partial^2 \underline{u}_1}{\partial t^2}=a_0^2\nabla^2\underline{u}_1\end{equation*}
+
 ```
 
 The speed at which sound waves travel is found to be
@@ -88,13 +104,49 @@ The second case is equivalent to providing the derivative of the pressure at the
 \end{equation}
 
 ```{exercise}
-The human ear canal can be modelled as a straight 1D tube between $x=0$ and $x=L$, which is open at the ear lobe end and closed at the ear drum end. A sound wave in the air surrounding the ear produces a pressure fluctuation $Pe^{-i\Gamma t}$ at the ear lobe end.
+The human ear canal can be modelled as a straight 1D tube between $x=0$ and $x=L$, which is open at the ear lobe end ($x=0$) and closed at the ear drum end ($x=L$). A sound wave in the air surrounding the ear produces a pressure fluctuation $Pe^{-i\Gamma t}$ at the ear lobe end.
 
 Verify that the following results satisfies the equation of motion and use suitable boundary conditions to find expressions for the amplitudes $A$ and $B$
 \begin{equation}p_1=Ae^{i\Gamma(x/c-t)}+Be^{-i\Gamma(x/c+t)}\end{equation}
 Under what conditions does resonance occur? Find the fundamental resonant frequency, given that the human ear canal is approximately 2.5cm long and that the speed of sound in air is approximately 340ms$^{-1}$.
 
 ```
+
+```{toggle}
+Differentiating the given expression provides
+\begin{equation*}\frac{\partial^2 p_1}{\partial t^2}=-\Gamma^2 p_1, \qquad \frac{\partial^2 p_1}{\partial x^2}=-\frac{\Gamma^2}{c^2} p_1\end{equation*}
+
+Hence,
+\begin{equation*}\frac{\partial^2 p_1}{\partial t^2}=c^2\frac{\partial^2 p_1}{\partial x^2}\end{equation*}
+
+This is the 1D wave equation, for wave velocity $c$.
+
+**Boundary conditions:**
+
+Closed end : $u(L)=0 \quad \Rightarrow \frac{\partial p_1}{\partial t}\biggr|_{x=L}=0$
+
+Open end: $p(0)=P e^{-i\Gamma t}$
+
+Applying these conditions gives:
+
+\begin{equation*}A+B=P, \quad Ae^{i\Gamma L/c}-Be^{-i\Gamma L/c=0}\end{equation*}
+
+Solving the two equations together gives
+
+\begin{equation*}A=\frac{Pe^{-i\Gamma L/c}}{\cos(\Gamma L/c)}, \quad B=-\frac{Pe^{-i\Gamma L/c}}{\cos(\Gamma L/c)}\end{equation*}
+
+Resonance occurs when $\cos\left(\frac{\Gamma L}{c}\right)=0$, i.e when $\Gamma=\frac{(2n-1)\pi c}{2L}$, where $n$ is a natural number.
+
+The fundamental (angular) response frequency is $\Gamma= \frac{\pi c}{2L}$.
+
+Taking $L=2.5\times 10^{-2}\mathrm{m}$ and $c=340\mathrm{ms}^{-1}$ gives
+
+\begin{equation*}f=\frac{\Gamma}{2\pi} = \frac{340}{4\times 2.5\times10^{-2}}=3400\mathrm{Hz}\end{equation*}
+
+In reality the resonant response is not infinite, but it is much greater than at other frequencies. This means that the human ear is particularly sensitive to at frequencies near 3.4kHz. Resonance also occurs at higher harmonic frequencies, but the strength of the response at these frequencies is diminished.
+
+```
+
 
 ## The supersonic airfoil
 

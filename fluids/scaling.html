@@ -464,11 +464,11 @@
 <div class="section" id="technique">
 <h3><span class="section-number">32.1.1. </span>Technique<a class="headerlink" href="#technique" title="Permalink to this headline">¶</a></h3>
 <p>We introduce non-dimensional variables using a characteristic length scale <span class="math notranslate nohighlight">\(L\)</span>, velocity <span class="math notranslate nohighlight">\(U\)</span>, time <span class="math notranslate nohighlight">\(T\)</span>, pressure <span class="math notranslate nohighlight">\(P\)</span> and body force <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e01d9a3-9e43-4b72-bd7a-c4040cabee15">
-<span class="eqno">(32.1)<a class="headerlink" href="#equation-7e01d9a3-9e43-4b72-bd7a-c4040cabee15" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{u}_*=\frac{\underline{u}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}_*=\frac{\underline{F}}{g}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8b12e267-715f-4d77-907b-2c88565e3cee">
+<span class="eqno">(32.1)<a class="headerlink" href="#equation-8b12e267-715f-4d77-907b-2c88565e3cee" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{x}_*=\frac{\underline{x}}{L}, \quad \underline{u}_*=\frac{\underline{u}}{U}, \quad t_*=\frac{t}{T}, \quad p_*=\frac{p}{P}, \quad \underline{F}_*=\frac{\underline{F}}{g}\end{equation}\]</div>
 <p>Making these substitutions gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3cd71461-9e63-402e-9cdf-ebff720280b8">
-<span class="eqno">(32.2)<a class="headerlink" href="#equation-3cd71461-9e63-402e-9cdf-ebff720280b8" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{u}_*}{\partial t_*}+\underline{u_*}.\nabla_* \underline{u_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{u_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-17a8bd24-ef15-4eb5-a701-d0e11304bdec">
+<span class="eqno">(32.2)<a class="headerlink" href="#equation-17a8bd24-ef15-4eb5-a701-d0e11304bdec" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{L}{TU}\frac{\partial\underline{u}_*}{\partial t_*}+\underline{u_*}.\nabla_* \underline{u_*}=-\frac{P}{\rho U^2}\nabla p_* + \frac{\nu}{U L} \Delta_*\underline{u_*}+\frac{gL}{U^2}\underline{F}_*,\end{equation}\]</div>
 <p>The following dimensionless parameters now appear in the normalized momentum equation. If any of these quantities is large/small then we may construct an approximate solution by neglecting relevant terms in the equation.</p>
 <br>
 <table class="colwidths-auto table">
@@ -548,19 +548,47 @@ The Reynolds number indicates the relative importance of inertial and viscous ef
 <p>Identify the convective terms and the inertial terms in equation (*), given above. Assuming that the Reynolds number <span class="math notranslate nohighlight">\(R\)</span> is large, which of the four terms of this equation do you expect to balance and which can be neglected?</p>
 </div>
 </div>
+<div class="toggle docutils container">
+<p><strong>Conservation of mass</strong> :</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}=0\end{equation*}\]</div>
+<p><strong>Conservation of momentum</strong> :</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)\\
+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)\\
+\end{align*}\]</div>
+<p>In terms of the non-dimensional variables (and with the pressure term dropped):</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}&amp;\frac{U_0^2}{L}\frac{\partial \hat{u}}{\partial\hat{x}}+\frac{V_0}{\delta}U_0\frac{\partial \hat{u}}{\partial\hat{y}}=\nu\left(\frac{U_0}{L^2}\frac{\partial^2 \hat{u}}{\partial\hat{x}^2}+\frac{U_0}{\delta^2}\frac{\partial^2 \hat{u}}{\partial\hat{y}^2}\right)\\
+&amp;\Rightarrow \quad \frac{U_0^2}{L}\left[\frac{\partial\hat{u}}{\partial\hat{x}}+\frac{\partial\hat{u}}{\partial\hat{y}}-\frac{\nu}{U_0 L}\left(\frac{\partial^2\hat{u}}{\partial\hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial\hat{y}^2}\right)\right]=0
+\end{align*}\]</div>
+<p>That is,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\partial \hat{u}}{\partial \hat{x}}+\frac{\partial \hat{u}}{\partial \hat{y}}-\frac{1}{R}\left[\frac{\partial^2 \hat{u}}{\partial \hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial \hat{y}^2}\right], \quad R=\frac{U_{\infty} L}{\nu}.
+\end{equation*}\]</div>
+<p>The inertial terms are <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial\hat{u}}{\partial\hat{x}}+\frac{\partial\hat{u}}{\partial\hat{y}}\)</span></p>
+<p>The convective terms are <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{R}\left[\frac{\partial^2\hat{u}}{\partial\hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial\hat{y}^2}\right]\)</span></p>
+<p>As <span class="math notranslate nohighlight">\(R\rightarrow\infty\)</span>, <span class="math notranslate nohighlight">\(\displaystyle\frac{1}{R}\frac{\partial^2\hat{u}}{\partial\hat{x}^2}\rightarrow 0\)</span>.</p>
+<p>However, close to the boundary, <span class="math notranslate nohighlight">\(\displaystyle \frac{1}{R}\left(\frac{L}{\delta}\right)^2\)</span> may be <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span>, so the term involving <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial^2\hat{u}}{\partial\hat{y}^2}\)</span> should not be neglected.</p>
+<p>Note: the equations of motion should be supplemented by boundary conditions. The appropriate conditions for this problem are “no slip” and no through-flow at the plate (see chapter <a class="reference internal" href="steadysoln.html#steady-soln"><span class="std std-numref">Section 33</span></a>), and a requirement that the velocity must approach the free stream away from the boundary:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}u(y=0)=0, \quad v(y=0)=0, \quad \lim_{y \rightarrow \infty}\underline{v}=(U_{\infty},0)\end{equation*}\]</div>
+</div>
 </div>
 </div>
 <div class="section" id="navier-stokes-equations-for-viscous-flow">
 <h2><span class="section-number">32.2. </span>Navier-Stokes equations for viscous flow<a class="headerlink" href="#navier-stokes-equations-for-viscous-flow" title="Permalink to this headline">¶</a></h2>
 <p>We assume that the scales of local acceleration, inertia and pressure are comparable so that the following non-dimensionalisations of time and velocity are sensible:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b5e009e4-7d4f-448a-aa0b-d044567ee194">
-<span class="eqno">(32.3)<a class="headerlink" href="#equation-b5e009e4-7d4f-448a-aa0b-d044567ee194" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_*=\frac{p}{\rho U^2}, \quad t_*=\frac{U t}{L}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ce3346e7-8bea-4a9e-bbfc-d265798d2ba0">
+<span class="eqno">(32.3)<a class="headerlink" href="#equation-ce3346e7-8bea-4a9e-bbfc-d265798d2ba0" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_*=\frac{p}{\rho U^2}, \quad t_*=\frac{U t}{L}.\end{equation}\]</div>
 <p>This finally gives the equation below. The asterisks have been dropped, because from now on we will always work with dimensionless quantities:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9b276fe6-4b91-42e4-aa75-73a42e8ddbc6">
-<span class="eqno">(32.4)<a class="headerlink" href="#equation-9b276fe6-4b91-42e4-aa75-73a42e8ddbc6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla \underline{u}=-\nabla p + \frac{1}{\mathrm{Re}} \nabla^2\underline{u}+\frac{1}{\mathrm{Fr}^2}\underline{F}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0479dd30-b6c8-4dbc-8f1b-7f0b86fe94c0">
+<span class="eqno">(32.4)<a class="headerlink" href="#equation-0479dd30-b6c8-4dbc-8f1b-7f0b86fe94c0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla \underline{u}=-\nabla p + \frac{1}{\mathrm{Re}} \nabla^2\underline{u}+\frac{1}{\mathrm{Fr}^2}\underline{F}\end{equation}\]</div>
 <p>In many scenarios, the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> can be safely neglected. Written out in component form without the body force terms, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aab2040a-d7e3-4cf9-b534-c4fd2526e10c">
-<span class="eqno">(32.5)<a class="headerlink" href="#equation-aab2040a-d7e3-4cf9-b534-c4fd2526e10c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9b26dbc0-3d59-43c7-aeab-67424d801537">
+<span class="eqno">(32.5)<a class="headerlink" href="#equation-9b26dbc0-3d59-43c7-aeab-67424d801537" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\frac{1}{\mathrm{Re}}\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\frac{1}{\mathrm{Re}}\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\frac{1}{\mathrm{Re}}\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
@@ -576,11 +604,11 @@ The Reynolds number indicates the relative importance of inertial and viscous ef
 <div class="section" id="low-reynolds-number-flow">
 <h2><span class="section-number">32.3. </span>Low Reynolds number flow<a class="headerlink" href="#low-reynolds-number-flow" title="Permalink to this headline">¶</a></h2>
 <p>If the Reynolds number is very small (e.g. for very viscous flows) then we can neglect the inertial terms <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}\)</span> to leave</p>
-<div class="amsmath math notranslate nohighlight" id="equation-610f9dd6-e34a-498b-9569-db38bf10976c">
-<span class="eqno">(32.6)<a class="headerlink" href="#equation-610f9dd6-e34a-498b-9569-db38bf10976c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{u}+\underline{F}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ab72cd12-d1d9-492d-b53a-907755707901">
+<span class="eqno">(32.6)<a class="headerlink" href="#equation-ab72cd12-d1d9-492d-b53a-907755707901" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}=-\frac{1}{\rho}\nabla p+\nu \Delta \underline{u}+\underline{F}.\end{equation}\]</div>
 <p>If we are interested in steady solutions in the absence of a body force, the system reduces to the equation for Stokes flow (creeping flow):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8cca718c-403d-4e62-b5fa-3c5031931c61">
-<span class="eqno">(32.7)<a class="headerlink" href="#equation-8cca718c-403d-4e62-b5fa-3c5031931c61" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{u}-\nabla p=\underline{0}, \quad \nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-44482f57-e838-4b27-ad1f-d873c93f7fef">
+<span class="eqno">(32.7)<a class="headerlink" href="#equation-44482f57-e838-4b27-ad1f-d873c93f7fef" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu \Delta \underline{u}-\nabla p=\underline{0}, \quad \nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The flow governed by this pair of equations exhibits the fascinating property of reversibility. If the boundary conditions conditions applied to the fluid are reversed, the fluid particles will return back along their previous paths. A striking demonstration of this phenomenon can be found at <a class="reference external" href="https://fyfluiddynamics.com/2012/02/the-reversibility-of-laminar-mixing-often-comes-as/">this link</a></p>
 <p>This has important implications for the swimming of microcellular organisms, which are unable to propel themselves using flapping or “paddling” motions. The finding is known as the scallop theorem, since the opening and closing swimming mechanism used by scallops would be ineffective at low Reynolds numbers.</p>
 <div class="readmore admonition">

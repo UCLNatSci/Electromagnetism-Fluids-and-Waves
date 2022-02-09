@@ -110,6 +110,43 @@ where the unspecified dimensional constants $L$, $\delta$, are characteristic le
 Identify the convective terms and the inertial terms in equation (*), given above. Assuming that the Reynolds number $R$ is large, which of the four terms of this equation do you expect to balance and which can be neglected?
 ````
 
+```{toggle}
+
+**Conservation of mass** :
+
+\begin{equation*}\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}=0\end{equation*}
+
+**Conservation of momentum** :
+
+\begin{align*}
+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}&=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)\\
+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}&=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)\\
+\end{align*}
+
+In terms of the non-dimensional variables (and with the pressure term dropped):
+
+\begin{align*}&\frac{U_0^2}{L}\frac{\partial \hat{u}}{\partial\hat{x}}+\frac{V_0}{\delta}U_0\frac{\partial \hat{u}}{\partial\hat{y}}=\nu\left(\frac{U_0}{L^2}\frac{\partial^2 \hat{u}}{\partial\hat{x}^2}+\frac{U_0}{\delta^2}\frac{\partial^2 \hat{u}}{\partial\hat{y}^2}\right)\\
+&\Rightarrow \quad \frac{U_0^2}{L}\left[\frac{\partial\hat{u}}{\partial\hat{x}}+\frac{\partial\hat{u}}{\partial\hat{y}}-\frac{\nu}{U_0 L}\left(\frac{\partial^2\hat{u}}{\partial\hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial\hat{y}^2}\right)\right]=0
+\end{align*}
+
+That is,
+\begin{equation*}
+\frac{\partial \hat{u}}{\partial \hat{x}}+\frac{\partial \hat{u}}{\partial \hat{y}}-\frac{1}{R}\left[\frac{\partial^2 \hat{u}}{\partial \hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial \hat{y}^2}\right], \quad R=\frac{U_{\infty} L}{\nu}.
+\end{equation*}
+
+The inertial terms are $\displaystyle \frac{\partial\hat{u}}{\partial\hat{x}}+\frac{\partial\hat{u}}{\partial\hat{y}}$
+
+The convective terms are $\displaystyle \frac{1}{R}\left[\frac{\partial^2\hat{u}}{\partial\hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial\hat{y}^2}\right]$
+
+As $R\rightarrow\infty$, $\displaystyle\frac{1}{R}\frac{\partial^2\hat{u}}{\partial\hat{x}^2}\rightarrow 0$.
+
+However, close to the boundary, $\displaystyle \frac{1}{R}\left(\frac{L}{\delta}\right)^2$ may be $\mathcal{O}(1)$, so the term involving $\displaystyle \frac{\partial^2\hat{u}}{\partial\hat{y}^2}$ should not be neglected.
+
+Note: the equations of motion should be supplemented by boundary conditions. The appropriate conditions for this problem are "no slip" and no through-flow at the plate (see chapter {numref}`steady-soln`), and a requirement that the velocity must approach the free stream away from the boundary:
+
+\begin{equation*}u(y=0)=0, \quad v(y=0)=0, \quad \lim_{y \rightarrow \infty}\underline{v}=(U_{\infty},0)\end{equation*}
+```
+
 ## Navier-Stokes equations for viscous flow
 
 We assume that the scales of local acceleration, inertia and pressure are comparable so that the following non-dimensionalisations of time and velocity are sensible:

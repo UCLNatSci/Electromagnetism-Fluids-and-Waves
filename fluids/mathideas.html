@@ -491,8 +491,8 @@
 </tbody>
 </table>
 <p>A <strong>scalar field</strong> can be represented using a surface plot, contour plot, or a colour/grayscale map. On weather maps the pressure is normally represented using contours (called pressure isobars) and the temperature is normally represented using a colour map. The example below shows a grayscale map of the scalar field defined by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-92e65038-70ba-4570-9c76-f092263baac5">
-<span class="eqno">(26.1)<a class="headerlink" href="#equation-92e65038-70ba-4570-9c76-f092263baac5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e54d57f2-4055-4fce-91ef-1e5c6c385993">
+<span class="eqno">(26.1)<a class="headerlink" href="#equation-e54d57f2-4055-4fce-91ef-1e5c6c385993" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi(x,y)=x\ \mathrm{sinc}(x^2+y^2),\quad -3\leq x,y \leq 3.
 \end{equation}\]</div>
 <div class="cell docutils container">
@@ -584,12 +584,43 @@
 <p>Choosing a plot range that you think is suitable, produce both a vector plot and a streamline plot of the velocity field <span class="math notranslate nohighlight">\(\underline{u}=(2 y, 2 x,0)\)</span>. Describe the shape of the streamlines in words.</p>
 </div>
 </div>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#x coordinates arranged on [-2,2]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#y coordinates arranged on [-2,2]</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1">#make the plot grid</span>
+<span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">Y</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">X</span><span class="p">)</span>         <span class="c1">#define the vector field values at each point</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+<span class="c1">#----------------------------------</span>
+<span class="n">start</span><span class="o">=</span><span class="p">[</span> <span class="c1">#start points of selected field lines</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">1.9</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="o">-</span><span class="mf">1.1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">1.9</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],[</span><span class="o">-</span><span class="mf">1.1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.6</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.6</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.1</span><span class="p">]</span>
+    <span class="p">]</span>
+<span class="c1">#----------------------------------</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">start_points</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># stream plot</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mathideas_7_0.png" src="../_images/mathideas_7_0.png" />
+</div>
+<p>The streamlines are in the shape of a saddle point centred at the origin.</p>
+</div>
 </div>
 <div class="section" id="what-is-a-level-set">
 <h2><span class="section-number">26.2. </span>What is a <strong>level set</strong><a class="headerlink" href="#what-is-a-level-set" title="Permalink to this headline">¶</a></h2>
 <p>A level set of a scalar function <span class="math notranslate nohighlight">\(\phi\)</span> is defined by the following relationship, where <span class="math notranslate nohighlight">\(c\)</span> is a constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-11279103-773a-4d9a-bcad-706bdee3d962">
-<span class="eqno">(26.3)<a class="headerlink" href="#equation-11279103-773a-4d9a-bcad-706bdee3d962" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b1b3ea3d-8642-429a-9c34-7a37dea4e938">
+<span class="eqno">(26.3)<a class="headerlink" href="#equation-b1b3ea3d-8642-429a-9c34-7a37dea4e938" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=c\end{equation}\]</div>
 <p>The main types of level set are surfaces and curves, as outlined below.</p>
 <p><strong>Level surfaces</strong><br />
 The level sets of <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> are generally surfaces, called <em>isosurfaces</em>. As an example, consider the pressure <span class="math notranslate nohighlight">\(p(x,y,z)\)</span> in a volume of water, exposed to atmospheric pressure <span class="math notranslate nohighlight">\(p_0\)</span> at the free surface. In this case, the boundary between the water and the air is an isosurface, defined by <span class="math notranslate nohighlight">\(p(x,y,z)=p_0\)</span>. Choosing other values of the constant <span class="math notranslate nohighlight">\(c&gt;p_0\)</span> will define other pressure isosurfaces within the body of water.</p>
@@ -606,8 +637,8 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <div class="section" id="the-directional-derivative">
 <span id="dir-deriv"></span><h2><span class="section-number">26.3. </span>The directional derivative<a class="headerlink" href="#the-directional-derivative" title="Permalink to this headline">¶</a></h2>
 <p>According to the multivariate chain rule for a scalar function <span class="math notranslate nohighlight">\(\phi(\underline{x})\)</span>, where <span class="math notranslate nohighlight">\(\underline{x}=(x(s),y(s),z(s))\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b86ddd61-c991-4514-8ce0-935ef729173e">
-<span class="eqno">(26.4)<a class="headerlink" href="#equation-b86ddd61-c991-4514-8ce0-935ef729173e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a80edbaa-1440-4396-8853-00c7f14525a0">
+<span class="eqno">(26.4)<a class="headerlink" href="#equation-a80edbaa-1440-4396-8853-00c7f14525a0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}\phi}{\mathrm{d}s} =\frac{\partial \phi}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}s}+\frac{\partial \phi}{\partial y}\frac{\mathrm{d}y}{{\mathrm{d}s}}+\frac{\partial \phi}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}s}\end{equation}\]</div>
 <p>Using vectors, we can write this result as a scalar product:</p>
 <div class="math notranslate nohighlight" id="equation-mvarchain">
 <span class="eqno">(26.5)<a class="headerlink" href="#equation-mvarchain" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{u}, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),\]</div>
@@ -616,8 +647,8 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <span class="eqno">(26.6)<a class="headerlink" href="#equation-gradient" title="Permalink to this equation">¶</a></span>\[\nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).\]</div>
 <p>Formula <a class="reference internal" href="#equation-mvarchain">(26.5)</a> looks strikingly similar to the one-dimensional chain rule, with the factor <span class="math notranslate nohighlight">\(\nabla\phi\)</span> capturing variations in <span class="math notranslate nohighlight">\(\phi\)</span> due to <span class="math notranslate nohighlight">\(\underline{x}\)</span> and the second factor <span class="math notranslate nohighlight">\(\underline{u}\)</span> capturing variations in <span class="math notranslate nohighlight">\(\underline{x}\)</span> due to <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>If we evaluate <span class="math notranslate nohighlight">\(\nabla\phi\)</span> at a given point <span class="math notranslate nohighlight">\(\underline{x}_0\)</span>, the multivariate chain rule gives us the rate of change of <span class="math notranslate nohighlight">\(\phi\)</span> in direction <span class="math notranslate nohighlight">\(\underline{u}\)</span> at the point. Since the parameterisation <span class="math notranslate nohighlight">\(\underline{x}(s)\)</span> is arbitrary, we can choose a direction that we are interested in. This result is called the <em>directional derivative</em>. It is usually assumed that <span class="math notranslate nohighlight">\(\underline{u}\)</span> is a unit vector, so the result may be denoted as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e7d56a2-6251-4521-9dbd-403dbba7a27d">
-<span class="eqno">(26.7)<a class="headerlink" href="#equation-1e7d56a2-6251-4521-9dbd-403dbba7a27d" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{u}}}(\phi)=(\nabla\phi).\hat{\underline{u}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cc52d346-2edd-4780-9fea-c0dc720ea3e5">
+<span class="eqno">(26.7)<a class="headerlink" href="#equation-cc52d346-2edd-4780-9fea-c0dc720ea3e5" title="Permalink to this equation">¶</a></span>\[\begin{equation}D_{\hat{\underline{u}}}(\phi)=(\nabla\phi).\hat{\underline{u}}\end{equation}\]</div>
 <p>Notice that the result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.</p>
 <div class="exercise admonition" id="ex-dir_deriv">
 <p class="admonition-title"><span class="caption-number">Exercise 26.2 </span> </p>
@@ -626,18 +657,22 @@ The level sets of <span class="math notranslate nohighlight">\(\phi(x,y)\)</span
 <p>What is the directional derivative of this function in the direction <span class="math notranslate nohighlight">\(\hat{\underline{u}}=\frac{1}{13}(3,-4,12)\)</span>?</p>
 </div>
 </div>
+<div class="toggle docutils container">
+<p><span class="math notranslate nohighlight">\(\nabla\phi\biggr|_{\underline{x}_0}=(yz,xz,xy)\biggr|_{\underline{x}_0}=(12,-8,-6)\)</span></p>
+<p><span class="math notranslate nohighlight">\(D_{\underline{u}}\phi\biggr|_{\underline{x}_0}=\frac{1}{13}(3,-4,12).(12,-8,-6)=-\frac{68}{13}\)</span></p>
+</div>
 </div>
 <div class="section" id="the-gradient-direction">
 <h2><span class="section-number">26.4. </span>The gradient direction<a class="headerlink" href="#the-gradient-direction" title="Permalink to this headline">¶</a></h2>
 <p><strong>The gradient is perpendicular to the level sets</strong><br />
 Since level sets are defined by the relationship <span class="math notranslate nohighlight">\(\phi=c\)</span>, differentiation gives <span class="math notranslate nohighlight">\(\frac{\mathrm{d}\phi}{\mathrm{d}s}=0\)</span>. Using the result <a class="reference internal" href="#equation-mvarchain">(26.5)</a>, we find that on a level set</p>
-<div class="amsmath math notranslate nohighlight" id="equation-444248eb-50b2-4514-8b1e-064ea8e211f0">
-<span class="eqno">(26.8)<a class="headerlink" href="#equation-444248eb-50b2-4514-8b1e-064ea8e211f0" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{u}}=0, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-267d7edf-6ed0-4d17-9576-d9f7c8d5e8c2">
+<span class="eqno">(26.8)<a class="headerlink" href="#equation-267d7edf-6ed0-4d17-9576-d9f7c8d5e8c2" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\nabla\phi).\hat{\underline{u}}=0, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right)\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\hat{\underline{u}}\)</span> is parallel to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>, the result result tells us that <span class="math notranslate nohighlight">\(\nabla\phi\)</span> is perpendicular to the level sets of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <p><strong>The gradient points “uphill”</strong><br />
 From the definition of the scalar product, we know that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e5c1595e-13da-413a-862f-373769c77cac">
-<span class="eqno">(26.9)<a class="headerlink" href="#equation-e5c1595e-13da-413a-862f-373769c77cac" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{u}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1be97bfc-6d1f-4cea-9b71-43398cb9e934">
+<span class="eqno">(26.9)<a class="headerlink" href="#equation-1be97bfc-6d1f-4cea-9b71-43398cb9e934" title="Permalink to this equation">¶</a></span>\[\begin{equation}\biggr|D_{\hat{\underline{u}}}(\phi)\biggr| = \biggr|\nabla \phi\biggr|\cos(\theta)\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\nabla \phi\)</span> and the direction vector <span class="math notranslate nohighlight">\(\hat{\underline{u}}\)</span>.</p>
 <p>The result is largest when <span class="math notranslate nohighlight">\(\theta=0\)</span>. Therefore, <span class="math notranslate nohighlight">\(\nabla \phi\)</span> points in the direction of maximum increase of the function <span class="math notranslate nohighlight">\(\phi\)</span> and has magnitude equal to the rate of maximum increase.</p>
 <div class="exercise admonition" id="pot-fun">
@@ -654,6 +689,30 @@ From the definition of the scalar product, we know that</p>
 </ul>
 <p>The function needed to plot contours is part of the matplotlib library. Usage guidelines can be found <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html">here</a>.</p>
 </div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  
+<span class="p">(</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">X</span><span class="o">*</span><span class="n">Y</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># options to prettify the plot</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([]),</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">U</span><span class="p">,</span><span class="n">V</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span><span class="n">levels</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mathideas_9_0.png" src="../_images/mathideas_9_0.png" />
+</div>
+<p>The contours of the scalar function are perpendicular to the vector field.</p>
 </div>
 </div>
 </div>

@@ -47,6 +47,38 @@ where $H$ is known as the "head".
 Try to prove the strange-looking vector identity for $\underline{u}.\nabla\underline{u}$, by writing out each expression in component form.
 ```
 
+```{toggle}
+Let $\underline{u}=(u,v,w)$. Then,
+
+$\displaystyle \nabla\left(\frac{1}{2}\underline{u}.\underline{u}\right)=\nabla\left(\frac{1}{2}(u^2+v^2+w^2)\right)=\begin{pmatrix}
+u\frac{\partial u}{\partial x}+v\frac{\partial v}{\partial x}+w\frac{\partial w}{\partial x}\\
+u\frac{\partial u}{\partial y}+v\frac{\partial v}{\partial y}+w\frac{\partial w}{\partial y}\\
+u\frac{\partial u}{\partial z}+v\frac{\partial v}{\partial z}+w\frac{\partial w}{\partial z}\\
+\end{pmatrix}$
+
+$\displaystyle\underline{\omega}=\nabla\times\underline{u}=\begin{vmatrix}\underline{e}_x &\underline{e}_y &\underline{e}_z \\\frac{\partial}{\partial x} & \frac{\partial}{\partial y} &\frac{\partial}{\partial z}\\ u & v & w \end{vmatrix}=\begin{pmatrix}
+\frac{\partial w}{\partial x}-\frac{\partial v}{\partial z}\\
+\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\\
+\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}
+\end{pmatrix}$
+
+$\displaystyle \underline{\omega}\times\underline{u}=\begin{vmatrix}\underline{e}_x &\underline{e}_y &\underline{e}_z \\\frac{\partial w}{\partial x}-\frac{\partial v}{\partial z} & \frac{\partial u}{\partial z}-\frac{\partial w}{\partial x} &\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\\ u & v & w \end{vmatrix}=\begin{pmatrix}
+w\frac{\partial u}{\partial z}-w\frac{\partial w}{\partial x}-v\frac{\partial v}{\partial x}+v\frac{\partial u}{\partial y}\\
+u\frac{\partial v}{\partial x}-u\frac{\partial u}{\partial y}-w\frac{\partial w}{\partial y}+w\frac{\partial v}{\partial z}\\
+v\frac{\partial w}{\partial y}-v\frac{\partial v}{\partial z}-u\frac{\partial u}{\partial z}+u\frac{\partial w}{\partial x}
+\end{pmatrix}$
+
+Therefore
+
+$\displaystyle (\underline{\omega}\times\underline{u})+\nabla\left(\frac{1}{2}\underline{u}.\underline{u}\right) = \begin{pmatrix}
+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}\\
+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}\\
+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}
+\end{pmatrix}$
+
+This result is identical to $\underline{u}.\nabla\underline{u}$
+```
+
 We may yet further simplify if we assume that the flow is steady, so $\displaystyle \frac{\partial \underline{u}}{\partial t}=0$, and by taking the scalar product with vector $\underline{u}$ to eliminate the vorticity term:
 \begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}
 Since $\underline{a}.(\underline{b}\times\underline{a})=0$ for any vectors $\underline{a},\underline{b}$ this can be simplified to $\underline{u}.\nabla H=0$. The result says that the head remains constant on a streamline, since the directional derivative along $\underline{u}$ is zero.
@@ -123,6 +155,27 @@ scale: 80%
 <br>
 ````
 
+```{toggle}
+Taking the speed of the fluid on a central streamline to be $u_A,u_B$ at $A,B$, mass conservation gives
+
+\begin{equation*}u_A=\frac{Q}{A}, \quad u_B=\frac{Q}{B}\end{equation*}
+
+Taking the pressure to be $p_A,p_B$ at $A,B$, Bernoulli's theorem for the central streamline gives
+
+\begin{equation*}p_B+\frac{1}{2}\rho u_B^2=p_A+\frac{1}{2}\rho u_A^2\end{equation*}
+
+And Bernoulli's equation for particles drawn from the reservoir gives
+
+$p_0=p_A+\rho g h$
+
+where $p_0$ is atmospheric pressure, and we also have $p_0=p_B$ since the pipe is open at $B$.
+
+Combining the equations gives the result
+
+\begin{equation*}h=\frac{Q^2}{2g}\left(\frac{1}{A^2}-\frac{1}{B^2}\right)\end{equation*}
+```
+
+
 ### A rotating bucket
 
 Consider an ideal fluid of zero viscosity, rotating under gravity $g$ about the $z$ axis with constant angular velocity $\Omega=\dot{\theta}$.
@@ -144,6 +197,21 @@ Substitute in the velocity field $\underline{u}=\Omega(-y,x,0)$ and solve for ea
 z =\frac{p_0-p}{\rho g} + \frac{\Omega^2}{2g}(x^2+y^2), \qquad p_0=p(0,0,0).
 ```
 ````
+
+```{toggle}
+Substituting into the equation gives
+
+\begin{align*}
+-\Omega^2 x &=-\frac{1}{\rho}\frac{\partial p}{\partial x} \quad \Rightarrow \quad p=\rho\Omega^2\frac{x^2}{2}+C_1(y,z)\\
+-\Omega^2 y &=-\frac{1}{\rho}\frac{\partial p}{\partial y}\quad \Rightarrow \quad p=\rho\Omega^2\frac{y^2}{2}+C_2(x,z)\\
+0 &=-\frac{1}{\rho}\frac{\partial p}{\partial z}-g \quad \Rightarrow \quad p=C_3(x,y)-\rho g z
+\end{align*}
+
+For consistency, we have
+\begin{equation*}p=\frac{\rho \Omega^2}{2}(x^2+y^2)-\rho g z+p_0,\end{equation*}
+
+which rearranges to give the claimed result for $z$
+```
 
 From this relationship, we can see that the constant pressure surfaces are parabolic, and we can also calculate the height of streamlines on a given pressure surface. The plot below shows the pressure surface and streamlines for $p=p_0$. The velocity field is also shown on the plot.
 
