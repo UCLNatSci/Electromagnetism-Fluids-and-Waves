@@ -76,6 +76,13 @@ plt.show()
 # Find a parameterisation governing the streamlines of the flow $\underline{u}=(2x,2yt)$.
 # ````
 # 
+# ```{toggle}
+# The streamline for this problem that passes through satisfy $(x_0,y_0)$ at time $t$ is given as follows:
+# \begin{equation*}\frac{\mathrm{d}x}{\mathrm{d}s}=2x, \quad \frac{\mathrm{d}y}{\mathrm{d}s}=2ts \quad \rightarrow \quad (x,y)=(x_0 e^{2s},y_0 e^{2ts}).\end{equation*}
+# 
+# Note that the streamlines satisfy $y=kx e^{t}$, where $k=y_0/x_0$.
+# ```
+# 
 # ## The stream function
 # 
 # The stream function is a useful mathematical tool that can be used to find the streamlines for some types of flow. It applies only to two-dimensional flows $\underline{u}(\underline{x},t)$ that satisfy $\nabla.\underline{u}=0$. The latter condition means that the fluid is *incompressible*. We will explore the incompressibility condition in later sections of the notes.  
@@ -106,6 +113,55 @@ plt.show()
 # Find the stream function for the flow $\underline{u}=\left(x^2y,-xy^2\right)$.  
 # Use the stream function to produce a contour plot of the flow on $-2\leq x,y\leq 2$.
 # ```
+
+# In[2]:
+
+
+from myst_nb import glue
+import numpy as np
+import matplotlib.pyplot as plt
+
+x=np.linspace(-2, 2, 100)
+y=np.linspace(-2, 2, 100)
+
+X,Y = np.meshgrid(x, y)
+F=(X**2)*(Y**2)/2
+
+# options to prettify the plot
+fig,ax=plt.subplots(figsize=(5,5))
+ax.axis([-2,2,-2,2])
+ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
+
+ax.contour(X,Y,F,levels=[0.005,0.1,0.4,1,2,4])
+
+glue("ppath_fig", fig, display=False)
+
+
+# ````{toggle}
+# 
+# $\underline{u}=(x^2y,-xy^2)=\left(\frac{\partial\psi}{\partial y},-\frac{\partial\psi}{\partial x}\right) \quad \rightarrow \psi = \frac{x^2 y^2}{2}$
+# 
+# ```python
+# x=np.linspace(-2, 2, 100)
+# y=np.linspace(-2, 2, 100)
+# 
+# X,Y = np.meshgrid(x, y)
+# F=(X**2)*(Y**2)/2
+# 
+# # options to prettify the plot
+# fig,ax=plt.subplots(figsize=(5,5))
+# ax.axis([-2,2,-2,2])
+# ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
+# 
+# ax.contour(X,Y,F,levels=[0.005,0.1,0.4,1,2,4])
+# 
+# plt.show()
+# ```
+# 
+# ```{glue:} ppath_fig
+# ```
+# 
+# ````
 # 
 # Note: Some three-dimensional flows can also be treated as two-dimensional. This is the case for flows that are *axisymmetric*, meaning that they are symmetric about a given axis. An example of an axisymmetric flow is shown in the image below, which is from another CFD simulation [produced](https://uk.comsol.com/blogs/creating-2d-models-from-3d-geometries-in-comsol-multiphysics/) using the commercial software COMSOL.
 # 
@@ -125,7 +181,7 @@ plt.show()
 # ## Particle paths
 # The streamlines indicate the direction of motion of fluid particles at a given moment. If the fluid is not steady (time-independent), then the streamlines do **not** show the paths taken by the fluid particles. This is illustrated by the below animation, which tracks several selected fluid particles as they move tangent to the evolving velocity field given in equation {eq}`examplev`.
 
-# In[2]:
+# In[3]:
 
 
 import numpy as np
@@ -215,6 +271,35 @@ anim
 # Find the particle paths for the flow $\underline{u}=(\alpha,\beta t,0)$, where $\alpha, \beta$ are positive constants. Describe the shape of your solutions.
 # ````
 # 
+# ````{toggle}
+# **Streamlines :**
+# 
+# $\frac{\mathrm{d}x}{\mathrm{d}s}=\alpha \quad \rightarrow \quad x=\alpha s + x_0$
+# 
+# $\frac{\mathrm{d}y}{\mathrm{d}s}=\beta t \quad \rightarrow \quad y=\beta t s + y_0$
+# 
+# Combining the two expressions gives $y=\frac{\beta t}{\alpha}(x-x_0)+y_0$. This is the equation of the streamline at time $t$ that passes through $(x_0,y_0)$.   
+# 
+# **Particle paths :**
+# 
+# $\frac{\mathrm{d}x}{\mathrm{d}t}=\alpha \quad \rightarrow \quad x=\alpha t +x_0$  
+# 
+# $\frac{\mathrm{d}y}{\mathrm{d}t}=\beta t \quad \rightarrow \quad y=\beta \frac{t^2}{2}+y_0$
+# 
+# Combining the two expressions gives $y=\frac{\beta}{2 \alpha^2}(x-x_0)^2+y_0$. This is the path of a particle released from $(x_0,y_0)$ at time $t=0$.  
+# 
+# For this example, the streamlines are straight lines, and the particle paths are parabolas.
+# 
+# ```{admonition} Note
+# :class: warning
+# In the case of the streamlines, we may obtain the following result using the chain rule
+# 
+# $\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\beta t}{\alpha} \quad \Rightarrow \quad y=\frac{\beta t}{\alpha}x+c$
+# 
+# However, we cannot use this treatment to solve for the particle paths since in that case $x=x(t)$, $y=y(t)$ and so $t$ must not be treated as constant.
+# ```
+# 
+# ````
 # 
 # ## Streaklines
 # 
@@ -222,7 +307,7 @@ anim
 # 
 # The animation below shows a sequence of particles injected at intervals into the fluid described by equation {eq}`examplev`. Due to the changing vector field, the particles follow different trajectories depending on the time of release. The $(x,y)$ trajectory of a particle released at time $t_0$ is given in equation {eq}`ptrajectory`. The set of particles together define a streakline.
 
-# In[3]:
+# In[4]:
 
 
 import numpy as np

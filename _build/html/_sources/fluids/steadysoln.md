@@ -78,6 +78,38 @@ field does not depend on the vertical coordinate, solve the equations of motion
 to find the velocity field.
 ```
 
+`````{toggle}
+
+````{panels}
+:card: border-0
+**Euler:**
+
+$\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu\nabla^2\underline{u}$
+
+$\nabla.\underline{u} =0$
+
+Take $p=\mathrm{constant}$, $\underline{u}=(u(x),v(x),0)$
+---
+```{image} navstok_img/walls.png
+:align: center
+:scale: 60%
+```
+````
+
+From the incompressibility condition, $\displaystyle \frac{\partial u}{\partial x}=0$, so $u$ is independent of $x$.
+Since we already assumed that $u$ is independent of $y$ this component must be constant, and since there is no flow through the boundaries $u=0$.
+
+From the conservation of momentum equation,
+\begin{equation*}\frac{\partial^2 v}{\partial x^2}=-\frac{g}{\nu} \quad \Rightarrow \quad v=-\frac{g}{\nu}\frac{x^2}{2}+kx +C\end{equation*}
+
+$v(0)=0 \quad \Rightarrow C=0$
+
+$v(x=a)=-V \quad \Rightarrow k=\frac{g}{\nu}\frac{a}{2}-\frac{V}{a}$
+
+\begin{equation*}v=\frac{g(ax-x^2)}{2\nu}-\frac{Vx}{a}\end{equation*}
+
+`````
+
 (plane-poiseuille)=
 ## Plane Poiseuille flow
 In this example, we will consider flow between two parallel planes driven by a constant pressure gradient $\frac{\partial p}{\partial x}=-P$. We will assume that the flow is independent of $x$ so that $\underline{u}=(u(y),v(y),0)$.

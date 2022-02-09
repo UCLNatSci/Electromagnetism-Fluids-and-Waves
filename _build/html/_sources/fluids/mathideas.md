@@ -123,6 +123,73 @@ In the case where the field represents velocity of a fluid, the field lines are 
 Choosing a plot range that you think is suitable, produce both a vector plot and a streamline plot of the velocity field $\underline{u}=(2 y, 2 x,0)$. Describe the shape of the streamlines in words.
 ````
 
+```{code-cell} ipython3
+:tags: [remove-cell]
+
+from myst_nb import glue
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.cm as cm
+
+x=np.linspace(-2, 2, 10) #x coordinates arranged on [-2,2]
+y=np.linspace(-2, 2, 10) #y coordinates arranged on [-2,2]
+
+X,Y = np.meshgrid(x, y) #make the plot grid
+(U,V)=(2*Y,2*X)        #define the vector field values at each point
+
+fig,ax=plt.subplots(figsize=(5,5))
+ax.axis([-2,2,-2,2])
+ax.xaxis.set_ticks([])
+ax.yaxis.set_ticks([])
+#----------------------------------
+start=[ #start points of selected field lines
+    [-2,-2],[-2,2],[2,-2],[2,2],
+    [-1.9,2],[-1.6,2],[-1.1,2],
+    [-1.9,-2],[-1.6,-2],[-1.1,-2],
+    [-2,-1.9],[-2,-1.6],[-2,-1.1],
+    [2,-1.9],[2,-1.6],[2,-1.1]
+    ]
+#----------------------------------
+
+ax.streamplot(X,Y,U,V,start_points=start,density=10) # stream plot
+glue("saddle_fig", fig, display=False)
+```
+
+
+````{toggle}
+
+```python
+x=np.linspace(-2, 2, 10) #x coordinates arranged on [-2,2]
+y=np.linspace(-2, 2, 10) #y coordinates arranged on [-2,2]
+
+X,Y = np.meshgrid(x, y) #make the plot grid
+(U,V)=(2*Y,2*X)         #define the vector field values at each point
+
+fig,ax=plt.subplots()
+ax.axis([-2,2,-2,2])
+ax.xaxis.set_ticks([])
+ax.yaxis.set_ticks([])
+#----------------------------------
+start=[ #start points of selected field lines
+    [-2,-2],[-2,2],[2,-2],[2,2],
+    [-1.9,2],[-1.6,2],[-1.1,2],
+    [-1.9,-2],[-1.6,-2],[-1.1,-2],
+    [-2,-1.9],[-2,-1.6],[-2,-1.1],
+    [2,-1.9],[2,-1.6],[2,-1.1]
+    ]
+#----------------------------------
+
+ax.streamplot(X,Y,U,V,start_points=start,density=10) # stream plot
+
+plt.show()
+```
+
+```{glue:} saddle_fig
+```
+
+The streamlines are in the shape of a saddle point centred at the origin.
+````
+
 ## What is a **level set**
 
 A level set of a scalar function $\phi$ is defined by the following relationship, where $c$ is a constant:
@@ -201,7 +268,11 @@ Find the gradient of the function $\phi(x,y,z)=xyz$ at the point $\underline{x}_
 What is the directional derivative of this function in the direction $\hat{\underline{u}}=\frac{1}{13}(3,-4,12)$?
 ```
 
+```{toggle}
+$\nabla\phi\biggr|_{\underline{x}_0}=(yz,xz,xy)\biggr|_{\underline{x}_0}=(12,-8,-6)$
 
+$D_{\underline{u}}\phi\biggr|_{\underline{x}_0}=\frac{1}{13}(3,-4,12).(12,-8,-6)=-\frac{68}{13}$
+```
 
 ## The gradient direction
 
@@ -235,4 +306,53 @@ Consider a two-dimensional velocity field $\underline{u}=(u,v)$, which is define
 * In which direction are the contours of $\phi$, relative to $\underline{u}$ ?
 
 The function needed to plot contours is part of the matplotlib library. Usage guidelines can be found [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html).
+````
+
+```{code-cell} ipython3
+:tags: [remove-cell]
+
+x=np.linspace(-2, 2, 30)
+y=np.linspace(-2, 2, 30)
+
+X,Y = np.meshgrid(x, y)  
+(U,V)=(1-2*X**2,-2*X*Y)*np.exp(-X**2-Y**2)
+
+# options to prettify the plot
+fig,ax=plt.subplots(figsize=(5,5))
+ax.axis([-2,2,-2,2])
+ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
+
+ax.quiver(X,Y,U,V)
+
+ax.contour(X,Y,X*np.exp(-X**2-Y**2),levels=10)
+
+glue("contour_fig", fig, display=False)
+```
+
+
+````{toggle}
+
+```python
+x=np.linspace(-2, 2, 30)
+y=np.linspace(-2, 2, 30)
+
+X,Y = np.meshgrid(x, y)  
+(U,V)=(1-2*X**2,-2*X*Y)*np.exp(-X**2-Y**2)
+
+# options to prettify the plot
+fig,ax=plt.subplots(figsize=(5,5))
+ax.axis([-2,2,-2,2])
+ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
+
+ax.quiver(X,Y,U,V)
+
+ax.contour(X,Y,X*np.exp(-X**2-Y**2),levels=10)
+
+plt.show()
+```
+
+```{glue:} contour_fig
+```
+
+The contours of the scalar function are perpendicular to the vector field.
 ````

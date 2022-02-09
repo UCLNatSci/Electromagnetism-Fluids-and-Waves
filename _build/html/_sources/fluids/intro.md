@@ -51,7 +51,6 @@ In **chapters 14-15** we look at some geophysical phenomena that relate to rotat
 <br>
 
 ```{admonition} Please kindly note
-:class: danger
 These notes on fluid dynamics are new (2022). Therefore it is highly likely that they will contain some errors and omissions. If you spot anything in the notes that seems *suspect*, please let me know so that it can be corrected or explained.
 
 --Ella.

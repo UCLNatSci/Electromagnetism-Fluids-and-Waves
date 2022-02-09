@@ -78,15 +78,15 @@
 # 
 # Hence, calculate the line integral of this field between $(1,2,1)$ to $(3,2,1)$.
 # ```
-# <!--
-# Solution:
+# ```{toggle}
+# Irrotational: $\nabla\times\underline{u}=\begin{vmatrix}\underline{e}_x & \underline{e}_y & \underline{e}_z\\\frac{\partial}{\partial x} & \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\ 3x^2 & 3y^2 & 3z^2\end{vmatrix}=0\underline{e}_x+0\underline{e}_y+0\underline{e}_z$
 # 
-# $\nabla\times\underline{u}=(0,0,0), \quad \Rightarrow\quad \underline{u}=\nabla\phi = \left(\frac{\partial \phi}{\partial x},\frac{\partial \phi}{\partial y},\frac{\partial \phi}{\partial z}\right)$
+# $\underline{u}=\nabla\phi \quad \Rightarrow (3x^2,3y^2,3z^2)=\left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right)$
 # 
 # Equating components and integrating gives $\underline{u}=x^3+y^3+z^3 +\mathrm{const.}$
 # 
 # Hence, $\displaystyle \int_{(1,2,1)}^{(3,2,1)}\underline{u}.\mathrm{d}\underline{s} = \phi(3,2,1)-\phi(1,2,1)=26$ (independent of the path)
-# -->
+# ```
 # 
 # 
 # ## Line integrals for flows that are not irrotational
@@ -192,4 +192,12 @@ plt.show()
 # Verify that Laplace's equation is satisfied by the following potential function:
 # \begin{equation*}\phi=\left[Ce^{kz}+De^{-kz}\right]\sin(kx-\omega t)\end{equation*}
 # This is the velocity potential for travelling waves on a fluid surface.
+# ```
+# 
+# ```{toggle}
+# This is simply an exercise in differentiation:
+# 
+# $\frac{\partial^2\phi}{\partial x^2}=-k^2\phi, \qquad \frac{\partial^2\phi}{\partial z^2}=k^2\phi$
+# 
+# Hence, $\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial z^2}=0$
 # ```

@@ -26,6 +26,16 @@ The material derivative can also be applied to each element of a vector field $\
 Write out the convective acceleration $\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}$ in component form, taking $\underline{x}=(x,y,z)$ and $\underline{u}(t,\underline{x})=(u,v,w)$.
 ```
 
+```{toggle}
+We have $\underline{u}.\nabla = u\frac{\partial}{\partial x}+v\frac{\partial}{\partial y}+w\frac{\partial}{\partial z}$
+
+Hence, $\frac{D\underline{u}}{Dt}=\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=\begin{pmatrix}
+\frac{\partial u }{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}\\
+\frac{\partial v }{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}\\
+\frac{\partial w }{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}
+\end{pmatrix}$
+```
+
 ## Mass transport (continuity)
 Consider the mass flow through an arbitrary volume at a fixed location, like the "bag" shown in the image on the left. We assume matter is neither created or destroyed.
 
@@ -77,6 +87,14 @@ b). What single equation can be used to model a flow that is both incompressible
 
 c). Is incompressible flow the same as solenoidal flow?
 
+```
+
+```{toggle}
+a). $\frac{\partial \rho }{\partial t}+u\frac{\partial \rho}{\partial x}+v\frac{\partial \rho}{\partial y}+w\frac{\partial \rho}{\partial z}+\rho \left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right)=0$
+
+b). Laplace's equation, $\nabla^2\phi=0$, where $\underline{u}=\nabla\phi$
+
+c). The condition for both types of flow is the same. Since incompressible flows must satisfy $\nabla.\underline{u}$, they are solenoidal. However, it may be possible for a compressible fluid to exhibit solenoidal flow.
 ```
 
 ## Cauchy stress theorem
@@ -186,6 +204,13 @@ If we assume that the shear stress component is zero so that $\underline{\tau}\e
 Write out this equation in component form for a Cartesian system under a body force $\underline{F}=(0,0,-g)$.
 
 The implications of ignoring the shear stress components will be explored in later sections of these notes.
+```
+
+```{toggle}
+\begin{align}
+\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&=-\frac{1}{\rho}\frac{\partial p}{\partial x}\\
+\frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&=-\frac{1}{\rho}\frac{\partial p}{\partial y}\\
+\frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&=-\frac{1}{\rho}\frac{\partial p}{\partial z}-g\end{align}
 ```
 
 *A physical derivation of the Coriolis force is outlined in the (optional) section of the notes on rotational reference frames.

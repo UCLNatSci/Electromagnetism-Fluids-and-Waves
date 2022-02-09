@@ -124,3 +124,23 @@ In cases where the development of the starting vortex does not have a preferred 
 ```{exercise}
 Look up the meaning of the term "stall" in the context of fluid dynamics, and provide a description of this term in your own words. Draw pictures to illustrate.
 ```
+
+```{toggle}
+
+When an airfoil attacks an oncoming fluid stream, the deflection of the air below and above the wing causes a pressure gradient perpendicular to the direction of curvature, which generates lift. The sharp trailing edge is important. If the trailing edge is blunt then the air flows back around the edge, which reduces lift.
+
+Increasing the attack angle between the airfoil and the oncoming stream increases lift, but if the angle is increased too far then the fluid breaks away from the boundary and begins to recirculate, leading leads to a sudden loss of lift called stall.
+
+The geometry of the wing also affects how much lift it can generate, with long slender wings able to generate more lift.
+
+**Bonus: How bumblebees fly**
+
+A bumblebee, with its short, stubby wings, would not be expected to produce a vast amount of lift, even at angles near to the critical angle for a steady stall. Having cambered wings, and flapping really fast helps!
+
+But bumblebees have 2 more tricks:
+
+Firstly, they are able to invert their wings, so that they produce nearly as much lift on the upstroke as the downstroke, whilst birds (for example) do not have this ability.
+
+Secondly, the bee is able to increase the attack angle beyond the critical angle for a steady stall by rotating its wing so that the flow stays adhered. This is known as a dynamic stall. Because the bumblebee operates in a regime of dynamic stall, its flight path is unstable: small deviations in flow pattern can lead to dramatic changes in direction. Dealing with this requires the bee to make rapid adjustments. It does, however, have the added benefit of an ability to manoeuvre very quickly. Fighter jets also operate in an unsteady flow regime.
+
+```

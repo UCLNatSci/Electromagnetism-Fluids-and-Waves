@@ -1,1 +1,72 @@
-{}
+{
+  "fluids\\helmholtz": {
+    "strfun_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "strfun_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\helmholtz_1_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    }
+  },
+  "fluids\\mathideas": {
+    "contour_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "contour_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\mathideas_9_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "saddle_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "saddle_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\mathideas_7_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    }
+  },
+  "fluids\\visualise": {
+    "ppath_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "ppath_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\visualise_3_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 360x360 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    }
+  }
+}
