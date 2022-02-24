@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,19 +36,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -101,7 +101,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -163,7 +163,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +235,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -511,7 +511,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="shear-stress-and-viscosity">
+  <div class="section" id="shear-stress-and-viscosity">
 <h1><span class="section-number">31. </span>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
@@ -589,10 +589,10 @@
 <div class="section" id="navier-stokes-equations">
 <span id="navstokeqn"></span><h2><span class="section-number">31.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">¶</a></h2>
 <p>The conservation of momentum equation for a Newtonian fluid, together with the conservation of mass equation for incompressible flow are called the Navier-Stokes equations. The equations are given below, where <span class="math notranslate nohighlight">\(p\)</span> is the hydrostatic pressure (mean normal stress), and <span class="math notranslate nohighlight">\(\nu=\frac{\mu}{\rho}\)</span> is called the kinematic viscosity.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-30a0f884-6b28-44ea-9db1-7ed80e2256b8">
-<span class="eqno">(31.3)<a class="headerlink" href="#equation-30a0f884-6b28-44ea-9db1-7ed80e2256b8" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-476e3713-d9e5-4e48-b527-ed22ed69e437">
-<span class="eqno">(31.4)<a class="headerlink" href="#equation-476e3713-d9e5-4e48-b527-ed22ed69e437" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6bd00d6e-ccb4-4b8e-9f9c-7c22195273fc">
+<span class="eqno">(31.3)<a class="headerlink" href="#equation-6bd00d6e-ccb4-4b8e-9f9c-7c22195273fc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8b7df9f4-e534-42a9-91a9-145e1982189c">
+<span class="eqno">(31.4)<a class="headerlink" href="#equation-8b7df9f4-e534-42a9-91a9-145e1982189c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <div class="theorem admonition">
 <p class="admonition-title">Euler’s equations</p>
@@ -607,8 +607,8 @@
 </div>
 </div>
 <div class="toggle docutils container">
-<div class="amsmath math notranslate nohighlight" id="equation-d49c20f0-15b4-4daf-a341-5bdd441cdb06">
-<span class="eqno">(31.5)<a class="headerlink" href="#equation-d49c20f0-15b4-4daf-a341-5bdd441cdb06" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-22472b26-871f-4d70-8f8b-0a9406c84763">
+<span class="eqno">(31.5)<a class="headerlink" href="#equation-22472b26-871f-4d70-8f8b-0a9406c84763" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
@@ -619,14 +619,14 @@
 <span id="navstok-cylindrical"></span><h2><span class="section-number">31.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">¶</a></h2>
 <p>Written out in cylindrical coordinates, the components of the Navier-Stokes equations for <span class="math notranslate nohighlight">\(\underline{u}=(u_r,u_{\theta},u_z)\)</span> are given by</p>
 <p><strong>Conservation of momentum:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-a44c01e9-ec67-4cf8-86af-97afc84eb40e">
-<span class="eqno">(31.6)<a class="headerlink" href="#equation-a44c01e9-ec67-4cf8-86af-97afc84eb40e" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-05bee9cc-c2eb-4949-9052-0c66dfed3d98">
+<span class="eqno">(31.6)<a class="headerlink" href="#equation-05bee9cc-c2eb-4949-9052-0c66dfed3d98" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
 <p><strong>Incompressibility:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-df19131e-e19a-4054-b6dd-7968ba294401">
-<span class="eqno">(31.7)<a class="headerlink" href="#equation-df19131e-e19a-4054-b6dd-7968ba294401" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-638b1a50-5abf-4376-a5a1-96db8b02d89d">
+<span class="eqno">(31.7)<a class="headerlink" href="#equation-638b1a50-5abf-4376-a5a1-96db8b02d89d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
 <p>where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e71fc712-fde0-4cd1-9722-decc90876d1c">
-<span class="eqno">(31.8)<a class="headerlink" href="#equation-e71fc712-fde0-4cd1-9722-decc90876d1c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-02ddc4f2-bcbf-4394-950a-4b87faa07eeb">
+<span class="eqno">(31.8)<a class="headerlink" href="#equation-02ddc4f2-bcbf-4394-950a-4b87faa07eeb" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
 </div>
 </div>
 

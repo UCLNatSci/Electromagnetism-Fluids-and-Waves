@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,19 +36,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -99,7 +99,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -161,7 +161,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -233,7 +233,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -455,7 +455,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="newtonian-vs-non-newtonian-fluids">
+  <div class="section" id="newtonian-vs-non-newtonian-fluids">
 <h1>Newtonian vs non-Newtonian fluids<a class="headerlink" href="#newtonian-vs-non-newtonian-fluids" title="Permalink to this headline">¶</a></h1>
 <p>In a so-called “Newtonian” fluid the shear stress is linearly proportional to the velocity gradient, which may be written as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom5">
@@ -489,8 +489,8 @@ For a Newtonian fluid with zero body force,</p>
 <p>where <span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{U L}{\nu}\)</span> is a parameter called the Reynolds number.</p>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <p>Written out in full, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ec626b99-03a9-48b9-8cd9-3065121f1927">
-<span class="eqno">()<a class="headerlink" href="#equation-ec626b99-03a9-48b9-8cd9-3065121f1927" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-03263de2-024f-4a2d-a3d1-0a75b4cbc260">
+<span class="eqno">()<a class="headerlink" href="#equation-03263de2-024f-4a2d-a3d1-0a75b4cbc260" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
 <p>It is helpful to classify the study of fluids as follows:</p>
 <p>Incompressible	Compressible
 Inviscid	This course	Acoustics (high speed)
