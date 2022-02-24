@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,19 +36,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -101,7 +101,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -163,7 +163,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +235,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -511,7 +511,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="perturbations-and-asymptotics">
+  <div class="section" id="perturbations-and-asymptotics">
 <h1><span class="section-number">35. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
@@ -532,8 +532,8 @@
 <p>In chapter <a class="reference internal" href="steadysoln.html#steady-soln"><span class="std std-numref">Section 33</span></a> we looked at some steady solutions. Fluid dynamicists wish to understand what happens to these steady flow profiles when they are perturbed by small disturbances. We want to know if the disturbances will grow by feeding off the energy of the main flow, or if they will be damped out by effects such as friction or swept away by convection. Understanding the dynamics of small amplitude disturbances is key to understanding laminar-turbulent transition. A laminar flow is an orderly flow characterised by fluid layers moving smoothly past one another, whilst a turbulent state is characterised by disordered, chaotic motion occurring a “cascade” of length scales. If small-amplitude perturbations are amplified, they may eventually become large enough to trigger this instability through their nonlinear interactions.</p>
 <p>A good understanding of the features of the conditions that lead to turbulence could help with engineers learn to control transition. For an example discussion, see <a class="reference external" href="https://www.youtube.com/watch?v=GMmNKUlXXDs">this video [2:30-8:05]</a>. Sometimes the desire may be to facilitate turbulence, for instance as an efficient mechanism of heat transfer or a means of achieving liquid-jet breakup in fuel injection systems. Conversely, in aerodynamic applications turbulent skin-friction drag can be as much as ten times that of laminar flow at the same Reynolds number, and accounts for 50% of the total drag experienced by a subsonic aircraft. This means that any reduction in turbulence offers huge potential for fuel savings as well as reduction of greenhouse gases and other pollutants.</p>
 <p>In perturbation analysis, we assume a flow profile of the following form, in which <span class="math notranslate nohighlight">\(\underline{u}_0\)</span> is a steady flow solution and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a small (strictly infinitesimal) parameter:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf2d9e35-2293-429e-886e-2f56495c5b3b">
-<span class="eqno">(35.1)<a class="headerlink" href="#equation-bf2d9e35-2293-429e-886e-2f56495c5b3b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d4af1e1e-37ce-4ec1-9bc3-22d7b351b066">
+<span class="eqno">(35.1)<a class="headerlink" href="#equation-d4af1e1e-37ce-4ec1-9bc3-22d7b351b066" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
 <p>By substituting into the equations of motion and equating coefficients of <span class="math notranslate nohighlight">\(\epsilon\)</span> we can obtain equations governing the perturbation dynamics. An especially important case is concerned with the dynamics of wavy (e.g. sinusoidal) perturbations and wavepackets, which emerge as particular solutions in the case of flow past a boundary. The perturbations represent tiny background fluid motions such as vibrations. By making assumptions about the length and time scales governing the perturbation dynamics and by relating <span class="math notranslate nohighlight">\(\epsilon\)</span> to a power of the Reynolds number, the dominating evolution mechanisms can be studied.</p>
 <div class="admonition-example-pipe-flow admonition">
 <p class="admonition-title">Example: pipe flow</p>
@@ -555,8 +555,8 @@
 <a class="reference internal image-reference" href="../_images/hele-shaw.png" id="hele-shaw"><img alt="Hele-Shaw" class="align-center" id="hele-shaw" src="../_images/hele-shaw.png" style="width: 512.0px; height: 311.20000000000005px;" /></a>
 <br>
 <p>If we define the following ratio, where <span class="math notranslate nohighlight">\(a\)</span> is the diameter of the cylinder, then the effect of inertia will apparently be negligible near to the cylinder:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce794f63-0386-483e-9db5-2b31e9a6714a">
-<span class="eqno">(35.2)<a class="headerlink" href="#equation-ce794f63-0386-483e-9db5-2b31e9a6714a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e54ade5a-2bc7-4b70-a60c-6025cf081455">
+<span class="eqno">(35.2)<a class="headerlink" href="#equation-e54ade5a-2bc7-4b70-a60c-6025cf081455" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
 <p>However, away from the boundary the characteristic length scale associated with changes in velocity is larger, as the flow becomes more and more uniform. Therefore the effects of inertia are more important in the outer flow regions. In fact, if the effects of inertia are neglected away from the surface of the sphere then the mathematical equations are ill-posed and it becomes impossible to satisfy appropriate boundary conditions for the far-field. This is known as Stokes’ paradox.</p>
 <p>The paradox can be resolved by taking a different approximation away from the boundary, that includes inertial terms; and blending or “matching” the expressions obtained from the inner and outer layers of fluid.</p>
 </div>

@@ -88,10 +88,10 @@ in order for this expression to be true for <em> any </em> bounding volume $A$ c
 We can collect together Equations {eq}`divE`, {eq}`divB`, {eq}`curlB` and {eq}`curlE` and present as Maxwell's equations:
 ```{math}
 :label: MaxwellsEqns
-\nabla\cdot {\bf E} &=&\, \frac{\rho}{\epsilon_0}    \\
-\nabla \cdot {\bf B} &=&\, 0   \\
-\nabla \times {\bf E} &=&\, -\frac{\partial {\bf B}}{\partial t}   \\
-\nabla \times {\bf B} &=&\, \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t} 
+\nabla\cdot {\bf E} &= \frac{\rho}{\epsilon_0}    \\
+\nabla \cdot {\bf B} &= 0   \\
+\nabla \times {\bf E} &= -\frac{\partial {\bf B}}{\partial t}   \\
+\nabla \times {\bf B} &= \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t} 
 ```
 These are <b>local</b> equations, they can be solved at points in space ${\bf r}$, rather than the integral form of each which are <b>global</b> equations - this 
 is because they require us to think in terms of the bounding surfaces $\bf A$.  Another thing to notice is that the second / third of Maxwell's equations 
@@ -104,10 +104,10 @@ Recall that all the Maxwell equations in {eq}`MaxwellsEqns` are only valid in va
 ${\bf E} \rightarrow {\bf D}$ and ${\bf B} \rightarrow {\bf H}$ fields, which we use to rewrite Maxwell's equations in matter as:
 ```{math}
 :label: MaxwellsEqnsMatter
-\nabla\cdot {\bf D} &=&\,\rho_{free}   \\
-\nabla \cdot {\bf H} &=&\, 0   \\
-\nabla \times {\bf E} &=&\, -\frac{\partial {\bf B}}{\partial t} \\
-\nabla \times {\bf H} &=&\,  {\bf J}_{free} + \frac{\partial {\bf D}}{\partial t} 
+\nabla\cdot {\bf D} &= \rho_{free}   \\
+\nabla \cdot {\bf H} &= 0   \\
+\nabla \times {\bf E} &= -\frac{\partial {\bf B}}{\partial t} \\
+\nabla \times {\bf H} &=  {\bf J}_{free} + \frac{\partial {\bf D}}{\partial t} 
 ```
 where $\rho_{free}$ and ${\bf J}_{free}$ represent charges that move within matter.  
 
@@ -116,10 +116,10 @@ where $\rho_{free}$ and ${\bf J}_{free}$ represent charges that move within matt
 If magnetic monopoles were found to exist, then we could add the additional terms to Maxwell's equations that would need to be present:
 ```{math}
 :label: MaxwellsEqnsBMonopole
-\nabla\cdot {\bf E} &=&\, \frac{1}{\epsilon_0}\,\rho_E  \\
-\nabla \cdot {\bf B} &=&\, \mu_0 \,\rho_B  \\
-\nabla \times {\bf E} &=&\, - {\bf J}_B -\frac{\partial {\bf B}}{\partial t}  \\
-\nabla \times {\bf B} &=&\, \mu_0 {\bf J}_E + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}
+\nabla\cdot {\bf E} &= \frac{1}{\epsilon_0}\,\rho_E  \\
+\nabla \cdot {\bf B} &= \mu_0 \,\rho_B  \\
+\nabla \times {\bf E} &= - {\bf J}_B -\frac{\partial {\bf B}}{\partial t}  \\
+\nabla \times {\bf B} &= \mu_0 {\bf J}_E + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}
 ```
 where $\rho_B$ is the monopole charge density and $\bf J_B$ is the monopole current density, which are the magnetic couterparts to the familar electric field 
 $\rho_E,\, {\bf J_E}$.  We notice the increase degree of symmetry between the equations here now - all the equations are now inhomogeneous.

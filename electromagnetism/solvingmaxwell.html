@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,19 +36,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -101,7 +101,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -163,7 +163,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +235,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -467,7 +467,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="solutions-to-maxwells-equations">
+  <div class="section" id="solutions-to-maxwells-equations">
 <h1><span class="section-number">22. </span>Solutions to Maxwell’s Equations<a class="headerlink" href="#solutions-to-maxwells-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="electromagnetic-waves">
 <h2><span class="section-number">22.1. </span>Electromagnetic Waves<a class="headerlink" href="#electromagnetic-waves" title="Permalink to this headline">¶</a></h2>
@@ -493,8 +493,8 @@ substitute in Equation <a class="reference internal" href="maxwelleqns.html#equa
 noticing that the speed of light <span class="math notranslate nohighlight">\(c\)</span> is related to two vacuum parameters that are thought to be constant.</p>
 <p>If we solve for <span class="math notranslate nohighlight">\(\bf E,\ B\)</span> from Equation <a class="reference internal" href="#equation-emwaveeqn">(22.1)</a>, these produce:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf E} &amp;=&amp; {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
-{\bf B} &amp;=&amp; {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
+\[\begin{split}{\bf E} &amp;= {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
+{\bf B} &amp;= {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 22.1</span></a> shows some different choices of <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> for plane
 polarised and circularly polariesed waves.</p>
 <div class="figure align-default" id="emplanewaves">
@@ -507,9 +507,9 @@ polarised and circularly polariesed waves.</p>
 <h2><span class="section-number">22.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">¶</a></h2>
 <p>Plugging in wave solutions into Maxwell’s equations in vacuum:</p>
 <div class="math notranslate nohighlight" id="equation-kebperp">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
-\nabla \cdot {\bf B} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
-\nabla \times {\bf E} &amp;=&amp; \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 \end{split}\]</div>
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
+\nabla \cdot {\bf B} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
+\nabla \times {\bf E} &amp;= \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 \end{split}\]</div>
 <p>These first two equations means <span class="math notranslate nohighlight">\(\bf k \perp E\)</span> and <span class="math notranslate nohighlight">\(\bf k \perp  B\)</span> and the third that <span class="math notranslate nohighlight">\(\bf B \perp (k,\, E)\)</span> implying <span class="math notranslate nohighlight">\(\bf E \perp B\)</span>.</p>
 <p>Therefore once we pick a direction of oscillation for <span class="math notranslate nohighlight">\(\bf E\)</span>, then <span class="math notranslate nohighlight">\(\bf B\)</span> is also set (and vice-versa).  Choosing to orientate along the <span class="math notranslate nohighlight">\(z\)</span> axis, Equation <a class="reference internal" href="#equation-kebperp">(22.3)</a>
 implies in general:</p>

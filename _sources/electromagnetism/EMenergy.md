@@ -2,7 +2,7 @@
 Whilst we are now comfortable with the idea of electric and magnetic fields (and how the two are inextricably linked), we can return 
 to an idea from the waves section, namely where are all the sources of energy in this system? 
 
-## Deriving Intrinsic Energy from Potentials*
+## Deriving Intrinsic Energy from Potentials
 Recall the intrinsic electrostatic potential energy $U_E$ from a system of charges from Equation {eq}`elecpotenergy`, we can 
 modify this to consider a continuous charge density $\rho({\bf r})$:
 ```{math}
@@ -23,9 +23,9 @@ U_E  = \frac{1}{2}\,\epsilon_0\,\left[\iiint \nabla\cdot (V_E\,{\bf E}) \, \math
 ```
 Using the divergence theorem on the first term and applying tne definition of $V_E$ from Equation \ref{eqn:Efieldgradpotential}, this reduces to:
 ```{math}
-U_E &=& \,\frac{1}{2}\,\epsilon_0\,\left[\iint V_E\,{\bf E} \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
-&=& \,\frac{1}{2}\,\epsilon_0\,\left[-\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
-&=& \,\frac{1}{2}\,\epsilon_0\,\left[\iiint E^2 \, \mathrm{d} V -\,\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} \right]
+U_E &=\frac{1}{2}\,\epsilon_0\,\left[\iint V_E\,{\bf E} \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
+&=\frac{1}{2}\,\epsilon_0\,\left[-\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
+&=\frac{1}{2}\,\epsilon_0\,\left[\iiint E^2 \, \mathrm{d} V -\,\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} \right]
 ```
 If we integrate over all space, then since $V_E(r) \rightarrow 0$ for $r \rightarrow \infty$ by definition, the second term here goes to zero.  
 Then we can define the energy density $u_E$ through:
@@ -50,9 +50,9 @@ u = u_E + u_B = \frac{1}{2}\left(\epsilon_0\,E^2 + \frac{1}{\mu_0}\,B^2 \right)
 ```
 Equations for $u$ also appear within Maxwell's equations, take Equations {eq}`curlB` and {eq}`curlE`:
 ```{math}
-\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} &=& \,\left({\bf J} + \epsilon_0\frac{\partial {\bf E}}{\partial t} \right)\cdot {\bf E} = 
+\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} &=\left({\bf J} + \epsilon_0\frac{\partial {\bf E}}{\partial t} \right)\cdot {\bf E} = 
 {\bf J} \cdot {\bf E} + \frac{\partial}{\partial t}\left( \frac{1}{2}\epsilon_0 E^2 \right) \label{eqn:Spart1}\\
-\frac{1}{\mu_0}{\bf B} \cdot \nabla \times {\bf E} &=& \,-\frac{1}{\mu_0}\left(\frac{\partial {\bf B}}{\partial t}\right)\cdot {\bf B} = 
+\frac{1}{\mu_0}{\bf B} \cdot \nabla \times {\bf E} &=-\frac{1}{\mu_0}\left(\frac{\partial {\bf B}}{\partial t}\right)\cdot {\bf B} = 
 -\frac{\partial}{\partial t}\left( \frac{1}{2\,\mu_0}B^2 \right) \label{eqn:Spart2}
 ```
 Tidying up these expressions we find:
@@ -81,12 +81,12 @@ ${\bf J}\cdot {\bf E}$ relates to the energy given to free charges with current 
 ## Electromagnetic Plane Waves
 Recall the plane wave solutions from Equation {eq}`PlaneWaveSolns`:
 ```{math}
-{\bf E} &=& \,\begin{bmatrix}
+{\bf E} &=\begin{bmatrix}
  E_0 \\
  0 \\
  0 
 \end{bmatrix}\,\exp(i(k_z z - \omega t)) \\
-{\bf B} &=&\, \begin{bmatrix}
+{\bf B} &= \begin{bmatrix}
  0 \\
  B_0 \\
  0
@@ -130,10 +130,10 @@ their power. For the plane wave propograting along the $z$ axis in {eq}`PlaneWav
 ```
 therefore we find that:
 ```{math}
-S_{\langle T \rangle} &=&\, \frac{1}{\eta}{E_0}^2\left(\frac{1}{T}\int_0^T\,\cos^2(k_z x - \omega t)\,\mathrm{d}t\right) \\
-&=&\, \frac{{E_0}^2}{2\,\eta\,T}\left(\int_0^T\,\left(\cos(2(k_z x - \omega t))+1\right)\,\mathrm{d}t\right)\\ 
-&=&\, \frac{{E_0}^2}{2\,\eta\,T}\left[\frac{1}{2\omega}\sin(2(k_z x - \omega t))+t\right]_0^T\\
-&=&\, \frac{1}{2 \eta}\,{E_0}^2
+S_{\langle T \rangle} &= \frac{1}{\eta}{E_0}^2\left(\frac{1}{T}\int_0^T\,\cos^2(k_z x - \omega t)\,\mathrm{d}t\right) \\
+&= \frac{{E_0}^2}{2\,\eta\,T}\left(\int_0^T\,\left(\cos(2(k_z x - \omega t))+1\right)\,\mathrm{d}t\right)\\ 
+&= \frac{{E_0}^2}{2\,\eta\,T}\left[\frac{1}{2\omega}\sin(2(k_z x - \omega t))+t\right]_0^T\\
+&= \frac{1}{2 \eta}\,{E_0}^2
 ```
 where $\eta$ is the characteristic impedance of the transmission medium, which has units of electrical resistance $\Omega$. In a vacuum, this takes the value 
 $\eta \simeq 377\, \Omega$, but in matter its value will vary according to $\epsilon(\omega),\,\mu(\omega)$, as mentioned previously.

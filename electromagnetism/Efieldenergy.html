@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,19 +36,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -101,7 +101,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -163,7 +163,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +235,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -421,7 +421,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="energy-in-an-electric-field">
+  <div class="section" id="energy-in-an-electric-field">
 <h1><span class="section-number">16. </span>Energy in an Electric Field<a class="headerlink" href="#energy-in-an-electric-field" title="Permalink to this headline">¶</a></h1>
 <p>We can see that if we have charges that are free to move in space and some are at rest, the presence of a moving
 charge or uniform electric field will cause a force to act on these free charges to move, pick up kinetic energy
@@ -456,10 +456,10 @@ in general have divergence and curl components, however if <span class="math not
 <p>The term <b>Potential Difference</b> is given to the difference between the electric potentials <span class="math notranslate nohighlight">\(\Delta V_E\)</span> between
 two points <span class="math notranslate nohighlight">\(({\bf r_1,\, r_2} )\)</span> in an electrostatic system:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Delta V_E = {V_E}_2 - {V_E}_1 &amp;=&amp;\, -\int_{{\bf r}_0}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell - 
+\[\begin{split}\Delta V_E = {V_E}_2 - {V_E}_1 &amp;= -\int_{{\bf r}_0}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell - 
 \left (- \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell\right) 
 = \int_{{\bf r}_2}^{{\bf r}_0} {\bf E} \cdot \mathrm{\bf d} \ell + \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell \\ 
-&amp;=&amp;\, \int_{{\bf r}_2}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell\end{split}\]</div>
+&amp;= \int_{{\bf r}_2}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell\end{split}\]</div>
 <p>Suppose we have a system of two charges, how does <span class="math notranslate nohighlight">\(U_E\)</span> change?  <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> will each produce an
 electrostatic field which a test charge <span class="math notranslate nohighlight">\(Q\)</span> coming in from <span class="math notranslate nohighlight">\(r \rightarrow \infty\)</span> will feel and therefore <span class="math notranslate nohighlight">\(U_E\)</span> has the form:</p>
 <div class="math notranslate nohighlight">
@@ -480,8 +480,8 @@ also pairs of charges mutually interacting:</p>
 <p>where the <span class="math notranslate nohighlight">\(1/2\)</span> factor is to avoid the over counting of the interaction field <span class="math notranslate nohighlight">\(Q_1 \rightarrow Q_2\)</span> and <span class="math notranslate nohighlight">\(Q_2 \rightarrow Q_1\)</span>.  These
 expressions can be generalised for <span class="math notranslate nohighlight">\(N\)</span> point charges:</p>
 <div class="math notranslate nohighlight" id="equation-intrinsicelecpotenergy">
-<span class="eqno">(16.4)<a class="headerlink" href="#equation-intrinsicelecpotenergy" title="Permalink to this equation">¶</a></span>\[\begin{split}U_E &amp;=&amp; \,\frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i)  \\ 
-&amp;=&amp;  \,\frac{1}{2}\left(\frac{1}{4\pi\,\epsilon_0}\right)\sum_{i=1}^N Q_i\, \sum_{j=1}^{N(j \neq i)} \frac{Q_j}{|r_i-r_j|}\end{split}\]</div>
+<span class="eqno">(16.4)<a class="headerlink" href="#equation-intrinsicelecpotenergy" title="Permalink to this equation">¶</a></span>\[\begin{split}U_E &amp;= \,\frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i)  \\ 
+&amp;=  \,\frac{1}{2}\left(\frac{1}{4\pi\,\epsilon_0}\right)\sum_{i=1}^N Q_i\, \sum_{j=1}^{N(j \neq i)} \frac{Q_j}{|r_i-r_j|}\end{split}\]</div>
 </div>
 
     <script type="text/x-thebe-config">

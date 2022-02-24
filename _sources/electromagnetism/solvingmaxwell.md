@@ -31,8 +31,8 @@ noticing that the speed of light $c$ is related to two vacuum parameters that ar
 
 If we solve for $\bf E,\ B$ from Equation {eq}`EMwaveeqn`, these produce:
 ```{math}
-{\bf E} &=& {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
-{\bf B} &=& {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))
+{\bf E} &= {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
+{\bf B} &= {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))
 ```
 where $\bf E_0,\, B_0$ are the polarization vectors of the electric and magnetic field, {numref}`EMPlaneWaves` shows some different choices of $\bf E_0,\, B_0$ for plane 
 polarised and circularly polariesed waves.
@@ -48,9 +48,9 @@ name: EMPlaneWaves
 Plugging in wave solutions into Maxwell's equations in vacuum:
 ```{math}
 :label: kEBperp
-\nabla \cdot {\bf E} &=& \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
-\nabla \cdot {\bf B} &=& \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
-\nabla \times {\bf E} &=& \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 
+\nabla \cdot {\bf E} &= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
+\nabla \cdot {\bf B} &= \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
+\nabla \times {\bf E} &= \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 
 ```
 These first two equations means $\bf k \perp E$ and $\bf k \perp  B$ and the third that $\bf B \perp (k,\, E)$ implying $\bf E \perp B$.  
 
