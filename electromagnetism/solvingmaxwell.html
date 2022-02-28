@@ -420,7 +420,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#drude-model">
-   22.3. Drude Model *
+   22.3. Drude Model
   </a>
  </li>
 </ul>
@@ -455,7 +455,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#drude-model">
-   22.3. Drude Model *
+   22.3. Drude Model
   </a>
  </li>
 </ul>
@@ -547,25 +547,38 @@ in a perpendicular <span class="math notranslate nohighlight">\(z\)</span> dimen
 \end{bmatrix} \end{split}\]</div>
 </div>
 <div class="section" id="drude-model">
-<h2><span class="section-number">22.3. </span>Drude Model *<a class="headerlink" href="#drude-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">22.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this headline">¶</a></h2>
 <p>In addition to solving Maxwell’s for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor,
 with an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> present, we can think about Ohm’s law</p>
 <div class="math notranslate nohighlight">
 \[V = I\,R\]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the volatge applied over a conductor, <span class="math notranslate nohighlight">\(I\)</span> is the current flowing through a conductor and <span class="math notranslate nohighlight">\(R\)</span> is the electrical resitance.  Each of these is potentially
+a variable - the resistiance of a condcutor can change depending on the length or cross-sectional area of the material.  A better way to think about conductors and
+resitances is through the resisitivity <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho = R\frac{A}{\ell}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance, <span class="math notranslate nohighlight">\(\ell\)</span>  is the length of the conductor and <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area of the condcutor, as depicted in <a class="reference internal" href="#resitivity"><span class="std std-numref">Fig. 22.2</span></a>.</p>
+<div class="figure align-default" id="resitivity">
+<img alt="../_images/Resistivity_geometry.png" src="../_images/Resistivity_geometry.png" />
+<p class="caption"><span class="caption-number">Fig. 22.2 </span><span class="caption-text">A schematic of the geometry of some resistive material between some electrical contacts on both ends.</span><a class="headerlink" href="#resitivity" title="Permalink to this image">¶</a></p>
+</div>
+<p>Thus we can rewrite Ohm’s law as:</p>
+<div class="math notranslate nohighlight">
+\[V = \rho\,\frac{\ell\,I}{A} \Rightarrow \frac{I}{A} = \frac{1}{\rho}\frac{V}{\ell}\]</div>
 <p>or terms of fields this is written:</p>
 <div class="math notranslate nohighlight">
-\[{\bf J} = \sigma {\bf E}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the conductivity of the material (often written in the related form of resistivity <span class="math notranslate nohighlight">\(\rho\)</span>, where <span class="math notranslate nohighlight">\(\rho = 1 / \sigma\)</span>) and <span class="math notranslate nohighlight">\(\bf J\)</span> is the current density.
-This is often known as the <b>Drude Model</b>.</p>
+\[{\bf J} = \sigma, {\bf E}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the conductivity of the material, <span class="math notranslate nohighlight">\(\rho = 1 / \sigma\)</span> and <span class="math notranslate nohighlight">\(\bf J\)</span> is the current density. This is often known as the basis of the <b>Drude Model</b> of
+conductors.</p>
 <p>Substituting this model into Maxwell’s equations, we can now source <span class="math notranslate nohighlight">\(\bf J\)</span> with this relation, if we choose to ignore free charges again <span class="math notranslate nohighlight">\(\rho = 0\)</span> and by solving for <span class="math notranslate nohighlight">\(\bf E\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla^2 {\bf E} = \mu_0 \sigma \frac{\partial {\bf E}}{\partial t} + \mu_0\epsilon_0 \frac{\partial^2 {\bf E}}{\partial t^2}\]</div>
-<p>Which should look familiar as a damped hoarmonic osciallator from the Waves section.  Using the wave solutions, we find a modified dispersion relation of the form:</p>
+<p>Which should look familiar as a damped harmonic osciallator from the Waves section.  Using the travelling wave solution ansatz, we find a dispersion relation of the form:</p>
 <div class="math notranslate nohighlight">
 \[k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega\]</div>
-<p>which is now complex!</p>
-<p>We can rewrite this in the form a relative permitivity <span class="math notranslate nohighlight">\(\epsilon_r(\omega)\)</span>, for <span class="math notranslate nohighlight">\(k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)\)</span> with
-<span class="math notranslate nohighlight">\(\epsilon = \epsilon_0\,\epsilon_r\)</span>, therefore:</p>
+<p>which is now in general complex!</p>
+<p>We can rewrite this in the form of a relative permitivity <span class="math notranslate nohighlight">\(\epsilon_r(\omega)\)</span>.  Then we will take <span class="math notranslate nohighlight">\(k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)\)</span> with
+<span class="math notranslate nohighlight">\(\epsilon = \epsilon_0\,\epsilon_r\)</span> and so:</p>
 <div class="math notranslate nohighlight">
 \[\epsilon_r(\omega) = \frac{\epsilon(\omega)}{\epsilon_0} = \underbrace{1}_{vacuum\, part} + \underbrace{i \frac{\sigma}{\epsilon_0\omega}}_{dispersion\,part} \]</div>
 <p>If we calculate the energy of waves travelling through this media, the dispersion part corresponds to the energy losses of the electromagnetic field.</p>

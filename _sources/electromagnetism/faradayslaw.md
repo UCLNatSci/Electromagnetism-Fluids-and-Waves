@@ -59,7 +59,7 @@ through the primary coil.  The total input energy in the primary coil therefore 
 ```{math} 
 P_{in} = V_p\,I_p = \frac{{V_0}^2}{R_p}\cos^2(\omega\,t)
 ``` 
-and this is related to the output energy $P_{out} = V_s\,I_s$, with $P_{in} = P_{out}$.  By Amp\`eres law, we can see the time varying current creates a 
+and this is related to the output energy $P_{out} = V_s\,I_s$, with $P_{in} = P_{out}$.  By Ampère's law, we can see the time varying current creates a 
 time varying magnetic field $\Phi_B(t)$ in the primary coil.  Then by Faraday's law, the changing flux is related to the induced EMF $\mathcal{E}$ in each coil as:
 ```{math}
 V_p &=&\, -N_p\,\frac{\mathrm{d}\Phi_B(t)}{\mathrm{d} t}\\
