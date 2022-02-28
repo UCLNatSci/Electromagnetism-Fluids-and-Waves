@@ -21,7 +21,7 @@ and therefore the potential energy result becomes:
 ```{math}
 U_E  = \frac{1}{2}\,\epsilon_0\,\left[\iiint \nabla\cdot (V_E\,{\bf E}) \, \mathrm{d} V - \iiint {\bf E}\cdot (\nabla\,V_E) \, \mathrm{d} V\right]
 ```
-Using the divergence theorem on the first term and applying tne definition of $V_E$ from Equation \ref{eqn:Efieldgradpotential}, this reduces to:
+Using the divergence theorem on the first term and applying the definition of $V_E$ from Equation {eq}`Efieldgradpotential`, this reduces to:
 ```{math}
 U_E &=\frac{1}{2}\,\epsilon_0\,\left[\iint V_E\,{\bf E} \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
 &=\frac{1}{2}\,\epsilon_0\,\left[-\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
