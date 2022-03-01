@@ -23,7 +23,8 @@ T(x + \Delta x,\,t)\,\sin(\theta(x + \Delta x,\,t)) - T(x,\,t)\,\sin(\theta(x,\,
 ```
 The cross section of wire $\Delta m$ can be reduced down to a mass density (mass per unit length) $\rho_L$ of the wire (with units kg m$^{-1}$) and a length $\Delta s$:
 ```{math}
-\Delta m = \rho_L \,\Delta s = \rho_L \,\sqrt{\Delta x^2 + \Delta  y^2} = \rho_L \,\Delta x\, \sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}
+\Delta m = \rho_L \,\Delta s = \rho_L \,\sqrt{\Delta x^2 + \Delta  y^2} = 
+\rho_L \,\Delta x\, \sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}
 ```
 Looking at {numref}`massspringarray` we see that:
 ```{math}
@@ -31,16 +32,20 @@ Looking at {numref}`massspringarray` we see that:
 ```
 and therefore we can reduce $\Delta m$ to:
 ```{math}
-\Delta m = \rho_L \,\Delta x \,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2} = \rho_L \,\Delta x \,\sqrt{1 + \tan^2(\theta(x,t))} = \rho_L \,\Delta x\,\sec(\theta)
+\Delta m = \rho_L \,\Delta x \,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2} = 
+\rho_L \,\Delta x \,\sqrt{1 + \tan^2(\theta(x,t))} = \rho_L \,\Delta x\,\sec(\theta)
 ```
 Rearranging Equation {eq}`TransverseNewtons2ndLaw`, we find:
 ```{math}
-\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{T(x + \Delta x,t)\,\sin(\theta(x + \Delta x,\,t)) - T(x,t)\,\sin(\theta(x,\,t))}{\Delta x}
+\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = 
+\frac{T(x + \Delta x,t)\,\sin(\theta(x + \Delta x,\,t)) - T(x,t)\,\sin(\theta(x,\,t))}{\Delta x}
 ```
 and taking the limit of $\Delta x \rightarrow 0$, we see this is just a partial derivative:
 ```{math}
 :label: Transversewaveyeqn
-\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right) = \frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} 
+\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = 
+\frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right) = 
+\frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} 
 ```
 If we examine the forces in the $x$ direction, we see these are balanced:
 ```{math}
@@ -48,9 +53,9 @@ T(x + \Delta x,\,t)\,\cos(\theta(x + \Delta x,\,t)) - T(x,\,t)\,\cos(\theta(x,\,
 ```
 dividing through by $\Delta x$ and again taking the limit $\Delta x \rightarrow 0$, we find:
 ```{math}
-\frac{\partial}{\partial x}\left(T(x,t)\,\cos(\theta(x,t)) \right) &=& \,0 \\ 
-\frac{\partial T}{\partial x}\, \cos(\theta) - T \,\sin(\theta) \,\frac{\partial \theta}{\partial x} &=& \,0\\
-\Rightarrow \frac{\partial T}{\partial x} &=& \,T\,\tan(\theta)\,\frac{\partial \theta}{\partial x}
+\frac{\partial}{\partial x}\left(T(x,t)\,\cos(\theta(x,t)) \right) &= 0 \\ 
+\frac{\partial T}{\partial x}\, \cos(\theta) - T \,\sin(\theta) \,\frac{\partial \theta}{\partial x} &= 0\\
+\Rightarrow \frac{\partial T}{\partial x} &= T\,\tan(\theta)\,\frac{\partial \theta}{\partial x}
 ```
 Substituting this result into Equation {eq}`Transversewaveyeqn` and rearranging gives:
 ```{math}
@@ -113,16 +118,16 @@ Looking at the change total energy $E$:
 ```
 where $K$ is the total kinetic energy and $U$ the total potential energy.
 ```{math}
-\Delta K &=&\, \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
+\Delta K &= \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
 \left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2}\right)\left(\frac{\partial y}{\partial t}\right)^2 \\
-\Delta U &=&\, T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)
+\Delta U &= T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)
 ```
 Recall for transverse waves $\theta \ll 1$, therefore $\partial y/\partial x \ll 1$ and so we can do a binomial 
 expansion:
 ```{math}
-\Delta K &\simeq&\, \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots, \\
-\Delta U &\simeq&\,  T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots\\ 
-\Rightarrow \Delta E &=& \, \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
+\Delta K &\simeq \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots, \\
+\Delta U &\simeq  T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots\\ 
+\Rightarrow \Delta E &= \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
 \frac{T}{\rho_L}\left(\frac{\partial y}{\partial x}\right)^2\right)
 ```
 and given that  $T / \rho_L = c^2$, we can simplify:

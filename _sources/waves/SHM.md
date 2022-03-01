@@ -50,8 +50,8 @@ To solve for $A,\,B$ here we need initial conditions, which we could consider fr
 from equilibrium to an additional displacement $x = 1$ and then releasing the mass from rest and examining the resulting motion. 
 This tell us that $x(t = 0) = 1$ and $\dot{x}(t=0) = v(t = 0) = 0$ and therefore:
 ```{math}
-x(t) &=& A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \Longrightarrow x(0) = A = 1 \\
-\dot{x}(t) &=& - \omega_0 A \sin(\omega_0 \,t) + B  \omega_0 \cos(\omega_0 \,t)  \Longrightarrow \dot{x}(0) = B \omega_0 = 0
+x(t) &= A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \Longrightarrow x(0) = A = 1 \\
+\dot{x}(t) &= - \omega_0 A \sin(\omega_0 \,t) + B  \omega_0 \cos(\omega_0 \,t)  \Longrightarrow \dot{x}(0) = B \omega_0 = 0
 ```
 which gives us $A = 1,\, B = 0$ and so 
 ```{math} 
@@ -88,9 +88,9 @@ E = KE + PE
 where the kinetic energy has the usual defintion, $KE = \frac{1}{2}mv^2 = \frac{1}{2}m{\dot{x}}^2$ and the potential energy is elastic potential energy 
 $PE = \frac{1}{2}kx^2$, but in a different system this could be replaced with the relevant form of potential.  Using the solutions for SHM, {eq}`SHMsolution`:
 ```{math}
-x(t) &=& \, A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \\
-\dot{x}(t) &=& \, \omega_0(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )\\
-\Rightarrow E &=& \, \frac{1}{2}m{\omega_0}^2(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )^2 + \frac{1}{2}k(A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) )^2
+x(t) &= A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \\
+\dot{x}(t) &= \omega_0(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )\\
+\Rightarrow E &= \frac{1}{2}m{\omega_0}^2(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )^2 + \frac{1}{2}k(A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) )^2
 ```
 Given that ${\omega_0}^2 = k / m$, this can be expanded and tidied up becoming:
 ```{math}

@@ -487,27 +487,32 @@ whilst the wave itself is propogating in the <span class="math notranslate nohig
 = \Delta m\,\frac{\partial^2 }{\partial t^2} y(x,\,t)\]</div>
 <p>The cross section of wire <span class="math notranslate nohighlight">\(\Delta m\)</span> can be reduced down to a mass density (mass per unit length) <span class="math notranslate nohighlight">\(\rho_L\)</span> of the wire (with units kg m<span class="math notranslate nohighlight">\(^{-1}\)</span>) and a length <span class="math notranslate nohighlight">\(\Delta s\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\Delta m = \rho_L \,\Delta s = \rho_L \,\sqrt{\Delta x^2 + \Delta  y^2} = \rho_L \,\Delta x\, \sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
+\[\Delta m = \rho_L \,\Delta s = \rho_L \,\sqrt{\Delta x^2 + \Delta  y^2} = 
+\rho_L \,\Delta x\, \sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2}\]</div>
 <p>Looking at <a class="reference internal" href="longitudinal.html#massspringarray"><span class="std std-numref">Fig. 4.1</span></a> we see that:</p>
 <div class="math notranslate nohighlight">
 \[\tan(\theta(x,t)) = \frac{\Delta y}{\Delta x}\]</div>
 <p>and therefore we can reduce <span class="math notranslate nohighlight">\(\Delta m\)</span> to:</p>
 <div class="math notranslate nohighlight">
-\[\Delta m = \rho_L \,\Delta x \,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2} = \rho_L \,\Delta x \,\sqrt{1 + \tan^2(\theta(x,t))} = \rho_L \,\Delta x\,\sec(\theta)\]</div>
+\[\Delta m = \rho_L \,\Delta x \,\sqrt{1 + \left(\frac{\Delta y}{\Delta x}\right)^2} = 
+\rho_L \,\Delta x \,\sqrt{1 + \tan^2(\theta(x,t))} = \rho_L \,\Delta x\,\sec(\theta)\]</div>
 <p>Rearranging Equation <a class="reference internal" href="#equation-transversenewtons2ndlaw">(6.1)</a>, we find:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{T(x + \Delta x,t)\,\sin(\theta(x + \Delta x,\,t)) - T(x,t)\,\sin(\theta(x,\,t))}{\Delta x}\]</div>
+\[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = 
+\frac{T(x + \Delta x,t)\,\sin(\theta(x + \Delta x,\,t)) - T(x,t)\,\sin(\theta(x,\,t))}{\Delta x}\]</div>
 <p>and taking the limit of <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>, we see this is just a partial derivative:</p>
 <div class="math notranslate nohighlight" id="equation-transversewaveyeqn">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-transversewaveyeqn" title="Permalink to this equation">¶</a></span>\[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = \frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right) = \frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \]</div>
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-transversewaveyeqn" title="Permalink to this equation">¶</a></span>\[\frac{\rho_L}{\cos(\theta)}\,\frac{\partial^2 y}{\partial t^2} = 
+\frac{\partial}{\partial x}\left(T(x,t)\,\sin(\theta(x,t))\right) = 
+\frac{\partial T}{\partial x}\,\sin(\theta) + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \]</div>
 <p>If we examine the forces in the <span class="math notranslate nohighlight">\(x\)</span> direction, we see these are balanced:</p>
 <div class="math notranslate nohighlight">
 \[T(x + \Delta x,\,t)\,\cos(\theta(x + \Delta x,\,t)) - T(x,\,t)\,\cos(\theta(x,\,t)) = 0\]</div>
 <p>dividing through by <span class="math notranslate nohighlight">\(\Delta x\)</span> and again taking the limit <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>, we find:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\partial}{\partial x}\left(T(x,t)\,\cos(\theta(x,t)) \right) &amp;=&amp; \,0 \\ 
-\frac{\partial T}{\partial x}\, \cos(\theta) - T \,\sin(\theta) \,\frac{\partial \theta}{\partial x} &amp;=&amp; \,0\\
-\Rightarrow \frac{\partial T}{\partial x} &amp;=&amp; \,T\,\tan(\theta)\,\frac{\partial \theta}{\partial x}\end{split}\]</div>
+\[\begin{split}\frac{\partial}{\partial x}\left(T(x,t)\,\cos(\theta(x,t)) \right) &amp;= 0 \\ 
+\frac{\partial T}{\partial x}\, \cos(\theta) - T \,\sin(\theta) \,\frac{\partial \theta}{\partial x} &amp;= 0\\
+\Rightarrow \frac{\partial T}{\partial x} &amp;= T\,\tan(\theta)\,\frac{\partial \theta}{\partial x}\end{split}\]</div>
 <p>Substituting this result into Equation <a class="reference internal" href="#equation-transversewaveyeqn">(6.2)</a> and rearranging gives:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\rho_L\,\frac{\partial^2 y}{\partial t^2} &amp;=&amp;\, \cos(\theta)\left( T\,\tan(\theta)\,\sin(\theta)\,\frac{\partial \theta}{\partial x} + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \right) \\ 
@@ -557,15 +562,15 @@ then it would admit both wave like solutions AND inhomogeous solutions.</p>
 \[\Delta E = \Delta K + \Delta U\]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the total kinetic energy and <span class="math notranslate nohighlight">\(U\)</span> the total potential energy.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Delta K &amp;=&amp;\, \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
+\[\begin{split}\Delta K &amp;= \frac{1}{2}\,\Delta m\,v^2 = \frac{1}{2}\,\rho_L\,\Delta x\,
 \left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2}\right)\left(\frac{\partial y}{\partial t}\right)^2 \\
-\Delta U &amp;=&amp;\, T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)\end{split}\]</div>
+\Delta U &amp;= T(\Delta s - \Delta x) = T\,\Delta x\,\left(\sqrt{1 + \left(\frac{\partial y}{\partial x}\right)^2} - 1\right)\end{split}\]</div>
 <p>Recall for transverse waves <span class="math notranslate nohighlight">\(\theta \ll 1\)</span>, therefore <span class="math notranslate nohighlight">\(\partial y/\partial x \ll 1\)</span> and so we can do a binomial
 expansion:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Delta K &amp;\simeq&amp;\, \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots, \\
-\Delta U &amp;\simeq&amp;\,  T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots\\ 
-\Rightarrow \Delta E &amp;=&amp; \, \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
+\[\begin{split}\Delta K &amp;\simeq \frac{1}{2}\,\rho_L\,\Delta x\,\left(\frac{\partial y}{\partial t}\right)^2 + \dots, \\
+\Delta U &amp;\simeq  T\,\Delta x\,\left(\frac{1}{2}\right)\left(\frac{\partial y}{\partial x}\right)^2 + \dots\\ 
+\Rightarrow \Delta E &amp;= \frac{1}{2} x\,\rho_L\,\left(\left(\frac{\partial y}{\partial t}\right)^2 + 
 \frac{T}{\rho_L}\left(\frac{\partial y}{\partial x}\right)^2\right)\end{split}\]</div>
 <p>and given that  <span class="math notranslate nohighlight">\(T / \rho_L = c^2\)</span>, we can simplify:</p>
 <div class="math notranslate nohighlight">
