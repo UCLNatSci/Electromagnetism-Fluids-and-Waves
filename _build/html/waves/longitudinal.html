@@ -470,9 +470,9 @@ each with equilibrium separation <span class="math notranslate nohighlight">\(h\
 <p>If the springs follow Hooke’s law, then <span class="math notranslate nohighlight">\(F_{H} = k\,u(x,t) \)</span> and equally all the masses will follow Newton’s second law <span class="math notranslate nohighlight">\(F_{N} = m \,a(x,t)\)</span>.  We can analyse
 the dynamics of the middle mass, where the Hooke’s law forces will from both the spring <span class="math notranslate nohighlight">\(x+h \rightarrow x+2h\)</span> as well as the spring <span class="math notranslate nohighlight">\(x \rightarrow x+h\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}F_N &amp;=&amp; \,m \frac{\partial^2}{\partial t^2}u(x+h,t)\\
-F_H &amp;=&amp; \,k[u(x+2h,t) - u(x+h,t)] - k[u(x+h,t) - u(x,t)] \\
-&amp;=&amp; \,k[u(x+2h,t) - 2u(x+h,t) + u(x,t)]\end{split}\]</div>
+\[\begin{split}F_N &amp;= m \frac{\partial^2}{\partial t^2}u(x+h,t)\\
+F_H &amp;= k[u(x+2h,t) - u(x+h,t)] - k[u(x+h,t) - u(x,t)] \\
+&amp;= k[u(x+2h,t) - 2u(x+h,t) + u(x,t)]\end{split}\]</div>
 <p>Since these defintions are equal, then by rearrangement:</p>
 <div class="math notranslate nohighlight" id="equation-masschainforces">
 <span class="eqno">(4.1)<a class="headerlink" href="#equation-masschainforces" title="Permalink to this equation">¶</a></span>\[\frac{\partial^2}{\partial t^2}u(x+h,t) = \frac{k}{m}[u(x+2h,t) - 2u(x+h,t) + u(x,t)] \]</div>
@@ -483,9 +483,9 @@ F_H &amp;=&amp; \,k[u(x+2h,t) - u(x+h,t)] - k[u(x+h,t) - u(x,t)] \\
 </div>
 <p>We can consider the total displacement of the mass <span class="math notranslate nohighlight">\(m\)</span>, as well as as the individual springs displacements</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}F_{tot} &amp;=&amp; \,k_{tot}\,x_{tot}\\
-F_1 &amp;=&amp; \,k_1\,x_1\\
-F_2 &amp;=&amp; \,k_2\,x_2\end{split}\]</div>
+\[\begin{split}F_{tot} &amp;= k_{tot}\,x_{tot}\\
+F_1 &amp;= k_1\,x_1\\
+F_2 &amp;= k_2\,x_2\end{split}\]</div>
 <p>If <span class="math notranslate nohighlight">\(x_{tot}\)</span> can be broken up into the individual springs displacements <span class="math notranslate nohighlight">\(x_{tot} = x_1 + x_2\)</span> then we simplify to:</p>
 <div class="math notranslate nohighlight">
 \[F_{tot} = k_{tot}(x_1 + x_2)\]</div>
@@ -543,8 +543,8 @@ are really important in real world systems, we will omit them here.</p>
 \[PE = \frac{1}{2}\,N\,k_{tot} \left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right)\]</div>
 <p>and likewise if we introduce the size of the mass <span class="math notranslate nohighlight">\(m\)</span> and then consider the total chain mass:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}PE &amp;=&amp; \, \frac{1}{2}\frac{N\,k_{tot}\,m}{m}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right) \\
- &amp;=&amp; \,\frac{1}{2}\,m\frac{N^2\,k_{tot}}{m_{tot}}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right)\end{split}\]</div>
+\[\begin{split}PE &amp;=  \frac{1}{2}\frac{N\,k_{tot}\,m}{m}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right) \\
+ &amp;= \frac{1}{2}\,m\frac{N^2\,k_{tot}}{m_{tot}}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right)\end{split}\]</div>
 <p>and then looking at the total chain length <span class="math notranslate nohighlight">\(L = N\,h\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[PE = \frac{1}{2}\,m\,\frac{L^2\,k_{tot}}{m_{tot} h^2}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right)\]</div>
@@ -568,8 +568,8 @@ that the total amount of energy for each mass is fixed, so by symmetry over the 
 = \frac{1}{2}\,m_{tot}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\]</div>
 <p>sometimes this is more usefully presented in terms of the energy per unit length or energy density <span class="math notranslate nohighlight">\(\epsilon(x,\,t)\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-massdensity">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-massdensity" title="Permalink to this equation">¶</a></span>\[\begin{split}\epsilon(x,\,t) = \frac{E}{L} &amp;=&amp; \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
-&amp;=&amp; \, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\end{split}\]</div>
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-massdensity" title="Permalink to this equation">¶</a></span>\[\begin{split}\epsilon(x,\,t) = \frac{E}{L} &amp;= \frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
+&amp;=  \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho_L\)</span> is the mass per unit length or <b>mass density</b> of the mass and spring chain.</p>
 <p>We can use this expression to find the total energy transferred over a wavelength:</p>
 <div class="math notranslate nohighlight" id="equation-waveenergy">
