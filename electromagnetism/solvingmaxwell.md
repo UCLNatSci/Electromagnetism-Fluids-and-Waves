@@ -118,7 +118,7 @@ V = \rho\,\frac{\ell\,I}{A} \Rightarrow \frac{I}{A} = \frac{1}{\rho}\frac{V}{\el
 ```
 or terms of fields this is written:
 ```{math}
-{\bf J} = \sigma, {\bf E}
+{\bf J} = \sigma\, {\bf E}
 ```
 where $\sigma$ is the conductivity of the material, $\rho = 1 / \sigma$ and $\bf J$ is the current density. This is often known as the basis of the <b>Drude Model</b> of 
 conductors.  
