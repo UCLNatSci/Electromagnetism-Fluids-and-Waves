@@ -1,7 +1,7 @@
 # Introduction
 
-In this module you will apply the mathematical language of ODEs and vector calculus to study waves and understand phenomena in both classical e
-lectromagnetism and fluid dynamics. We will follow three units in turn through the module:
+In this module you will apply the mathematical language of ODEs and vector calculus to study waves and understand phenomena in both classical 
+electromagnetism and fluid dynamics. We will follow three units in turn through the module:
 
 1. Waves
 	1. An introduction to oscillations and waves
