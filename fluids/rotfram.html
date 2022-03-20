@@ -270,18 +270,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="scaling.html">
-   32. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="steadysoln.html">
-   33. Steady solutions
+   32. Steady solutions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="bernoulli.html">
-   34. Bernoulli’s equation
+   33. Bernoulli’s equation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scaling.html">
+   34. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -449,40 +449,40 @@
 <a class="reference internal image-reference" href="../_images/rot_frame.png" id="rotational-reference-frame"><img alt="alternative description" class="align-center" id="rotational-reference-frame" src="../_images/rot_frame.png" style="width: 613.8px; height: 328.2px;" /></a>
 <br>
 <p>We now consider the motion of an arbitrary point <span class="math notranslate nohighlight">\(P\)</span> as measured by an observer within each frame. We will take <span class="math notranslate nohighlight">\(\underline{r}\)</span> to be the position of the point relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(\underline{r}^{\prime}\)</span> to be the position relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>. According to the triangle law for vectors, we may then write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9ca3491f-7975-4559-a736-d38368fab123">
-<span class="eqno">(39.1)<a class="headerlink" href="#equation-9ca3491f-7975-4559-a736-d38368fab123" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{r}=\underline{D}+\underline{r}^{\prime},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-eaa70903-60ab-4590-9da4-065a67a20b38">
+<span class="eqno">(39.1)<a class="headerlink" href="#equation-eaa70903-60ab-4590-9da4-065a67a20b38" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{r}=\underline{D}+\underline{r}^{\prime},\end{equation}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(\underline{D}\)</span> is the position vector of <span class="math notranslate nohighlight">\(O^{\prime}\)</span> relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. Differentiating this expression gives the rate of change of position of point <span class="math notranslate nohighlight">\(P\)</span>. We will examine the change from the perspective of frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, as indicated by the subscript in the expression below:</p>
 <div class="math notranslate nohighlight" id="equation-rotfram1">
 <span class="eqno">(39.2)<a class="headerlink" href="#equation-rotfram1" title="Permalink to this equation">¶</a></span>\[\left(\frac{\mathcal{d}\underline{r}}{\mathcal{d}t}\right)_{\mathcal{F}}=
 \left(\frac{\mathcal{d}\underline{D}}{\mathcal{d}t}\right)_{\mathcal{F}}+
 \left(\frac{\mathcal{d}\underline{r}^{\prime}}{\mathcal{d}t}\right)_{\mathcal{F}}.\]</div>
 <p>The term on the left is the velocity of <span class="math notranslate nohighlight">\(P\)</span> seen by an observer in frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. The first term on the right is the translational velocity of body <span class="math notranslate nohighlight">\(\mathcal{B}^{\prime}\)</span>. The second term on the right is a little more complicated, because vector <span class="math notranslate nohighlight">\(\underline{r}^{\prime}\)</span> was defined relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span> but the time derivative is taken with respect to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. We must account for the fact that the basis vectors in <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span> are <em>changing</em> relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, due to the angular rotation of body <span class="math notranslate nohighlight">\(\mathcal{B}^{\prime}\)</span>. Seen from the perspective of frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, the basis vectors satisfy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-576e520e-d157-407b-af6c-c864b73b3f09">
-<span class="eqno">(39.3)<a class="headerlink" href="#equation-576e520e-d157-407b-af6c-c864b73b3f09" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{d}{\underline{e}_j}^{\prime}}{\mathrm{d}t}\right)_{\mathcal{F}}=\underline{\Omega}\times{\underline{e}_j}^{\prime}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b0a523b6-732b-40c6-b66b-bfdee09a65a3">
+<span class="eqno">(39.3)<a class="headerlink" href="#equation-b0a523b6-732b-40c6-b66b-bfdee09a65a3" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{d}{\underline{e}_j}^{\prime}}{\mathrm{d}t}\right)_{\mathcal{F}}=\underline{\Omega}\times{\underline{e}_j}^{\prime}\end{equation}\]</div>
 <p>and hence for a general vector <span class="math notranslate nohighlight">\(\underline{h}={h_1}^{\prime}{\underline{e}_1}^{\prime}+{h_2}^{\prime}{\underline{e}_2}^{\prime}+{h_3}^{\prime}{\underline{e}_3}^{\prime}\)</span>
 we have the following result :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e33a1e48-bd34-4bcb-b934-87d358cc4414">
-<span class="eqno">(39.4)<a class="headerlink" href="#equation-e33a1e48-bd34-4bcb-b934-87d358cc4414" title="Permalink to this equation">¶</a></span>\[\begin{align}\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}\right]_{\mathcal{F}}&amp;=\left[(\dot{h_1}^{\prime}{\underline{e}_1}^{\prime}+\dot{h_2}^{\prime}{\underline{e}_2}^{\prime}+\dot{h_3}^{\prime}{\underline{e}_3}^{\prime})+({h_1}^{\prime}\dot{\underline{e}_1}^{\prime}+{h_2}^{\prime}\dot{\underline{e}_2}^{\prime}+{h_3}^{\prime}\dot{\underline{e}_3}^{\prime})\right]_{\mathcal{F}}\\
+<div class="amsmath math notranslate nohighlight" id="equation-dd8c558c-be65-4055-b983-4fc6403bdebb">
+<span class="eqno">(39.4)<a class="headerlink" href="#equation-dd8c558c-be65-4055-b983-4fc6403bdebb" title="Permalink to this equation">¶</a></span>\[\begin{align}\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}\right]_{\mathcal{F}}&amp;=\left[(\dot{h_1}^{\prime}{\underline{e}_1}^{\prime}+\dot{h_2}^{\prime}{\underline{e}_2}^{\prime}+\dot{h_3}^{\prime}{\underline{e}_3}^{\prime})+({h_1}^{\prime}\dot{\underline{e}_1}^{\prime}+{h_2}^{\prime}\dot{\underline{e}_2}^{\prime}+{h_3}^{\prime}\dot{\underline{e}_3}^{\prime})\right]_{\mathcal{F}}\\
 &amp;=\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}+(\underline{\Omega}\times\underline{h}^{\prime})\right]_{\mathcal{F}^{\prime}}.\end{align}\]</div>
 <p>Putting this together with result <a class="reference internal" href="#equation-rotfram1">(39.2)</a> we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5298e64c-bab3-4e01-ba13-af3163bc7674">
-<span class="eqno">(39.5)<a class="headerlink" href="#equation-5298e64c-bab3-4e01-ba13-af3163bc7674" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\underline{V}+\underline{v}^{\prime}+(\underline{\Omega}\times\underline{r}^{\prime}),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0e6970f5-4450-4fe4-bc5d-7154177af83c">
+<span class="eqno">(39.5)<a class="headerlink" href="#equation-0e6970f5-4450-4fe4-bc5d-7154177af83c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\underline{V}+\underline{v}^{\prime}+(\underline{\Omega}\times\underline{r}^{\prime}),\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\underline{v}\)</span> is the velocity measured in frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(\underline{v}^{\prime}\)</span> is the velocity measured in frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>. Differentiating this expression again gives a result for the acceleration:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6e3d590e-0ff6-4f72-87eb-1094e47fd14f">
-<span class="eqno">(39.6)<a class="headerlink" href="#equation-6e3d590e-0ff6-4f72-87eb-1094e47fd14f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\frac{\mathrm{d}\underline{v}}{\mathrm{d}t}\right]_{\mathcal{F}}=\left[\frac{\mathrm{d}\underline{V}}{\mathrm{d}t}\right]_{\mathcal{F}}+\left[\frac{\mathrm{d}}{\mathrm{d}t}\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr)\right]_{\mathcal{F}^{\prime}}+\Omega\times\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-72123520-176c-41d4-a539-7c77b13ce19f">
+<span class="eqno">(39.6)<a class="headerlink" href="#equation-72123520-176c-41d4-a539-7c77b13ce19f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\frac{\mathrm{d}\underline{v}}{\mathrm{d}t}\right]_{\mathcal{F}}=\left[\frac{\mathrm{d}\underline{V}}{\mathrm{d}t}\right]_{\mathcal{F}}+\left[\frac{\mathrm{d}}{\mathrm{d}t}\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr)\right]_{\mathcal{F}^{\prime}}+\Omega\times\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr),\end{equation}\]</div>
 <p>which simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b1c26c8a-9935-4193-a5a7-2098174e00a6">
-<span class="eqno">(39.7)<a class="headerlink" href="#equation-b1c26c8a-9935-4193-a5a7-2098174e00a6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{a} =\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9aad1089-66f0-49b4-8a84-d97d9a1cb78d">
+<span class="eqno">(39.7)<a class="headerlink" href="#equation-9aad1089-66f0-49b4-8a84-d97d9a1cb78d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{a} =\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\end{equation}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(\underline{a}\)</span>, <span class="math notranslate nohighlight">\(\underline{a}^{\prime}\)</span> are the accelerations observed in each frame and <span class="math notranslate nohighlight">\(\underline{A}\)</span> is the translational acceleration of <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>.</p>
 </div>
 <div class="section" id="transformation-of-newtons-law">
 <h2><span class="section-number">39.2. </span>Transformation of Newton’s law<a class="headerlink" href="#transformation-of-newtons-law" title="Permalink to this headline">¶</a></h2>
 <p>Recall that Newton’s second law <span class="math notranslate nohighlight">\(\underline{F}=m\underline{a}\)</span> was defined for an inertial frame of reference. If the displacement, velocity and acceleration are measured from the perspective of our rotational frame of reference, the law becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9abf878c-eb99-4e5a-90a8-1313e6a6b0fc">
-<span class="eqno">(39.8)<a class="headerlink" href="#equation-9abf878c-eb99-4e5a-90a8-1313e6a6b0fc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=m\biggr[\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\biggr].\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e9f91e01-5499-47cc-b781-01b048f90d14">
+<span class="eqno">(39.8)<a class="headerlink" href="#equation-e9f91e01-5499-47cc-b781-01b048f90d14" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=m\biggr[\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\biggr].\end{equation}\]</div>
 <p>The result can be rearranged in the manner</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e2a88a16-4054-4f4a-bf59-d71d56478fd2">
-<span class="eqno">(39.9)<a class="headerlink" href="#equation-e2a88a16-4054-4f4a-bf59-d71d56478fd2" title="Permalink to this equation">¶</a></span>\[\begin{equation}m\underline{a}^{\prime}=\underline{F}+(-m\underline{A})+(-m\dot{\underline{\Omega}}\times\underline{r}^{\prime})+(-2m\underline{\Omega}\times\underline{v}^{\prime})+(-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cfd11482-af07-41ba-9150-9f425da63b4b">
+<span class="eqno">(39.9)<a class="headerlink" href="#equation-cfd11482-af07-41ba-9150-9f425da63b4b" title="Permalink to this equation">¶</a></span>\[\begin{equation}m\underline{a}^{\prime}=\underline{F}+(-m\underline{A})+(-m\dot{\underline{\Omega}}\times\underline{r}^{\prime})+(-2m\underline{\Omega}\times\underline{v}^{\prime})+(-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})),\end{equation}\]</div>
 <p>which resembles the standard Newton’s second law with the addition of extra terms; which are described as “fictitious forces”. The term <span class="math notranslate nohighlight">\((-2m\underline{\Omega}\times\underline{v}^{\prime})\)</span> is known as the Coriolis force, and the term <span class="math notranslate nohighlight">\((-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime}))\)</span> is known as the Centripetal force.</p>
 <p><em>Note: the semantic distinction of what is “actual” and what is “fictitious” is made purely so that Newton’s law holds in its inertial form.</em></p>
 <p><strong>Example</strong></p>
@@ -500,14 +500,14 @@ we have the following result :</p>
 <div class="section" id="application-to-the-navier-stokes-equations">
 <span id="rotfram-navstok"></span><h2><span class="section-number">39.3. </span>Application to the Navier-Stokes equations<a class="headerlink" href="#application-to-the-navier-stokes-equations" title="Permalink to this headline">¶</a></h2>
 <p>Treating the Earth as a uniformly rotating body with angular velocity <span class="math notranslate nohighlight">\(\underline{\Omega}\)</span> gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba5c346e-4791-4ee2-92a7-aac641330853">
-<span class="eqno">(39.10)<a class="headerlink" href="#equation-ba5c346e-4791-4ee2-92a7-aac641330853" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}}=\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}^{\prime}}+2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x}).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-48221607-0e5d-40d4-9462-a564b6178dcb">
+<span class="eqno">(39.10)<a class="headerlink" href="#equation-48221607-0e5d-40d4-9462-a564b6178dcb" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}}=\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}^{\prime}}+2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x}).\end{equation}\]</div>
 <p>Hence, in the Earth frame of reference the conservation of momentum equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7ad3553b-cb4e-40fd-8a21-df58cc033a5e">
-<span class="eqno">(39.11)<a class="headerlink" href="#equation-7ad3553b-cb4e-40fd-8a21-df58cc033a5e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})+\biggr[2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x})\biggr]=-\frac{1}{\rho}\nabla p+\nu \nabla^2\underline{u}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ff7d1516-805f-412e-b3c3-28419985aac2">
+<span class="eqno">(39.11)<a class="headerlink" href="#equation-ff7d1516-805f-412e-b3c3-28419985aac2" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})+\biggr[2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x})\biggr]=-\frac{1}{\rho}\nabla p+\nu \nabla^2\underline{u}\end{equation}\]</div>
 <p>The equation can be simplified by using the following vector identity, which applies when <span class="math notranslate nohighlight">\(\underline{\Omega}\)</span> is constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1873facf-9c43-4245-97d3-1d7fa264d817">
-<span class="eqno">(39.12)<a class="headerlink" href="#equation-1873facf-9c43-4245-97d3-1d7fa264d817" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\Omega}\times(\underline{\Omega}\times\underline{x})=-\nabla\left(\frac{1}{2}(\underline{\Omega}\times\underline{x})^2\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-39298f3f-6a09-4c8d-b63a-2ebd4a4a2ff5">
+<span class="eqno">(39.12)<a class="headerlink" href="#equation-39298f3f-6a09-4c8d-b63a-2ebd4a4a2ff5" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\Omega}\times(\underline{\Omega}\times\underline{x})=-\nabla\left(\frac{1}{2}(\underline{\Omega}\times\underline{x})^2\right).\end{equation}\]</div>
 <p>By defining a reduced pressure <span class="math notranslate nohighlight">\(p_R=p-\frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2\)</span> we may therefore write</p>
 <div class="math notranslate nohighlight" id="equation-rotfram-navstok-eqn">
 <span class="eqno">(39.13)<a class="headerlink" href="#equation-rotfram-navstok-eqn" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})=-\frac{1}{\rho}\nabla p_R+\nu\nabla^2\underline{u}-2(\underline{\Omega}\times\underline{u}).\]</div>
