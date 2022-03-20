@@ -1,3 +1,4 @@
+(ch_conservation)=
 # Conservation law derivations
 
 **In this section:**

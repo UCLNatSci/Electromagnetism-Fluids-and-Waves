@@ -1,5 +1,5 @@
 (steady-soln)=
-# Steady Euler solutions
+# Steady solutions
 
 **In this section:**
 * We derive the steady flow profiles for some classic geometries

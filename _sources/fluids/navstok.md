@@ -1,3 +1,4 @@
+(ch_navstok)=
 # Shear stress and viscosity
 
 **In this section:**

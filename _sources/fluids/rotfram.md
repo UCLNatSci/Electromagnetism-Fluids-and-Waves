@@ -1,3 +1,4 @@
+(ch_rotfram)=
 # Rotational reference frames
 
 This section of the notes is based on Chapter 17 of {cite}`classmech`, which is available in digitised form from UCL library. The material is concerned with relativistic transformation of Newton's second law of motion from an inertial frame of reference to a rotating frame of reference, such as the frame of the rotating Earth. It introduces the important idea of the *Coriolis force*, which influences large scale fluid motions on the Earth surface, such as ocean currents. The Coriolis force can be neglected in all of the scenarios that we will consider in this course.

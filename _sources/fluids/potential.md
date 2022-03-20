@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(ch_potential)=
 # The velocity potential
 
 **In this section:**

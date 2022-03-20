@@ -1,3 +1,4 @@
+(ch_geophysical)=
 # Geophysical phenomena
 
 **In this section:**

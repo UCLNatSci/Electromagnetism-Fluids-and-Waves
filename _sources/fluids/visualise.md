@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(ch_visualise)=
 # Visualising fluid motion
 
 **In this section:**
