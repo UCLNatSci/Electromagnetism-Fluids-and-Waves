@@ -36,9 +36,9 @@ In **chapters 26-29** we introduce some of the mathematical ideas that are requi
 
 In **chapters 30-31** the equations of motion are introduced from first principles. The concept of viscosity is given a detailed treatment, through which we start to consider the interesting behaviours of some fluids such as ketchup, paint, and blood.
 
-In **chapter 32** we begin to consider how scaling arguments can be used to compare the results of different experiments and to simplify the theory by establishing rational ways to make approximations. Here, we introduce the famous Reynolds number, as well as some other non-dimensional parameters of interest.
+In **chapters 32-33** we look at the steady form of the Navier-Stokes equations. For the viscous case we derive flow profiles for some simple geometries. For the inviscid (Euler) case we derive Bernoulli's equation, which relates pressure and velocity along a streamline.
 
-In **chapter 33-45** we look at the steady form of the Navier-Stokes equations. For the viscous case we derive flow profiles for some simple geometries. For the inviscid (Euler) case we derive Bernoulli's equation, which relates pressure and velocity along a streamline.
+In **chapter 34** we begin to consider how scaling arguments can be used to compare the results of different experiments and to simplify the theory by establishing rational ways to make approximations. Here, we introduce the famous Reynolds number, as well as some other non-dimensional parameters of interest.
 
 In **chapter 35** we briefly introduce perturbation techniques that can be used to investigate nearly steady flows and develop models of laminar-turbulent transition. We also introduce the important concept of a boundary layer, and touch upon a mathematical technique that is used to identify and study different layers in the fluid.
 

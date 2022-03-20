@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>39. Rotational reference frames &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,25 +44,22 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="40. Geophysical phenomena" href="ekman.html" />
     <link rel="prev" title="38. Unsteady: Sound waves" href="soundwaves.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,10 +76,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -92,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -367,7 +360,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -401,12 +394,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#its-all-a-matter-of-perspective">
@@ -436,45 +429,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Rotational reference frames</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#its-all-a-matter-of-perspective">
-   39.1. It’s all a matter of perspective
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transformation-of-newtons-law">
-   39.2. Transformation of Newton’s law
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#application-to-the-navier-stokes-equations">
-   39.3. Application to the Navier-Stokes equations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   39.4. References
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="section" id="rotational-reference-frames">
@@ -494,72 +449,40 @@
 <a class="reference internal image-reference" href="../_images/rot_frame.png" id="rotational-reference-frame"><img alt="alternative description" class="align-center" id="rotational-reference-frame" src="../_images/rot_frame.png" style="width: 613.8px; height: 328.2px;" /></a>
 <br>
 <p>We now consider the motion of an arbitrary point <span class="math notranslate nohighlight">\(P\)</span> as measured by an observer within each frame. We will take <span class="math notranslate nohighlight">\(\underline{r}\)</span> to be the position of the point relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(\underline{r}^{\prime}\)</span> to be the position relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>. According to the triangle law for vectors, we may then write</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-f4e14d38-9ede-42ed-8487-d7acccef4185">
-<span class="eqno">(39.1)<a class="headerlink" href="#equation-f4e14d38-9ede-42ed-8487-d7acccef4185" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{r}=\underline{D}+\underline{r}^{\prime},\end{equation}\]</div>
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-64dd1506-5338-466f-8081-beba58dd1c1e">
-<span class="eqno">(39.1)<a class="headerlink" href="#equation-64dd1506-5338-466f-8081-beba58dd1c1e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{r}=\underline{D}+\underline{r}^{\prime},\end{equation}\]</div>
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-9ca3491f-7975-4559-a736-d38368fab123">
+<span class="eqno">(39.1)<a class="headerlink" href="#equation-9ca3491f-7975-4559-a736-d38368fab123" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{r}=\underline{D}+\underline{r}^{\prime},\end{equation}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(\underline{D}\)</span> is the position vector of <span class="math notranslate nohighlight">\(O^{\prime}\)</span> relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. Differentiating this expression gives the rate of change of position of point <span class="math notranslate nohighlight">\(P\)</span>. We will examine the change from the perspective of frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, as indicated by the subscript in the expression below:</p>
 <div class="math notranslate nohighlight" id="equation-rotfram1">
 <span class="eqno">(39.2)<a class="headerlink" href="#equation-rotfram1" title="Permalink to this equation">¶</a></span>\[\left(\frac{\mathcal{d}\underline{r}}{\mathcal{d}t}\right)_{\mathcal{F}}=
 \left(\frac{\mathcal{d}\underline{D}}{\mathcal{d}t}\right)_{\mathcal{F}}+
 \left(\frac{\mathcal{d}\underline{r}^{\prime}}{\mathcal{d}t}\right)_{\mathcal{F}}.\]</div>
 <p>The term on the left is the velocity of <span class="math notranslate nohighlight">\(P\)</span> seen by an observer in frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. The first term on the right is the translational velocity of body <span class="math notranslate nohighlight">\(\mathcal{B}^{\prime}\)</span>. The second term on the right is a little more complicated, because vector <span class="math notranslate nohighlight">\(\underline{r}^{\prime}\)</span> was defined relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span> but the time derivative is taken with respect to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. We must account for the fact that the basis vectors in <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span> are <em>changing</em> relative to frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, due to the angular rotation of body <span class="math notranslate nohighlight">\(\mathcal{B}^{\prime}\)</span>. Seen from the perspective of frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>, the basis vectors satisfy</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-af75dd08-b45b-4934-86b4-1dff25abe253">
-<span class="eqno">(39.3)<a class="headerlink" href="#equation-af75dd08-b45b-4934-86b4-1dff25abe253" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{d}{\underline{e}_j}^{\prime}}{\mathrm{d}t}\right)_{\mathcal{F}}=\underline{\Omega}\times{\underline{e}_j}^{\prime}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-576e520e-d157-407b-af6c-c864b73b3f09">
+<span class="eqno">(39.3)<a class="headerlink" href="#equation-576e520e-d157-407b-af6c-c864b73b3f09" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{d}{\underline{e}_j}^{\prime}}{\mathrm{d}t}\right)_{\mathcal{F}}=\underline{\Omega}\times{\underline{e}_j}^{\prime}\end{equation}\]</div>
 <p>and hence for a general vector <span class="math notranslate nohighlight">\(\underline{h}={h_1}^{\prime}{\underline{e}_1}^{\prime}+{h_2}^{\prime}{\underline{e}_2}^{\prime}+{h_3}^{\prime}{\underline{e}_3}^{\prime}\)</span>
 we have the following result :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c579caf7-b2da-4ebb-bce8-7576a8aa8796">
-<span class="eqno">(39.4)<a class="headerlink" href="#equation-c579caf7-b2da-4ebb-bce8-7576a8aa8796" title="Permalink to this equation">¶</a></span>\[\begin{align}\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}\right]_{\mathcal{F}}&amp;=\left[(\dot{h_1}^{\prime}{\underline{e}_1}^{\prime}+\dot{h_2}^{\prime}{\underline{e}_2}^{\prime}+\dot{h_3}^{\prime}{\underline{e}_3}^{\prime})+({h_1}^{\prime}\dot{\underline{e}_1}^{\prime}+{h_2}^{\prime}\dot{\underline{e}_2}^{\prime}+{h_3}^{\prime}\dot{\underline{e}_3}^{\prime})\right]_{\mathcal{F}}\\
+<div class="amsmath math notranslate nohighlight" id="equation-e33a1e48-bd34-4bcb-b934-87d358cc4414">
+<span class="eqno">(39.4)<a class="headerlink" href="#equation-e33a1e48-bd34-4bcb-b934-87d358cc4414" title="Permalink to this equation">¶</a></span>\[\begin{align}\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}\right]_{\mathcal{F}}&amp;=\left[(\dot{h_1}^{\prime}{\underline{e}_1}^{\prime}+\dot{h_2}^{\prime}{\underline{e}_2}^{\prime}+\dot{h_3}^{\prime}{\underline{e}_3}^{\prime})+({h_1}^{\prime}\dot{\underline{e}_1}^{\prime}+{h_2}^{\prime}\dot{\underline{e}_2}^{\prime}+{h_3}^{\prime}\dot{\underline{e}_3}^{\prime})\right]_{\mathcal{F}}\\
 &amp;=\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}+(\underline{\Omega}\times\underline{h}^{\prime})\right]_{\mathcal{F}^{\prime}}.\end{align}\]</div>
 <p>Putting this together with result <a class="reference internal" href="#equation-rotfram1">(39.2)</a> we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-be7aa937-e27a-4124-b464-b7cfa6b2cdae">
-<span class="eqno">(39.5)<a class="headerlink" href="#equation-be7aa937-e27a-4124-b464-b7cfa6b2cdae" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\underline{V}+\underline{v}^{\prime}+(\underline{\Omega}\times\underline{r}^{\prime}),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5298e64c-bab3-4e01-ba13-af3163bc7674">
+<span class="eqno">(39.5)<a class="headerlink" href="#equation-5298e64c-bab3-4e01-ba13-af3163bc7674" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\underline{V}+\underline{v}^{\prime}+(\underline{\Omega}\times\underline{r}^{\prime}),\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\underline{v}\)</span> is the velocity measured in frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(\underline{v}^{\prime}\)</span> is the velocity measured in frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>. Differentiating this expression again gives a result for the acceleration:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6da9f075-8cdb-482c-8c00-6b3275f40920">
-<span class="eqno">(39.6)<a class="headerlink" href="#equation-6da9f075-8cdb-482c-8c00-6b3275f40920" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\frac{\mathrm{d}\underline{v}}{\mathrm{d}t}\right]_{\mathcal{F}}=\left[\frac{\mathrm{d}\underline{V}}{\mathrm{d}t}\right]_{\mathcal{F}}+\left[\frac{\mathrm{d}}{\mathrm{d}t}\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr)\right]_{\mathcal{F}^{\prime}}+\Omega\times\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr),\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6e3d590e-0ff6-4f72-87eb-1094e47fd14f">
+<span class="eqno">(39.6)<a class="headerlink" href="#equation-6e3d590e-0ff6-4f72-87eb-1094e47fd14f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\frac{\mathrm{d}\underline{v}}{\mathrm{d}t}\right]_{\mathcal{F}}=\left[\frac{\mathrm{d}\underline{V}}{\mathrm{d}t}\right]_{\mathcal{F}}+\left[\frac{\mathrm{d}}{\mathrm{d}t}\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr)\right]_{\mathcal{F}^{\prime}}+\Omega\times\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr),\end{equation}\]</div>
 <p>which simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1473e498-039a-43ed-80f4-3b3851b023f6">
-<span class="eqno">(39.7)<a class="headerlink" href="#equation-1473e498-039a-43ed-80f4-3b3851b023f6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{a} =\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\end{equation}\]</div>
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-44ce3133-1d89-4199-85f7-4816be64ca28">
-<span class="eqno">(39.3)<a class="headerlink" href="#equation-44ce3133-1d89-4199-85f7-4816be64ca28" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{d}{\underline{e}_j}^{\prime}}{\mathrm{d}t}\right)_{\mathcal{F}}=\underline{\Omega}\times{\underline{e}_j}^{\prime}\end{equation}\]</div>
-<p>and hence for a general vector <span class="math notranslate nohighlight">\(\underline{h}={h_1}^{\prime}{\underline{e}_1}^{\prime}+{h_2}^{\prime}{\underline{e}_2}^{\prime}+{h_3}^{\prime}{\underline{e}_3}^{\prime}\)</span>
-we have the following result :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b843ddd-9a7a-42c6-912f-4b1c36d6bdbd">
-<span class="eqno">(39.4)<a class="headerlink" href="#equation-0b843ddd-9a7a-42c6-912f-4b1c36d6bdbd" title="Permalink to this equation">¶</a></span>\[\begin{align}\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}\right]_{\mathcal{F}}&amp;=\left[(\dot{h_1}^{\prime}{\underline{e}_1}^{\prime}+\dot{h_2}^{\prime}{\underline{e}_2}^{\prime}+\dot{h_3}^{\prime}{\underline{e}_3}^{\prime})+({h_1}^{\prime}\dot{\underline{e}_1}^{\prime}+{h_2}^{\prime}\dot{\underline{e}_2}^{\prime}+{h_3}^{\prime}\dot{\underline{e}_3}^{\prime})\right]_{\mathcal{F}}\\
-&amp;=\left[\frac{\mathrm{d}\underline{h}^{\prime}}{\mathrm{d}t}+(\underline{\Omega}\times\underline{h}^{\prime})\right]_{\mathcal{F}^{\prime}}.\end{align}\]</div>
-<p>Putting this together with result <a class="reference internal" href="#equation-rotfram1">(39.2)</a> we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-03877d75-c2e0-4779-8d6b-8ffd6aac245d">
-<span class="eqno">(39.5)<a class="headerlink" href="#equation-03877d75-c2e0-4779-8d6b-8ffd6aac245d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{v}=\underline{V}+\underline{v}^{\prime}+(\underline{\Omega}\times\underline{r}^{\prime}),\end{equation}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\underline{v}\)</span> is the velocity measured in frame <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> and <span class="math notranslate nohighlight">\(\underline{v}^{\prime}\)</span> is the velocity measured in frame <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>. Differentiating this expression again gives a result for the acceleration:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7de68c30-903a-49b7-ab3e-871bc99d5136">
-<span class="eqno">(39.6)<a class="headerlink" href="#equation-7de68c30-903a-49b7-ab3e-871bc99d5136" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left[\frac{\mathrm{d}\underline{v}}{\mathrm{d}t}\right]_{\mathcal{F}}=\left[\frac{\mathrm{d}\underline{V}}{\mathrm{d}t}\right]_{\mathcal{F}}+\left[\frac{\mathrm{d}}{\mathrm{d}t}\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr)\right]_{\mathcal{F}^{\prime}}+\Omega\times\biggr(\underline{v}^{\prime}+(\Omega\times\underline{r}^{\prime})\biggr),\end{equation}\]</div>
-<p>which simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4a08e703-a717-423f-ae52-7520e3f42c02">
-<span class="eqno">(39.7)<a class="headerlink" href="#equation-4a08e703-a717-423f-ae52-7520e3f42c02" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{a} =\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\end{equation}\]</div>
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-b1c26c8a-9935-4193-a5a7-2098174e00a6">
+<span class="eqno">(39.7)<a class="headerlink" href="#equation-b1c26c8a-9935-4193-a5a7-2098174e00a6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{a} =\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\end{equation}\]</div>
 <p>in which <span class="math notranslate nohighlight">\(\underline{a}\)</span>, <span class="math notranslate nohighlight">\(\underline{a}^{\prime}\)</span> are the accelerations observed in each frame and <span class="math notranslate nohighlight">\(\underline{A}\)</span> is the translational acceleration of <span class="math notranslate nohighlight">\(\mathcal{F}^{\prime}\)</span>.</p>
 </div>
 <div class="section" id="transformation-of-newtons-law">
 <h2><span class="section-number">39.2. </span>Transformation of Newton’s law<a class="headerlink" href="#transformation-of-newtons-law" title="Permalink to this headline">¶</a></h2>
 <p>Recall that Newton’s second law <span class="math notranslate nohighlight">\(\underline{F}=m\underline{a}\)</span> was defined for an inertial frame of reference. If the displacement, velocity and acceleration are measured from the perspective of our rotational frame of reference, the law becomes</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-30b9575d-36be-465e-a02b-8a0d6ef6da89">
-<span class="eqno">(39.8)<a class="headerlink" href="#equation-30b9575d-36be-465e-a02b-8a0d6ef6da89" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=m\biggr[\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\biggr].\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9abf878c-eb99-4e5a-90a8-1313e6a6b0fc">
+<span class="eqno">(39.8)<a class="headerlink" href="#equation-9abf878c-eb99-4e5a-90a8-1313e6a6b0fc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=m\biggr[\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\biggr].\end{equation}\]</div>
 <p>The result can be rearranged in the manner</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8a3ca1f1-efd6-474b-b03f-516cc5d7688f">
-<span class="eqno">(39.9)<a class="headerlink" href="#equation-8a3ca1f1-efd6-474b-b03f-516cc5d7688f" title="Permalink to this equation">¶</a></span>\[\begin{equation}m\underline{a}^{\prime}=\underline{F}+(-m\underline{A})+(-m\dot{\underline{\Omega}}\times\underline{r}^{\prime})+(-2m\underline{\Omega}\times\underline{v}^{\prime})+(-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})),\end{equation}\]</div>
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-a16e03cf-6aa1-4505-80f8-5b0ae77dcb56">
-<span class="eqno">(39.8)<a class="headerlink" href="#equation-a16e03cf-6aa1-4505-80f8-5b0ae77dcb56" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=m\biggr[\underline{A}+\underline{a}^{\prime}+(\dot{\underline{\Omega}}\times\underline{r}^{\prime})+2(\underline{\Omega}\times\underline{v}^{\prime})+\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})\biggr].\end{equation}\]</div>
-<p>The result can be rearranged in the manner</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f293f4c-8ed1-4b78-b561-9ca8abc8dcb7">
-<span class="eqno">(39.9)<a class="headerlink" href="#equation-7f293f4c-8ed1-4b78-b561-9ca8abc8dcb7" title="Permalink to this equation">¶</a></span>\[\begin{equation}m\underline{a}^{\prime}=\underline{F}+(-m\underline{A})+(-m\dot{\underline{\Omega}}\times\underline{r}^{\prime})+(-2m\underline{\Omega}\times\underline{v}^{\prime})+(-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})),\end{equation}\]</div>
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-e2a88a16-4054-4f4a-bf59-d71d56478fd2">
+<span class="eqno">(39.9)<a class="headerlink" href="#equation-e2a88a16-4054-4f4a-bf59-d71d56478fd2" title="Permalink to this equation">¶</a></span>\[\begin{equation}m\underline{a}^{\prime}=\underline{F}+(-m\underline{A})+(-m\dot{\underline{\Omega}}\times\underline{r}^{\prime})+(-2m\underline{\Omega}\times\underline{v}^{\prime})+(-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime})),\end{equation}\]</div>
 <p>which resembles the standard Newton’s second law with the addition of extra terms; which are described as “fictitious forces”. The term <span class="math notranslate nohighlight">\((-2m\underline{\Omega}\times\underline{v}^{\prime})\)</span> is known as the Coriolis force, and the term <span class="math notranslate nohighlight">\((-m\underline{\Omega}\times(\underline{\Omega}\times\underline{r}^{\prime}))\)</span> is known as the Centripetal force.</p>
 <p><em>Note: the semantic distinction of what is “actual” and what is “fictitious” is made purely so that Newton’s law holds in its inertial form.</em></p>
 <p><strong>Example</strong></p>
@@ -577,32 +500,20 @@ we have the following result :</p>
 <div class="section" id="application-to-the-navier-stokes-equations">
 <span id="rotfram-navstok"></span><h2><span class="section-number">39.3. </span>Application to the Navier-Stokes equations<a class="headerlink" href="#application-to-the-navier-stokes-equations" title="Permalink to this headline">¶</a></h2>
 <p>Treating the Earth as a uniformly rotating body with angular velocity <span class="math notranslate nohighlight">\(\underline{\Omega}\)</span> gives</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-58271422-34b8-4714-8aac-96a0ab7ed89d">
-<span class="eqno">(39.10)<a class="headerlink" href="#equation-58271422-34b8-4714-8aac-96a0ab7ed89d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}}=\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}^{\prime}}+2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x}).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ba5c346e-4791-4ee2-92a7-aac641330853">
+<span class="eqno">(39.10)<a class="headerlink" href="#equation-ba5c346e-4791-4ee2-92a7-aac641330853" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}}=\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}^{\prime}}+2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x}).\end{equation}\]</div>
 <p>Hence, in the Earth frame of reference the conservation of momentum equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-72f85900-91fb-435b-b26b-d4224b6e628c">
-<span class="eqno">(39.11)<a class="headerlink" href="#equation-72f85900-91fb-435b-b26b-d4224b6e628c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})+\biggr[2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x})\biggr]=-\frac{1}{\rho}\nabla p+\nu \nabla^2\underline{u}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7ad3553b-cb4e-40fd-8a21-df58cc033a5e">
+<span class="eqno">(39.11)<a class="headerlink" href="#equation-7ad3553b-cb4e-40fd-8a21-df58cc033a5e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})+\biggr[2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x})\biggr]=-\frac{1}{\rho}\nabla p+\nu \nabla^2\underline{u}\end{equation}\]</div>
 <p>The equation can be simplified by using the following vector identity, which applies when <span class="math notranslate nohighlight">\(\underline{\Omega}\)</span> is constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d2995478-f816-4919-8079-bd232913ad7d">
-<span class="eqno">(39.12)<a class="headerlink" href="#equation-d2995478-f816-4919-8079-bd232913ad7d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\Omega}\times(\underline{\Omega}\times\underline{x})=-\nabla\left(\frac{1}{2}(\underline{\Omega}\times\underline{x})^2\right).\end{equation}\]</div>
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-88874dd6-a237-4570-9a53-7c7b4c976f07">
-<span class="eqno">(39.10)<a class="headerlink" href="#equation-88874dd6-a237-4570-9a53-7c7b4c976f07" title="Permalink to this equation">¶</a></span>\[\begin{equation}\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}}=\left(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\right)_{\mathcal{F}^{\prime}}+2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x}).\end{equation}\]</div>
-<p>Hence, in the Earth frame of reference the conservation of momentum equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-988071de-b4ae-4d83-9821-5f355beeea60">
-<span class="eqno">(39.11)<a class="headerlink" href="#equation-988071de-b4ae-4d83-9821-5f355beeea60" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})+\biggr[2(\underline{\Omega}\times\underline{u})+\underline{\Omega}\times(\underline{\Omega}\times\underline{x})\biggr]=-\frac{1}{\rho}\nabla p+\nu \nabla^2\underline{u}\end{equation}\]</div>
-<p>The equation can be simplified by using the following vector identity, which applies when <span class="math notranslate nohighlight">\(\underline{\Omega}\)</span> is constant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21cbe438-97d6-47d4-b50e-0275ebb8bde8">
-<span class="eqno">(39.12)<a class="headerlink" href="#equation-21cbe438-97d6-47d4-b50e-0275ebb8bde8" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\Omega}\times(\underline{\Omega}\times\underline{x})=-\nabla\left(\frac{1}{2}(\underline{\Omega}\times\underline{x})^2\right).\end{equation}\]</div>
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-1873facf-9c43-4245-97d3-1d7fa264d817">
+<span class="eqno">(39.12)<a class="headerlink" href="#equation-1873facf-9c43-4245-97d3-1d7fa264d817" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\Omega}\times(\underline{\Omega}\times\underline{x})=-\nabla\left(\frac{1}{2}(\underline{\Omega}\times\underline{x})^2\right).\end{equation}\]</div>
 <p>By defining a reduced pressure <span class="math notranslate nohighlight">\(p_R=p-\frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2\)</span> we may therefore write</p>
 <div class="math notranslate nohighlight" id="equation-rotfram-navstok-eqn">
 <span class="eqno">(39.13)<a class="headerlink" href="#equation-rotfram-navstok-eqn" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{u}.\nabla\underline{u})=-\frac{1}{\rho}\nabla p_R+\nu\nabla^2\underline{u}-2(\underline{\Omega}\times\underline{u}).\]</div>
 <p>The term <span class="math notranslate nohighlight">\(-2(\underline{\Omega}\times\underline{u})\)</span> is called the Coriolis force.</p>
 <div class="exercise admonition" id="fluids/rotfram-exercise-0">
-
-<p class="admonition-title"><span class="caption-number">Exercise 39.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 39.1 </span> </p>
 <div class="section" id="exercise-content">
 <p>The Rossby number is defined by</p>
 <div class="math notranslate nohighlight">
@@ -649,42 +560,34 @@ we have the following result :</p>
 
               </div>
               
+        
+        <div class='prev-next-bottom'>
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="soundwaves.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">38. </span>Unsteady: Sound waves</p>
+    <a class='left-prev' id="prev-link" href="soundwaves.html" title="previous page"><span class="section-number">38. </span>Unsteady: Sound waves</a>
+    <a class='right-next' id="next-link" href="ekman.html" title="next page"><span class="section-number">40. </span>Geophysical phenomena</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="ekman.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">40. </span>Geophysical phenomena</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            
+        
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Ali Mozaffari and Ella Metcalfe<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>40. Geophysical phenomena &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,24 +44,21 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="39. Rotational reference frames" href="rotfram.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -78,10 +75,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -91,7 +84,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -366,7 +359,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -400,12 +393,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+        <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#uniform-rotation">
@@ -445,55 +438,7 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Geophysical phenomena</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uniform-rotation">
-   40.1. Uniform rotation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#almost-uniform-rotation">
-   40.2. Almost uniform rotation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ekman-boundary-layer">
-   40.3. Ekman boundary layer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#unsteady-secondary-effects">
-   40.4. Unsteady secondary effects
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oceanography">
-   40.5. Oceanography
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   40.6. References
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
+        
               <div>
                 
   <div class="section" id="geophysical-phenomena">
@@ -511,42 +456,24 @@
 <div class="math notranslate nohighlight" id="equation-press-balance">
 <span class="eqno">(40.1)<a class="headerlink" href="#equation-press-balance" title="Permalink to this equation">¶</a></span>\[-\frac{1}{\rho}\nabla p_R+\underline{f}=0, \qquad p_R=p-\frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2, \qquad \underline{f}=-\nabla(\rho g z).\]</div>
 <p>We see that the centrifugal acceleration is balanced by a radial pressure gradient so that the streamlines remain circular. For the centrifugal term we obtain</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-3fe3278e-ad05-4a0a-b63e-a8c877bd0872">
-<span class="eqno">(40.2)<a class="headerlink" href="#equation-3fe3278e-ad05-4a0a-b63e-a8c877bd0872" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7f885425-ebe1-4b9c-a77c-51b0af106848">
+<span class="eqno">(40.2)<a class="headerlink" href="#equation-7f885425-ebe1-4b9c-a77c-51b0af106848" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2=\frac{1}{2}\rho\Omega^2(x^2+y^2) = \frac{1}{2}\rho\Omega^2 r^2.
 \end{equation}\]</div>
 <p>Integrating equation <a class="reference internal" href="#equation-press-balance">(40.1)</a> gives the same result obtained in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 34.3</span></a>. The pressure gradient varies linearly in the radial direction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f66ac34-7a3f-4c14-8812-99838de94d77">
-<span class="eqno">(40.3)<a class="headerlink" href="#equation-3f66ac34-7a3f-4c14-8812-99838de94d77" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-95144d84-0a73-433a-91f9-1cdfc9b4d081">
-<span class="eqno">(40.2)<a class="headerlink" href="#equation-95144d84-0a73-433a-91f9-1cdfc9b4d081" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-\frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2=\frac{1}{2}\rho\Omega^2(x^2+y^2) = \frac{1}{2}\rho\Omega^2 r^2.
-\end{equation}\]</div>
-<p>Integrating equation <a class="reference internal" href="#equation-press-balance">(40.1)</a> gives the same result obtained in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 34.3</span></a>. The pressure gradient varies linearly in the radial direction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87f47179-cfca-4ec7-a514-65018fc5cbc2">
-<span class="eqno">(40.3)<a class="headerlink" href="#equation-87f47179-cfca-4ec7-a514-65018fc5cbc2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-f3de2c31-5026-4f00-834f-4c1606e2c134">
+<span class="eqno">(40.3)<a class="headerlink" href="#equation-f3de2c31-5026-4f00-834f-4c1606e2c134" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\partial p}{\partial r}=\rho\Omega^2 r.
 \end{equation}\]</div>
 </div>
 <div class="section" id="almost-uniform-rotation">
 <h2><span class="section-number">40.2. </span>Almost uniform rotation<a class="headerlink" href="#almost-uniform-rotation" title="Permalink to this headline">¶</a></h2>
 <p>We now consider the case of a body of fluid that undergoes weak motion relative to a frame rotating at constant angular velocity <span class="math notranslate nohighlight">\(\underline{\Omega}.\)</span> Taking <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(L\)</span> to be characteristic length and velocity scales of the motion allows us to compare the size of the inertial term relative to the Coriolis term:</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-a3aefb4f-7e01-409e-a6d9-f5279bc35c12">
-<span class="eqno">(40.4)<a class="headerlink" href="#equation-a3aefb4f-7e01-409e-a6d9-f5279bc35c12" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e21ec991-9d9e-4074-8843-83bc7c1cad5f">
+<span class="eqno">(40.4)<a class="headerlink" href="#equation-e21ec991-9d9e-4074-8843-83bc7c1cad5f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
 <p>If this ratio is much smaller than one then the inertial term can be neglected to a first approximation. We will also suppose that viscous effects may be neglected in the interior of the fluid (i.e. away from any boundaries), and we will look for steady solutions. The equations of motion then simplify to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02e2b3a0-174b-4632-befd-90f7fe60f890">
-<span class="eqno">(40.5)<a class="headerlink" href="#equation-02e2b3a0-174b-4632-befd-90f7fe60f890" title="Permalink to this equation">¶</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-0f80c89b-a1e9-4340-a4ac-7fd2322c1e04">
-<span class="eqno">(40.4)<a class="headerlink" href="#equation-0f80c89b-a1e9-4340-a4ac-7fd2322c1e04" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
-<p>If this ratio is much smaller than one then the inertial term can be neglected to a first approximation. We will also suppose that viscous effects may be neglected in the interior of the fluid (i.e. away from any boundaries), and we will look for steady solutions. The equations of motion then simplify to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0ed5d37d-47e0-40d8-a58b-be435fcc2841">
-<span class="eqno">(40.5)<a class="headerlink" href="#equation-0ed5d37d-47e0-40d8-a58b-be435fcc2841" title="Permalink to this equation">¶</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-18eb1296-557c-4547-9be8-d6ea9c3950e0">
+<span class="eqno">(40.5)<a class="headerlink" href="#equation-18eb1296-557c-4547-9be8-d6ea9c3950e0" title="Permalink to this equation">¶</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
 \nabla.\underline{u}&amp;=0,\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_R\)</span> denotes the reduced pressure. The prevailing winds <span class="math notranslate nohighlight">\(\underline{u}\)</span> are due to a balance between the Coriolis force and pressure, known as geostrophic balance.</p>
 <p>Taking the angular velocity to be <span class="math notranslate nohighlight">\(\underline{\Omega}=(0,0,\Omega)\)</span> and denoting the velocity by <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span> gives the following scalar (component) form:</p>
@@ -580,13 +507,8 @@
 &amp;\frac{\partial w}{\partial z} =0
 \end{align}\end{split}\]</div>
 <p>By solving these equations and <em>matching</em> the solution to the inviscid profile found in the inner fluid layer, it can be deduced that the boundary layer thickness scales as</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-6aa274f8-d0f8-48e1-aa3c-2ace27bafecd">
-<span class="eqno">(40.8)<a class="headerlink" href="#equation-6aa274f8-d0f8-48e1-aa3c-2ace27bafecd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-27946c3e-202e-4d56-98d5-92614dd60baf">
-<span class="eqno">(40.8)<a class="headerlink" href="#equation-27946c3e-202e-4d56-98d5-92614dd60baf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-eb3ff9cc-af62-41be-96fa-5d51eb24ccf1">
+<span class="eqno">(40.8)<a class="headerlink" href="#equation-eb3ff9cc-af62-41be-96fa-5d51eb24ccf1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta = \sqrt{\frac{\nu}{\Omega}}
 \end{equation}\]</div>
 <p>The kinematic viscosity of water is approximately <span class="math notranslate nohighlight">\(10^{-6}\mathrm{ms}^{-1}\)</span>. Therefore for a cup of water rotating at <span class="math notranslate nohighlight">\(1\mathrm{rad/s}\)</span> the Ekman layer thickness is estimated to be around 1mm.</p>
@@ -599,13 +521,8 @@
 <a class="reference internal image-reference" href="../_images/teacup.png" id="teacup"><img alt="secondary circulation" class="align-center" id="teacup" src="../_images/teacup.png" style="width: 563.2px; height: 240.8px;" /></a>
 <br>
 <p>The continual pumping action of fluid from the inviscid main body into the viscous boundary also means that viscous effects become apparent on a much shorter timescale than would be expected due to viscous diffusion alone. By dimensional analysis, the timescales for viscous diffusion and Ekman pumping are found to be</p>
-<<<<<<< HEAD
-<div class="amsmath math notranslate nohighlight" id="equation-ef76d94b-ccaa-49c4-8050-8a7fe13f22dd">
-<span class="eqno">(40.9)<a class="headerlink" href="#equation-ef76d94b-ccaa-49c4-8050-8a7fe13f22dd" title="Permalink to this equation">¶</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
-=======
-<div class="amsmath math notranslate nohighlight" id="equation-8984cda9-e175-45d4-bf47-d4cb0a3d1ffb">
-<span class="eqno">(40.9)<a class="headerlink" href="#equation-8984cda9-e175-45d4-bf47-d4cb0a3d1ffb" title="Permalink to this equation">¶</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
->>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
+<div class="amsmath math notranslate nohighlight" id="equation-e73e8666-be40-432e-af5e-460ecd9a91a3">
+<span class="eqno">(40.9)<a class="headerlink" href="#equation-e73e8666-be40-432e-af5e-460ecd9a91a3" title="Permalink to this equation">¶</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(L\)</span> is a characteristic lengtscale of the motion. For a teacup the viscous diffusion timescale gives a spindown time of about an hour, whilst the Ekman diffusion timescale is about a minute.</p>
 </div>
 <div class="section" id="oceanography">
@@ -617,8 +534,7 @@
 <p>This can lead to the formation of circulating currents called <a class="reference external" href="https://www.nationalgeographic.org/encyclopedia/ocean-gyre/">ocean gyres</a>. Secondary circulation effects can also cause upwelling or downwelling to occur, and these effects may be particularly important near to landmasses, where upwelling can bring nutrient rich water to the ocean surface, as described in <a class="reference external" href="https://www.youtube.com/watch?v=KBKmKI3tl4Q">this video</a>.</p>
 <p>Estimates using the earth’s rotation rate and the molecular viscosity of water lead to Ekman thickness estimates of around 10cm. However, observational data shows that Ekman layers can have a thickness of tens of metres. This is because turbulent mixing in the ocean affects shear stress in a similar way to viscosity, resulting in an effective viscosity some 1000 times greater.</p>
 <div class="exercise admonition" id="fluids/ekman-exercise-0">
-
-<p class="admonition-title"><span class="caption-number">Exercise 40.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 40.1 </span> </p>
 <div class="section" id="exercise-content">
 <p>Read <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780128215555000012">Chapter 3 (pp27-44) of Threats to the Arctic</a>. Write a 200 word summary explaining what the Beaufort Gyre (BG) is and how it affects the freshwater composition of the Atlantic. What do you think would happen if the Arctic Ocean became a low pressure system due to the rising of warm air?</p>
 <div class="sphinx-bs container pb-4 docutils">
@@ -682,35 +598,33 @@
 
               </div>
               
+        
+        <div class='prev-next-bottom'>
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="rotfram.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">39. </span>Rotational reference frames</p>
+    <a class='left-prev' id="prev-link" href="rotfram.html" title="previous page"><span class="section-number">39. </span>Rotational reference frames</a>
+
         </div>
-    </a>
-</div>
-            
+        
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      By Ali Mozaffari and Ella Metcalfe<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ali Mozaffari and Ella Metcalfe<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
