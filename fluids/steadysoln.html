@@ -455,28 +455,28 @@
 <p>In this example, we consider the motion of fluid between two horizontal planes. The lower plane is held at rest and the upper plan is moved at speed <span class="math notranslate nohighlight">\(U\)</span> as shown. We will assume that there is no pressure gradient in the horizontal direction, so that the flow is entirely driven by viscosity. We will assume that the flow is independent of <span class="math notranslate nohighlight">\(x\)</span> so that <span class="math notranslate nohighlight">\(\underline{u}=(u(y),v(y),0)\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/couette.png" id="couette-flow"><img alt="Couette flow" class="align-center" id="couette-flow" src="../_images/couette.png" style="width: 360.0px; height: 168.0px;" /></a>
 <p>The equations of motion are:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0bae9c23-0cd8-4ab7-b8fb-eedee8c5a332">
-<span class="eqno">(32.1)<a class="headerlink" href="#equation-0bae9c23-0cd8-4ab7-b8fb-eedee8c5a332" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0, \quad \underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu \nabla^2\underline{u}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bbc2ef9d-2cac-49b9-b2f9-e1ab72a13698">
+<span class="eqno">(32.1)<a class="headerlink" href="#equation-bbc2ef9d-2cac-49b9-b2f9-e1ab72a13698" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0, \quad \underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu \nabla^2\underline{u}.\end{equation}\]</div>
 <p>It follows from the incompressibility condition that <span class="math notranslate nohighlight">\(v\)</span> is constant, and since <span class="math notranslate nohighlight">\(v(0)=0\)</span> this component must be identically zero everywhere, so the conservation of momentum equations simplify to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b52372b6-20b8-4dd1-a627-70c4e9ec78f2">
-<span class="eqno">(32.2)<a class="headerlink" href="#equation-b52372b6-20b8-4dd1-a627-70c4e9ec78f2" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}^2 u}{\mathrm{d}y^2}=0, \quad \frac{\mathrm{d} p}{\mathrm{d} y}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-eaab611e-deda-4a6f-a98a-6da9349a59db">
+<span class="eqno">(32.2)<a class="headerlink" href="#equation-eaab611e-deda-4a6f-a98a-6da9349a59db" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}^2 u}{\mathrm{d}y^2}=0, \quad \frac{\mathrm{d} p}{\mathrm{d} y}=0.\end{equation}\]</div>
 <p>The velocity solution satisfying the no-slip condition <span class="math notranslate nohighlight">\(u(0)=0\)</span> and <span class="math notranslate nohighlight">\(u(h)=U\)</span> is the linear profile:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2981f533-0124-4c77-952f-5172d94237d0">
-<span class="eqno">(32.3)<a class="headerlink" href="#equation-2981f533-0124-4c77-952f-5172d94237d0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\left(\frac{U}{h}y,0,0\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-89d869cd-3582-46fd-96d9-ac4695f1ffa1">
+<span class="eqno">(32.3)<a class="headerlink" href="#equation-89d869cd-3582-46fd-96d9-ac4695f1ffa1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\left(\frac{U}{h}y,0,0\right).\end{equation}\]</div>
 <p>The shear stress is constant throughout the fluid. In the downstream direction</p>
-<div class="amsmath math notranslate nohighlight" id="equation-65419f4d-c309-47b8-8369-4152cb64aa8f">
-<span class="eqno">(32.4)<a class="headerlink" href="#equation-65419f4d-c309-47b8-8369-4152cb64aa8f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu\left(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\right)=\mu\frac{U}{h}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-72b18b10-4e97-4b01-99f2-e808b5b88d32">
+<span class="eqno">(32.4)<a class="headerlink" href="#equation-72b18b10-4e97-4b01-99f2-e808b5b88d32" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mu\left(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\right)=\mu\frac{U}{h}.\end{equation}\]</div>
 <p>It is also possible to solve the problem for an applied pressure gradient. For example if we take a constant pressure gradient <span class="math notranslate nohighlight">\(\frac{\partial p}{\partial x}=G\)</span> then we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ca9b0730-68dd-480d-90db-53b5693bbe82">
-<span class="eqno">(32.5)<a class="headerlink" href="#equation-ca9b0730-68dd-480d-90db-53b5693bbe82" title="Permalink to this equation">¶</a></span>\[\begin{equation}u=\frac{U}{h}y+\frac{G}{2\mu}y(h-y).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-4afb8c76-47de-4aa8-b0bc-df154e0e7302">
+<span class="eqno">(32.5)<a class="headerlink" href="#equation-4afb8c76-47de-4aa8-b0bc-df154e0e7302" title="Permalink to this equation">¶</a></span>\[\begin{equation}u=\frac{U}{h}y+\frac{G}{2\mu}y(h-y).\end{equation}\]</div>
 </div>
 <div class="section" id="steady-flow-under-gravity-down-an-inclined-plane">
 <h2><span class="section-number">32.3. </span>Steady flow under gravity down an inclined plane<a class="headerlink" href="#steady-flow-under-gravity-down-an-inclined-plane" title="Permalink to this headline">¶</a></h2>
 <p>In this example, we will consider gravity driven flow down an inclined plane, with a free surface at <span class="math notranslate nohighlight">\(y=h\)</span>, as shown. We will assume that the flow is independent of <span class="math notranslate nohighlight">\(x\)</span> so that <span class="math notranslate nohighlight">\(\underline{u}=(u(y),v(y),0)\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/inclined_plane.png" id="inclined-plane"><img alt="flow down an inclined plane" class="align-center" id="inclined-plane" src="../_images/inclined_plane.png" style="width: 288.0px; height: 249.60000000000002px;" /></a>
 <p>The equations of motion are:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ec008cf7-d2a8-44d9-9b46-79ced14f2804">
-<span class="eqno">(32.6)<a class="headerlink" href="#equation-ec008cf7-d2a8-44d9-9b46-79ced14f2804" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0, \quad \underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\underline{F}+\nu \nabla^2\underline{u}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-be8f5678-6939-431f-89ec-4fcaa5b20c2d">
+<span class="eqno">(32.6)<a class="headerlink" href="#equation-be8f5678-6939-431f-89ec-4fcaa5b20c2d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0, \quad \underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\underline{F}+\nu \nabla^2\underline{u}.\end{equation}\]</div>
 <p>It follows from the incompressibility condition that <span class="math notranslate nohighlight">\(v\)</span> is constant, and since <span class="math notranslate nohighlight">\(v(0)=0\)</span> this component must be identically zero everywhere. The conservation of momentum equations then simplify to:</p>
 <div class="math notranslate nohighlight" id="equation-steadygravy1">
 <span class="eqno">(32.7)<a class="headerlink" href="#equation-steadygravy1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
@@ -484,17 +484,17 @@
 0 &amp;= \frac{1}{\rho}\frac{\partial p}{\partial y} - g\cos(\alpha)
 \end{align}\end{split}\]</div>
 <p>By integrating the latter of these two equations we obtain <span class="math notranslate nohighlight">\(p=-\rho g y \cos(\alpha)+f(x)\)</span> and we can find <span class="math notranslate nohighlight">\(f(x)\)</span> by applying an atmospheric pressure condition on the free surface:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-30785ace-0034-4a25-8b8d-b5514c5075cb">
-<span class="eqno">(32.8)<a class="headerlink" href="#equation-30785ace-0034-4a25-8b8d-b5514c5075cb" title="Permalink to this equation">¶</a></span>\[\begin{equation}p(h)=p_0, \ \forall x \qquad \Rightarrow f(x)=p_0-\rho g h\cos(\alpha).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a7a8fcb5-ee37-4f21-8fbe-f78b5af0ad99">
+<span class="eqno">(32.8)<a class="headerlink" href="#equation-a7a8fcb5-ee37-4f21-8fbe-f78b5af0ad99" title="Permalink to this equation">¶</a></span>\[\begin{equation}p(h)=p_0, \ \forall x \qquad \Rightarrow f(x)=p_0-\rho g h\cos(\alpha).\end{equation}\]</div>
 <p>Therefore the pressure is independent of <span class="math notranslate nohighlight">\(x\)</span> and the first equation in <a class="reference internal" href="#equation-steadygravy1">(32.7)</a> reduces to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7eeec92-5b7d-4214-9222-b43e202621ba">
-<span class="eqno">(32.9)<a class="headerlink" href="#equation-b7eeec92-5b7d-4214-9222-b43e202621ba" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nu \frac{\mathrm{d}^2 u}{\mathrm{d}y^2}=-g\sin(\alpha).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a645e863-83bb-4e65-80e2-59591564acda">
+<span class="eqno">(32.9)<a class="headerlink" href="#equation-a645e863-83bb-4e65-80e2-59591564acda" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nu \frac{\mathrm{d}^2 u}{\mathrm{d}y^2}=-g\sin(\alpha).\end{equation}\]</div>
 <p>The solution satisfying the no-slip condition <span class="math notranslate nohighlight">\(u(0)=0\)</span> and free surface stress shear “no stress” condition <span class="math notranslate nohighlight">\(u'(h)=0\)</span> is the parabolic profile:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d16723d2-ce69-4a40-aa78-b515d1f5d16a">
-<span class="eqno">(32.10)<a class="headerlink" href="#equation-d16723d2-ce69-4a40-aa78-b515d1f5d16a" title="Permalink to this equation">¶</a></span>\[\begin{equation}u=\frac{g}{2\nu}y(2h-y)\sin(\alpha).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-868e9696-637a-4671-b76e-fb3ea2f10c2b">
+<span class="eqno">(32.10)<a class="headerlink" href="#equation-868e9696-637a-4671-b76e-fb3ea2f10c2b" title="Permalink to this equation">¶</a></span>\[\begin{equation}u=\frac{g}{2\nu}y(2h-y)\sin(\alpha).\end{equation}\]</div>
 <p>The velocity flux is therefore</p>
-<div class="amsmath math notranslate nohighlight" id="equation-88bba227-56e9-4cf5-b8bf-c515abb967aa">
-<span class="eqno">(32.11)<a class="headerlink" href="#equation-88bba227-56e9-4cf5-b8bf-c515abb967aa" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_0^h u\mathrm{d}y=\frac{gh^3}{3\nu}\sin(\alpha).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7c04ddff-2f3f-4189-8996-be0563e46743">
+<span class="eqno">(32.11)<a class="headerlink" href="#equation-7c04ddff-2f3f-4189-8996-be0563e46743" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_0^h u\mathrm{d}y=\frac{gh^3}{3\nu}\sin(\alpha).\end{equation}\]</div>
 <div class="exercise admonition" id="fluids/steadysoln-exercise-0">
 <p class="admonition-title"><span class="caption-number">Exercise 32.1 </span> </p>
 <div class="section" id="exercise-content">
@@ -542,22 +542,22 @@ Since we already assumed that <span class="math notranslate nohighlight">\(u\)</
 <div class="section" id="plane-poiseuille-flow">
 <span id="plane-poiseuille"></span><h2><span class="section-number">32.4. </span>Plane Poiseuille flow<a class="headerlink" href="#plane-poiseuille-flow" title="Permalink to this headline">¶</a></h2>
 <p>In this example, we will consider flow between two parallel planes driven by a constant pressure gradient <span class="math notranslate nohighlight">\(\frac{\partial p}{\partial x}=-P\)</span>. We will assume that the flow is independent of <span class="math notranslate nohighlight">\(x\)</span> so that <span class="math notranslate nohighlight">\(\underline{u}=(u(y),v(y),0)\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-73caac97-4ade-4d37-9ef4-4165bef8a0ec">
-<span class="eqno">(32.12)<a class="headerlink" href="#equation-73caac97-4ade-4d37-9ef4-4165bef8a0ec" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{}{}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-dbb7421b-deea-4930-870e-343470449955">
+<span class="eqno">(32.12)<a class="headerlink" href="#equation-dbb7421b-deea-4930-870e-343470449955" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{}{}\end{equation}\]</div>
 <a class="reference internal image-reference" href="../_images/plane_poiseuille.png" id="id1"><img alt="plane Poiseuille flow" class="align-center" id="id1" src="../_images/plane_poiseuille.png" style="width: 360.0px; height: 130.0px;" /></a>
 <p>The equations of motion are:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e78c31b4-2c9b-4145-9f48-bee783b47e1c">
-<span class="eqno">(32.13)<a class="headerlink" href="#equation-e78c31b4-2c9b-4145-9f48-bee783b47e1c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0, \quad \underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\underline{F}+\nu \nabla^2\underline{u}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-80ae0c9e-5dd0-41e8-b26a-94ce7166c807">
+<span class="eqno">(32.13)<a class="headerlink" href="#equation-80ae0c9e-5dd0-41e8-b26a-94ce7166c807" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0, \quad \underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\underline{F}+\nu \nabla^2\underline{u}.\end{equation}\]</div>
 <p>It follows from the incompressibility condition that <span class="math notranslate nohighlight">\(v\)</span> is constant, and since <span class="math notranslate nohighlight">\(v(0)=0\)</span> this component must be identically zero everywhere.
 The conservation of momentum equations simplify to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3447e569-f417-4c75-983a-57e86196a47a">
-<span class="eqno">(32.14)<a class="headerlink" href="#equation-3447e569-f417-4c75-983a-57e86196a47a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}^2 u}{\mathrm{d}y^2}=-\frac{P}{\mu}, \quad \frac{\partial p}{\partial y}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-56d0e3e1-697f-416b-a4a5-f640b542f7e1">
+<span class="eqno">(32.14)<a class="headerlink" href="#equation-56d0e3e1-697f-416b-a4a5-f640b542f7e1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\mathrm{d}^2 u}{\mathrm{d}y^2}=-\frac{P}{\mu}, \quad \frac{\partial p}{\partial y}=0.\end{equation}\]</div>
 <p>The velocity solution satisfying the no-slip conditions <span class="math notranslate nohighlight">\(u(0)=0\)</span> and <span class="math notranslate nohighlight">\(u(h)=0\)</span> is the parabolic profile:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-367f8e0a-2c9c-4b00-862c-34e6172d0f4e">
-<span class="eqno">(32.15)<a class="headerlink" href="#equation-367f8e0a-2c9c-4b00-862c-34e6172d0f4e" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\left(\frac{P y}{2\mu}(h-y),0,0\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-002c9356-8447-4c83-bcbb-0f778fe717f8">
+<span class="eqno">(32.15)<a class="headerlink" href="#equation-002c9356-8447-4c83-bcbb-0f778fe717f8" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\left(\frac{P y}{2\mu}(h-y),0,0\right).\end{equation}\]</div>
 <p>The mass flux is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fd2f840b-87c4-4965-aa32-d6f4c62a5f4d">
-<span class="eqno">(32.16)<a class="headerlink" href="#equation-fd2f840b-87c4-4965-aa32-d6f4c62a5f4d" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_0^h \left(\frac{Pyh}{2\mu}-\frac{Py^2}{2\mu}\right)\mathrm{d}y=\frac{Ph^3}{12\mu}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8943ca44-88cf-45f3-a924-c77550c24fbb">
+<span class="eqno">(32.16)<a class="headerlink" href="#equation-8943ca44-88cf-45f3-a924-c77550c24fbb" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_0^h \left(\frac{Pyh}{2\mu}-\frac{Py^2}{2\mu}\right)\mathrm{d}y=\frac{Ph^3}{12\mu}.\end{equation}\]</div>
 </div>
 <div class="section" id="poiseuille-pipe-flow">
 <span id="pipe-flow"></span><h2><span class="section-number">32.5. </span>Poiseuille pipe flow<a class="headerlink" href="#poiseuille-pipe-flow" title="Permalink to this headline">¶</a></h2>
@@ -567,21 +567,21 @@ The conservation of momentum equations simplify to:</p>
 <br>
 <p>We will work in cylindrical polar coordinates, using the equations given in <a class="reference internal" href="navstok.html#navstok-cylindrical"><span class="std std-numref">Section 31.5</span></a>. It is clear from the flow geometry that <span class="math notranslate nohighlight">\(v_{\theta}=0\)</span>, and that <span class="math notranslate nohighlight">\(v_r,v_z\)</span> are independent of <span class="math notranslate nohighlight">\(\theta\)</span>. We also assume that <span class="math notranslate nohighlight">\(v_r,v_z\)</span> are independent of the downstream position <span class="math notranslate nohighlight">\(z\)</span>.</p>
 <p>From the incompressibility condition with <span class="math notranslate nohighlight">\(v_r=v_r(r)\)</span>, <span class="math notranslate nohighlight">\(v_{\theta}=0\)</span>, <span class="math notranslate nohighlight">\(v_z=v_z(r)\)</span>, we then obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cb77f369-9f4d-44e7-8716-b937177f3f8b">
-<span class="eqno">(32.17)<a class="headerlink" href="#equation-cb77f369-9f4d-44e7-8716-b937177f3f8b" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial^2 v_r}{\partial r^2}+\frac{1}{r}\frac{\partial v_r}{\partial r}=0\quad \Rightarrow \quad \frac{\partial}{\partial r}\left(r\frac{\partial v_r}{\partial r}\right)=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ff597efa-a0e9-45fd-8b7b-bf6059e42f34">
+<span class="eqno">(32.17)<a class="headerlink" href="#equation-ff597efa-a0e9-45fd-8b7b-bf6059e42f34" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial^2 v_r}{\partial r^2}+\frac{1}{r}\frac{\partial v_r}{\partial r}=0\quad \Rightarrow \quad \frac{\partial}{\partial r}\left(r\frac{\partial v_r}{\partial r}\right)=0.\end{equation}\]</div>
 <p>The solution for <span class="math notranslate nohighlight">\(v_r\)</span> is required to satisfy <span class="math notranslate nohighlight">\(v_r(r=a)=0\)</span>, so that there is no flow through the boundary. This gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1025c925-cb7a-44a6-afc6-d1e2ed3fd918">
-<span class="eqno">(32.18)<a class="headerlink" href="#equation-1025c925-cb7a-44a6-afc6-d1e2ed3fd918" title="Permalink to this equation">¶</a></span>\[\begin{equation}v_r=K\ln\left(\frac{r}{a}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-28d7fd75-f99f-439b-b059-bade4db3d3d0">
+<span class="eqno">(32.18)<a class="headerlink" href="#equation-28d7fd75-f99f-439b-b059-bade4db3d3d0" title="Permalink to this equation">¶</a></span>\[\begin{equation}v_r=K\ln\left(\frac{r}{a}\right).\end{equation}\]</div>
 <p>However, when <span class="math notranslate nohighlight">\(r=0\)</span> the result is infinite unless <span class="math notranslate nohighlight">\(K=0\)</span>, so we conclude that there is no radial component of velocity and we may take <span class="math notranslate nohighlight">\(\underline{v}=(0,0,v_z(r)).\)</span></p>
 <p>The third conservation of momentum equation then gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3554e8be-ad94-41bd-9d44-59eaea834b2d">
-<span class="eqno">(32.19)<a class="headerlink" href="#equation-3554e8be-ad94-41bd-9d44-59eaea834b2d" title="Permalink to this equation">¶</a></span>\[\begin{equation}r\frac{\partial^2 v_z}{\partial r^2}+\frac{\partial v_z}{\partial r}=-\frac{P}{\mu}r \quad \Rightarrow \quad \frac{\partial }{\partial r}\left(r\frac{\partial v_z}{\partial r}\right)=-\frac{P}{\mu} r.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8b80672d-353d-4723-8971-1454bd5badb5">
+<span class="eqno">(32.19)<a class="headerlink" href="#equation-8b80672d-353d-4723-8971-1454bd5badb5" title="Permalink to this equation">¶</a></span>\[\begin{equation}r\frac{\partial^2 v_z}{\partial r^2}+\frac{\partial v_z}{\partial r}=-\frac{P}{\mu}r \quad \Rightarrow \quad \frac{\partial }{\partial r}\left(r\frac{\partial v_z}{\partial r}\right)=-\frac{P}{\mu} r.\end{equation}\]</div>
 <p>The solution for <span class="math notranslate nohighlight">\(v_z\)</span> that satisfies the no-slip condition <span class="math notranslate nohighlight">\(v_z(r=a)=0\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-25eded64-5084-43f3-8821-1a99c7850e8b">
-<span class="eqno">(32.20)<a class="headerlink" href="#equation-25eded64-5084-43f3-8821-1a99c7850e8b" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_z=\frac{P}{4\mu}(a^2-r^2)+A\ln\left(\frac{r}{a}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2d9bdf28-f535-4087-ae69-4c91e882dd87">
+<span class="eqno">(32.20)<a class="headerlink" href="#equation-2d9bdf28-f535-4087-ae69-4c91e882dd87" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_z=\frac{P}{4\mu}(a^2-r^2)+A\ln\left(\frac{r}{a}\right).\end{equation}\]</div>
 <p>Again, we find that <span class="math notranslate nohighlight">\(u_z\)</span> is infinite on <span class="math notranslate nohighlight">\(r=0\)</span> unless <span class="math notranslate nohighlight">\(A=0\)</span>, which finally gives the result:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a3190895-6191-4592-bff7-3cbc30436590">
-<span class="eqno">(32.21)<a class="headerlink" href="#equation-a3190895-6191-4592-bff7-3cbc30436590" title="Permalink to this equation">¶</a></span>\[\begin{equation}v_z=\frac{P}{4\mu}(a^2-r^2), \quad v_r=v_\theta=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a490efd4-faca-469a-a2c4-cd23cd7808f2">
+<span class="eqno">(32.21)<a class="headerlink" href="#equation-a490efd4-faca-469a-a2c4-cd23cd7808f2" title="Permalink to this equation">¶</a></span>\[\begin{equation}v_z=\frac{P}{4\mu}(a^2-r^2), \quad v_r=v_\theta=0.\end{equation}\]</div>
 <div class="theorem admonition">
 <p class="admonition-title">A bloody difficult problem</p>
 <p>Poiseuille flows are named after the physician who first studied the problem in connection with blood flow. Their instability under certain conditions constitutes one of the most important problems of fluid dynamics.</p>
