@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (ch_mathback)=
 # # Mathematical background
 # 
 # **In this section:**

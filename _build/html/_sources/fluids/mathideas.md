@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(ch_mathback)=
 # Mathematical background
 
 **In this section:**

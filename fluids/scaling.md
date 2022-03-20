@@ -1,3 +1,4 @@
+(ch_scaling)=
 # Scaling arguments
 
 **In this section:**

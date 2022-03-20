@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (ch_visualise)=
 # # Visualising fluid motion
 # 
 # **In this section:**

@@ -1,3 +1,4 @@
+(ch_vorticity)=
 # Vortex transport
 
 **In this section:**

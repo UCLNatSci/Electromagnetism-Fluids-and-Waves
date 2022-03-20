@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (ch_helmholtz)=
 # # Divergence and vorticity
 # 
 # **In this section:**

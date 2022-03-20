@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(ch_helmholtz)=
 # Divergence and vorticity
 
 **In this section:**

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (ch_potential)=
 # # The velocity potential
 # 
 # **In this section:**

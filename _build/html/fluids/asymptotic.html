@@ -276,7 +276,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="steadysoln.html">
-   33. Steady Euler solutions
+   33. Steady solutions
   </a>
  </li>
  <li class="toctree-l1">
@@ -450,7 +450,7 @@
               <div>
                 
   <div class="section" id="perturbations-and-asymptotics">
-<h1><span class="section-number">35. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this headline">¶</a></h1>
+<span id="ch-asymptotic"></span><h1><span class="section-number">35. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What is laminar-turbulent transition and why is it important?</p></li>
@@ -470,8 +470,8 @@
 <p>In chapter <a class="reference internal" href="steadysoln.html#steady-soln"><span class="std std-numref">Section 33</span></a> we looked at some steady solutions. Fluid dynamicists wish to understand what happens to these steady flow profiles when they are perturbed by small disturbances. We want to know if the disturbances will grow by feeding off the energy of the main flow, or if they will be damped out by effects such as friction or swept away by convection. Understanding the dynamics of small amplitude disturbances is key to understanding laminar-turbulent transition. A laminar flow is an orderly flow characterised by fluid layers moving smoothly past one another, whilst a turbulent state is characterised by disordered, chaotic motion occurring a “cascade” of length scales. If small-amplitude perturbations are amplified, they may eventually become large enough to trigger this instability through their nonlinear interactions.</p>
 <p>A good understanding of the features of the conditions that lead to turbulence could help with engineers learn to control transition. For an example discussion, see <a class="reference external" href="https://www.youtube.com/watch?v=GMmNKUlXXDs">this video [2:30-8:05]</a>. Sometimes the desire may be to facilitate turbulence, for instance as an efficient mechanism of heat transfer or a means of achieving liquid-jet breakup in fuel injection systems. Conversely, in aerodynamic applications turbulent skin-friction drag can be as much as ten times that of laminar flow at the same Reynolds number, and accounts for 50% of the total drag experienced by a subsonic aircraft. This means that any reduction in turbulence offers huge potential for fuel savings as well as reduction of greenhouse gases and other pollutants.</p>
 <p>In perturbation analysis, we assume a flow profile of the following form, in which <span class="math notranslate nohighlight">\(\underline{u}_0\)</span> is a steady flow solution and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a small (strictly infinitesimal) parameter:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa90a2e8-8f98-4469-8250-caf8d829a298">
-<span class="eqno">(35.1)<a class="headerlink" href="#equation-fa90a2e8-8f98-4469-8250-caf8d829a298" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fb78fc45-9a59-4660-aa50-7c5092d97a37">
+<span class="eqno">(35.1)<a class="headerlink" href="#equation-fb78fc45-9a59-4660-aa50-7c5092d97a37" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
 <p>By substituting into the equations of motion and equating coefficients of <span class="math notranslate nohighlight">\(\epsilon\)</span> we can obtain equations governing the perturbation dynamics. An especially important case is concerned with the dynamics of wavy (e.g. sinusoidal) perturbations and wavepackets, which emerge as particular solutions in the case of flow past a boundary. The perturbations represent tiny background fluid motions such as vibrations. By making assumptions about the length and time scales governing the perturbation dynamics and by relating <span class="math notranslate nohighlight">\(\epsilon\)</span> to a power of the Reynolds number, the dominating evolution mechanisms can be studied.</p>
 <div class="admonition-example-pipe-flow admonition">
 <p class="admonition-title">Example: pipe flow</p>
@@ -493,8 +493,8 @@
 <a class="reference internal image-reference" href="../_images/hele-shaw.png" id="hele-shaw"><img alt="Hele-Shaw" class="align-center" id="hele-shaw" src="../_images/hele-shaw.png" style="width: 512.0px; height: 311.20000000000005px;" /></a>
 <br>
 <p>If we define the following ratio, where <span class="math notranslate nohighlight">\(a\)</span> is the diameter of the cylinder, then the effect of inertia will apparently be negligible near to the cylinder:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-699dcfa7-ad19-47b5-8f5a-576c9c2c0b4f">
-<span class="eqno">(35.2)<a class="headerlink" href="#equation-699dcfa7-ad19-47b5-8f5a-576c9c2c0b4f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0e8c1af2-cb9f-4b0a-b6f6-22d08abff614">
+<span class="eqno">(35.2)<a class="headerlink" href="#equation-0e8c1af2-cb9f-4b0a-b6f6-22d08abff614" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
 <p>However, away from the boundary the characteristic length scale associated with changes in velocity is larger, as the flow becomes more and more uniform. Therefore the effects of inertia are more important in the outer flow regions. In fact, if the effects of inertia are neglected away from the surface of the sphere then the mathematical equations are ill-posed and it becomes impossible to satisfy appropriate boundary conditions for the far-field. This is known as Stokes’ paradox.</p>
 <p>The paradox can be resolved by taking a different approximation away from the boundary, that includes inertial terms; and blending or “matching” the expressions obtained from the inner and outer layers of fluid.</p>
 </div>

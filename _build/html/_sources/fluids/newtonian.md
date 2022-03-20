@@ -1,3 +1,4 @@
+(ch_newtonian)=
 # Newtonian vs non-Newtonian fluids
 
 In a so-called "Newtonian" fluid the shear stress is linearly proportional to the velocity gradient, which may be written as

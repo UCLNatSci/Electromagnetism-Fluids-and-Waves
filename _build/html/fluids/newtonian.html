@@ -274,7 +274,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="steadysoln.html">
-   33. Steady Euler solutions
+   33. Steady solutions
   </a>
  </li>
  <li class="toctree-l1">
@@ -421,7 +421,7 @@
               <div>
                 
   <div class="section" id="newtonian-vs-non-newtonian-fluids">
-<h1>Newtonian vs non-Newtonian fluids<a class="headerlink" href="#newtonian-vs-non-newtonian-fluids" title="Permalink to this headline">¶</a></h1>
+<span id="ch-newtonian"></span><h1>Newtonian vs non-Newtonian fluids<a class="headerlink" href="#newtonian-vs-non-newtonian-fluids" title="Permalink to this headline">¶</a></h1>
 <p>In a so-called “Newtonian” fluid the shear stress is linearly proportional to the velocity gradient, which may be written as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom5">
 <span class="eqno">()<a class="headerlink" href="#equation-consofmom5" title="Permalink to this equation">¶</a></span>\[\underline{\tau}_{i,j}=-\mu\left(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\right)\]</div>
@@ -454,8 +454,8 @@ For a Newtonian fluid with zero body force,</p>
 <p>where <span class="math notranslate nohighlight">\(\mathrm{Re}=\frac{U L}{\nu}\)</span> is a parameter called the Reynolds number.</p>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <p>Written out in full, these equations are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-637913fe-caad-45b5-995e-5ecbf1e8fcb4">
-<span class="eqno">()<a class="headerlink" href="#equation-637913fe-caad-45b5-995e-5ecbf1e8fcb4" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ef5f197a-510f-4a29-8ab5-a4d63eadb3a1">
+<span class="eqno">()<a class="headerlink" href="#equation-ef5f197a-510f-4a29-8ab5-a4d63eadb3a1" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial v_x}{\partial t}+v_x\frac{\partial v_x}{\partial x}+v_y\frac{\partial v_x}{\partial y}+v_z\frac{\partial v_x}{\partial z}&amp;=-\frac{\partial p}{\partial x}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_x}{\partial x^2}+\frac{\partial^2 v_x}{\partial y^2}+\frac{\partial^2 v_x}{\partial z^2}\right)\\\frac{\partial v_y}{\partial t}+v_x\frac{\partial v_y}{\partial x}+v_y\frac{\partial v_y}{\partial y}+v_z\frac{\partial v_y}{\partial z}&amp;=-\frac{\partial p}{\partial y}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_y}{\partial x^2}+\frac{\partial^2 v_y}{\partial y^2}+\frac{\partial^2 v_y}{\partial z^2}\right)\\\frac{\partial v_z}{\partial t}+v_x\frac{\partial v_z}{\partial x}+v_y\frac{\partial v_z}{\partial y}+v_z\frac{\partial v_z}{\partial z}&amp;=-\frac{\partial p}{\partial z}+\mathrm{Re}^{-1}\left(\frac{\partial^2 v_z}{\partial x^2}+\frac{\partial^2 v_z}{\partial y^2}+\frac{\partial^2 v_z}{\partial z^2}\right)\\\frac{\partial v_x}{\partial x}+\frac{\partial v_y}{\partial y}+\frac{\partial v_z}{\partial z}&amp;=0\end{align}\]</div>
 <p>It is helpful to classify the study of fluids as follows:</p>
 <p>Incompressible	Compressible
 Inviscid	This course	Acoustics (high speed)

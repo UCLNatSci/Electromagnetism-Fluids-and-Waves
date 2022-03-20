@@ -1,3 +1,4 @@
+(ch_bernoulli)=
 # Bernoulli's equation
 
 **In this section:**
