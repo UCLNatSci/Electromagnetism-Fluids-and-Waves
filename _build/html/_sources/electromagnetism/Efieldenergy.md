@@ -42,10 +42,10 @@ V_E = -\frac{Q_S}{4\pi\,\epsilon_0}\int_{\infty}^{r}\frac{\hat{\bf r}'}{(r')^2}\
 The term <b>Potential Difference</b> is given to the difference between the electric potentials $\Delta V_E$ between 
 two points $({\bf r_1,\, r_2} )$ in an electrostatic system:
 ```{math}
-\Delta V_E = {V_E}_2 - {V_E}_1 &=&\, -\int_{{\bf r}_0}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell - 
+\Delta V_E = {V_E}_2 - {V_E}_1 &= -\int_{{\bf r}_0}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell - 
 \left (- \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell\right) 
 = \int_{{\bf r}_2}^{{\bf r}_0} {\bf E} \cdot \mathrm{\bf d} \ell + \int_{{\bf r}_0}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell \\ 
-&=&\, \int_{{\bf r}_2}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell
+&= \int_{{\bf r}_2}^{{\bf r}_1} {\bf E} \cdot \mathrm{\bf d} \ell = -\int_{{\bf r}_1}^{{\bf r}_2} {\bf E} \cdot \mathrm{\bf d} \ell
 ```
 Suppose we have a system of two charges, how does $U_E$ change?  $Q_1$ and $Q_2$ will each produce an 
 electrostatic field which a test charge $Q$ coming in from $r \rightarrow \infty$ will feel and therefore $U_E$ has the form:
@@ -72,6 +72,6 @@ where the $1/2$ factor is to avoid the over counting of the interaction field $Q
 expressions can be generalised for $N$ point charges:
 ```{math}
 :label: intrinsicelecpotenergy
-U_E &=& \,\frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i)  \\ 
-&=&  \,\frac{1}{2}\left(\frac{1}{4\pi\,\epsilon_0}\right)\sum_{i=1}^N Q_i\, \sum_{j=1}^{N(j \neq i)} \frac{Q_j}{|r_i-r_j|}
+U_E &= \,\frac{1}{2}\sum_{i=1}^N Q_i\,{V_E}({\bf r}_i)  \\ 
+&=  \,\frac{1}{2}\left(\frac{1}{4\pi\,\epsilon_0}\right)\sum_{i=1}^N Q_i\, \sum_{j=1}^{N(j \neq i)} \frac{Q_j}{|r_i-r_j|}
 ```

@@ -14,9 +14,9 @@ Identical masses connected by identical springs.
 If the springs follow Hooke's law, then $F_{H} = k\,u(x,t) $ and equally all the masses will follow Newton's second law $F_{N} = m \,a(x,t)$.  We can analyse 
 the dynamics of the middle mass, where the Hooke's law forces will from both the spring $x+h \rightarrow x+2h$ as well as the spring $x \rightarrow x+h$
 ```{math}
-F_N &=& \,m \frac{\partial^2}{\partial t^2}u(x+h,t)\\
-F_H &=& \,k[u(x+2h,t) - u(x+h,t)] - k[u(x+h,t) - u(x,t)] \\
-&=& \,k[u(x+2h,t) - 2u(x+h,t) + u(x,t)]
+F_N &= m \frac{\partial^2}{\partial t^2}u(x+h,t)\\
+F_H &= k[u(x+2h,t) - u(x+h,t)] - k[u(x+h,t) - u(x,t)] \\
+&= k[u(x+2h,t) - 2u(x+h,t) + u(x,t)]
 ```
 Since these defintions are equal, then by rearrangement:
 ```{math}
@@ -34,9 +34,9 @@ Two springs in series with a mass
 
 We can consider the total displacement of the mass $m$, as well as as the individual springs displacements 
 ```{math}
-F_{tot} &=& \,k_{tot}\,x_{tot}\\
-F_1 &=& \,k_1\,x_1\\
-F_2 &=& \,k_2\,x_2
+F_{tot} &= k_{tot}\,x_{tot}\\
+F_1 &= k_1\,x_1\\
+F_2 &= k_2\,x_2
 ```
 If $x_{tot}$ can be broken up into the individual springs displacements $x_{tot} = x_1 + x_2$ then we simplify to:
 ```{math}
@@ -115,8 +115,8 @@ PE = \frac{1}{2}\,N\,k_{tot} \left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[
 ```
 and likewise if we introduce the size of the mass $m$ and then consider the total chain mass:
 ```{math}
-PE &=& \, \frac{1}{2}\frac{N\,k_{tot}\,m}{m}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right) \\
- &=& \,\frac{1}{2}\,m\frac{N^2\,k_{tot}}{m_{tot}}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right)
+PE &=  \frac{1}{2}\frac{N\,k_{tot}\,m}{m}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right) \\
+ &= \frac{1}{2}\,m\frac{N^2\,k_{tot}}{m_{tot}}\left(\dots + \Big[u(x+h,t) - u(x,t)\Big]^2 + \Big[u(x+2h,t) - u(x+h,t)\Big]^2 + \dots \right)
 ```
 and then looking at the total chain length $L = N\,h$:
 ```{math}
@@ -151,8 +151,8 @@ E = \frac{1}{2}\,m\,N\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + 
 sometimes this is more usefully presented in terms of the energy per unit length or energy density $\epsilon(x,\,t)$:
 ```{math}
 :label: massdensity
-\epsilon(x,\,t) = \frac{E}{L} &=& \,\frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
-&=& \, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]
+\epsilon(x,\,t) = \frac{E}{L} &= \frac{1}{2}\,\frac{m_{tot}}{L}\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]\\
+&=  \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right]
 ```
 where $\rho_L$ is the mass per unit length or <b>mass density</b> of the mass and spring chain.  
 

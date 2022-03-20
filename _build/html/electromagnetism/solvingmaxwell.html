@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>22. Solutions to Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,22 +44,25 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="23. Energy in an Electromagnetic field" href="EMenergy.html" />
     <link rel="prev" title="21. Differential Forms and Maxwell’s Equations" href="maxwelleqns.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,6 +79,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -85,7 +92,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -360,7 +367,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -394,12 +401,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#electromagnetic-waves">
@@ -413,7 +420,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#drude-model">
-   22.3. Drude Model *
+   22.3. Drude Model
   </a>
  </li>
 </ul>
@@ -424,7 +431,40 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Solutions to Maxwell’s Equations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electromagnetic-waves">
+   22.1. Electromagnetic Waves
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polarisation-of-waves">
+   22.2. Polarisation of Waves
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drude-model">
+   22.3. Drude Model
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="solutions-to-maxwells-equations">
@@ -453,8 +493,8 @@ substitute in Equation <a class="reference internal" href="maxwelleqns.html#equa
 noticing that the speed of light <span class="math notranslate nohighlight">\(c\)</span> is related to two vacuum parameters that are thought to be constant.</p>
 <p>If we solve for <span class="math notranslate nohighlight">\(\bf E,\ B\)</span> from Equation <a class="reference internal" href="#equation-emwaveeqn">(22.1)</a>, these produce:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf E} &amp;=&amp; {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
-{\bf B} &amp;=&amp; {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
+\[\begin{split}{\bf E} &amp;= {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
+{\bf B} &amp;= {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 22.1</span></a> shows some different choices of <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> for plane
 polarised and circularly polariesed waves.</p>
 <div class="figure align-default" id="emplanewaves">
@@ -467,9 +507,9 @@ polarised and circularly polariesed waves.</p>
 <h2><span class="section-number">22.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">¶</a></h2>
 <p>Plugging in wave solutions into Maxwell’s equations in vacuum:</p>
 <div class="math notranslate nohighlight" id="equation-kebperp">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
-\nabla \cdot {\bf B} &amp;=&amp; \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
-\nabla \times {\bf E} &amp;=&amp; \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 \end{split}\]</div>
+<span class="eqno">(22.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
+\nabla \cdot {\bf B} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
+\nabla \times {\bf E} &amp;= \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 \end{split}\]</div>
 <p>These first two equations means <span class="math notranslate nohighlight">\(\bf k \perp E\)</span> and <span class="math notranslate nohighlight">\(\bf k \perp  B\)</span> and the third that <span class="math notranslate nohighlight">\(\bf B \perp (k,\, E)\)</span> implying <span class="math notranslate nohighlight">\(\bf E \perp B\)</span>.</p>
 <p>Therefore once we pick a direction of oscillation for <span class="math notranslate nohighlight">\(\bf E\)</span>, then <span class="math notranslate nohighlight">\(\bf B\)</span> is also set (and vice-versa).  Choosing to orientate along the <span class="math notranslate nohighlight">\(z\)</span> axis, Equation <a class="reference internal" href="#equation-kebperp">(22.3)</a>
 implies in general:</p>
@@ -507,25 +547,38 @@ in a perpendicular <span class="math notranslate nohighlight">\(z\)</span> dimen
 \end{bmatrix} \end{split}\]</div>
 </div>
 <div class="section" id="drude-model">
-<h2><span class="section-number">22.3. </span>Drude Model *<a class="headerlink" href="#drude-model" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">22.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this headline">¶</a></h2>
 <p>In addition to solving Maxwell’s for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor,
 with an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> present, we can think about Ohm’s law</p>
 <div class="math notranslate nohighlight">
 \[V = I\,R\]</div>
+<p>where <span class="math notranslate nohighlight">\(V\)</span> is the volatge applied over a conductor, <span class="math notranslate nohighlight">\(I\)</span> is the current flowing through a conductor and <span class="math notranslate nohighlight">\(R\)</span> is the electrical resitance.  Each of these is potentially
+a variable - the resistiance of a condcutor can change depending on the length or cross-sectional area of the material.  A better way to think about conductors and
+resitances is through the resisitivity <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\rho = R\frac{A}{\ell}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance, <span class="math notranslate nohighlight">\(\ell\)</span>  is the length of the conductor and <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area of the condcutor, as depicted in <a class="reference internal" href="#resitivity"><span class="std std-numref">Fig. 22.2</span></a>.</p>
+<div class="figure align-default" id="resitivity">
+<img alt="../_images/Resistivity_geometry.png" src="../_images/Resistivity_geometry.png" />
+<p class="caption"><span class="caption-number">Fig. 22.2 </span><span class="caption-text">A schematic of the geometry of some resistive material between some electrical contacts on both ends.</span><a class="headerlink" href="#resitivity" title="Permalink to this image">¶</a></p>
+</div>
+<p>Thus we can rewrite Ohm’s law as:</p>
+<div class="math notranslate nohighlight">
+\[V = \rho\,\frac{\ell\,I}{A} \Rightarrow \frac{I}{A} = \frac{1}{\rho}\frac{V}{\ell}\]</div>
 <p>or terms of fields this is written:</p>
 <div class="math notranslate nohighlight">
-\[{\bf J} = \sigma {\bf E}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the conductivity of the material (often written in the related form of resistivity <span class="math notranslate nohighlight">\(\rho\)</span>, where <span class="math notranslate nohighlight">\(\rho = 1 / \sigma\)</span>) and <span class="math notranslate nohighlight">\(\bf J\)</span> is the current density.
-This is often known as the <b>Drude Model</b>.</p>
+\[{\bf J} = \sigma\, {\bf E}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the conductivity of the material, <span class="math notranslate nohighlight">\(\rho = 1 / \sigma\)</span> and <span class="math notranslate nohighlight">\(\bf J\)</span> is the current density. This is often known as the basis of the <b>Drude Model</b> of
+conductors.</p>
 <p>Substituting this model into Maxwell’s equations, we can now source <span class="math notranslate nohighlight">\(\bf J\)</span> with this relation, if we choose to ignore free charges again <span class="math notranslate nohighlight">\(\rho = 0\)</span> and by solving for <span class="math notranslate nohighlight">\(\bf E\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla^2 {\bf E} = \mu_0 \sigma \frac{\partial {\bf E}}{\partial t} + \mu_0\epsilon_0 \frac{\partial^2 {\bf E}}{\partial t^2}\]</div>
-<p>Which should look familiar as a damped hoarmonic osciallator from the Waves section.  Using the wave solutions, we find a modified dispersion relation of the form:</p>
+<p>Which should look familiar as a damped harmonic osciallator from the Waves section.  Using the travelling wave solution ansatz, we find a dispersion relation of the form:</p>
 <div class="math notranslate nohighlight">
 \[k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega\]</div>
-<p>which is now complex!</p>
-<p>We can rewrite this in the form a relative permitivity <span class="math notranslate nohighlight">\(\epsilon_r(\omega)\)</span>, for <span class="math notranslate nohighlight">\(k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)\)</span> with
-<span class="math notranslate nohighlight">\(\epsilon = \epsilon_0\,\epsilon_r\)</span>, therefore:</p>
+<p>which is now in general complex!</p>
+<p>We can rewrite this in the form of a relative permitivity <span class="math notranslate nohighlight">\(\epsilon_r(\omega)\)</span>.  Then we will take <span class="math notranslate nohighlight">\(k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)\)</span> with
+<span class="math notranslate nohighlight">\(\epsilon = \epsilon_0\,\epsilon_r\)</span> and so:</p>
 <div class="math notranslate nohighlight">
 \[\epsilon_r(\omega) = \frac{\epsilon(\omega)}{\epsilon_0} = \underbrace{1}_{vacuum\, part} + \underbrace{i \frac{\sigma}{\epsilon_0\omega}}_{dispersion\,part} \]</div>
 <p>If we calculate the energy of waves travelling through this media, the dispersion part corresponds to the energy losses of the electromagnetic field.</p>
@@ -554,34 +607,42 @@ This is often known as the <b>Drude Model</b>.</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="maxwelleqns.html" title="previous page"><span class="section-number">21. </span>Differential Forms and Maxwell’s Equations</a>
-    <a class='right-next' id="next-link" href="EMenergy.html" title="next page"><span class="section-number">23. </span>Energy in an Electromagnetic field</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="maxwelleqns.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">21. </span>Differential Forms and Maxwell’s Equations</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="EMenergy.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">23. </span>Energy in an Electromagnetic field</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

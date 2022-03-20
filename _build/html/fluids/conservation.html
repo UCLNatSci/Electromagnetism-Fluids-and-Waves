@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>30. Conservation law derivations &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,22 +44,25 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="31. Shear stress and viscosity" href="navstok.html" />
     <link rel="prev" title="29. The velocity potential" href="potential.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,6 +79,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -85,7 +92,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -360,7 +367,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -394,12 +401,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-material-derivative">
@@ -429,7 +436,45 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conservation law derivations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-material-derivative">
+   30.1. The material derivative
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mass-transport-continuity">
+   30.2. Mass transport (continuity)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cauchy-stress-theorem">
+   30.3. Cauchy stress theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conservation-of-momentum">
+   30.4. Conservation of momentum
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="conservation-law-derivations">
@@ -450,7 +495,8 @@
 <p>This result is called the “material derivative” or “convective derivative”, and the notation <span class="math notranslate nohighlight">\(\mathrm{D}/\mathrm{D}t\)</span> is used in place of the ordinary derivative to signify its special significance. The first term accounts for the temporal evolution of the background field, and the second term (convection term) accounts for changes as a consequence of moving through the field with velocity <span class="math notranslate nohighlight">\(\underline{u}.\)</span></p>
 <p>The material derivative can also be applied to each element of a vector field <span class="math notranslate nohighlight">\(\underline{\phi}\)</span>, to give the change in <span class="math notranslate nohighlight">\(\underline{\phi}\)</span> following the motion of a fluid particle. For example <span class="math notranslate nohighlight">\(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\)</span> gives the <em>convective acceleration</em>.</p>
 <div class="exercise admonition" id="ex-materialderivative">
-<p class="admonition-title"><span class="caption-number">Exercise 30.1 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 30.1 </span></p>
 <div class="section" id="exercise-content">
 <p>Write out the convective acceleration <span class="math notranslate nohighlight">\(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\)</span> in component form, taking <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span> and <span class="math notranslate nohighlight">\(\underline{u}(t,\underline{x})=(u,v,w)\)</span>.</p>
 </div>
@@ -490,7 +536,8 @@
 <p>In practice, fluid phenomena that are well below the speed of sound can be treated as incompressible</p>
 </div>
 <div class="exercise admonition" id="fluids/conservation-exercise-1">
-<p class="admonition-title"><span class="caption-number">Exercise 30.2 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 30.2 </span></p>
 <div class="section" id="exercise-content">
 <p>a). Write down the continuity equation for compressible flow in component form, taking <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span>, <span class="math notranslate nohighlight">\(p=p(t,\underline{x})\)</span> and <span class="math notranslate nohighlight">\(\underline{u}(t,\underline{x})=(u,v,w)\)</span>.</p>
 <p>b). What single equation can be used to model a flow that is both incompressible and irrotational?</p>
@@ -547,7 +594,8 @@
 <span class="eqno">(30.11)<a class="headerlink" href="#equation-consofmom4" title="Permalink to this equation">¶</a></span>\[\rho\frac{D\underline{u}}{D t}=-\nabla p+\nabla.\underline{\tau}+\rho\underline{F}\]</div>
 <p>The negative sign is chosen due to the fact that the pressure acts inwards on a material volume.</p>
 <div class="exercise admonition" id="fluids/conservation-exercise-2">
-<p class="admonition-title"><span class="caption-number">Exercise 30.3 </span> </p>
+
+<p class="admonition-title"><span class="caption-number">Exercise 30.3 </span></p>
 <div class="section" id="exercise-content">
 <p>If we assume that the shear stress component is zero so that <span class="math notranslate nohighlight">\(\underline{\tau}\equiv \underline{0}\)</span> in equation <a class="reference internal" href="#equation-consofmom4">(30.11)</a>, then we obtain the Euler equation</p>
 <div class="amsmath math notranslate nohighlight">
@@ -559,8 +607,13 @@
 </div>
 </div>
 <div class="toggle docutils container">
+<<<<<<< HEAD
 <div class="amsmath math notranslate nohighlight" id="equation-666c016d-857c-4707-aef3-ccbac2563a1e">
 <span class="eqno">(30.12)<a class="headerlink" href="#equation-666c016d-857c-4707-aef3-ccbac2563a1e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+=======
+<div class="amsmath math notranslate nohighlight" id="equation-0de4e8ba-6caa-4660-8fd7-8325c7ce741c">
+<span class="eqno">(30.12)<a class="headerlink" href="#equation-0de4e8ba-6caa-4660-8fd7-8325c7ce741c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+>>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}-g\end{align}\]</div>
@@ -591,34 +644,42 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="potential.html" title="previous page"><span class="section-number">29. </span>The velocity potential</a>
-    <a class='right-next' id="next-link" href="navstok.html" title="next page"><span class="section-number">31. </span>Shear stress and viscosity</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="potential.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">29. </span>The velocity potential</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="navstok.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">31. </span>Shear stress and viscosity</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

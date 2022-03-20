@@ -65,7 +65,7 @@ and a modified wave equation of the form:
 i \hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V\psi
 ```
 which should look familiar as the <b>Time Dependent Schrödinger Equation (TDSE).</b>  If we consider the form of the energy
-from Equation {eq}`TotalEnergy`, we can interpret the RHS of {eq}`TDSE` as an energy operator acting of the wave function $\hat{E}\psi = E\psi$, 
+from Equation {eq}`TotalEnergy`, we can interpret the RHS of {eq}`TDSE` as an energy operator acting of the wave function $\hat{H}\psi = E\psi$, 
 giving:
 ```{math}
 :label: TISE

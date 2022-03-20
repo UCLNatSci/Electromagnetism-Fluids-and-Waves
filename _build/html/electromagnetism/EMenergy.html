@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>23. Energy in an Electromagnetic field &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,22 +44,25 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="24. Electromagnetic Scalar and Vector Potentials" href="EMpotentials.html" />
     <link rel="prev" title="22. Solutions to Maxwell’s Equations" href="solvingmaxwell.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,6 +79,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -85,7 +92,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -360,7 +367,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -394,16 +401,16 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deriving-intrinsic-energy-from-potentials">
-   23.1. Deriving Intrinsic Energy from Potentials*
+   23.1. Deriving Intrinsic Energy from Potentials
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -429,7 +436,45 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Energy in an Electromagnetic field</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deriving-intrinsic-energy-from-potentials">
+   23.1. Deriving Intrinsic Energy from Potentials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-flux-and-poynting-vector">
+   23.2. Energy Flux and Poynting Vector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electromagnetic-plane-waves">
+   23.3. Electromagnetic Plane Waves
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#characteristic-impedance">
+   23.4. Characteristic Impedance*
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="energy-in-an-electromagnetic-field">
@@ -437,7 +482,7 @@
 <p>Whilst we are now comfortable with the idea of electric and magnetic fields (and how the two are inextricably linked), we can return
 to an idea from the waves section, namely where are all the sources of energy in this system?</p>
 <div class="section" id="deriving-intrinsic-energy-from-potentials">
-<h2><span class="section-number">23.1. </span>Deriving Intrinsic Energy from Potentials*<a class="headerlink" href="#deriving-intrinsic-energy-from-potentials" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">23.1. </span>Deriving Intrinsic Energy from Potentials<a class="headerlink" href="#deriving-intrinsic-energy-from-potentials" title="Permalink to this headline">¶</a></h2>
 <p>Recall the intrinsic electrostatic potential energy <span class="math notranslate nohighlight">\(U_E\)</span> from a system of charges from Equation <a class="reference internal" href="Efieldenergy.html#equation-elecpotenergy">(16.1)</a>, we can
 modify this to consider a continuous charge density <span class="math notranslate nohighlight">\(\rho({\bf r})\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -452,11 +497,11 @@ modify this to consider a continuous charge density <span class="math notranslat
 <p>and therefore the potential energy result becomes:</p>
 <div class="math notranslate nohighlight">
 \[U_E  = \frac{1}{2}\,\epsilon_0\,\left[\iiint \nabla\cdot (V_E\,{\bf E}) \, \mathrm{d} V - \iiint {\bf E}\cdot (\nabla\,V_E) \, \mathrm{d} V\right]\]</div>
-<p>Using the divergence theorem on the first term and applying tne definition of <span class="math notranslate nohighlight">\(V_E\)</span> from Equation \ref{eqn:Efieldgradpotential}, this reduces to:</p>
+<p>Using the divergence theorem on the first term and applying the definition of <span class="math notranslate nohighlight">\(V_E\)</span> from Equation <a class="reference internal" href="Efieldenergy.html#equation-efieldgradpotential">(16.3)</a>, this reduces to:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}U_E &amp;=&amp; \,\frac{1}{2}\,\epsilon_0\,\left[\iint V_E\,{\bf E} \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
-&amp;=&amp; \,\frac{1}{2}\,\epsilon_0\,\left[-\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
-&amp;=&amp; \,\frac{1}{2}\,\epsilon_0\,\left[\iiint E^2 \, \mathrm{d} V -\,\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} \right]\end{split}\]</div>
+\[\begin{split}U_E &amp;=\frac{1}{2}\,\epsilon_0\,\left[\iint V_E\,{\bf E} \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
+&amp;=\frac{1}{2}\,\epsilon_0\,\left[-\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} - \iiint {\bf E}\cdot (-{\bf E}) \, \mathrm{d} V\right] \\
+&amp;=\frac{1}{2}\,\epsilon_0\,\left[\iiint E^2 \, \mathrm{d} V -\,\iint V_E\,(\nabla V_E) \cdot \mathrm{d} {\bf A} \right]\end{split}\]</div>
 <p>If we integrate over all space, then since <span class="math notranslate nohighlight">\(V_E(r) \rightarrow 0\)</span> for <span class="math notranslate nohighlight">\(r \rightarrow \infty\)</span> by definition, the second term here goes to zero.<br />
 Then we can define the energy density <span class="math notranslate nohighlight">\(u_E\)</span> through:</p>
 <div class="math notranslate nohighlight">
@@ -476,9 +521,9 @@ through analogy.  The form of the Equation <a class="reference internal" href="m
 \[u = u_E + u_B = \frac{1}{2}\left(\epsilon_0\,E^2 + \frac{1}{\mu_0}\,B^2 \right)\]</div>
 <p>Equations for <span class="math notranslate nohighlight">\(u\)</span> also appear within Maxwell’s equations, take Equations <a class="reference internal" href="maxwelleqns.html#equation-curlb">(21.3)</a> and <a class="reference internal" href="maxwelleqns.html#equation-curle">(21.4)</a>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} &amp;=&amp; \,\left({\bf J} + \epsilon_0\frac{\partial {\bf E}}{\partial t} \right)\cdot {\bf E} = 
+\[\begin{split}\frac{1}{\mu_0}{\bf E} \cdot \nabla \times {\bf B} &amp;=\left({\bf J} + \epsilon_0\frac{\partial {\bf E}}{\partial t} \right)\cdot {\bf E} = 
 {\bf J} \cdot {\bf E} + \frac{\partial}{\partial t}\left( \frac{1}{2}\epsilon_0 E^2 \right) \label{eqn:Spart1}\\
-\frac{1}{\mu_0}{\bf B} \cdot \nabla \times {\bf E} &amp;=&amp; \,-\frac{1}{\mu_0}\left(\frac{\partial {\bf B}}{\partial t}\right)\cdot {\bf B} = 
+\frac{1}{\mu_0}{\bf B} \cdot \nabla \times {\bf E} &amp;=-\frac{1}{\mu_0}\left(\frac{\partial {\bf B}}{\partial t}\right)\cdot {\bf B} = 
 -\frac{\partial}{\partial t}\left( \frac{1}{2\,\mu_0}B^2 \right) \label{eqn:Spart2}\end{split}\]</div>
 <p>Tidying up these expressions we find:</p>
 <div class="math notranslate nohighlight">
@@ -502,12 +547,12 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
 <h2><span class="section-number">23.3. </span>Electromagnetic Plane Waves<a class="headerlink" href="#electromagnetic-plane-waves" title="Permalink to this headline">¶</a></h2>
 <p>Recall the plane wave solutions from Equation <a class="reference internal" href="solvingmaxwell.html#equation-planewavesolns">(22.4)</a>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}{\bf E} &amp;=&amp; \,\begin{bmatrix}
+\[\begin{split}{\bf E} &amp;=\begin{bmatrix}
  E_0 \\
  0 \\
  0 
 \end{bmatrix}\,\exp(i(k_z z - \omega t)) \\
-{\bf B} &amp;=&amp;\, \begin{bmatrix}
+{\bf B} &amp;= \begin{bmatrix}
  0 \\
  B_0 \\
  0
@@ -545,10 +590,10 @@ their power. For the plane wave propograting along the <span class="math notrans
 \[{\bf E} = \textrm{Re}\Big[{\bf E_0}\,\exp(i({\bf k \cdot x} - \omega t))\Big] = {\bf E_0}\,\cos(k_z x - \omega t)\]</div>
 <p>therefore we find that:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}S_{\langle T \rangle} &amp;=&amp;\, \frac{1}{\eta}{E_0}^2\left(\frac{1}{T}\int_0^T\,\cos^2(k_z x - \omega t)\,\mathrm{d}t\right) \\
-&amp;=&amp;\, \frac{{E_0}^2}{2\,\eta\,T}\left(\int_0^T\,\left(\cos(2(k_z x - \omega t))+1\right)\,\mathrm{d}t\right)\\ 
-&amp;=&amp;\, \frac{{E_0}^2}{2\,\eta\,T}\left[\frac{1}{2\omega}\sin(2(k_z x - \omega t))+t\right]_0^T\\
-&amp;=&amp;\, \frac{1}{2 \eta}\,{E_0}^2\end{split}\]</div>
+\[\begin{split}S_{\langle T \rangle} &amp;= \frac{1}{\eta}{E_0}^2\left(\frac{1}{T}\int_0^T\,\cos^2(k_z x - \omega t)\,\mathrm{d}t\right) \\
+&amp;= \frac{{E_0}^2}{2\,\eta\,T}\left(\int_0^T\,\left(\cos(2(k_z x - \omega t))+1\right)\,\mathrm{d}t\right)\\ 
+&amp;= \frac{{E_0}^2}{2\,\eta\,T}\left[\frac{1}{2\omega}\sin(2(k_z x - \omega t))+t\right]_0^T\\
+&amp;= \frac{1}{2 \eta}\,{E_0}^2\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\eta\)</span> is the characteristic impedance of the transmission medium, which has units of electrical resistance <span class="math notranslate nohighlight">\(\Omega\)</span>. In a vacuum, this takes the value
 <span class="math notranslate nohighlight">\(\eta \simeq 377\, \Omega\)</span>, but in matter its value will vary according to <span class="math notranslate nohighlight">\(\epsilon(\omega),\,\mu(\omega)\)</span>, as mentioned previously.</p>
 </div>
@@ -576,34 +621,42 @@ their power. For the plane wave propograting along the <span class="math notrans
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="solvingmaxwell.html" title="previous page"><span class="section-number">22. </span>Solutions to Maxwell’s Equations</a>
-    <a class='right-next' id="next-link" href="EMpotentials.html" title="next page"><span class="section-number">24. </span>Electromagnetic Scalar and Vector Potentials</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="solvingmaxwell.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">22. </span>Solutions to Maxwell’s Equations</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="EMpotentials.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Electromagnetic Scalar and Vector Potentials</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

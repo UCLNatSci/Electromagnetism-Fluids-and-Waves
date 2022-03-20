@@ -31,8 +31,8 @@ noticing that the speed of light $c$ is related to two vacuum parameters that ar
 
 If we solve for $\bf E,\ B$ from Equation {eq}`EMwaveeqn`, these produce:
 ```{math}
-{\bf E} &=& {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
-{\bf B} &=& {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))
+{\bf E} &= {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
+{\bf B} &= {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))
 ```
 where $\bf E_0,\, B_0$ are the polarization vectors of the electric and magnetic field, {numref}`EMPlaneWaves` shows some different choices of $\bf E_0,\, B_0$ for plane 
 polarised and circularly polariesed waves.
@@ -48,9 +48,9 @@ name: EMPlaneWaves
 Plugging in wave solutions into Maxwell's equations in vacuum:
 ```{math}
 :label: kEBperp
-\nabla \cdot {\bf E} &=& \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
-\nabla \cdot {\bf B} &=& \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
-\nabla \times {\bf E} &=& \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 
+\nabla \cdot {\bf E} &= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
+\nabla \cdot {\bf B} &= \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
+\nabla \times {\bf E} &= \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 
 ```
 These first two equations means $\bf k \perp E$ and $\bf k \perp  B$ and the third that $\bf B \perp (k,\, E)$ implying $\bf E \perp B$.  
 
@@ -92,32 +92,50 @@ vE_0 =
 \end{bmatrix} 
 ```
 
-## Drude Model *
+## Drude Model
 In addition to solving Maxwell's for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor, 
 with an electric field ${\bf E}$ present, we can think about Ohm's law 
 ```{math}
 V = I\,R
 ```
+where $V$ is the volatge applied over a conductor, $I$ is the current flowing through a conductor and $R$ is the electrical resitance.  Each of these is potentially 
+a variable - the resistiance of a condcutor can change depending on the length or cross-sectional area of the material.  A better way to think about conductors and 
+resitances is through the resisitivity $\rho$:
+```{math}
+\rho = R\frac{A}{\ell}
+``` 
+where $R$ is the electrical resistance, $\ell$  is the length of the conductor and $A$ is the cross-sectional area of the condcutor, as depicted in {numref}`resitivity`.  
+```{figure} ../figures/Resistivity_geometry.png
+---
+name: resitivity
+---
+A schematic of the geometry of some resistive material between some electrical contacts on both ends.
+```
+
+Thus we can rewrite Ohm's law as:
+```{math}
+V = \rho\,\frac{\ell\,I}{A} \Rightarrow \frac{I}{A} = \frac{1}{\rho}\frac{V}{\ell}
+```
 or terms of fields this is written:
 ```{math}
-{\bf J} = \sigma {\bf E}
+{\bf J} = \sigma\, {\bf E}
 ```
-where $\sigma$ is the conductivity of the material (often written in the related form of resistivity $\rho$, where $\rho = 1 / \sigma$) and $\bf J$ is the current density. 
-This is often known as the <b>Drude Model</b>.  
+where $\sigma$ is the conductivity of the material, $\rho = 1 / \sigma$ and $\bf J$ is the current density. This is often known as the basis of the <b>Drude Model</b> of 
+conductors.  
 
 Substituting this model into Maxwell's equations, we can now source $\bf J$ with this relation, if we choose to ignore free charges again $\rho = 0$ and by solving for $\bf E$:
 ```{math}
 \nabla^2 {\bf E} = \mu_0 \sigma \frac{\partial {\bf E}}{\partial t} + \mu_0\epsilon_0 \frac{\partial^2 {\bf E}}{\partial t^2}
 ```
-Which should look familiar as a damped hoarmonic osciallator from the Waves section.  Using the wave solutions, we find a modified dispersion relation of the form: 
+Which should look familiar as a damped harmonic osciallator from the Waves section.  Using the travelling wave solution ansatz, we find a dispersion relation of the form: 
 
 ```{math}
 k^2 = \mu_0\epsilon_0\omega^2 + i \mu_0\sigma\omega
 ```
-which is now complex! 
+which is now in general complex! 
 
-We can rewrite this in the form a relative permitivity $\epsilon_r(\omega)$, for $k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)$ with 
-$\epsilon = \epsilon_0\,\epsilon_r$, therefore:
+We can rewrite this in the form of a relative permitivity $\epsilon_r(\omega)$.  Then we will take $k^2 = \omega^2 / c^2 = \omega^2 \,\mu_0 \,\epsilon(\omega)$ with
+$\epsilon = \epsilon_0\,\epsilon_r$ and so:
 ```{math}
 \epsilon_r(\omega) = \frac{\epsilon(\omega)}{\epsilon_0} = \underbrace{1}_{vacuum\, part} + \underbrace{i \frac{\sigma}{\epsilon_0\omega}}_{dispersion\,part} 
 ```

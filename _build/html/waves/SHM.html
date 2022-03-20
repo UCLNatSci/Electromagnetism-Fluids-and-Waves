@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. Harmonic and Oscillatory Motion &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,22 +44,25 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Longitudinal Waves" href="longitudinal.html" />
     <link rel="prev" title="2. Mathematical Preliminaries" href="wavemaths.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,6 +79,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
@@ -85,7 +92,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -360,7 +367,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -394,12 +401,12 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simple-harmonic-motion">
@@ -424,7 +431,40 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Harmonic and Oscillatory Motion</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-harmonic-motion">
+   3.1. Simple Harmonic Motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-in-a-simple-harmonic-system">
+   3.2. Energy in a Simple Harmonic System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#damped-motion-and-forced-harmonic-systems">
+   3.3. Damped Motion and Forced Harmonic Systems*
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="harmonic-and-oscillatory-motion">
@@ -467,8 +507,8 @@ law tension from the spring will be directed upwards (which will be in the negat
 from equilibrium to an additional displacement <span class="math notranslate nohighlight">\(x = 1\)</span> and then releasing the mass from rest and examining the resulting motion.
 This tell us that <span class="math notranslate nohighlight">\(x(t = 0) = 1\)</span> and <span class="math notranslate nohighlight">\(\dot{x}(t=0) = v(t = 0) = 0\)</span> and therefore:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x(t) &amp;=&amp; A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \Longrightarrow x(0) = A = 1 \\
-\dot{x}(t) &amp;=&amp; - \omega_0 A \sin(\omega_0 \,t) + B  \omega_0 \cos(\omega_0 \,t)  \Longrightarrow \dot{x}(0) = B \omega_0 = 0\end{split}\]</div>
+\[\begin{split}x(t) &amp;= A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \Longrightarrow x(0) = A = 1 \\
+\dot{x}(t) &amp;= - \omega_0 A \sin(\omega_0 \,t) + B  \omega_0 \cos(\omega_0 \,t)  \Longrightarrow \dot{x}(0) = B \omega_0 = 0\end{split}\]</div>
 <p>which gives us <span class="math notranslate nohighlight">\(A = 1,\, B = 0\)</span> and so</p>
 <div class="math notranslate nohighlight">
 \[x(t) = \cos(\omega_0\,t)\]</div>
@@ -496,9 +536,9 @@ the circular motion</p>
 <p>where the kinetic energy has the usual defintion, <span class="math notranslate nohighlight">\(KE = \frac{1}{2}mv^2 = \frac{1}{2}m{\dot{x}}^2\)</span> and the potential energy is elastic potential energy
 <span class="math notranslate nohighlight">\(PE = \frac{1}{2}kx^2\)</span>, but in a different system this could be replaced with the relevant form of potential.  Using the solutions for SHM, <a class="reference internal" href="#equation-shmsolution">(3.1)</a>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x(t) &amp;=&amp; \, A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \\
-\dot{x}(t) &amp;=&amp; \, \omega_0(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )\\
-\Rightarrow E &amp;=&amp; \, \frac{1}{2}m{\omega_0}^2(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )^2 + \frac{1}{2}k(A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) )^2\end{split}\]</div>
+\[\begin{split}x(t) &amp;= A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) \\
+\dot{x}(t) &amp;= \omega_0(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )\\
+\Rightarrow E &amp;= \frac{1}{2}m{\omega_0}^2(-A \sin(\omega_0 \,t) + B \cos(\omega_0 \,t) )^2 + \frac{1}{2}k(A \cos(\omega_0 \,t) + B \sin(\omega_0 \,t) )^2\end{split}\]</div>
 <p>Given that <span class="math notranslate nohighlight">\({\omega_0}^2 = k / m\)</span>, this can be expanded and tidied up becoming:</p>
 <div class="math notranslate nohighlight" id="equation-shmenergy">
 <span class="eqno">(3.2)<a class="headerlink" href="#equation-shmenergy" title="Permalink to this equation">¶</a></span>\[E = \frac{1}{2}k\left(A^2 + B^2\right)\]</div>
@@ -548,34 +588,42 @@ is constantly being put into and given out from the system.  The most general fo
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="wavemaths.html" title="previous page"><span class="section-number">2. </span>Mathematical Preliminaries</a>
-    <a class='right-next' id="next-link" href="longitudinal.html" title="next page"><span class="section-number">4. </span>Longitudinal Waves</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="wavemaths.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Mathematical Preliminaries</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="longitudinal.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Longitudinal Waves</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

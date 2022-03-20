@@ -8,7 +8,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\helmholtz_1_0.png"
+          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\helmholtz_1_0.png"
         }
       },
       "data": {
@@ -26,7 +26,11 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
+<<<<<<< HEAD
           "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\mathideas_7_0.png"
+=======
+          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\mathideas_7_0.png"
+>>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
         }
       },
       "data": {
@@ -42,7 +46,11 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
+<<<<<<< HEAD
           "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\mathideas_9_0.png"
+=======
+          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\mathideas_9_0.png"
+>>>>>>> a3bab580aa83f2b5d30c16fd2bb6424160334e61
         }
       },
       "data": {
@@ -60,7 +68,7 @@
           "mime_prefix": "application/papermill.record/"
         },
         "filenames": {
-          "image/png": "C:\\Users\\Ella Metcalfe\\OneDrive - University College London\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\visualise_3_0.png"
+          "image/png": "C:\\Users\\NatSciTeaching\\Documents\\GitHub\\Electromagnetism-Fluids-and-Waves\\_build\\jupyter_execute\\fluids\\visualise_3_0.png"
         }
       },
       "data": {
