@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>33. Bernoulli’s equation &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,51 +20,67 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="34. Scaling arguments" href="scaling.html" />
     <link rel="prev" title="32. Steady solutions" href="steadysoln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,10 +89,15 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -85,16 +108,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -156,7 +180,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -228,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -317,90 +341,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fluids/bernoulli.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/bernoulli.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/bernoulli.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/fluids/bernoulli.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#statement">
    33.1. Statement
@@ -435,27 +549,77 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Bernoulli’s equation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statement">
+   33.1. Statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivation">
+   33.2. Derivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applications">
+   33.3. Applications
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#venturi-effect">
+     33.3.1. Venturi effect
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attaching-a-manometer">
+     33.3.2. Attaching a manometer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-rotating-bucket">
+     33.3.3. A rotating bucket
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="bernoullis-equation">
-<span id="ch-bernoulli"></span><h1><span class="section-number">33. </span>Bernoulli’s equation<a class="headerlink" href="#bernoullis-equation" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="bernoullis-equation">
+<span id="ch-bernoulli"></span><h1><span class="section-number">33. </span>Bernoulli’s equation<a class="headerlink" href="#bernoullis-equation" title="Permalink to this headline">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>Under what conditions does Bernoulli’s theorem hold?</p></li>
 <li><p>If you partially cover the hole of an escaping water jet with your finger, what happens to the pressure?</p></li>
 </ul>
-<div class="section" id="statement">
-<h2><span class="section-number">33.1. </span>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">¶</a></h2>
+<section id="statement">
+<h2><span class="section-number">33.1. </span>Statement<a class="headerlink" href="#statement" title="Permalink to this headline">#</a></h2>
 <p>If we assume no viscosity, steady flow, constant density, then the following result applies on a streamline:</p>
 <div class="math notranslate nohighlight" id="equation-bernoulli">
-<span class="eqno">(33.1)<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">¶</a></span>\[\frac{p}{\rho}+\phi +\frac{1}{2}v^2=\text{const}\]</div>
+<span class="eqno">(33.1)<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">#</a></span>\[\frac{p}{\rho}+\phi +\frac{1}{2}v^2=\text{const}\]</div>
 <p>In the special case where the body force is gravity, we have <span class="math notranslate nohighlight">\(\phi=gz\)</span></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -463,27 +627,28 @@
 <p>Since the relationship holds only for steady flows, the streamlines are identical to the particle paths.</p>
 </div>
 <p><em>Note: There is also a version of Bernoulli’s equation that applies to unsteady potential flows, but we do not consider it here</em></p>
-</div>
-<div class="section" id="derivation">
-<span id="bernoulli-derivation"></span><h2><span class="section-number">33.2. </span>Derivation<a class="headerlink" href="#derivation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="derivation">
+<span id="bernoulli-derivation"></span><h2><span class="section-number">33.2. </span>Derivation<a class="headerlink" href="#derivation" title="Permalink to this headline">#</a></h2>
 <p>We start with the inviscid form of the momentum equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
 <p>Recall that if the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> is conservative (does no work), then it can be expressed as the gradient of a scalar potential. By convention, we usually introduce a negative sign, so that that work done against <span class="math notranslate nohighlight">\(\underline{F}\)</span> increases the potential, while work done by <span class="math notranslate nohighlight">\(\underline{F}\)</span> decreases the potential:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9fb1da46-b610-4006-9695-8f572ac6481d">
-<span class="eqno">(33.2)<a class="headerlink" href="#equation-9fb1da46-b610-4006-9695-8f572ac6481d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=-\nabla\phi.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-23e27b20-e18b-42da-b9c4-992b2ed8f895">
+<span class="eqno">(33.2)<a class="headerlink" href="#equation-23e27b20-e18b-42da-b9c4-992b2ed8f895" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}=-\nabla\phi.\end{equation}\]</div>
 <p>Now, let us further assume that the fluid is uniform density, <span class="math notranslate nohighlight">\(\rho\)</span> is constant, so that we may write:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab35213f-22ae-4d1e-bcfa-61d90298f6c9">
-<span class="eqno">(33.3)<a class="headerlink" href="#equation-ab35213f-22ae-4d1e-bcfa-61d90298f6c9" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\nabla\left(\frac{p}{\rho}+\phi\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0833a8f3-fc1d-490b-a0df-0da2a2f3c869">
+<span class="eqno">(33.3)<a class="headerlink" href="#equation-0833a8f3-fc1d-490b-a0df-0da2a2f3c869" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\nabla\left(\frac{p}{\rho}+\phi\right).\end{equation}\]</div>
 <p>Using the vector identity <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}=(\nabla\times\underline{u})\times\underline{u}+\nabla\left(\frac{1}{2}\underline{u}.\underline{u}\right)=(\underline{\omega}\times\underline{u})+\nabla\left(\frac{1}{2}v^2\right)\)</span> then gives</p>
 <div class="math notranslate nohighlight" id="equation-vorticity-head">
-<span class="eqno">(33.4)<a class="headerlink" href="#equation-vorticity-head" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times \underline{u})=-\nabla H, \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2\]</div>
+<span class="eqno">(33.4)<a class="headerlink" href="#equation-vorticity-head" title="Permalink to this equation">#</a></span>\[\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times \underline{u})=-\nabla H, \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(H\)</span> is known as the “head”.</p>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-0">
-<p class="admonition-title"><span class="caption-number">Exercise 33.1 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 33.1 </span></p>
+<section id="exercise-content">
 <p>Try to prove the strange-looking vector identity for <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}\)</span>, by writing out each expression in component form.</p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p>Let <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span>. Then,</p>
@@ -511,50 +676,51 @@ u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}
 <p>This result is identical to <span class="math notranslate nohighlight">\(\underline{u}.\nabla\underline{u}\)</span></p>
 </div>
 <p>We may yet further simplify if we assume that the flow is steady, so <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial \underline{u}}{\partial t}=0\)</span>, and by taking the scalar product with vector <span class="math notranslate nohighlight">\(\underline{u}\)</span> to eliminate the vorticity term:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4634ee16-e155-49d0-a2e4-17a30b60abbb">
-<span class="eqno">(33.5)<a class="headerlink" href="#equation-4634ee16-e155-49d0-a2e4-17a30b60abbb" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-af156fa6-a1d4-414b-9f83-3fda34070b92">
+<span class="eqno">(33.5)<a class="headerlink" href="#equation-af156fa6-a1d4-414b-9f83-3fda34070b92" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}.((\nabla\times\underline{u})\times\underline{u})=-\underline{u}.\nabla H\end{equation}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\underline{a}.(\underline{b}\times\underline{a})=0\)</span> for any vectors <span class="math notranslate nohighlight">\(\underline{a},\underline{b}\)</span> this can be simplified to <span class="math notranslate nohighlight">\(\underline{u}.\nabla H=0\)</span>. The result says that the head remains constant on a streamline, since the directional derivative along <span class="math notranslate nohighlight">\(\underline{u}\)</span> is zero.</p>
-</div>
-<div class="section" id="applications">
-<h2><span class="section-number">33.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="venturi-effect">
-<h3><span class="section-number">33.3.1. </span>Venturi effect<a class="headerlink" href="#venturi-effect" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="applications">
+<h2><span class="section-number">33.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">#</a></h2>
+<section id="venturi-effect">
+<h3><span class="section-number">33.3.1. </span>Venturi effect<a class="headerlink" href="#venturi-effect" title="Permalink to this headline">#</a></h3>
 <p>The Venturi effect is the name given to the observed phenomenon that through a constricted section of pipe there is an increase in velocity and hence a decrease in pressure. In the illustration below and in the accompanying analysis, the flow has been idealised such that it is assumed to be steady and laminar (smooth). For a more realistic depiction, see for example <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0020746200001049?via%3Dihub">this paper</a> - especially figure 9, which gives a treatment in two dimensions using finite difference numeric methods.</p>
 <p>On the diagram, <span class="math notranslate nohighlight">\(A,B\)</span> denote the cross-sectional areas at the narrowest and widest points of the tube. The pressure and flow speed on a streamline through the centre of the pipe are denoted <span class="math notranslate nohighlight">\(p_0,u_0\)</span> at the narrowest point and by <span class="math notranslate nohighlight">\(p_1,u_1\)</span> at the widest point. The density <span class="math notranslate nohighlight">\(\rho\)</span> is assumed to be constant.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/venturi.png" id="venturi"><img alt="a particle moving through a potential field" class="align-center" id="venturi" src="../_images/venturi.png" style="width: 288.0px; height: 115.2px;" /></a>
 <br>
 <p>By conservation of mass, we may write down the following result for the volumetric flow rate:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6765c4c6-96df-492b-8926-e28b3bd72c6f">
-<span class="eqno">(33.6)<a class="headerlink" href="#equation-6765c4c6-96df-492b-8926-e28b3bd72c6f" title="Permalink to this equation">¶</a></span>\[\begin{equation}A u_0 = B u_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c04bc662-3615-4b0b-b15c-12a1455eeb3b">
+<span class="eqno">(33.6)<a class="headerlink" href="#equation-c04bc662-3615-4b0b-b15c-12a1455eeb3b" title="Permalink to this equation">#</a></span>\[\begin{equation}A u_0 = B u_1.\end{equation}\]</div>
 <p>By Bernoulli’s theorem for the central streamline we may also say that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b3f3346-6fe6-4fe5-ac68-dd4eca68556c">
-<span class="eqno">(33.7)<a class="headerlink" href="#equation-2b3f3346-6fe6-4fe5-ac68-dd4eca68556c" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_0+\frac{1}{2}\rho u_0^2=p_1+\frac{1}{2}\rho u_1^2.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-43fe567d-3e82-4024-91aa-2eaa45cde700">
+<span class="eqno">(33.7)<a class="headerlink" href="#equation-43fe567d-3e82-4024-91aa-2eaa45cde700" title="Permalink to this equation">#</a></span>\[\begin{equation}p_0+\frac{1}{2}\rho u_0^2=p_1+\frac{1}{2}\rho u_1^2.\end{equation}\]</div>
 <p>Rearranging the two results together gives (for example)</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0786a6e7-cc1f-4119-99da-ba3ad653f0fe">
-<span class="eqno">(33.8)<a class="headerlink" href="#equation-0786a6e7-cc1f-4119-99da-ba3ad653f0fe" title="Permalink to this equation">¶</a></span>\[\begin{equation}p_1-p_0 = \frac{1}{2}\rho u_0^2\left(1-\frac{A^2}{B^2}\right).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6070030f-e7a3-4a3b-b5a2-b001b7739d7c">
+<span class="eqno">(33.8)<a class="headerlink" href="#equation-6070030f-e7a3-4a3b-b5a2-b001b7739d7c" title="Permalink to this equation">#</a></span>\[\begin{equation}p_1-p_0 = \frac{1}{2}\rho u_0^2\left(1-\frac{A^2}{B^2}\right).\end{equation}\]</div>
 <p>We can see that through the choke point there will be an increase in velocity and a decrease in pressure compared to the inlet/outlet.</p>
 <p>In general, when we observe bunching of streamlines the constrainment in volume implies a velocity increase due to mass conservation, since to maintain the same flux through a surface the velocity must increase. As a result, if the assumptions of Bernoulli are met, we see a pressure decrease. This result is sometimes used to explain the lift over an airfoil or the magnus effect on a rotating cylinder.</p>
 <p><strong>However, we must be careful as Bernoulli’s theorem assumes inviscid fluid, and it turns out the viscosity is very important when fluid moves past a boundary.</strong></p>
-</div>
-<div class="section" id="attaching-a-manometer">
-<h3><span class="section-number">33.3.2. </span>Attaching a manometer<a class="headerlink" href="#attaching-a-manometer" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="attaching-a-manometer">
+<h3><span class="section-number">33.3.2. </span>Attaching a manometer<a class="headerlink" href="#attaching-a-manometer" title="Permalink to this headline">#</a></h3>
 <p>We now attach a second tube as shown in the diagram below, and allow the fluid in the second tube to come to rest as shown.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/manometer.png" id="manometer"><img alt="a particle moving through a potential field" class="align-center" id="manometer" src="../_images/manometer.png" style="width: 288.0px; height: 144.0px;" /></a>
 <br>
 <p>According to Bernoulli’s theorem <span class="math notranslate nohighlight">\(p_1-p_0=\rho g h\)</span>, so using the result for the pressure difference that we obtained previously gives:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-919fdb3f-505c-4659-8001-ba701e0cb8c7">
-<span class="eqno">(33.9)<a class="headerlink" href="#equation-919fdb3f-505c-4659-8001-ba701e0cb8c7" title="Permalink to this equation">¶</a></span>\[\begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9da4b63d-51ca-4789-8999-e1ad8cbdc2a3">
+<span class="eqno">(33.9)<a class="headerlink" href="#equation-9da4b63d-51ca-4789-8999-e1ad8cbdc2a3" title="Permalink to this equation">#</a></span>\[\begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}\]</div>
 <p>If we know the ratio of the two cross-sectional areas, then by measuring height <span class="math notranslate nohighlight">\(h\)</span> in the fluid column we may determine the flow speed through the narrow part of the pipe.</p>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-1">
-<p class="admonition-title"><span class="caption-number">Exercise 33.2 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 33.2 </span></p>
+<section id="exercise-content">
 <p>Water flows along a horizontal pipe, through a contraction and out into the atmosphere, as shown. Given that the volumetric flow rate is <span class="math notranslate nohighlight">\(Q\)</span>, estimate the maximum height <span class="math notranslate nohighlight">\(h\)</span> for which water can be drawn into the main flow from a lower reservoir that is open to the atmosphere.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/reservoir.png" id="reservoir"><img alt="a particle moving through a potential field" class="align-center" id="reservoir" src="../_images/reservoir.png" style="width: 288.0px; height: 144.0px;" /></a>
 <br>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p>Taking the speed of the fluid on a central streamline to be <span class="math notranslate nohighlight">\(u_A,u_B\)</span> at <span class="math notranslate nohighlight">\(A,B\)</span>, mass conservation gives</p>
@@ -570,28 +736,29 @@ u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}h=\frac{Q^2}{2g}\left(\frac{1}{A^2}-\frac{1}{B^2}\right)\end{equation*}\]</div>
 </div>
-</div>
-<div class="section" id="a-rotating-bucket">
-<h3><span class="section-number">33.3.3. </span>A rotating bucket<a class="headerlink" href="#a-rotating-bucket" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="a-rotating-bucket">
+<h3><span class="section-number">33.3.3. </span>A rotating bucket<a class="headerlink" href="#a-rotating-bucket" title="Permalink to this headline">#</a></h3>
 <p>Consider an ideal fluid of zero viscosity, rotating under gravity <span class="math notranslate nohighlight">\(g\)</span> about the <span class="math notranslate nohighlight">\(z\)</span> axis with constant angular velocity <span class="math notranslate nohighlight">\(\Omega=\dot{\theta}\)</span>.
 The particle paths for this motion satisfy</p>
-<div class="amsmath math notranslate nohighlight" id="equation-432a288d-57d6-447b-b206-713f5f691ae3">
-<span class="eqno">(33.10)<a class="headerlink" href="#equation-432a288d-57d6-447b-b206-713f5f691ae3" title="Permalink to this equation">¶</a></span>\[\begin{equation}x=r\cos(\theta), \quad y=r\sin(\theta),\quad z=\mathrm{constant,}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a4554ab1-cc1e-49fe-831a-e3dd3b69224d">
+<span class="eqno">(33.10)<a class="headerlink" href="#equation-a4554ab1-cc1e-49fe-831a-e3dd3b69224d" title="Permalink to this equation">#</a></span>\[\begin{equation}x=r\cos(\theta), \quad y=r\sin(\theta),\quad z=\mathrm{constant,}\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\dot{r}=0\)</span> and <span class="math notranslate nohighlight">\(\dot{\theta}=\Omega\)</span>. From these results we may obtain the velocity field relative to Cartesian axes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-beb7a2b1-fcf8-4b2a-8f45-edce91c27242">
-<span class="eqno">(33.11)<a class="headerlink" href="#equation-beb7a2b1-fcf8-4b2a-8f45-edce91c27242" title="Permalink to this equation">¶</a></span>\[\begin{equation}\dot{x}=-\dot{\theta}r\sin(\theta)=-\Omega y, \quad \dot{y}=\dot{\theta}r\cos(\theta)=\Omega x \quad \Rightarrow \underline{u}=\Omega(-y,x,0).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d42389b7-fad8-4e0b-9f71-076a5c94f442">
+<span class="eqno">(33.11)<a class="headerlink" href="#equation-d42389b7-fad8-4e0b-9f71-076a5c94f442" title="Permalink to this equation">#</a></span>\[\begin{equation}\dot{x}=-\dot{\theta}r\sin(\theta)=-\Omega y, \quad \dot{y}=\dot{\theta}r\cos(\theta)=\Omega x \quad \Rightarrow \underline{u}=\Omega(-y,x,0).\end{equation}\]</div>
 <p>This is an example of vortex flow. You are encouraged to verify that the vorticity for this fluid is <span class="math notranslate nohighlight">\(\omega\)</span> and that the flow is divergence-free. Verify also that <span class="math notranslate nohighlight">\(\dot{\underline{u}}=\underline{0}\)</span> and so the streamlines are the same as the particle paths.</p>
 <p>Bernoulli’s equation <a class="reference internal" href="#equation-bernoulli">(33.1)</a> applies on a streamline, but the constant of integration varies from streamline to streamline since the flow is not irrotational. Therefore solving the equation for <span class="math notranslate nohighlight">\(h\)</span> in terms of <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(p_0\)</span> will not give us the shape of the fluid surface. If you try this, it would suggest that the shape of the fluid surface is an upturned parabola, which is exactly the opposite of what we observe when we spin a bucket!</p>
 <p>To find the fluid surface, we can go back to Euler’s formula, which applies throughout the fluid, not only on a streamline:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f4185ceb-2972-41eb-9f6b-e2c3e1b351f3">
-<span class="eqno">(33.12)<a class="headerlink" href="#equation-f4185ceb-2972-41eb-9f6b-e2c3e1b351f3" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{f}, \qquad \underline{f}=(0,0,-g)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-728166b0-a897-45f2-8696-3cf7206c1842">
+<span class="eqno">(33.12)<a class="headerlink" href="#equation-728166b0-a897-45f2-8696-3cf7206c1842" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{f}, \qquad \underline{f}=(0,0,-g)\end{equation}\]</div>
 <div class="exercise admonition" id="bucket-exercise">
-<p class="admonition-title"><span class="caption-number">Exercise 33.3 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 33.3 </span></p>
+<section id="exercise-content">
 <p>Substitute in the velocity field <span class="math notranslate nohighlight">\(\underline{u}=\Omega(-y,x,0)\)</span> and solve for each component to deduce the result</p>
 <div class="math notranslate nohighlight">
 \[z =\frac{p_0-p}{\rho g} + \frac{\Omega^2}{2g}(x^2+y^2), \qquad p_0=p(0,0,0).\]</div>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p>Substituting into the equation gives</p>
@@ -611,14 +778,15 @@ The particle paths for this motion satisfy</p>
 <a class="reference internal image-reference" href="../_images/bucket.png" id="bucket"><img alt="a particle moving through a potential field" class="align-center" id="bucket" src="../_images/bucket.png" style="width: 672.0px; height: 504.0px;" /></a>
 <br>
 <div class="exercise admonition" id="fluids/bernoulli-exercise-3">
-<p class="admonition-title"><span class="caption-number">Exercise 33.4 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 33.4 </span></p>
+<section id="exercise-content">
 <p>Produce a figure similar to the one above, by plotting the vector field, streamlines and isosurface in Python. You can take arbitrary values for <span class="math notranslate nohighlight">\(p_0,\Omega,\rho,g\)</span>, since they do not affect the shape.</p>
+</section>
 </div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -642,34 +810,48 @@ The particle paths for this motion satisfy</p>
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="steadysoln.html" title="previous page"><span class="section-number">32. </span>Steady solutions</a>
-    <a class='right-next' id="next-link" href="scaling.html" title="next page"><span class="section-number">34. </span>Scaling arguments</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="steadysoln.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">32. </span>Steady solutions</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="scaling.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">34. </span>Scaling arguments</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

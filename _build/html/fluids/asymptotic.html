@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>35. Perturbations and asymptotics &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,51 +20,67 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="36. Vortex transport" href="vorticity.html" />
     <link rel="prev" title="34. Scaling arguments" href="scaling.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,10 +89,15 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -85,16 +108,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -156,7 +180,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -228,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -317,90 +341,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fluids/asymptotic.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/asymptotic.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/asymptotic.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/fluids/asymptotic.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-background">
    35.1. General background
@@ -440,17 +554,72 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Perturbations and asymptotics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-background">
+   35.1. General background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perturbation-analysis">
+   35.2. Perturbation analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matched-asymptotics">
+   35.3. Matched asymptotics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stokes-paradox">
+     35.3.1. Stokes’ paradox
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dalemberts-paradox">
+   35.4. D’Alembert’s paradox
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-perturbed-boundary-layer">
+   35.5. The perturbed boundary layer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   35.6. References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="perturbations-and-asymptotics">
-<span id="ch-asymptotic"></span><h1><span class="section-number">35. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="perturbations-and-asymptotics">
+<span id="ch-asymptotic"></span><h1><span class="section-number">35. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this headline">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What is laminar-turbulent transition and why is it important?</p></li>
@@ -458,49 +627,49 @@
 <li><p>What is a boundary layer?</p></li>
 <li><p>Problems with linear asymptotic theories - an area of active research.</p></li>
 </ul>
-<div class="section" id="general-background">
-<h2><span class="section-number">35.1. </span>General background<a class="headerlink" href="#general-background" title="Permalink to this headline">¶</a></h2>
+<section id="general-background">
+<h2><span class="section-number">35.1. </span>General background<a class="headerlink" href="#general-background" title="Permalink to this headline">#</a></h2>
 <p>Asymptotic methods are a class of mathematical techniques for solving complicated problems by exploiting the presence of a large or small parameter. These methods typically involve expanding unknown quantities using series expansion and equating terms at each order (power) in the expansion.</p>
 <p>To be strictly accurate, we assume that the parameter appearing in the expansion is strictly infinitesimal and so the techniques may be formally justified only in extreme circumstances such as at very high Reynolds numbers or for very small amplitude waves. However, the techniques are very often used to make quantitative approximations and inferences in regimes where this assumption must be relaxed, for instance by treating <span class="math notranslate nohighlight">\(\epsilon\sim 0.1\)</span> as an asymptotically small quantity.</p>
 <p>To determine what can be treated as “small” often requires an amount of heuristic reasoning, which can be justified be comparison to theoretical claims and/or experimental and numerical investigations.</p>
 <p>In this chapter we discuss some general principles and uses of asymptotic methods, though we do not demonstrate the full mathematics, which is too involved for a first year course. Asymptotic expansion methods are also featured in chapters <a href="#id1"><span class="problematic" id="id2">:numeref:`water-waves`</span></a> and <a class="reference internal" href="soundwaves.html#sound-waves"><span class="std std-numref">Section 38</span></a> to study small amplitude water and sound waves.</p>
-</div>
-<div class="section" id="perturbation-analysis">
-<h2><span class="section-number">35.2. </span>Perturbation analysis<a class="headerlink" href="#perturbation-analysis" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="perturbation-analysis">
+<h2><span class="section-number">35.2. </span>Perturbation analysis<a class="headerlink" href="#perturbation-analysis" title="Permalink to this headline">#</a></h2>
 <p>In chapter <a class="reference internal" href="steadysoln.html#steady-soln"><span class="std std-numref">Section 32</span></a> we looked at some steady solutions. Fluid dynamicists wish to understand what happens to these steady flow profiles when they are perturbed by small disturbances. We want to know if the disturbances will grow by feeding off the energy of the main flow, or if they will be damped out by effects such as friction or swept away by convection. Understanding the dynamics of small amplitude disturbances is key to understanding laminar-turbulent transition. A laminar flow is an orderly flow characterised by fluid layers moving smoothly past one another, whilst a turbulent state is characterised by disordered, chaotic motion occurring a “cascade” of length scales. If small-amplitude perturbations are amplified, they may eventually become large enough to trigger this instability through their nonlinear interactions.</p>
 <p>A good understanding of the features of the conditions that lead to turbulence could help with engineers learn to control transition. For an example discussion, see <a class="reference external" href="https://www.youtube.com/watch?v=GMmNKUlXXDs">this video [2:30-8:05]</a>. Sometimes the desire may be to facilitate turbulence, for instance as an efficient mechanism of heat transfer or a means of achieving liquid-jet breakup in fuel injection systems. Conversely, in aerodynamic applications turbulent skin-friction drag can be as much as ten times that of laminar flow at the same Reynolds number, and accounts for 50% of the total drag experienced by a subsonic aircraft. This means that any reduction in turbulence offers huge potential for fuel savings as well as reduction of greenhouse gases and other pollutants.</p>
 <p>In perturbation analysis, we assume a flow profile of the following form, in which <span class="math notranslate nohighlight">\(\underline{u}_0\)</span> is a steady flow solution and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a small (strictly infinitesimal) parameter:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd6464bb-005b-4043-a852-d1045877a4e0">
-<span class="eqno">(35.1)<a class="headerlink" href="#equation-bd6464bb-005b-4043-a852-d1045877a4e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1125c291-d167-451d-be3a-e3b581b40e95">
+<span class="eqno">(35.1)<a class="headerlink" href="#equation-1125c291-d167-451d-be3a-e3b581b40e95" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
 <p>By substituting into the equations of motion and equating coefficients of <span class="math notranslate nohighlight">\(\epsilon\)</span> we can obtain equations governing the perturbation dynamics. An especially important case is concerned with the dynamics of wavy (e.g. sinusoidal) perturbations and wavepackets, which emerge as particular solutions in the case of flow past a boundary. The perturbations represent tiny background fluid motions such as vibrations. By making assumptions about the length and time scales governing the perturbation dynamics and by relating <span class="math notranslate nohighlight">\(\epsilon\)</span> to a power of the Reynolds number, the dominating evolution mechanisms can be studied.</p>
 <div class="admonition-example-pipe-flow admonition">
 <p class="admonition-title">Example: pipe flow</p>
 <p>An example of laminar-turbulent transition is illustrated in <a class="reference external" href="https://www.youtube.com/watch?v=CAM-ubZIdFg">this video example</a>. In the experiment, fluid under carefully controlled conditions is ran through a pipe. Dye is injected into the flow to create streaklines and the speed of the fluid is gradually increased, which is seen to result in a turbulent state. The pipe flow experiment is a classic, which was studied by Osborne Reynolds. He conducted experiments similar to the one shown, with more rudimentary apparatus, and he also developed the mathematical theory of laminar-turbulent transition in pipe flows.</p>
 <p>We saw in section <a class="reference internal" href="steadysoln.html#pipe-flow"><span class="std std-numref">Section 32.5</span></a> that steady flow for this geometry exhibits a parabolic profile. The results of the linear perturbation theory suggest that the flow should remain stable up to very large Reynolds numbers, meaning for flow speeds that are very fast. However, very carefully controlled experiments have indicated that a turbulent state in pipe flows occurs at much lower Reynolds numbers than what the linear theory predicts, suggesting that a nonlinear theory is required.</p>
 </div>
-</div>
-<div class="section" id="matched-asymptotics">
-<h2><span class="section-number">35.3. </span>Matched asymptotics<a class="headerlink" href="#matched-asymptotics" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="matched-asymptotics">
+<h2><span class="section-number">35.3. </span>Matched asymptotics<a class="headerlink" href="#matched-asymptotics" title="Permalink to this headline">#</a></h2>
 <p>We have seen that under certain conditions we can make mathematical progress by approximating the full NS equations with simplified versions. Up to now we assumed that any approximations such as neglecting viscous effects have been valid throughout the entire flow. However, our assumptions may break down in some regions of the fluid and lead to inconsistencies. For example, it is now well-known that we cannot realistically treat fluid close to a boundary such as a wall as inviscid. However, the inviscid approximation may be a good one elsewhere in the fluid and we do not want to abandon it!</p>
 <p>The theory of matched asymptotics provides a formal framework for separating the fluid geometry into different regions or layers where different approximations may be valid. Within each layer, variables in the full non-dimensional NS equations are related to powers of the <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> by scaling arguments based on physical assumptions such as the distance to a boundary. The different scalings used in each layer result in balancing different physical effects in the equations.</p>
 <p>Although the history of matched asymptotics is strongly associated with fluid dynamics, it has wide applications to areas including quantum mechanics.</p>
 <p>Two important historic paradoxes that can be addressed using the theory of matched asymptotics are presented below. The case investigated by Prandtl is especially important and celebrated, as it ushered in a whole new era of fluid dynamics based on <em>boundary layer</em> theory. Boundary layers are ubiquitous in fluid dynamics, as they occur whenever a viscous fluid meets a boundary. This could include the interface between two fluids such as between a liquid jet and surrounding air. The dynamics and stability properties of boundary layers are an extremely active area of research.</p>
 <p>We will not study the mathematical techniques of matched asymptotics as it is a very involved subject, which is often first encountered in graduate level courses.</p>
-<div class="section" id="stokes-paradox">
-<h3><span class="section-number">35.3.1. </span>Stokes’ paradox<a class="headerlink" href="#stokes-paradox" title="Permalink to this headline">¶</a></h3>
+<section id="stokes-paradox">
+<h3><span class="section-number">35.3.1. </span>Stokes’ paradox<a class="headerlink" href="#stokes-paradox" title="Permalink to this headline">#</a></h3>
 <p>Consider a cylinder placed into an oncoming highly viscous 2D fluid flow of velocity <span class="math notranslate nohighlight">\(U\)</span>, as shown in the image below. This type of flow is known as Hele-Shaw flow.
 <br></p>
 <a class="reference internal image-reference" href="../_images/hele-shaw.png" id="hele-shaw"><img alt="Hele-Shaw" class="align-center" id="hele-shaw" src="../_images/hele-shaw.png" style="width: 512.0px; height: 311.20000000000005px;" /></a>
 <br>
 <p>If we define the following ratio, where <span class="math notranslate nohighlight">\(a\)</span> is the diameter of the cylinder, then the effect of inertia will apparently be negligible near to the cylinder:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-efb4bfd4-c3a0-4fbf-922b-faaa45daf687">
-<span class="eqno">(35.2)<a class="headerlink" href="#equation-efb4bfd4-c3a0-4fbf-922b-faaa45daf687" title="Permalink to this equation">¶</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-eb643a01-0585-4e95-8de8-a340e93395bf">
+<span class="eqno">(35.2)<a class="headerlink" href="#equation-eb643a01-0585-4e95-8de8-a340e93395bf" title="Permalink to this equation">#</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
 <p>However, away from the boundary the characteristic length scale associated with changes in velocity is larger, as the flow becomes more and more uniform. Therefore the effects of inertia are more important in the outer flow regions. In fact, if the effects of inertia are neglected away from the surface of the sphere then the mathematical equations are ill-posed and it becomes impossible to satisfy appropriate boundary conditions for the far-field. This is known as Stokes’ paradox.</p>
 <p>The paradox can be resolved by taking a different approximation away from the boundary, that includes inertial terms; and blending or “matching” the expressions obtained from the inner and outer layers of fluid.</p>
-</div>
-</div>
-<div class="section" id="dalemberts-paradox">
-<h2><span class="section-number">35.4. </span>D’Alembert’s paradox<a class="headerlink" href="#dalemberts-paradox" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="dalemberts-paradox">
+<h2><span class="section-number">35.4. </span>D’Alembert’s paradox<a class="headerlink" href="#dalemberts-paradox" title="Permalink to this headline">#</a></h2>
 <p>Consider a cylinder placed into an oncoming flow, which is at high speed. Early experimenters and mathematicians did not have the techniques of high speed photography available to them, and there was disagreement about what happens at the fluid boundary. Many believed that fluid particles would “stick” to the boundary and transfer momentum, whilst others believed that the flow would move smoothly past the boundary.</p>
 <p>Neither approach fitted well with the equations of motion. On one hand, transfer of momentum within the fluid requires viscosity, and it would be impossible to satisfy the no-slip condition at the boundary if these effects were neglected. On the other hand, it is plain from scaling arguments that for high speed flows of low viscosity fluid such as air the effects of viscosity should be much less important than inertia.</p>
 <p>We will also see in <a class="reference internal" href="vorticity.html#dalembert-paradox"><span class="std std-numref">Section 36.3</span></a> that ignoring the no slip condition results in D’Alembert’s paradox of zero drag, and zero lift - meaning that aeroplanes would never fly!</p>
@@ -517,24 +686,26 @@
 <p>He also notoriously compiled a report on artificial intelligence for the British Science Research Council (BSRC), which was highly critical of the field, leading the British government to end support for artifical intelligence research in most British Universities.</p>
 <p>For more information, see: <a class="reference external" href="https://www.ucl.ac.uk/lims/jameslighthill.htm">https://www.ucl.ac.uk/lims/jameslighthill.htm</a></p>
 </div>
-</div>
-<div class="section" id="the-perturbed-boundary-layer">
-<h2><span class="section-number">35.5. </span>The perturbed boundary layer<a class="headerlink" href="#the-perturbed-boundary-layer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-perturbed-boundary-layer">
+<h2><span class="section-number">35.5. </span>The perturbed boundary layer<a class="headerlink" href="#the-perturbed-boundary-layer" title="Permalink to this headline">#</a></h2>
 <p>To study the stability of boundary layers, we must combine the use of matched asymptotics with perturbation analysis, which results in a relationship between the assumed size of the disturbance and the thickness of the boundary layer. For wavy disturbances, the linear (first order) theory provides a dispersion relation in which either/both the frequency or wavenumber is permitted to be complex to model spatial or temporal growth.</p>
 <p>A well-studied example is the case of the Blasius boundary layer, which describes the developed flow profile over a flat plate. For length and velocity scales appropriate to subsonic aircraft flight, the range of relevant Reynolds numbers is on the order of a few hundred to a few thousand. In this regime the linear theory predicts that disturbances introduced near to the leading edge of the plate will experience a short period of amplitude growth as they are swept downstream by the main flow.</p>
 <p>The predictions can be compared to experiments in which a very carefully controlled airstream is passed over a flat plate. A loudspeaker embedded in the plate can be used to produce small amplitude disturbances at selected frequencies, and downstream apparatus such as hot wire anemometers can be used to measure the evolution of these disturbances.</p>
 <p>The theoretical predictions roughly match the experiments in the very early stages of flow evolution, but the growth rates predicted by the linear theory are too modest and do not do a good job of predicting laminar-turbulent transition. This implies that a nonlinear theory is needed, and this remains an active area of theoretical research.</p>
-<p>It has been hypothesised that a resonant-type interaction may be responsible for “explosive growth” of small disturbances in the Blasius boundary layer <span id="id3">[<a class="reference internal" href="../markdown.html#id8">CA78</a>]</span>. The theory is contentious, but <a class="reference external" href="https://eprints.keele.ac.uk/193/1/Metcalfe%20PhD%202013.pdf">pragmatic investigation</a> at finite Reynolds numbers has provided quantified estimates that appear to be a close match for the findings of experimenters <span id="id4">[<a class="reference internal" href="../markdown.html#id7">Met13</a>]</span>.</p>
+<p>It has been hypothesised that a resonant-type interaction may be responsible for “explosive growth” of small disturbances in the Blasius boundary layer <span id="id3">[<a class="reference internal" href="../markdown.html#id8" title="ADD Craik and JA Adam. Evolution in space and time of resonant wave triads-i. the'pump-wave approximation'. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences, 363(1713):243–255, 1978.">CA78</a>]</span>. The theory is contentious, but <a class="reference external" href="https://eprints.keele.ac.uk/193/1/Metcalfe%20PhD%202013.pdf">pragmatic investigation</a> at finite Reynolds numbers has provided quantified estimates that appear to be a close match for the findings of experimenters <span id="id4">[<a class="reference internal" href="../markdown.html#id7" title="SJ Metcalfe. A blow-up mechanism in boundary layer transition. PhD thesis, Keele University, 2013.">Met13</a>]</span>.</p>
 <div class="exercise admonition" id="fluids/asymptotic-exercise-0">
-<p class="admonition-title"><span class="caption-number">Exercise 35.1 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 35.1 </span></p>
+<section id="exercise-content">
 <p>Find one example of fluid dynamics research that involved modelling a boundary layer, and write a tweet about it (280 characters). You could choose a piece of recent research or you could choose a historical example that you would like to bring to wider attention.</p>
+</section>
 </div>
-</div>
-</div>
-<div class="section" id="references">
-<h2><span class="section-number">35.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id5"><dl class="citation">
+</section>
+<section id="references">
+<h2><span class="section-number">35.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id5">
+<dl class="citation">
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id3">CA78</a></span></dt>
 <dd><p>ADD Craik and JA Adam. Evolution in space and time of resonant wave triads-i. the'pump-wave approximation'. <em>Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences</em>, 363(1713):243–255, 1978.</p>
 </dd>
@@ -542,9 +713,9 @@
 <dd><p>SJ Metcalfe. <em>A blow-up mechanism in boundary layer transition</em>. PhD thesis, Keele University, 2013.</p>
 </dd>
 </dl>
-</p>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -568,34 +739,48 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="scaling.html" title="previous page"><span class="section-number">34. </span>Scaling arguments</a>
-    <a class='right-next' id="next-link" href="vorticity.html" title="next page"><span class="section-number">36. </span>Vortex transport</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="scaling.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">34. </span>Scaling arguments</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="vorticity.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">36. </span>Vortex transport</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

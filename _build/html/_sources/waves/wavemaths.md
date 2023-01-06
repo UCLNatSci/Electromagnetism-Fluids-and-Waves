@@ -5,17 +5,17 @@ are useful here.  Recall that partial derivatives are found when we have two or 
 how the machinery of calculus works in this case.  Partial derivatives typically involve allowing one variable to change whilst keeping 
 all other variables constant.
 
-First derivative of a function $u(x,\,t)$ is found from taking the limit:
+The first derivative of a function $u(x,\,t)$ is found from taking a limit in one variable, whilst holding all others constant:
 
 ```{math}
 :label: partialderiv
 \frac{\partial u(x,\,t)}{\partial x} = \lim_{\Delta x \rightarrow 0} \frac{u(x + \Delta x,t) - u(x,t)}{\Delta x} 
 ```
-Notice that this defintion keeps the variable $t$ constant whilst this limit is taken.  Likewise if we took the $t$ derivative here:
+and we note this defintion keeps the variable $t$ constant whilst this limit is taken.  Likewise if we took the $t$ derivative here:
 ```{math}
 \frac{\partial u(x,\,t)}{\partial t} = \lim_{\Delta t \rightarrow 0} \frac{u(x,\,t + \Delta t) - u(x,\,t)}{\Delta t} 
 ```
-The second derivative can be thought of as a derivative of a derivative:
+The second derivative is just a derivative of a derivative:
 ```{math}
 \frac{\partial^2 u(x,\,t)}{\partial x^2} &=&\, \frac{\partial}{\partial x}\left(\frac{\partial u(x,\,t)}{\partial x}\right) \\
 &=&\, \lim_{\Delta x \rightarrow 0} \frac{1}{\Delta x}\left[\frac{\partial u(x+\Delta x,\,t)}{\partial x} - \frac{\partial u(x,\,t)}{\partial x} \right] \\
@@ -44,15 +44,15 @@ However if we have $n \in \mathbb{R}$, it is still possible to find a converent 
 i.e. the radius of convergence of the series requires a restriction on the size of $x$.  This means that if we are presented with a binomimal of the 
 original form, we have to transform it into:
 ```{math}
-(a + b)^n = a^n\left( a + \frac{b}{a}\right)^n
+(a + b)^n = a^n\left( 1 + \frac{b}{a}\right)^n
 ```
-where $|a| > |b|$ such that $|b / a| < 1$.  
+where we pick $|a| > |b|$ and require $|b / a| < 1$ for a convergent binomial series.  
 
-Consider the example from special relativity, for the energy matter relation $E = \gamma\,m_0\,c^2 = m_0\,c^2/\sqrt{1 - v^2/c^2}$:
+Consider an example from special relativity, the energy matter relation:
 ```{math}
-E = \frac{m_0\,c^2}{\sqrt{1-\frac{v^2}{c^2}}} = m_0\,c^2\left(1-\frac{v^2}{c^2}\right)^{-1/2} 
+E = \gamma\,m_0\,c^2 = \frac{m_0\,c^2}{\sqrt{1-\frac{v^2}{c^2}}} = m_0\,c^2\left(1-\frac{v^2}{c^2}\right)^{-1/2} 
 ```
-Since $|v| < |c|$ here, then the second term is of the form $v^2/c^2 < 1$ and hence we can do a binomial expansion:
+Since $|v| < |c|$ here, then the second term is of the form $v^2/c^2 \ll 1$ and hence we can do a binomial expansion:
 ```{math}
 E = m_0\,c^2\left( 1 -\frac{1}{2}\left(-\frac{v^2}{c^2}\right) + \dots \right)
 ```

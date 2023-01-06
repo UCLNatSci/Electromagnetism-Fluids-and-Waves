@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>31. Shear stress and viscosity &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,51 +20,67 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="32. Steady solutions" href="steadysoln.html" />
     <link rel="prev" title="30. Conservation law derivations" href="conservation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,10 +89,15 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -85,16 +108,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -156,7 +180,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -228,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -317,90 +341,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fluids/navstok.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/navstok.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/navstok.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/fluids/navstok.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-inviscid-case">
    31.1. The inviscid case
@@ -440,17 +554,72 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Shear stress and viscosity</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-inviscid-case">
+   31.1. The inviscid case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-newtonian-case">
+   31.2. The Newtonian case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-non-newtonian-case">
+   31.3. The non-Newtonian case
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nonlinear-response-to-shear">
+     31.3.1. Nonlinear response to shear
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viscoelasticity">
+     31.3.2. Viscoelasticity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navier-stokes-equations">
+   31.4. Navier-Stokes equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#navier-stokes-in-cylindrical-coordinates">
+   31.5. Navier-Stokes in cylindrical coordinates
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="shear-stress-and-viscosity">
-<span id="ch-navstok"></span><h1><span class="section-number">31. </span>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="shear-stress-and-viscosity">
+<span id="ch-navstok"></span><h1><span class="section-number">31. </span>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this headline">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What does the viscosity of a fluid measure?</p></li>
@@ -458,11 +627,11 @@
 <li><p>Can we ever safely ignore shear-stress effects?</p></li>
 <li><p>Do the famous Navier-Stokes equations apply to all fluids?</p></li>
 </ul>
-<div class="section" id="the-inviscid-case">
-<h2><span class="section-number">31.1. </span>The inviscid case<a class="headerlink" href="#the-inviscid-case" title="Permalink to this headline">¶</a></h2>
+<section id="the-inviscid-case">
+<h2><span class="section-number">31.1. </span>The inviscid case<a class="headerlink" href="#the-inviscid-case" title="Permalink to this headline">#</a></h2>
 <p>At the end of the last section we saw that if there is no shear stress within the fluid then we obtain the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-consofmom7">
-<span class="eqno">(31.1)<a class="headerlink" href="#equation-consofmom7" title="Permalink to this equation">¶</a></span>\[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
+<span class="eqno">(31.1)<a class="headerlink" href="#equation-consofmom7" title="Permalink to this equation">#</a></span>\[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
 <p>This circumstance would occur within a body of fluid that is moving uniformly, as shown in the flow profile below. Each fluid element moves in perfect lockstep with its neighbours and so no shear force is exerted.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/uniform.png" id="uniform-flow"><img alt="alternative description" class="align-center" id="uniform-flow" src="../_images/uniform.png" style="width: 288.0px; height: 179.20000000000002px;" /></a>
@@ -476,12 +645,12 @@
 <p class="admonition-title">Superfluids</p>
 <p>All fluids have some internal resistance (viscosity) except for an exotic class of fluids called <a class="reference external" href="https://www.britannica.com/science/superfluidity">superfluids</a>. Liquid helium is a superfluid at temperatures close to absolute zero. Research has also been undertaken at UCL to demonstrate superfluid properties of structures involving <a class="reference external" href="https://qlm-ucl.org/">polariton</a> quasi-particles, which result from interaction between light (photons) and matter (excitons).</p>
 </div>
-</div>
-<div class="section" id="the-newtonian-case">
-<span id="newtonian-case"></span><h2><span class="section-number">31.2. </span>The Newtonian case<a class="headerlink" href="#the-newtonian-case" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-newtonian-case">
+<span id="newtonian-case"></span><h2><span class="section-number">31.2. </span>The Newtonian case<a class="headerlink" href="#the-newtonian-case" title="Permalink to this headline">#</a></h2>
 <p>The amount of internal friction depends on properties of the fluid. In a so-called “Newtonian” fluid the shear stress is linearly proportional to the velocity gradient, which may be written as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom6">
-<span class="eqno">(31.2)<a class="headerlink" href="#equation-consofmom6" title="Permalink to this equation">¶</a></span>\[\underline{\tau}_{i,j}=\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)\]</div>
+<span class="eqno">(31.2)<a class="headerlink" href="#equation-consofmom6" title="Permalink to this equation">#</a></span>\[\underline{\tau}_{i,j}=\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)\]</div>
 <p>The figure below illustrates a flow profile with a nonlinear shear velocity gradient <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial z}\)</span>. We will see later on that this type of flow profile tends to arise near to a solid boundary, due to fluid particles “sticking” to the boundary.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/blasius.png" id="strong-shear"><img alt="a strong shear" class="align-center" id="strong-shear" src="../_images/blasius.png" style="width: 288.0px; height: 233.60000000000002px;" /></a>
@@ -492,12 +661,12 @@
 <p>Viscosity is a measure of a fluid’s thickness, or how easily it flows. Elements in more viscous fluids exert greater internal resistance during fluid motion. Honey, for example, has a much higher viscosity than water so it flows slowly when you try to pour it.</p>
 <p>A more accurate way to understand and measure viscosity is to consider an object such as a marble dropped into a cylinder of the fluid under gravity. In a low viscosity fluid the marble will reach the bottom of the fluid cylinder quickly, as its momentum is not substantially diffused by the fluid, whilst in a high viscosity fluid the marble will take a long time to reach the bottom as its momentum is diffused to surrounding layers of fluid.</p>
 </div>
-</div>
-<div class="section" id="the-non-newtonian-case">
-<h2><span class="section-number">31.3. </span>The non-Newtonian case<a class="headerlink" href="#the-non-newtonian-case" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-non-newtonian-case">
+<h2><span class="section-number">31.3. </span>The non-Newtonian case<a class="headerlink" href="#the-non-newtonian-case" title="Permalink to this headline">#</a></h2>
 <p>The Newtonian fluid relationship <a class="reference internal" href="#equation-consofmom6">(31.2)</a> is an experimental result. It holds under a wide range of conditions for a wide range of fluids, including air, water and most oils and syrups. However, it does not hold for all fluids under all conditions. In fact, due to the abundance of long-chain polymers in biological fluids, Newtonian behaviour may be the exception in biological contexts, rather than the rule.</p>
-<div class="section" id="nonlinear-response-to-shear">
-<h3><span class="section-number">31.3.1. </span>Nonlinear response to shear<a class="headerlink" href="#nonlinear-response-to-shear" title="Permalink to this headline">¶</a></h3>
+<section id="nonlinear-response-to-shear">
+<h3><span class="section-number">31.3.1. </span>Nonlinear response to shear<a class="headerlink" href="#nonlinear-response-to-shear" title="Permalink to this headline">#</a></h3>
 <p>In real fluids there may be a nonlinear relationship between the shear stress and the velocity gradient. This may also be interpreted as an increase/decrease in the effective viscosity under application of shear. Examples  of shear-thinning fluids include paint, whipped cream, blood, saliva, lava and toothpaste. Examples of shear-thickening fluid include oobleck (which is a mixture of cornstarch and water) and the synovial fluid that lubricates our joints. Some fluids exhibit these properties only above/below a certain shear threshold.</p>
 <p><strong>Fun demonstrations:</strong></p>
 <ul class="simple">
@@ -505,9 +674,9 @@
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=eADS4oDTS4o">Kaye effect for shampoos</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=mYTerCbDUzE&amp;t=119s">The science of cornstarch and water (oobleck)</a></p></li>
 </ul>
-</div>
-<div class="section" id="viscoelasticity">
-<h3><span class="section-number">31.3.2. </span>Viscoelasticity<a class="headerlink" href="#viscoelasticity" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="viscoelasticity">
+<h3><span class="section-number">31.3.2. </span>Viscoelasticity<a class="headerlink" href="#viscoelasticity" title="Permalink to this headline">#</a></h3>
 <p>Some fluids become elastic when they are compressed or stretched, in the manner of an elastic solid. For these fluids, the application of a strain results in a stress in the same direction. Such fluids are called <em>viscoelastic</em> fluids. Examples include polyelectrolytes in which the electrostatic forces resist a change of shape, and liquid polymers in which the tangled polymers act as springs.</p>
 <p>The relationship between stress and strain is generally Hookean (i.e. linear) and so the equations of motion can be modified adding a stress term that is proportional to the strain.</p>
 <p><strong>Fun demonstrations:</strong></p>
@@ -516,20 +685,21 @@
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=MCHw6fUyLMY">Viscoelastic fluid simulation</a></p></li>
 </ul>
 <div class="exercise admonition" id="fluids/navstok-exercise-0">
-<p class="admonition-title"><span class="caption-number">Exercise 31.1 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 31.1 </span></p>
+<section id="exercise-content">
 <p>Research one example of a non-Newtonian fluid, and write 150 words about why it is non-Newtonian.</p>
+</section>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="navier-stokes-equations">
-<span id="navstokeqn"></span><h2><span class="section-number">31.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="navier-stokes-equations">
+<span id="navstokeqn"></span><h2><span class="section-number">31.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">#</a></h2>
 <p>The conservation of momentum equation for a Newtonian fluid, together with the conservation of mass equation for incompressible flow are called the Navier-Stokes equations. The equations are given below, where <span class="math notranslate nohighlight">\(p\)</span> is the hydrostatic pressure (mean normal stress), and <span class="math notranslate nohighlight">\(\nu=\frac{\mu}{\rho}\)</span> is called the kinematic viscosity.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90a621dc-cc9f-4acc-9b17-8c7381099a57">
-<span class="eqno">(31.3)<a class="headerlink" href="#equation-90a621dc-cc9f-4acc-9b17-8c7381099a57" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-5085b972-156a-496a-bd4e-c04e069d73e1">
-<span class="eqno">(31.4)<a class="headerlink" href="#equation-5085b972-156a-496a-bd4e-c04e069d73e1" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-86a5e41f-6e43-4380-81d5-fe0d655391cb">
+<span class="eqno">(31.3)<a class="headerlink" href="#equation-86a5e41f-6e43-4380-81d5-fe0d655391cb" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-69cb8abb-ade5-4f3b-92e6-10cb1bafaf4e">
+<span class="eqno">(31.4)<a class="headerlink" href="#equation-69cb8abb-ade5-4f3b-92e6-10cb1bafaf4e" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <div class="theorem admonition">
 <p class="admonition-title">Euler’s equations</p>
@@ -537,34 +707,35 @@
 </div>
 <p>These equations were first derived and studied in the 1800s. However, despite many decades of research it has still not been proven that the problem is well-defined in the sense of having smooth solutions in all geometries. At the turn of the century the Clay Mathematics institute announced this unsolved problem as one of its seven “<a class="reference external" href="https://www.claymath.org/millennium-problems">Millennium Prize Problems</a>”, with $1 million offered for a solution. The problem remains unsolved today. Nevertheless, mathematicians, scientists and engineers have been using them for nearly 200 years to very good effect for modelling fluid behaviour. The equations have been used for nearly any fluid phenomenon you can think of, from modelling mucous transport to making racing cars as good as they can be, to studying sunspots or the rings of Jupiter!</p>
 <div class="exercise admonition" id="ex-navstok">
-<p class="admonition-title"><span class="caption-number">Exercise 31.2 </span> </p>
-<div class="section" id="exercise-content">
+
+<p class="admonition-title"><span class="caption-number">Exercise 31.2 </span></p>
+<section id="exercise-content">
 <p>Taking the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> to be zero, write out the Navier-Stokes equations in component form, where <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span> and <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span>. For the conservation of momentum equation, you may write each of the <span class="math notranslate nohighlight">\((x,y,z)\)</span> components as a separate equation.</p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
-<div class="amsmath math notranslate nohighlight" id="equation-9ee36a6b-a9fc-4597-b8df-5374e4b78a85">
-<span class="eqno">(31.5)<a class="headerlink" href="#equation-9ee36a6b-a9fc-4597-b8df-5374e4b78a85" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c297fa31-7c03-42ce-85f6-3135860d18fd">
+<span class="eqno">(31.5)<a class="headerlink" href="#equation-c297fa31-7c03-42ce-85f6-3135860d18fd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
 \frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}&amp;=0\end{align}\]</div>
 </div>
-</div>
-<div class="section" id="navier-stokes-in-cylindrical-coordinates">
-<span id="navstok-cylindrical"></span><h2><span class="section-number">31.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="navier-stokes-in-cylindrical-coordinates">
+<span id="navstok-cylindrical"></span><h2><span class="section-number">31.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">#</a></h2>
 <p>Written out in cylindrical coordinates, the components of the Navier-Stokes equations for <span class="math notranslate nohighlight">\(\underline{u}=(u_r,u_{\theta},u_z)\)</span> are given by</p>
 <p><strong>Conservation of momentum:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b37236e3-4bc8-479b-b7d0-3728383a34a8">
-<span class="eqno">(31.6)<a class="headerlink" href="#equation-b37236e3-4bc8-479b-b7d0-3728383a34a8" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0c8a156f-cce0-40e4-b5fb-21747fa1a73a">
+<span class="eqno">(31.6)<a class="headerlink" href="#equation-0c8a156f-cce0-40e4-b5fb-21747fa1a73a" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
 <p><strong>Incompressibility:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf3c0fe2-3ffd-442c-9c36-5dbae6ee870d">
-<span class="eqno">(31.7)<a class="headerlink" href="#equation-bf3c0fe2-3ffd-442c-9c36-5dbae6ee870d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a7d03041-166c-464f-b056-fc93a317f61a">
+<span class="eqno">(31.7)<a class="headerlink" href="#equation-a7d03041-166c-464f-b056-fc93a317f61a" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
 <p>where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b06e90db-09a6-41c0-bcb1-c735efcad2de">
-<span class="eqno">(31.8)<a class="headerlink" href="#equation-b06e90db-09a6-41c0-bcb1-c735efcad2de" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
-</div>
-</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1ca30084-f753-46bd-b689-0bf71144d7ec">
+<span class="eqno">(31.8)<a class="headerlink" href="#equation-1ca30084-f753-46bd-b689-0bf71144d7ec" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -588,34 +759,48 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="conservation.html" title="previous page"><span class="section-number">30. </span>Conservation law derivations</a>
-    <a class='right-next' id="next-link" href="steadysoln.html" title="next page"><span class="section-number">32. </span>Steady solutions</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="conservation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">30. </span>Conservation law derivations</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="steadysoln.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">32. </span>Steady solutions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Ali Mozaffari and Ella Metcalfe<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

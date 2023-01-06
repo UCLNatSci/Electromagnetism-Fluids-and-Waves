@@ -1,3 +1,16 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.10.3
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
 # Harmonic and Oscillatory Motion
 Waves are connected to oscillations and describe the transfer of energy from different parts of a system through oscillating phenomena within said system.  This 
 should be seen differently to other ways that energy may be transferred, e.g. thermodynamically or by doing work by applying a force over a distance.  The study 
@@ -58,7 +71,7 @@ which gives us $A = 1,\, B = 0$ and so
 x(t) = \cos(\omega_0\,t)
 ```
 
-We say this system presents <b>Simple Harmonic Motion (SHM)</b>, because it represents the simplest kind of harmonic 
+We say this system presents **Simple Harmonic Motion (SHM)**, because it represents the simplest kind of harmonic 
 (also called oscillating or repetitive) motion that we can have.  We put energy into the system by extending the spring 
 (which is a form of potential energy $E_k = \frac{1}{2}kx^2$) and then this is converted into kinetic energy and then back into potential 
 (this time as gravitational potential energy) as the mass oscillates up and down.  What is truly stunning about this system is that SHM can be 
@@ -100,16 +113,16 @@ E = \frac{1}{2}k\left(A^2 + B^2\right)
 Which therefore means that the total amount of energy in the system is a constant, even if the energy flucuates between kinetic and potential in the course
 of the harmonic motion.
 
-## Damped Motion and Forced Harmonic Systems*
+## Damped Motion and Forced Harmonic Systems
 
 This SHM model presupposes that there are no losses in energy in this system and this is not always a good model for real world systems, usually there are 
-<b> damping </b> terms in our equations of motion, often this is due to air resistance but can also be caused by frictional forces.  This has the effect of adding a 
+**damping** terms in our equations of motion, often this is due to air resistance but can also be caused by frictional forces.  This has the effect of adding a 
 first derivative term to the equations of motion 
 ```{math}
 m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + c \frac{\mathrm{d} x}{\mathrm{d} t} + kx = 0 
 ```
 We could also think of oscillating systems, such as an AC electrical system with an input voltage $V = V_0 \cos(\Omega t)$, pushing round a current 
-$I = I_0\cos(\omega t)$ and with some fixed resistances $R$.  Such systems can be described as <em> forced </em> harmonic osciallators, because energy 
+$I = I_0\cos(\omega t)$ and with some fixed resistances $R$.  Such systems can be described as **forced** harmonic osciallators, because energy 
 is constantly being put into and given out from the system.  The most general form of these systems can be written as:
 ```{math}
 a\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + b \frac{\mathrm{d} x}{\mathrm{d} t} + cx = F(t)
@@ -118,6 +131,85 @@ where $F(t)$ is the driving term. We can rewrite in the :
 ```{math}
 \frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + 2\zeta\omega_0 \frac{\mathrm{d} x}{\mathrm{d} t} + {\omega_0}^2 x = F(t) 
 ```
-where $\omega_0$ is the natural angular frequency of the system and $\zeta$ is the damping ratio.  If energy is put into the system at a rate of $\Omega$, such as 
-$F(t) = F_0 \cos(\Omega \,t)$ and this frequency conicinces with the natural frequency $\omega_0$, i.e. $\Omega \rightarrow \omega_0$, this gives rise to the phenomena of 
-<b> resonance </b>.  
+where $\omega_0$ is the natural angular frequency of the system and $\zeta$ is the damping ratio.  Often energy is put into the system at a rate of $\Omega$, e.g. 
+$F(t) = F_0 \cos(\Omega \,t)$.  
+
+### Homogeneous (undriven) solutions
+This being the case, we can solve this ODE, first with a homogeneous solution using $x = A_\lambda\,e^{\lambda t}$:
+```{math}
+\frac{\mathrm{d}^2 x}{\mathrm{d}t^2} + 2\zeta\omega_0 \frac{\mathrm{d} x}{\mathrm{d} t} + {\omega_0}^2 x 
+= A\,e^{\lambda t}\Big( \lambda^2+ 2 \zeta\,\omega_0\,\lambda + {\omega_0}^2 \Big) = 0
+```
+Solving this resulting quadratic gives:
+```{math}
+\lambda = \frac{-2\zeta\omega_0 \pm \sqrt{4 \zeta^2{\omega_0}^2-4 {\omega_0}^2}}{2} = \omega_0\Big(-\zeta \pm \sqrt{\zeta^2-1} \Big)
+```
+This shows that in the homogeneous case, there are three important values of $\zeta$:
+
+1\. *Under damping*
+
+$\zeta < 1$, which means the solutions are $\lambda = \omega_0\Big( -\zeta \pm\ i \sqrt{|1 - \zeta^2|}\Big) = \omega_0\Big(-\zeta \pm i \gamma \Big)$, which is clearly a 
+complex solution and therefore corresponds to oscilating solutions:
+```{math}
+x(t) = \exp(-\omega_0\,\zeta \,t)\Big(A\,\exp(i\, \omega_0 \,\gamma t) + B\,\exp(-i \omega_0 \,\gamma \,t)\Big)
+```
+where $A,\,B$ are constants to be found and $\gamma^2 = 1- \zeta^2$.  We notice that we have factorised the damping term at the start of the expression, this results in
+ damped harmonic oscilations.
+
+2\. *Critical damping*
+
+$\zeta = 1$, hence $\lambda = -\omega_0$ which is a repeated root, so the solutions here have the form:
+```{math}
+x(t) = exp(- \omega_0\,t)\Big(A + Bt\Big)
+```
+where $A,\, B$ are constants to be found.  We notice that this is overall a damped solution, no oscillations.
+
+3\. *Over damping*
+
+$\zeta > 1$, hence $\lambda = \omega_0\Big(-\zeta \pm \sqrt{\zeta^2-1} \Big) = \omega_0 \Big( -\zeta \pm \delta \Big)$ and so the solutions are of the form:
+```{math}
+x(t) = A\,\exp(-\omega_0\,(\zeta-\delta)\,t) + B\,\exp(-\omega_0\,(\zeta + \delta)\,t)
+```
+where $A,\, B$ are constants to be found and $\delta^2 = \zeta^2 - 1$.  We notice that both of these solutions are decaying, since $\zeta > \delta$.  
+
+We plot examples of all three solutions (using some python code) in figure {numref}`Damped`.
+
+```{figure} ../figures/damped.png
+---
+name: Damped
+---
+Solutions for the damped harmonic oscillator with $\zeta = 0.1,\, 1,\, 3$ values.
+```
+
+### Inhomogeneous (driven) solutions
+
+Taking into account the driving term, we find that there are additional solutions here:
+```{math}
+x(t) = x_{h}(t) + x_{d}(t)
+```
+where $x_h(t)$ are the homogeneous solutions described in the previous section and $x_d(t)$ is the (particular integral) contribution from the driving term.  For 
+$F(t) = F_0 \cos(\Omega \,t)$, we find that:
+```{math}
+x_d(t) &= C\cos(\Omega \,t) + D\sin(\Omega \,t)\\
+\frac{\mathrm{d}}{\mathrm{d}t} x_d(t) &= \Omega\Big(-C \sin(\Omega \,t) + D\cos(\Omega \,t) \Big) \\
+\frac{\mathrm{d}^2}{\mathrm{d}t^2} x_d(t) &= -\Omega^2 \Big(C\cos(\Omega \,t) + D\sin(\Omega \,t)\Big)
+```
+and therefore we find simultanenous equations arise in $C,\, D$:
+```{math}
+\cos(\Omega\,t)\Big[ -C\Omega^2 + 2 D \,\zeta\,\omega_0 + {\omega_0}^2\,C \Big] &= F_0\,\cos(\Omega\,t) \\
+\sin(\Omega\,t)\Big[ -D\Omega^2 - 2 C \,\zeta\,\omega_0 + {\omega_0}^2\,D\Big] &= 0 \\
+&\,
+```
+This means that:
+```{math}
+C &= \frac{{\omega_0}^2-\Omega^2}{2\,\zeta\,\omega_0\,\Omega}D \\
+C &= \frac{F_0 -2 \zeta\,\omega_0\,\Omega}{{\omega_0}^2 - \Omega^2}D
+```
+and therefore:
+```{math}
+D = \frac{2\zeta\,\omega_0\,\Omega}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega}^2\,\Omega^2}F_0,\, \quad 
+C = \frac{{\omega_0}^2 - \Omega^2}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega}^2\,\Omega^2}F_0
+```
+Thus if we find the driven frequency $\Omega$ coincides with the natural frequency $\omega_0$, i.e. 
+$\Omega \rightarrow \omega_0$, this gives rise to the phenomena of 
+**resonance**.  
