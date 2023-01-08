@@ -286,7 +286,7 @@ glue("saddle_fig", fig, display=False)
 # The function needed to plot contours is part of the matplotlib library. Usage guidelines can be found [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html).
 # ````
 
-# In[ ]:
+# In[5]:
 
 
 x=np.linspace(-2, 2, 30)

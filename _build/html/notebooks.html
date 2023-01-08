@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content with notebooks &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,41 +18,42 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/mystyle.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -64,21 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -87,10 +72,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -108,15 +92,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -154,31 +137,36 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="waves/dispersionrelations.html">
-   7. Dispersion Relations and Wave Energy
+   7. Dispersion Relations and Wave Speed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="waves/waveenergy.html">
+   8. Energy and Power of Travelling Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="waves/polarisation.html">
-   8. Polarisation of Waves
+   9. Polarisation of Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="waves/standingwaves.html">
-   9. Standing Waves
+   10. Standing Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="waves/matterwaves.html">
-   10. Matter Waves
+   11. Matter Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="waves/dopplershift.html">
-   11. Doppler Shift
+   12. Doppler Shift
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -186,71 +174,66 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/introduction.html">
-   12. Introduction
+   13. Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/EMmaths.html">
-   13. Mathematical Preliminaries
+   14. Mathematical Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/electrostatics.html">
-   14. Electrostatics
+   15. Electrostatics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/solvingEsystems.html">
-   15. Solving Electrostatic Systems
+   16. Solving Electrostatic Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/Efieldenergy.html">
-   16. Energy in an Electric Field
+   17. Energy in an Electric Field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/magneticfields.html">
-   17. Magnetism
+   18. Magnetism
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/magneticforces.html">
-   18. Magnetic Forces
+   19. Magnetic Forces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/ampereslaw.html">
-   19. Ampère’s Circuital Law
+   20. Ampère’s Circuital Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/faradayslaw.html">
-   20. Faraday’s Law
+   21. Faraday’s Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/maxwelleqns.html">
-   21. Differential Forms and Maxwell’s Equations
+   22. Differential Forms and Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/solvingmaxwell.html">
-   22. Solutions to Maxwell’s Equations
+   23. Solutions to Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electromagnetism/EMenergy.html">
-   23. Energy in an Electromagnetic field
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="electromagnetism/EMpotentials.html">
-   24. Electromagnetic Scalar and Vector Potentials
+   24. Energy in an Electromagnetic field
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -339,17 +322,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -357,191 +335,94 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/notebooks.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebooks.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#markdown-notebooks">
    Markdown + notebooks
@@ -559,11 +440,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Content with notebooks</h1>
@@ -597,16 +479,15 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="content-with-notebooks">
-<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="content-with-notebooks">
+<h1>Content with notebooks<a class="headerlink" href="#content-with-notebooks" title="Permalink to this headline">¶</a></h1>
 <p>You can also create content with Jupyter Notebooks. This means that you can include
 code blocks and their outputs in your book.</p>
-<section id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">#</a></h2>
+<div class="section" id="markdown-notebooks">
+<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">¶</a></h2>
 <p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
 <p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg" /></p>
 <p>You can also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
@@ -623,15 +504,15 @@ math blocks
 \end{aligned}
 \end{split}\]</div>
 <p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
-</section>
-<section id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="myst-markdown">
+<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">¶</a></h2>
 <p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
 out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
 or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
-</section>
-<section id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="code-blocks-and-outputs">
+<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">¶</a></h2>
 <p>Jupyter Book will also embed your code blocks and output in your book.
 For example, here’s some sample Matplotlib code:</p>
 <div class="cell docutils container">
@@ -644,63 +525,7 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:172: RuntimeWarning: divide by zero encountered in exp2
-  eps=exp2(ld(-112)),
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:51: RuntimeWarning: divide by zero encountered in log10
-  self.precision = int(-log10(self.eps))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:52: RuntimeWarning: divide by zero encountered in power
-  self.resolution = float_to_float(float_conv(10) ** (-self.precision))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:184: RuntimeWarning: divide by zero encountered in exp2
-  epsneg_f80 = exp2(ld(-64))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:185: RuntimeWarning: divide by zero encountered in exp2
-  tiny_f80 = exp2(ld(-16382))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:199: RuntimeWarning: divide by zero encountered in exp2
-  eps=exp2(ld(-63)),
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:211: RuntimeWarning: divide by zero encountered in nextafter
-  huge_dd = (umath.nextafter(ld(inf), ld(0))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:224: RuntimeWarning: divide by zero encountered in exp2
-  eps=exp2(ld(-105)),
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:225: RuntimeWarning: divide by zero encountered in exp2
-  epsneg= exp2(ld(-106)),
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\getlimits.py:227: RuntimeWarning: divide by zero encountered in exp2
-  tiny=exp2(ld(-1022)))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\__init__.py:343: RuntimeWarning: divide by zero encountered in subtract
-  if not abs(x.dot(x) - 2.0) &lt; 1e-5:
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\__init__.py:343: RuntimeWarning: divide by zero encountered in absolute
-  if not abs(x.dot(x) - 2.0) &lt; 1e-5:
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
-  start = asanyarray(start) * 1.0
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:128: RuntimeWarning: divide by zero encountered in multiply
-  stop  = asanyarray(stop)  * 1.0
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:134: RuntimeWarning: divide by zero encountered in double_scalars
-  delta = stop - start
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:141: RuntimeWarning: divide by zero encountered in double_scalars
-  step = delta / div
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:56: RuntimeWarning: divide by zero encountered in reduce
-  return umr_any(a, axis, dtype, out, keepdims)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:151: RuntimeWarning: divide by zero encountered in multiply
-  y *= step
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:161: RuntimeWarning: divide by zero encountered in add
-  y += start
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:989: RuntimeWarning: divide by zero encountered in double_scalars
-  [(1.0 - x, y1, y0) for x, y0, y1 in reversed(data)])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\markers.py:796: RuntimeWarning: divide by zero encountered in true_divide
-  np.array([(-1, -3), (+1, -3), (+1, -1), (+3, -1), (+3, +1), (+1, +1),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\markers.py:800: RuntimeWarning: divide by zero encountered in true_divide
-  np.array([(+3, 0), (+3, +1), (+1, +1), (+1, +3),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\markers.py:820: RuntimeWarning: divide by zero encountered in true_divide
-  np.array([(-1, -2), (0, -1), (+1, -2), (+2, -1), (+1, 0), (+2, +1),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\markers.py:825: RuntimeWarning: divide by zero encountered in true_divide
-  np.array([(+1, 0), (+2, +1), (+1, +2), (0, +1),
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tri\triinterpolate.py:668: RuntimeWarning: divide by zero encountered in true_divide
-  gauss_w = np.ones([9], dtype=np.float64) / 9.
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0xcbd2958&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.pyplot._IonContext at 0x1fe702321c8&gt;
 </pre></div>
 </div>
 </div>
@@ -729,467 +554,13 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\markers.py:825: RuntimeWar
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:127: RuntimeWarning: divide by zero encountered in multiply
-  start = asanyarray(start) * 1.0
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:128: RuntimeWarning: divide by zero encountered in multiply
-  stop  = asanyarray(stop)  * 1.0
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:134: RuntimeWarning: divide by zero encountered in double_scalars
-  delta = stop - start
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:141: RuntimeWarning: divide by zero encountered in double_scalars
-  step = delta / div
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:56: RuntimeWarning: divide by zero encountered in reduce
-  return umr_any(a, axis, dtype, out, keepdims)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:151: RuntimeWarning: divide by zero encountered in multiply
-  y *= step
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:161: RuntimeWarning: divide by zero encountered in add
-  y += start
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\function_base.py:277: RuntimeWarning: divide by zero encountered in power
-  return _nx.power(base, y)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_11232/3412760897.py:5: RuntimeWarning: divide by zero encountered in add
-  data = [np.logspace(0, 1, 100) + np.random.randn(100) + ii for ii in range(N)]
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\function_base.py:1281: RuntimeWarning: divide by zero encountered in subtract
-  a = op(a[slice1], a[slice2])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:517: RuntimeWarning: divide by zero encountered in less
-  if (np.diff(x) &lt; 0).any():
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:524: RuntimeWarning: divide by zero encountered in multiply
-  x = x * (N - 1)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:525: RuntimeWarning: divide by zero encountered in positive
-  xind = (N - 1) * np.linspace(0, 1, N) ** gamma
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:525: RuntimeWarning: divide by zero encountered in multiply
-  xind = (N - 1) * np.linspace(0, 1, N) ** gamma
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:528: RuntimeWarning: divide by zero encountered in subtract
-  distance = (xind[1:-1] - x[ind - 1]) / (x[ind] - x[ind - 1])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:528: RuntimeWarning: divide by zero encountered in true_divide
-  distance = (xind[1:-1] - x[ind - 1]) / (x[ind] - x[ind - 1])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:531: RuntimeWarning: divide by zero encountered in subtract
-  distance * (y0[ind] - y1[ind - 1]) + y1[ind - 1],
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:531: RuntimeWarning: divide by zero encountered in multiply
-  distance * (y0[ind] - y1[ind - 1]) + y1[ind - 1],
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:531: RuntimeWarning: divide by zero encountered in add
-  distance * (y0[ind] - y1[ind - 1]) + y1[ind - 1],
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:96: RuntimeWarning: divide by zero encountered in isnan
-  return um.isnan(a)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:112: RuntimeWarning: divide by zero encountered in clip
-  return ufunc(*args, out=out, **kwargs)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:614: RuntimeWarning: divide by zero encountered in isnan
-  mask_bad = X.mask if np.ma.is_masked(X) else np.isnan(X)  # Mask nan&#39;s.
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:620: RuntimeWarning: divide by zero encountered in multiply
-  xa *= self.N
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:623: RuntimeWarning: divide by zero encountered in less
-  xa[xa &lt; 0] = -1
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:625: RuntimeWarning: divide by zero encountered in equal
-  xa[xa == self.N] = self.N - 1
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:631: RuntimeWarning: divide by zero encountered in greater
-  xa[xa &gt; self.N - 1] = self._i_over
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\colors.py:632: RuntimeWarning: divide by zero encountered in less
-  xa[xa &lt; 0] = self._i_under
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:87: RuntimeWarning: divide by zero encountered in reduce
-  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\figure.py:2251: RuntimeWarning: divide by zero encountered in isfinite
-  if not np.isfinite(figsize).all() or (np.array(figsize) &lt; 0).any():
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:62: RuntimeWarning: divide by zero encountered in reduce
-  return umr_all(a, axis, dtype, out, keepdims)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\figure.py:2251: RuntimeWarning: divide by zero encountered in less
-  if not np.isfinite(figsize).all() or (np.array(figsize) &lt; 0).any():
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2031: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 0] *= sx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2032: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 1] *= sx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2033: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 2] *= sx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2034: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 0] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2035: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 1] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2036: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 2] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:378: RuntimeWarning: divide by zero encountered in double_scalars
-  return points[1, 0] - points[0, 0]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:384: RuntimeWarning: divide by zero encountered in double_scalars
-  return points[1, 1] - points[0, 1]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2142: RuntimeWarning: divide by zero encountered in less_equal
-  if np.any(np.diff(steps) &lt;= 0) or steps[-1] &gt; 10 or steps[0] &lt; 1:
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2155: RuntimeWarning: divide by zero encountered in multiply
-  return np.concatenate([0.1 * steps[:-1], steps, [10 * steps[1]]])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2155: RuntimeWarning: divide by zero encountered in double_scalars
-  return np.concatenate([0.1 * steps[:-1], steps, [10 * steps[1]]])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:3438: RuntimeWarning: divide by zero encountered in isfinite
-  and not np.isfinite(converted_limit)):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2827: RuntimeWarning: divide by zero encountered in isfinite
-  if (not np.isfinite(vmin)) or (not np.isfinite(vmax)):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2840: RuntimeWarning: divide by zero encountered in double_scalars
-  if maxabsvalue &lt; (1e6 / tiny) * np.finfo(float).tiny:
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2012: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 2] += tx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2013: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 2] += ty
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\gridspec.py:202: RuntimeWarning: divide by zero encountered in subtract
-  fig_tops, fig_bottoms = (top - cell_hs).reshape((-1, 2)).T
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\gridspec.py:203: RuntimeWarning: divide by zero encountered in add
-  fig_lefts, fig_rights = (left + cell_ws).reshape((-1, 2)).T
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:43: RuntimeWarning: divide by zero encountered in reduce
-  return umr_minimum(a, axis, None, out, keepdims, initial, where)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:39: RuntimeWarning: divide by zero encountered in reduce
-  return umr_maximum(a, axis, None, out, keepdims, initial, where)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:1041: RuntimeWarning: divide by zero encountered in not_equal
-  if np.any(self._points != other.get_points()):
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:87: RuntimeWarning: divide by zero encountered in reduce
-  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2012: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 2] += tx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2013: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 2] += ty
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:1760: RuntimeWarning: divide by zero encountered in equal
-  return np.all(self.get_matrix() == other.get_matrix())
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\legend.py:794: RuntimeWarning: divide by zero encountered in long_scalars
-  for h, t in handles_and_labels[i0:i0 + di]]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2708: RuntimeWarning: divide by zero encountered in isfinite
-  x_values = np.extract(np.isfinite(x_values), x_values)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:43: RuntimeWarning: divide by zero encountered in reduce
-  return umr_minimum(a, axis, None, out, keepdims, initial, where)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:39: RuntimeWarning: divide by zero encountered in reduce
-  return umr_maximum(a, axis, None, out, keepdims, initial, where)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2827: RuntimeWarning: divide by zero encountered in isfinite
-  if (not np.isfinite(vmin)) or (not np.isfinite(vmax)):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2840: RuntimeWarning: divide by zero encountered in double_scalars
-  if maxabsvalue &lt; (1e6 / tiny) * np.finfo(float).tiny:
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2725: RuntimeWarning: divide by zero encountered in int_scalars
-  i0 = stickies.searchsorted(x0 + tol) - 1
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2737: RuntimeWarning: divide by zero encountered in double_scalars
-  delta = (x1t - x0t) * margin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2738: RuntimeWarning: divide by zero encountered in isfinite
-  if not np.isfinite(delta):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2740: RuntimeWarning: divide by zero encountered in double_scalars
-  x0, x1 = inverse_trans.transform([x0t - delta, x1t + delta])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:3438: RuntimeWarning: divide by zero encountered in isfinite
-  and not np.isfinite(converted_limit)):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:396: RuntimeWarning: divide by zero encountered in double_scalars
-  return (x0, y0, x1 - x0, y1 - y0)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:378: RuntimeWarning: divide by zero encountered in double_scalars
-  return points[1, 0] - points[0, 0]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2272: RuntimeWarning: divide by zero encountered in double_scalars
-  length = ends.width * 72
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2277: RuntimeWarning: divide by zero encountered in double_scalars
-  return int(np.floor(length / size))
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2277: RuntimeWarning: divide by zero encountered in floor
-  return int(np.floor(length / size))
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:96: RuntimeWarning: divide by zero encountered in isnan
-  return um.isnan(a)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:112: RuntimeWarning: divide by zero encountered in clip
-  return ufunc(*args, out=out, **kwargs)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2027: RuntimeWarning: divide by zero encountered in true_divide
-  scale = 10 ** (math.log10(dv / n) // 1)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2221: RuntimeWarning: divide by zero encountered in true_divide
-  raw_step = (_vmax - _vmin) / nbins
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2222: RuntimeWarning: divide by zero encountered in multiply
-  steps = self._extended_steps * scale
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2228: RuntimeWarning: divide by zero encountered in greater_equal
-  istep = np.nonzero(steps &gt;= raw_step)[0][0]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2240: RuntimeWarning: divide by zero encountered in int_scalars
-  for istep in reversed(range(istep + 1)):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2246: RuntimeWarning: divide by zero encountered in double_scalars
-  best_vmin = (_vmin // step) * step
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2253: RuntimeWarning: divide by zero encountered in double_scalars
-  low = edge.le(_vmin - best_vmin)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2061: RuntimeWarning: divide by zero encountered in double_scalars
-  d, m = divmod(x, self.step)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2062: RuntimeWarning: divide by zero encountered in double_scalars
-  if self.closeto(m / self.step, 1):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2057: RuntimeWarning: divide by zero encountered in double_scalars
-  return abs(ms - edge) &lt; tol
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2254: RuntimeWarning: divide by zero encountered in double_scalars
-  high = edge.ge(_vmax - best_vmin)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2068: RuntimeWarning: divide by zero encountered in double_scalars
-  d, m = divmod(x, self.step)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2069: RuntimeWarning: divide by zero encountered in double_scalars
-  if self.closeto(m / self.step, 0):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2071: RuntimeWarning: divide by zero encountered in double_scalars
-  return d + 1
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2255: RuntimeWarning: divide by zero encountered in double_scalars
-  ticks = np.arange(low, high + 1) * step + best_vmin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2255: RuntimeWarning: divide by zero encountered in multiply
-  ticks = np.arange(low, high + 1) * step + best_vmin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2255: RuntimeWarning: divide by zero encountered in add
-  ticks = np.arange(low, high + 1) * step + best_vmin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2257: RuntimeWarning: divide by zero encountered in less_equal
-  nticks = ((ticks &lt;= _vmax) &amp; (ticks &gt;= _vmin)).sum()
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2257: RuntimeWarning: divide by zero encountered in greater_equal
-  nticks = ((ticks &lt;= _vmax) &amp; (ticks &gt;= _vmin)).sum()
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2257: RuntimeWarning: divide by zero encountered in bitwise_and
-  nticks = ((ticks &lt;= _vmax) &amp; (ticks &gt;= _vmin)).sum()
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:47: RuntimeWarning: divide by zero encountered in reduce
-  return umr_sum(a, axis, dtype, out, keepdims, initial, where)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:2260: RuntimeWarning: divide by zero encountered in add
-  return ticks + offset
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2031: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 0] *= sx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2032: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 1] *= sx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2033: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[0, 2] *= sx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2034: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 0] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2035: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 1] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2036: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx[1, 2] *= sy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:384: RuntimeWarning: divide by zero encountered in double_scalars
-  return points[1, 1] - points[0, 1]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2539: RuntimeWarning: divide by zero encountered in double_scalars
-  length = ends.height * 72
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2543: RuntimeWarning: divide by zero encountered in double_scalars
-  return int(np.floor(length / size))
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2543: RuntimeWarning: divide by zero encountered in floor
-  return int(np.floor(length / size))
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib_inline\backend_inline.py:247: RuntimeWarning: divide by zero encountered in greater
-  return rgbaArr[:, :3].dot((.299, .587, .114)) &gt; .5
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib_inline\backend_inline.py:235: RuntimeWarning: divide by zero encountered in equal
-  if ticksLight.size and (ticksLight == ticksLight[0]).all():
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:62: RuntimeWarning: divide by zero encountered in reduce
-  return umr_all(a, axis, dtype, out, keepdims)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:390: RuntimeWarning: divide by zero encountered in subtract
-  return points[1] - points[0]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:827: RuntimeWarning: divide by zero encountered in double_scalars
-  return Bbox.from_extents(x0, y0, x0 + width, y0 + height)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:1041: RuntimeWarning: divide by zero encountered in not_equal
-  if np.any(self._points != other.get_points()):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:813: RuntimeWarning: divide by zero encountered in less_equal
-  locs = locs[(vmin &lt;= locs) &amp; (locs &lt;= vmax)]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:813: RuntimeWarning: divide by zero encountered in bitwise_and
-  locs = locs[(vmin &lt;= locs) &amp; (locs &lt;= vmax)]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:861: RuntimeWarning: divide by zero encountered in less_equal
-  locs = locs[(vmin &lt;= locs) &amp; (locs &lt;= vmax)]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:861: RuntimeWarning: divide by zero encountered in bitwise_and
-  locs = locs[(vmin &lt;= locs) &amp; (locs &lt;= vmax)]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:862: RuntimeWarning: divide by zero encountered in absolute
-  locs = np.abs(locs)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:891: RuntimeWarning: divide by zero encountered in subtract
-  locs = (np.asarray(_locs) - self.offset) / 10. ** self.orderOfMagnitude
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:891: RuntimeWarning: divide by zero encountered in true_divide
-  locs = (np.asarray(_locs) - self.offset) / 10. ** self.orderOfMagnitude
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:275: RuntimeWarning: divide by zero encountered in reduce
-  umr_maximum(a, axis, None, out, keepdims),
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:276: RuntimeWarning: divide by zero encountered in reduce
-  umr_minimum(a, axis, None, None, keepdims),
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\_methods.py:274: RuntimeWarning: divide by zero encountered in subtract
-  return um.subtract(
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:58: RuntimeWarning: divide by zero encountered in multiply
-  return bound(*args, **kwds)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:58: RuntimeWarning: divide by zero encountered in rint
-  return bound(*args, **kwds)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\core\fromnumeric.py:58: RuntimeWarning: divide by zero encountered in true_divide
-  return bound(*args, **kwds)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:908: RuntimeWarning: divide by zero encountered in subtract
-  if np.abs(locs - np.round(locs, decimals=sigfigs)).max() &lt; thresh:
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:908: RuntimeWarning: divide by zero encountered in absolute
-  if np.abs(locs - np.round(locs, decimals=sigfigs)).max() &lt; thresh:
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\ticker.py:670: RuntimeWarning: divide by zero encountered in double_scalars
-  xp = (x - self.offset) / (10. ** self.orderOfMagnitude)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:1273: RuntimeWarning: divide by zero encountered in double_scalars
-  tol = (hi - lo) * 1e-5
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2904: RuntimeWarning: divide by zero encountered in double_scalars
-  rtol = (b - a) * rtol
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2905: RuntimeWarning: divide by zero encountered in double_scalars
-  return a - rtol &lt;= val &lt;= b + rtol
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2905: RuntimeWarning: divide by zero encountered in less_equal
-  return a - rtol &lt;= val &lt;= b + rtol
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:379: RuntimeWarning: divide by zero encountered in double_scalars
-  width = xmax - xmin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:380: RuntimeWarning: divide by zero encountered in double_scalars
-  height = ymax - ymin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:392: RuntimeWarning: divide by zero encountered in double_scalars
-  offsetx = (xmin + xmax) / 2
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:432: RuntimeWarning: divide by zero encountered in double_scalars
-  xmin -= offsetx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:433: RuntimeWarning: divide by zero encountered in double_scalars
-  ymin -= offsety
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:438: RuntimeWarning: divide by zero encountered in subtract
-  xys = M.transform(offset_layout) - (offsetx, offsety)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2622: RuntimeWarning: divide by zero encountered in double_scalars
-  x_scale = 1.0 / inw
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2623: RuntimeWarning: divide by zero encountered in double_scalars
-  y_scale = 1.0 / inh
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2624: RuntimeWarning: divide by zero encountered in double_scalars
-  self._mtx = np.array([[x_scale, 0.0    , (-inl*x_scale)],
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:2625: RuntimeWarning: divide by zero encountered in double_scalars
-  [0.0    , y_scale, (-inb*y_scale)],
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:652: RuntimeWarning: divide by zero encountered in add
-  return Bbox(self._points + (tx, ty))
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:687: RuntimeWarning: divide by zero encountered in isfinite
-  if not np.isfinite(posx) or not np.isfinite(posy):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:709: RuntimeWarning: divide by zero encountered in double_scalars
-  x = x + posx
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:710: RuntimeWarning: divide by zero encountered in double_scalars
-  y = y + posy
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:712: RuntimeWarning: divide by zero encountered in double_scalars
-  y = canvash - y
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2100: RuntimeWarning: divide by zero encountered in double_scalars
-  (x, bottom - self.labelpad * self.figure.dpi / 72)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2132: RuntimeWarning: divide by zero encountered in double_scalars
-  y = bottom - self.OFFSETTEXTPAD * self.figure.dpi / 72
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:405: RuntimeWarning: divide by zero encountered in double_scalars
-  offsety = ymin + height - baseline / 2.0
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2373: RuntimeWarning: divide by zero encountered in double_scalars
-  (left - self.labelpad * self.figure.dpi / 72, y)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axis.py:2399: RuntimeWarning: divide by zero encountered in double_scalars
-  (x, top + self.OFFSETTEXTPAD * self.figure.dpi / 72)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\text.py:403: RuntimeWarning: divide by zero encountered in double_scalars
-  offsety = ymin + descent
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:833: RuntimeWarning: divide by zero encountered in double_scalars
-  h_d = max(h_ - d_, h - yd)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:101: RuntimeWarning: divide by zero encountered in double_scalars
-  offsets_ = np.cumsum([0] + [w + sep for w in w_list])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:104: RuntimeWarning: divide by zero encountered in double_scalars
-  total = offsets_[-1] - sep
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:497: RuntimeWarning: divide by zero encountered in add
-  xoffsets = xoffsets_ + [xd for w, h, xd, yd in whd_list]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:500: RuntimeWarning: divide by zero encountered in subtract
-  xoffsets = xoffsets - xdescent
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:502: RuntimeWarning: divide by zero encountered in double_scalars
-  return (width + 2 * pad, height + 2 * pad,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:168: RuntimeWarning: divide by zero encountered in double_scalars
-  height_descent = max(h - d for h, d in hd_list)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:170: RuntimeWarning: divide by zero encountered in double_scalars
-  height = height_descent + descent
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:451: RuntimeWarning: divide by zero encountered in add
-  yoffsets = yoffsets_ + [yd for w, h, xd, yd in whd_list]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:452: RuntimeWarning: divide by zero encountered in double_scalars
-  ydescent = height - yoffsets[0]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:453: RuntimeWarning: divide by zero encountered in subtract
-  yoffsets = height - yoffsets
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:455: RuntimeWarning: divide by zero encountered in subtract
-  yoffsets = yoffsets - ydescent
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:457: RuntimeWarning: divide by zero encountered in double_scalars
-  return (width + 2 * pad, height + 2 * pad,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:458: RuntimeWarning: divide by zero encountered in double_scalars
-  xdescent + pad, ydescent + pad,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:481: RuntimeWarning: divide by zero encountered in double_scalars
-  height_descent = max(h - yd for w, h, xd, yd in whd_list)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:483: RuntimeWarning: divide by zero encountered in double_scalars
-  height = height_descent + ydescent
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:503: RuntimeWarning: divide by zero encountered in double_scalars
-  xdescent + pad, ydescent + pad,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:440: RuntimeWarning: divide by zero encountered in double_scalars
-  whd_list = [(w, h, xd, (h - yd)) for w, h, xd, yd in whd_list]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:180: RuntimeWarning: divide by zero encountered in double_scalars
-  offsets = [(height - h) * .5 + d for h, d in hd_list]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:648: RuntimeWarning: divide by zero encountered in add
-  return Bbox(points + [[-p, -p], [p, p]])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:546: RuntimeWarning: divide by zero encountered in double_scalars
-  [(l + cx * (w - W)) - L,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:547: RuntimeWarning: divide by zero encountered in double_scalars
-  (b + cy * (h - H)) - B])
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:545: RuntimeWarning: divide by zero encountered in add
-  return Bbox(self._points +
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:619: RuntimeWarning: divide by zero encountered in less
-  return (((self.min &lt; vertices) &amp;
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:620: RuntimeWarning: divide by zero encountered in less
-  (vertices &lt; self.max)).all(axis=1).sum())
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:619: RuntimeWarning: divide by zero encountered in bitwise_and
-  return (((self.min &lt; vertices) &amp;
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\legend.py:1045: RuntimeWarning: divide by zero encountered in long_scalars
-  badness = (sum(legendBox.count_contains(line.vertices)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\legend.py:589: RuntimeWarning: divide by zero encountered in double_scalars
-  return x + xdescent, y + ydescent
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:354: RuntimeWarning: divide by zero encountered in double_scalars
-  return mtransforms.Bbox.from_bounds(px - xd, py - yd, w, h)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:3792: RuntimeWarning: divide by zero encountered in double_scalars
-  y, height = y / m_aspect, height / m_aspect
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2214: RuntimeWarning: divide by zero encountered in double_scalars
-  width, height = width + 2 * pad, height + 2 * pad
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2216: RuntimeWarning: divide by zero encountered in double_scalars
-  x0, y0 = x0 - pad, y0 - pad,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2217: RuntimeWarning: divide by zero encountered in double_scalars
-  x1, y1 = x0 + width, y0 + height
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2221: RuntimeWarning: divide by zero encountered in double_scalars
-  cp = [(x0 + dr, y0),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2222: RuntimeWarning: divide by zero encountered in double_scalars
-  (x1 - dr, y0),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2223: RuntimeWarning: divide by zero encountered in double_scalars
-  (x1, y0), (x1, y0 + dr),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2224: RuntimeWarning: divide by zero encountered in double_scalars
-  (x1, y1 - dr),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2225: RuntimeWarning: divide by zero encountered in double_scalars
-  (x1, y1), (x1 - dr, y1),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2226: RuntimeWarning: divide by zero encountered in double_scalars
-  (x0 + dr, y1),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2227: RuntimeWarning: divide by zero encountered in double_scalars
-  (x0, y1), (x0, y1 - dr),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2228: RuntimeWarning: divide by zero encountered in double_scalars
-  (x0, y0 + dr),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2229: RuntimeWarning: divide by zero encountered in double_scalars
-  (x0, y0), (x0 + dr, y0),
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:2230: RuntimeWarning: divide by zero encountered in double_scalars
-  (x0 + dr, y0)]
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:3807: RuntimeWarning: divide by zero encountered in multiply
-  vertices[:, 1] = vertices[:, 1] * m_aspect
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\offsetbox.py:367: RuntimeWarning: divide by zero encountered in double_scalars
-  c.set_offset((px + ox, py + oy))
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:692: RuntimeWarning: divide by zero encountered in maximum
-  x0 = np.maximum(bbox1.xmin, bbox2.xmin)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:693: RuntimeWarning: divide by zero encountered in minimum
-  x1 = np.minimum(bbox1.xmax, bbox2.xmax)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:694: RuntimeWarning: divide by zero encountered in maximum
-  y0 = np.maximum(bbox1.ymin, bbox2.ymin)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:695: RuntimeWarning: divide by zero encountered in minimum
-  y1 = np.minimum(bbox1.ymax, bbox2.ymax)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:4473: RuntimeWarning: divide by zero encountered in equal
-  if np.all(clip_extent.extents == axbbox.extents):
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\spines.py:180: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.x0 = bb0.x0 - padout
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\spines.py:181: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.x1 = bb0.x1 + padin
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\spines.py:183: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.y0 = bb0.y0 - padout
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\spines.py:184: RuntimeWarning: divide by zero encountered in double_scalars
-  bb0.y1 = bb0.y1 + padin
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:327: RuntimeWarning: divide by zero encountered in not_equal
-  mask[1:] = aux[1:] != aux[:-1]
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:432: RuntimeWarning: divide by zero encountered in equal
-  mask = aux[1:] == aux[:-1]
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:583: RuntimeWarning: divide by zero encountered in equal
-  mask |= (ar1 == a)
-C:\Users\alimo\anaconda3\lib\site-packages\numpy\lib\arraysetops.py:583: RuntimeWarning: divide by zero encountered in bitwise_or
-  mask |= (ar1 == a)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\figure.py:1654: RuntimeWarning: divide by zero encountered in isfinite
-  if (np.isfinite(b.width) and np.isfinite(b.height)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:65: RuntimeWarning: divide by zero encountered in double_scalars
-  w1, h1 = fig.bbox.width * dpi_scale, fig.bbox.height * dpi_scale
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:71: RuntimeWarning: divide by zero encountered in double_scalars
-  fig.patch.set_bounds(x0 / w1, y0 / h1,
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\tight_bbox.py:72: RuntimeWarning: divide by zero encountered in double_scalars
-  fig.bbox.width / w1, fig.bbox.height / h1)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:768: RuntimeWarning: divide by zero encountered in double_scalars
-  x1 = self.convert_xunits(self._x0 + self._width)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:769: RuntimeWarning: divide by zero encountered in double_scalars
-  y1 = self.convert_yunits(self._y0 + self._height)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:213: RuntimeWarning: divide by zero encountered in double_scalars
-  x = round(x + xo + xd)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:213: RuntimeWarning: divide by zero encountered in rint
-  x = round(x + xo + xd)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:214: RuntimeWarning: divide by zero encountered in double_scalars
-  y = round(y + yo + yd)
-C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py:214: RuntimeWarning: divide by zero encountered in rint
-  y = round(y + yo + yd)
-</pre></div>
-</div>
-<img alt="_images/notebooks_2_6.png" src="_images/notebooks_2_6.png" />
+<img alt="_images/notebooks_2_0.png" src="_images/notebooks_2_0.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
 with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1213,34 +584,28 @@ with your book. For more information about this, see <a class="reference externa
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ali Mozaffari and Ella Metcalfe<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

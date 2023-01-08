@@ -16,10 +16,12 @@ parts:
       - file: waves/waveequationsolns
       - file: waves/transverse
       - file: waves/dispersionrelations
+      - file: waves/waveenergy
       - file: waves/polarisation
       - file: waves/standingwaves
       - file: waves/matterwaves
       - file: waves/dopplershift
+
   - caption: Electromagnetism
     numbered: True
     chapters:
@@ -35,7 +37,8 @@ parts:
       - file: electromagnetism/maxwelleqns
       - file: electromagnetism/solvingmaxwell
       - file: electromagnetism/EMenergy
-      - file: electromagnetism/EMpotentials
+#      - file: electromagnetism/EMpotentials
+
   - caption: Fluids
     numbered: True
     chapters:

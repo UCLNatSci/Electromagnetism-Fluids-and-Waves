@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>22. Solutions to Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23. Solutions to Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,45 +18,46 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="23. Energy in an Electromagnetic field" href="EMenergy.html" />
-    <link rel="prev" title="21. Differential Forms and Maxwell’s Equations" href="maxwelleqns.html" />
+    <link rel="next" title="24. Energy in an Electromagnetic field" href="EMenergy.html" />
+    <link rel="prev" title="22. Differential Forms and Maxwell’s Equations" href="maxwelleqns.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -66,21 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -89,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -110,15 +94,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -156,31 +139,36 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/dispersionrelations.html">
-   7. Dispersion Relations and Wave Energy
+   7. Dispersion Relations and Wave Speed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/waveenergy.html">
+   8. Energy and Power of Travelling Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/polarisation.html">
-   8. Polarisation of Waves
+   9. Polarisation of Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/standingwaves.html">
-   9. Standing Waves
+   10. Standing Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/matterwaves.html">
-   10. Matter Waves
+   11. Matter Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/dopplershift.html">
-   11. Doppler Shift
+   12. Doppler Shift
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -188,71 +176,66 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduction.html">
-   12. Introduction
+   13. Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="EMmaths.html">
-   13. Mathematical Preliminaries
+   14. Mathematical Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="electrostatics.html">
-   14. Electrostatics
+   15. Electrostatics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="solvingEsystems.html">
-   15. Solving Electrostatic Systems
+   16. Solving Electrostatic Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Efieldenergy.html">
-   16. Energy in an Electric Field
+   17. Energy in an Electric Field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="magneticfields.html">
-   17. Magnetism
+   18. Magnetism
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="magneticforces.html">
-   18. Magnetic Forces
+   19. Magnetic Forces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ampereslaw.html">
-   19. Ampère’s Circuital Law
+   20. Ampère’s Circuital Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="faradayslaw.html">
-   20. Faraday’s Law
+   21. Faraday’s Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="maxwelleqns.html">
-   21. Differential Forms and Maxwell’s Equations
+   22. Differential Forms and Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   22. Solutions to Maxwell’s Equations
+   23. Solutions to Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="EMenergy.html">
-   23. Energy in an Electromagnetic field
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="EMpotentials.html">
-   24. Electromagnetic Scalar and Vector Potentials
+   24. Energy in an Electromagnetic field
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -341,17 +324,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -359,184 +337,105 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/solvingmaxwell.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/electromagnetism/solvingmaxwell.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/electromagnetism/solvingmaxwell.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/solvingmaxwell.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#electromagnetic-waves">
-   22.1. Electromagnetic Waves
+   23.1. Electromagnetic Waves
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polarisation-of-waves">
-   22.2. Polarisation of Waves
+   23.2. Polarisation of Waves
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#drude-model">
-   22.3. Drude Model
+   23.3. Drude Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electromagnetic-scalar-and-vector-potentials">
+   23.4. Electromagnetic Scalar and Vector Potentials
   </a>
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Solutions to Maxwell’s Equations</h1>
@@ -551,17 +450,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#electromagnetic-waves">
-   22.1. Electromagnetic Waves
+   23.1. Electromagnetic Waves
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#polarisation-of-waves">
-   22.2. Polarisation of Waves
+   23.2. Polarisation of Waves
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#drude-model">
-   22.3. Drude Model
+   23.3. Drude Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electromagnetic-scalar-and-vector-potentials">
+   23.4. Electromagnetic Scalar and Vector Potentials
   </a>
  </li>
 </ul>
@@ -570,57 +474,54 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="solutions-to-maxwells-equations">
-<h1><span class="section-number">22. </span>Solutions to Maxwell’s Equations<a class="headerlink" href="#solutions-to-maxwells-equations" title="Permalink to this headline">#</a></h1>
-<section id="electromagnetic-waves">
-<h2><span class="section-number">22.1. </span>Electromagnetic Waves<a class="headerlink" href="#electromagnetic-waves" title="Permalink to this headline">#</a></h2>
+  <div class="section" id="solutions-to-maxwells-equations">
+<h1><span class="section-number">23. </span>Solutions to Maxwell’s Equations<a class="headerlink" href="#solutions-to-maxwells-equations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="electromagnetic-waves">
+<h2><span class="section-number">23.1. </span>Electromagnetic Waves<a class="headerlink" href="#electromagnetic-waves" title="Permalink to this headline">¶</a></h2>
 <p>Using Maxwell’s equations, we can see that there are two scalar equations and two vector equations, in the form of coupled ODEs.  Lets rewrite these in terms of
 one field and then try to solve.  Recall the Lagrange identity for <span class="math notranslate nohighlight">\(\nabla\)</span> with a vector <span class="math notranslate nohighlight">\({\bf A}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times \left(\nabla \times {\bf A}\right) = \nabla (\nabla \cdot {\bf A}) - \nabla^2 {\bf A} \]</div>
-<p>If we take the curl of Equation <a class="reference internal" href="maxwelleqns.html#equation-curle">(21.4)</a>:</p>
+<p>If we take the curl of Equation <a class="reference internal" href="maxwelleqns.html#equation-curle">(22.4)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times \left(\nabla \times {\bf E}\right) = \nabla (\nabla \cdot {\bf E}) - \nabla^2 {\bf E} = 
 \nabla \times \left(  -\frac{\partial {\bf B}}{\partial t}\right)  = -\frac{\partial}{\partial t}\left(\nabla \times {\bf B} \right)\]</div>
 <p>where we have used the fact that the order of mixed partial derivatives doesn’t matter for any well behaved function in the last step.  This allows us to
-substitute in Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(21.3)</a> and so decouple the <span class="math notranslate nohighlight">\({\bf B}\)</span> field:</p>
+substitute in Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(22.3)</a> and so decouple the <span class="math notranslate nohighlight">\({\bf B}\)</span> field:</p>
 <div class="math notranslate nohighlight">
 \[\nabla (\nabla \cdot {\bf E}) - \nabla^2 {\bf E} = -\mu_0\frac{\partial\, {\bf J}}{\partial t} - \mu_0\epsilon_0 \frac{\partial^2\, {\bf E}}{\partial t^2}\]</div>
 <p>If we then assume vacuum conditions, with no charges <span class="math notranslate nohighlight">\(\rho = 0\)</span> or currents <span class="math notranslate nohighlight">\({\bf J} = (0,0,0)\)</span> present, then <span class="math notranslate nohighlight">\(\nabla \cdot {\bf E} = 0\)</span> and this equation becomes</p>
 <div class="math notranslate nohighlight" id="equation-emwaveeqn">
-<span class="eqno">(22.1)<a class="headerlink" href="#equation-emwaveeqn" title="Permalink to this equation">#</a></span>\[\nabla^2 {\bf E} = \mu_0\epsilon_0 \frac{\partial^2\, {\bf E}}{\partial t^2} \]</div>
+<span class="eqno">(23.1)<a class="headerlink" href="#equation-emwaveeqn" title="Permalink to this equation">¶</a></span>\[\nabla^2 {\bf E} = \mu_0\epsilon_0 \frac{\partial^2\, {\bf E}}{\partial t^2} \]</div>
 <p>which is a wave equation!  Comparing this with Equation <a class="reference internal" href="../waves/transverse.html#equation-waveeqn3d">(6.3)</a> we can associate:</p>
 <div class="math notranslate nohighlight" id="equation-speedoflight">
-<span class="eqno">(22.2)<a class="headerlink" href="#equation-speedoflight" title="Permalink to this equation">#</a></span>\[c = \frac{1}{\sqrt{\mu_0\epsilon_0}} \]</div>
+<span class="eqno">(23.2)<a class="headerlink" href="#equation-speedoflight" title="Permalink to this equation">¶</a></span>\[c = \frac{1}{\sqrt{\mu_0\epsilon_0}} \]</div>
 <p>and we can also find wave solutions for <span class="math notranslate nohighlight">\(\bf B\)</span>, with the same constant wave speed <span class="math notranslate nohighlight">\(c\)</span>.  Einstein was led (in part) to his celebrated Special Theory of Relativity by
 noticing that the speed of light <span class="math notranslate nohighlight">\(c\)</span> is related to two vacuum parameters that are thought to be constant.</p>
-<p>If we solve for <span class="math notranslate nohighlight">\(\bf E,\ B\)</span> from Equation <a class="reference internal" href="#equation-emwaveeqn">(22.1)</a>, these produce:</p>
+<p>If we solve for <span class="math notranslate nohighlight">\(\bf E,\ B\)</span> from Equation <a class="reference internal" href="#equation-emwaveeqn">(23.1)</a>, these produce:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf E} &amp;= {\bf E_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\\
 {\bf B} &amp;= {\bf B_0}\,\exp(i({\bf k}\cdot {\bf x} - \omega t))\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 22.1</span></a> shows some different choices of <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> for plane
+<p>where <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> are the polarization vectors of the electric and magnetic field, <a class="reference internal" href="#emplanewaves"><span class="std std-numref">Fig. 23.1</span></a> shows some different choices of <span class="math notranslate nohighlight">\(\bf E_0,\, B_0\)</span> for plane
 polarised and circularly polariesed waves.</p>
-<figure class="align-default" id="emplanewaves">
+<div class="figure align-default" id="emplanewaves">
 <img alt="../_images/EMWaves1.png" src="../_images/EMWaves1.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 22.1 </span><span class="caption-text"><b> Left Pane </b> - Depiction of electric and magnetic plane waves,
-<b> Right Pane </b> - Depiction of electric and magnetic circularly polarised waves.</span><a class="headerlink" href="#emplanewaves" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="polarisation-of-waves">
-<h2><span class="section-number">22.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">#</a></h2>
+<p class="caption"><span class="caption-number">Fig. 23.1 </span><span class="caption-text"><b> Left Pane </b> - Depiction of electric and magnetic plane waves,
+<b> Right Pane </b> - Depiction of electric and magnetic circularly polarised waves.</span><a class="headerlink" href="#emplanewaves" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="polarisation-of-waves">
+<h2><span class="section-number">23.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">¶</a></h2>
 <p>Plugging in wave solutions into Maxwell’s equations in vacuum:</p>
 <div class="math notranslate nohighlight" id="equation-kebperp">
-<span class="eqno">(22.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">#</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
+<span class="eqno">(23.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">¶</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
 \nabla \cdot {\bf B} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf B}_0 = 0 \\
 \nabla \times {\bf E} &amp;= \,-\frac{\partial {\bf B}}{\partial t} \Longrightarrow {\bf k} \times {\bf E}_0 = \omega\, {\bf B}_0 \end{split}\]</div>
 <p>These first two equations means <span class="math notranslate nohighlight">\(\bf k \perp E\)</span> and <span class="math notranslate nohighlight">\(\bf k \perp  B\)</span> and the third that <span class="math notranslate nohighlight">\(\bf B \perp (k,\, E)\)</span> implying <span class="math notranslate nohighlight">\(\bf E \perp B\)</span>.</p>
-<p>Therefore once we pick a direction of oscillation for <span class="math notranslate nohighlight">\(\bf E\)</span>, then <span class="math notranslate nohighlight">\(\bf B\)</span> is also set (and vice-versa).  Choosing to orientate along the <span class="math notranslate nohighlight">\(z\)</span> axis, Equation <a class="reference internal" href="#equation-kebperp">(22.3)</a>
+<p>Therefore once we pick a direction of oscillation for <span class="math notranslate nohighlight">\(\bf E\)</span>, then <span class="math notranslate nohighlight">\(\bf B\)</span> is also set (and vice-versa).  Choosing to orientate along the <span class="math notranslate nohighlight">\(z\)</span> axis, Equation <a class="reference internal" href="#equation-kebperp">(23.3)</a>
 implies in general:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf k} = \begin{bmatrix}
@@ -637,7 +538,7 @@ implies in general:</p>
 <p>For plane polarised solutions, we must pick one of <span class="math notranslate nohighlight">\(E_x,\,E_y\)</span> to be zero, such that the oscillations are only in <em>on</em> dimension and clearly the wave propagates
 in a perpendicular <span class="math notranslate nohighlight">\(z\)</span> dimension.  So lets pick <span class="math notranslate nohighlight">\(E_y = 0\)</span>, which results in:</p>
 <div class="math notranslate nohighlight" id="equation-planewavesolns">
-<span class="eqno">(22.4)<a class="headerlink" href="#equation-planewavesolns" title="Permalink to this equation">#</a></span>\[\begin{split}vE_0 = 
+<span class="eqno">(23.4)<a class="headerlink" href="#equation-planewavesolns" title="Permalink to this equation">¶</a></span>\[\begin{split}vE_0 = 
 \begin{bmatrix}
  E_x \\
  0 \\
@@ -654,9 +555,9 @@ in a perpendicular <span class="math notranslate nohighlight">\(z\)</span> dimen
  B_y \\
  0
 \end{bmatrix} \end{split}\]</div>
-</section>
-<section id="drude-model">
-<h2><span class="section-number">22.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="drude-model">
+<h2><span class="section-number">23.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this headline">¶</a></h2>
 <p>In addition to solving Maxwell’s for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor,
 with an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> present, we can think about Ohm’s law</p>
 <div class="math notranslate nohighlight">
@@ -666,13 +567,11 @@ a variable - the resistiance of a condcutor can change depending on the length o
 resitances is through the resisitivity <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\rho = R\frac{A}{\ell}\]</div>
-<p>where <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance, <span class="math notranslate nohighlight">\(\ell\)</span>  is the length of the conductor and <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area of the condcutor, as depicted in <a class="reference internal" href="#resitivity"><span class="std std-numref">Fig. 22.2</span></a>.</p>
-<figure class="align-default" id="resitivity">
+<p>where <span class="math notranslate nohighlight">\(R\)</span> is the electrical resistance, <span class="math notranslate nohighlight">\(\ell\)</span>  is the length of the conductor and <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional area of the condcutor, as depicted in <a class="reference internal" href="#resitivity"><span class="std std-numref">Fig. 23.2</span></a>.</p>
+<div class="figure align-default" id="resitivity">
 <img alt="../_images/Resistivity_geometry.png" src="../_images/Resistivity_geometry.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 22.2 </span><span class="caption-text">A schematic of the geometry of some resistive material between some electrical contacts on both ends.</span><a class="headerlink" href="#resitivity" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 23.2 </span><span class="caption-text">A schematic of the geometry of some resistive material between some electrical contacts on both ends.</span><a class="headerlink" href="#resitivity" title="Permalink to this image">¶</a></p>
+</div>
 <p>Thus we can rewrite Ohm’s law as:</p>
 <div class="math notranslate nohighlight">
 \[V = \rho\,\frac{\ell\,I}{A} \Rightarrow \frac{I}{A} = \frac{1}{\rho}\frac{V}{\ell}\]</div>
@@ -693,8 +592,71 @@ conductors.</p>
 <div class="math notranslate nohighlight">
 \[\epsilon_r(\omega) = \frac{\epsilon(\omega)}{\epsilon_0} = \underbrace{1}_{vacuum\, part} + \underbrace{i \frac{\sigma}{\epsilon_0\omega}}_{dispersion\,part} \]</div>
 <p>If we calculate the energy of waves travelling through this media, the dispersion part corresponds to the energy losses of the electromagnetic field.</p>
-</section>
-</section>
+</div>
+<div class="section" id="electromagnetic-scalar-and-vector-potentials">
+<h2><span class="section-number">23.4. </span>Electromagnetic Scalar and Vector Potentials<a class="headerlink" href="#electromagnetic-scalar-and-vector-potentials" title="Permalink to this headline">¶</a></h2>
+<p>There is a different way to view Maxwell’s equations using the rules of vector calculus. We begin by expressing the
+electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> in terms of a potential:</p>
+<div class="math notranslate nohighlight" id="equation-electricpotential1">
+<span class="eqno">(23.5)<a class="headerlink" href="#equation-electricpotential1" title="Permalink to this equation">¶</a></span>\[{\bf E} = -\nabla \phi\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi = \phi(x,\,y,\,z)\)</span> is the scalar electric potential.  Gauss’s law <span class="math notranslate nohighlight">\(\nabla\cdot {\bf E} = \rho/\epsilon_0\)</span> means this now forms a Poisson equation:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2\phi = -\frac{\rho}{\epsilon_0}\]</div>
+<p>However the issue with Equation <a class="reference internal" href="#equation-electricpotential1">(23.5)</a> is that it lacks are time dependence, which to solve Faraday’s law
+<span class="math notranslate nohighlight">\(\nabla \times {\bf E} = -\partial {\bf B}/\partial t\)</span> can cause issues:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times {\bf E} = -\nabla \times \nabla \phi = 0 \]</div>
+<p>where this result stems simply from vector calculus identities.  Therefore in order to solve problems with time dependence, we must add a vector potential <span class="math notranslate nohighlight">\({\bf A}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E} = -\nabla \phi - \frac{\partial {\bf A}}{\partial t}\]</div>
+<p>Substituting this into Faraday’s law now results in:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times {\bf E} = -\nabla \times \nabla \phi - \nabla \times \frac{\partial {\bf A}}{\partial t} = 
+0 - \frac{\partial}{\partial t}\left(\nabla \times {\bf A}\right) = - \frac{\partial {\bf B}}{\partial t}\]</div>
+<p>which neatly suggests that:</p>
+<div class="math notranslate nohighlight">
+\[{\bf B} = \nabla \times {\bf A}\]</div>
+<p>which again through vector calculus identities satisfies <span class="math notranslate nohighlight">\(\nabla \cdot {\bf B} = 0\)</span>.  If we re-examine Gauss’s and Ampère’s law’s in light of these additions we find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot {\bf E} &amp;=&amp; \,-\frac{\partial}{\partial t}\left( \nabla \cdot {\bf A}\right) - \nabla^2\phi = \frac{\rho}{\epsilon_0}\\
+\nabla \times {\bf B} &amp;=&amp;\, \nabla \left( \nabla \times {\bf A} \right) = \mu_0 {\bf J} + \mu_0 \epsilon_0 \frac{\partial {\bf E}}{\partial t} \\ 
+&amp;=&amp; \,\mu_0 {\bf J} - \mu_0 \epsilon_0 \frac{\partial}{\partial t} \nabla \phi - \mu_0 \epsilon_0 \frac{\partial^2 {\bf A}}{\partial t^2}\end{split}\]</div>
+<p>which we can rearrange, collect together terms and use vector identities to find a modified wave equation:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{c^2}\frac{\partial^2 {\bf A}}{\partial t^2} = 
+\nabla^2 {\bf A} - \nabla \left(\nabla \cdot {\bf A} + \frac{1}{c^2}\frac{\partial \phi}{\partial t} \right) + \mu_0 {\bf J}\]</div>
+<p>These two sets of equations are non-trivial to solve for <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\({\bf A}\)</span>. There are however a number of symmetries in this system of equations,
+one is that we can shift the parameters <span class="math notranslate nohighlight">\(\phi,\,{\bf A}\)</span> by functions of space and time and see what equations these should satisfy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf A} &amp;\rightarrow&amp;\, {\bf A} + \alpha({\bf x},\,t) \\
+\phi &amp;\rightarrow&amp;\, \phi + f({\bf x},\,t)\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f\)</span> is a scalar shift and <span class="math notranslate nohighlight">\(\alpha\)</span> is a vector shift.  If these shifts are to be symmetries of the electromagnetic equations,
+then they should NOT change the electric and magnetic fields overall, which means that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf E} &amp; \rightarrow&amp; -\frac{\partial}{\partial t}\left( {\bf A} + \alpha\right) - \nabla(\phi + f) = {\bf E} - \frac{\partial \alpha}{\partial t} - \nabla f \\
+{\bf B} &amp; \rightarrow&amp; \nabla \times \left( {\bf A} + \alpha\right) = \nabla {\bf A} + \nabla \times \alpha = {\bf B} + \nabla \times \alpha \end{split}\]</div>
+<p>and hence for unchanged fields, we must simultaneously satisfy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \times \alpha &amp;=&amp;\, 0 \\
+\frac{\partial \alpha}{\partial t} + \nabla f &amp;=&amp;\, 0\end{split}\]</div>
+<p>Given that we can write an vector field with vanishing curl as a gradient of a scalar,</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \nabla \lambda\]</div>
+<p>this means our second condition has the form</p>
+<div class="math notranslate nohighlight">
+\[\nabla f = -\frac{\partial \alpha}{\partial t} = -\nabla \left(\frac{\partial \lambda}{\partial t} \right)\]</div>
+<p>which we can rewrite our initial transformations in terms of</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf A} &amp; \rightarrow&amp;\, {\bf A} + \nabla \lambda\\
+\phi &amp;\rightarrow&amp;\, \phi - \frac{\partial \lambda}{\partial t}\end{split}\]</div>
+<p>Despite these transformations leaving <span class="math notranslate nohighlight">\({\bf E},\,{\bf B}\)</span> unchanged, the equations for Gauss’s and Ampères law are not invariant, since <span class="math notranslate nohighlight">\(\nabla \cdot {\bf A}\)</span>
+is still unconstrained.  Thus we can use different choices of <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\({\bf A}\)</span> here to simplify solving these.  These different choices are known as
+<b>Gauge Choices</b>.</p>
+<p>Writing electromagnetism in this way allows for quantum ideas and conceptual issues within these theories to be seen as physical effects,
+one way these are seen physically is through the Aharonov-Bohm (AB) effect.  For more information on the AB effect, check out
+<a class="reference external" href="https://www.damtp.cam.ac.uk/user/tong/qhe/qhe.pdf">these DAMTP notes</a>.</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -718,48 +680,42 @@ conductors.</p>
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="maxwelleqns.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">21. </span>Differential Forms and Maxwell’s Equations</p>
+            <p class="prev-next-title"><span class="section-number">22. </span>Differential Forms and Maxwell’s Equations</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="EMenergy.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">23. </span>Energy in an Electromagnetic field</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Energy in an Electromagnetic field</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ali Mozaffari and Ella Metcalfe<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

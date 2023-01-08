@@ -151,7 +151,7 @@ This shows that in the homogeneous case, there are three important values of $\z
 $\zeta < 1$, which means the solutions are $\lambda = \omega_0\Big( -\zeta \pm\ i \sqrt{|1 - \zeta^2|}\Big) = \omega_0\Big(-\zeta \pm i \gamma \Big)$, which is clearly a 
 complex solution and therefore corresponds to oscilating solutions:
 ```{math}
-x(t) = \exp(-\omega_0\,\zeta \,t)\Big(A\,\exp(i\, \omega_0 \,\gamma t) + B\,\exp(-i \omega_0 \,\gamma \,t)\Big)
+x(t) = \exp(-\omega_0\,\zeta \,t)\Big(A\cos(\omega_0 \,\gamma t) + B\sin(\omega_0 \,\gamma \,t)\Big)
 ```
 where $A,\,B$ are constants to be found and $\gamma^2 = 1- \zeta^2$.  We notice that we have factorised the damping term at the start of the expression, this results in
  damped harmonic oscilations.
@@ -160,7 +160,7 @@ where $A,\,B$ are constants to be found and $\gamma^2 = 1- \zeta^2$.  We notice 
 
 $\zeta = 1$, hence $\lambda = -\omega_0$ which is a repeated root, so the solutions here have the form:
 ```{math}
-x(t) = exp(- \omega_0\,t)\Big(A + Bt\Big)
+x(t) = \exp(- \omega_0\,t)\Big(A + Bt\Big)
 ```
 where $A,\, B$ are constants to be found.  We notice that this is overall a damped solution, no oscillations.
 
@@ -178,7 +178,7 @@ We plot examples of all three solutions (using some python code) in figure {numr
 ---
 name: Damped
 ---
-Solutions for the damped harmonic oscillator with $\zeta = 0.1,\, 1,\, 3$ values.
+Solutions for the damped harmonic oscillator with $\zeta = 0.1,\, 1,\, 2$ values.
 ```
 
 ### Inhomogeneous (driven) solutions
@@ -203,13 +203,29 @@ and therefore we find simultanenous equations arise in $C,\, D$:
 This means that:
 ```{math}
 C &= \frac{{\omega_0}^2-\Omega^2}{2\,\zeta\,\omega_0\,\Omega}D \\
-C &= \frac{F_0 -2 \zeta\,\omega_0\,\Omega}{{\omega_0}^2 - \Omega^2}D
+C &= \frac{F_0 -2 \zeta\,\omega_0\,\Omega\,D}{{\omega_0}^2 - \Omega^2}
 ```
 and therefore:
 ```{math}
-D = \frac{2\zeta\,\omega_0\,\Omega}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega}^2\,\Omega^2}F_0,\, \quad 
-C = \frac{{\omega_0}^2 - \Omega^2}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega}^2\,\Omega^2}F_0
+D = \frac{2\zeta\,\omega_0\,\Omega}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega_0}^2\,\Omega^2}F_0,\, \quad 
+C = \frac{{\omega_0}^2 - \Omega^2}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega_0}^2\,\Omega^2}F_0
 ```
-Thus if we find the driven frequency $\Omega$ coincides with the natural frequency $\omega_0$, i.e. 
-$\Omega \rightarrow \omega_0$, this gives rise to the phenomena of 
-**resonance**.  
+which means the final solution is found as:
+```{math}
+x(t) = x_h(t) + \frac{({\omega_0}^2 - \Omega^2)\cos(\Omega\,t) + 2\zeta\,\omega_0\,\Omega\,\sin(\Omega\,t)}{({\omega_0}^2 - \Omega^2)^2 + 4\zeta^2\,{\omega_0}^2\,\Omega^2}
+```
+
+If we have some oscillating solutions and find the driven frequency $\Omega$ coincides with the natural frequency $\omega_0$, i.e. in the limit of 
+$\Omega \rightarrow \omega_0$, this gives rise to the phenomena of **resonance**.  We can see this in the solutions:
+```{math}
+x(t) \simeq \exp(-\Omega\,\zeta \,t)\Big(A\cos(\Omega \,\gamma t) + B\sin(\Omega \,\gamma \,t)\Big) +\frac{\sin(\Omega\,t)}{2\zeta\,\Omega^2}
+```
+and given that $0<\zeta <1$ in thi case, this term is enhanced.  Resonance can also occur in systems with other types of dampning too and we see the effect of 
+resonance in {numref}`Resonance`.
+
+```{figure} ../figures/resonance2.png
+---
+name: Resonance
+---
+Steady-state variation of amplitude with relative frequency ${\displaystyle \omega /\omega _{0}}$ and damping ${\displaystyle \zeta }$ of a driven harmonic oscillator.
+```

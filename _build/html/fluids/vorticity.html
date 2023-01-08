@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>36. Vortex transport &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,41 +18,42 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="37. Unsteady: Water waves" href="waterwaves.html" />
@@ -66,21 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -89,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -110,15 +94,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -156,31 +139,36 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/dispersionrelations.html">
-   7. Dispersion Relations and Wave Energy
+   7. Dispersion Relations and Wave Speed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/waveenergy.html">
+   8. Energy and Power of Travelling Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/polarisation.html">
-   8. Polarisation of Waves
+   9. Polarisation of Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/standingwaves.html">
-   9. Standing Waves
+   10. Standing Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/matterwaves.html">
-   10. Matter Waves
+   11. Matter Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/dopplershift.html">
-   11. Doppler Shift
+   12. Doppler Shift
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -188,71 +176,66 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/introduction.html">
-   12. Introduction
+   13. Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/EMmaths.html">
-   13. Mathematical Preliminaries
+   14. Mathematical Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/electrostatics.html">
-   14. Electrostatics
+   15. Electrostatics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
-   15. Solving Electrostatic Systems
+   16. Solving Electrostatic Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-   16. Energy in an Electric Field
+   17. Energy in an Electric Field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/magneticfields.html">
-   17. Magnetism
+   18. Magnetism
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/magneticforces.html">
-   18. Magnetic Forces
+   19. Magnetic Forces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/ampereslaw.html">
-   19. Ampère’s Circuital Law
+   20. Ampère’s Circuital Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/faradayslaw.html">
-   20. Faraday’s Law
+   21. Faraday’s Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
-   21. Differential Forms and Maxwell’s Equations
+   22. Differential Forms and Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
-   22. Solutions to Maxwell’s Equations
+   23. Solutions to Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/EMenergy.html">
-   23. Energy in an Electromagnetic field
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-   24. Electromagnetic Scalar and Vector Potentials
+   24. Energy in an Electromagnetic field
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -341,17 +324,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -359,162 +337,77 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/vorticity.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/fluids/vorticity.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fluids/vorticity.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/vorticity.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-vorticity-transport-equation">
    36.1. The vorticity transport equation
@@ -549,11 +442,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Vortex transport</h1>
@@ -604,66 +498,65 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="vortex-transport">
-<span id="ch-vorticity"></span><h1><span class="section-number">36. </span>Vortex transport<a class="headerlink" href="#vortex-transport" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="vortex-transport">
+<span id="ch-vorticity"></span><h1><span class="section-number">36. </span>Vortex transport<a class="headerlink" href="#vortex-transport" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>How is “vortex stretching” involved in tornado formation?</p></li>
 <li><p>The persistence of irrotational flow in an inviscid fluid</p></li>
 <li><p>Can we have lift without drag?</p></li>
 </ul>
-<section id="the-vorticity-transport-equation">
-<h2><span class="section-number">36.1. </span>The vorticity transport equation<a class="headerlink" href="#the-vorticity-transport-equation" title="Permalink to this headline">#</a></h2>
+<div class="section" id="the-vorticity-transport-equation">
+<h2><span class="section-number">36.1. </span>The vorticity transport equation<a class="headerlink" href="#the-vorticity-transport-equation" title="Permalink to this headline">¶</a></h2>
 <p>Let us begin with the Navier-Stokes conservation of momentum equation for a conservative body force <span class="math notranslate nohighlight">\(\underline{F}=\nabla\phi\)</span>, and follow the same steps outlined in section <a class="reference internal" href="bernoulli.html#bernoulli-derivation"><span class="std std-numref">Section 33.2</span></a> to obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-11da66ea-4506-425d-8a6e-fc362513dd9f">
-<span class="eqno">(36.1)<a class="headerlink" href="#equation-11da66ea-4506-425d-8a6e-fc362513dd9f" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{\omega}\times\underline{u}=-\nabla H +\nu \nabla^2\underline{u}. \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2,\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-85fc33b5-edf0-4e70-b54b-923d8ce98928">
+<span class="eqno">(36.1)<a class="headerlink" href="#equation-85fc33b5-edf0-4e70-b54b-923d8ce98928" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+\underline{\omega}\times\underline{u}=-\nabla H +\nu \nabla^2\underline{u}. \qquad H=\frac{p}{\rho}+\phi+\frac{1}{2}v^2,\end{equation}\]</div>
 <p>Since “curlgrad”=0, we can eliminate the head by taking the curl:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b241515-dcbd-4776-86c3-e8bbc064b7ca">
-<span class="eqno">(36.2)<a class="headerlink" href="#equation-8b241515-dcbd-4776-86c3-e8bbc064b7ca" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{\omega}}{\partial t}+\nabla\times(\underline{\omega}\times\underline{u})=\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3ab68ebc-5922-4927-9628-82887c3d5694">
+<span class="eqno">(36.2)<a class="headerlink" href="#equation-3ab68ebc-5922-4927-9628-82887c3d5694" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{\omega}}{\partial t}+\nabla\times(\underline{\omega}\times\underline{u})=\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
 <p>The second term can be expanded using vector identities to obtain the following equation for the material derivative of the vorticity:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6dd1577-4f9e-41c3-96f6-6ea4355ced0e">
-<span class="eqno">(36.3)<a class="headerlink" href="#equation-c6dd1577-4f9e-41c3-96f6-6ea4355ced0e" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}-\underline{\omega}(\nabla.\underline{u})+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3bc408ea-754d-4ef7-a7e5-85c5c3db06fc">
+<span class="eqno">(36.3)<a class="headerlink" href="#equation-3bc408ea-754d-4ef7-a7e5-85c5c3db06fc" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}-\underline{\omega}(\nabla.\underline{u})+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
 <p>In an incompressible flow there is no divergence of the velocity field and so we obtain the vorticity transport equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f39f66e-88dd-4a7c-8f68-ab2b84dfe2b9">
-<span class="eqno">(36.4)<a class="headerlink" href="#equation-8f39f66e-88dd-4a7c-8f68-ab2b84dfe2b9" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d5018e11-fedb-4d0f-a443-1090a9a998e0">
+<span class="eqno">(36.4)<a class="headerlink" href="#equation-d5018e11-fedb-4d0f-a443-1090a9a998e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}+\nu \nabla^2\underline{\omega}.\end{equation}\]</div>
 <p>The first term on the right is called the “vortex stretching” term. It gets its non-zero contribution from the component of the velocity gradient parallel to <span class="math notranslate nohighlight">\(\underline{\omega}\)</span>, in which case vortex lines are “stretched” by the velocity field, causing them to spin faster. This effect is involved in the formation of tornadoes.</p>
 <p>For two-dimensional flows the vortex stretching term is zero:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-afb11d66-d961-441e-a105-70748cdea6ac">
-<span class="eqno">(36.5)<a class="headerlink" href="#equation-afb11d66-d961-441e-a105-70748cdea6ac" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}=(u(x,y),v(x,y)) \quad \Rightarrow \quad \underline{\omega}=(0,0,\omega), \quad \omega=\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y} \qquad \Rightarrow \quad (\underline{\omega}.\nabla)\underline{u}=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ea911801-2495-4dcb-888d-24d3e7eb9a48">
+<span class="eqno">(36.5)<a class="headerlink" href="#equation-ea911801-2495-4dcb-888d-24d3e7eb9a48" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{u}=(u(x,y),v(x,y)) \quad \Rightarrow \quad \underline{\omega}=(0,0,\omega), \quad \omega=\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y} \qquad \Rightarrow \quad (\underline{\omega}.\nabla)\underline{u}=\underline{0}\end{equation}\]</div>
 <div class="theorem admonition">
 <p class="admonition-title">Tornado formation</p>
 <p>The presence of strong winds near to the ground creates a shear gradient, which can cause the formation of a vortex line as shown in the image below, which is taken from <a class="reference external" href="https://doi.org/10.1175/1520-0469(1984)041%3C2991:SVTOOU%3E2.0.CO;2">a 1984 research paper</a>. Thermal updrafts can then tilt the vortex tube upwards to form a vertical column of rotating air. The simultaneous stretching effect of the thermal updrafts can cause tornadoes to spin very fast.</p>
 <a class="reference internal image-reference" href="../_images/tornado.png" id="tornado-formation"><img alt="alternative text" class="align-center" id="tornado-formation" src="../_images/tornado.png" style="width: 602.4px; height: 286.2px;" /></a>
 <p><em>Note: It should be recognised that the formation of a vortex line is a viscous phenomenon!</em></p>
 </div>
-</section>
-<section id="vorticity-transport-in-inviscid-flows">
-<h2><span class="section-number">36.2. </span>Vorticity transport in inviscid flows<a class="headerlink" href="#vorticity-transport-in-inviscid-flows" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="vorticity-transport-in-inviscid-flows">
+<h2><span class="section-number">36.2. </span>Vorticity transport in inviscid flows<a class="headerlink" href="#vorticity-transport-in-inviscid-flows" title="Permalink to this headline">¶</a></h2>
 <p>If the fluid is inviscid then the vorticity transport equation reduces to:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4b3a2d99-d5cf-45f5-aaf3-6fdf8baa8217">
-<span class="eqno">(36.6)<a class="headerlink" href="#equation-4b3a2d99-d5cf-45f5-aaf3-6fdf8baa8217" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1cd1e346-c287-46af-a875-0626017b6891">
+<span class="eqno">(36.6)<a class="headerlink" href="#equation-1cd1e346-c287-46af-a875-0626017b6891" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{D\underline{\omega}}{D t}=(\underline{\omega}.\nabla)\underline{u}.\end{equation}\]</div>
 <p>If the fluid is initially irrotational then the vorticity will be zero along all fluid paths. The Euler equation cannot produce vorticity - it can only maintain it!</p>
 <p>For example, this is the case for flows that are started from rest. The implication is that irrotational flows are more common than you might expect. Recall, too that the combination of inviscid and irrotational flow satisfies Laplace’s equation <span class="math notranslate nohighlight">\(\nabla^2\phi=0.\)</span></p>
 <p>However, the assumption of inviscid flow can lead to a paradox, as discussed below.</p>
-</section>
-<section id="an-apparent-paradox-flow-past-a-cylinder">
-<span id="dalembert-paradox"></span><h2><span class="section-number">36.3. </span>An apparent paradox : flow past a cylinder<a class="headerlink" href="#an-apparent-paradox-flow-past-a-cylinder" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="an-apparent-paradox-flow-past-a-cylinder">
+<span id="dalembert-paradox"></span><h2><span class="section-number">36.3. </span>An apparent paradox : flow past a cylinder<a class="headerlink" href="#an-apparent-paradox-flow-past-a-cylinder" title="Permalink to this headline">¶</a></h2>
 <p>Here we will model flow past a cylinder as an inviscid, irrotational flow. By artificially introducing circulation, we will find that we can obtain a lift force without the presence of drag.</p>
-<section id="potential-flow-derivation">
-<h3><span class="section-number">36.3.1. </span>Potential flow derivation<a class="headerlink" href="#potential-flow-derivation" title="Permalink to this headline">#</a></h3>
+<div class="section" id="potential-flow-derivation">
+<h3><span class="section-number">36.3.1. </span>Potential flow derivation<a class="headerlink" href="#potential-flow-derivation" title="Permalink to this headline">¶</a></h3>
 <p>In accordance with the inviscid, irrotational assumptions, we begin with Laplace’s equation <span class="math notranslate nohighlight">\(\nabla^2\phi=0.\)</span> In cylindrical polars we obtain:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-07a67db7-399f-473e-a3a1-048491db4b0f">
-<span class="eqno">(36.7)<a class="headerlink" href="#equation-07a67db7-399f-473e-a3a1-048491db4b0f" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial \phi}{\partial r}\right)+\frac{1}{r}\frac{\partial}{\partial\theta}\left(\frac{1}{r}\frac{\partial\phi}{\partial\theta}\right)&amp;=0\\\Rightarrow \quad \frac{\partial^2\phi}{\partial r^2}+\frac{1}{r}\frac{\partial\phi}{\partial r}+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}&amp;=0.\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c103affe-0600-4918-97f8-b425e71cdf48">
+<span class="eqno">(36.7)<a class="headerlink" href="#equation-c103affe-0600-4918-97f8-b425e71cdf48" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial \phi}{\partial r}\right)+\frac{1}{r}\frac{\partial}{\partial\theta}\left(\frac{1}{r}\frac{\partial\phi}{\partial\theta}\right)&amp;=0\\\Rightarrow \quad \frac{\partial^2\phi}{\partial r^2}+\frac{1}{r}\frac{\partial\phi}{\partial r}+\frac{1}{r^2}\frac{\partial^2\phi}{\partial\theta^2}&amp;=0.\end{align}\]</div>
 <p>You may verify that the following result satisfies this equation, where <span class="math notranslate nohighlight">\(\Gamma\)</span> is an arbitrary constant representing the circulation, and <span class="math notranslate nohighlight">\(U\)</span> is the free stream velocity:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0bff719e-5928-4fb1-9f12-8010d6ca943a">
-<span class="eqno">(36.8)<a class="headerlink" href="#equation-0bff719e-5928-4fb1-9f12-8010d6ca943a" title="Permalink to this equation">#</a></span>\[\begin{equation}\phi=Ur\left(1+\frac{a^2}{r^2}\right)\cos(\theta)+\frac{\Gamma\theta}{2\pi},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1d0a0073-8138-4e17-834a-2b2e596f8da0">
+<span class="eqno">(36.8)<a class="headerlink" href="#equation-1d0a0073-8138-4e17-834a-2b2e596f8da0" title="Permalink to this equation">¶</a></span>\[\begin{equation}\phi=Ur\left(1+\frac{a^2}{r^2}\right)\cos(\theta)+\frac{\Gamma\theta}{2\pi},\end{equation}\]</div>
 <p>The velocity components <span class="math notranslate nohighlight">\(\left(v_r,v_{\theta}\right)=\left(\frac{\partial\phi}{\partial r},\frac{1}{r}\frac{\partial\phi}{\partial\theta}\right)\)</span> are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-83e55e68-5a5b-4861-b7b9-1af7627e8694">
-<span class="eqno">(36.9)<a class="headerlink" href="#equation-83e55e68-5a5b-4861-b7b9-1af7627e8694" title="Permalink to this equation">#</a></span>\[\begin{equation}v_r=U\left(1-\frac{a^2}{r^2}\right)\cos(\theta), \quad v_{\theta}=-U\left(1+\frac{a^2}{r^2}\right)\sin(\theta)+\frac{\Gamma}{2\pi r}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-64b0ab51-42ea-4b49-a2bf-e12c75786cfd">
+<span class="eqno">(36.9)<a class="headerlink" href="#equation-64b0ab51-42ea-4b49-a2bf-e12c75786cfd" title="Permalink to this equation">¶</a></span>\[\begin{equation}v_r=U\left(1-\frac{a^2}{r^2}\right)\cos(\theta), \quad v_{\theta}=-U\left(1+\frac{a^2}{r^2}\right)\sin(\theta)+\frac{\Gamma}{2\pi r}.\end{equation}\]</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Notice for this solution there is evidently <strong>slip</strong> on the surface of the cylinder, since</p>
@@ -671,25 +564,25 @@ title="Print to PDF"
 \[\begin{equation*}v_{\theta}(r=a)=-2U\sin(\theta)+\frac{\Gamma}{2\pi a}.\end{equation*}\]</div>
 </div>
 <p>The pattern of streamlines depends on the circulation. If <span class="math notranslate nohighlight">\(\Gamma=0\)</span> then the flow is symmetric, as shown in the top-left figure below, with stagnation points at the fore and aft of the cylinder. As the circulation in the clockwise direction increases, the stagnation points move towards the underside of the cylinder. Eventually, as the circulation is increased still further, the stagnation points coalesce and then move off the surface of the cylinder. The location of the stagnation points can be calculated:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-368dd00f-5304-4c98-9903-d1d5785234c5">
-<span class="eqno">(36.10)<a class="headerlink" href="#equation-368dd00f-5304-4c98-9903-d1d5785234c5" title="Permalink to this equation">#</a></span>\[\begin{equation}v_{\theta}(r=a)=0 \quad \Rightarrow \sin(\theta)=-\frac{\Gamma}{4\pi U a}=-\frac{1}{2}B \quad \text{where }B=-\frac{\Gamma}{2\pi U a}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c78e260f-f594-46cc-ae2a-cf9a46e9b4d1">
+<span class="eqno">(36.10)<a class="headerlink" href="#equation-c78e260f-f594-46cc-ae2a-cf9a46e9b4d1" title="Permalink to this equation">¶</a></span>\[\begin{equation}v_{\theta}(r=a)=0 \quad \Rightarrow \sin(\theta)=-\frac{\Gamma}{4\pi U a}=-\frac{1}{2}B \quad \text{where }B=-\frac{\Gamma}{2\pi U a}\end{equation}\]</div>
 <br>
 <a class="reference internal image-reference" href="../_images/stagnation.png" id="stagnation-point-on-cylinder"><img alt="stagnation point on cylinder" class="align-center" id="stagnation-point-on-cylinder" src="../_images/stagnation.png" style="width: 800.0px; height: 634.0px;" /></a>
 <br>
 <p>The cylinder can be mapped via a change of variables (called “conformal mapping”) to derive results for a flat plate or a cambered airfoil. The streamline patterns look similar to what we see here.</p>
-</section>
-<section id="bernoullis-theorem">
-<h3><span class="section-number">36.3.2. </span>Bernoulli’s theorem:<a class="headerlink" href="#bernoullis-theorem" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="bernoullis-theorem">
+<h3><span class="section-number">36.3.2. </span>Bernoulli’s theorem:<a class="headerlink" href="#bernoullis-theorem" title="Permalink to this headline">¶</a></h3>
 <p>Since the cylinder is a streamline, and the motion is steady, <span class="math notranslate nohighlight">\(\frac{p}{\rho}+\frac{1}{2} v^2\)</span> is constant on <span class="math notranslate nohighlight">\(r=a\)</span>. Therefore on the surface of the cylinder</p>
-<div class="amsmath math notranslate nohighlight" id="equation-866a73cf-8e03-4946-b52a-c80888e78ab9">
-<span class="eqno">(36.11)<a class="headerlink" href="#equation-866a73cf-8e03-4946-b52a-c80888e78ab9" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{p}{\rho}+\frac{1}{2}\left(-2U\sin(\theta)+\frac{\Gamma}{2\pi a}\right)^2=\mathrm{const}\\\Rightarrow\frac{p}{\rho}=\mathrm{const}-2U^2\sin^2(\theta)-\frac{U\Gamma\sin(\theta)}{\pi a}\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-581ca0ec-48e7-4693-a0bc-1275e6d2e197">
+<span class="eqno">(36.11)<a class="headerlink" href="#equation-581ca0ec-48e7-4693-a0bc-1275e6d2e197" title="Permalink to this equation">¶</a></span>\[\begin{align}\frac{p}{\rho}+\frac{1}{2}\left(-2U\sin(\theta)+\frac{\Gamma}{2\pi a}\right)^2=\mathrm{const}\\\Rightarrow\frac{p}{\rho}=\mathrm{const}-2U^2\sin^2(\theta)-\frac{U\Gamma\sin(\theta)}{\pi a}\end{align}\]</div>
 <p>The pressure distribution is symmetric in the <span class="math notranslate nohighlight">\(y\)</span>-axis, so the net force must be perpendicular to the oncoming stream. The <span class="math notranslate nohighlight">\(y\)</span>-component of the force is <span class="math notranslate nohighlight">\(-p a\sin(\theta)\mathrm{d}\theta\)</span>, so the net force is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c68c8344-a609-4d71-9a54-fb2744f6a18a">
-<span class="eqno">(36.12)<a class="headerlink" href="#equation-c68c8344-a609-4d71-9a54-fb2744f6a18a" title="Permalink to this equation">#</a></span>\[\begin{equation}F=\rho\int_0^{2\pi}\left(2U^2\sin^2(\theta)-\frac{U\Gamma}{\pi a}\sin(\theta)\right)a\sin(\theta)\mathrm{d}\theta=-\rho U \Gamma\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ed802979-63d2-4d4c-b6ed-98b521710b88">
+<span class="eqno">(36.12)<a class="headerlink" href="#equation-ed802979-63d2-4d4c-b6ed-98b521710b88" title="Permalink to this equation">¶</a></span>\[\begin{equation}F=\rho\int_0^{2\pi}\left(2U^2\sin^2(\theta)-\frac{U\Gamma}{\pi a}\sin(\theta)\right)a\sin(\theta)\mathrm{d}\theta=-\rho U \Gamma\end{equation}\]</div>
 <p>We therefore obtain a lift force if there is positive circulation. The fact that there is no net force in the downstream direction (no drag) is known as <em>D’Alembert’s paradox</em>.</p>
-</section>
-<section id="resolving-the-paradox">
-<h3><span class="section-number">36.3.3. </span>Resolving the paradox<a class="headerlink" href="#resolving-the-paradox" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="resolving-the-paradox">
+<h3><span class="section-number">36.3.3. </span>Resolving the paradox<a class="headerlink" href="#resolving-the-paradox" title="Permalink to this headline">¶</a></h3>
 <p>The circulation has been artificially introduced here. There is nothing in the physical setup of this problem that would explain where it comes from. In reality, circulation can arise for a cylinder that is rotating relative to the oncoming stream or for an airfoil with a sharp trailing edge that attacks the oncoming flow an angle. <strong>Viscosity is essential</strong>. In each case it is the separation of the viscous boundary layer that generates the circulation via vortex shedding.</p>
 <p>In the case of a cambered airfoil we see a “starting vortex” created around the trailing edge, which eventually breaks away and sets up an opposing circulation around the airfoil, as shown below.</p>
 <p>Comparison of the paradoxical and physical cases gives us insight to suggest that if an airfoil is very well designed to avoid dramatic boundary layer separation, then very low drag forces may indeed be obtained.</p>
@@ -700,9 +593,9 @@ title="Print to PDF"
 <div class="exercise admonition" id="fluids/vorticity-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Exercise 36.1 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Look up the meaning of the term “stall” in the context of fluid dynamics, and provide a description of this term in your own words. Draw pictures to illustrate.</p>
-</section>
+</div>
 </div>
 <div class="toggle docutils container">
 <p>When an airfoil attacks an oncoming fluid stream, the deflection of the air below and above the wing causes a pressure gradient perpendicular to the direction of curvature, which generates lift. The sharp trailing edge is important. If the trailing edge is blunt then the air flows back around the edge, which reduces lift.</p>
@@ -714,9 +607,9 @@ title="Print to PDF"
 <p>Firstly, they are able to invert their wings, so that they produce nearly as much lift on the upstroke as the downstroke, whilst birds (for example) do not have this ability.</p>
 <p>Secondly, the bee is able to increase the attack angle beyond the critical angle for a steady stall by rotating its wing so that the flow stays adhered. This is known as a dynamic stall. Because the bumblebee operates in a regime of dynamic stall, its flight path is unstable: small deviations in flow pattern can lead to dramatic changes in direction. Dealing with this requires the bee to make rapid adjustments. It does, however, have the added benefit of an ability to manoeuvre very quickly. Fighter jets also operate in an unsteady flow regime.</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -740,11 +633,9 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="asymptotic.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -760,28 +651,24 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ali Mozaffari and Ella Metcalfe<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

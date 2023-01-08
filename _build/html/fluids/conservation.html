@@ -4,13 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>30. Conservation law derivations &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -20,41 +18,42 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="31. Shear stress and viscosity" href="navstok.html" />
@@ -66,21 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
-
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -89,10 +74,9 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -110,15 +94,14 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Introduction
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Waves
  </span>
@@ -156,31 +139,36 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/dispersionrelations.html">
-   7. Dispersion Relations and Wave Energy
+   7. Dispersion Relations and Wave Speed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../waves/waveenergy.html">
+   8. Energy and Power of Travelling Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/polarisation.html">
-   8. Polarisation of Waves
+   9. Polarisation of Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/standingwaves.html">
-   9. Standing Waves
+   10. Standing Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/matterwaves.html">
-   10. Matter Waves
+   11. Matter Waves
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../waves/dopplershift.html">
-   11. Doppler Shift
+   12. Doppler Shift
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -188,71 +176,66 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/introduction.html">
-   12. Introduction
+   13. Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/EMmaths.html">
-   13. Mathematical Preliminaries
+   14. Mathematical Preliminaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/electrostatics.html">
-   14. Electrostatics
+   15. Electrostatics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/solvingEsystems.html">
-   15. Solving Electrostatic Systems
+   16. Solving Electrostatic Systems
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/Efieldenergy.html">
-   16. Energy in an Electric Field
+   17. Energy in an Electric Field
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/magneticfields.html">
-   17. Magnetism
+   18. Magnetism
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/magneticforces.html">
-   18. Magnetic Forces
+   19. Magnetic Forces
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/ampereslaw.html">
-   19. Ampère’s Circuital Law
+   20. Ampère’s Circuital Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/faradayslaw.html">
-   20. Faraday’s Law
+   21. Faraday’s Law
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/maxwelleqns.html">
-   21. Differential Forms and Maxwell’s Equations
+   22. Differential Forms and Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/solvingmaxwell.html">
-   22. Solutions to Maxwell’s Equations
+   23. Solutions to Maxwell’s Equations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../electromagnetism/EMenergy.html">
-   23. Energy in an Electromagnetic field
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../electromagnetism/EMpotentials.html">
-   24. Electromagnetic Scalar and Vector Potentials
+   24. Energy in an Electromagnetic field
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fluids
  </span>
@@ -341,17 +324,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -359,162 +337,77 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="header-article row sticky-top noprint">
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/conservation.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/fluids/conservation.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/fluids/conservation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/conservation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-material-derivative">
    30.1. The material derivative
@@ -537,11 +430,12 @@ title="Print to PDF"
  </li>
 </ul>
 
-    </nav>
-</div>
+            </nav>
+        </div>
     </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Conservation law derivations</h1>
@@ -580,33 +474,32 @@ title="Print to PDF"
                     </div>
                 </div>
             </div>
-            <main id="main-content" role="main">
-                
+            
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="conservation-law-derivations">
-<span id="ch-conservation"></span><h1><span class="section-number">30. </span>Conservation law derivations<a class="headerlink" href="#conservation-law-derivations" title="Permalink to this headline">#</a></h1>
+  <div class="section" id="conservation-law-derivations">
+<span id="ch-conservation"></span><h1><span class="section-number">30. </span>Conservation law derivations<a class="headerlink" href="#conservation-law-derivations" title="Permalink to this headline">¶</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What is measured by the material derivative?</p></li>
 <li><p>What do the terms in the mass and momentum conservation equations mean?</p></li>
 </ul>
-<section id="the-material-derivative">
-<h2><span class="section-number">30.1. </span>The material derivative<a class="headerlink" href="#the-material-derivative" title="Permalink to this headline">#</a></h2>
+<div class="section" id="the-material-derivative">
+<h2><span class="section-number">30.1. </span>The material derivative<a class="headerlink" href="#the-material-derivative" title="Permalink to this headline">¶</a></h2>
 <p>In <a class="reference internal" href="mathideas.html#dir-deriv"><span class="std std-numref">Section 26.3</span></a> (<a class="reference internal" href="mathideas.html#dir-deriv"><span class="std std-ref">The directional derivative</span></a>) we found that the rate of change of a steady (time-independent) field <span class="math notranslate nohighlight">\(\phi(x,y,z)\)</span> in a given direction <span class="math notranslate nohighlight">\(\underline{u}\)</span> can be found by a scalar projection:</p>
 <div class="math notranslate nohighlight">
 \[D_{\underline{u}}\phi(\underline{x})=\underline{u}.\nabla\phi.\]</div>
 <p>Now, suppose that the background field is non-steady, so that <span class="math notranslate nohighlight">\(\phi=\phi(\underline{x},t)\)</span>. Proceeding as before by using the multi-variate chain rule, we immediately obtain</p>
 <div class="math notranslate nohighlight" id="equation-materialderivative">
-<span class="eqno">(30.1)<a class="headerlink" href="#equation-materialderivative" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{D}\phi}{\mathrm{D}t}=\frac{\partial \phi}{\partial t}+\underline{u}.\nabla\phi.\]</div>
+<span class="eqno">(30.1)<a class="headerlink" href="#equation-materialderivative" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{D}\phi}{\mathrm{D}t}=\frac{\partial \phi}{\partial t}+\underline{u}.\nabla\phi.\]</div>
 <p>This result is called the “material derivative” or “convective derivative”, and the notation <span class="math notranslate nohighlight">\(\mathrm{D}/\mathrm{D}t\)</span> is used in place of the ordinary derivative to signify its special significance. The first term accounts for the temporal evolution of the background field, and the second term (convection term) accounts for changes as a consequence of moving through the field with velocity <span class="math notranslate nohighlight">\(\underline{u}.\)</span></p>
 <p>The material derivative can also be applied to each element of a vector field <span class="math notranslate nohighlight">\(\underline{\phi}\)</span>, to give the change in <span class="math notranslate nohighlight">\(\underline{\phi}\)</span> following the motion of a fluid particle. For example <span class="math notranslate nohighlight">\(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\)</span> gives the <em>convective acceleration</em>.</p>
 <div class="exercise admonition" id="ex-materialderivative">
 
 <p class="admonition-title"><span class="caption-number">Exercise 30.1 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Write out the convective acceleration <span class="math notranslate nohighlight">\(\frac{\mathrm{D}\underline{u}}{\mathrm{D}t}\)</span> in component form, taking <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span> and <span class="math notranslate nohighlight">\(\underline{u}(t,\underline{x})=(u,v,w)\)</span>.</p>
-</section>
+</div>
 </div>
 <div class="toggle docutils container">
 <p>We have <span class="math notranslate nohighlight">\(\underline{u}.\nabla = u\frac{\partial}{\partial x}+v\frac{\partial}{\partial y}+w\frac{\partial}{\partial z}\)</span></p>
@@ -616,23 +509,23 @@ title="Print to PDF"
 \frac{\partial w }{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}
 \end{pmatrix}\)</span></p>
 </div>
-</section>
-<section id="mass-transport-continuity">
-<h2><span class="section-number">30.2. </span>Mass transport (continuity)<a class="headerlink" href="#mass-transport-continuity" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="mass-transport-continuity">
+<h2><span class="section-number">30.2. </span>Mass transport (continuity)<a class="headerlink" href="#mass-transport-continuity" title="Permalink to this headline">¶</a></h2>
 <p>Consider the mass flow through an arbitrary volume at a fixed location, like the “bag” shown in the image on the left. We assume matter is neither created or destroyed.</p>
 <a class="reference internal image-reference" href="../_images/massflux.png" id="mass-flux"><img alt="illustration of fluid element" class="align-left" id="mass-flux" src="../_images/massflux.png" style="width: 284.0px; height: 180.8px;" /></a>
 <p>The following statement says that the change in mass of the fluid parcel is equal to the net mass flow into the enclosing surface <span class="math notranslate nohighlight">\(\delta A\)</span> per unit time.</p>
 <div class="math notranslate nohighlight" id="equation-massflux1">
-<span class="eqno">(30.2)<a class="headerlink" href="#equation-massflux1" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(30.2)<a class="headerlink" href="#equation-massflux1" title="Permalink to this equation">¶</a></span>\[
 \frac{\mathrm{d}}{\mathrm{d}t}\iiint_{\delta V}\rho\mathrm{d}V=-\iint_\mathrm{\delta A}\rho \underline{u}.\mathrm{d}\underline{S}, \qquad \mathrm{d}\underline{S}=\hat{\underline{n}}\mathrm{d}S.
 \]</div>
 <p>The negative sign appearing in the formula occurs because the normal direction is outward from the surface, as illustrated in the image.</p>
 <p>The time derivative on the left hand side of equation <a class="reference internal" href="#equation-massflux1">(30.2)</a> can be brought inside the integral because for a fixed fluid volume the spatial and temporal variables are independent. On the right hand side the divergence theorem can be used to write the surface integral as a volume integral. Bringing all terms over to the left then gives</p>
 <div class="math notranslate nohighlight" id="equation-netmassflow2">
-<span class="eqno">(30.3)<a class="headerlink" href="#equation-netmassflow2" title="Permalink to this equation">#</a></span>\[\iiint_{\delta V}\biggr(\frac{\partial \rho}{\partial t}+\nabla.(\rho\underline{u})\biggr)\mathrm{d}V=0,\]</div>
+<span class="eqno">(30.3)<a class="headerlink" href="#equation-netmassflow2" title="Permalink to this equation">¶</a></span>\[\iiint_{\delta V}\biggr(\frac{\partial \rho}{\partial t}+\nabla.(\rho\underline{u})\biggr)\mathrm{d}V=0,\]</div>
 <p>and since the volume <span class="math notranslate nohighlight">\(\delta V\)</span> is arbitrary this requires that the integrand itself is zero. By using the product rule to expand the intergrand, we can finally obtain</p>
 <div class="math notranslate nohighlight" id="equation-netmassflow3">
-<span class="eqno">(30.4)<a class="headerlink" href="#equation-netmassflow3" title="Permalink to this equation">#</a></span>\[\frac{D\rho}{Dt}+\rho\nabla.\underline{u}=0.\]</div>
+<span class="eqno">(30.4)<a class="headerlink" href="#equation-netmassflow3" title="Permalink to this equation">¶</a></span>\[\frac{D\rho}{Dt}+\rho\nabla.\underline{u}=0.\]</div>
 <div class="important admonition">
 <p class="admonition-title">Important case: Mass transport for incompressible flow</p>
 <p>If the density of each fluid particle does not change as it moves around, then the flow is said to be <strong>incompressible</strong>. In that case,  <span class="math notranslate nohighlight">\(\frac{D\rho}{D t}=0\)</span>, which leads to the following condition for incompressible flow :</p>
@@ -645,25 +538,25 @@ title="Print to PDF"
 <div class="exercise admonition" id="fluids/conservation-exercise-1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 30.2 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>a). Write down the continuity equation for compressible flow in component form, taking <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span>, <span class="math notranslate nohighlight">\(p=p(t,\underline{x})\)</span> and <span class="math notranslate nohighlight">\(\underline{u}(t,\underline{x})=(u,v,w)\)</span>.</p>
 <p>b). What single equation can be used to model a flow that is both incompressible and irrotational?</p>
 <p>c). Is incompressible flow the same as solenoidal flow?</p>
-</section>
+</div>
 </div>
 <div class="toggle docutils container">
 <p>a). <span class="math notranslate nohighlight">\(\frac{\partial \rho }{\partial t}+u\frac{\partial \rho}{\partial x}+v\frac{\partial \rho}{\partial y}+w\frac{\partial \rho}{\partial z}+\rho \left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right)=0\)</span></p>
 <p>b). Laplace’s equation, <span class="math notranslate nohighlight">\(\nabla^2\phi=0\)</span>, where <span class="math notranslate nohighlight">\(\underline{u}=\nabla\phi\)</span></p>
 <p>c). The condition for both types of flow is the same. Since incompressible flows must satisfy <span class="math notranslate nohighlight">\(\nabla.\underline{u}\)</span>, they are solenoidal. However, it may be possible for a compressible fluid to exhibit solenoidal flow.</p>
 </div>
-</section>
-<section id="cauchy-stress-theorem">
-<h2><span class="section-number">30.3. </span>Cauchy stress theorem<a class="headerlink" href="#cauchy-stress-theorem" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="cauchy-stress-theorem">
+<h2><span class="section-number">30.3. </span>Cauchy stress theorem<a class="headerlink" href="#cauchy-stress-theorem" title="Permalink to this headline">¶</a></h2>
 <p>“Stress” is a measure of the internal forces, such as pressure or friction acting between neighbouring fluid elements. We cannot discuss stress without first defining a particular surface that the stress acts on, since friction and pressure depend on the surface orientation.</p>
 <p>However, the stress for a given surface can be expressed as a vector of components parallel to each coordinate direction, and according to Cauchy’s stress theorem, the stress vector on any plane through a point can be found by knowing the stress vector on each of three mutually perpendicular planes. We will consider planes perpendicular to the coordinate axes.</p>
 <p>The Cauchy stress tensor (deviatoric stress tensor)</p>
 <div class="math notranslate nohighlight" id="equation-deviatoricstress1">
-<span class="eqno">(30.5)<a class="headerlink" href="#equation-deviatoricstress1" title="Permalink to this equation">#</a></span>\[\begin{split}\underline{\sigma}=\left[\begin{array}{ccc}\sigma_{1,1}&amp;\sigma_{1,2}&amp;\sigma_{1,3}\\\sigma_{2,1}&amp;\sigma_{2,2}&amp;\sigma_{2,3}\\\sigma_{3,1}&amp;\sigma_{3,2}&amp;\sigma_{3,3}\end{array}\right]=\left[\begin{array}{ccc}\sigma_{xx} &amp; \tau_{xy}&amp; \tau_{xz}\\ \tau_{yx} &amp; \sigma_{yy} &amp; \tau_{yz}\\\tau_{zx} &amp;\tau{zy} &amp;\sigma_{zz}\end{array}\right]\end{split}\]</div>
+<span class="eqno">(30.5)<a class="headerlink" href="#equation-deviatoricstress1" title="Permalink to this equation">¶</a></span>\[\begin{split}\underline{\sigma}=\left[\begin{array}{ccc}\sigma_{1,1}&amp;\sigma_{1,2}&amp;\sigma_{1,3}\\\sigma_{2,1}&amp;\sigma_{2,2}&amp;\sigma_{2,3}\\\sigma_{3,1}&amp;\sigma_{3,2}&amp;\sigma_{3,3}\end{array}\right]=\left[\begin{array}{ccc}\sigma_{xx} &amp; \tau_{xy}&amp; \tau_{xz}\\ \tau_{yx} &amp; \sigma_{yy} &amp; \tau_{yz}\\\tau_{zx} &amp;\tau{zy} &amp;\sigma_{zz}\end{array}\right]\end{split}\]</div>
 <p>defines the normal and shear stress components <span class="math notranslate nohighlight">\(\sigma_{i,j}\)</span> acting on a plane perpendicular to each axis, as illustrated below:</p>
 <br>
 <a class="reference internal image-reference" href="../_images/stress_tensor.gif" id="stress-tensor"><img alt="stress tensor" class="align-center" id="stress-tensor" src="../_images/stress_tensor.gif" style="width: 320.0px; height: 359.20000000000005px;" /></a>
@@ -674,17 +567,17 @@ title="Print to PDF"
 <br>
 <p>We may apply Newton’s second law to the tetrahedron shown, allowing the mass of the tetrahedron to approach zero (so that the sum of the forces also approaches zero):</p>
 <div class="math notranslate nohighlight" id="equation-deviatoricstress2">
-<span class="eqno">(30.6)<a class="headerlink" href="#equation-deviatoricstress2" title="Permalink to this equation">#</a></span>\[\underline{T}^{(n)}\delta A-\underline{T}^{(\underline{e}_1)}\delta A_1-\underline{T}^{(\underline{e}_2)}\delta A_2-\underline{T}^{(\underline{e}_3)}\delta A_3=0,\]</div>
+<span class="eqno">(30.6)<a class="headerlink" href="#equation-deviatoricstress2" title="Permalink to this equation">¶</a></span>\[\underline{T}^{(n)}\delta A-\underline{T}^{(\underline{e}_1)}\delta A_1-\underline{T}^{(\underline{e}_2)}\delta A_2-\underline{T}^{(\underline{e}_3)}\delta A_3=0,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\delta A_j\)</span> is the projection of <span class="math notranslate nohighlight">\(\delta A\)</span> onto the illustrated face, given by <span class="math notranslate nohighlight">\(\delta A_j=\hat{\underline{n}}.\underline{e}_j\delta A=\hat{\underline{n}}_j\delta A.\)</span></p>
 <p>This gives</p>
 <div class="math notranslate nohighlight" id="equation-deviatoricstress3">
-<span class="eqno">(30.7)<a class="headerlink" href="#equation-deviatoricstress3" title="Permalink to this equation">#</a></span>\[\underline{T}^{(n)}=\underline{\sigma}.\hat{\underline{n}}.\]</div>
-</section>
-<section id="conservation-of-momentum">
-<h2><span class="section-number">30.4. </span>Conservation of momentum<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">#</a></h2>
+<span class="eqno">(30.7)<a class="headerlink" href="#equation-deviatoricstress3" title="Permalink to this equation">¶</a></span>\[\underline{T}^{(n)}=\underline{\sigma}.\hat{\underline{n}}.\]</div>
+</div>
+<div class="section" id="conservation-of-momentum">
+<h2><span class="section-number">30.4. </span>Conservation of momentum<a class="headerlink" href="#conservation-of-momentum" title="Permalink to this headline">¶</a></h2>
 <p>By Newton’s second law, the change in momentum is given by the sum of all forces acting on the volume:</p>
 <div class="math notranslate nohighlight" id="equation-consofmom1">
-<span class="eqno">(30.8)<a class="headerlink" href="#equation-consofmom1" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}}{\mathrm{d}t}\iiint_{\delta V}\rho\underline{u}\ \mathrm{d}V=\iiint_{\delta V}\rho\underline{F}\ \mathrm{d}V+\iint_{\delta S}\underline{\sigma}(t,\underline{x}).\hat{\underline{n}}\mathrm{d}S\]</div>
+<span class="eqno">(30.8)<a class="headerlink" href="#equation-consofmom1" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}t}\iiint_{\delta V}\rho\underline{u}\ \mathrm{d}V=\iiint_{\delta V}\rho\underline{F}\ \mathrm{d}V+\iint_{\delta S}\underline{\sigma}(t,\underline{x}).\hat{\underline{n}}\mathrm{d}S\]</div>
 <p>in which</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\rho\underline{F}\)</span> is the “body force” per unit volume, such as gravitational, magnetic or <a class="reference external" href="https://www.britannica.com/science/Coriolis-force">Coriolis*</a> forces</p></li>
@@ -692,18 +585,18 @@ title="Print to PDF"
 </ul>
 <p>This time, we have to choose a “material volume”, meaning one that moves with the fluid, so that we track the same particles. In that case <span class="math notranslate nohighlight">\(\rho\mathrm{d}V\)</span> is constant so we may rewrite the left-hand side as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom2">
-<span class="eqno">(30.9)<a class="headerlink" href="#equation-consofmom2" title="Permalink to this equation">#</a></span>\[\frac{\mathrm{d}}{\mathrm{d}t}\iiint_{\delta V}\rho\underline{u}\mathrm{d}V=\iiint_{\delta V}\rho\frac{D\underline{u}}{D t}\mathrm{d}V\]</div>
+<span class="eqno">(30.9)<a class="headerlink" href="#equation-consofmom2" title="Permalink to this equation">¶</a></span>\[\frac{\mathrm{d}}{\mathrm{d}t}\iiint_{\delta V}\rho\underline{u}\mathrm{d}V=\iiint_{\delta V}\rho\frac{D\underline{u}}{D t}\mathrm{d}V\]</div>
 <p>We use the divergence theorem again on the last term, and combine the three integrals for our arbitrary material volume <span class="math notranslate nohighlight">\(\delta V\)</span> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-consofmom3">
-<span class="eqno">(30.10)<a class="headerlink" href="#equation-consofmom3" title="Permalink to this equation">#</a></span>\[\rho\frac{D\underline{u}}{D t}=\nabla.\underline{\sigma}+\rho\underline{F}\]</div>
+<span class="eqno">(30.10)<a class="headerlink" href="#equation-consofmom3" title="Permalink to this equation">¶</a></span>\[\rho\frac{D\underline{u}}{D t}=\nabla.\underline{\sigma}+\rho\underline{F}\]</div>
 <p>The Cauchy stress tensor <span class="math notranslate nohighlight">\(\underline{\sigma}\)</span> can be split up to separate normal stress components (pressure) and shear stress components. This gives the result</p>
 <div class="math notranslate nohighlight" id="equation-consofmom4">
-<span class="eqno">(30.11)<a class="headerlink" href="#equation-consofmom4" title="Permalink to this equation">#</a></span>\[\rho\frac{D\underline{u}}{D t}=-\nabla p+\nabla.\underline{\tau}+\rho\underline{F}\]</div>
+<span class="eqno">(30.11)<a class="headerlink" href="#equation-consofmom4" title="Permalink to this equation">¶</a></span>\[\rho\frac{D\underline{u}}{D t}=-\nabla p+\nabla.\underline{\tau}+\rho\underline{F}\]</div>
 <p>The negative sign is chosen due to the fact that the pressure acts inwards on a material volume.</p>
 <div class="exercise admonition" id="fluids/conservation-exercise-2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 30.3 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>If we assume that the shear stress component is zero so that <span class="math notranslate nohighlight">\(\underline{\tau}\equiv \underline{0}\)</span> in equation <a class="reference internal" href="#equation-consofmom4">(30.11)</a>, then we obtain the Euler equation</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -711,18 +604,18 @@ title="Print to PDF"
 \end{equation*}\]</div>
 <p>Write out this equation in component form for a Cartesian system under a body force <span class="math notranslate nohighlight">\(\underline{F}=(0,0,-g)\)</span>.</p>
 <p>The implications of ignoring the shear stress components will be explored in later sections of these notes.</p>
-</section>
+</div>
 </div>
 <div class="toggle docutils container">
-<div class="amsmath math notranslate nohighlight" id="equation-7f7845b6-01eb-42aa-8546-39b3abb19525">
-<span class="eqno">(30.12)<a class="headerlink" href="#equation-7f7845b6-01eb-42aa-8546-39b3abb19525" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-69fdc9b3-7cb7-445a-8d84-e99920bd2014">
+<span class="eqno">(30.12)<a class="headerlink" href="#equation-69fdc9b3-7cb7-445a-8d84-e99920bd2014" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}\\
 \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}\\
 \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}-g\end{align}\]</div>
 </div>
 <p>*A physical derivation of the Coriolis force is outlined in the (optional) section of the notes on rotational reference frames.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -746,11 +639,9 @@ title="Print to PDF"
 
               </div>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="potential.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -766,28 +657,24 @@ title="Print to PDF"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            </footer>
+            
         </div>
     </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Ali Mozaffari and Ella Metcalfe<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+    <footer class="footer">
+  <p>
     
-</div>
+      By Ali Mozaffari and Ella Metcalfe<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
 
 
       </div>
     </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
