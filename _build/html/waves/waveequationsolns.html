@@ -419,8 +419,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phasor-representation">
+   5.3. Phasor Representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#features-of-wave-solutions">
-   5.3. Features of Wave Solutions
+   5.4. Features of Wave Solutions
   </a>
  </li>
 </ul>
@@ -454,8 +459,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phasor-representation">
+   5.3. Phasor Representation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#features-of-wave-solutions">
-   5.3. Features of Wave Solutions
+   5.4. Features of Wave Solutions
   </a>
  </li>
 </ul>
@@ -519,6 +529,11 @@ moving wave solutions here, to see how consider the functions first at <span cla
 <li><p>For the <span class="math notranslate nohighlight">\(A\)</span> function, <span class="math notranslate nohighlight">\(x \rightarrow x - c \)</span>, suggesting it is a <b> left moving wave</b>.</p></li>
 <li><p>For the <span class="math notranslate nohighlight">\(B\)</span> function, <span class="math notranslate nohighlight">\(x \rightarrow x + c\)</span> suggesting it is a <b> right moving wave</b>.</p></li>
 </ul>
+<p>We can visualise this in <a class="reference internal" href="#wavemove"><span class="std std-numref">Fig. 5.1</span></a>.</p>
+<div class="figure align-default" id="wavemove">
+<img alt="../_images/wavemove.png" src="../_images/wavemove.png" />
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Visulisation of a wave moving in time and space.</span><a class="headerlink" href="#wavemove" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="separable-ansatz-for-wave-equation-pde">
 <h2><span class="section-number">5.2. </span>Separable Ansatz for Wave Equation PDE<a class="headerlink" href="#separable-ansatz-for-wave-equation-pde" title="Permalink to this headline">¶</a></h2>
@@ -573,31 +588,33 @@ we should really write functions in the form:</p>
 <span class="math notranslate nohighlight">\([\textrm{time}]^{-1}\)</span>.  We can make this change, with no less of
 generality, as we have not fixed a value of  constant <span class="math notranslate nohighlight">\(a\)</span> previously and also because it is a
 more useful way to understand wave behaviour.</p>
-<p>We can reduce the form of these wave solutions further, consider the addition of two complex exponentials:</p>
+</div>
+<div class="section" id="phasor-representation">
+<h2><span class="section-number">5.3. </span>Phasor Representation<a class="headerlink" href="#phasor-representation" title="Permalink to this headline">¶</a></h2>
+<p>We can reduce the form of these wave solutions further, since we have not fixed the constants in our system
+(we will do so from initial conditions later), then without less of generality we can write:</p>
 <div class="math notranslate nohighlight">
-\[f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + i(A-B)\sin(x)\]</div>
+\[u(x,\,t) =  A \cos(kx + \omega t) + B \sin(kx + \omega t) + C \cos(kx - \omega t) + D\sin(kx - \omega t)\]</div>
 <p>since we know through trigonometric angle identites that:</p>
 <div class="math notranslate nohighlight">
-\[\cos(x-\phi) = \cos(x)\cos(\phi) + \sin(x)\sin(\phi)\]</div>
-<p>and therefore we can make the association:</p>
+\[\cos(\theta-\phi) = \cos(\theta)\cos(\phi) + \sin(\theta)\sin(\phi)\]</div>
+<p>we can make the association:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}i(A - B)\, &amp;&amp; = \sin(\phi) \\
-A + B \,&amp;&amp; = \cos(\phi) \\
- \Rightarrow \tan(\phi) \,&amp;&amp; = i\frac{A-B}{A+B}\end{split}\]</div>
-<p>and therefore we can write:</p>
+\[\begin{split}A &amp;= \cos(\phi) \\
+B &amp;= \sin(\phi)\end{split}\]</div>
+<p>and write these functions as:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f(x) &amp;=&amp; \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
-\, &amp;=&amp;\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(A'\)</span> is some constant to be found.  So if we use the condition that we will eventually just take the real parts
-of our complex solutions, it dramatically simplifies the form of the equations.  We call writing our complex solutions
-of oscillating functions in this way the <b>phasor</b> representation.</p>
-<p>Therefore we rewrite Equation <a class="reference internal" href="#equation-fullwaveeqnsoln1">(5.6)</a>:</p>
-<div class="math notranslate nohighlight" id="equation-fullwaveeqnsoln">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-fullwaveeqnsoln" title="Permalink to this equation">¶</a></span>\[u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) \]</div>
-<p>where <span class="math notranslate nohighlight">\(A',\, B'\)</span> are constants to be found.</p>
+\[u(x,\,t) =  A \cos(kx + \omega t - \phi_1) + B \cos(kx - \omega t - \phi_2)\]</div>
+<p>Each of the constants <span class="math notranslate nohighlight">\(phi_1,\,\phi_2\)</span> represents a <strong>phase</strong> along each wave.  Although we can think of these wave solutions in
+a fiven domain, it is typical to think of them as a continuous oscillation.  Hence we just need to think about where to start
+(and finish) examining our wave solution.  If we have a wave set up such that we start from a peak, then we can just discard
+the phases, <span class="math notranslate nohighlight">\(\phi_1 = \phi_2 = 0\)</span>.  So a very common way to write wave solutions is:</p>
+<div class="math notranslate nohighlight">
+\[u(x,\,t) =  A \cos(kx + \omega t ) + B \cos(kx - \omega t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(A,\, B\)</span> are constants to be found.</p>
 </div>
 <div class="section" id="features-of-wave-solutions">
-<h2><span class="section-number">5.3. </span>Features of Wave Solutions<a class="headerlink" href="#features-of-wave-solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Features of Wave Solutions<a class="headerlink" href="#features-of-wave-solutions" title="Permalink to this headline">¶</a></h2>
 <p>Lets examine these quantities <span class="math notranslate nohighlight">\(k,\, \omega\)</span> a little more closely too, start with a right travelling wave <span class="math notranslate nohighlight">\(u\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[u(x,\,t) = u_0 \,\exp\left(i(kx - \omega t)\right)\]</div>
@@ -615,7 +632,7 @@ dimensional case, for a right travelling wave propagating in three dimensions:</
 \[{\bf u}(x,\,t) = {\bf u_0} \exp\left(i(\bf{k}\cdot\bf{x} - \omega t)\right)\]</div>
 <p>where <span class="math notranslate nohighlight">\({\bf k},\, \,{\bf u},\, {\bf u_0}\)</span> are now vector quantities, with <span class="math notranslate nohighlight">\({\bf k} = (k_x,\, k_y,\, k_z),\ {\bf x} = (x,\, y,\, z)\)</span>, and
 <span class="math notranslate nohighlight">\(k = |\bf{k}| = 2\pi/\lambda\)</span>.  <span class="math notranslate nohighlight">\({\bf u_0}\)</span> is known as the waves <b>Polarisation Vector</b> (more on this later).</p>
-<p>The quantity <span class="math notranslate nohighlight">\(\Phi = kx-\omega t\)</span> is often known as the <b> phase </b> of the wave and comparing these
+<p>The quantity <span class="math notranslate nohighlight">\(\Phi = kx-\omega t\)</span> is often known as the <b> wave phase </b> and comparing these
 between two travelling waves <span class="math notranslate nohighlight">\(|\Phi_1 - \Phi_2|\)</span> allows us to look at the <b> phase difference </b>
 between waves, which is important in phenomena such as interference.  All of these considerations also apply to left
 hand moving waves also.</p>

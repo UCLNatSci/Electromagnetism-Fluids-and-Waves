@@ -70,6 +70,16 @@ For $u(t,x)$ to stay invariant under this change:
 - For the $A$ function, $x \rightarrow x - c $, suggesting it is a <b> left moving wave</b>.
 - For the $B$ function, $x \rightarrow x + c$ suggesting it is a <b> right moving wave</b>. 
 
+We can visualise this in {numref}`Wavemove`.
+
+
+```{figure} ../figures/wavemove.png
+---
+name: Wavemove
+---
+Visulisation of a wave moving in time and space.
+```
+
 ## Separable Ansatz for Wave Equation PDE
 
 Although this analysis gives us the functional dependence of the functions $A,\,B$, it does not narrow down 
@@ -138,35 +148,34 @@ $[\textrm{time}]^{-1}$.  We can make this change, with no less of
 generality, as we have not fixed a value of  constant $a$ previously and also because it is a 
 more useful way to understand wave behaviour.
 
-We can reduce the form of these wave solutions further, consider the addition of two complex exponentials:
+## Phasor Representation
+
+We can reduce the form of these wave solutions further, since we have not fixed the constants in our system 
+(we will do so from initial conditions later), then without less of generality we can write:
 ```{math}
-f(x) = A e^{ix} + B e^{-ix} = (A+B)\cos(x) + i(A-B)\sin(x)
+u(x,\,t) =  A \cos(kx + \omega t) + B \sin(kx + \omega t) + C \cos(kx - \omega t) + D\sin(kx - \omega t)
 ```
 since we know through trigonometric angle identites that:
 ```{math}
-\cos(x-\phi) = \cos(x)\cos(\phi) + \sin(x)\sin(\phi)
+\cos(\theta-\phi) = \cos(\theta)\cos(\phi) + \sin(\theta)\sin(\phi)
 ```
-and therefore we can make the association:
+we can make the association:
 ```{math}
-i(A - B)\, && = \sin(\phi) \\
-A + B \,&& = \cos(\phi) \\
- \Rightarrow \tan(\phi) \,&& = i\frac{A-B}{A+B}
+A &= \cos(\phi) \\
+B &= \sin(\phi)
 ```
-and therefore we can write:
+and write these functions as:
 ```{math}
-f(x) &=& \,\cos(x - \phi) \, = \, \mathrm{Re}\left[e^{i(x-\phi)}\right] \\
-\, &=&\, \mathrm{Re}\left[e^{-i\phi}e^{ix}\right] = \mathrm{Re}\left[A'e^{ix}\right]
-``` 
-where $A'$ is some constant to be found.  So if we use the condition that we will eventually just take the real parts 
-of our complex solutions, it dramatically simplifies the form of the equations.  We call writing our complex solutions
-of oscillating functions in this way the <b>phasor</b> representation.
-
-Therefore we rewrite Equation {eq}`fullwaveeqnsoln1`:
-```{math}
-:label: fullwaveeqnsoln
-u(x,\,t) =  A' \exp\left(i(kx + \omega t)\right) + B' \exp\left(i(kx - \omega t)\right) 
+u(x,\,t) =  A \cos(kx + \omega t - \phi_1) + B \cos(kx - \omega t - \phi_2)
 ```
-where $A',\, B'$ are constants to be found.
+Each of the constants $phi_1,\,\phi_2$ represents a **phase** along each wave.  Although we can think of these wave solutions in 
+a fiven domain, it is typical to think of them as a continuous oscillation.  Hence we just need to think about where to start 
+(and finish) examining our wave solution.  If we have a wave set up such that we start from a peak, then we can just discard 
+the phases, $\phi_1 = \phi_2 = 0$.  So a very common way to write wave solutions is:
+```{math}
+u(x,\,t) =  A \cos(kx + \omega t ) + B \cos(kx - \omega t)
+```
+where $A,\, B$ are constants to be found.
 
 ## Features of Wave Solutions
 Lets examine these quantities $k,\, \omega$ a little more closely too, start with a right travelling wave $u$:
@@ -192,7 +201,7 @@ dimensional case, for a right travelling wave propagating in three dimensions:
 where ${\bf k},\, \,{\bf u},\, {\bf u_0}$ are now vector quantities, with ${\bf k} = (k_x,\, k_y,\, k_z),\ {\bf x} = (x,\, y,\, z)$, and 
 $k = |\bf{k}| = 2\pi/\lambda$.  ${\bf u_0}$ is known as the waves <b>Polarisation Vector</b> (more on this later).
 
-The quantity $\Phi = kx-\omega t$ is often known as the <b> phase </b> of the wave and comparing these 
+The quantity $\Phi = kx-\omega t$ is often known as the <b> wave phase </b> and comparing these 
 between two travelling waves $|\Phi_1 - \Phi_2|$ allows us to look at the <b> phase difference </b> 
 between waves, which is important in phenomena such as interference.  All of these considerations also apply to left 
 hand moving waves also.

@@ -409,8 +409,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dispersion-relation">
+   7.1. Dispersion relation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#group-and-phase-velocity">
-   7.1. Group and Phase Velocity
+   7.2. Group and Phase Velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-linear-dispersion-relation-and-wave-speeds">
+   7.3. Non-linear dispersion relation and wave speeds
   </a>
  </li>
 </ul>
@@ -434,8 +444,18 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dispersion-relation">
+   7.1. Dispersion relation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#group-and-phase-velocity">
-   7.1. Group and Phase Velocity
+   7.2. Group and Phase Velocity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-linear-dispersion-relation-and-wave-speeds">
+   7.3. Non-linear dispersion relation and wave speeds
   </a>
  </li>
 </ul>
@@ -449,6 +469,8 @@
                 
   <div class="section" id="dispersion-relations-and-wave-speed">
 <h1><span class="section-number">7. </span>Dispersion Relations and Wave Speed<a class="headerlink" href="#dispersion-relations-and-wave-speed" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dispersion-relation">
+<h2><span class="section-number">7.1. </span>Dispersion relation<a class="headerlink" href="#dispersion-relation" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have our complex wave solutions to the equation, we can see that plugging in the solutions
 to the wave equation produce their own equations.  Lets start with the simplest wave solution, a 1D right hand moving wave:</p>
 <div class="math notranslate nohighlight" id="equation-waveform">
@@ -460,39 +482,122 @@ u_{tt} &amp;=&amp; \, -\omega^2 \,u \\
 u_{tt} &amp;=&amp; \, c^2\,u_{xx} \\
 -\omega^2 \,u &amp;=&amp; \, -c^2\,k^2\,u \Rightarrow \omega^2 &amp;=&amp; \,c^2 k^2 \Rightarrow \omega = \,\pm\, c k\end{split}\]</div>
 <p>Since we have two roots for <span class="math notranslate nohighlight">\(\omega\)</span> here, we can see that these correspond to either left or right hand moving waves.<br />
-Therefore if we use <a class="reference internal" href="#equation-waveform">(7.1)</a> with the proviso that <span class="math notranslate nohighlight">\(\omega = \omega(k) = \pm c\, k\)</span>, this describes the travelling wave solutions
-in <a class="reference internal" href="waveequationsolns.html#equation-fullwaveeqnsoln">(5.7)</a>.</p>
+Therefore if we use <a class="reference internal" href="#equation-waveform">(7.1)</a> with the proviso that <span class="math notranslate nohighlight">\(\omega = \omega(k) = \pm c\, k\)</span>, this describes the d’Alembert wave solutions.</p>
 <p>The function <span class="math notranslate nohighlight">\(\omega = \omega(k)\)</span> is known as a <b>dispersion relation</b>.  In this case, <span class="math notranslate nohighlight">\(\omega(k)\)</span> is a linear function of <span class="math notranslate nohighlight">\(k\)</span>, but in
 general it could be <em>any</em> function of <span class="math notranslate nohighlight">\(k\)</span>.  We can also rewrite this linear expression in terms of frequency and wavelegnth
 <span class="math notranslate nohighlight">\(f = \omega/2\pi, \,\lambda = 2\pi/k\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[c = f \,\lambda\]</div>
 <p>which is of course a familiar result!</p>
+<p>We do not in general need to stick to <span class="math notranslate nohighlight">\(\omega = c\,k\)</span> however, as we will see later, non-linear dispersion relations are not
+uncommon and result from have a different form of wave equation.</p>
 <p>Looking at the combination of <span class="math notranslate nohighlight">\(\omega/k\)</span>, notice it has units of:</p>
 <div class="math notranslate nohighlight">
 \[\frac{[\omega]}{[k]} = \frac{s^{-1}}{m^{-1}} = m\,s^{-1} = [\textrm{speed}]\]</div>
 <p>and so we see this is a wave speed of some sort!</p>
+</div>
 <div class="section" id="group-and-phase-velocity">
-<h2><span class="section-number">7.1. </span>Group and Phase Velocity<a class="headerlink" href="#group-and-phase-velocity" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Group and Phase Velocity<a class="headerlink" href="#group-and-phase-velocity" title="Permalink to this headline">¶</a></h2>
+<p>We can start by considering again the movement of waves in time and space:</p>
+<div class="figure align-default" id="wavemove2">
+<img alt="../_images/wavemove.png" src="../_images/wavemove.png" />
+<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Visulisation of a wave moving in time and space.</span><a class="headerlink" href="#wavemove2" title="Permalink to this image">¶</a></p>
+</div>
+<p>A solution for these waves, <span class="math notranslate nohighlight">\(u(x,\,t) = u_0\,\cos(kx-\omega t)\)</span>, shows that although <span class="math notranslate nohighlight">\(x,\,t\)</span> vary, each part of the
+waves remain a fixed distance apart - this is the wave phase <span class="math notranslate nohighlight">\(\Phi = kx - \omega t\)</span>.  Therefore this wave phase is invariant in
+space and time, hence:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \Phi}{\partial t} = k\frac{\partial(x)}{\partial t} - \omega = 0\]</div>
+<p>which we can rearrange to find:</p>
+<div class="math notranslate nohighlight">
+\[v = \frac{\partial(x)}{\partial t} = \frac{\omega}{k}\]</div>
 <p>This is known as the <b> phase velocity </b> of the wave <span class="math notranslate nohighlight">\(v_p\)</span> and describes the rate at which the phase
-of the wave propagates through space.  We can see this by considering</p>
+of the wave propagates through space.</p>
+<p>However this measure of wave velocity is only really unambiguous if there is a single wave moving in space and time, what happens
+if we have multiple waves?</p>
+<p>Lets consider a sum of two waves, of equal amplitude, but different frequencies and wavelengths:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\Phi &amp;=&amp; \,kx - \omega t  \\
-\frac{\partial \Phi}{\partial t} &amp;=&amp; \,-\omega, \,\,\, \frac{\partial \Phi}{\partial x} = k \\ 
-v_p &amp;=&amp; \,\left|\frac{\partial x}{\partial t}\right| = \frac{\omega}{k}\end{split}\]</div>
-<p>There are other ways to measure the propagation of waves through space, another way that is dimensionally
-equivalent (but crucially different in the detail) would be</p>
+\[u = u_1 + u_2 = u_0\cos(k_1x-\omega_1t) + u_0\cos(k_2x - \omega_2t)\]</div>
+<p>we cna rewrite this using trigonometric identities:</p>
 <div class="math notranslate nohighlight">
-\[v_g = \frac{\partial \omega}{\partial k}\]</div>
-<p>this is known as the <b> group velocity </b> of the wave and describes the velocity with which the overall
-envelope shape of the wave’s amplitudes (known as the modulation or envelope of the wave) propagates
-through space.</p>
-<p>We can extend this to two and higher dimensions using the gradient operator</p>
+\[\begin{split}\cos(A+B) &amp;= \cos(A)\cos(B) - \sin(A)\sin(B) \\
+\cos(A-B) &amp;= \cos(A)\cos(B) + \sin(A)\sin(B) \\
+\Rightarrow \cos(A+B) + \cos(A-B) &amp;= 2\cos(A)\cos(B) \\
+\Rightarrow \cos(C) + \cos(D) &amp;= 2\cos\left(\frac{C+D}{2}\right)\,\cos\left(\frac{C-D}{2}\right)\end{split}\]</div>
+<p>So we can rewrite our superposition of two waves as:</p>
+<div class="math notranslate nohighlight">
+\[u = 2u_0\,\cos\left(k_{avg}x - \omega_{avg}t\right)\,\cos\left(\frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\right)\]</div>
+<p>where we have defined:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}k_{avg} = \frac{k_1+k_2}{2} &amp;\qquad \omega_{avg} = \frac{\omega_1+\omega_2}{2} \\
+\Delta k = \frac{k_1-k_2}{2} &amp;\qquad \Delta \omega = \frac{\omega_1-\omega_2}{2} \\\end{split}\]</div>
+<p>The result of this can be visualised in <a class="reference internal" href="#beats"><span class="std std-numref">Fig. 7.2</span></a></p>
+<div class="figure align-default" id="beats">
+<img alt="../_images/Beating_Frequency.png" src="../_images/Beating_Frequency.png" />
+<p class="caption"><span class="caption-number">Fig. 7.2 </span><span class="caption-text">Visulisation of a superposition of two waves moving in time and space, the result is known as <strong>beats</strong> where wave
+follows an outer envelope function (dashed line), even though the overall phase (the black line) remains fixed.</span><a class="headerlink" href="#beats" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can track the phase of the waves now with the first cosine term, which we see follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Phi_1 &amp;= k_{avg}x - \omega_{avg}t \\
+\Rightarrow v_p = \frac{\omega_{avg}}{k_{avg}}\end{split}\]</div>
+<p>but the wave moves as a group, signified by the second cosine term:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Phi_2 &amp;= \frac{\Delta k}{2}x - \frac{\Delta \omega}{2}t\\
+\Rightarrow v &amp;= \frac{\Delta \omega}{\Delta k}\end{split}\]</div>
+<p>If we pick a continuum of waves, then in the limit of <span class="math notranslate nohighlight">\(\Delta k \rightarrow 0\)</span>, each of the waves is separated by
+an infinitesimal difference <span class="math notranslate nohighlight">\(\mathrm{d}k\)</span>, meaning:</p>
+<div class="math notranslate nohighlight">
+\[v_g = \frac{\mathrm{d}\omega}{\mathrm{d}k}\]</div>
+<p>This is known as the <b> group velocity </b> of the wave and describes the velocity with which the overall
+envelope shape of the wave’s amplitudes propagates through space and time.  We also see that this velocity is
+dimensionally equivalent to <span class="math notranslate nohighlight">\(v_p\)</span>.</p>
+<p>We can extend this to two and higher dimensions using partial derivatives and the gradient operator:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\bf{v_p} &amp;=&amp; \,\frac{\bf \hat{k} }{|\bf{k}|}\omega \\
 \bf{v_g} &amp;=&amp; \,\nabla_k \omega \end{split}\]</div>
 <p>Usually these vectors point in the same direction, but there are examples in nature, for instance
 the anisotropic structure within a crystal, where the two vectors are not parallel.</p>
+</div>
+<div class="section" id="non-linear-dispersion-relation-and-wave-speeds">
+<h2><span class="section-number">7.3. </span>Non-linear dispersion relation and wave speeds<a class="headerlink" href="#non-linear-dispersion-relation-and-wave-speeds" title="Permalink to this headline">¶</a></h2>
+<p>The first thing to notice about the phase and group velocities is that for a linear dispersion relation, they
+are equal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\omega &amp;= ck\\
+v_p &amp;=  \frac{\omega}{k} = c \\
+v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = c\end{split}\]</div>
+<p>However once we look at non-linear <span class="math notranslate nohighlight">\(\omega(k)\)</span> then the picture changes.  Lets look at a power law type dispersion relation:</p>
+<div class="math notranslate nohighlight">
+\[\omega = A k^{r}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is a constant that has units of <span class="math notranslate nohighlight">\([A] = s^{-1}\,m^{r}\)</span> and <span class="math notranslate nohighlight">\(r\)</span> is some constant exponent to be chosen.</p>
+<p>There will be three regimes of <span class="math notranslate nohighlight">\(r\)</span> values of interest:</p>
+<p>1. <span class="math notranslate nohighlight">\(r &lt; 1\)</span></p>
+<p>This is non-linear dispersion relation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_p &amp;=  \frac{\omega}{k} = Ak^{r-1} \\
+v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = Ark^{r-1}\end{split}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(r&lt;1\)</span>, <span class="math notranslate nohighlight">\(v_g &lt; v_p\)</span>, which means that the wave envelope is moving slower than the individual parts of the
+wave.</p>
+<p>2. <span class="math notranslate nohighlight">\(r=1\)</span></p>
+<p>This is linear dispersion relation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_p &amp;=  \frac{\omega}{k} = A \\
+v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = A\end{split}\]</div>
+<p>and so <span class="math notranslate nohighlight">\(v_g = v_p\)</span>, which means that all parts of the wave are moving at the same speed.</p>
+<p>3. <span class="math notranslate nohighlight">\(r &gt; 1\)</span></p>
+<p>This is non-linear dispersion relation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_p &amp;=  \frac{\omega}{k} = Ak^{r-1} \\
+v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = Ark^{r-1}\end{split}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(r&gt;1\)</span>, <span class="math notranslate nohighlight">\(v_g &gt; v_p\)</span>, which means that the wave envelope is moving faster than the individual parts of the
+wave.</p>
+<p>We can see these cases summarised in <a class="reference internal" href="#dispersionplots"><span class="std std-numref">Fig. 7.3</span></a>.</p>
+<div class="figure align-default" id="dispersionplots">
+<img alt="../_images/omegakdispersionplot.png" src="../_images/omegakdispersionplot.png" />
+<p class="caption"><span class="caption-number">Fig. 7.3 </span><span class="caption-text">Visulisation of a the differences between phase and group velocity in the case of a power law dispersion
+relation.  The left hand figure shows <span class="math notranslate nohighlight">\(r &lt; 1\)</span>, the middle figure shows <span class="math notranslate nohighlight">\(r = 1\)</span> and the right hand figure shows <span class="math notranslate nohighlight">\(r &gt; 1\)</span></span><a class="headerlink" href="#dispersionplots" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 

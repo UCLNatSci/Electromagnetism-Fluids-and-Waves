@@ -220,7 +220,7 @@ $\Omega \rightarrow \omega_0$, this gives rise to the phenomena of **resonance**
 ```{math}
 x(t) \simeq \exp(-\Omega\,\zeta \,t)\Big(A\cos(\Omega \,\gamma t) + B\sin(\Omega \,\gamma \,t)\Big) +\frac{\sin(\Omega\,t)}{2\zeta\,\Omega^2}
 ```
-and given that $0<\zeta <1$ in thi case, this term is enhanced.  Resonance can also occur in systems with other types of dampning too and we see the effect of 
+and given that $0<\zeta <1$ in this case, this second term is enhanced.  Resonance can also occur in systems with other types of dampning too and we see the effect of 
 resonance in {numref}`Resonance`.
 
 ```{figure} ../figures/resonance2.png
