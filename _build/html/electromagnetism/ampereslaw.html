@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>20. Ampère’s Circuital Law &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,42 +20,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="21. Faraday’s Law" href="faradayslaw.html" />
@@ -65,7 +66,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -74,9 +89,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -94,14 +110,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -168,7 +185,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -324,90 +341,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/electromagnetism/ampereslaw.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/ampereslaw.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/ampereslaw.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/electromagnetism/ampereslaw.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#magnetic-field-from-a-wire">
    20.1. Magnetic Field from a Wire
@@ -439,12 +546,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Ampère’s Circuital Law</h1>
@@ -492,11 +598,12 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="amperes-circuital-law">
-<h1><span class="section-number">20. </span>Ampère’s Circuital Law<a class="headerlink" href="#amperes-circuital-law" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="amperes-circuital-law">
+<h1><span class="section-number">20. </span>Ampère’s Circuital Law<a class="headerlink" href="#amperes-circuital-law" title="Permalink to this headline">#</a></h1>
 <p>Going back to the magnetic field due to an infinite wire in Equation <a class="reference internal" href="magneticfields.html#equation-infinitewirebfield">(18.5)</a>:</p>
 <div class="math notranslate nohighlight">
 \[B_\theta = \frac{\mu_0\,I}{2\pi\,r}\]</div>
@@ -507,17 +614,19 @@ cylinder length - but in essence we found a <b> bounding contour </b> for moving
 \[B_\theta\,(2\pi\,r) = \mu_0\,I \Longleftrightarrow B \times (\text{boundary around I}) = \mu_0\,I_\text{{enclosed by boundary}}\]</div>
 <p>We can consider breaking up this boundary (containing the current <span class="math notranslate nohighlight">\(I\)</span>) into elements <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> and then through a contour integral find the LHS here,
 this would work therefore for <em> any </em> closed boundary would do, as depicted in <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 20.1</span></a>.</p>
-<div class="figure align-default" id="amperelawboundary">
+<figure class="align-default" id="amperelawboundary">
 <img alt="../_images/AmperesLaw.png" src="../_images/AmperesLaw.png" />
-<p class="caption"><span class="caption-number">Fig. 20.1 </span><span class="caption-text">Depiction of Ampère’s  circuital law,
+<figcaption>
+<p><span class="caption-number">Fig. 20.1 </span><span class="caption-text">Depiction of Ampère’s  circuital law,
 <b> Left Pane </b>  - Applying Ampère’s law on a boundary outside or inside a cylindrical conductor carrying current <span class="math notranslate nohighlight">\(I\)</span>.<br />
-<b> Right Pane </b> - Current <span class="math notranslate nohighlight">\(I\)</span> enclosed by some boundary in segments <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span>.</span><a class="headerlink" href="#amperelawboundary" title="Permalink to this image">¶</a></p>
-</div>
+<b> Right Pane </b> - Current <span class="math notranslate nohighlight">\(I\)</span> enclosed by some boundary in segments <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span>.</span><a class="headerlink" href="#amperelawboundary" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Thus our expression for <b>Ampère’s Law</b> is given by:</p>
 <div class="math notranslate nohighlight" id="equation-ampereslaw">
-<span class="eqno">(20.1)<a class="headerlink" href="#equation-ampereslaw" title="Permalink to this equation">¶</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I_{enclosed} \]</div>
-<div class="section" id="magnetic-field-from-a-wire">
-<h2><span class="section-number">20.1. </span>Magnetic Field from a Wire<a class="headerlink" href="#magnetic-field-from-a-wire" title="Permalink to this headline">¶</a></h2>
+<span class="eqno">(20.1)<a class="headerlink" href="#equation-ampereslaw" title="Permalink to this equation">#</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I_{enclosed} \]</div>
+<section id="magnetic-field-from-a-wire">
+<h2><span class="section-number">20.1. </span>Magnetic Field from a Wire<a class="headerlink" href="#magnetic-field-from-a-wire" title="Permalink to this headline">#</a></h2>
 <p>Now lets consider a thick wire, modelled as a cylinder of current <span class="math notranslate nohighlight">\(I\)</span> with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>, as depicted in <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 20.1</span></a>, we see
 akin to solving Gauss’s law,  that there are two regimes of interest:</p>
 <ul class="simple">
@@ -542,19 +651,23 @@ piecewise function:</p>
       \mu_0 \,I / 2 \pi\, r \,\hat{\bf \theta} &amp; r \geq R 
    \end{cases}\end{split}\]</div>
 <p>and we see a depiction of this in <a class="reference internal" href="#bfieldwire"><span class="std std-numref">Fig. 20.2</span></a>.  Note that once again the fields expression coincide at the boundary <span class="math notranslate nohighlight">\(r = R\)</span>.</p>
-<div class="figure align-default" id="bfieldwire">
+<figure class="align-default" id="bfieldwire">
 <img alt="../_images/magneticfieldwire.png" src="../_images/magneticfieldwire.png" />
-<p class="caption"><span class="caption-number">Fig. 20.2 </span><span class="caption-text">Magnetic field around a thick wire, with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>, note the agreement of the fields at the boundary.</span><a class="headerlink" href="#bfieldwire" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="displacement-current">
-<h2><span class="section-number">20.2. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 20.2 </span><span class="caption-text">Magnetic field around a thick wire, with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>, note the agreement of the fields at the boundary.</span><a class="headerlink" href="#bfieldwire" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="displacement-current">
+<h2><span class="section-number">20.2. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this headline">#</a></h2>
 <p>Lets consider a simple circuit with a capacitor, as seen in <a class="reference internal" href="#displacementcurrent"><span class="std std-numref">Fig. 20.3</span></a>, we could take an Ampère’s law path from the current
 flowing in to or out of the capacitor to a path cutting through the capacitor.</p>
-<div class="figure align-default" id="displacementcurrent">
+<figure class="align-default" id="displacementcurrent">
 <img alt="../_images/DisplacementCurrent.png" src="../_images/DisplacementCurrent.png" />
-<p class="caption"><span class="caption-number">Fig. 20.3 </span><span class="caption-text">Applying Ampère’s law to a capacitor with no direct current between the plates.</span><a class="headerlink" href="#displacementcurrent" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 20.3 </span><span class="caption-text">Applying Ampère’s law to a capacitor with no direct current between the plates.</span><a class="headerlink" href="#displacementcurrent" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>This is problematic because there is no current flowing through the capacitor, yet the exact path taken when calculating Ampère’s law should not
 change the outcome of the expression!  What we do see however is an electric field flowing within the capacity, this results in a current flowing at
 the other end of the capacitor, so we would expect some form of magnetic field contribution. To resolve this, consider the rate of flow of charge
@@ -570,16 +683,18 @@ from the product rule, since the surface <span class="math notranslate nohighlig
 <p>where we have added an additional <b>Displacement Current</b> <span class="math notranslate nohighlight">\(I_D\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\]</div>
-</div>
-<div class="section" id="magnetic-fields-in-coils">
-<h2><span class="section-number">20.3. </span>Magnetic Fields in Coils*<a class="headerlink" href="#magnetic-fields-in-coils" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="magnetic-fields-in-coils">
+<h2><span class="section-number">20.3. </span>Magnetic Fields in Coils*<a class="headerlink" href="#magnetic-fields-in-coils" title="Permalink to this headline">#</a></h2>
 <p>In order to make sense of solenoids and other systems with coils of wire, we need to first break down the system of a single circular coil of wire,
 as shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 20.4</span></a>.</p>
-<div class="figure align-default" id="bfieldcoilofwire">
+<figure class="align-default" id="bfieldcoilofwire">
 <img alt="../_images/CoilofCurrent1.png" src="../_images/CoilofCurrent1.png" />
-<p class="caption"><span class="caption-number">Fig. 20.4 </span><span class="caption-text"><b> Main Pane </b> - A circular coil of current carrying wire, sitting in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane, centered on the origin.<br />
-<b> Bottom Pane </b> - At point <span class="math notranslate nohighlight">\(P\)</span> there is a pair-wise cancellation of the magnetic field components in the <span class="math notranslate nohighlight">\((x,\,y )\)</span> plane, leaving only those in the <span class="math notranslate nohighlight">\(z\)</span> direction.</span><a class="headerlink" href="#bfieldcoilofwire" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 20.4 </span><span class="caption-text"><b> Main Pane </b> - A circular coil of current carrying wire, sitting in the <span class="math notranslate nohighlight">\((x,\,y)\)</span> plane, centered on the origin.<br />
+<b> Bottom Pane </b> - At point <span class="math notranslate nohighlight">\(P\)</span> there is a pair-wise cancellation of the magnetic field components in the <span class="math notranslate nohighlight">\((x,\,y )\)</span> plane, leaving only those in the <span class="math notranslate nohighlight">\(z\)</span> direction.</span><a class="headerlink" href="#bfieldcoilofwire" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In order to find the magnetic field at point <span class="math notranslate nohighlight">\(P\)</span>, we can use the Biot-Savart law.  Given that the coil sits in the <span class="math notranslate nohighlight">\((x,\, y)\)</span> plane here and we are
 interested in the magnetic field at a point on the <span class="math notranslate nohighlight">\(z\)</span> axis, the vectors <span class="math notranslate nohighlight">\(\mathrm{d} {\bf \ell}\)</span> and <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> are perpendicular, therefore we have:</p>
 <div class="math notranslate nohighlight">
@@ -603,13 +718,15 @@ integrating the segment elements <span class="math notranslate nohighlight">\(\m
 <p>If we wanted to find the magnetic field at <em> all </em> points in space, the simplification of the cross product in the Biot-Savart law would not be true and the
 calculation would be fairly complicated!  However given we know a fair amount about how magnetic fields behave, we can think about the system qualitatively, as shown
 in <a class="reference internal" href="#bfieldcoilofwirefull"><span class="std std-numref">Fig. 20.5</span></a>.</p>
-<div class="figure align-default" id="bfieldcoilofwirefull">
+<figure class="align-default" id="bfieldcoilofwirefull">
 <img alt="../_images/FullBFieldCoilWire.png" src="../_images/FullBFieldCoilWire.png" />
-<p class="caption"><span class="caption-number">Fig. 20.5 </span><span class="caption-text">Full magnetic field are a coil of current carrying wire, the straight line through the middle of the coil represents the field calculated along the <span class="math notranslate nohighlight">\(z\)</span> axis.</span><a class="headerlink" href="#bfieldcoilofwirefull" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="magnetic-field-in-solenoids">
-<h2><span class="section-number">20.4. </span>Magnetic Field in Solenoids*<a class="headerlink" href="#magnetic-field-in-solenoids" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 20.5 </span><span class="caption-text">Full magnetic field are a coil of current carrying wire, the straight line through the middle of the coil represents the field calculated along the <span class="math notranslate nohighlight">\(z\)</span> axis.</span><a class="headerlink" href="#bfieldcoilofwirefull" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="magnetic-field-in-solenoids">
+<h2><span class="section-number">20.4. </span>Magnetic Field in Solenoids*<a class="headerlink" href="#magnetic-field-in-solenoids" title="Permalink to this headline">#</a></h2>
 <p>Through superposition of coils, we can find the magnetic field around a solenoid, as shown in <a class="reference internal" href="#bfieldsolenoid"><span class="std std-numref">Fig. 20.6</span></a>.  The (almost)
 uniform magnetic field inside a solenoid follows:</p>
 <div class="math notranslate nohighlight">
@@ -619,15 +736,17 @@ from a solenoid shaped like a torus, as depicted in <a class="reference internal
 <div class="math notranslate nohighlight">
 \[B = \frac{\mu_0\,N\,I}{2\pi\,r}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the torus radius.</p>
-<div class="figure align-default" id="bfieldsolenoid">
+<figure class="align-default" id="bfieldsolenoid">
 <img alt="../_images/BFieldSolenoid.png" src="../_images/BFieldSolenoid.png" />
-<p class="caption"><span class="caption-number">Fig. 20.6 </span><span class="caption-text"><b> Left Pane </b>-  The magnetic field around a current carrying solenoid.<br />
+<figcaption>
+<p><span class="caption-number">Fig. 20.6 </span><span class="caption-text"><b> Left Pane </b>-  The magnetic field around a current carrying solenoid.<br />
 <b> Right Pane </b> - The magnetic field around a current carrying toroidal solenoid.<br />
-The magnetic field loops over each turn along the solenoid.</span><a class="headerlink" href="#bfieldsolenoid" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="magnetism-in-matter-the-bf-h-field">
-<h2><span class="section-number">20.5. </span>Magnetism in Matter - the <span class="math notranslate nohighlight">\(\bf H\)</span> Field*<a class="headerlink" href="#magnetism-in-matter-the-bf-h-field" title="Permalink to this headline">¶</a></h2>
+The magnetic field loops over each turn along the solenoid.</span><a class="headerlink" href="#bfieldsolenoid" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="magnetism-in-matter-the-bf-h-field">
+<h2><span class="section-number">20.5. </span>Magnetism in Matter - the <span class="math notranslate nohighlight">\(\bf H\)</span> Field*<a class="headerlink" href="#magnetism-in-matter-the-bf-h-field" title="Permalink to this headline">#</a></h2>
 <p>We might rightly now ask what is the magnetostatic equivalent of the <span class="math notranslate nohighlight">\({\bf D}\)</span> field from electrostatics, describing how magnetic fields permeate through matter.
 We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> field and it may be defined as:</p>
 <div class="math notranslate nohighlight">
@@ -635,16 +754,18 @@ We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> f
 <p>where <span class="math notranslate nohighlight">\({\bf H}\)</span> is also known as the Magnetic field strength (sometimes Magnetic field intensity), <span class="math notranslate nohighlight">\({\bf B}\)</span> is the magnetic field strength
 (also sometimes called magnetic flux density) and <span class="math notranslate nohighlight">\({\bf M}\)</span> is the magnetisation vector.  We can see the effects of each vector in a bar magnet in
 <a class="reference internal" href="#bhmfields"><span class="std std-numref">Fig. 20.7</span></a>.</p>
-<div class="figure align-default" id="bhmfields">
+<figure class="align-default" id="bhmfields">
 <img alt="../_images/BHMFields.png" src="../_images/BHMFields.png" />
-<p class="caption"><span class="caption-number">Fig. 20.7 </span><span class="caption-text">Depiction of different magnetic fields within a bar magnet.</span><a class="headerlink" href="#bhmfields" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 20.7 </span><span class="caption-text">Depiction of different magnetic fields within a bar magnet.</span><a class="headerlink" href="#bhmfields" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In different materials, it is sometimes possible to relate <span class="math notranslate nohighlight">\({\bf M}\)</span> linearly to other fields:</p>
 <div class="math notranslate nohighlight">
 \[{\bf B} = \mu_0\,({\bf H} + {\bf M}) = \mu\,{\bf H} = \mu_0\,(1 + \chi_M)\,{\bf H}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the relative permeability and <span class="math notranslate nohighlight">\(\chi_M\)</span> is the magnetic susceptibility.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -668,9 +789,11 @@ We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> f
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="magneticforces.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -686,24 +809,28 @@ We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> f
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Ali Mozaffari and Ella Metcalfe<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -59,8 +59,8 @@ dividing through by $\Delta x$ and again taking the limit $\Delta x \rightarrow 
 ```
 Substituting this result into Equation {eq}`Transversewaveyeqn` and rearranging gives:
 ```{math}
-\rho_L\,\frac{\partial^2 y}{\partial t^2} &=&\, \cos(\theta)\left( T\,\tan(\theta)\,\sin(\theta)\,\frac{\partial \theta}{\partial x} + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \right) \\ 
-&=& \,T \,\frac{\partial \theta}{\partial x}
+\rho_L\,\frac{\partial^2 y}{\partial t^2} &=\, \cos(\theta)\left( T\,\tan(\theta)\,\sin(\theta)\,\frac{\partial \theta}{\partial x} + T\,\cos(\theta)\,\frac{\partial \theta}{\partial x} \right) \\ 
+&= \,T \,\frac{\partial \theta}{\partial x}
 ```
 In the limit of $\Delta x \rightarrow 0$:
 ```{math}
@@ -80,9 +80,9 @@ in the limit of $\theta \ll 1$, with $c = \sqrt{T/\rho_L}$, this reduces to the 
 ```
 We can check the units of $c$, 
 ```{math}
-[\textrm{T}] &=& \, \textrm{N} = \textrm{kg}\,\textrm{m}\,\textrm{s}^{-2}\\
-[\rho_L] &=& \,\textrm{kg}\,\textrm{m}^{-1}\\
-\Rightarrow \sqrt{[\textrm{T}] / [\rho_L]} &=& \, \sqrt{\textrm{m}^2\,\textrm{s}^{-2}} = \textrm{m}\,\textrm{s}^{-1}
+[\textrm{T}] &= \, \textrm{N} = \textrm{kg}\,\textrm{m}\,\textrm{s}^{-2}\\
+[\rho_L] &= \,\textrm{kg}\,\textrm{m}^{-1}\\
+\Rightarrow \sqrt{[\textrm{T}] / [\rho_L]} &= \, \sqrt{\textrm{m}^2\,\textrm{s}^{-2}} = \textrm{m}\,\textrm{s}^{-1}
 ```
 
 ## Wave Equation in higher dimensions
@@ -95,8 +95,8 @@ of dimensions, packaging the spatial derivatives up into the <b>Laplacian</b> $\
 ```
 which in cartesian coordinates takes the form:
 ```{math}
-\nabla &=& \, \left(\frac{\partial}{\partial x},\,\frac{\partial}{\partial y},\, \frac{\partial}{\partial z}\right) \\
-\nabla^2 &=& \, \nabla\cdot \nabla = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
+\nabla &= \, \left(\frac{\partial}{\partial x},\,\frac{\partial}{\partial y},\, \frac{\partial}{\partial z}\right) \\
+\nabla^2 &= \, \nabla\cdot \nabla = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
 ```
 but in different coordinate systems can take other forms (sometimes we will use the cyclindrical or circular forms instead).  
 

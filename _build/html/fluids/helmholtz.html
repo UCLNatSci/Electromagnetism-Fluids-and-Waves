@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>28. Divergence and vorticity &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,42 +20,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="29. The velocity potential" href="potential.html" />
@@ -65,7 +66,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -74,9 +89,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -94,14 +110,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -168,7 +185,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -324,110 +341,226 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/fluids/helmholtz.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fluids/helmholtz.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/helmholtz.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/fluids/helmholtz.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/fluids/helmholtz.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/helmholtz.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/fluids/helmholtz.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/fluids/helmholtz.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-flux">
    28.1. What is
@@ -462,12 +595,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Divergence and vorticity</h1>
@@ -518,32 +650,33 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="divergence-and-vorticity">
-<span id="ch-helmholtz"></span><h1><span class="section-number">28. </span>Divergence and vorticity<a class="headerlink" href="#divergence-and-vorticity" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="divergence-and-vorticity">
+<span id="ch-helmholtz"></span><h1><span class="section-number">28. </span>Divergence and vorticity<a class="headerlink" href="#divergence-and-vorticity" title="Permalink to this headline">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>Can divergence be inferred from looking at a plot of the vector field?</p></li>
 <li><p>How can a vortex have zero vorticity ?</p></li>
 </ul>
-<div class="section" id="what-is-flux">
-<h2><span class="section-number">28.1. </span>What is <strong>flux</strong>?<a class="headerlink" href="#what-is-flux" title="Permalink to this headline">¶</a></h2>
+<section id="what-is-flux">
+<h2><span class="section-number">28.1. </span>What is <strong>flux</strong>?<a class="headerlink" href="#what-is-flux" title="Permalink to this headline">#</a></h2>
 <p>Consider a small (strictly infinitesimal) surface element <span class="math notranslate nohighlight">\(S\)</span> within a field <span class="math notranslate nohighlight">\(\underline{F}\)</span>, such that the surface normal makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> to the direction of the field, as shown. The components of the field in directions parallel and perpendicular to the surface are illustrated in blue. The perpendicular component has magnitude <span class="math notranslate nohighlight">\(F\cos{\theta}\)</span>. The parallel component remains bounded by the surface.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/flux1.png" id="flux1"><img alt="alternative description" class="align-center" id="flux1" src="../_images/flux1.png" style="width: 274.40000000000003px; height: 345.6px;" /></a>
 <br>
 <p>Multiplying the normal component of the field by the area of the surface element gives the volume indicated by the shaded cylinder in the image below. It is a scalar quantity, which tells us the instantaneous rate of flow through the surface per unit time. Mathematically, the flow rate across the surface <span class="math notranslate nohighlight">\(S\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1fb733ea-4bc4-4b1c-8b53-32aeaa843369">
-<span class="eqno">(28.1)<a class="headerlink" href="#equation-1fb733ea-4bc4-4b1c-8b53-32aeaa843369" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bdc4dc56-8c65-4626-80fe-6c8602b3cb27">
+<span class="eqno">(28.1)<a class="headerlink" href="#equation-bdc4dc56-8c65-4626-80fe-6c8602b3cb27" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{\underline{n}}\)</span> is the unit normal to the surface.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/flux2.png" id="flux2"><img alt="alternative description" class="align-center" id="flux2" src="../_images/flux2.png" style="width: 288.0px; height: 326.40000000000003px;" /></a>
 <br>
 <p>The quantity <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> gives the flow rate <em>per unit area</em>, which is called the flux. Integrating the flux over a given finite surface area <span class="math notranslate nohighlight">\(A\)</span> is equivalent to summing the individual surface element contributions to the flow rate, in the limit. The resulting flow rate <span class="math notranslate nohighlight">\(Q\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3fec81b-ad3e-4fb4-8695-b0e5dc2e0707">
-<span class="eqno">(28.2)<a class="headerlink" href="#equation-d3fec81b-ad3e-4fb4-8695-b0e5dc2e0707" title="Permalink to this equation">¶</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cd96e5af-bcf9-45dd-8d09-f7dd81b3ef78">
+<span class="eqno">(28.2)<a class="headerlink" href="#equation-cd96e5af-bcf9-45dd-8d09-f7dd81b3ef78" title="Permalink to this equation">#</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
 <p>Most authors (including me!) use the terms flow rate and flux interchangeably, though flux is more pedantically defined as the flow rate per <strong>unit</strong> area. However, the intended meaning is almost always clear from the context and the surrounding text.</p>
 <p><strong>Examples</strong></p>
 <ul class="simple">
@@ -555,20 +688,20 @@
 <p>Notice that the flux <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> is directly proportional to the field strength <span class="math notranslate nohighlight">\(F\)</span>. For this reason, the field strength is sometimes referred to as the <em>flux density</em>.</p>
 <p>This description fits quite well with field line depictions, since the field strength can be inferred from how close together (dense) the field lines are. However, the term flux density is mainly reserved for the context of electricity and magnetism.</p>
 </div>
-</div>
-<div class="section" id="what-is-divergence">
-<h2><span class="section-number">28.2. </span>What is <strong>divergence</strong>?<a class="headerlink" href="#what-is-divergence" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-is-divergence">
+<h2><span class="section-number">28.2. </span>What is <strong>divergence</strong>?<a class="headerlink" href="#what-is-divergence" title="Permalink to this headline">#</a></h2>
 <p>Suppose that a given point within  a field <span class="math notranslate nohighlight">\(\underline{F}=(f_x,f_y,f_z)\)</span> is surrounded by a <strong>closed</strong> surface, <span class="math notranslate nohighlight">\(S\)</span> as illustrated below:</p>
 <a class="reference internal image-reference" href="../_images/source.png" id="source-fun"><img alt="alt text" class="align-center" id="source-fun" src="../_images/source.png" style="width: 288.0px; height: 242.4px;" /></a>
 <p>It can be shown (divergence theorem) that the flux <span class="math notranslate nohighlight">\(Q\)</span> through surface <span class="math notranslate nohighlight">\(S\)</span> is equivalent to a volume integral:</p>
 <div class="math notranslate nohighlight" id="equation-divergence-thm">
-<span class="eqno">(28.3)<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">¶</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
+<span class="eqno">(28.3)<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">#</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
 <p>where the <em>divergence</em> <span class="math notranslate nohighlight">\(\nabla.\underline{F}\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2760d592-4f85-48a5-a031-ec9a2498d879">
-<span class="eqno">(28.4)<a class="headerlink" href="#equation-2760d592-4f85-48a5-a031-ec9a2498d879" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2fb83a9b-bca3-432e-b5fa-a6609d4f76af">
+<span class="eqno">(28.4)<a class="headerlink" href="#equation-2fb83a9b-bca3-432e-b5fa-a6609d4f76af" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
 <p>By applying the Fundamental Theorem of Calculus to <a class="reference internal" href="#equation-divergence-thm">(28.3)</a>, we obtain the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b0324dd-14da-463b-910f-6604f65e418f">
-<span class="eqno">(28.5)<a class="headerlink" href="#equation-5b0324dd-14da-463b-910f-6604f65e418f" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-91369115-0a1d-41fe-8d71-33183cb6ff0c">
+<span class="eqno">(28.5)<a class="headerlink" href="#equation-91369115-0a1d-41fe-8d71-33183cb6ff0c" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
 <p>Hence, divergence can be understood as the flux per unit volume through an infinitesimally-small closed surface surrounding a point. A point with positive divergence behaves like a source, and a point with negative divergence behaves like a sink.</p>
 <div class="readmore admonition">
 <p class="admonition-title">See also</p>
@@ -578,25 +711,27 @@
 <div class="exercise admonition" id="ex-divergence">
 
 <p class="admonition-title"><span class="caption-number">Exercise 28.1 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Calculate the divergence of the potential flow you looked at in <a class="reference internal" href="mathideas.html#pot-fun"><span class="std std-numref">Exercise 26.3</span></a>, and produce a grayscale plot of the divergence on the range <span class="math notranslate nohighlight">\(-2\leq x,y \leq 2.\)</span></p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p><span class="math notranslate nohighlight">\(\nabla.\underline{u}=\nabla^2\phi=\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial y^2}=4x(x^2+y^2-2)e^{-x^2-y^2}\)</span></p>
 <div class="cell_output docutils container">
-<img alt="../_images/helmholtz_1_0.png" src="../_images/helmholtz_1_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 360x360 with 1 Axes&gt;
+</pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="what-is-vorticity">
-<h2><span class="section-number">28.3. </span>What is <strong>vorticity</strong>?<a class="headerlink" href="#what-is-vorticity" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="what-is-vorticity">
+<h2><span class="section-number">28.3. </span>What is <strong>vorticity</strong>?<a class="headerlink" href="#what-is-vorticity" title="Permalink to this headline">#</a></h2>
 <p>Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector <span class="math notranslate nohighlight">\((u,v,w)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2cde5b77-13c2-4714-adea-cb1d6398587a">
-<span class="eqno">(28.6)<a class="headerlink" href="#equation-2cde5b77-13c2-4714-adea-cb1d6398587a" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f2484eeb-24b0-45a8-a33d-78876a36fcf9">
+<span class="eqno">(28.6)<a class="headerlink" href="#equation-f2484eeb-24b0-45a8-a33d-78876a36fcf9" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
 <p>An illustrated interpretation of vorticity is given below, looking only at the <span class="math notranslate nohighlight">\(z\)</span>-component for simplicity. Note that the subscript notation used on the diagram represents partial differentiation, not a vector component. We consider two fluid line elements <span class="math notranslate nohighlight">\(AB\)</span> and <span class="math notranslate nohighlight">\(AC\)</span>, which are aligned with the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, respectively. By the definition of the partial derivative, we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1d66e389-a3f9-47b4-9130-3591f77bfa0a">
-<span class="eqno">(28.7)<a class="headerlink" href="#equation-1d66e389-a3f9-47b4-9130-3591f77bfa0a" title="Permalink to this equation">¶</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2c9baa08-e4b6-4288-8b7a-39d9ffef7da3">
+<span class="eqno">(28.7)<a class="headerlink" href="#equation-2c9baa08-e4b6-4288-8b7a-39d9ffef7da3" title="Permalink to this equation">#</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
 <p>so</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v}{\partial x}\)</span> represents the instantaneous angular velocity of the fluid line element <span class="math notranslate nohighlight">\(AB\)</span></p></li>
@@ -631,12 +766,160 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/helmholtz_3_0.png" class="align-center" src="../_images/helmholtz_3_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3931781965.py:8: RuntimeWarning: divide by zero encountered in sqrt
+  (U,V)=(Y**(1/2),0)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3931781965.py:8: RuntimeWarning: invalid value encountered in sqrt
+  (U,V)=(Y**(1/2),0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\lines.py:69: RuntimeWarning: divide by zero encountered in long_scalars
+  scaled_offset = offset * lw
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\lines.py:69: RuntimeWarning: invalid value encountered in long_scalars
+  scaled_offset = offset * lw
+C:\Users\alimo\anaconda3\lib\site-packages\numpy\ma\core.py:1753: RuntimeWarning: divide by zero encountered in logical_or
+  return make_mask(umath.logical_or(m1, m2), copy=copy, shrink=shrink)
+C:\Users\alimo\anaconda3\lib\site-packages\numpy\ma\core.py:1753: RuntimeWarning: invalid value encountered in logical_or
+  return make_mask(umath.logical_or(m1, m2), copy=copy, shrink=shrink)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2065: RuntimeWarning: divide by zero encountered in isinf
+  if not np.isinf(datalim.minpos).all():
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2065: RuntimeWarning: invalid value encountered in isinf
+  if not np.isinf(datalim.minpos).all():
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">LinAlgError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="nn">~\anaconda3\lib\site-packages\IPython\core\formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span>                 <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span>             <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">341</span>                 <span class="k">return</span> <span class="n">printer</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span>             <span class="c1"># Finally look for special method names</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\IPython\core\pylabtools.py</span> in <span class="ni">print_figure</span><span class="nt">(fig, fmt, bbox_inches, base64, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>         <span class="n">FigureCanvasBase</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span> 
+<span class="ne">--&gt; </span><span class="mi">151</span>     <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">print_figure</span><span class="p">(</span><span class="n">bytes_io</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">bytes_io</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="k">if</span> <span class="n">fmt</span> <span class="o">==</span> <span class="s1">&#39;svg&#39;</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\backend_bases.py</span> in <span class="ni">print_figure</span><span class="nt">(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2228</span>                        <span class="k">else</span> <span class="n">suppress</span><span class="p">())</span>
+<span class="g g-Whitespace">   </span><span class="mi">2229</span>                 <span class="k">with</span> <span class="n">ctx</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2230</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2231</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2232</span>             <span class="k">if</span> <span class="n">bbox_inches</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="nd">@wraps</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">def</span> <span class="nf">draw_wrapper</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">74</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span>         <span class="k">if</span> <span class="n">renderer</span><span class="o">.</span><span class="n">_rasterizing</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span>             <span class="n">renderer</span><span class="o">.</span><span class="n">stop_rasterizing</span><span class="p">()</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> 
+<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\figure.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2788</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2789</span>             <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2790</span>             <span class="n">mimage</span><span class="o">.</span><span class="n">_draw_list_compositing_images</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2791</span>                 <span class="n">renderer</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suppressComposite</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2792</span> 
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="k">if</span> <span class="n">not_composite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_images</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>             <span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="c1"># Composite any adjacent images together</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> 
+<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\_api\deprecation.py</span> in <span class="ni">wrapper</span><span class="nt">(*inner_args, **inner_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>                          <span class="k">else</span> <span class="n">deprecation_addendum</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>                 <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">431</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">inner_args</span><span class="p">,</span> <span class="o">**</span><span class="n">inner_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span> 
+<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\axes\_base.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer, inframe)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2919</span>             <span class="n">renderer</span><span class="o">.</span><span class="n">stop_rasterizing</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">2920</span> 
+<span class="ne">-&gt; </span><span class="mi">2921</span>         <span class="n">mimage</span><span class="o">.</span><span class="n">_draw_list_compositing_images</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2922</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2923</span>         <span class="n">renderer</span><span class="o">.</span><span class="n">close_group</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="k">if</span> <span class="n">not_composite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_images</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>             <span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="c1"># Composite any adjacent images together</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> 
+<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\quiver.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span>     <span class="nd">@martist</span><span class="o">.</span><span class="n">allow_rasterization</span>
+<span class="g g-Whitespace">    </span><span class="mi">552</span>     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">553</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">554</span>         <span class="n">verts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_verts</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">U</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">angles</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span>         <span class="bp">self</span><span class="o">.</span><span class="n">set_verts</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\quiver.py</span> in <span class="ni">_init</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="k">if</span> <span class="kc">True</span><span class="p">:</span>  <span class="c1"># not self._initialized:</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>             <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_transform</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="bp">self</span><span class="o">.</span><span class="n">span</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">inverted</span><span class="p">()</span><span class="o">.</span><span class="n">transform_bbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span><span class="o">.</span><span class="n">width</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span>                 <span class="n">sn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\transforms.py</span> in <span class="ni">inverted</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1855</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shorthand_name</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1856</span>                 <span class="n">shorthand_name</span> <span class="o">=</span> <span class="s1">&#39;(</span><span class="si">%s</span><span class="s1">)-1&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shorthand_name</span>
+<span class="ne">-&gt; </span><span class="mi">1857</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_inverted</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">(</span><span class="n">inv</span><span class="p">(</span><span class="n">mtx</span><span class="p">),</span> <span class="n">shorthand_name</span><span class="o">=</span><span class="n">shorthand_name</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1858</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_invalid</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">   </span><span class="mi">1859</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inverted</span>
+
+<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">inv</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\numpy\linalg\linalg.py</span> in <span class="ni">inv</span><span class="nt">(a)</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span>     <span class="n">signature</span> <span class="o">=</span> <span class="s1">&#39;D-&gt;D&#39;</span> <span class="k">if</span> <span class="n">isComplexType</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;d-&gt;d&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">544</span>     <span class="n">extobj</span> <span class="o">=</span> <span class="n">get_linalg_error_extobj</span><span class="p">(</span><span class="n">_raise_linalgerror_singular</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">545</span>     <span class="n">ainv</span> <span class="o">=</span> <span class="n">_umath_linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span> <span class="n">extobj</span><span class="o">=</span><span class="n">extobj</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span>     <span class="k">return</span> <span class="n">wrap</span><span class="p">(</span><span class="n">ainv</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">result_t</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">547</span> 
+
+<span class="nn">~\anaconda3\lib\site-packages\numpy\linalg\linalg.py</span> in <span class="ni">_raise_linalgerror_singular</span><span class="nt">(err, flag)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span> 
+<span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="k">def</span> <span class="nf">_raise_linalgerror_singular</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>     <span class="k">raise</span> <span class="n">LinAlgError</span><span class="p">(</span><span class="s2">&quot;Singular matrix&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span> 
+<span class="g g-Whitespace">     </span><span class="mi">90</span> <span class="k">def</span> <span class="nf">_raise_linalgerror_nonposdef</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+
+<span class="ne">LinAlgError</span>: Singular matrix
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 720x216 with 1 Axes&gt;
+</pre></div>
+</div>
 </div>
 </div>
 <p>The vorticity of this flow is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f4fbd6f-7ef2-48a2-b632-3444d254a6f4">
-<span class="eqno">(28.8)<a class="headerlink" href="#equation-4f4fbd6f-7ef2-48a2-b632-3444d254a6f4" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a5c0784d-cf2c-4296-9618-3ab942aed051">
+<span class="eqno">(28.8)<a class="headerlink" href="#equation-a5c0784d-cf2c-4296-9618-3ab942aed051" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
 <p>We see that the fluid elements rotate about the <span class="math notranslate nohighlight">\(z\)</span> axis. The negative sign indicates that the particles rotate in a clockwise direction, which agrees with intuition.</p>
 <p><strong>Example 2: Line vortex (‘potential vortex’)</strong></p>
 <p>Consider a flow described in cylindrical polars <span class="math notranslate nohighlight">\((r,\theta,z)\)</span>, by the velocity profile <span class="math notranslate nohighlight">\(\underline{u}=\left(0,\frac{k}{r},0\right)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is a positive constant.</p>
@@ -666,29 +949,544 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/helmholtz_5_0.png" class="align-center" src="../_images/helmholtz_5_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:9: RuntimeWarning: divide by zero encountered in true_divide
+  dr,dt = 0,k/R
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:9: RuntimeWarning: invalid value encountered in true_divide
+  dr,dt = 0,k/R
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in cos
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in cos
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in multiply
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in multiply
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in sin
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in sin
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in subtract
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in subtract
+  U=dr * np.cos(T) - dt * np.sin(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in sin
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in sin
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in multiply
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in multiply
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in cos
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in cos
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in add
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in add
+  V=dr * np.sin(T) + dt * np.cos(T)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:789: RuntimeWarning: divide by zero encountered in deg2rad
+  self._default_rlabel_position = np.deg2rad(rlabel_position)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:789: RuntimeWarning: invalid value encountered in deg2rad
+  self._default_rlabel_position = np.deg2rad(rlabel_position)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:941: RuntimeWarning: divide by zero encountered in floor
+  eta2 = theta2 - 360 * np.floor((theta2 - theta1) / 360)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:941: RuntimeWarning: invalid value encountered in floor
+  eta2 = theta2 - 360 * np.floor((theta2 - theta1) / 360)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:941: RuntimeWarning: divide by zero encountered in double_scalars
+  eta2 = theta2 - 360 * np.floor((theta2 - theta1) / 360)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:941: RuntimeWarning: invalid value encountered in double_scalars
+  eta2 = theta2 - 360 * np.floor((theta2 - theta1) / 360)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:945: RuntimeWarning: divide by zero encountered in double_scalars
+  eta2 += 360
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:945: RuntimeWarning: invalid value encountered in double_scalars
+  eta2 += 360
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:946: RuntimeWarning: divide by zero encountered in deg2rad
+  eta1, eta2 = np.deg2rad([eta1, eta2])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:946: RuntimeWarning: invalid value encountered in deg2rad
+  eta1, eta2 = np.deg2rad([eta1, eta2])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:950: RuntimeWarning: divide by zero encountered in double_scalars
+  n = int(2 ** np.ceil((eta2 - eta1) / halfpi))
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:950: RuntimeWarning: invalid value encountered in double_scalars
+  n = int(2 ** np.ceil((eta2 - eta1) / halfpi))
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:950: RuntimeWarning: divide by zero encountered in ceil
+  n = int(2 ** np.ceil((eta2 - eta1) / halfpi))
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:950: RuntimeWarning: invalid value encountered in ceil
+  n = int(2 ** np.ceil((eta2 - eta1) / halfpi))
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:954: RuntimeWarning: divide by zero encountered in double_scalars
+  deta = (eta2 - eta1) / n
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:954: RuntimeWarning: invalid value encountered in double_scalars
+  deta = (eta2 - eta1) / n
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:955: RuntimeWarning: divide by zero encountered in double_scalars
+  t = np.tan(0.5 * deta)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:955: RuntimeWarning: invalid value encountered in double_scalars
+  t = np.tan(0.5 * deta)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:955: RuntimeWarning: divide by zero encountered in tan
+  t = np.tan(0.5 * deta)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:955: RuntimeWarning: invalid value encountered in tan
+  t = np.tan(0.5 * deta)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:956: RuntimeWarning: divide by zero encountered in sin
+  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:956: RuntimeWarning: invalid value encountered in sin
+  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:956: RuntimeWarning: divide by zero encountered in double_scalars
+  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:956: RuntimeWarning: invalid value encountered in double_scalars
+  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:956: RuntimeWarning: divide by zero encountered in sqrt
+  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:956: RuntimeWarning: invalid value encountered in sqrt
+  alpha = np.sin(deta) * (np.sqrt(4.0 + 3.0 * t * t) - 1) / 3.0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:959: RuntimeWarning: divide by zero encountered in cos
+  cos_eta = np.cos(steps)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:959: RuntimeWarning: invalid value encountered in cos
+  cos_eta = np.cos(steps)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:960: RuntimeWarning: divide by zero encountered in sin
+  sin_eta = np.sin(steps)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:960: RuntimeWarning: invalid value encountered in sin
+  sin_eta = np.sin(steps)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:964: RuntimeWarning: divide by zero encountered in negative
+  xA_dot = -yA
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:964: RuntimeWarning: invalid value encountered in negative
+  xA_dot = -yA
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:969: RuntimeWarning: divide by zero encountered in negative
+  xB_dot = -yB
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:969: RuntimeWarning: invalid value encountered in negative
+  xB_dot = -yB
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:990: RuntimeWarning: divide by zero encountered in multiply
+  vertices[vertex_offset:end:3, 0] = xA + alpha * xA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:990: RuntimeWarning: invalid value encountered in multiply
+  vertices[vertex_offset:end:3, 0] = xA + alpha * xA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:990: RuntimeWarning: divide by zero encountered in add
+  vertices[vertex_offset:end:3, 0] = xA + alpha * xA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:990: RuntimeWarning: invalid value encountered in add
+  vertices[vertex_offset:end:3, 0] = xA + alpha * xA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:991: RuntimeWarning: divide by zero encountered in multiply
+  vertices[vertex_offset:end:3, 1] = yA + alpha * yA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:991: RuntimeWarning: invalid value encountered in multiply
+  vertices[vertex_offset:end:3, 1] = yA + alpha * yA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:991: RuntimeWarning: divide by zero encountered in add
+  vertices[vertex_offset:end:3, 1] = yA + alpha * yA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:991: RuntimeWarning: invalid value encountered in add
+  vertices[vertex_offset:end:3, 1] = yA + alpha * yA_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:992: RuntimeWarning: divide by zero encountered in multiply
+  vertices[vertex_offset+1:end:3, 0] = xB - alpha * xB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:992: RuntimeWarning: invalid value encountered in multiply
+  vertices[vertex_offset+1:end:3, 0] = xB - alpha * xB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:992: RuntimeWarning: divide by zero encountered in subtract
+  vertices[vertex_offset+1:end:3, 0] = xB - alpha * xB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:992: RuntimeWarning: invalid value encountered in subtract
+  vertices[vertex_offset+1:end:3, 0] = xB - alpha * xB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:993: RuntimeWarning: divide by zero encountered in multiply
+  vertices[vertex_offset+1:end:3, 1] = yB - alpha * yB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:993: RuntimeWarning: invalid value encountered in multiply
+  vertices[vertex_offset+1:end:3, 1] = yB - alpha * yB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:993: RuntimeWarning: divide by zero encountered in subtract
+  vertices[vertex_offset+1:end:3, 1] = yB - alpha * yB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\path.py:993: RuntimeWarning: invalid value encountered in subtract
+  vertices[vertex_offset+1:end:3, 1] = yB - alpha * yB_dot
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:315: RuntimeWarning: divide by zero encountered in double_scalars
+  angle = loc * axes.get_theta_direction() + axes.get_theta_offset()
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:315: RuntimeWarning: invalid value encountered in double_scalars
+  angle = loc * axes.get_theta_direction() + axes.get_theta_offset()
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:316: RuntimeWarning: divide by zero encountered in rad2deg
+  text_angle = np.rad2deg(angle) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:316: RuntimeWarning: invalid value encountered in rad2deg
+  text_angle = np.rad2deg(angle) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:316: RuntimeWarning: divide by zero encountered in double_scalars
+  text_angle = np.rad2deg(angle) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:316: RuntimeWarning: invalid value encountered in double_scalars
+  text_angle = np.rad2deg(angle) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:317: RuntimeWarning: divide by zero encountered in double_scalars
+  angle -= np.pi / 2
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:317: RuntimeWarning: invalid value encountered in double_scalars
+  angle -= np.pi / 2
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:355: RuntimeWarning: divide by zero encountered in double_scalars
+  self._loc * axes.get_theta_direction() +
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:355: RuntimeWarning: invalid value encountered in double_scalars
+  self._loc * axes.get_theta_direction() +
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:305: RuntimeWarning: divide by zero encountered in cos
+  padx = pad * np.cos(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:305: RuntimeWarning: invalid value encountered in cos
+  padx = pad * np.cos(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:305: RuntimeWarning: divide by zero encountered in double_scalars
+  padx = pad * np.cos(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:305: RuntimeWarning: invalid value encountered in double_scalars
+  padx = pad * np.cos(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:306: RuntimeWarning: divide by zero encountered in sin
+  pady = pad * np.sin(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:306: RuntimeWarning: invalid value encountered in sin
+  pady = pad * np.sin(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:306: RuntimeWarning: divide by zero encountered in double_scalars
+  pady = pad * np.sin(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:306: RuntimeWarning: invalid value encountered in double_scalars
+  pady = pad * np.sin(angle) / 72
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1028: RuntimeWarning: divide by zero encountered in rad2deg
+  return np.rad2deg(self.viewLim.xmin)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1028: RuntimeWarning: invalid value encountered in rad2deg
+  return np.rad2deg(self.viewLim.xmin)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1020: RuntimeWarning: divide by zero encountered in rad2deg
+  return np.rad2deg(self.viewLim.xmax)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1020: RuntimeWarning: invalid value encountered in rad2deg
+  return np.rad2deg(self.viewLim.xmax)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:587: RuntimeWarning: divide by zero encountered in rad2deg
+  offset = np.rad2deg(offset_rad)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:587: RuntimeWarning: invalid value encountered in rad2deg
+  offset = np.rad2deg(offset_rad)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:707: RuntimeWarning: divide by zero encountered in double_scalars
+  return abs(abs(thetamax - thetamin) - 360.0) &lt; 1e-12
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:707: RuntimeWarning: invalid value encountered in double_scalars
+  return abs(abs(thetamax - thetamin) - 360.0) &lt; 1e-12
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:595: RuntimeWarning: divide by zero encountered in double_scalars
+  angle = (thetamin * direction + offset) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:595: RuntimeWarning: invalid value encountered in double_scalars
+  angle = (thetamin * direction + offset) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:597: RuntimeWarning: divide by zero encountered in deg2rad
+  tick_angle = np.deg2rad(angle)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:597: RuntimeWarning: invalid value encountered in deg2rad
+  tick_angle = np.deg2rad(angle)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:600: RuntimeWarning: divide by zero encountered in double_scalars
+  text_angle = (angle + 90) % 180 - 90  # between -90 and +90.
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:600: RuntimeWarning: invalid value encountered in double_scalars
+  text_angle = (angle + 90) % 180 - 90  # between -90 and +90.
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:631: RuntimeWarning: divide by zero encountered in double_scalars
+  angle = (thetamax * direction + offset) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:631: RuntimeWarning: invalid value encountered in double_scalars
+  angle = (thetamax * direction + offset) % 360 - 90
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:633: RuntimeWarning: divide by zero encountered in deg2rad
+  tick_angle = np.deg2rad(angle)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:633: RuntimeWarning: invalid value encountered in deg2rad
+  tick_angle = np.deg2rad(angle)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:636: RuntimeWarning: divide by zero encountered in double_scalars
+  text_angle = (angle + 90) % 180 - 90  # between -90 and +90.
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:636: RuntimeWarning: invalid value encountered in double_scalars
+  text_angle = (angle + 90) % 180 - 90  # between -90 and +90.
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:716: RuntimeWarning: divide by zero encountered in double_scalars
+  return abs(abs(thetamax - thetamin) - 2 * np.pi) &lt; 1.74e-14
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:716: RuntimeWarning: invalid value encountered in double_scalars
+  return abs(abs(thetamax - thetamin) - 2 * np.pi) &lt; 1.74e-14
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1201: RuntimeWarning: divide by zero encountered in multiply
+  v *= self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1201: RuntimeWarning: invalid value encountered in multiply
+  v *= self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1202: RuntimeWarning: divide by zero encountered in add
+  v += np.asarray(self.center)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1202: RuntimeWarning: invalid value encountered in add
+  v += np.asarray(self.center)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1269: RuntimeWarning: divide by zero encountered in rad2deg
+  return np.rad2deg(self._r_label_position.get_matrix()[0, 2])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1269: RuntimeWarning: invalid value encountered in rad2deg
+  return np.rad2deg(self._r_label_position.get_matrix()[0, 2])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:591: RuntimeWarning: divide by zero encountered in double_scalars
+  angle = (axes.get_rlabel_position() * direction +
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:591: RuntimeWarning: invalid value encountered in double_scalars
+  angle = (axes.get_rlabel_position() * direction +
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:1719: RuntimeWarning: divide by zero encountered in double_scalars
+  fig_aspect = bb.height / bb.width
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:1719: RuntimeWarning: invalid value encountered in double_scalars
+  fig_aspect = bb.height / bb.width
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:575: RuntimeWarning: divide by zero encountered in double_scalars
+  H = w * box_aspect / fig_aspect
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:575: RuntimeWarning: invalid value encountered in double_scalars
+  H = w * box_aspect / fig_aspect
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:579: RuntimeWarning: divide by zero encountered in double_scalars
+  W = h * fig_aspect / box_aspect
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:579: RuntimeWarning: invalid value encountered in double_scalars
+  W = h * fig_aspect / box_aspect
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:582: RuntimeWarning: divide by zero encountered in add
+  self._points[0] + (W, H)])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:582: RuntimeWarning: invalid value encountered in add
+  self._points[0] + (W, H)])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:546: RuntimeWarning: divide by zero encountered in double_scalars
+  [(l + cx * (w - W)) - L,
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:546: RuntimeWarning: invalid value encountered in double_scalars
+  [(l + cx * (w - W)) - L,
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:547: RuntimeWarning: divide by zero encountered in double_scalars
+  (b + cy * (h - H)) - B])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:547: RuntimeWarning: invalid value encountered in double_scalars
+  (b + cy * (h - H)) - B])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:545: RuntimeWarning: divide by zero encountered in add
+  return Bbox(self._points +
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\transforms.py:545: RuntimeWarning: invalid value encountered in add
+  return Bbox(self._points +
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2708: RuntimeWarning: divide by zero encountered in isfinite
+  x_values = np.extract(np.isfinite(x_values), x_values)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2708: RuntimeWarning: invalid value encountered in isfinite
+  x_values = np.extract(np.isfinite(x_values), x_values)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2725: RuntimeWarning: divide by zero encountered in int_scalars
+  i0 = stickies.searchsorted(x0 + tol) - 1
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2725: RuntimeWarning: invalid value encountered in int_scalars
+  i0 = stickies.searchsorted(x0 + tol) - 1
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2737: RuntimeWarning: divide by zero encountered in double_scalars
+  delta = (x1t - x0t) * margin
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2737: RuntimeWarning: invalid value encountered in double_scalars
+  delta = (x1t - x0t) * margin
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2738: RuntimeWarning: divide by zero encountered in isfinite
+  if not np.isfinite(delta):
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2738: RuntimeWarning: invalid value encountered in isfinite
+  if not np.isfinite(delta):
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2740: RuntimeWarning: divide by zero encountered in double_scalars
+  x0, x1 = inverse_trans.transform([x0t - delta, x1t + delta])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2740: RuntimeWarning: invalid value encountered in double_scalars
+  x0, x1 = inverse_trans.transform([x0t - delta, x1t + delta])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:952: RuntimeWarning: divide by zero encountered in rad2deg
+  thetamin, thetamax = np.rad2deg(self._realViewLim.intervalx)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:952: RuntimeWarning: invalid value encountered in rad2deg
+  thetamin, thetamax = np.rad2deg(self._realViewLim.intervalx)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:955: RuntimeWarning: divide by zero encountered in subtract
+  rmin, rmax = ((self._realViewLim.intervaly - self.get_rorigin()) *
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:955: RuntimeWarning: invalid value encountered in subtract
+  rmin, rmax = ((self._realViewLim.intervaly - self.get_rorigin()) *
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1189: RuntimeWarning: divide by zero encountered in double_scalars
+  return np.sign(self._originViewLim.y1 - self._originViewLim.y0)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1189: RuntimeWarning: invalid value encountered in double_scalars
+  return np.sign(self._originViewLim.y1 - self._originViewLim.y0)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1189: RuntimeWarning: divide by zero encountered in sign
+  return np.sign(self._originViewLim.y1 - self._originViewLim.y0)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:1189: RuntimeWarning: invalid value encountered in sign
+  return np.sign(self._originViewLim.y1 - self._originViewLim.y0)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:955: RuntimeWarning: divide by zero encountered in multiply
+  rmin, rmax = ((self._realViewLim.intervaly - self.get_rorigin()) *
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:955: RuntimeWarning: invalid value encountered in multiply
+  rmin, rmax = ((self._realViewLim.intervaly - self.get_rorigin()) *
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:746: RuntimeWarning: divide by zero encountered in multiply
+  points[:, 0] *= 180 / np.pi
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:746: RuntimeWarning: invalid value encountered in multiply
+  points[:, 0] *= 180 / np.pi
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:751: RuntimeWarning: divide by zero encountered in subtract
+  points[:, 1] -= self._originLim.y0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:751: RuntimeWarning: invalid value encountered in subtract
+  points[:, 1] -= self._originLim.y0
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:754: RuntimeWarning: divide by zero encountered in double_scalars
+  rscale = 0.5 / points[1, 1]
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:754: RuntimeWarning: invalid value encountered in double_scalars
+  rscale = 0.5 / points[1, 1]
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:755: RuntimeWarning: divide by zero encountered in multiply
+  points[:, 1] *= rscale
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:755: RuntimeWarning: invalid value encountered in multiply
+  points[:, 1] *= rscale
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:756: RuntimeWarning: divide by zero encountered in double_scalars
+  width = min(points[1, 1] - points[0, 1], 0.5)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:756: RuntimeWarning: invalid value encountered in double_scalars
+  width = min(points[1, 1] - points[0, 1], 0.5)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1174: RuntimeWarning: divide by zero encountered in double_scalars
+  if abs((self.theta2 - self.theta1) - 360) &lt;= 1e-12:
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1174: RuntimeWarning: invalid value encountered in double_scalars
+  if abs((self.theta2 - self.theta1) - 360) &lt;= 1e-12:
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1188: RuntimeWarning: divide by zero encountered in double_scalars
+  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1188: RuntimeWarning: invalid value encountered in double_scalars
+  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1188: RuntimeWarning: divide by zero encountered in multiply
+  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1188: RuntimeWarning: invalid value encountered in multiply
+  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1188: RuntimeWarning: divide by zero encountered in true_divide
+  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\patches.py:1188: RuntimeWarning: invalid value encountered in true_divide
+  v2 = arc.vertices[::-1] * (self.r - self.width) / self.r
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:765: RuntimeWarning: divide by zero encountered in subtract
+  w, h = self._points[1] - self._points[0]
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:765: RuntimeWarning: invalid value encountered in subtract
+  w, h = self._points[1] - self._points[0]
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:766: RuntimeWarning: divide by zero encountered in double_scalars
+  deltah = max(w - h, 0) / 2
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:766: RuntimeWarning: invalid value encountered in double_scalars
+  deltah = max(w - h, 0) / 2
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:767: RuntimeWarning: divide by zero encountered in double_scalars
+  deltaw = max(h - w, 0) / 2
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:767: RuntimeWarning: invalid value encountered in double_scalars
+  deltaw = max(h - w, 0) / 2
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:768: RuntimeWarning: divide by zero encountered in add
+  self._points += np.array([[-deltaw, -deltah], [deltaw, deltah]])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:768: RuntimeWarning: invalid value encountered in add
+  self._points += np.array([[-deltaw, -deltah], [deltaw, deltah]])
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:966: RuntimeWarning: divide by zero encountered in double_scalars
+  radius = edge - center[0]
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:966: RuntimeWarning: invalid value encountered in double_scalars
+  radius = edge - center[0]
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:967: RuntimeWarning: divide by zero encountered in double_scalars
+  width = min(radius * (rmax - rmin) / rmax, radius)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:967: RuntimeWarning: invalid value encountered in double_scalars
+  width = min(radius * (rmax - rmin) / rmax, radius)
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:971: RuntimeWarning: divide by zero encountered in double_scalars
+  inner_width = radius - width
+C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:971: RuntimeWarning: invalid value encountered in double_scalars
+  inner_width = radius - width
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">LinAlgError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="nn">~\anaconda3\lib\site-packages\IPython\core\formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span>                 <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span>             <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">341</span>                 <span class="k">return</span> <span class="n">printer</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span>             <span class="c1"># Finally look for special method names</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\IPython\core\pylabtools.py</span> in <span class="ni">print_figure</span><span class="nt">(fig, fmt, bbox_inches, base64, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>         <span class="n">FigureCanvasBase</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span> 
+<span class="ne">--&gt; </span><span class="mi">151</span>     <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">print_figure</span><span class="p">(</span><span class="n">bytes_io</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">bytes_io</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="k">if</span> <span class="n">fmt</span> <span class="o">==</span> <span class="s1">&#39;svg&#39;</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\backend_bases.py</span> in <span class="ni">print_figure</span><span class="nt">(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2228</span>                        <span class="k">else</span> <span class="n">suppress</span><span class="p">())</span>
+<span class="g g-Whitespace">   </span><span class="mi">2229</span>                 <span class="k">with</span> <span class="n">ctx</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2230</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2231</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2232</span>             <span class="k">if</span> <span class="n">bbox_inches</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="nd">@wraps</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">def</span> <span class="nf">draw_wrapper</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">74</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span>         <span class="k">if</span> <span class="n">renderer</span><span class="o">.</span><span class="n">_rasterizing</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span>             <span class="n">renderer</span><span class="o">.</span><span class="n">stop_rasterizing</span><span class="p">()</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> 
+<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\figure.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2788</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2789</span>             <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2790</span>             <span class="n">mimage</span><span class="o">.</span><span class="n">_draw_list_compositing_images</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2791</span>                 <span class="n">renderer</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">suppressComposite</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2792</span> 
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="k">if</span> <span class="n">not_composite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_images</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>             <span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="c1"># Composite any adjacent images together</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\_api\deprecation.py</span> in <span class="ni">wrapper</span><span class="nt">(*inner_args, **inner_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>                          <span class="k">else</span> <span class="n">deprecation_addendum</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>                 <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">431</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">inner_args</span><span class="p">,</span> <span class="o">**</span><span class="n">inner_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span> 
+<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\_api\deprecation.py</span> in <span class="ni">wrapper</span><span class="nt">(*inner_args, **inner_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>                          <span class="k">else</span> <span class="n">deprecation_addendum</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>                 <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">431</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">inner_args</span><span class="p">,</span> <span class="o">**</span><span class="n">inner_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span> 
+<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\projections\polar.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">992</span>             <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">993</span> 
+<span class="ne">--&gt; </span><span class="mi">994</span>         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">995</span> 
+<span class="g g-Whitespace">    </span><span class="mi">996</span>     <span class="k">def</span> <span class="nf">_gen_axes_patch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> 
+<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\_api\deprecation.py</span> in <span class="ni">wrapper</span><span class="nt">(*inner_args, **inner_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>                          <span class="k">else</span> <span class="n">deprecation_addendum</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>                 <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">431</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">inner_args</span><span class="p">,</span> <span class="o">**</span><span class="n">inner_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span> 
+<span class="g g-Whitespace">    </span><span class="mi">433</span>     <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\axes\_base.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer, inframe)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2919</span>             <span class="n">renderer</span><span class="o">.</span><span class="n">stop_rasterizing</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">2920</span> 
+<span class="ne">-&gt; </span><span class="mi">2921</span>         <span class="n">mimage</span><span class="o">.</span><span class="n">_draw_list_compositing_images</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2922</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2923</span>         <span class="n">renderer</span><span class="o">.</span><span class="n">close_group</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\image.py</span> in <span class="ni">_draw_list_compositing_images</span><span class="nt">(renderer, parent, artists, suppress_composite)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>     <span class="k">if</span> <span class="n">not_composite</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">has_images</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>             <span class="n">a</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>         <span class="c1"># Composite any adjacent images together</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\artist.py</span> in <span class="ni">draw_wrapper</span><span class="nt">(artist, renderer, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>                 <span class="n">renderer</span><span class="o">.</span><span class="n">start_filter</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> 
+<span class="ne">---&gt; </span><span class="mi">51</span>             <span class="k">return</span> <span class="n">draw</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>             <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">get_agg_filter</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\quiver.py</span> in <span class="ni">draw</span><span class="nt">(self, renderer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span>     <span class="nd">@martist</span><span class="o">.</span><span class="n">allow_rasterization</span>
+<span class="g g-Whitespace">    </span><span class="mi">552</span>     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">553</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">554</span>         <span class="n">verts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_verts</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">U</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">V</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">angles</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span>         <span class="bp">self</span><span class="o">.</span><span class="n">set_verts</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">closed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\quiver.py</span> in <span class="ni">_init</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="k">if</span> <span class="kc">True</span><span class="p">:</span>  <span class="c1"># not self._initialized:</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>             <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_transform</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="bp">self</span><span class="o">.</span><span class="n">span</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">inverted</span><span class="p">()</span><span class="o">.</span><span class="n">transform_bbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span><span class="o">.</span><span class="n">width</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span>                 <span class="n">sn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\matplotlib\transforms.py</span> in <span class="ni">inverted</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1855</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shorthand_name</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1856</span>                 <span class="n">shorthand_name</span> <span class="o">=</span> <span class="s1">&#39;(</span><span class="si">%s</span><span class="s1">)-1&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shorthand_name</span>
+<span class="ne">-&gt; </span><span class="mi">1857</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_inverted</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">(</span><span class="n">inv</span><span class="p">(</span><span class="n">mtx</span><span class="p">),</span> <span class="n">shorthand_name</span><span class="o">=</span><span class="n">shorthand_name</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1858</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_invalid</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">   </span><span class="mi">1859</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inverted</span>
+
+<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">inv</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="nn">~\anaconda3\lib\site-packages\numpy\linalg\linalg.py</span> in <span class="ni">inv</span><span class="nt">(a)</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span>     <span class="n">signature</span> <span class="o">=</span> <span class="s1">&#39;D-&gt;D&#39;</span> <span class="k">if</span> <span class="n">isComplexType</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;d-&gt;d&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">544</span>     <span class="n">extobj</span> <span class="o">=</span> <span class="n">get_linalg_error_extobj</span><span class="p">(</span><span class="n">_raise_linalgerror_singular</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">545</span>     <span class="n">ainv</span> <span class="o">=</span> <span class="n">_umath_linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span> <span class="n">extobj</span><span class="o">=</span><span class="n">extobj</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">546</span>     <span class="k">return</span> <span class="n">wrap</span><span class="p">(</span><span class="n">ainv</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">result_t</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">547</span> 
+
+<span class="nn">~\anaconda3\lib\site-packages\numpy\linalg\linalg.py</span> in <span class="ni">_raise_linalgerror_singular</span><span class="nt">(err, flag)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span> 
+<span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="k">def</span> <span class="nf">_raise_linalgerror_singular</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>     <span class="k">raise</span> <span class="n">LinAlgError</span><span class="p">(</span><span class="s2">&quot;Singular matrix&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span> 
+<span class="g g-Whitespace">     </span><span class="mi">90</span> <span class="k">def</span> <span class="nf">_raise_linalgerror_nonposdef</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+
+<span class="ne">LinAlgError</span>: Singular matrix
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 360x360 with 1 Axes&gt;
+</pre></div>
+</div>
 </div>
 </div>
 <p>The vorticity is zero, meaning that fluid particles are swept round the origin without local rotation. To show this, we have to use the result for the gradient in cylindrical polars:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6b43b4e-1aef-4ae6-a829-2f83fd73cc7c">
-<span class="eqno">(28.9)<a class="headerlink" href="#equation-c6b43b4e-1aef-4ae6-a829-2f83fd73cc7c" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-838770f1-8e9c-4f7e-86f1-afb6912d07c6">
+<span class="eqno">(28.9)<a class="headerlink" href="#equation-838770f1-8e9c-4f7e-86f1-afb6912d07c6" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
 <p>The surprising result occurs in this example because the slowing down of the fluid away from the origin is just the right strength to create a rotational shear that counterbalances the angular rotation of the fluid.</p>
-</div>
-<div class="section" id="helmhotz-decomposition">
-<h2><span class="section-number">28.4. </span>Helmhotz decomposition<a class="headerlink" href="#helmhotz-decomposition" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="helmhotz-decomposition">
+<h2><span class="section-number">28.4. </span>Helmhotz decomposition<a class="headerlink" href="#helmhotz-decomposition" title="Permalink to this headline">#</a></h2>
 <p>The Helmholtz decomposition theorem is also known as the <strong>Fundamental Theorem of Vector Calculus</strong>. It states that any vector field that is smooth, defined everywhere in space and vanishes at infinity together with its first derivatives can be decomposed as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7c3c197-598a-491a-a683-aa44577a5069">
-<span class="eqno">(28.10)<a class="headerlink" href="#equation-a7c3c197-598a-491a-a683-aa44577a5069" title="Permalink to this equation">¶</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-682310fc-c95b-4324-86ea-53167a409918">
+<span class="eqno">(28.10)<a class="headerlink" href="#equation-682310fc-c95b-4324-86ea-53167a409918" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
 <p>The first term is irrotational (curl-free) from the vector identity “curlgrad=<span class="math notranslate nohighlight">\(\underline{0}\)</span>”
 The second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.</p>
 <p>We will not prove this result, but we will use it to simplify the equations of motion in some scenarios. The full version of Helmholtz’ theorem also tells us how to calculate <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\underline{A}\)</span>, but we will not need those results.</p>
 <div class="exercise admonition" id="ex-3d-straining">
 
 <p class="admonition-title"><span class="caption-number">Exercise 28.2 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>For the steady flow <span class="math notranslate nohighlight">\(\underline{u}=(2x,3y,-5z)\)</span>, determine the trajectories of particles starting on the ring defined by <span class="math notranslate nohighlight">\(x=\cos(\theta)\)</span>, <span class="math notranslate nohighlight">\(y=\sin(\theta)\)</span>, <span class="math notranslate nohighlight">\(z=1\)</span>.</p>
 <p>Show that the flow is both irrotational and solenoidal, and describe the motion of the fluid particles in words.</p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p><strong>Particle paths:</strong></p>
@@ -707,8 +1505,8 @@ The second term is solenoidal (divergence-free) from the vector identity “divc
 <p>Solenoidal: <span class="math notranslate nohighlight">\(\nabla.\underline{u} = \frac{\partial}{\partial x}\left(2x\right)+\frac{\partial}{\partial y}\left(3y\right)+\frac{\partial}{\partial z}\left(-5z\right)=0\)</span></p>
 </div>
 <p>Note: A negative sign is often included in the gradient term by convention, so that work done against a force increases the potential, but mathematically we do not need the minus sign (since <span class="math notranslate nohighlight">\(\phi\)</span> can be negative!)</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -732,9 +1530,11 @@ The second term is solenoidal (divergence-free) from the vector identity “divc
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="visualise.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -750,24 +1550,28 @@ The second term is solenoidal (divergence-free) from the vector identity “divc
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Ali Mozaffari and Ella Metcalfe<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

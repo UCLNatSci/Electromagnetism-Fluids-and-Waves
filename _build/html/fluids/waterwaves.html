@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>37. Unsteady: Water waves &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,42 +20,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="38. Unsteady: Sound waves" href="soundwaves.html" />
@@ -65,7 +66,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -74,9 +89,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -94,14 +110,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -168,7 +185,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -324,90 +341,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/fluids/waterwaves.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/waterwaves.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluids/waterwaves.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/fluids/waterwaves.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-flow-geometry">
    37.1. The flow geometry
@@ -491,12 +598,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Unsteady: Water waves</h1>
@@ -596,11 +702,12 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="unsteady-water-waves">
-<span id="water-waves"></span><h1><span class="section-number">37. </span>Unsteady: Water waves<a class="headerlink" href="#unsteady-water-waves" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unsteady-water-waves">
+<span id="water-waves"></span><h1><span class="section-number">37. </span>Unsteady: Water waves<a class="headerlink" href="#unsteady-water-waves" title="Permalink to this headline">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>Wavy solutions of the Laplace equation</p></li>
@@ -608,108 +715,108 @@
 <li><p>Different dispersive properties for deep and shallow water</p></li>
 <li><p>What are the paths followed by particles on the water surface?</p></li>
 </ul>
-<div class="section" id="the-flow-geometry">
-<h2><span class="section-number">37.1. </span>The flow geometry<a class="headerlink" href="#the-flow-geometry" title="Permalink to this headline">¶</a></h2>
+<section id="the-flow-geometry">
+<h2><span class="section-number">37.1. </span>The flow geometry<a class="headerlink" href="#the-flow-geometry" title="Permalink to this headline">#</a></h2>
 <p>We consider the scenario shown below, where the axis <span class="math notranslate nohighlight">\(x\)</span> points in the direction of wave motion, and axis <span class="math notranslate nohighlight">\(z\)</span> points perpendicular to the water surface. We will assume plane motion, so there is no <span class="math notranslate nohighlight">\(y\)</span> dependence.</p>
 <a class="reference internal image-reference" href="../_images/sea.png" id="a-wavetrain"><img alt="a wavetrain" class="align-center" id="a-wavetrain" src="../_images/sea.png" style="width: 800.0px; height: 256.0px;" /></a>
-</div>
-<div class="section" id="mass-transport">
-<h2><span class="section-number">37.2. </span>Mass transport<a class="headerlink" href="#mass-transport" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="mass-transport">
+<h2><span class="section-number">37.2. </span>Mass transport<a class="headerlink" href="#mass-transport" title="Permalink to this headline">#</a></h2>
 <p>We make the simplifying assumption that the flow is irrotational, so that the velocity field can be written as the gradient of a potential <span class="math notranslate nohighlight">\(\underline{u}=\nabla\phi(\underline{x},t)\)</span>, and we obtain from the incompressibility condition</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4b84dd90-781c-46a1-a403-37e6e9789bb4">
-<span class="eqno">(37.1)<a class="headerlink" href="#equation-4b84dd90-781c-46a1-a403-37e6e9789bb4" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla^2\phi=\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial z^2}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-708faa66-809b-4014-b917-e6ff53b536d9">
+<span class="eqno">(37.1)<a class="headerlink" href="#equation-708faa66-809b-4014-b917-e6ff53b536d9" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla^2\phi=\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial z^2}=0.\end{equation}\]</div>
 <p>Seeking a travelling plane wave solution of the form <span class="math notranslate nohighlight">\(\phi=F(z)G(x-c t)\)</span> provides</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57780123-72e9-47da-b3dc-668c02a5d6d6">
-<span class="eqno">(37.2)<a class="headerlink" href="#equation-57780123-72e9-47da-b3dc-668c02a5d6d6" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{F^{\prime\prime}}{F}=-\frac{G^{\prime\prime}}{G}=-k^2.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d0cc0f3b-91f4-42c4-aca1-17ef28d7de6f">
+<span class="eqno">(37.2)<a class="headerlink" href="#equation-d0cc0f3b-91f4-42c4-aca1-17ef28d7de6f" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{F^{\prime\prime}}{F}=-\frac{G^{\prime\prime}}{G}=-k^2.\end{equation}\]</div>
 <p>This choice of separation constant gives us exponential behaviour in the <span class="math notranslate nohighlight">\(z\)</span> direction, and oscillating behaviour in the <span class="math notranslate nohighlight">\(x\)</span>-direction:</p>
 <div class="math notranslate nohighlight" id="equation-phi-relation">
-<span class="eqno">(37.3)<a class="headerlink" href="#equation-phi-relation" title="Permalink to this equation">¶</a></span>\[\phi=\left[Ce^{k z}+De^{-kz}\right]\sin(k x-\omega t+\phi_0), \quad \omega=c k.\]</div>
+<span class="eqno">(37.3)<a class="headerlink" href="#equation-phi-relation" title="Permalink to this equation">#</a></span>\[\phi=\left[Ce^{k z}+De^{-kz}\right]\sin(k x-\omega t+\phi_0), \quad \omega=c k.\]</div>
 <p>We will take <span class="math notranslate nohighlight">\(k&gt;0\)</span> and <span class="math notranslate nohighlight">\(\phi_0=0\)</span>, without loss of generality.</p>
-</div>
-<div class="section" id="bernoullis-equation-for-unsteady-potential-flow">
-<h2><span class="section-number">37.3. </span>Bernoulli’s equation for unsteady potential flow<a class="headerlink" href="#bernoullis-equation-for-unsteady-potential-flow" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="bernoullis-equation-for-unsteady-potential-flow">
+<h2><span class="section-number">37.3. </span>Bernoulli’s equation for unsteady potential flow<a class="headerlink" href="#bernoullis-equation-for-unsteady-potential-flow" title="Permalink to this headline">#</a></h2>
 <p>Recall that in equation <a class="reference internal" href="bernoulli.html#equation-vorticity-head">(33.4)</a> we obtained the following result from Euler’s equation, with a body force <span class="math notranslate nohighlight">\(\underline{F}=\underline{g}\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-eea93269-c65d-4dfc-b558-c35084ba51a4">
-<span class="eqno">(37.4)<a class="headerlink" href="#equation-eea93269-c65d-4dfc-b558-c35084ba51a4" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times\underline{u})=-\nabla H, \quad H=\frac{p}{\rho}+gz+\frac{1}{2}|\underline{u}|^2\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d3abf81c-1007-4d5d-be41-8b94a92a744b">
+<span class="eqno">(37.4)<a class="headerlink" href="#equation-d3abf81c-1007-4d5d-be41-8b94a92a744b" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial \underline{u}}{\partial t}+(\underline{\omega}\times\underline{u})=-\nabla H, \quad H=\frac{p}{\rho}+gz+\frac{1}{2}|\underline{u}|^2\end{equation}\]</div>
 <p>Previously, we assumed that the flow was steady, and we took the scalar product with <span class="math notranslate nohighlight">\(\underline{u}\)</span> to eliminate the vorticity term, obtaining a result for the head <span class="math notranslate nohighlight">\(H\)</span> along a streamline.
 Here, we will not assume that the flow is steady, but we will instead note that for potential flow <span class="math notranslate nohighlight">\(\underline{u}=\nabla\phi(\underline{x},t)\)</span> the vorticity is identically zero, and so the equation of motion simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-acc8aff7-b8b2-4768-a99c-3df170106278">
-<span class="eqno">(37.5)<a class="headerlink" href="#equation-acc8aff7-b8b2-4768-a99c-3df170106278" title="Permalink to this equation">¶</a></span>\[\begin{equation}\nabla\left(\frac{\partial\phi}{\partial t}+H\right)=\underline{0}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3b334fbb-9455-431d-ad89-8a856070c92f">
+<span class="eqno">(37.5)<a class="headerlink" href="#equation-3b334fbb-9455-431d-ad89-8a856070c92f" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla\left(\frac{\partial\phi}{\partial t}+H\right)=\underline{0}.\end{equation}\]</div>
 <p>Integrating gives the following result, where <span class="math notranslate nohighlight">\(F(t)\)</span> is an arbitrary function that does not affect the velocities, since they are obtained by taking the gradient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e8b19309-a25e-4cb3-b994-ca55e3a3958d">
-<span class="eqno">(37.6)<a class="headerlink" href="#equation-e8b19309-a25e-4cb3-b994-ca55e3a3958d" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\phi}{\partial t}+\frac{p}{\rho}+\frac{1}{2}|\underline{u}|^2+gz=F(t), \quad \underline{u}=\nabla\phi.\end{equation}\]</div>
-</div>
-<div class="section" id="free-surface-conditions">
-<h2><span class="section-number">37.4. </span>Free surface conditions<a class="headerlink" href="#free-surface-conditions" title="Permalink to this headline">¶</a></h2>
+<div class="amsmath math notranslate nohighlight" id="equation-094a594b-ef09-420b-86aa-d4e9875abe01">
+<span class="eqno">(37.6)<a class="headerlink" href="#equation-094a594b-ef09-420b-86aa-d4e9875abe01" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\phi}{\partial t}+\frac{p}{\rho}+\frac{1}{2}|\underline{u}|^2+gz=F(t), \quad \underline{u}=\nabla\phi.\end{equation}\]</div>
+</section>
+<section id="free-surface-conditions">
+<h2><span class="section-number">37.4. </span>Free surface conditions<a class="headerlink" href="#free-surface-conditions" title="Permalink to this headline">#</a></h2>
 <p>The surface equation is of the form <span class="math notranslate nohighlight">\(z=\eta(x,t)\)</span>. We will assume that the free surface displacement <span class="math notranslate nohighlight">\(\eta\)</span> is small and apply Taylor expansion to the derivatives of <span class="math notranslate nohighlight">\(\phi\)</span> in the following manner:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ada5555f-0bdc-423e-b1d0-163e27c14dfe">
-<span class="eqno">(37.7)<a class="headerlink" href="#equation-ada5555f-0bdc-423e-b1d0-163e27c14dfe" title="Permalink to this equation">¶</a></span>\[\begin{equation}\frac{\partial\phi}{\partial z}\biggr|_{z=\eta}=\frac{\partial\phi}{\partial z}\biggr|_{z=0}+\eta\frac{\partial^2\phi}{\partial z^2}\biggr|_{z=0}+\dots\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-4f01ff47-3a32-4486-9976-f2e0deccbcf1">
+<span class="eqno">(37.7)<a class="headerlink" href="#equation-4f01ff47-3a32-4486-9976-f2e0deccbcf1" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\phi}{\partial z}\biggr|_{z=\eta}=\frac{\partial\phi}{\partial z}\biggr|_{z=0}+\eta\frac{\partial^2\phi}{\partial z^2}\biggr|_{z=0}+\dots\end{equation}\]</div>
 <p>Any terms that are quadratic order or higher will be neglected. We will justify this approach a posteriori.</p>
-<div class="section" id="dynamic-boundary-condition">
-<h3><span class="section-number">37.4.1. </span>Dynamic boundary condition<a class="headerlink" href="#dynamic-boundary-condition" title="Permalink to this headline">¶</a></h3>
+<section id="dynamic-boundary-condition">
+<h3><span class="section-number">37.4.1. </span>Dynamic boundary condition<a class="headerlink" href="#dynamic-boundary-condition" title="Permalink to this headline">#</a></h3>
 <p>We will apply Bernoulli’s theorem on the surface. Since <span class="math notranslate nohighlight">\(F(t)\)</span> is arbitrary, we will take <span class="math notranslate nohighlight">\(F(t)=\frac{p_0}{\rho}\)</span>, where <span class="math notranslate nohighlight">\(p_0\)</span> is the surface pressure (atmospheric pressure). Therefore we obtain:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f07fefb4-2bbb-4993-be8c-db9db1392401">
-<span class="eqno">(37.8)<a class="headerlink" href="#equation-f07fefb4-2bbb-4993-be8c-db9db1392401" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-10661392-4ae1-4772-975d-3738da54d367">
+<span class="eqno">(37.8)<a class="headerlink" href="#equation-10661392-4ae1-4772-975d-3738da54d367" title="Permalink to this equation">#</a></span>\[\begin{align}
 &amp;&amp;\frac{\partial\phi}{\partial t}+\frac{1}{2}(u^2+w^2)+ gz&amp;=0 \qquad \text{on $z=\eta(x,t)$}\\
 \text{i.e } &amp;&amp;\frac{\partial \phi}{\partial t}+ g \eta &amp;=0 \qquad \text{on $z=0$ (linearizing)}
 \end{align}\]</div>
-</div>
-<div class="section" id="kinematic-boundary-condition">
-<h3><span class="section-number">37.4.2. </span>Kinematic boundary condition<a class="headerlink" href="#kinematic-boundary-condition" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="kinematic-boundary-condition">
+<h3><span class="section-number">37.4.2. </span>Kinematic boundary condition<a class="headerlink" href="#kinematic-boundary-condition" title="Permalink to this headline">#</a></h3>
 <p>We define</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c9e23f14-664e-4089-b757-9bf2bde49a18">
-<span class="eqno">(37.9)<a class="headerlink" href="#equation-c9e23f14-664e-4089-b757-9bf2bde49a18" title="Permalink to this equation">¶</a></span>\[\begin{equation}S(x,z,t)=z-\eta(x,t).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c4a9d55a-9f48-4b05-ae55-d2bc5a419fb5">
+<span class="eqno">(37.9)<a class="headerlink" href="#equation-c4a9d55a-9f48-4b05-ae55-d2bc5a419fb5" title="Permalink to this equation">#</a></span>\[\begin{equation}S(x,z,t)=z-\eta(x,t).\end{equation}\]</div>
 <p>Since fluid particles on the surface must remain there, <span class="math notranslate nohighlight">\(S\)</span> is constant following the fluid. Application of <span class="math notranslate nohighlight">\(\frac{DS}{Dt}=0\)</span> with <span class="math notranslate nohighlight">\((u,v,w)=\nabla\phi\)</span> gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1c04bd57-0137-483b-940f-668aa7a49d23">
-<span class="eqno">(37.10)<a class="headerlink" href="#equation-1c04bd57-0137-483b-940f-668aa7a49d23" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c57edd2f-ed19-4fac-8348-e3e8d73e0c79">
+<span class="eqno">(37.10)<a class="headerlink" href="#equation-c57edd2f-ed19-4fac-8348-e3e8d73e0c79" title="Permalink to this equation">#</a></span>\[\begin{align}
 &amp;&amp;\frac{\partial \eta}{\partial t}+\frac{\partial \phi}{\partial x}\frac{\partial \eta}{\partial x}&amp;=\frac{\partial\phi}{\partial z} \qquad \text{on $z=\eta(x,t)$}\\
 \text{i.e } &amp;&amp;\frac{\partial\eta}{\partial t}&amp;=\frac{\partial \phi}{\partial z} \qquad \text{on $z=0$ (linearizing)}
 \end{align}\]</div>
-</div>
-<div class="section" id="combined-surface-condition">
-<h3><span class="section-number">37.4.3. </span>Combined surface condition<a class="headerlink" href="#combined-surface-condition" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="combined-surface-condition">
+<h3><span class="section-number">37.4.3. </span>Combined surface condition<a class="headerlink" href="#combined-surface-condition" title="Permalink to this headline">#</a></h3>
 <p>The two conditions can be combined by eliminating <span class="math notranslate nohighlight">\(\eta\)</span> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-combined-surface">
-<span class="eqno">(37.11)<a class="headerlink" href="#equation-combined-surface" title="Permalink to this equation">¶</a></span>\[\frac{\partial^2\phi}{\partial t^2}+g\frac{\partial\phi}{\partial z}=0\quad \text{on }z=0.\]</div>
-</div>
-</div>
-<div class="section" id="bottom-conditions">
-<h2><span class="section-number">37.5. </span>Bottom conditions<a class="headerlink" href="#bottom-conditions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="deep-water">
-<h3><span class="section-number">37.5.1. </span>Deep water<a class="headerlink" href="#deep-water" title="Permalink to this headline">¶</a></h3>
+<span class="eqno">(37.11)<a class="headerlink" href="#equation-combined-surface" title="Permalink to this equation">#</a></span>\[\frac{\partial^2\phi}{\partial t^2}+g\frac{\partial\phi}{\partial z}=0\quad \text{on }z=0.\]</div>
+</section>
+</section>
+<section id="bottom-conditions">
+<h2><span class="section-number">37.5. </span>Bottom conditions<a class="headerlink" href="#bottom-conditions" title="Permalink to this headline">#</a></h2>
+<section id="deep-water">
+<h3><span class="section-number">37.5.1. </span>Deep water<a class="headerlink" href="#deep-water" title="Permalink to this headline">#</a></h3>
 <p>For deep water, we impose a requirement that the velocity remains bounded as <span class="math notranslate nohighlight">\(z\rightarrow -\infty\)</span>. For the solution given in <a class="reference internal" href="#equation-phi-relation">(37.3)</a>, we find that <span class="math notranslate nohighlight">\(D=0\)</span> and we have</p>
 <div class="math notranslate nohighlight" id="equation-deepwater">
-<span class="eqno">(37.12)<a class="headerlink" href="#equation-deepwater" title="Permalink to this equation">¶</a></span>\[\phi=Ce^{k z}\sin(k x-\omega t)\]</div>
-</div>
-<div class="section" id="finite-depth">
-<h3><span class="section-number">37.5.2. </span>Finite depth<a class="headerlink" href="#finite-depth" title="Permalink to this headline">¶</a></h3>
+<span class="eqno">(37.12)<a class="headerlink" href="#equation-deepwater" title="Permalink to this equation">#</a></span>\[\phi=Ce^{k z}\sin(k x-\omega t)\]</div>
+</section>
+<section id="finite-depth">
+<h3><span class="section-number">37.5.2. </span>Finite depth<a class="headerlink" href="#finite-depth" title="Permalink to this headline">#</a></h3>
 <p>For shallow/finite depth water, we impose a condition of no flow through the bed at <span class="math notranslate nohighlight">\(z=-h\)</span>. That is,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a5c7cbfe-b305-4ac8-b510-eab04bc87b86">
-<span class="eqno">(37.13)<a class="headerlink" href="#equation-a5c7cbfe-b305-4ac8-b510-eab04bc87b86" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-78d48c99-ccb9-47e9-a72b-b5dc7991285d">
+<span class="eqno">(37.13)<a class="headerlink" href="#equation-78d48c99-ccb9-47e9-a72b-b5dc7991285d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 w\biggr|_{z=-h}=\frac{\partial \phi}{\partial z}\biggr|_{z=-h}=0.
 \end{equation}\]</div>
 <p>For the solution given in <a class="reference internal" href="#equation-phi-relation">(37.3)</a>, we find that <span class="math notranslate nohighlight">\(Ce^{-kh}=De^{kh}\)</span> and we have</p>
 <div class="math notranslate nohighlight" id="equation-finitewater">
-<span class="eqno">(37.14)<a class="headerlink" href="#equation-finitewater" title="Permalink to this equation">¶</a></span>\[\phi=A\cosh(kz+kh)\sin(k x-\omega t)\]</div>
+<span class="eqno">(37.14)<a class="headerlink" href="#equation-finitewater" title="Permalink to this equation">#</a></span>\[\phi=A\cosh(kz+kh)\sin(k x-\omega t)\]</div>
 <p>after defining <span class="math notranslate nohighlight">\(A=2C\)</span>.</p>
-</div>
-</div>
-<div class="section" id="dispersion-relations">
-<h2><span class="section-number">37.6. </span>Dispersion relations<a class="headerlink" href="#dispersion-relations" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><span class="section-number">37.6.1. </span>Deep water<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="dispersion-relations">
+<h2><span class="section-number">37.6. </span>Dispersion relations<a class="headerlink" href="#dispersion-relations" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">37.6.1. </span>Deep water<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Application of the combined surface condition <a class="reference internal" href="#equation-combined-surface">(37.11)</a> to the deep water solution <a class="reference internal" href="#equation-deepwater">(37.12)</a> gives the dispersion relation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9b52a26-afaa-451b-b703-fba76a07e5b1">
-<span class="eqno">(37.15)<a class="headerlink" href="#equation-b9b52a26-afaa-451b-b703-fba76a07e5b1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3c10cf12-0223-40b7-9a26-96868e78fb36">
+<span class="eqno">(37.15)<a class="headerlink" href="#equation-3c10cf12-0223-40b7-9a26-96868e78fb36" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \omega^2 = gk \quad \Rightarrow \quad c=\sqrt{\frac{g\lambda}{2\pi}},
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is the phase velocity. The result demonstrates that longer waves travel faster. Atlantic storms generate long waves of small amplitude (swell), which travel quickly (up to thousands of kilometers per day), and these waves arrive on the West Coast of Britain well before the slower-moving storm.</p>
 <div class="exercise admonition" id="fluids/waterwaves-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Exercise 37.1 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Surface waves generated by a mid-Atlantic storm arrive at the British coast with a period of 15 seconds. A day later the period of the waves arriving has dropped to 12.5 seconds. Roughly how far away did the storm occur?</p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p>A packet of waves travels at the group velocity <span class="math notranslate nohighlight">\(c_g=\frac{\mathrm{d}\omega}{\mathrm{d}k}\)</span>.</p>
@@ -724,21 +831,21 @@ w\biggr|_{z=-h}=\frac{\partial \phi}{\partial z}\biggr|_{z=-h}=0.
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}d=\frac{75g(24\times 60\times 60)}{4\pi}\text{m} \simeq 5000\text{km}\end{equation*}\]</div>
 </div>
-</div>
-<div class="section" id="id2">
-<h3><span class="section-number">37.6.2. </span>Finite depth<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3><span class="section-number">37.6.2. </span>Finite depth<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>Application of the combined surface condition <a class="reference internal" href="#equation-combined-surface">(37.11)</a> to the deep water solution <a class="reference internal" href="#equation-finitewater">(37.14)</a> gives the dispersion relation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b008d9f4-fc97-4abf-9ef9-2804ce18389e">
-<span class="eqno">(37.16)<a class="headerlink" href="#equation-b008d9f4-fc97-4abf-9ef9-2804ce18389e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fcedc695-5259-4bad-adef-5562478e5e87">
+<span class="eqno">(37.16)<a class="headerlink" href="#equation-fcedc695-5259-4bad-adef-5562478e5e87" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \omega^2 = gk\tanh(kh).
 \end{equation}\]</div>
 <div class="exercise admonition" id="fluids/waterwaves-exercise-1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 37.2 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>Consider the case of shallow water, so that <span class="math notranslate nohighlight">\(\frac{1}{k}\gg h\)</span>. Use the result <span class="math notranslate nohighlight">\(\tanh(\theta)\simeq \theta\)</span> for <span class="math notranslate nohighlight">\(\theta\ll 1\)</span> to simplify the finite depth dispersion relation, and state in words what the result tells us about dispersion in shallow water.</p>
 <p>Show also that when <span class="math notranslate nohighlight">\(\frac{1}{k}\ll h\)</span> the finite depth dispersion relation approaches the result given for deep water.</p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p><strong>Shallow water:</strong></p>
@@ -750,40 +857,40 @@ w\biggr|_{z=-h}=\frac{\partial \phi}{\partial z}\biggr|_{z=-h}=0.
 <p><span class="math notranslate nohighlight">\(\omega=c k =\sqrt{gk}\)</span></p>
 <p>You may also like to verify that for deep water, the group velocity <span class="math notranslate nohighlight">\(\frac{\mathrm{d}\omega}{\mathrm{d}k}\)</span> is half the phase velocity.</p>
 </div>
-</div>
-</div>
-<div class="section" id="small-amplitude-condition">
-<h2><span class="section-number">37.7. </span>“Small amplitude” condition<a class="headerlink" href="#small-amplitude-condition" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="small-amplitude-condition">
+<h2><span class="section-number">37.7. </span>“Small amplitude” condition<a class="headerlink" href="#small-amplitude-condition" title="Permalink to this headline">#</a></h2>
 <p>In the dynamic boundary condition, we neglected <span class="math notranslate nohighlight">\(u^2\)</span> and <span class="math notranslate nohighlight">\(v^2\)</span> compared to <span class="math notranslate nohighlight">\(g\eta\)</span>, and in the kinematic boundary condition we neglected <span class="math notranslate nohighlight">\(u\partial\eta/\partial x\)</span> compared to <span class="math notranslate nohighlight">\(w\)</span>. Both of these assumptions are justified if <span class="math notranslate nohighlight">\(Ak\ll 1\)</span>, which therefore requires that the wave amplitude <span class="math notranslate nohighlight">\(A\)</span> is vanishingly small compared to the wavelength <span class="math notranslate nohighlight">\(\frac{2\pi}{k}\)</span>.
 For the longest ocean waves, such as waves generated by earthquakes, the approximation breaks down. For the seas around Europe the depth of the water over the continental shelf is far less than 1km, so a revised theory for shallow water is needed.</p>
-</div>
-<div class="section" id="particle-paths">
-<h2><span class="section-number">37.8. </span>Particle paths<a class="headerlink" href="#particle-paths" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="particle-paths">
+<h2><span class="section-number">37.8. </span>Particle paths<a class="headerlink" href="#particle-paths" title="Permalink to this headline">#</a></h2>
 <p>Assume that the particle motion is small compared to the initial displacement <span class="math notranslate nohighlight">\((x_0,z_0)\)</span>, so that we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7713cbef-e0fe-417d-afec-8a1454de171d">
-<span class="eqno">(37.17)<a class="headerlink" href="#equation-7713cbef-e0fe-417d-afec-8a1454de171d" title="Permalink to this equation">¶</a></span>\[\begin{align}x&amp;=x_0+\epsilon X(x,z,t)\\ z&amp;=z_0+\epsilon Z(x,z,t).\end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9754c944-b850-4c15-8957-49d26f2facdb">
+<span class="eqno">(37.17)<a class="headerlink" href="#equation-9754c944-b850-4c15-8957-49d26f2facdb" title="Permalink to this equation">#</a></span>\[\begin{align}x&amp;=x_0+\epsilon X(x,z,t)\\ z&amp;=z_0+\epsilon Z(x,z,t).\end{align}\]</div>
 <p>Then</p>
-<div class="amsmath math notranslate nohighlight" id="equation-35225834-f419-4f26-be4a-08aa33f9aa31">
-<span class="eqno">(37.18)<a class="headerlink" href="#equation-35225834-f419-4f26-be4a-08aa33f9aa31" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9890304d-adf0-4725-bfd5-039aa421e9ba">
+<span class="eqno">(37.18)<a class="headerlink" href="#equation-9890304d-adf0-4725-bfd5-039aa421e9ba" title="Permalink to this equation">#</a></span>\[\begin{align}
 \epsilon \frac{\mathrm{d}X}{\mathrm{d}t}&amp;=u(x_0+\epsilon X, z_0+\epsilon Z,t)\simeq u(x_0,z_0,t)\\
 \epsilon \frac{\mathrm{d}Z}{\mathrm{d}t}&amp;=w(x_0+\epsilon X, z_0+\epsilon Z,t)\simeq w(x_0,z_0,t)\end{align}\]</div>
 <p>For deep water this gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-20e71c9a-224e-43d1-94cf-e6eedc293914">
-<span class="eqno">(37.19)<a class="headerlink" href="#equation-20e71c9a-224e-43d1-94cf-e6eedc293914" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1d480d38-40c7-4ced-b32b-fc90b27da400">
+<span class="eqno">(37.19)<a class="headerlink" href="#equation-1d480d38-40c7-4ced-b32b-fc90b27da400" title="Permalink to this equation">#</a></span>\[\begin{align}
 \epsilon \frac{\mathrm{d}X}{\mathrm{d}t}&amp;=A\omega e^{k z_0}\cos(k x_0-\omega t),\\
 \epsilon \frac{\mathrm{d}Z}{\mathrm{d}t}&amp;=A\omega e^{k z_0}\sin(k x_0-\omega t).
  \end{align}\]</div>
 <p>[If you are wondering how these can balance, it is because the wave amplitudes are small: <span class="math notranslate nohighlight">\(Ak\sim \epsilon\)</span>.]
 Integrating with respect to <span class="math notranslate nohighlight">\(t\)</span> and combining the results gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-905504ae-ea7c-4c10-b034-49ba284551bc">
-<span class="eqno">(37.20)<a class="headerlink" href="#equation-905504ae-ea7c-4c10-b034-49ba284551bc" title="Permalink to this equation">¶</a></span>\[\begin{equation}(\epsilon X)^2+(\epsilon Z)^2 = (Ae^{kz_0})^2.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b60f7a21-6631-4459-8bbd-9d21e1547986">
+<span class="eqno">(37.20)<a class="headerlink" href="#equation-b60f7a21-6631-4459-8bbd-9d21e1547986" title="Permalink to this equation">#</a></span>\[\begin{equation}(\epsilon X)^2+(\epsilon Z)^2 = (Ae^{kz_0})^2.\end{equation}\]</div>
 <p>The particle paths are therefore circular, and the radius of the circles <span class="math notranslate nohighlight">\(Ae^{k z_0}\)</span> decreases exponentially with depth.</p>
 <div class="exercise admonition" id="fluids/waterwaves-exercise-2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 37.3 </span></p>
-<div class="section" id="exercise-content">
+<section id="exercise-content">
 <p>By assuming that the particle motions for shallow water gravity waves are small, describe the shape of the particle paths for this case.</p>
-</div>
+</section>
 </div>
 <div class="toggle docutils container">
 <p>Using the shallow water expressions for the velocity components together with <span class="math notranslate nohighlight">\(x=x_0+\epsilon X\)</span>, <span class="math notranslate nohighlight">\(z=z_0+\epsilon Z\)</span>, we obtain</p>
@@ -794,8 +901,8 @@ Integrating with respect to <span class="math notranslate nohighlight">\(t\)</sp
 \[\begin{equation*}\left(\frac{\epsilon X}{\cosh\left[k(z_0+h)\right]}\right)^2+\left(\frac{\epsilon Z}{\sinh\left[k(z_0+h)\right]}\right)^2=\left(\frac{A}{k\sinh(kh)}\right)^2\end{equation*}\]</div>
 <p>The particle paths are ellipses, which become flatter with increasing depth (as <span class="math notranslate nohighlight">\(z_0 \rightarrow -h\)</span>). On the bed, the particles slip backwards and forwards in straight lines.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -819,9 +926,11 @@ Integrating with respect to <span class="math notranslate nohighlight">\(t\)</sp
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="vorticity.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -837,24 +946,28 @@ Integrating with respect to <span class="math notranslate nohighlight">\(t\)</sp
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Ali Mozaffari and Ella Metcalfe<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>16. Solving Electrostatic Systems &#8212; Electromagnetism, Fluids and Waves</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,42 +20,41 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="17. Energy in an Electric Field" href="Efieldenergy.html" />
@@ -65,7 +66,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -74,9 +89,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -94,14 +110,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Waves
  </span>
@@ -168,7 +185,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Electromagnetism
  </span>
@@ -235,7 +252,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Fluids
  </span>
@@ -324,90 +341,180 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/electromagnetism/solvingEsystems.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/solvingEsystems.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Felectromagnetism/solvingEsystems.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/electromagnetism/solvingEsystems.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-tools">
    16.1. The Tools
@@ -466,12 +573,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Solving Electrostatic Systems</h1>
@@ -546,13 +652,14 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="solving-electrostatic-systems">
-<h1><span class="section-number">16. </span>Solving Electrostatic Systems<a class="headerlink" href="#solving-electrostatic-systems" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="the-tools">
-<h2><span class="section-number">16.1. </span>The Tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="solving-electrostatic-systems">
+<h1><span class="section-number">16. </span>Solving Electrostatic Systems<a class="headerlink" href="#solving-electrostatic-systems" title="Permalink to this headline">#</a></h1>
+<section id="the-tools">
+<h2><span class="section-number">16.1. </span>The Tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Our first tool for solving electric field system is <em>Gauss’s law</em>:</p></li>
 </ul>
@@ -574,23 +681,27 @@ understand the charge distribution enclosed by this area, <span class="math notr
 <div class="math notranslate nohighlight">
 \[{\bf E}_{total} = \frac{1}{4 \pi \,\epsilon_0}\int_0^Q \frac{\mathrm{d} Q'}{|{\bf r_i}|^2}\,\hat{\bf r_i}\]</div>
 <p>and understanding the spatial distribution of <span class="math notranslate nohighlight">\(Q\)</span> can help us to calculate this integral.</p>
-</div>
-<div class="section" id="spheres-of-charge">
-<h2><span class="section-number">16.2. </span>Spheres of Charge<a class="headerlink" href="#spheres-of-charge" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="spheres-of-charge">
+<h2><span class="section-number">16.2. </span>Spheres of Charge<a class="headerlink" href="#spheres-of-charge" title="Permalink to this headline">#</a></h2>
 <p>Lets consider the case of a spherical insulator (the key idea here being the charges are fixed), which carries a net charge of <span class="math notranslate nohighlight">\(+Q\)</span>.  In the first
 instance we consider that the charge is uniformly distributed throughout the sphere, which has some radius <span class="math notranslate nohighlight">\(a\)</span>, as can be seen in <a class="reference internal" href="#sphericalinsulator"><span class="std std-numref">Fig. 16.1</span></a></p>
-<div class="figure align-default" id="sphericalinsulator">
+<figure class="align-default" id="sphericalinsulator">
 <img alt="../_images/sphericalinsulator.png" src="../_images/sphericalinsulator.png" />
-<p class="caption"><span class="caption-number">Fig. 16.1 </span><span class="caption-text"><b> Left:</b> Charged spherical insulator of radius <span class="math notranslate nohighlight">\(a\)</span>,
+<figcaption>
+<p><span class="caption-number">Fig. 16.1 </span><span class="caption-text"><b> Left:</b> Charged spherical insulator of radius <span class="math notranslate nohighlight">\(a\)</span>,
 <b> Middle:</b> Cross section considering spheres <span class="math notranslate nohighlight">\(r \leq a\)</span>,<br />
-<b> Right:</b> Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span></span><a class="headerlink" href="#sphericalinsulator" title="Permalink to this image">¶</a></p>
-</div>
+<b> Right:</b> Cross section considering spheres size <span class="math notranslate nohighlight">\(r \geq a\)</span></span><a class="headerlink" href="#sphericalinsulator" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Recall from our discussion of spherical geometries <span class="math notranslate nohighlight">\((r,\,\theta,\, \phi)\)</span>, the area normal <span class="math notranslate nohighlight">\(\hat{{\bf n}}\)</span> vector for this <b>Gaussian Sphere</b>
 will point in the <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> direction, radially outwards, as shown in <a class="reference internal" href="#sphereareanormal"><span class="std std-numref">Fig. 16.2</span></a>.</p>
-<div class="figure align-default" id="sphereareanormal">
+<figure class="align-default" id="sphereareanormal">
 <img alt="../_images/sphereareanormal.png" src="../_images/sphereareanormal.png" />
-<p class="caption"><span class="caption-number">Fig. 16.2 </span><span class="caption-text">Area normal vector <span class="math notranslate nohighlight">\(\hat{{\bf n}} = \hat{{\bf r}}\)</span> for a sphere.</span><a class="headerlink" href="#sphereareanormal" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.2 </span><span class="caption-text">Area normal vector <span class="math notranslate nohighlight">\(\hat{{\bf n}} = \hat{{\bf r}}\)</span> for a sphere.</span><a class="headerlink" href="#sphereareanormal" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>To find the electric field distribution using Gauss’s law, lets break up the space into three different regimes of interest:</p>
 <ul class="simple">
 <li><p><b> REGION I: <span class="math notranslate nohighlight">\(r &gt; a\)</span> </b></p></li>
@@ -641,13 +752,15 @@ that we are not creating or destroying potential energy.</p>
    \end{cases}\end{split}\]</div>
 <p>and we plot the interior and exterior electric fields in <a class="reference internal" href="#electricfieldsphere"><span class="std std-numref">Fig. 16.3</span></a>.  We see that continuity of field is
 present at the boundary, although very different radial dependencies <span class="math notranslate nohighlight">\(E(r)\)</span> are present inside and outside of the sphere.</p>
-<div class="figure align-default" id="electricfieldsphere">
+<figure class="align-default" id="electricfieldsphere">
 <img alt="../_images/electricfieldsphere1.png" src="../_images/electricfieldsphere1.png" />
-<p class="caption"><span class="caption-number">Fig. 16.3 </span><span class="caption-text">Graph of electric field for uniform insulating sphere interior and exterior.</span><a class="headerlink" href="#electricfieldsphere" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="conductors">
-<h2><span class="section-number">16.3. </span>Conductors<a class="headerlink" href="#conductors" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 16.3 </span><span class="caption-text">Graph of electric field for uniform insulating sphere interior and exterior.</span><a class="headerlink" href="#electricfieldsphere" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="conductors">
+<h2><span class="section-number">16.3. </span>Conductors<a class="headerlink" href="#conductors" title="Permalink to this headline">#</a></h2>
 <p>If we place a conductor in an exterior electric field, the mobile charge carriers now have the possibility to move.  This system seeks
 to reach an equilibrium to minimise their energy configuration.  The total electric field inside the conductor is made up of:</p>
 <div class="math notranslate nohighlight">
@@ -656,20 +769,24 @@ to reach an equilibrium to minimise their energy configuration.  The total elect
 <div class="math notranslate nohighlight">
 \[{\bf E}_{interior} = - {\bf E}_{field} \quad \Rightarrow \quad {\bf E}_{tot} = (0,\,0,\,0)\]</div>
 <p>meaning no more charges will move, which is a stable equilibrium. This is depicted in <a class="reference internal" href="#conductorelectricfield"><span class="std std-numref">Fig. 16.4</span></a>.</p>
-<div class="figure align-default" id="conductorelectricfield">
+<figure class="align-default" id="conductorelectricfield">
 <img alt="../_images/conductorelectricfield.png" src="../_images/conductorelectricfield.png" />
-<p class="caption"><span class="caption-number">Fig. 16.4 </span><span class="caption-text">The internal electric field of a conductor that has reached equilbirum after being placed in an exterior electric field.</span><a class="headerlink" href="#conductorelectricfield" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="sheets-of-charge">
-<h2><span class="section-number">16.4. </span>Sheets of Charge<a class="headerlink" href="#sheets-of-charge" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 16.4 </span><span class="caption-text">The internal electric field of a conductor that has reached equilbirum after being placed in an exterior electric field.</span><a class="headerlink" href="#conductorelectricfield" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sheets-of-charge">
+<h2><span class="section-number">16.4. </span>Sheets of Charge<a class="headerlink" href="#sheets-of-charge" title="Permalink to this headline">#</a></h2>
 <p>We can consider a uniform infinite sheet of charge, carrying a total charge <span class="math notranslate nohighlight">\(Q\)</span> over an area <span class="math notranslate nohighlight">\(A_{tot}\)</span>, with a uniform
 charge for unit area <span class="math notranslate nohighlight">\(\sigma = Q/A_{tot}\)</span>.  Here we want to find a Gauss’s law surface to find the flux crossing,
 for a sheet like this we can pick a cylinder, as we see in <a class="reference internal" href="#sheetofcharge"><span class="std std-numref">Fig. 16.5</span></a>.</p>
-<div class="figure align-default" id="sheetofcharge">
+<figure class="align-default" id="sheetofcharge">
 <img alt="../_images/sheetofcharge.png" src="../_images/sheetofcharge.png" />
-<p class="caption"><span class="caption-number">Fig. 16.5 </span><span class="caption-text">Sheet of charge using a cylinder as our Gaussian surface.</span><a class="headerlink" href="#sheetofcharge" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.5 </span><span class="caption-text">Sheet of charge using a cylinder as our Gaussian surface.</span><a class="headerlink" href="#sheetofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The cylinder has three areas here, two cross sectional area <span class="math notranslate nohighlight">\(A_{r} = \pi\,r^2\)</span> - one for each face and one surface area along the length
 <span class="math notranslate nohighlight">\(L\)</span> of the cylinder, <span class="math notranslate nohighlight">\(A_{z} = 2 \pi r L\)</span>.  For the normal to the surface pointing upwards on the top of the sheet (and downwards below the sheet),
 these point in the <span class="math notranslate nohighlight">\(\text{sign}(z)\hat{{\bf z}}\)</span> direction, depending on which side we are on, so here our Gauss’s law dot
@@ -692,16 +809,18 @@ product looks like</p>
       -\sigma / 2 \epsilon_0\, \hat{\bf z} &amp; z &lt; 0 \\
        \sigma / 2 \epsilon_0 \,\hat{\bf z} &amp; z &gt; 0 
    \end{cases}\end{split}\]</div>
-</div>
-<div class="section" id="capacitors">
-<h2><span class="section-number">16.5. </span>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="capacitors">
+<h2><span class="section-number">16.5. </span>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">#</a></h2>
 <p>A good example for a system where sheets of charge play a role is a capacitor, which we can think of as two sheets of charge, each one carrying an
 equal and opposite sets of charges <span class="math notranslate nohighlight">\(\pm Q\)</span> as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 16.6</span></a>.  Obviously this system is idealised, because these sheets of
 charge are <em>finite</em> - however here we will ignore edge effects.</p>
-<div class="figure align-default" id="capacitorelectricfield">
+<figure class="align-default" id="capacitorelectricfield">
 <img alt="../_images/capacitorelectricfield1.png" src="../_images/capacitorelectricfield1.png" />
-<p class="caption"><span class="caption-number">Fig. 16.6 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.6 </span><span class="caption-text">Electric field <span class="math notranslate nohighlight">\(E\)</span> within a capacitor, two plates of area <span class="math notranslate nohighlight">\(A\)</span>, top plate at <span class="math notranslate nohighlight">\(z = d\)</span>, bottom plate at <span class="math notranslate nohighlight">\(z = 0\)</span>, carrying a charge <span class="math notranslate nohighlight">\(\pm Q\)</span>.</span><a class="headerlink" href="#capacitorelectricfield" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For two identical plates, each carrying an equal but opposite amount of charge:</p>
 <div class="math notranslate nohighlight">
 \[{\bf E} = {\bf E}_{Q+} + {\bf E}_{Q-}\]</div>
@@ -726,16 +845,18 @@ charge are <em>finite</em> - however here we will ignore edge effects.</p>
 <p>Clearly therefore the capacitance can be increased with a larger plates area <span class="math notranslate nohighlight">\(A\)</span> and/or smaller plate separation <span class="math notranslate nohighlight">\(d\)</span>.  In each case the plates can
 therefore carry a bigger charge and therefore will result in a larger capacitance <span class="math notranslate nohighlight">\(C\)</span>.  Likewise if we can increase the size of the permittivity
 <span class="math notranslate nohighlight">\(\epsilon_0 \rightarrow \epsilon = \epsilon_0(1+\chi_E)\)</span> within a medium, we can increase the capacitence.</p>
-</div>
-<div class="section" id="infinite-lines-of-charge">
-<h2><span class="section-number">16.6. </span>Infinite Lines of Charge<a class="headerlink" href="#infinite-lines-of-charge" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="infinite-lines-of-charge">
+<h2><span class="section-number">16.6. </span>Infinite Lines of Charge<a class="headerlink" href="#infinite-lines-of-charge" title="Permalink to this headline">#</a></h2>
 <p>We can consider a uniform infinite line of charges, with charge per unit length <span class="math notranslate nohighlight">\(\lambda\)</span>.  Again consider a cylinder as our Gauss’s law surface area for
 flux to cross, but the normal vector now is directed in the radial direction away from the charges and its the long side area that we are concerned with,
 as depicted in <a class="reference internal" href="#lineofcharge"><span class="std std-numref">Fig. 16.7</span></a>.</p>
-<div class="figure align-default" id="lineofcharge">
+<figure class="align-default" id="lineofcharge">
 <img alt="../_images/InfiniteLineOfCharges.png" src="../_images/InfiniteLineOfCharges.png" />
-<p class="caption"><span class="caption-number">Fig. 16.7 </span><span class="caption-text">An infinite line of charges, which goes through the origin, with a cylindrical Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.7 </span><span class="caption-text">An infinite line of charges, which goes through the origin, with a cylindrical Gaussian surface.</span><a class="headerlink" href="#lineofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For a cylinder of length <span class="math notranslate nohighlight">\(L\)</span>, the area of the long side of the cylinder is <span class="math notranslate nohighlight">\(2 \pi r L\)</span> and the charge enclosed in this
 area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>, so putting these facts together:</p>
 <div class="math notranslate nohighlight">
@@ -743,34 +864,40 @@ area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>
 \Rightarrow E_r &amp;=&amp;\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} \end{split}\]</div>
 <p>This gives us an expression for the electric field around an infinite line of charge:</p>
 <div class="math notranslate nohighlight" id="equation-infinitechargelineefield">
-<span class="eqno">(16.1)<a class="headerlink" href="#equation-infinitechargelineefield" title="Permalink to this equation">¶</a></span>\[{\bf E} = \frac{\lambda}{2\pi\, \epsilon_0 \,r} \hat{{\bf r}}\]</div>
+<span class="eqno">(16.1)<a class="headerlink" href="#equation-infinitechargelineefield" title="Permalink to this equation">#</a></span>\[{\bf E} = \frac{\lambda}{2\pi\, \epsilon_0 \,r} \hat{{\bf r}}\]</div>
 <p>Clearly such an object is theoertical, although for very long and thin wires we can approximate the eldctric field for most of the space using
 this expression.</p>
-</div>
-<div class="section" id="finite-lines-of-charge">
-<h2><span class="section-number">16.7. </span>Finite Lines of Charge<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="finite-lines-of-charge">
+<h2><span class="section-number">16.7. </span>Finite Lines of Charge<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">#</a></h2>
 <p>Equation <a class="reference internal" href="#equation-infinitechargelineefield">(16.1)</a> is only true for an infinite line of charge, if we have a finite collection of charges, as depicted in
 <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, then we loose some of the symmetries of the system, however the superposition method is a better way to proceed here.</p>
-<div class="figure align-default" id="finitelineofcharge">
+<figure class="align-default" id="finitelineofcharge">
 <img alt="../_images/FiniteLineOfCharges2.png" src="../_images/FiniteLineOfCharges2.png" />
-<p class="caption"><span class="caption-number">Fig. 16.8 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="semicircular-arc">
-<h3><span class="section-number">16.7.1. </span>Semicircular Arc<a class="headerlink" href="#semicircular-arc" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 16.8 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#finitelineofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="semicircular-arc">
+<h3><span class="section-number">16.7.1. </span>Semicircular Arc<a class="headerlink" href="#semicircular-arc" title="Permalink to this headline">#</a></h3>
 <p>Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in <a class="reference internal" href="#semicirculararcofcharge"><span class="std std-numref">Fig. 16.9</span></a></p>
-<div class="figure align-default" id="semicirculararcofcharge">
+<figure class="align-default" id="semicirculararcofcharge">
 <img alt="../_images/SemiCircularArcofCharge.png" src="../_images/SemiCircularArcofCharge.png" />
-<p class="caption"><span class="caption-number">Fig. 16.9 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, arranged in a semicircular arc of length <span class="math notranslate nohighlight">\(L\)</span> and centered on the origin.</span><a class="headerlink" href="#semicirculararcofcharge" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.9 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, arranged in a semicircular arc of length <span class="math notranslate nohighlight">\(L\)</span> and centered on the origin.</span><a class="headerlink" href="#semicirculararcofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>What are the symmetries of this semicircular system? Well if we consider a section of the arc, it will carry a charge <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> which we can rewrite as
 <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \mathrm{d} \ell\)</span>.  Given that for a circular arc <span class="math notranslate nohighlight">\(\ell = r \theta\)</span> and since <span class="math notranslate nohighlight">\(L = \pi r\)</span>, therefore</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d} Q = \frac{\lambda\,L}{\pi} \mathrm{d} \theta\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is an angle that moves round the arc, as we define in <a class="reference internal" href="#angulararcofcharge"><span class="std std-numref">Fig. 16.10</span></a>.</p>
-<div class="figure align-default" id="angulararcofcharge">
+<figure class="align-default" id="angulararcofcharge">
 <img alt="../_images/SemiCircularArcofCharge2.png" src="../_images/SemiCircularArcofCharge2.png" />
-<p class="caption"><span class="caption-number">Fig. 16.10 </span><span class="caption-text">Semicircular arc of charges, centered on the origin, with charge element <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span>, length <span class="math notranslate nohighlight">\(L\)</span>, radius <span class="math notranslate nohighlight">\(r\)</span> and angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#angulararcofcharge" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.10 </span><span class="caption-text">Semicircular arc of charges, centered on the origin, with charge element <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span>, length <span class="math notranslate nohighlight">\(L\)</span>, radius <span class="math notranslate nohighlight">\(r\)</span> and angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#angulararcofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Clearly now we want to integrate over all the charges <span class="math notranslate nohighlight">\(\mathrm{d}Q\)</span> which will involve integrating over all angles <span class="math notranslate nohighlight">\(\mathrm{d} \theta\)</span>.  Since we are treating
 these infitesimal charge elements as point charges, the magnitude of the electric field has the form:</p>
 <div class="math notranslate nohighlight">
@@ -789,15 +916,17 @@ these infitesimal charge elements as point charges, the magnitude of the electri
 \int_0^{\bf E} \mathrm{d}{\bf E}_{\theta} &amp;=&amp;\,  \frac{\pi}{4\,\epsilon_0\,L^2} \frac{\lambda\,L}{\pi} \int_{-\pi/2}^{\pi/2} \Big(\cos(\theta)\,\hat{\bf i} + 
 \sin(\theta)\,\hat{\bf j} \Big)\,\mathrm{d} \theta\\
 {\bf E} &amp;=&amp;\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}\end{split}\]</div>
-</div>
-<div class="section" id="rectilinear-rod">
-<h3><span class="section-number">16.7.2. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rectilinear-rod">
+<h3><span class="section-number">16.7.2. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this headline">#</a></h3>
 <p>Lets return to the rod in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, we can set this system up in <a class="reference internal" href="#finitelineofcharge2"><span class="std std-numref">Fig. 16.11</span></a>, trying to make the rod as symmetric as possible:</p>
-<div class="figure align-default" id="finitelineofcharge2">
+<figure class="align-default" id="finitelineofcharge2">
 <img alt="../_images/FiniteLineOfCharges3.png" src="../_images/FiniteLineOfCharges3.png" />
-<p class="caption"><span class="caption-number">Fig. 16.11 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, symmetrically aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis. We pick out an element of charge indicated
-in red, so here <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span>.</span><a class="headerlink" href="#finitelineofcharge2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 16.11 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, symmetrically aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis. We pick out an element of charge indicated
+in red, so here <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span>.</span><a class="headerlink" href="#finitelineofcharge2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>With a line of charge, of length <span class="math notranslate nohighlight">\(L\)</span>, aligned along the <span class="math notranslate nohighlight">\(x\)</span> axis, we can look at a point at a distance <span class="math notranslate nohighlight">\(R\)</span> away, aligned halfway along the rod.  Once again we can break up this
 line of charge into infinitesimal chunks, each contributing <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> charge and then the overall electric field will be found by superposition.  The magnitude of the electric
 field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod appears to be given by:</p>
@@ -830,12 +959,12 @@ field at a distance <span class="math notranslate nohighlight">\(R\)</span> from
 <p>which is essentially the result for the infinite line of charge in Equation <a class="reference internal" href="#equation-infinitechargelineefield">(16.1)</a>.</p>
 <p>We note therefore that the relevant expression for the magnitude of the electric field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod is found from just the <span class="math notranslate nohighlight">\(y\)</span> component:</p>
 <div class="math notranslate nohighlight" id="equation-efieldwire">
-<span class="eqno">(16.2)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">¶</a></span>\[\begin{split}\mathrm{d} E &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+<span class="eqno">(16.2)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">#</a></span>\[\begin{split}\mathrm{d} E &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
 \Rightarrow E &amp;=&amp;\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\,\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Bigg[\frac{x}{\sqrt{x^2+R^2}}\Bigg]_{rod}\end{split}\]</div>
-</div>
-</div>
-<div class="section" id="bf-d-field">
-<h2><span class="section-number">16.8. </span><span class="math notranslate nohighlight">\({\bf D}\)</span> Field*<a class="headerlink" href="#bf-d-field" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="bf-d-field">
+<h2><span class="section-number">16.8. </span><span class="math notranslate nohighlight">\({\bf D}\)</span> Field*<a class="headerlink" href="#bf-d-field" title="Permalink to this headline">#</a></h2>
 <p>We find it is possible to have conductors carry a net charge, say <span class="math notranslate nohighlight">\(+Q\)</span>, however electrostatic fields do not permeate far through a conductor, the charge is
 essentially carried at the surface.  If we have an oscillating electric field <span class="math notranslate nohighlight">\({\bf E}(\omega)\)</span>, then the <b>Skin Effect</b> is observed in a conductor and
 there is a measurable <b>Skin Depth</b>, <span class="math notranslate nohighlight">\(\delta(\omega)\)</span> of the field in the conductor.</p>
@@ -852,8 +981,8 @@ it is usually more useful to consider the so-called Displacement field <span cla
 <div class="math notranslate nohighlight">
 \[\epsilon(\omega) = \epsilon_0\,\epsilon_r(\omega)\]</div>
 <p><span class="math notranslate nohighlight">\(\epsilon(\omega)\)</span> is responsible for effects such as refection and rainbows, producing energy dissipation effects, which we would see in the wave dispersion relation.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -877,9 +1006,11 @@ it is usually more useful to consider the so-called Displacement field <span cla
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="electrostatics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -895,24 +1026,28 @@ it is usually more useful to consider the so-called Displacement field <span cla
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Ali Mozaffari and Ella Metcalfe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Ali Mozaffari and Ella Metcalfe<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
