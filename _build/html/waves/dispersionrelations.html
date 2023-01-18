@@ -530,6 +530,23 @@ title="Print to PDF"
    7.3. Non-linear dispersion relation and wave speeds
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wavepackets">
+   7.4. Wavepackets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dispersion-less-wavepackets">
+     7.4.1. Dispersion-less wavepackets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dispersive-wavepackets">
+     7.4.2. Dispersive wavepackets
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -563,6 +580,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#non-linear-dispersion-relation-and-wave-speeds">
    7.3. Non-linear dispersion relation and wave speeds
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wavepackets">
+   7.4. Wavepackets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dispersion-less-wavepackets">
+     7.4.1. Dispersion-less wavepackets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dispersive-wavepackets">
+     7.4.2. Dispersive wavepackets
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -668,6 +702,7 @@ an infinitesimal difference <span class="math notranslate nohighlight">\(\mathrm
 <p>This is known as the <b> group velocity </b> of the wave and describes the velocity with which the overall
 envelope shape of the wave’s amplitudes propagates through space and time.  We also see that this velocity is
 dimensionally equivalent to <span class="math notranslate nohighlight">\(v_p\)</span>.</p>
+<p>We can see this effect of beats illustrate in figure <a class="reference internal" href="#beats"><span class="std std-numref">Fig. 7.2</span></a>.</p>
 <p>We can extend this to two and higher dimensions using partial derivatives and the gradient operator:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\bf{v_p} &amp;=&amp; \,\frac{\bf \hat{k} }{|\bf{k}|}\omega \\
@@ -716,6 +751,57 @@ wave.</p>
 relation.  The left hand figure shows <span class="math notranslate nohighlight">\(r &lt; 1\)</span>, the middle figure shows <span class="math notranslate nohighlight">\(r = 1\)</span> and the right hand figure shows <span class="math notranslate nohighlight">\(r &gt; 1\)</span></span><a class="headerlink" href="#dispersionplots" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="wavepackets">
+<h2><span class="section-number">7.4. </span>Wavepackets<a class="headerlink" href="#wavepackets" title="Permalink to this headline">#</a></h2>
+<p>Our simplest form of dispersion relation for travelling waves suggested <span class="math notranslate nohighlight">\(\omega = \pm ck\)</span>, which we can write as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u(x,\, t) &amp;=\, \sum_{n=1}^2 u_n \exp(i(kx-\omega_n t))\\
+\omega_n &amp;=\, (-1)^n\,ck \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(u_n\)</span> is a each waves amplitude.  We can generalise this by letting <span class="math notranslate nohighlight">\(u_n = u_n(k)\)</span> and using a continuous spectrum of <span class="math notranslate nohighlight">\(k\)</span> values with a general
+dispersion relation <span class="math notranslate nohighlight">\(\omega = \omega(k)\)</span>, therefore:</p>
+<div class="math notranslate nohighlight">
+\[u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k\]</div>
+<p>We call these <b>wave packets</b>, also known sometimes as wave trains or bursts - we can picture them as a larger wave envelope, with smaller localized waves
+that travel as one unit together, as shown in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 7.4</span></a>.  This infinite set of oscillating waves have different wavelengths, with phases
+and amplitudes that constructively and destructively interfereonly over different regions of space.</p>
+<figure class="align-default" id="wavepacket">
+<img alt="../_images/WavePacket.png" src="../_images/WavePacket.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Schematic of a wave packet, with localisation near the centre of the packet.</span><a class="headerlink" href="#wavepacket" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation,
+the wave packet’s profile may remain constant (no dispersion) or change (dispersion) while propagating.</p>
+<p>These can help us understand the differences between group and phase velocity, as outlined in <a class="reference internal" href="#phasegroupvelocities"><span class="std std-numref">Fig. 7.5</span></a></p>
+<figure class="align-default" id="phasegroupvelocities">
+<img alt="../_images/littlewavepackets.gif" src="../_images/littlewavepackets.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.5 </span><span class="caption-text">A wave packets showing key differences between group and phase velcoities.</span><a class="headerlink" href="#phasegroupvelocities" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="dispersion-less-wavepackets">
+<h3><span class="section-number">7.4.1. </span>Dispersion-less wavepackets<a class="headerlink" href="#dispersion-less-wavepackets" title="Permalink to this headline">#</a></h3>
+<p>Here although the wave is a superposition of many waves, they follow a linear dispersion relation <span class="math notranslate nohighlight">\(\omega = ck\)</span>, meaning phase and group velocity are the same
+and so the waves travel as one complete train, as seen in figure <a class="reference internal" href="#dispersionlesswavepacket"><span class="std std-numref">Fig. 7.6</span></a>.</p>
+<figure class="align-default" id="dispersionlesswavepacket">
+<img alt="../_images/Wave_packet_(no_dispersion).gif" src="../_images/Wave_packet_(no_dispersion).gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.6 </span><span class="caption-text">A wave packet moving in a dispersion-less medium.</span><a class="headerlink" href="#dispersionlesswavepacket" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="dispersive-wavepackets">
+<h3><span class="section-number">7.4.2. </span>Dispersive wavepackets<a class="headerlink" href="#dispersive-wavepackets" title="Permalink to this headline">#</a></h3>
+<p>Here in addition to the wave is a superposition of many waves, they follow a non-linear dispersion relation <span class="math notranslate nohighlight">\(\omega = \omega(k)\)</span> where phase and group velocities differ
+and the waves travel as a train which begins to spread as it travels, as seen in figure <a class="reference internal" href="#dispersivewavepacket"><span class="std std-numref">Fig. 7.7</span></a>.</p>
+<figure class="align-default" id="dispersivewavepacket">
+<img alt="../_images/Wave_packet_(dispersion).gif" src="../_images/Wave_packet_(dispersion).gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text">A wave packet moving in a dispersive medium.</span><a class="headerlink" href="#dispersivewavepacket" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 </section>
 

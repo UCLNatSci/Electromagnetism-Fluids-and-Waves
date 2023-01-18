@@ -25,11 +25,11 @@ u(0,t) = u(L,t) = 0
 so we find by summing left and right moving waves:
 
 ```{math}
-u(x,t) &=&\, \left(A \cos(kx-\omega t) + B\cos(kx+\omega t) \right) \\
-u(0,t) &=&\, \left(A \cos(\omega t) + B\cos(\omega t) \right) = \cos(\omega t)\left(A  + B\right) = 0 \\ 
-&\Rightarrow&\, B = -A \\
-u(L,t) &=&\, A \Big[\cos(kL-\omega t) - \cos(kL+\omega t) \Big] = 0  \\ 
-&\Rightarrow&\, 2A\sin(kL) \sin(\omega t) = 0
+u(x,t) &=\, \left(A \cos(kx-\omega t) + B\cos(kx+\omega t) \right) \\
+u(0,t) &=\, \left(A \cos(\omega t) + B\cos(\omega t) \right) = \cos(\omega t)\left(A  + B\right) = 0 \\ 
+&\Rightarrow\, B = -A \\
+u(L,t) &=\, A \Big[\cos(kL-\omega t) - \cos(kL+\omega t) \Big] = 0  \\ 
+&\Rightarrow\, 2A\sin(kL) \sin(\omega t) = 0
 ```
 
 To solve this second condition, given the cyclic symmetry of $\sin(kL)$, we will have: 
@@ -78,4 +78,12 @@ these are the nodes of the standing waves, located at $x \geq 0$:
 x = 0, \,\frac{\lambda}{2}, \,\lambda, \frac{3\lambda}{2},\,\dots
 ```
 
+We illustrate the case of a string open at both ends in {numref}`standingwaves`
 
+
+```{figure} ../figures/standing.gif
+---
+name: standingwaves
+---
+An open standing wave, described by two waves with fixed phase difference.
+```

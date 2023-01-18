@@ -48,8 +48,8 @@ Schematic of two different types of wave polarisations, plane polarisation in gr
 
 If we take the triple vector product of the wave vector and polarisation vector, we find a vector ${\bf S}$ which indicates the flow of energy in the system:
 ```{math}
-{\bf u_1} &=&\, {\bf k} \times {\bf u_0} \\
-{\bf S} &=&\, C\,{\bf u_0} \times {\bf u_1} 
+{\bf u_1} &=\, {\bf k} \times {\bf u_0} \\
+{\bf S} &=\, C\,{\bf u_0} \times {\bf u_1} 
 ``` 
 where $C$ is some constant to be found.  To understand how this works, lets pick a choice of linearly polarised placen waves:
 ```{math}
@@ -66,12 +66,12 @@ u_y \\
 ```
 then the components of ${\bf S}$ are found by:
 ```{math}
-{\bf u_1} &=&\, {\bf k} \times {\bf u_0} = \begin{vmatrix}
+{\bf u_1} &=\, {\bf k} \times {\bf u_0} = \begin{vmatrix}
 \hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\
 k_x & 0 & 0 \\
 0 & u_y & 0
 \end{vmatrix} = k_x\,u_y\,\hat{\bf z}\\
-{\bf S} &=&\, {\bf u_0} \times {\bf u_1} = C\begin{vmatrix}
+{\bf S} &=\, {\bf u_0} \times {\bf u_1} = C\begin{vmatrix}
 \hat{\bf x} & \hat{\bf y} & \hat{\bf z}\\
 0 & u_y & 0 \\
 0 & 0 & k_x\,u_y

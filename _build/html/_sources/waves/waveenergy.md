@@ -132,8 +132,8 @@ u(x,\,t) = \mathrm{Re}\Big[u_0\, \exp\left(i(kx - \omega t)\right)\Big] = u_0\,\
 ```
 the energy density will be given by:
 ```{math}
-\epsilon &=&\, \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right] \\
-&=&\, \frac{1}{2}\,\rho_L\,{u_0}^2\,\sin^2\left(kx - \omega t\right)\left[c^2 k^2 + \omega^2 \right]
+\epsilon &= \frac{1}{2}\,\rho_L\,\left[c^2\left(\frac{\partial u}{\partial x} \right)^2 + \left(\frac{\partial u}{\partial t} \right)^2\right] \\
+&= \frac{1}{2}\,\rho_L\,{u_0}^2\,\sin^2\left(kx - \omega t\right)\left[c^2 k^2 + \omega^2 \right]
 ```
 and since $\omega^2 = c^2\,k^2$ for travelling waves, this simplifies to:
 ```{math}
@@ -150,13 +150,13 @@ Breakdown of a travelling wave $u(x,\,t)$ and the associated energy density $\ep
 
 Calculating the energy carried over one wavelength:
 ```{math}
-E_\lambda &=& \, \int_0^\lambda \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)\,\mathrm{d}x \\
-&=& \,  \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\int_0^\lambda \left[1 - \cos\left(2kx - 2\omega t\right)\right]\,\mathrm{d}x
+E_\lambda &= \int_0^\lambda \rho_L\,{u_0}^2\,\omega^2\,\sin^2\left(kx - \omega t\right)\,\mathrm{d}x \\
+&=  \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\int_0^\lambda \left[1 - \cos\left(2kx - 2\omega t\right)\right]\,\mathrm{d}x
 ```
 where the second step used a double angle trigonometric identity to evaluate the integral:
 ```{math}
-E_\lambda &=&\, \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left[x - \frac{1}{2k}\sin\left(2kx - 2\omega t\right)\right]_0^\lambda \\
-&=&\, \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left(\lambda - \frac{1}{2k}\sin\left(4\pi - 2\omega t\right) - 0 + \frac{1}{2k}\sin\left(- 2\omega t\right)\right)
+E_\lambda &= \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left[x - \frac{1}{2k}\sin\left(2kx - 2\omega t\right)\right]_0^\lambda \\
+&= \frac{1}{2}\rho_L\,{u_0}^2\,\omega^2\,\left(\lambda - \frac{1}{2k}\sin\left(4\pi - 2\omega t\right) - 0 + \frac{1}{2k}\sin\left(- 2\omega t\right)\right)
 ```
 and we use $k\lambda = 2\pi$ and by the cyclic nature of $\sin(x)$, these terms cancel, leaving:
 ```{math}
@@ -176,18 +176,18 @@ Our analysis shows that for travelling waves with linera dispersion relation, th
 
 Likewise the wave power here comes out to be:
 ```{math}
-P(x,\,t) &=& \, \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x = 
+P(x,\,t) &= \int \frac{\partial \epsilon}{\partial t} \,\mathrm{d}x = 
 2\rho_L\,{u_0}^2\,\omega^3\,\int\sin\left(kx - \omega t\right)\cos\left(kx - \omega t\right)\,\mathrm{d}x \\
-&=& \, \frac{1}{k}\rho_L\,{u_0}^2\,\omega^3\,\sin^2\left(kx - \omega t\right) = \rho_L\,{u_0}^2\,\omega^2\,c\,\sin^2\left(kx - \omega t\right)
+&= \frac{1}{k}\rho_L\,{u_0}^2\,\omega^3\,\sin^2\left(kx - \omega t\right) = \rho_L\,{u_0}^2\,\omega^2\,c\,\sin^2\left(kx - \omega t\right)
 ```
 Notice that this result is related to {eq}`energydensitytravelwave` by $P = c\,\epsilon$.  
 
 In order to make sense of the power however, we need to average it over the time period, which is:
 ```{math}
-\langle P \rangle_T &=&\, \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t = \frac{1}{T}\,\rho_L\,{u_0}^2\,\omega^2\,c\,\int_0^T \sin^2\left(kx - \omega t\right)\,\mathrm{d}t \\
-&=& \,  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\int_0^T \left(1 - \cos\left(2kx - 2\omega t\right)\right)\,\mathrm{d}t \\
-&=& \, \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\Big[t + \frac{1}{2\omega}\sin\left(2kx - 2\omega t\right)\Big]_0^T \\
-&=& \, \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\Big(T + \frac{1}{2\omega}\sin(2kx - 4\pi) - 0 - \frac{1}{2\omega}\sin(2kx)\Big)
+\langle P \rangle_T &= \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t = \frac{1}{T}\,\rho_L\,{u_0}^2\,\omega^2\,c\,\int_0^T \sin^2\left(kx - \omega t\right)\,\mathrm{d}t \\
+&=  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\int_0^T \left(1 - \cos\left(2kx - 2\omega t\right)\right)\,\mathrm{d}t \\
+&=  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\Big[t + \frac{1}{2\omega}\sin\left(2kx - 2\omega t\right)\Big]_0^T \\
+&=  \frac{\rho_L\,{u_0}^2\,\omega^2\,c}{2T}\,\Big(T + \frac{1}{2\omega}\sin(2kx - 4\pi) - 0 - \frac{1}{2\omega}\sin(2kx)\Big)
 ```
 where we use $\omega T = 2\pi$ and by the cyclic nature of $\cos(x)$, these terms cancel, leaving:
 ```{math}

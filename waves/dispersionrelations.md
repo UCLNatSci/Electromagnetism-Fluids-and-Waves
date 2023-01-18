@@ -119,6 +119,14 @@ This is known as the <b> group velocity </b> of the wave and describes the veloc
 envelope shape of the wave's amplitudes propagates through space and time.  We also see that this velocity is 
 dimensionally equivalent to $v_p$.
 
+We can see this effect of beats illustrate in figure {numref}`beats`.
+
+```{figure} ../figures/beats.gif
+---
+name: beats
+Two right travelling waves with slightly different frequencies/wavelengths, producing a beat wave.
+```
+
 We can extend this to two and higher dimensions using partial derivatives and the gradient operator:
 ```{math}
 \bf{v_p} &=& \,\frac{\bf \hat{k} }{|\bf{k}|}\omega \\
@@ -180,3 +188,63 @@ name: dispersionplots
 Visulisation of a the differences between phase and group velocity in the case of a power law dispersion 
 relation.  The left hand figure shows $r < 1$, the middle figure shows $r = 1$ and the right hand figure shows $r > 1$
 ```
+
+
+## Wavepackets
+Our simplest form of dispersion relation for travelling waves suggested $\omega = \pm ck$, which we can write as:
+```{math}
+u(x,\, t) &=\, \sum_{n=1}^2 u_n \exp(i(kx-\omega_n t))\\
+\omega_n &=\, (-1)^n\,ck 
+```
+where $u_n$ is a each waves amplitude.  We can generalise this by letting $u_n = u_n(k)$ and using a continuous spectrum of $k$ values with a general
+dispersion relation $\omega = \omega(k)$, therefore:
+
+```{math}
+u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k
+```
+
+We call these <b>wave packets</b>, also known sometimes as wave trains or bursts - we can picture them as a larger wave envelope, with smaller localized waves 
+that travel as one unit together, as shown in {numref}`WavePacket`.  This infinite set of oscillating waves have different wavelengths, with phases 
+and amplitudes that constructively and destructively interfereonly over different regions of space.
+
+```{figure} ../figures/WavePacket.png
+---
+name: WavePacket
+---
+Schematic of a wave packet, with localisation near the centre of the packet.
+```
+Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation, 
+the wave packet's profile may remain constant (no dispersion) or change (dispersion) while propagating. 
+
+These can help us understand the differences between group and phase velocity, as outlined in {numref}`phasegroupvelocities`
+
+```{figure} ../figures/littlewavepackets.gif
+---
+name: phasegroupvelocities
+---
+A wave packets showing key differences between group and phase velcoities.
+```
+
+### Dispersion-less wavepackets
+
+Here although the wave is a superposition of many waves, they follow a linear dispersion relation $\omega = ck$, meaning phase and group velocity are the same 
+and so the waves travel as one complete train, as seen in figure {numref}`dispersionlesswavepacket`.
+```{figure} ../figures/Wave_packet_(no_dispersion).gif
+---
+name: dispersionlesswavepacket
+---
+A wave packet moving in a dispersion-less medium.
+```
+
+### Dispersive wavepackets
+Here in addition to the wave is a superposition of many waves, they follow a non-linear dispersion relation $\omega = \omega(k)$ where phase and group velocities differ 
+and the waves travel as a train which begins to spread as it travels, as seen in figure {numref}`dispersivewavepacket`.
+```{figure} ../figures/Wave_packet_(dispersion).gif
+---
+name: dispersivewavepacket
+---
+A wave packet moving in a dispersive medium.
+```
+
+
+

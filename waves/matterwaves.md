@@ -87,33 +87,3 @@ We find this now includes the d'Alembertian operator:
 where $m_0$ is the rest mass of some relativistic particle.  
 
 This equation also becomes very useful when studying quantum fields and forms the basis of the <b>Dirac</b> equation.
-
-## Wavepackets
-Our simplest form of dispersion relation for travelling waves suggested $\omega = \pm ck$, which we can write as:
-```{math}
-u(x,\, t) &=&\, \sum_{n=1}^2 u_n \exp(i(kx-\omega_n t))\\
-\omega_n &=&\, (-1)^n\,ck 
-```
-where $u_n$ is a each waves amplitude.  We can generalise this by letting $u_n = u_n(k)$ and using a continuous spectrum of $k$ values with a general
-dispersion relation, therefore:
-
-```{math}
-u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k
-```
-
-We call these <b>wave packets</b>, also known sometimes as wave trains or bursts - we can picture them as a larger wave envelope, with smaller localized waves 
-that travel as one unit together, as shown in {numref}`WavePacket`.  This infinite set of oscillating waves have different wavelengths, with phases 
-and amplitudes that constructively and destructively interfereonly over different regions of space.
-
-```{figure} ../figures/WavePacket.png
----
-name: WavePacket
----
-Schematic of a wave packet, with localisation near the centre of the packet.
-```
-Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation, 
-the wave packet's profile may remain constant (no dispersion) or change (dispersion) while propagating. 
-
-
-
-

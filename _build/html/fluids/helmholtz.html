@@ -668,15 +668,15 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../_images/flux1.png" id="flux1"><img alt="alternative description" class="align-center" id="flux1" src="../_images/flux1.png" style="width: 274.40000000000003px; height: 345.6px;" /></a>
 <br>
 <p>Multiplying the normal component of the field by the area of the surface element gives the volume indicated by the shaded cylinder in the image below. It is a scalar quantity, which tells us the instantaneous rate of flow through the surface per unit time. Mathematically, the flow rate across the surface <span class="math notranslate nohighlight">\(S\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bdc4dc56-8c65-4626-80fe-6c8602b3cb27">
-<span class="eqno">(28.1)<a class="headerlink" href="#equation-bdc4dc56-8c65-4626-80fe-6c8602b3cb27" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1cc56b6e-f693-431d-a894-bdf9d6cc82ba">
+<span class="eqno">(28.1)<a class="headerlink" href="#equation-1cc56b6e-f693-431d-a894-bdf9d6cc82ba" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}.\underline{S}=\underline{F}.\hat{\underline{n}}S = FS\cos{\theta},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{\underline{n}}\)</span> is the unit normal to the surface.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/flux2.png" id="flux2"><img alt="alternative description" class="align-center" id="flux2" src="../_images/flux2.png" style="width: 288.0px; height: 326.40000000000003px;" /></a>
 <br>
 <p>The quantity <span class="math notranslate nohighlight">\(\underline{F}.\hat{\underline{n}}\)</span> gives the flow rate <em>per unit area</em>, which is called the flux. Integrating the flux over a given finite surface area <span class="math notranslate nohighlight">\(A\)</span> is equivalent to summing the individual surface element contributions to the flow rate, in the limit. The resulting flow rate <span class="math notranslate nohighlight">\(Q\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cd96e5af-bcf9-45dd-8d09-f7dd81b3ef78">
-<span class="eqno">(28.2)<a class="headerlink" href="#equation-cd96e5af-bcf9-45dd-8d09-f7dd81b3ef78" title="Permalink to this equation">#</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9db0f2bc-cc39-48a6-8e98-28cc0b8e08c3">
+<span class="eqno">(28.2)<a class="headerlink" href="#equation-9db0f2bc-cc39-48a6-8e98-28cc0b8e08c3" title="Permalink to this equation">#</a></span>\[\begin{equation}Q=\int_A{\underline{F}.d\underline{\mathrm{S}}}\end{equation}\]</div>
 <p>Most authors (including me!) use the terms flow rate and flux interchangeably, though flux is more pedantically defined as the flow rate per <strong>unit</strong> area. However, the intended meaning is almost always clear from the context and the surrounding text.</p>
 <p><strong>Examples</strong></p>
 <ul class="simple">
@@ -697,11 +697,11 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-divergence-thm">
 <span class="eqno">(28.3)<a class="headerlink" href="#equation-divergence-thm" title="Permalink to this equation">#</a></span>\[Q=\oint_S \underline{F}.d\underline{S} \equiv \int_V (\nabla.\underline{F})dV,\]</div>
 <p>where the <em>divergence</em> <span class="math notranslate nohighlight">\(\nabla.\underline{F}\)</span> is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2fb83a9b-bca3-432e-b5fa-a6609d4f76af">
-<span class="eqno">(28.4)<a class="headerlink" href="#equation-2fb83a9b-bca3-432e-b5fa-a6609d4f76af" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-62ed2c62-5c43-4735-85de-7c96f03e8b84">
+<span class="eqno">(28.4)<a class="headerlink" href="#equation-62ed2c62-5c43-4735-85de-7c96f03e8b84" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\biggr(\frac{\partial f_x}{\partial x},\frac{\partial f_y}{\partial y},\frac{\partial f_z}{\partial z}\biggr).\end{equation}\]</div>
 <p>By applying the Fundamental Theorem of Calculus to <a class="reference internal" href="#equation-divergence-thm">(28.3)</a>, we obtain the result</p>
-<div class="amsmath math notranslate nohighlight" id="equation-91369115-0a1d-41fe-8d71-33183cb6ff0c">
-<span class="eqno">(28.5)<a class="headerlink" href="#equation-91369115-0a1d-41fe-8d71-33183cb6ff0c" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-344cb248-8420-4ba3-b9dc-59705e9a7e0c">
+<span class="eqno">(28.5)<a class="headerlink" href="#equation-344cb248-8420-4ba3-b9dc-59705e9a7e0c" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{F}=\frac{\mathrm{d}Q}{\mathrm{d}V}=\lim_{V\rightarrow 0} \frac{\oint_S \underline{F}.d\underline{S}}{V}\end{equation}\]</div>
 <p>Hence, divergence can be understood as the flux per unit volume through an infinitesimally-small closed surface surrounding a point. A point with positive divergence behaves like a source, and a point with negative divergence behaves like a sink.</p>
 <div class="readmore admonition">
 <p class="admonition-title">See also</p>
@@ -727,11 +727,11 @@ title="Print to PDF"
 <section id="what-is-vorticity">
 <h2><span class="section-number">28.3. </span>What is <strong>vorticity</strong>?<a class="headerlink" href="#what-is-vorticity" title="Permalink to this headline">#</a></h2>
 <p>Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector <span class="math notranslate nohighlight">\((u,v,w)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f2484eeb-24b0-45a8-a33d-78876a36fcf9">
-<span class="eqno">(28.6)<a class="headerlink" href="#equation-f2484eeb-24b0-45a8-a33d-78876a36fcf9" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ffc172c3-7f8e-40ab-acd7-fea280741b58">
+<span class="eqno">(28.6)<a class="headerlink" href="#equation-ffc172c3-7f8e-40ab-acd7-fea280741b58" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega} = \nabla\times\underline{u}=\left(\frac{\partial w}{\partial y}-\frac{\partial v}{\partial z}\right)\underline{e}_x,+\left(\frac{\partial u}{\partial z}-\frac{\partial w}{\partial x}\right)\underline{e}_y+\left(\frac{\partial v}{\partial x}-\frac{\partial u}{\partial y}\right)\underline{e}_z\end{equation}\]</div>
 <p>An illustrated interpretation of vorticity is given below, looking only at the <span class="math notranslate nohighlight">\(z\)</span>-component for simplicity. Note that the subscript notation used on the diagram represents partial differentiation, not a vector component. We consider two fluid line elements <span class="math notranslate nohighlight">\(AB\)</span> and <span class="math notranslate nohighlight">\(AC\)</span>, which are aligned with the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes, respectively. By the definition of the partial derivative, we can write</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c9baa08-e4b6-4288-8b7a-39d9ffef7da3">
-<span class="eqno">(28.7)<a class="headerlink" href="#equation-2c9baa08-e4b6-4288-8b7a-39d9ffef7da3" title="Permalink to this equation">#</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e43252d9-4f55-4838-a1c9-ead072d5458d">
+<span class="eqno">(28.7)<a class="headerlink" href="#equation-e43252d9-4f55-4838-a1c9-ead072d5458d" title="Permalink to this equation">#</a></span>\[\begin{equation}v(x+\delta x,y,z,t)-v(x,y,z,t)=\frac{\partial v}{\partial x}\delta x\end{equation}\]</div>
 <p>so</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\partial v}{\partial x}\)</span> represents the instantaneous angular velocity of the fluid line element <span class="math notranslate nohighlight">\(AB\)</span></p></li>
@@ -766,9 +766,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3931781965.py:8: RuntimeWarning: divide by zero encountered in sqrt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3931781965.py:8: RuntimeWarning: divide by zero encountered in sqrt
   (U,V)=(Y**(1/2),0)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3931781965.py:8: RuntimeWarning: invalid value encountered in sqrt
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3931781965.py:8: RuntimeWarning: invalid value encountered in sqrt
   (U,V)=(Y**(1/2),0)
 </pre></div>
 </div>
@@ -918,8 +918,8 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2065: Runtim
 </div>
 </div>
 <p>The vorticity of this flow is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a5c0784d-cf2c-4296-9618-3ab942aed051">
-<span class="eqno">(28.8)<a class="headerlink" href="#equation-a5c0784d-cf2c-4296-9618-3ab942aed051" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-466936ec-1808-4b1a-90c9-6c950917373c">
+<span class="eqno">(28.8)<a class="headerlink" href="#equation-466936ec-1808-4b1a-90c9-6c950917373c" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{\omega}=\begin{vmatrix}\underline{e}_x &amp;\underline{e}_y &amp;\underline{e}_z\\\frac{\partial}{\partial x}&amp;\frac{\partial}{\partial y}&amp;\frac{\partial}{\partial z}\\ \sqrt{y}&amp; 0 &amp; 0\end{vmatrix}=\left(0,0,-\frac{1}{2\sqrt{y}}\right)\end{equation}\]</div>
 <p>We see that the fluid elements rotate about the <span class="math notranslate nohighlight">\(z\)</span> axis. The negative sign indicates that the particles rotate in a clockwise direction, which agrees with intuition.</p>
 <p><strong>Example 2: Line vortex (‘potential vortex’)</strong></p>
 <p>Consider a flow described in cylindrical polars <span class="math notranslate nohighlight">\((r,\theta,z)\)</span>, by the velocity profile <span class="math notranslate nohighlight">\(\underline{u}=\left(0,\frac{k}{r},0\right)\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is a positive constant.</p>
@@ -949,41 +949,41 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\axes\_base.py:2065: Runtim
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:9: RuntimeWarning: divide by zero encountered in true_divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:9: RuntimeWarning: divide by zero encountered in true_divide
   dr,dt = 0,k/R
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:9: RuntimeWarning: invalid value encountered in true_divide
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:9: RuntimeWarning: invalid value encountered in true_divide
   dr,dt = 0,k/R
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in cos
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: divide by zero encountered in cos
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in cos
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: invalid value encountered in cos
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in multiply
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: divide by zero encountered in multiply
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in multiply
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: invalid value encountered in multiply
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in sin
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: divide by zero encountered in sin
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in sin
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: invalid value encountered in sin
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: divide by zero encountered in subtract
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: divide by zero encountered in subtract
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:11: RuntimeWarning: invalid value encountered in subtract
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:11: RuntimeWarning: invalid value encountered in subtract
   U=dr * np.cos(T) - dt * np.sin(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in sin
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: divide by zero encountered in sin
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in sin
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: invalid value encountered in sin
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in multiply
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: divide by zero encountered in multiply
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in multiply
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: invalid value encountered in multiply
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in cos
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: divide by zero encountered in cos
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in cos
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: invalid value encountered in cos
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: divide by zero encountered in add
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: divide by zero encountered in add
   V=dr * np.sin(T) + dt * np.cos(T)
-C:\Users\alimo\AppData\Local\Temp/ipykernel_12732/3935501375.py:12: RuntimeWarning: invalid value encountered in add
+C:\Users\alimo\AppData\Local\Temp/ipykernel_9312/3935501375.py:12: RuntimeWarning: invalid value encountered in add
   V=dr * np.sin(T) + dt * np.cos(T)
 C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:789: RuntimeWarning: divide by zero encountered in deg2rad
   self._default_rlabel_position = np.deg2rad(rlabel_position)
@@ -1468,15 +1468,15 @@ C:\Users\alimo\anaconda3\lib\site-packages\matplotlib\projections\polar.py:971: 
 </div>
 </div>
 <p>The vorticity is zero, meaning that fluid particles are swept round the origin without local rotation. To show this, we have to use the result for the gradient in cylindrical polars:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-838770f1-8e9c-4f7e-86f1-afb6912d07c6">
-<span class="eqno">(28.9)<a class="headerlink" href="#equation-838770f1-8e9c-4f7e-86f1-afb6912d07c6" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-447512bc-f25a-4a58-ab81-e29da4fdd64b">
+<span class="eqno">(28.9)<a class="headerlink" href="#equation-447512bc-f25a-4a58-ab81-e29da4fdd64b" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla\times \underline{u}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ u_{r}&amp;r u_{\theta} &amp; u_z\end{vmatrix}=\frac{1}{r}\begin{vmatrix}\underline{e}_{r} &amp; r\underline{e}_{\theta}&amp; \underline{e}_z\\\frac{\partial }{\partial r}&amp;\frac{\partial}{\partial \theta}&amp;\frac{\partial}{\partial z}\\ 0&amp;k &amp; 0\end{vmatrix}=\underline{0}\end{equation}\]</div>
 <p>The surprising result occurs in this example because the slowing down of the fluid away from the origin is just the right strength to create a rotational shear that counterbalances the angular rotation of the fluid.</p>
 </section>
 <section id="helmhotz-decomposition">
 <h2><span class="section-number">28.4. </span>Helmhotz decomposition<a class="headerlink" href="#helmhotz-decomposition" title="Permalink to this headline">#</a></h2>
 <p>The Helmholtz decomposition theorem is also known as the <strong>Fundamental Theorem of Vector Calculus</strong>. It states that any vector field that is smooth, defined everywhere in space and vanishes at infinity together with its first derivatives can be decomposed as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-682310fc-c95b-4324-86ea-53167a409918">
-<span class="eqno">(28.10)<a class="headerlink" href="#equation-682310fc-c95b-4324-86ea-53167a409918" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0f3c538a-fccc-479a-9b06-068189e08ea7">
+<span class="eqno">(28.10)<a class="headerlink" href="#equation-0f3c538a-fccc-479a-9b06-068189e08ea7" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}\]</div>
 <p>The first term is irrotational (curl-free) from the vector identity “curlgrad=<span class="math notranslate nohighlight">\(\underline{0}\)</span>”
 The second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.</p>
 <p>We will not prove this result, but we will use it to simplify the equations of motion in some scenarios. The full version of Helmholtz’ theorem also tells us how to calculate <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\underline{A}\)</span>, but we will not need those results.</p>
