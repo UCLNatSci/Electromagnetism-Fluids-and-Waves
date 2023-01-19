@@ -702,7 +702,13 @@ an infinitesimal difference <span class="math notranslate nohighlight">\(\mathrm
 <p>This is known as the <b> group velocity </b> of the wave and describes the velocity with which the overall
 envelope shape of the wave’s amplitudes propagates through space and time.  We also see that this velocity is
 dimensionally equivalent to <span class="math notranslate nohighlight">\(v_p\)</span>.</p>
-<p>We can see this effect of beats illustrate in figure <a class="reference internal" href="#beats"><span class="std std-numref">Fig. 7.2</span></a>.</p>
+<p>We can see this effect of beats illustrated in figure <a class="reference internal" href="#beats2"><span class="std std-numref">Fig. 7.3</span></a>.</p>
+<figure class="align-default" id="beats2">
+<img alt="../_images/beats.gif" src="../_images/beats.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">Two right travelling waves with slightly different frequencies/wavelengths, producing a beat wave.</span><a class="headerlink" href="#beats2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>We can extend this to two and higher dimensions using partial derivatives and the gradient operator:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\bf{v_p} &amp;=&amp; \,\frac{\bf \hat{k} }{|\bf{k}|}\omega \\
@@ -722,8 +728,8 @@ v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = c\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\omega = A k^{r}\]</div>
 <p>where <span class="math notranslate nohighlight">\(A\)</span> is a constant that has units of <span class="math notranslate nohighlight">\([A] = s^{-1}\,m^{r}\)</span> and <span class="math notranslate nohighlight">\(r\)</span> is some constant exponent to be chosen.</p>
-<p>There will be three regimes of <span class="math notranslate nohighlight">\(r\)</span> values of interest:</p>
-<p>1. <span class="math notranslate nohighlight">\(r &lt; 1\)</span></p>
+<p>There will be different regimes of <span class="math notranslate nohighlight">\(r\)</span> values of interest:</p>
+<p>1. <span class="math notranslate nohighlight">\(0 &lt; r &lt; 1\)</span></p>
 <p>This is non-linear dispersion relation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}v_p &amp;=  \frac{\omega}{k} = Ak^{r-1} \\
@@ -743,12 +749,28 @@ v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = A\end{split}\]</div>
 v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = Ark^{r-1}\end{split}\]</div>
 <p>and since <span class="math notranslate nohighlight">\(r&gt;1\)</span>, <span class="math notranslate nohighlight">\(v_g &gt; v_p\)</span>, which means that the wave envelope is moving faster than the individual parts of the
 wave.</p>
-<p>We can see these cases summarised in <a class="reference internal" href="#dispersionplots"><span class="std std-numref">Fig. 7.3</span></a>.</p>
+<p>We can see these cases summarised in <a class="reference internal" href="#dispersionplots"><span class="std std-numref">Fig. 7.4</span></a>.</p>
 <figure class="align-default" id="dispersionplots">
 <img alt="../_images/omegakdispersionplot.png" src="../_images/omegakdispersionplot.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">Visulisation of a the differences between phase and group velocity in the case of a power law dispersion
-relation.  The left hand figure shows <span class="math notranslate nohighlight">\(r &lt; 1\)</span>, the middle figure shows <span class="math notranslate nohighlight">\(r = 1\)</span> and the right hand figure shows <span class="math notranslate nohighlight">\(r &gt; 1\)</span></span><a class="headerlink" href="#dispersionplots" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Visualisation of the differences between phase and group velocity in the case of a power law dispersion
+relation.  The left hand figure shows <span class="math notranslate nohighlight">\(r &lt; 1\)</span>, the middle figure shows <span class="math notranslate nohighlight">\(r = 1\)</span> and the right hand figure shows <span class="math notranslate nohighlight">\(r &gt; 1\)</span>.</span><a class="headerlink" href="#dispersionplots" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>What about more radical choices of dispersion relation, we could even make this some kind of inverse relationship:</p>
+<p>4. <span class="math notranslate nohighlight">\(r &lt; 0\)</span>,</p>
+<p>Here lets say <span class="math notranslate nohighlight">\(\displaystyle A = \frac{A}{k^{r}}\)</span>, then:
+Here lets say <span class="math notranslate nohighlight">\(\displaystyle A = \frac{A}{k^{r}}\)</span>, then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_p &amp;=  \frac{\omega}{k} = \frac{A}{k^{r+1}} \\
+v_g &amp;= \frac{\mathrm{d}\omega}{\mathrm{d}k} = -\frac{Ar}{k^{r+1}} \end{split}\]</div>
+<p>i.e. <span class="math notranslate nohighlight">\(v_g = -r v_p\)</span>, which is quite dramatic, it suggests that the wave envelope is moving in the opposite direction to the
+individual parts of the wave!  We can illustrate this in an <span class="math notranslate nohighlight">\(\omega-k\)</span> plot in <a class="reference internal" href="#inverseomegk"><span class="std std-numref">Fig. 7.5</span></a>.</p>
+<figure class="align-default" id="inverseomegk">
+<img alt="../_images/inverseomegak.png" src="../_images/inverseomegak.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7.5 </span><span class="caption-text">Visualisation of the differences between phase and group velocity in the case of a power law dispersion
+relation <span class="math notranslate nohighlight">\(\displaystyle \omega = \frac{A}{k^r}\)</span>.  Note that this shows <span class="math notranslate nohighlight">\(v_g = -r v_p\)</span>.</span><a class="headerlink" href="#inverseomegk" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -763,42 +785,42 @@ dispersion relation <span class="math notranslate nohighlight">\(\omega = \omega
 <div class="math notranslate nohighlight">
 \[u(x,\, t) = \int^{\infty}_{-\infty} A(k) \,\exp(i(kx-\omega(k)t))\,\mathrm{d} k\]</div>
 <p>We call these <b>wave packets</b>, also known sometimes as wave trains or bursts - we can picture them as a larger wave envelope, with smaller localized waves
-that travel as one unit together, as shown in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 7.4</span></a>.  This infinite set of oscillating waves have different wavelengths, with phases
+that travel as one unit together, as shown in <a class="reference internal" href="#wavepacket"><span class="std std-numref">Fig. 7.6</span></a>.  This infinite set of oscillating waves have different wavelengths, with phases
 and amplitudes that constructively and destructively interfereonly over different regions of space.</p>
 <figure class="align-default" id="wavepacket">
 <img alt="../_images/WavePacket.png" src="../_images/WavePacket.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Schematic of a wave packet, with localisation near the centre of the packet.</span><a class="headerlink" href="#wavepacket" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.6 </span><span class="caption-text">Schematic of a wave packet, with localisation near the centre of the packet.</span><a class="headerlink" href="#wavepacket" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Each component wave here is a solution of a wave equation and so the entire wave packet is.  Depending on the wave equation,
 the wave packet’s profile may remain constant (no dispersion) or change (dispersion) while propagating.</p>
-<p>These can help us understand the differences between group and phase velocity, as outlined in <a class="reference internal" href="#phasegroupvelocities"><span class="std std-numref">Fig. 7.5</span></a></p>
+<p>These can help us understand the differences between group and phase velocity, as outlined in <a class="reference internal" href="#phasegroupvelocities"><span class="std std-numref">Fig. 7.7</span></a></p>
 <figure class="align-default" id="phasegroupvelocities">
 <img alt="../_images/littlewavepackets.gif" src="../_images/littlewavepackets.gif" />
 <figcaption>
-<p><span class="caption-number">Fig. 7.5 </span><span class="caption-text">A wave packets showing key differences between group and phase velcoities.</span><a class="headerlink" href="#phasegroupvelocities" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text">A wave packets showing key differences between group and phase velcoities.</span><a class="headerlink" href="#phasegroupvelocities" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="dispersion-less-wavepackets">
 <h3><span class="section-number">7.4.1. </span>Dispersion-less wavepackets<a class="headerlink" href="#dispersion-less-wavepackets" title="Permalink to this headline">#</a></h3>
 <p>Here although the wave is a superposition of many waves, they follow a linear dispersion relation <span class="math notranslate nohighlight">\(\omega = ck\)</span>, meaning phase and group velocity are the same
-and so the waves travel as one complete train, as seen in figure <a class="reference internal" href="#dispersionlesswavepacket"><span class="std std-numref">Fig. 7.6</span></a>.</p>
+and so the waves travel as one complete train, as seen in figure <a class="reference internal" href="#dispersionlesswavepacket"><span class="std std-numref">Fig. 7.8</span></a>.</p>
 <figure class="align-default" id="dispersionlesswavepacket">
 <img alt="../_images/Wave_packet_(no_dispersion).gif" src="../_images/Wave_packet_(no_dispersion).gif" />
 <figcaption>
-<p><span class="caption-number">Fig. 7.6 </span><span class="caption-text">A wave packet moving in a dispersion-less medium.</span><a class="headerlink" href="#dispersionlesswavepacket" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.8 </span><span class="caption-text">A wave packet moving in a dispersion-less medium.</span><a class="headerlink" href="#dispersionlesswavepacket" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="dispersive-wavepackets">
 <h3><span class="section-number">7.4.2. </span>Dispersive wavepackets<a class="headerlink" href="#dispersive-wavepackets" title="Permalink to this headline">#</a></h3>
 <p>Here in addition to the wave is a superposition of many waves, they follow a non-linear dispersion relation <span class="math notranslate nohighlight">\(\omega = \omega(k)\)</span> where phase and group velocities differ
-and the waves travel as a train which begins to spread as it travels, as seen in figure <a class="reference internal" href="#dispersivewavepacket"><span class="std std-numref">Fig. 7.7</span></a>.</p>
+and the waves travel as a train which begins to spread as it travels, as seen in figure <a class="reference internal" href="#dispersivewavepacket"><span class="std std-numref">Fig. 7.9</span></a>.</p>
 <figure class="align-default" id="dispersivewavepacket">
 <img alt="../_images/Wave_packet_(dispersion).gif" src="../_images/Wave_packet_(dispersion).gif" />
 <figcaption>
-<p><span class="caption-number">Fig. 7.7 </span><span class="caption-text">A wave packet moving in a dispersive medium.</span><a class="headerlink" href="#dispersivewavepacket" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7.9 </span><span class="caption-text">A wave packet moving in a dispersive medium.</span><a class="headerlink" href="#dispersivewavepacket" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

@@ -119,11 +119,12 @@ This is known as the <b> group velocity </b> of the wave and describes the veloc
 envelope shape of the wave's amplitudes propagates through space and time.  We also see that this velocity is 
 dimensionally equivalent to $v_p$.
 
-We can see this effect of beats illustrate in figure {numref}`beats`.
+We can see this effect of beats illustrated in figure {numref}`beats2`.
 
 ```{figure} ../figures/beats.gif
 ---
-name: beats
+name: beats2
+---
 Two right travelling waves with slightly different frequencies/wavelengths, producing a beat wave.
 ```
 
@@ -149,9 +150,9 @@ However once we look at non-linear $\omega(k)$ then the picture changes.  Lets l
 ```
 where $A$ is a constant that has units of $[A] = s^{-1}\,m^{r}$ and $r$ is some constant exponent to be chosen.
 
-There will be three regimes of $r$ values of interest:
+There will be different regimes of $r$ values of interest:
 
-1\. $r < 1$
+1\. $0 < r < 1$
 
 This is non-linear dispersion relation:
 ```{math}
@@ -185,10 +186,29 @@ We can see these cases summarised in {numref}`dispersionplots`.
 ---
 name: dispersionplots
 ---
-Visulisation of a the differences between phase and group velocity in the case of a power law dispersion 
-relation.  The left hand figure shows $r < 1$, the middle figure shows $r = 1$ and the right hand figure shows $r > 1$
+Visualisation of the differences between phase and group velocity in the case of a power law dispersion 
+relation.  The left hand figure shows $r < 1$, the middle figure shows $r = 1$ and the right hand figure shows $r > 1$.
 ```
+What about more radical choices of dispersion relation, we could even make this some kind of inverse relationship:
 
+4\. $r < 0$, 
+
+Here lets say $\displaystyle A = \frac{A}{k^{r}}$, then:
+Here lets say $\displaystyle A = \frac{A}{k^{r}}$, then:
+```{math}
+v_p &=  \frac{\omega}{k} = \frac{A}{k^{r+1}} \\
+v_g &= \frac{\mathrm{d}\omega}{\mathrm{d}k} = -\frac{Ar}{k^{r+1}} 
+```
+i.e. $v_g = -r v_p$, which is quite dramatic, it suggests that the wave envelope is moving in the opposite direction to the 
+individual parts of the wave!  We can illustrate this in an $\omega-k$ plot in {numref}`inverseomegk`.
+
+```{figure} ../figures/inverseomegak.png
+---
+name: inverseomegk
+---
+Visualisation of the differences between phase and group velocity in the case of a power law dispersion 
+relation $\displaystyle \omega = \frac{A}{k^r}$.  Note that this shows $v_g = -r v_p$.
+```
 
 ## Wavepackets
 Our simplest form of dispersion relation for travelling waves suggested $\omega = \pm ck$, which we can write as:

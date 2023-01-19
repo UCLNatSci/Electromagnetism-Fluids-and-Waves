@@ -168,11 +168,11 @@ Which suggests $E_\lambda \propto {u_0}^2$, which is a key result.
 Also note that if we did the same analysis with a left travelling wave $u = u_0\,\exp(i(|k|x + |\omega|\,t))$, the result of Equation {eq}`energydensitytravelwave` 
 would be the same.
 
-Our analysis shows that for travelling waves with linera dispersion relation, the expression for $\epsilon$ can be simplifed:
+Our analysis shows that for travelling waves with linear dispersion relation, the expression for $\epsilon$ can be simplifed:
 ```{math}
 \epsilon = \rho_L\,c^2\,\left(\frac{\partial u}{\partial x} \right)^2 = \rho_L\,\left(\frac{\partial u}{\partial t} \right)^2
 ```
-* Note - this is not true for other types of waves!*  
+**Note** - this is simplified expression not true for waves with non-linear dispersion relations.
 
 Likewise the wave power here comes out to be:
 ```{math}

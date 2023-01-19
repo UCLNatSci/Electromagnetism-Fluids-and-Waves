@@ -10,7 +10,9 @@ Effects on sound emitted by a moving source (here an ambulances siren) depending
 from an observer.
 ```
 We start with a source frequency/time period $f_{source} = 1/T_{source}$, source wavelength of $\lambda_{source}$, wave velocity in the 
-transmission medium $v$ and source velocity of $v_s$ with respect to the observer.  This relative motion gives rise to two complementary effects:
+transmission medium $v$ and source velocity of $v_s$ with respect to the observer.  
+
+Depending on how this relative motion  is set up, we can 
 
   
 - Wave source <b>receding</b> from an observer, 
