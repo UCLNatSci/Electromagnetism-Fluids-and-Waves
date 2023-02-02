@@ -521,13 +521,30 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#superposition-of-charges">
+   15.2. Superposition of charges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#infinitesimal-coulombs-law">
+   15.3. Infinitesimal Coulombs law
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rectilinear-rod">
+     15.3.1. Rectilinear Rod
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gausss-law">
-   15.2. Gauss’s Law
+   15.4. Gauss’s law
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gravitational-analogue">
-   15.3. Gravitational Analogue
+   15.5. Gravitational Analogue
   </a>
  </li>
 </ul>
@@ -555,13 +572,30 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#superposition-of-charges">
+   15.2. Superposition of charges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#infinitesimal-coulombs-law">
+   15.3. Infinitesimal Coulombs law
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rectilinear-rod">
+     15.3.1. Rectilinear Rod
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gausss-law">
-   15.2. Gauss’s Law
+   15.4. Gauss’s law
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gravitational-analogue">
-   15.3. Gravitational Analogue
+   15.5. Gravitational Analogue
   </a>
  </li>
 </ul>
@@ -586,7 +620,7 @@ charges <span class="math notranslate nohighlight">\(Q_i\)</span>, <span class="
 so we can write the force acting on <span class="math notranslate nohighlight">\(Q_2({\bf r}_2)\)</span> due to <span class="math notranslate nohighlight">\(Q_1({\bf r}_1)\)</span> as:</p>
 <div class="math notranslate nohighlight">
 \[{\bf F}_{12} = \frac{Q_1\,Q_2}{4\,\pi\,\epsilon_0}\frac{1}{|{\bf r}_1 - {\bf r}_2|^2}\,\hat{{\bf r}}_{12}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{{\bf{r}}_{12}\)</span> is a normalised vector that points from <span class="math notranslate nohighlight">\(Q_1({\bf r}_1) \rightarrow Q_2({\bf r}_2)\)</span>.  This force is related
+<p>where <span class="math notranslate nohighlight">\(\hat{\bf r}_{12}\)</span> is a normalised vector that points from <span class="math notranslate nohighlight">\(Q_1({\bf r}_1) \rightarrow Q_2({\bf r}_2)\)</span>.  This force is related
 directly to the size of the charges and to the inverse square of the distance between them.  We can define the <b>Electric Field </b>
 as the force per unit charge, in this case we can find the electric field due to the charge <span class="math notranslate nohighlight">\(Q_1\)</span> measured at <span class="math notranslate nohighlight">\({\bf r}_2\)</span> as:</p>
 <div class="math notranslate nohighlight" id="equation-efieldcharge">
@@ -604,14 +638,101 @@ and in the direction a positive charge would follow (here outwards as like charg
 <p>These are all very sound ideas that we have no doubt learnt before, the question is whilst Coulombs law is a very effective tool to empirically
 describe electric fields from point charges, where does is arrive from? Will it work in more complicated situations?</p>
 </section>
+<section id="superposition-of-charges">
+<h2><span class="section-number">15.2. </span>Superposition of charges<a class="headerlink" href="#superposition-of-charges" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="infinitesimal-coulombs-law">
+<h2><span class="section-number">15.3. </span>Infinitesimal Coulombs law<a class="headerlink" href="#infinitesimal-coulombs-law" title="Permalink to this headline">#</a></h2>
+<p>Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in <a class="reference internal" href="#semicirculararcofcharge"><span class="std std-numref">Fig. 15.2</span></a></p>
+<figure class="align-default" id="semicirculararcofcharge">
+<img alt="../_images/SemiCircularArcofCharge.png" src="../_images/SemiCircularArcofCharge.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.2 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, arranged in a semicircular arc of length <span class="math notranslate nohighlight">\(L\)</span> and centered on the origin.</span><a class="headerlink" href="#semicirculararcofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>What are the symmetries of this semicircular system? Well if we consider a section of the arc, it will carry a charge <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> which we can rewrite as
+<span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \mathrm{d} \ell\)</span>.  Given that for a circular arc <span class="math notranslate nohighlight">\(\ell = r \theta\)</span> and since <span class="math notranslate nohighlight">\(L = \pi r\)</span>, therefore</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} Q = \frac{\lambda\,L}{\pi} \mathrm{d} \theta\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is an angle that moves round the arc, as we define in <a class="reference internal" href="#angulararcofcharge"><span class="std std-numref">Fig. 15.3</span></a>.</p>
+<figure class="align-default" id="angulararcofcharge">
+<img alt="../_images/SemiCircularArcofCharge2.png" src="../_images/SemiCircularArcofCharge2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.3 </span><span class="caption-text">Semicircular arc of charges, centered on the origin, with charge element <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span>, length <span class="math notranslate nohighlight">\(L\)</span>, radius <span class="math notranslate nohighlight">\(r\)</span> and angle <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#angulararcofcharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Clearly now we want to integrate over all the charges <span class="math notranslate nohighlight">\(\mathrm{d}Q\)</span> which will involve integrating over all angles <span class="math notranslate nohighlight">\(\mathrm{d} \theta\)</span>.  Since we are treating
+these infitesimal charge elements as point charges, the magnitude of the electric field has the form:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} E = \frac{\mathrm{d}Q}{4 \pi\,\epsilon_0\,r^2} = \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2}\]</div>
+<p>The direction of the field components however will change depending on whereabouts along the ring we are, clearly are <span class="math notranslate nohighlight">\(\theta = 0\)</span>, the field is directed along the <span class="math notranslate nohighlight">\(x\)</span>-axis only:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d}{\bf E}_{\theta = 0} = \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf i} + 0 \,\hat{\bf j}\]</div>
+<p>Whilst if we examine the field at <span class="math notranslate nohighlight">\(\theta = -\pi/2\)</span> and <span class="math notranslate nohighlight">\(\theta = \pi/2\)</span>, we notice that the electric field will be aligned in the positive and negative <span class="math notranslate nohighlight">\(y\)</span>-axis directions (respectively):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf E}_{\theta = -\pi/2} &amp;=&amp;\, 0 \,\hat{\bf i} + \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \\
+\mathrm{d}{\bf E}_{\theta =\pi/2} &amp;=&amp;\, 0 \,\hat{\bf i} - \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \end{split}\]</div>
+<p>In fact we see that there will always be a cancellation of the <span class="math notranslate nohighlight">\(y\)</span> components of the electric field from the arc, we can always pair up the components over
+<span class="math notranslate nohighlight">\(-\pi/2 \leq \theta \leq \pi/2\)</span>, this leaves just the <span class="math notranslate nohighlight">\(x\)</span> components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}{\bf E}_{\theta} &amp;=&amp;\, \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \Big[ \cos(\theta) \,\hat{\bf i} + \sin(\theta) \,\hat{\bf j} \Big] \\
+\int_0^{\bf E} \mathrm{d}{\bf E}_{\theta} &amp;=&amp;\,  \frac{\pi}{4\,\epsilon_0\,L^2} \frac{\lambda\,L}{\pi} \int_{-\pi/2}^{\pi/2} \Big(\cos(\theta)\,\hat{\bf i} + 
+\sin(\theta)\,\hat{\bf j} \Big)\,\mathrm{d} \theta\\
+{\bf E} &amp;=&amp;\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}\end{split}\]</div>
+<section id="rectilinear-rod">
+<h3><span class="section-number">15.3.1. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this headline">#</a></h3>
+<p>Lets return to the rod in <a class="reference internal" href="solvingEsystems.html#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, we can set this system up in <a class="reference internal" href="#finitelineofcharge2"><span class="std std-numref">Fig. 15.4</span></a>, trying to make the rod as symmetric as possible:</p>
+<figure class="align-default" id="finitelineofcharge2">
+<img alt="../_images/FiniteLineOfCharges3.png" src="../_images/FiniteLineOfCharges3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.4 </span><span class="caption-text">An finite line of charges, with charge density <span class="math notranslate nohighlight">\(\lambda\)</span>, with length <span class="math notranslate nohighlight">\(L\)</span>, symmetrically aligned over the <span class="math notranslate nohighlight">\(x\)</span> axis. We pick out an element of charge indicated
+in red, so here <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \,\mathrm{d} x\)</span>.</span><a class="headerlink" href="#finitelineofcharge2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>With a line of charge, of length <span class="math notranslate nohighlight">\(L\)</span>, aligned along the <span class="math notranslate nohighlight">\(x\)</span> axis, we can look at a point at a distance <span class="math notranslate nohighlight">\(R\)</span> away, aligned halfway along the rod.  Once again we can break up this
+line of charge into infinitesimal chunks, each contributing <span class="math notranslate nohighlight">\(\mathrm{d} Q\)</span> charge and then the overall electric field will be found by superposition.  The magnitude of the electric
+field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod appears to be given by:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} E = \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\]</div>
+<p>where the length <span class="math notranslate nohighlight">\(r\)</span> can take values between <span class="math notranslate nohighlight">\(R \leq r \leq \sqrt{R^2 + L^2 / 4}\)</span>.</p>
+<p>In this system, we find that at <span class="math notranslate nohighlight">\(x = 0\)</span>, the electric field is only aligned in the <span class="math notranslate nohighlight">\(y\)</span> direction:</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{d} {\bf E}_{x = L/2} = 0\,\hat{\bf i} + \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,R^2}\,\hat{\bf j}\]</div>
+<p>whereas the <span class="math notranslate nohighlight">\(x\)</span> components of the electric field for all the lengths at <span class="math notranslate nohighlight">\(-L/2 \leq x &lt; 0\)</span> and <span class="math notranslate nohighlight">\(0 &gt; x \leq L/2\)</span> will pair up, to cancel out, leaving only the <span class="math notranslate nohighlight">\(y\)</span> components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d} {\bf E} &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2} \Big (\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Big)\\
+\int_0^{\bf E} \mathrm{d} {\bf E}' &amp;=&amp;\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
+{\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x \end{split}\]</div>
+<p>Where we have used the substitutions <span class="math notranslate nohighlight">\(\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{x^2 + R^2}\)</span>.  We can also use the substitution
+<span class="math notranslate nohighlight">\(x = R\,\tan(\theta) \Rightarrow \mathrm{d}x = R\,\sec^2(\theta)\)</span> to find:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{\bf E} &amp;=&amp;\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
+\frac{R}{R^3\,\sec^3(\theta)}\,\hat{\bf j}\Big) R\,\sec^2(\theta)\,\mathrm{d} \theta \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \int_{x = -L/2}^{x = L/2}\Bigg(\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Bigg)\,\mathrm{d} \theta \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\cos(\theta)\,\hat{\bf i} + \sin(\theta)\,\hat{\bf j}\Big]_{x = -L/2}^{x = L/2} \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\frac{R}{(x^2 + R^2)^{1/2}}\,\hat{\bf i} + \frac{x}{(x^2 + R^2)^{1/2}}\,\hat{\bf j}\Big]_{-L/2}^{L/2} \\
+ &amp;=&amp;\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big( 0 \,\hat{\bf i} + \frac{L}{(L^2/4 + R^2)^{1/2}}\,\hat{\bf j}\Big) \end{split}\]</div>
+<p>Which results in:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E} = \frac{\lambda\,L }{4\pi \,\epsilon_0\,R\,\sqrt{L^2/4 + R^2}}\,\hat{\bf j}\]</div>
+<p>Notice that in the limit of <span class="math notranslate nohighlight">\(L \gg 1\)</span>, this would look like:</p>
+<div class="math notranslate nohighlight">
+\[{\bf E} \rightarrow \frac{\lambda}{2\pi \,\epsilon_0\,R}\,\hat{\bf j}\]</div>
+<p>which is essentially the result for the infinite line of charge in Equation <a class="reference internal" href="solvingEsystems.html#equation-infinitechargelineefield">(16.1)</a>.</p>
+<p>We note therefore that the relevant expression for the magnitude of the electric field at a distance <span class="math notranslate nohighlight">\(R\)</span> from the rod is found from just the <span class="math notranslate nohighlight">\(y\)</span> component:</p>
+<div class="math notranslate nohighlight" id="equation-efieldwire">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-efieldwire" title="Permalink to this equation">#</a></span>\[\begin{split}\mathrm{d} E &amp;=&amp;\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+\Rightarrow E &amp;=&amp;\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\,\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Bigg[\frac{x}{\sqrt{x^2+R^2}}\Bigg]_{rod}\end{split}\]</div>
+</section>
+</section>
 <section id="gausss-law">
-<h2><span class="section-number">15.2. </span>Gauss’s Law<a class="headerlink" href="#gausss-law" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4. </span>Gauss’s law<a class="headerlink" href="#gausss-law" title="Permalink to this headline">#</a></h2>
 <p>Lets now look at electric fields from the point of view of an a containing surface and flux crossing the surface boundary.  Starting with a charge
-<span class="math notranslate nohighlight">\(Q\)</span>, we can surround this in three dimensions by a sphere, as seen in Figure <a class="reference internal" href="#efieldflux"><span class="std std-numref">Fig. 15.2</span></a>.</p>
+<span class="math notranslate nohighlight">\(Q\)</span>, we can surround this in three dimensions by a sphere, as seen in Figure <a class="reference internal" href="#efieldflux"><span class="std std-numref">Fig. 15.5</span></a>.</p>
 <figure class="align-default" id="efieldflux">
 <img alt="../_images/EFieldFlux2.png" src="../_images/EFieldFlux2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 15.2 </span><span class="caption-text">Flux of the electric field from a point charge <span class="math notranslate nohighlight">\(+q\)</span> passing through a spherical surface.</span><a class="headerlink" href="#efieldflux" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15.5 </span><span class="caption-text">Flux of the electric field from a point charge <span class="math notranslate nohighlight">\(+q\)</span> passing through a spherical surface.</span><a class="headerlink" href="#efieldflux" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Now we have field lines perpendicular to the surface, here a sphere, so a similar situation to hose pipe and the water.  But now we have
@@ -644,7 +765,7 @@ whether a charge is on our left or right hand side does not charge the force fel
 <p>Calculating <span class="math notranslate nohighlight">\(\iint {\bf E}\cdot \mathrm{d} {\bf A}\)</span> is straightforward on a sphere:</p>
 <div class="math notranslate nohighlight">
 \[\iint E_r\, \mathrm{d} A_r = \iint E_r \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi\]</div>
-<p>Since <span class="math notranslate nohighlight">\(E_r\)</span> only has <span class="math notranslate nohighlight">\(r\)</span> dep[endence, we can factorise this out of the integral:</p>
+<p>Since <span class="math notranslate nohighlight">\(E_r\)</span> only has <span class="math notranslate nohighlight">\(r\)</span> dependence, we can factorise this out of the integral:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}E_r \iint  \,r^2 \,\sin \theta\, \mathrm{d} \theta \,\mathrm{d} \phi = E_r(4 \pi\,r^2) &amp;=&amp;\, kQ \\
 \Rightarrow E_r &amp;=&amp;\, \frac{kQ}{4\pi\,r^2}\end{split}\]</div>
@@ -654,7 +775,7 @@ whether a charge is on our left or right hand side does not charge the force fel
 <p>Comparing this result with Coulomb’s law in Equation <a class="reference internal" href="#equation-coulombslaw">(15.1)</a>, we find we can fix <span class="math notranslate nohighlight">\(k = 1/\epsilon_0\)</span> (which also has the required units, check
 this for yourself!).  So our final expression, which is known as <b>Gauss’s Law</b>, can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-gausslaw">
-<span class="eqno">(15.3)<a class="headerlink" href="#equation-gausslaw" title="Permalink to this equation">#</a></span>\[\iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q}{\epsilon_0} \]</div>
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-gausslaw" title="Permalink to this equation">#</a></span>\[\iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q}{\epsilon_0} \]</div>
 <p>The charge <span class="math notranslate nohighlight">\(Q\)</span> here should be carefully explained, central to the discussion of the flux were the field lines from the
 charge cutting the bounding surface area <span class="math notranslate nohighlight">\(A\)</span>, so we really mean to write the <span class="math notranslate nohighlight">\(Q\)</span> as one enclosed by the area <span class="math notranslate nohighlight">\(A\)</span> and so
 we should really write Gauss’s law as:</p>
@@ -662,7 +783,7 @@ we should really write Gauss’s law as:</p>
 \[\iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q_{enclosed}}{\epsilon_0}\]</div>
 </section>
 <section id="gravitational-analogue">
-<h2><span class="section-number">15.3. </span>Gravitational Analogue<a class="headerlink" href="#gravitational-analogue" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.5. </span>Gravitational Analogue<a class="headerlink" href="#gravitational-analogue" title="Permalink to this headline">#</a></h2>
 <p>One of the grand goals of physics is to understand nature through the same equations but on different scales - so called <b>universality</b>.  We
 find that the equations in electrostatics can be used to discuss Newton’s law of gravitation.  We notice that the equations are essentially just a
 redefinition of fields and constants:</p>
@@ -676,7 +797,7 @@ redefinition of fields and constants:</p>
 \[{\bf E} = \frac{{\bf F}_E}{Q} \Longleftrightarrow {\bf g} = \frac{{\bf F}_N}{M}\]</div>
 <p>and therefore we could examine Gauss’s law for gravitational fields:</p>
 <div class="math notranslate nohighlight" id="equation-gravfieldgauss">
-<span class="eqno">(15.4)<a class="headerlink" href="#equation-gravfieldgauss" title="Permalink to this equation">#</a></span>\[\iint {\bf g} \cdot \mathrm{d} {\bf A} = -4\pi\,G\,M_{enclosed}\]</div>
+<span class="eqno">(15.5)<a class="headerlink" href="#equation-gravfieldgauss" title="Permalink to this equation">#</a></span>\[\iint {\bf g} \cdot \mathrm{d} {\bf A} = -4\pi\,G\,M_{enclosed}\]</div>
 <p>An application of this is understanding the interior gravitational field of a large uniform astrophysical body (e.g. the Earth),
 which we find results in the analogue of <a class="reference internal" href="solvingEsystems.html#electricfieldsphere"><span class="std std-numref">Fig. 16.3</span></a>.</p>
 </section>

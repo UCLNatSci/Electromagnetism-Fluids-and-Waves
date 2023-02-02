@@ -24,7 +24,7 @@ and so we can find the <b>Mass Flux</b> $\Phi_m$, with units of $[\textrm{mass}]
 ```
 If we increase or decrease the size of the hose, we can figure out the flow rate of the resulting water flow using this mass flux, as we illustrate 
 in {numref}`Flux`. 
-```{figure} ../figures/Flux.png
+```{figure} ../figures/flux.png
 ---
 name: Flux
 ---

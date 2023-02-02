@@ -95,8 +95,8 @@ Q_{enclosed} = \frac{3Q}{4\,\pi\, a^3}\left(\frac{4}{3}\,\pi \,r^3\right) = Q \,
 ```
 Putting this into Gauss's law:
 ```{math}
-\iint {\bf E} \cdot \mathrm{d} {\bf A}  &=&\, E_r\,(4 \pi r^2) = \frac{Q}{\epsilon_0} \,\left(\frac{r}{a}\right)^3  \\ 
-\Rightarrow {\bf E} &=&\, \frac{Q}{4 \pi \epsilon_0}\frac{r}{a^3}\hat{{\bf r}}
+\iint {\bf E} \cdot \mathrm{d} {\bf A}  &=\, E_r\,(4 \pi r^2) = \frac{Q}{\epsilon_0} \,\left(\frac{r}{a}\right)^3  \\ 
+\Rightarrow {\bf E} &=\, \frac{Q}{4 \pi \epsilon_0}\frac{r}{a^3}\hat{{\bf r}}
 ```
 Therefore the electric field is given by the piecewise function:
 ```{math}
@@ -230,8 +230,8 @@ An infinite line of charges, which goes through the origin, with a cylindrical G
 For a cylinder of length $L$, the area of the long side of the cylinder is $2 \pi r L$ and the charge enclosed in this 
 area is given by $\lambda L$, so putting these facts together: 
 ```{math}
-\iint {\bf E} \cdot \mathrm{d} {\bf A} &=&\, \iint E_r \,\mathrm{d} A_r = E_r \,(2\pi\, r\, L) = \frac{\lambda L}{\epsilon_0} \\
-\Rightarrow E_r &=&\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} 
+\iint {\bf E} \cdot \mathrm{d} {\bf A} &=\, \iint E_r \,\mathrm{d} A_r = E_r \,(2\pi\, r\, L) = \frac{\lambda L}{\epsilon_0} \\
+\Rightarrow E_r &=\, \frac{\lambda}{2\pi\, \epsilon_0 \,r} 
 ```
 This gives us an expression for the electric field around an infinite line of charge:
 ```{math}
@@ -283,16 +283,16 @@ The direction of the field components however will change depending on whereabou
 ```
 Whilst if we examine the field at $\theta = -\pi/2$ and $\theta = \pi/2$, we notice that the electric field will be aligned in the positive and negative $y$-axis directions (respectively):
 ```{math}
-\mathrm{d}{\bf E}_{\theta = -\pi/2} &=&\, 0 \,\hat{\bf i} + \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \\
-\mathrm{d}{\bf E}_{\theta =\pi/2} &=&\, 0 \,\hat{\bf i} - \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} 
+\mathrm{d}{\bf E}_{\theta = -\pi/2} &=\, 0 \,\hat{\bf i} + \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} \\
+\mathrm{d}{\bf E}_{\theta =\pi/2} &=\, 0 \,\hat{\bf i} - \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \,\hat{\bf j} 
 ```
 In fact we see that there will always be a cancellation of the $y$ components of the electric field from the arc, we can always pair up the components over 
 $-\pi/2 \leq \theta \leq \pi/2$, this leaves just the $x$ components:
 ```{math}
-\mathrm{d}{\bf E}_{\theta} &=&\, \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \Big[ \cos(\theta) \,\hat{\bf i} + \sin(\theta) \,\hat{\bf j} \Big] \\
-\int_0^{\bf E} \mathrm{d}{\bf E}_{\theta} &=&\,  \frac{\pi}{4\,\epsilon_0\,L^2} \frac{\lambda\,L}{\pi} \int_{-\pi/2}^{\pi/2} \Big(\cos(\theta)\,\hat{\bf i} + 
+\mathrm{d}{\bf E}_{\theta} &=\, \frac{\pi \,\mathrm{d}Q}{4\,\epsilon_0\,L^2} \Big[ \cos(\theta) \,\hat{\bf i} + \sin(\theta) \,\hat{\bf j} \Big] \\
+\int_0^{\bf E} \mathrm{d}{\bf E}_{\theta} &=\,  \frac{\pi}{4\,\epsilon_0\,L^2} \frac{\lambda\,L}{\pi} \int_{-\pi/2}^{\pi/2} \Big(\cos(\theta)\,\hat{\bf i} + 
 \sin(\theta)\,\hat{\bf j} \Big)\,\mathrm{d} \theta\\
-{\bf E} &=&\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}
+{\bf E} &=\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}
 ```
 ### Rectilinear Rod
 Lets return to the rod in {numref}`Finitelineofcharge`, we can set this system up in {numref}`Finitelineofcharge2`, trying to make the rod as symmetric as possible:
@@ -318,19 +318,19 @@ In this system, we find that at $x = 0$, the electric field is only aligned in t
 ```
 whereas the $x$ components of the electric field for all the lengths at $-L/2 \leq x < 0$ and $0 > x \leq L/2$ will pair up, to cancel out, leaving only the $y$ components:
 ```{math}
-\mathrm{d} {\bf E} &=&\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2} \Big (\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Big)\\
-\int_0^{\bf E} \mathrm{d} {\bf E}' &=&\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
-{\bf E} &=&\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x 
+\mathrm{d} {\bf E} &=\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2} \Big (\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Big)\\
+\int_0^{\bf E} \mathrm{d} {\bf E}' &=\, \frac{\lambda }{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Big (\frac{x}{r^3}\,\hat{\bf i} + \frac{R}{r^3}\,\hat{\bf j}\Big)\,\mathrm{d} x\\
+{\bf E} &=\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{-L/2}^{L/2}\Bigg(\frac{x}{(x^2 + R^2)^{3/2}}\,\hat{\bf i} + \frac{R}{(x^2 + R^2)^{3/2}}\,\hat{\bf j}\Bigg)\,\mathrm{d} x 
 ```
 Where we have used the substitutions $\sin(\theta) = x/r = x / \sqrt{x^2 + R^2},\, \cos(\theta) = R / r = R / \sqrt{x^2 + R^2}$.  We can also use the substitution 
 $x = R\,\tan(\theta) \Rightarrow \mathrm{d}x = R\,\sec^2(\theta)$ to find:
 ```{math}
-{\bf E} &=&\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
+{\bf E} &=\, \frac{\lambda}{4\pi \,\epsilon_0} \int_{x = -L/2}^{x = L/2}\Big (\frac{R \,\tan(\theta)}{R^3\,\sec^3(\theta)}\,\hat{\bf i} + 
 \frac{R}{R^3\,\sec^3(\theta)}\,\hat{\bf j}\Big) R\,\sec^2(\theta)\,\mathrm{d} \theta \\
- &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \int_{x = -L/2}^{x = L/2}\Bigg(\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Bigg)\,\mathrm{d} \theta \\
- &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\cos(\theta)\,\hat{\bf i} + \sin(\theta)\,\hat{\bf j}\Big]_{x = -L/2}^{x = L/2} \\
- &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\frac{R}{(x^2 + R^2)^{1/2}}\,\hat{\bf i} + \frac{x}{(x^2 + R^2)^{1/2}}\,\hat{\bf j}\Big]_{-L/2}^{L/2} \\
- &=&\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big( 0 \,\hat{\bf i} + \frac{L}{(L^2/4 + R^2)^{1/2}}\,\hat{\bf j}\Big) 
+ &=\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \int_{x = -L/2}^{x = L/2}\Bigg(\sin(\theta)\,\hat{\bf i} + \cos(\theta)\,\hat{\bf j}\Bigg)\,\mathrm{d} \theta \\
+ &=\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\cos(\theta)\,\hat{\bf i} + \sin(\theta)\,\hat{\bf j}\Big]_{x = -L/2}^{x = L/2} \\
+ &=\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big[ -\frac{R}{(x^2 + R^2)^{1/2}}\,\hat{\bf i} + \frac{x}{(x^2 + R^2)^{1/2}}\,\hat{\bf j}\Big]_{-L/2}^{L/2} \\
+ &=\,\frac{\lambda}{4\pi \,\epsilon_0\,R} \Big( 0 \,\hat{\bf i} + \frac{L}{(L^2/4 + R^2)^{1/2}}\,\hat{\bf j}\Big) 
 ```
 Which results in:
 ```{math}
@@ -345,8 +345,8 @@ which is essentially the result for the infinite line of charge in Equation {eq}
 We note therefore that the relevant expression for the magnitude of the electric field at a distance $R$ from the rod is found from just the $y$ component:
 ```{math}
 :label: EFieldWire
-\mathrm{d} E &=&\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
-\Rightarrow E &=&\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\,\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Bigg[\frac{x}{\sqrt{x^2+R^2}}\Bigg]_{rod}
+\mathrm{d} E &=\, \frac{\mathrm{d}Q}{4\pi \,\epsilon_0\,r^2}\,\cos(\theta) = \frac{\mathrm{d}Q\,R}{4\pi \,\epsilon_0\,r^3}\\
+\Rightarrow E &=\,  \frac{\lambda}{4\pi \,\epsilon_0}\int_{rod} \frac{R}{r^3}\,\mathrm{d}x = \frac{\lambda}{4\pi \,\epsilon_0\,R} \Bigg[\frac{x}{\sqrt{x^2+R^2}}\Bigg]_{rod}
 ```
 
 
