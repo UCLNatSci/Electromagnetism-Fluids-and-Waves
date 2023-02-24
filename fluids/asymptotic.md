@@ -15,7 +15,7 @@ To be strictly accurate, we assume that the parameter appearing in the expansion
 
 To determine what can be treated as "small" often requires an amount of heuristic reasoning, which can be justified be comparison to theoretical claims and/or experimental and numerical investigations.
 
-In this chapter we discuss some general principles and uses of asymptotic methods, though we do not demonstrate the full mathematics, which is too involved for a first year course. Asymptotic expansion methods are also featured in chapters {numeref}`water-waves` and {numref}`sound-waves` to study small amplitude water and sound waves.
+In this chapter we discuss some general principles and uses of asymptotic methods, though we do not demonstrate the full mathematics, which is too involved for a first year course. Asymptotic expansion methods are also featured in chapters {numref}`water-waves` and {numref}`sound-waves` to study small amplitude water and sound waves.
 
 ## Perturbation analysis
 
@@ -120,13 +120,12 @@ The theoretical predictions roughly match the experiments in the very early stag
 
 It has been hypothesised that a resonant-type interaction may be responsible for "explosive growth" of small disturbances in the Blasius boundary layer {cite}`craik1978`. The theory is contentious, but [pragmatic investigation](https://eprints.keele.ac.uk/193/1/Metcalfe%20PhD%202013.pdf) at finite Reynolds numbers has provided quantified estimates that appear to be a close match for the findings of experimenters {cite}`metcalfe2013`.
 
-
-```{exercise}
-Find one example of fluid dynamics research that involved modelling a boundary layer, and write a tweet about it (280 characters). You could choose a piece of recent research or you could choose a historical example that you would like to bring to wider attention.
-```
-
 ## References
 
 ```{bibliography}
 :filter: docname in docnames
 ```
+
+## Chapter exercises 
+
+Find one example of fluid dynamics research that involved modelling a boundary layer, and write a tweet about it (280 characters). You could choose a piece of recent research or you could choose a historical example that you would like to bring to wider attention.

@@ -69,46 +69,6 @@ The solution satisfying the no-slip condition $u(0)=0$ and free surface stress s
 The velocity flux is therefore
 \begin{equation}Q=\int_0^h u\mathrm{d}y=\frac{gh^3}{3\nu}\sin(\alpha).\end{equation}
 
-```{exercise}
-Incompressible fluid of uniform density $\rho$ and viscosity $\nu$ flows steadily under
-gravity $g$ between two vertical planes at $x = 0$ and $x = a$. The plane at $x = 0$
-is at rest, but the plane at $x = a$ is moving vertically upwards at speed $V$. By
-assuming that the pressure is constant throughout the fluid and that the velocity
-field does not depend on the vertical coordinate, solve the equations of motion
-to find the velocity field.
-```
-
-`````{toggle}
-
-````{panels}
-:card: border-0
-**Euler:**
-
-$\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p +\nu\nabla^2\underline{u}$
-
-$\nabla.\underline{u} =0$
-
-Take $p=\mathrm{constant}$, $\underline{u}=(u(x),v(x),0)$
----
-```{image} navstok_img/walls.png
-:align: center
-:scale: 60%
-```
-````
-
-From the incompressibility condition, $\displaystyle \frac{\partial u}{\partial x}=0$, so $u$ is independent of $x$.
-Since we already assumed that $u$ is independent of $y$ this component must be constant, and since there is no flow through the boundaries $u=0$.
-
-From the conservation of momentum equation,
-\begin{equation*}\frac{\partial^2 v}{\partial x^2}=-\frac{g}{\nu} \quad \Rightarrow \quad v=-\frac{g}{\nu}\frac{x^2}{2}+kx +C\end{equation*}
-
-$v(0)=0 \quad \Rightarrow C=0$
-
-$v(x=a)=-V \quad \Rightarrow k=\frac{g}{\nu}\frac{a}{2}-\frac{V}{a}$
-
-\begin{equation*}v=\frac{g(ax-x^2)}{2\nu}-\frac{Vx}{a}\end{equation*}
-
-`````
 
 (plane-poiseuille)=
 ## Plane Poiseuille flow
@@ -176,3 +136,12 @@ Again, we find that $u_z$ is infinite on $r=0$ unless $A=0$, which finally gives
 :class: theorem
 Poiseuille flows are named after the physician who first studied the problem in connection with blood flow. Their instability under certain conditions constitutes one of the most important problems of fluid dynamics.
 ```
+
+## Chapter exercises 
+
+Incompressible fluid of uniform density $\rho$ and viscosity $\nu$ flows steadily under
+gravity $g$ between two vertical planes at $x = 0$ and $x = a$. The plane at $x = 0$
+is at rest, but the plane at $x = a$ is moving vertically upwards at speed $V$. By
+assuming that the pressure is constant throughout the fluid and that the velocity
+field does not depend on the vertical coordinate, solve the equations of motion
+to find the velocity field.

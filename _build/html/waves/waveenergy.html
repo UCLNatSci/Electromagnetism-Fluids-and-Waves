@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>8. Energy and Power of Travelling Waves &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="9. Polarisation of Waves" href="polarisation.html" />
     <link rel="prev" title="7. Dispersion Relations and Wave Speed" href="dispersionrelations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -575,9 +577,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="energy-and-power-of-travelling-waves">
-<h1><span class="section-number">8. </span>Energy and Power of Travelling Waves<a class="headerlink" href="#energy-and-power-of-travelling-waves" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">8. </span>Energy and Power of Travelling Waves<a class="headerlink" href="#energy-and-power-of-travelling-waves" title="Permalink to this heading">#</a></h1>
 <section id="longitundinal-wave-energy-and-power">
-<h2><span class="section-number">8.1. </span>Longitundinal wave energy and power<a class="headerlink" href="#longitundinal-wave-energy-and-power" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.1. </span>Longitundinal wave energy and power<a class="headerlink" href="#longitundinal-wave-energy-and-power" title="Permalink to this heading">#</a></h2>
 <p>Given that waves are a method of propogating energy, it is an important question to ask how much and what parameters does a waves energy depend on!</p>
 <p>Lets look at the total energy <span class="math notranslate nohighlight">\(E\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -636,7 +638,7 @@ that the total amount of energy for each mass is fixed, so by symmetry over the 
 <span class="eqno">(8.4)<a class="headerlink" href="#equation-averagewavepower" title="Permalink to this equation">#</a></span>\[\langle P \rangle_T = \frac{1}{T}\int_0^T P(x,\,t) \,\mathrm{d}t \]</div>
 </section>
 <section id="transverse-wave-energy">
-<h2><span class="section-number">8.2. </span>Transverse wave energy<a class="headerlink" href="#transverse-wave-energy" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.2. </span>Transverse wave energy<a class="headerlink" href="#transverse-wave-energy" title="Permalink to this heading">#</a></h2>
 <p>Looking at the change total energy <span class="math notranslate nohighlight">\(E\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\Delta E = \Delta K + \Delta U\]</div>
@@ -670,7 +672,7 @@ gradient operator <span class="math notranslate nohighlight">\(\nabla y\)</span>
 |\nabla y|^2\right]\]</div>
 </section>
 <section id="calculating-the-energy-and-power">
-<h2><span class="section-number">8.3. </span>Calculating the energy and power<a class="headerlink" href="#calculating-the-energy-and-power" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">8.3. </span>Calculating the energy and power<a class="headerlink" href="#calculating-the-energy-and-power" title="Permalink to this heading">#</a></h2>
 <p>Lets again start with a travelling wave <span class="math notranslate nohighlight">\(u\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[u(x,\,t) = \mathrm{Re}\Big[u_0\, \exp\left(i(kx - \omega t)\right)\Big] = u_0\,\cos\left(kx - \omega t\right)\]</div>

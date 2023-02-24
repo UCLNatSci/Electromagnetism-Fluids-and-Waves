@@ -81,23 +81,6 @@ If the density of each fluid particle does not change as it moves around, then t
 In practice, fluid phenomena that are well below the speed of sound can be treated as incompressible
 ```
 
-```{exercise}
-a). Write down the continuity equation for compressible flow in component form, taking $\underline{x}=(x,y,z)$, $p=p(t,\underline{x})$ and $\underline{u}(t,\underline{x})=(u,v,w)$.
-
-b). What single equation can be used to model a flow that is both incompressible and irrotational?
-
-c). Is incompressible flow the same as solenoidal flow?
-
-```
-
-```{toggle}
-a). $\frac{\partial \rho }{\partial t}+u\frac{\partial \rho}{\partial x}+v\frac{\partial \rho}{\partial y}+w\frac{\partial \rho}{\partial z}+\rho \left(\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}\right)=0$
-
-b). Laplace's equation, $\nabla^2\phi=0$, where $\underline{u}=\nabla\phi$
-
-c). The condition for both types of flow is the same. Since incompressible flows must satisfy $\nabla.\underline{u}$, they are solenoidal. However, it may be possible for a compressible fluid to exhibit solenoidal flow.
-```
-
 ## Cauchy stress theorem
 "Stress" is a measure of the internal forces, such as pressure or friction acting between neighbouring fluid elements. We cannot discuss stress without first defining a particular surface that the stress acts on, since friction and pressure depend on the surface orientation.
 
@@ -196,7 +179,19 @@ The Cauchy stress tensor $\underline{\sigma}$ can be split up to separate normal
 
 The negative sign is chosen due to the fact that the pressure acts inwards on a material volume.
 
-```{exercise}
+*A physical derivation of the Coriolis force is outlined in the (optional) section of the notes on rotational reference frames.
+
+## Chapter exercises
+
+**Question 1**<br>
+
+a). Write down the continuity equation for compressible flow in component form, taking $\underline{x}=(x,y,z)$, $p=p(t,\underline{x})$ and $\underline{u}(t,\underline{x})=(u,v,w)$.
+
+b). What single equation can be used to model a flow that is both incompressible and irrotational?
+
+c). Is incompressible flow the same as solenoidal flow?
+
+**Question 2**<br>
 If we assume that the shear stress component is zero so that $\underline{\tau}\equiv \underline{0}$ in equation {eq}`consofmom4`, then we obtain the Euler equation
 \begin{equation*}
 \frac{D\underline{u}}{D t}=-\frac{1}{\rho}\nabla p+\underline{F}
@@ -205,13 +200,3 @@ If we assume that the shear stress component is zero so that $\underline{\tau}\e
 Write out this equation in component form for a Cartesian system under a body force $\underline{F}=(0,0,-g)$.
 
 The implications of ignoring the shear stress components will be explored in later sections of these notes.
-```
-
-```{toggle}
-\begin{align}
-\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&=-\frac{1}{\rho}\frac{\partial p}{\partial x}\\
-\frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&=-\frac{1}{\rho}\frac{\partial p}{\partial y}\\
-\frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&=-\frac{1}{\rho}\frac{\partial p}{\partial z}-g\end{align}
-```
-
-*A physical derivation of the Coriolis force is outlined in the (optional) section of the notes on rotational reference frames.

@@ -28,12 +28,15 @@ A potential flow is a velocity field that satisfies any of the following three e
 2. Has no circulation (is path independent)
 3. Can be written as the gradient of a potential $\phi$
 
-`````{admonition} Circulation
+``````{admonition} Circulation
 :class: theorem
-````{panels}
-:card: border-0
+`````{grid} 2
+````{grid-item}
+
 In fluid dynamics, circulation is the line integral of the velocity field around a closed curve. Any closed curve can be formed of two distinct paths with the same start and end point. If the line integral depends on the path then the flow has non-zero circulation.
----
+````
+````{grid-item}
+
 ```{image} navstok_img/bezier.png
 :name: closed_curve
 :alt: closed curve
@@ -42,6 +45,7 @@ In fluid dynamics, circulation is the line integral of the velocity field around
 ```
 ````
 `````
+``````
 
 Result (1) is immediately obtained from (3) by taking the curl and using the result "curl grad=0" :
 
@@ -59,7 +63,7 @@ It is always true that if a flow has no circulation then it is irrotational. How
 
 The linking from result (2) to result (3) is called the "Gradient Theorem". It is not so easy to prove, but is essentially the vector version of the Second Fundamental Theorem of Calculus.
 
-## Calculating the velocity potential
+### Calculation
 
 To calculate a velocity potential $\phi$ for an irrotational flow, we need to solve the antiderivative problem
 
@@ -77,31 +81,15 @@ $\underline{u}=(\alpha x,-\alpha y,0)$ is irrotational. It has velocity potentia
 
 \begin{equation}\frac{\partial \phi}{\partial x}=\alpha x,\quad \frac{\partial \phi}{\partial y}=-\alpha t, \quad \frac{\partial \phi}{\partial z}=0.\end{equation}
 
-## Line integrals for irrotational flows
+## Line integrals 
+
+### Irrotational flow
 
 The line integral for an irrotational flow is independent of the path. The result can be obtained from a vector potential:
 
 \begin{equation}\int_{\mathcal{C}}\underline{u}.\mathrm{d}\underline{s}=\int_{\underline{x}_0}^{\underline{x}_1}\nabla\phi.\mathrm{d}\underline{s} = \phi(\underline{x}_1)-\phi(\underline{x}_0) \end{equation}
 
-```{exercise}
-:label: ex-112
-Show that the velocity field $\underline{u}=(3x^2,3y^2,3z^2)$ is irrotational and that it can be expressed as the gradient of a scalar potential
-\begin{equation*}\phi=x^3+y^3+z^3 +\mathrm{const.}\end{equation*}
-
-Hence, calculate the line integral of this field between $(1,2,1)$ to $(3,2,1)$.
-```
-```{toggle}
-Irrotational: $\nabla\times\underline{u}=\begin{vmatrix}\underline{e}_x & \underline{e}_y & \underline{e}_z\\\frac{\partial}{\partial x} & \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\ 3x^2 & 3y^2 & 3z^2\end{vmatrix}=0\underline{e}_x+0\underline{e}_y+0\underline{e}_z$
-
-$\underline{u}=\nabla\phi \quad \Rightarrow (3x^2,3y^2,3z^2)=\left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right)$
-
-Equating components and integrating gives $\underline{u}=x^3+y^3+z^3 +\mathrm{const.}$
-
-Hence, $\displaystyle \int_{(1,2,1)}^{(3,2,1)}\underline{u}.\mathrm{d}\underline{s} = \phi(3,2,1)-\phi(1,2,1)=26$ (independent of the path)
-```
-
-
-## Line integrals for flows that are not irrotational
+## Rotational flow
 For flows that are not irrotational, the line integral generally depends on the path. This isn't a course on vector calculus, so I won't make you calculate line integrals but you should take a look at the following examples to see how circulation may arise from a flow that is not irrotational.
 
 
@@ -114,7 +102,7 @@ A streamline plot of the velocity field $\underline{u}=(y^2,x^2,0)$ is shown bel
  render:
    image:
      align: center
- tags: [hide-input]
+ tags: [remove-input]
  ---
  import numpy as np
  import matplotlib.pyplot as plt
@@ -177,15 +165,15 @@ scale: 60%
 ```
 <br>
 
-## Flows that are irrotational and solenoidal
+## Laplacian vector field
 
-Consider an irrotational connected flow, such that the fluid velocity can be expressed as the gradient of a potential:
+A Laplacian vector field is both irrotational and incompressible. If the domain is simply connected then due to the irrotationality it can be expressed as the gradient of a potential :
 
 \begin{equation*}
 \underline{u}=\nabla\phi.
 \end{equation*}
 
-In the case where the flow is also solenoidal, meaning that $\nabla.\underline{u}=0$, then it is Laplacian:
+From the incompressibility condition it therefore follows that the potential satisfies Laplace's equation:
 
 \begin{equation}
 \nabla.(\nabla\phi)=0 \quad \Rightarrow \quad \nabla^2\phi=0.
@@ -202,17 +190,17 @@ You may recognise this equation as it appears in many other steady state (time-i
 We will see later that the solenoidal assumption is a valid approximation for subsonic flows - where the motion of interest is much less than the speed of sound within the considered fluid. The speed of sound in air on earth is in excess of 1000km/h.
 
 
-```{exercise}
-:label: ex-113
+## Chapter exercises 
+
+
+**Question 1**<br>
+Show that the velocity field $\underline{u}=(3x^2,3y^2,3z^2)$ is irrotational and that it can be expressed as the gradient of a scalar potential
+\begin{equation*}\phi=x^3+y^3+z^3 +\mathrm{const.}\end{equation*}
+
+Hence, calculate the line integral of this field between $(1,2,1)$ to $(3,2,1)$.
+
+
+**Question 2**<br>
 Verify that Laplace's equation is satisfied by the following potential function:
 \begin{equation*}\phi=\left[Ce^{kz}+De^{-kz}\right]\sin(kx-\omega t)\end{equation*}
 This is the velocity potential for travelling waves on a fluid surface.
-```
-
-```{toggle}
-This is simply an exercise in differentiation:
-
-$\frac{\partial^2\phi}{\partial x^2}=-k^2\phi, \qquad \frac{\partial^2\phi}{\partial z^2}=k^2\phi$
-
-Hence, $\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial z^2}=0$
-```

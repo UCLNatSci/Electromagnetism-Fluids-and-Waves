@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>20. Ampère’s Circuital Law &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="21. Faraday’s Law" href="faradayslaw.html" />
     <link rel="prev" title="19. Magnetic Forces" href="magneticforces.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -603,7 +605,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="amperes-circuital-law">
-<h1><span class="section-number">20. </span>Ampère’s Circuital Law<a class="headerlink" href="#amperes-circuital-law" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">20. </span>Ampère’s Circuital Law<a class="headerlink" href="#amperes-circuital-law" title="Permalink to this heading">#</a></h1>
 <p>Going back to the magnetic field due to an infinite wire in Equation <a class="reference internal" href="magneticfields.html#equation-infinitewirebfield">(18.5)</a>:</p>
 <div class="math notranslate nohighlight">
 \[B_\theta = \frac{\mu_0\,I}{2\pi\,r}\]</div>
@@ -626,7 +628,7 @@ this would work therefore for <em> any </em> closed boundary would do, as depict
 <div class="math notranslate nohighlight" id="equation-ampereslaw">
 <span class="eqno">(20.1)<a class="headerlink" href="#equation-ampereslaw" title="Permalink to this equation">#</a></span>\[\oint_\ell  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I_{enclosed} \]</div>
 <section id="magnetic-field-from-a-wire">
-<h2><span class="section-number">20.1. </span>Magnetic Field from a Wire<a class="headerlink" href="#magnetic-field-from-a-wire" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.1. </span>Magnetic Field from a Wire<a class="headerlink" href="#magnetic-field-from-a-wire" title="Permalink to this heading">#</a></h2>
 <p>Now lets consider a thick wire, modelled as a cylinder of current <span class="math notranslate nohighlight">\(I\)</span> with cross sectional radius <span class="math notranslate nohighlight">\(R\)</span>, as depicted in <a class="reference internal" href="#amperelawboundary"><span class="std std-numref">Fig. 20.1</span></a>, we see
 akin to solving Gauss’s law,  that there are two regimes of interest:</p>
 <ul class="simple">
@@ -659,7 +661,7 @@ piecewise function:</p>
 </figure>
 </section>
 <section id="displacement-current">
-<h2><span class="section-number">20.2. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.2. </span>Displacement Current<a class="headerlink" href="#displacement-current" title="Permalink to this heading">#</a></h2>
 <p>Lets consider a simple circuit with a capacitor, as seen in <a class="reference internal" href="#displacementcurrent"><span class="std std-numref">Fig. 20.3</span></a>, we could take an Ampère’s law path from the current
 flowing in to or out of the capacitor to a path cutting through the capacitor.</p>
 <figure class="align-default" id="displacementcurrent">
@@ -685,7 +687,7 @@ from the product rule, since the surface <span class="math notranslate nohighlig
 \[I_D = \epsilon_0\iint\frac{\partial {\bf E}}{\partial t}\cdot \mathrm{d} {\bf A}\]</div>
 </section>
 <section id="magnetic-fields-in-coils">
-<h2><span class="section-number">20.3. </span>Magnetic Fields in Coils*<a class="headerlink" href="#magnetic-fields-in-coils" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.3. </span>Magnetic Fields in Coils*<a class="headerlink" href="#magnetic-fields-in-coils" title="Permalink to this heading">#</a></h2>
 <p>In order to make sense of solenoids and other systems with coils of wire, we need to first break down the system of a single circular coil of wire,
 as shown in <a class="reference internal" href="#bfieldcoilofwire"><span class="std std-numref">Fig. 20.4</span></a>.</p>
 <figure class="align-default" id="bfieldcoilofwire">
@@ -726,7 +728,7 @@ in <a class="reference internal" href="#bfieldcoilofwirefull"><span class="std s
 </figure>
 </section>
 <section id="magnetic-field-in-solenoids">
-<h2><span class="section-number">20.4. </span>Magnetic Field in Solenoids*<a class="headerlink" href="#magnetic-field-in-solenoids" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.4. </span>Magnetic Field in Solenoids*<a class="headerlink" href="#magnetic-field-in-solenoids" title="Permalink to this heading">#</a></h2>
 <p>Through superposition of coils, we can find the magnetic field around a solenoid, as shown in <a class="reference internal" href="#bfieldsolenoid"><span class="std std-numref">Fig. 20.6</span></a>.  The (almost)
 uniform magnetic field inside a solenoid follows:</p>
 <div class="math notranslate nohighlight">
@@ -746,7 +748,7 @@ The magnetic field loops over each turn along the solenoid.</span><a class="head
 </figure>
 </section>
 <section id="magnetism-in-matter-the-bf-h-field">
-<h2><span class="section-number">20.5. </span>Magnetism in Matter - the <span class="math notranslate nohighlight">\(\bf H\)</span> Field*<a class="headerlink" href="#magnetism-in-matter-the-bf-h-field" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">20.5. </span>Magnetism in Matter - the <span class="math notranslate nohighlight">\(\bf H\)</span> Field*<a class="headerlink" href="#magnetism-in-matter-the-bf-h-field" title="Permalink to this heading">#</a></h2>
 <p>We might rightly now ask what is the magnetostatic equivalent of the <span class="math notranslate nohighlight">\({\bf D}\)</span> field from electrostatics, describing how magnetic fields permeate through matter.
 We call this the <span class="math notranslate nohighlight">\({\bf H}\)</span> field and it may be defined as:</p>
 <div class="math notranslate nohighlight">

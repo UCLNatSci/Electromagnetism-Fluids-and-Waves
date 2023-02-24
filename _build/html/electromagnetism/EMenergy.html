@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>24. Energy in an Electromagnetic field &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="25. Introduction" href="../fluids/intro.html" />
     <link rel="prev" title="23. Solutions to Maxwell’s Equations" href="solvingmaxwell.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -585,11 +587,11 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="energy-in-an-electromagnetic-field">
-<h1><span class="section-number">24. </span>Energy in an Electromagnetic field<a class="headerlink" href="#energy-in-an-electromagnetic-field" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">24. </span>Energy in an Electromagnetic field<a class="headerlink" href="#energy-in-an-electromagnetic-field" title="Permalink to this heading">#</a></h1>
 <p>Whilst we are now comfortable with the idea of electric and magnetic fields (and how the two are inextricably linked), we can return
 to an idea from the waves section, namely where are all the sources of energy in this system?</p>
 <section id="deriving-intrinsic-energy-from-potentials">
-<h2><span class="section-number">24.1. </span>Deriving Intrinsic Energy from Potentials<a class="headerlink" href="#deriving-intrinsic-energy-from-potentials" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.1. </span>Deriving Intrinsic Energy from Potentials<a class="headerlink" href="#deriving-intrinsic-energy-from-potentials" title="Permalink to this heading">#</a></h2>
 <p>Recall the intrinsic electrostatic potential energy <span class="math notranslate nohighlight">\(U_E\)</span> from a system of charges from Equation <a class="reference internal" href="Efieldenergy.html#equation-elecpotenergy">(17.1)</a>, we can
 modify this to consider a continuous charge density <span class="math notranslate nohighlight">\(\rho({\bf r})\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -615,7 +617,7 @@ Then we can define the energy density <span class="math notranslate nohighlight"
 \[U_E = \iiint u_E\,\mathrm{d} V= \iiint \frac{1}{2}\,\epsilon_0\,E^2 \, \mathrm{d} V \Longrightarrow u_E = \frac{1}{2}\,\epsilon_0\,E^2 \]</div>
 </section>
 <section id="energy-flux-and-poynting-vector">
-<h2><span class="section-number">24.2. </span>Energy Flux and Poynting Vector<a class="headerlink" href="#energy-flux-and-poynting-vector" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.2. </span>Energy Flux and Poynting Vector<a class="headerlink" href="#energy-flux-and-poynting-vector" title="Permalink to this heading">#</a></h2>
 <p>To find the total energy density we would need to repeat this process for <span class="math notranslate nohighlight">\({\bf B}\)</span> (which is fairly lengthy!), but we can consider this problem
 through analogy.  The form of the Equation <a class="reference internal" href="maxwelleqns.html#equation-curlb">(22.3)</a> in vacuum reveals that the units of the <span class="math notranslate nohighlight">\({\bf B}\)</span> field related to the <span class="math notranslate nohighlight">\({\bf E}\)</span> field by:</p>
 <div class="math notranslate nohighlight" id="equation-e-cb">
@@ -651,7 +653,7 @@ generated per unit volume per unit time.  Thus we can see that the Poynting vect
 <span class="math notranslate nohighlight">\({\bf J}\cdot {\bf E}\)</span> relates to the energy given to free charges with current density <span class="math notranslate nohighlight">\({\bf J}\)</span>.</p>
 </section>
 <section id="electromagnetic-plane-waves">
-<h2><span class="section-number">24.3. </span>Electromagnetic Plane Waves<a class="headerlink" href="#electromagnetic-plane-waves" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.3. </span>Electromagnetic Plane Waves<a class="headerlink" href="#electromagnetic-plane-waves" title="Permalink to this heading">#</a></h2>
 <p>Recall the plane wave solutions from Equation <a class="reference internal" href="solvingmaxwell.html#equation-planewavesolns">(23.4)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{\bf E} &amp;=\begin{bmatrix}
@@ -680,7 +682,7 @@ as we see in <a class="reference internal" href="solvingmaxwell.html#emplanewave
 <span class="math notranslate nohighlight">\(v_S = c = v_{E,\,B}\)</span> but the wavelength <span class="math notranslate nohighlight">\(\lambda_S = \frac{1}{2}\lambda_{E,\,B}\)</span> and frequency <span class="math notranslate nohighlight">\(f_S = 2\,f_{E,\,B}\)</span> are changed.</p>
 </section>
 <section id="characteristic-impedance">
-<h2><span class="section-number">24.4. </span>Characteristic Impedance*<a class="headerlink" href="#characteristic-impedance" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">24.4. </span>Characteristic Impedance*<a class="headerlink" href="#characteristic-impedance" title="Permalink to this heading">#</a></h2>
 <p>Another way to view these results is through Equation <a class="reference internal" href="solvingmaxwell.html#equation-kebperp">(23.3)</a>,</p>
 <div class="math notranslate nohighlight">
 \[{\bf S} = \,\frac{1}{\mu_0}{\bf E}\times {\bf B} = \frac{1}{\mu_0}{\bf E}\times \left(\frac{1}{\omega} {\bf k} \times {\bf E}\right) 

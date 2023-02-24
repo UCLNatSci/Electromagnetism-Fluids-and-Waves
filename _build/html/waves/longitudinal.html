@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>4. Longitudinal Waves &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. Solutions to the Wave Equation" href="waveequationsolns.html" />
     <link rel="prev" title="3. Harmonic and Oscillatory Motion" href="SHM.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -565,9 +567,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="longitudinal-waves">
-<h1><span class="section-number">4. </span>Longitudinal Waves<a class="headerlink" href="#longitudinal-waves" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4. </span>Longitudinal Waves<a class="headerlink" href="#longitudinal-waves" title="Permalink to this heading">#</a></h1>
 <section id="derivation-from-masses-and-springs">
-<h2><span class="section-number">4.1. </span>Derivation from masses and springs<a class="headerlink" href="#derivation-from-masses-and-springs" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.1. </span>Derivation from masses and springs<a class="headerlink" href="#derivation-from-masses-and-springs" title="Permalink to this heading">#</a></h2>
 <p>Lets start with the classic derivation of waves propagating, with a collection of <span class="math notranslate nohighlight">\(N\)</span> masses <span class="math notranslate nohighlight">\(m\)</span> connected together on springs (with spring constant <span class="math notranslate nohighlight">\(k\)</span>),
 each with equilibrium separation <span class="math notranslate nohighlight">\(h\)</span>, as shown in <a class="reference internal" href="#massspringarray"><span class="std std-numref">Fig. 4.1</span></a>. We can measure the horizontal displacement <span class="math notranslate nohighlight">\(u(x,t)\)</span> from the equilibrium positions.</p>
 <figure class="align-default" id="massspringarray">
@@ -637,7 +639,7 @@ the form of the partial derivative in Equation <a class="reference internal" hre
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is the wave speed of some form (more on this later).</p>
 </section>
 <section id="derivation-from-pressure-waves">
-<h2><span class="section-number">4.2. </span>Derivation from pressure waves<a class="headerlink" href="#derivation-from-pressure-waves" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.2. </span>Derivation from pressure waves<a class="headerlink" href="#derivation-from-pressure-waves" title="Permalink to this heading">#</a></h2>
 <p>A common place to see longitundinal waves is in the case of pressure waves in fluids and gases - including in the air around us, which we use to send sounds and
 communicate in.  The derivation is fairly similar to the one for masses and springs, although it relies much more on a <em>continum</em> hypthesis, we assume the medium
 that the pressure waves are set up in is homogeneous.</p>

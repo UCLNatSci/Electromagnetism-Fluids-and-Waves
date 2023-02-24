@@ -46,14 +46,14 @@ parts:
       - file: fluids/mathideas
       - file: fluids/visualise
       - file: fluids/helmholtz
-      - file: fluids/potential
       - file: fluids/conservation
       - file: fluids/navstok
-      - file: fluids/steadysoln
-      - file: fluids/bernoulli
       - file: fluids/scaling
-      - file: fluids/asymptotic
+      - file: fluids/steadysoln
+      - file: fluids/potential
+      - file: fluids/bernoulli
       - file: fluids/vorticity
+      - file: fluids/asymptotic
       - file: fluids/waterwaves
       - file: fluids/soundwaves
       - file: fluids/rotfram

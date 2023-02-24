@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>22. Differential Forms and Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="23. Solutions to Maxwell’s Equations" href="solvingmaxwell.html" />
     <link rel="prev" title="21. Faraday’s Law" href="faradayslaw.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -605,9 +607,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="differential-forms-and-maxwells-equations">
-<h1><span class="section-number">22. </span>Differential Forms and Maxwell’s Equations<a class="headerlink" href="#differential-forms-and-maxwells-equations" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">22. </span>Differential Forms and Maxwell’s Equations<a class="headerlink" href="#differential-forms-and-maxwells-equations" title="Permalink to this heading">#</a></h1>
 <section id="gausss-law-in-differential-form">
-<h2><span class="section-number">22.1. </span>Gauss’s Law in Differential Form<a class="headerlink" href="#gausss-law-in-differential-form" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.1. </span>Gauss’s Law in Differential Form<a class="headerlink" href="#gausss-law-in-differential-form" title="Permalink to this heading">#</a></h2>
 <p>Lets revisit what we have learnt about Gauss’s law for electric charges</p>
 <div class="math notranslate nohighlight">
 \[\iint_A  {\bf E} \cdot\,\mathrm{d} {\bf A} = \frac{Q_{encl}}{\epsilon_0}\]</div>
@@ -630,7 +632,7 @@ within the volume, so for an electric field</p>
 <span class="eqno">(22.2)<a class="headerlink" href="#equation-divb" title="Permalink to this equation">#</a></span>\[\nabla \cdot {\bf B} = 0 \]</div>
 </section>
 <section id="amperes-law-in-differential-form">
-<h2><span class="section-number">22.2. </span>Ampère’s Law in Differential Form<a class="headerlink" href="#amperes-law-in-differential-form" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.2. </span>Ampère’s Law in Differential Form<a class="headerlink" href="#amperes-law-in-differential-form" title="Permalink to this heading">#</a></h2>
 <p>We can revisit Amp`ere’s law, with the displacement current:</p>
 <div class="math notranslate nohighlight">
 \[\oint_{\ell}  {\bf B} \cdot\,\mathrm{d} {\bf \ell} = \mu_0 I + \mu_0\epsilon_0\iint_A \frac{\partial {\bf E}}{\partial t}\cdot\mathrm{d}{\bf A}\]</div>
@@ -648,7 +650,7 @@ within the volume, so for an electric field</p>
 <span class="eqno">(22.3)<a class="headerlink" href="#equation-curlb" title="Permalink to this equation">#</a></span>\[\nabla \times {\bf B} = \mu_0 {\bf J} + \mu_0\epsilon_0\frac{\partial {\bf E}}{\partial t}\]</div>
 </section>
 <section id="faradays-law-in-differential-form">
-<h2><span class="section-number">22.3. </span>Faraday’s Law in Differential Form<a class="headerlink" href="#faradays-law-in-differential-form" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.3. </span>Faraday’s Law in Differential Form<a class="headerlink" href="#faradays-law-in-differential-form" title="Permalink to this heading">#</a></h2>
 <p>Finally looking at Faraday’s law again:</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{E} = -\frac{\partial}{\partial t}\iint_A {\bf B}\cdot \mathrm{d} {\bf A} = -\iint_A \frac{\partial {\bf B}}{\partial t}\cdot \mathrm{d} {\bf A}\]</div>
@@ -670,7 +672,7 @@ change in <span class="math notranslate nohighlight">\(\Phi_B\)</span> eventuall
 <span class="eqno">(22.4)<a class="headerlink" href="#equation-curle" title="Permalink to this equation">#</a></span>\[\nabla \times {\bf E} = - \frac{\partial {\bf B}}{\partial t} \]</div>
 </section>
 <section id="maxwells-equations-in-vacuum">
-<h2><span class="section-number">22.4. </span>Maxwell’s Equations in Vacuum<a class="headerlink" href="#maxwells-equations-in-vacuum" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.4. </span>Maxwell’s Equations in Vacuum<a class="headerlink" href="#maxwells-equations-in-vacuum" title="Permalink to this heading">#</a></h2>
 <p>We can collect together Equations <a class="reference internal" href="#equation-dive">(22.1)</a>, <a class="reference internal" href="#equation-divb">(22.2)</a>, <a class="reference internal" href="#equation-curlb">(22.3)</a> and <a class="reference internal" href="#equation-curle">(22.4)</a> and present as Maxwell’s equations:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqns">
 <span class="eqno">(22.5)<a class="headerlink" href="#equation-maxwellseqns" title="Permalink to this equation">#</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;= \frac{\rho}{\epsilon_0}    \\
@@ -683,7 +685,7 @@ are <em>homogeneous</em>, they are sourced only by the <span class="math notrans
 sourced by additional scalar/vector fields <span class="math notranslate nohighlight">\(\rho,\,{\bf J}\)</span>.</p>
 </section>
 <section id="maxwells-equations-in-matter">
-<h2><span class="section-number">22.5. </span>Maxwell’s Equations in Matter*<a class="headerlink" href="#maxwells-equations-in-matter" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.5. </span>Maxwell’s Equations in Matter*<a class="headerlink" href="#maxwells-equations-in-matter" title="Permalink to this heading">#</a></h2>
 <p>Recall that all the Maxwell equations in <a class="reference internal" href="#equation-maxwellseqns">(22.5)</a> are only valid in vacuum, within matter however electromagnetic fields are better described in terms of the
 <span class="math notranslate nohighlight">\({\bf E} \rightarrow {\bf D}\)</span> and <span class="math notranslate nohighlight">\({\bf B} \rightarrow {\bf H}\)</span> fields, which we use to rewrite Maxwell’s equations in matter as:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqnsmatter">
@@ -694,7 +696,7 @@ sourced by additional scalar/vector fields <span class="math notranslate nohighl
 <p>where <span class="math notranslate nohighlight">\(\rho_{free}\)</span> and <span class="math notranslate nohighlight">\({\bf J}_{free}\)</span> represent charges that move within matter.</p>
 </section>
 <section id="magnetic-monopoles">
-<h2><span class="section-number">22.6. </span>Magnetic Monopoles*<a class="headerlink" href="#magnetic-monopoles" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">22.6. </span>Magnetic Monopoles*<a class="headerlink" href="#magnetic-monopoles" title="Permalink to this heading">#</a></h2>
 <p>If magnetic monopoles were found to exist, then we could add the additional terms to Maxwell’s equations that would need to be present:</p>
 <div class="math notranslate nohighlight" id="equation-maxwellseqnsbmonopole">
 <span class="eqno">(22.7)<a class="headerlink" href="#equation-maxwellseqnsbmonopole" title="Permalink to this equation">#</a></span>\[\begin{split}\nabla\cdot {\bf E} &amp;= \frac{1}{\epsilon_0}\,\rho_E  \\

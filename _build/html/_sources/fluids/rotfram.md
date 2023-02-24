@@ -127,7 +127,14 @@ By defining a reduced pressure $p_R=p-\frac{1}{2}\rho(\underline{\Omega}\times\u
 
 The term $-2(\underline{\Omega}\times\underline{u})$ is called the Coriolis force.
 
-````{exercise}
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+## Chapter exercises 
+
 The Rossby number is defined by
  ```{math}
  \mathrm{Ro}=\frac{U}{Lf}, \quad f=2\Omega\sin(\phi),
@@ -143,10 +150,3 @@ b. Are Coriolis forces important near to the equator?
 c. Jupiter rotates much faster than the Earth. Do you think that Coriolis forces are more prevalent on Earth or on Jupiter? By looking up the rotation rates of the Earth and Jupiter, calculate the ratio of Coriolis forces on Earth and on Jupiter (at equivalent latitude)
 
 d. Estimate the Rossby number for a bathtub in central London. Use your own estimates for the appropriate length scale and speed of the water!
-````
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

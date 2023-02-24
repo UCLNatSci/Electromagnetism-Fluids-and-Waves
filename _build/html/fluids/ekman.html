@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>40. Geophysical phenomena &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,13 +55,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="39. Rotational reference frames" href="rotfram.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -278,18 +280,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -298,23 +300,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -544,6 +546,11 @@ title="Print to PDF"
    40.6. References
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   40.7. Chapter exercises
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -593,6 +600,11 @@ title="Print to PDF"
    40.6. References
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   40.7. Chapter exercises
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -604,7 +616,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="geophysical-phenomena">
-<span id="ch-geophysical"></span><h1><span class="section-number">40. </span>Geophysical phenomena<a class="headerlink" href="#geophysical-phenomena" title="Permalink to this headline">#</a></h1>
+<span id="ch-geophysical"></span><h1><span class="section-number">40. </span>Geophysical phenomena<a class="headerlink" href="#geophysical-phenomena" title="Permalink to this heading">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>How do mountains and ocean floor topography affect fluid circulation high above?</p></li>
@@ -612,30 +624,30 @@ title="Print to PDF"
 <li><p>What are ocean gyres, and how do they form?</p></li>
 </ul>
 <section id="uniform-rotation">
-<h2><span class="section-number">40.1. </span>Uniform rotation<a class="headerlink" href="#uniform-rotation" title="Permalink to this headline">#</a></h2>
-<p>In <a class="reference internal" href="rotfram.html#rotfram-navstok"><span class="std std-numref">Section 39.3</span></a>, the Navier-Stokes equations were presented relative to a rotating frame of reference. The rotating bucket problem seen in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 33.3</span></a> can be tackled using these equations.</p>
+<h2><span class="section-number">40.1. </span>Uniform rotation<a class="headerlink" href="#uniform-rotation" title="Permalink to this heading">#</a></h2>
+<p>In <a class="reference internal" href="rotfram.html#rotfram-navstok"><span class="std std-numref">Section 39.3</span></a>, the Navier-Stokes equations were presented relative to a rotating frame of reference. The rotating bucket problem seen in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 34.2</span></a> can be tackled using these equations.</p>
 <p>We consider a general particle at position <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span>. The particle  has zero velocity relative to the rotating frame, which has angular velocity <span class="math notranslate nohighlight">\(\underline{\Omega}=(0,0,\Omega)\)</span>. Equation <a class="reference internal" href="rotfram.html#equation-rotfram-navstok-eqn">(39.13)</a> then becomes</p>
 <div class="math notranslate nohighlight" id="equation-press-balance">
 <span class="eqno">(40.1)<a class="headerlink" href="#equation-press-balance" title="Permalink to this equation">#</a></span>\[-\frac{1}{\rho}\nabla p_R+\underline{f}=0, \qquad p_R=p-\frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2, \qquad \underline{f}=-\nabla(\rho g z).\]</div>
 <p>We see that the centrifugal acceleration is balanced by a radial pressure gradient so that the streamlines remain circular. For the centrifugal term we obtain</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e75936fd-70d4-4ac6-9c90-7bfc7bc11501">
-<span class="eqno">(40.2)<a class="headerlink" href="#equation-e75936fd-70d4-4ac6-9c90-7bfc7bc11501" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ffb30f56-19dd-450a-97a6-f274b9fea697">
+<span class="eqno">(40.2)<a class="headerlink" href="#equation-ffb30f56-19dd-450a-97a6-f274b9fea697" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{1}{2}\rho(\underline{\Omega}\times\underline{x})^2=\frac{1}{2}\rho\Omega^2(x^2+y^2) = \frac{1}{2}\rho\Omega^2 r^2.
 \end{equation}\]</div>
-<p>Integrating equation <a class="reference internal" href="#equation-press-balance">(40.1)</a> gives the same result obtained in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 33.3</span></a>. The pressure gradient varies linearly in the radial direction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-67f60d07-490e-425c-b89a-34209b9e17c1">
-<span class="eqno">(40.3)<a class="headerlink" href="#equation-67f60d07-490e-425c-b89a-34209b9e17c1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>Integrating equation <a class="reference internal" href="#equation-press-balance">(40.1)</a> gives the same result obtained in <a class="reference internal" href="bernoulli.html#bucket-exercise"><span class="std std-numref">Exercise 34.2</span></a>. The pressure gradient varies linearly in the radial direction:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5c2f0c27-f128-4728-84f7-35b502844b4b">
+<span class="eqno">(40.3)<a class="headerlink" href="#equation-5c2f0c27-f128-4728-84f7-35b502844b4b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\partial p}{\partial r}=\rho\Omega^2 r.
 \end{equation}\]</div>
 </section>
 <section id="almost-uniform-rotation">
-<h2><span class="section-number">40.2. </span>Almost uniform rotation<a class="headerlink" href="#almost-uniform-rotation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">40.2. </span>Almost uniform rotation<a class="headerlink" href="#almost-uniform-rotation" title="Permalink to this heading">#</a></h2>
 <p>We now consider the case of a body of fluid that undergoes weak motion relative to a frame rotating at constant angular velocity <span class="math notranslate nohighlight">\(\underline{\Omega}.\)</span> Taking <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(L\)</span> to be characteristic length and velocity scales of the motion allows us to compare the size of the inertial term relative to the Coriolis term:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-27ac9e7b-dcea-46ee-b43d-39318e82a5c9">
-<span class="eqno">(40.4)<a class="headerlink" href="#equation-27ac9e7b-dcea-46ee-b43d-39318e82a5c9" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5f08ee19-813e-4ed7-9449-0be4bb761870">
+<span class="eqno">(40.4)<a class="headerlink" href="#equation-5f08ee19-813e-4ed7-9449-0be4bb761870" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{|\underline{u}.\nabla\underline{u}|}{|\underline{\Omega}\times\underline{u}|}\sim \frac{U^2/L}{\Omega U} = \frac{U}{L\Omega}.\end{equation}\]</div>
 <p>If this ratio is much smaller than one then the inertial term can be neglected to a first approximation. We will also suppose that viscous effects may be neglected in the interior of the fluid (i.e. away from any boundaries), and we will look for steady solutions. The equations of motion then simplify to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-415a3119-0cc6-4b3f-b1db-eedf5fe64e64">
-<span class="eqno">(40.5)<a class="headerlink" href="#equation-415a3119-0cc6-4b3f-b1db-eedf5fe64e64" title="Permalink to this equation">#</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
+<div class="amsmath math notranslate nohighlight" id="equation-3a8b1d2a-f82b-4748-903c-a26cf4f5bdd7">
+<span class="eqno">(40.5)<a class="headerlink" href="#equation-3a8b1d2a-f82b-4748-903c-a26cf4f5bdd7" title="Permalink to this equation">#</a></span>\[\begin{align}2(\underline{\Omega}\times\underline{u})&amp;=-\frac{1}{\rho}\nabla p_R +\underline{f},\\
 \nabla.\underline{u}&amp;=0,\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_R\)</span> denotes the reduced pressure. The prevailing winds <span class="math notranslate nohighlight">\(\underline{u}\)</span> are due to a balance between the Coriolis force and pressure, known as geostrophic balance.</p>
 <p>Taking the angular velocity to be <span class="math notranslate nohighlight">\(\underline{\Omega}=(0,0,\Omega)\)</span> and denoting the velocity by <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span> gives the following scalar (component) form:</p>
@@ -647,14 +659,14 @@ title="Print to PDF"
 &amp;\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z} =0
 \end{align}\end{split}\]</div>
 <p>Integrating the vertical component of the momentum equation and then substituting the result into each of the other three expressions shows that <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span> is fully independent of <span class="math notranslate nohighlight">\(z\)</span> so that the fluid motion is effectively two-dimensional. This result is called the <em>Taylor-Proudman</em> theorem.</p>
-<p>An interesting consequence of this result can occur when the flow encounters an obstacle such as a bump at the bottom of the fluid. The effects of viscosity are confined to a narrow layer attached to the obstacle surface, called an Ekman boundary layer. Above that, the fluid forms a column above the obstacle, which is stationary with respect to the rotating frame. Fluid in the inviscid main part of the flow cannot pass through this column and is deflected around the obstacle at all heights, as shown in the below diagram. The diagram is taken from p118 of <span id="id1">[<a class="reference internal" href="../markdown.html#id3" title="John Marshall and R. Alan Plumb. Atmosphere, Ocean and Climate Dynamics. International Geophysics Ser. ; 93. Web., 2008.">MP08</a>]</span>, which is available in digitised form from UCL library.</p>
+<p>An interesting consequence of this result can occur when the flow encounters an obstacle such as a bump at the bottom of the fluid. The effects of viscosity are confined to a narrow layer attached to the obstacle surface, called an Ekman boundary layer. Above that, the fluid forms a column above the obstacle, which is stationary with respect to the rotating frame. Fluid in the inviscid main part of the flow cannot pass through this column and is deflected around the obstacle at all heights, as shown in the below diagram. The diagram is taken from p118 of <span id="id1">[<a class="reference internal" href="#id5">MP08</a>]</span>, which is available in digitised form from UCL library.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/taylor_col.png" id="taylor-column"><img alt="Deflected flow" class="align-center" id="taylor-column" src="../_images/taylor_col.png" style="width: 366.0px; height: 136.2px;" /></a>
 <br>
 <p>This explains how mountains can affect the patterns of atmospheric flow at very great altitudes above the top of the mountains, and how contours of the ocean floor affect oceanographic flows.</p>
 </section>
 <section id="ekman-boundary-layer">
-<h2><span class="section-number">40.3. </span>Ekman boundary layer<a class="headerlink" href="#ekman-boundary-layer" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">40.3. </span>Ekman boundary layer<a class="headerlink" href="#ekman-boundary-layer" title="Permalink to this heading">#</a></h2>
 <p>In the analysis of the last section, viscous effects were neglected. However, these effects are important near to a boundary.</p>
 <p>In the rotating bucket problem, fluid at the bottom of the vessel adheres to the boundary due to friction. This creates a region, called a <em>boundary layer</em> where the velocity gradient changes sharply, as illustrated in the image below. Within the boundary layer, viscous effects cannot be neglected.</p>
 <br>
@@ -669,56 +681,57 @@ title="Print to PDF"
 &amp;\frac{\partial w}{\partial z} =0
 \end{align}\end{split}\]</div>
 <p>By solving these equations and <em>matching</em> the solution to the inviscid profile found in the inner fluid layer, it can be deduced that the boundary layer thickness scales as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8590d428-ef12-4bd1-bc57-40444a245125">
-<span class="eqno">(40.8)<a class="headerlink" href="#equation-8590d428-ef12-4bd1-bc57-40444a245125" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5b6e28b0-a771-4976-8a43-c8a0130f822f">
+<span class="eqno">(40.8)<a class="headerlink" href="#equation-5b6e28b0-a771-4976-8a43-c8a0130f822f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \delta = \sqrt{\frac{\nu}{\Omega}}
 \end{equation}\]</div>
 <p>The kinematic viscosity of water is approximately <span class="math notranslate nohighlight">\(10^{-6}\mathrm{ms}^{-1}\)</span>. Therefore for a cup of water rotating at <span class="math notranslate nohighlight">\(1\mathrm{rad/s}\)</span> the Ekman layer thickness is estimated to be around 1mm.</p>
 </section>
 <section id="unsteady-secondary-effects">
-<h2><span class="section-number">40.4. </span>Unsteady secondary effects<a class="headerlink" href="#unsteady-secondary-effects" title="Permalink to this headline">#</a></h2>
-<p>The slowdown of the flow due to viscous effects in the Ekman layer means that the centrifugal force is no longer sufficient to balance the pressure gradient and so there is a net pressure towards the centre. The pressure gradient creates an unsteady (time-dependent) secondary flow that suctions fluid from the outer radius of the Ekman layer and pumps it up from the centre into the inviscid main body, creating a circulation effect as shown in the diagram below, taken from <span id="id2">[<a class="reference internal" href="../markdown.html#id5" title="Pijush K. Kundru, Ira M. Cohen, and David R. Dowling. Fluid Mechanics (Fifth Edition). Elsevier, 2005.">KCD05</a>]</span>.</p>
+<h2><span class="section-number">40.4. </span>Unsteady secondary effects<a class="headerlink" href="#unsteady-secondary-effects" title="Permalink to this heading">#</a></h2>
+<p>The slowdown of the flow due to viscous effects in the Ekman layer means that the centrifugal force is no longer sufficient to balance the pressure gradient and so there is a net pressure towards the centre. The pressure gradient creates an unsteady (time-dependent) secondary flow that suctions fluid from the outer radius of the Ekman layer and pumps it up from the centre into the inviscid main body, creating a circulation effect as shown in the diagram below, taken from <span id="id2">[<a class="reference internal" href="#id7">KCD05</a>]</span>.</p>
 <p>This explains the so-called “tea leaf paradox” in which tea-leaves are observed to settle at the centre of a stirred cup rather than migrating to the edges. Leaves either descend by gravity or they are transported by centrifugal acceleration to towards the sidewall and driven down into the Ekman layer. Within the boundary layer they are swept to the centre and then dropped as fluid is pumped back into the inviscid layer.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/teacup.png" id="teacup"><img alt="secondary circulation" class="align-center" id="teacup" src="../_images/teacup.png" style="width: 563.2px; height: 240.8px;" /></a>
 <br>
 <p>The continual pumping action of fluid from the inviscid main body into the viscous boundary also means that viscous effects become apparent on a much shorter timescale than would be expected due to viscous diffusion alone. By dimensional analysis, the timescales for viscous diffusion and Ekman pumping are found to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-79d4f96f-24f5-42ee-9af0-2f3efd8fa79d">
-<span class="eqno">(40.9)<a class="headerlink" href="#equation-79d4f96f-24f5-42ee-9af0-2f3efd8fa79d" title="Permalink to this equation">#</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c7e05d6d-71d0-436e-99bd-79d7128700ed">
+<span class="eqno">(40.9)<a class="headerlink" href="#equation-c7e05d6d-71d0-436e-99bd-79d7128700ed" title="Permalink to this equation">#</a></span>\[\begin{equation}T_{\text{diff}}\sim \frac{L^2}{\nu}, \qquad T_{\text{Eck}}\sim \sqrt{\frac{L^2}{\nu \Omega}},\end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(L\)</span> is a characteristic lengtscale of the motion. For a teacup the viscous diffusion timescale gives a spindown time of about an hour, whilst the Ekman diffusion timescale is about a minute.</p>
 </section>
 <section id="oceanography">
-<h2><span class="section-number">40.5. </span>Oceanography<a class="headerlink" href="#oceanography" title="Permalink to this headline">#</a></h2>
-<p>Ekman layers occur in the ocean. For the rotating teacup we were most concerned with the boundary layer that forms at the bottom of the cup, but in the ocean it is often the surface layer that we are more interested in. Strong planar winds at the ocean surface can create a shear current in the upper ocean. In combination with the Coriolis acceleration, this creates a spiral flow in the Ekman layer, as shown in the below images from <span id="id3">[<a class="reference internal" href="../markdown.html#id6" title="Benoit Cushman-Roisin and Jean-Marie Beckers. Introduction to Geophysical Fluid Dynamics: Physical and Numerical Aspects. Elsevier, 2011.">CRB11</a>]</span>.</p>
+<h2><span class="section-number">40.5. </span>Oceanography<a class="headerlink" href="#oceanography" title="Permalink to this heading">#</a></h2>
+<p>Ekman layers occur in the ocean. For the rotating teacup we were most concerned with the boundary layer that forms at the bottom of the cup, but in the ocean it is often the surface layer that we are more interested in. Strong planar winds at the ocean surface can create a shear current in the upper ocean. In combination with the Coriolis acceleration, this creates a spiral flow in the Ekman layer, as shown in the below images from <span id="id3">[<a class="reference internal" href="#id8">CRB11</a>]</span>.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/ekman-spiral.png" id="ekman-spiral"><img alt="Ekman spiral" class="align-center" id="ekman-spiral" src="../_images/ekman-spiral.png" style="width: 757.8px; height: 261.0px;" /></a>
 <br>
 <p>This can lead to the formation of circulating currents called <a class="reference external" href="https://www.nationalgeographic.org/encyclopedia/ocean-gyre/">ocean gyres</a>. Secondary circulation effects can also cause upwelling or downwelling to occur, and these effects may be particularly important near to landmasses, where upwelling can bring nutrient rich water to the ocean surface, as described in <a class="reference external" href="https://www.youtube.com/watch?v=KBKmKI3tl4Q">this video</a>.</p>
 <p>Estimates using the earth’s rotation rate and the molecular viscosity of water lead to Ekman thickness estimates of around 10cm. However, observational data shows that Ekman layers can have a thickness of tens of metres. This is because turbulent mixing in the ocean affects shear stress in a similar way to viscosity, resulting in an effective viscosity some 1000 times greater.</p>
-<div class="exercise admonition" id="fluids/ekman-exercise-0">
-
-<p class="admonition-title"><span class="caption-number">Exercise 40.1 </span></p>
-<section id="exercise-content">
-<p>Read <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780128215555000012">Chapter 3 (pp27-44) of Threats to the Arctic</a>. Write a 200 word summary explaining what the Beaufort Gyre (BG) is and how it affects the freshwater composition of the Atlantic. What do you think would happen if the Arctic Ocean became a low pressure system due to the rising of warm air?</p>
-<p>image: <span id="id4">[<a class="reference internal" href="../markdown.html#id6" title="Benoit Cushman-Roisin and Jean-Marie Beckers. Introduction to Geophysical Fluid Dynamics: Physical and Numerical Aspects. Elsevier, 2011.">CRB11</a>]</span></p>
-</section>
-</div>
 </section>
 <section id="references">
-<h2><span class="section-number">40.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id5">
-<dl class="citation">
-<dt class="label" id="id9"><span class="brackets">CRB11</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>Benoit Cushman-Roisin and Jean-Marie Beckers. <em>Introduction to Geophysical Fluid Dynamics: Physical and Numerical Aspects</em>. Elsevier, 2011.</p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">KCD05</a></span></dt>
-<dd><p>Pijush K. Kundru, Ira M. Cohen, and David R. Dowling. <em>Fluid Mechanics (Fifth Edition)</em>. Elsevier, 2005.</p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id1">MP08</a></span></dt>
-<dd><p>John Marshall and R. Alan Plumb. <em>Atmosphere, Ocean and Climate Dynamics</em>. International Geophysics Ser. ; 93. Web., 2008.</p>
-</dd>
-</dl>
+<h2><span class="section-number">40.6. </span>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<p id="id4"><div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CRB11<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id11">2</a>)</span>
+<p>Benoit Cushman-Roisin and Jean-Marie Beckers. <em>Introduction to Geophysical Fluid Dynamics: Physical and Numerical Aspects</em>. Elsevier, 2011.</p>
 </div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">KCD05</a><span class="fn-bracket">]</span></span>
+<p>Pijush K. Kundru, Ira M. Cohen, and David R. Dowling. <em>Fluid Mechanics (Fifth Edition)</em>. Elsevier, 2005.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">MP08</a><span class="fn-bracket">]</span></span>
+<p>John Marshall and R. Alan Plumb. <em>Atmosphere, Ocean and Climate Dynamics</em>. International Geophysics Ser. ; 93. Web., 2008.</p>
+</div>
+</div>
+</p>
+</section>
+<section id="chapter-exercises">
+<h2><span class="section-number">40.7. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
+<p>Read <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780128215555000012">Chapter 3 (pp27-44) of Threats to the Arctic</a>. Write a 200 word summary explaining what the Beaufort Gyre (BG) is and how it affects the freshwater composition of the Atlantic. What do you think would happen if the Arctic Ocean became a low pressure system due to the rising of warm air?</p>
+<p>Hint: The BG is driven by Northern Hemisphere anticyclonic (clockwise) winds. Due to the Corilolis force, the net Ekman transport is to the right of the wind direction, i.e. towards the centre of the gyre. This results in downwelling at the centre of the gyre.</p>
+<a class="reference internal image-reference" href="../_images/anticyclone.jpg" id="anticyclonic-gyre"><img alt="anticyclonic gyre" class="align-center" id="anticyclonic-gyre" src="../_images/anticyclone.jpg" style="width: 292.0px; height: 177.0px;" /></a>
+<p>image: <span id="id11">[<a class="reference internal" href="#id8">CRB11</a>]</span></p>
 </section>
 </section>
 

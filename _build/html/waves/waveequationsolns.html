@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>5. Solutions to the Wave Equation &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. Transverse Waves" href="transverse.html" />
     <link rel="prev" title="4. Longitudinal Waves" href="longitudinal.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -585,11 +587,11 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="solutions-to-the-wave-equation">
-<h1><span class="section-number">5. </span>Solutions to the Wave Equation<a class="headerlink" href="#solutions-to-the-wave-equation" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">5. </span>Solutions to the Wave Equation<a class="headerlink" href="#solutions-to-the-wave-equation" title="Permalink to this heading">#</a></h1>
 <p>The wave equation interestingly is a rare example of a partial differential equation (PDE) which exhibits
 fairly simple solutions, despite its complexity (in general PDEs are quite difficult to solve exactly).</p>
 <section id="analysis-of-the-wave-equation-pde">
-<h2><span class="section-number">5.1. </span>Analysis of the Wave Equation PDE<a class="headerlink" href="#analysis-of-the-wave-equation-pde" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.1. </span>Analysis of the Wave Equation PDE<a class="headerlink" href="#analysis-of-the-wave-equation-pde" title="Permalink to this heading">#</a></h2>
 <p>One way to find solutions is to rewrite the wave equation in a factorised form (by analogy to the difference of two squares)</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial^2 u}{\partial t^2} - c^2 \frac{\partial^2 u}{\partial x^2 } = 0 \Rightarrow 
@@ -645,7 +647,7 @@ moving wave solutions here, to see how consider the functions first at <span cla
 </figure>
 </section>
 <section id="separable-ansatz-for-wave-equation-pde">
-<h2><span class="section-number">5.2. </span>Separable Ansatz for Wave Equation PDE<a class="headerlink" href="#separable-ansatz-for-wave-equation-pde" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.2. </span>Separable Ansatz for Wave Equation PDE<a class="headerlink" href="#separable-ansatz-for-wave-equation-pde" title="Permalink to this heading">#</a></h2>
 <p>Although this analysis gives us the functional dependence of the functions <span class="math notranslate nohighlight">\(A,\,B\)</span>, it does not narrow down
 their form.  We can however use the fact that the PDE is also separable into two ODEs to solve here, our
 ansatz for the form of <span class="math notranslate nohighlight">\(u\)</span>:</p>
@@ -699,7 +701,7 @@ generality, as we have not fixed a value of  constant <span class="math notransl
 more useful way to understand wave behaviour.</p>
 </section>
 <section id="phasor-representation">
-<h2><span class="section-number">5.3. </span>Phasor Representation<a class="headerlink" href="#phasor-representation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.3. </span>Phasor Representation<a class="headerlink" href="#phasor-representation" title="Permalink to this heading">#</a></h2>
 <p>We can reduce the form of these wave solutions further, since we have not fixed the constants in our system
 (we will do so from initial conditions later), then without less of generality we can write:</p>
 <div class="math notranslate nohighlight">
@@ -723,7 +725,7 @@ the phases, <span class="math notranslate nohighlight">\(\phi_1 = \phi_2 = 0\)</
 <p>where <span class="math notranslate nohighlight">\(A,\, B\)</span> are constants to be found.</p>
 </section>
 <section id="features-of-wave-solutions">
-<h2><span class="section-number">5.4. </span>Features of Wave Solutions<a class="headerlink" href="#features-of-wave-solutions" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">5.4. </span>Features of Wave Solutions<a class="headerlink" href="#features-of-wave-solutions" title="Permalink to this heading">#</a></h2>
 <p>Lets examine these quantities <span class="math notranslate nohighlight">\(k,\, \omega\)</span> a little more closely too, start with a right travelling wave <span class="math notranslate nohighlight">\(u\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[u(x,\,t) = u_0 \,\exp\left(i(kx - \omega t)\right)\]</div>

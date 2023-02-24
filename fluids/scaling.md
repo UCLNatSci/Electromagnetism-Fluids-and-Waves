@@ -77,77 +77,6 @@ Now suppose we wish to repeat the experiment with the walls moved further apart.
 
 The Reynolds number is sometimes used in conjunction with other non-dimensional quantities. For instance, the Froude and Reynolds numbers may be used together to model the transition from laminar to turbulent flow in open channels or to model the combined effects of viscous and non-viscous drag.
 
-````{exercise}
-
-An incompressible fluid of uniform density $\rho$ and viscosity $\nu$ flows steadily past a long, flat plate at $y=0$, which is parallel to the free stream velocity $(U_{\infty},0)$ as shown.
-
-<br>
-
-```{image} navstok_img/boundary.png
----
-name: channel
-alt: channel flow
-align: center
-scale: 80%
----
-```
-<br>
-
-Write down the complete two-dimensional Cartesian equations of motion for the velocity components $(u,v)$ in scalar form.
-
-Then, assuming there is no pressure gradient in the downstream direction, rewrite the $x$-component of the conservation of momentum equation in terms of non-dimensional variables
-
-\begin{equation*}
-\hat{x}=\frac{x}{L}, \quad \hat{y}=\frac{y}{\delta}, \quad \hat{u}=\frac{u}{U_{\infty}}, \quad \hat{v}=\frac{Lv}{\delta U_{\infty}},
-\end{equation*}
-
-where the unspecified dimensional constants $L$, $\delta$, are characteristic length scales of the motion in the horizontal and vertical directions. Show that the resulting equation may be written as
-
-\begin{equation*}
-\label{momeq}\tag{*}
-\frac{\partial \hat{u}}{\partial \hat{x}}+\frac{\partial \hat{u}}{\partial \hat{y}}-\frac{1}{R}\left[\frac{\partial^2 \hat{u}}{\partial \hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{v}}{\partial \hat{y}^2}\right], \quad R=\frac{U_{\infty} L}{\nu}.
-\end{equation*}
-
-Identify the convective terms and the inertial terms in equation (*), given above. Assuming that the Reynolds number $R$ is large, which of the four terms of this equation do you expect to balance and which can be neglected?
-````
-
-```{toggle}
-
-**Conservation of mass** :
-
-\begin{equation*}\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}=0\end{equation*}
-
-**Conservation of momentum** :
-
-\begin{align*}
-u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}&=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\right)\\
-u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}&=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}\right)\\
-\end{align*}
-
-In terms of the non-dimensional variables (and with the pressure term dropped):
-
-\begin{align*}&\frac{U_0^2}{L}\frac{\partial \hat{u}}{\partial\hat{x}}+\frac{V_0}{\delta}U_0\frac{\partial \hat{u}}{\partial\hat{y}}=\nu\left(\frac{U_0}{L^2}\frac{\partial^2 \hat{u}}{\partial\hat{x}^2}+\frac{U_0}{\delta^2}\frac{\partial^2 \hat{u}}{\partial\hat{y}^2}\right)\\
-&\Rightarrow \quad \frac{U_0^2}{L}\left[\frac{\partial\hat{u}}{\partial\hat{x}}+\frac{\partial\hat{u}}{\partial\hat{y}}-\frac{\nu}{U_0 L}\left(\frac{\partial^2\hat{u}}{\partial\hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial\hat{y}^2}\right)\right]=0
-\end{align*}
-
-That is,
-\begin{equation*}
-\frac{\partial \hat{u}}{\partial \hat{x}}+\frac{\partial \hat{u}}{\partial \hat{y}}-\frac{1}{R}\left[\frac{\partial^2 \hat{u}}{\partial \hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial \hat{y}^2}\right], \quad R=\frac{U_{\infty} L}{\nu}.
-\end{equation*}
-
-The inertial terms are $\displaystyle \frac{\partial\hat{u}}{\partial\hat{x}}+\frac{\partial\hat{u}}{\partial\hat{y}}$
-
-The convective terms are $\displaystyle \frac{1}{R}\left[\frac{\partial^2\hat{u}}{\partial\hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{u}}{\partial\hat{y}^2}\right]$
-
-As $R\rightarrow\infty$, $\displaystyle\frac{1}{R}\frac{\partial^2\hat{u}}{\partial\hat{x}^2}\rightarrow 0$.
-
-However, close to the boundary, $\displaystyle \frac{1}{R}\left(\frac{L}{\delta}\right)^2$ may be $\mathcal{O}(1)$, so the term involving $\displaystyle \frac{\partial^2\hat{u}}{\partial\hat{y}^2}$ should not be neglected.
-
-Note: the equations of motion should be supplemented by boundary conditions. The appropriate conditions for this problem are "no slip" and no through-flow at the plate (see chapter {numref}`steady-soln`), and a requirement that the velocity must approach the free stream away from the boundary:
-
-\begin{equation*}u(y=0)=0, \quad v(y=0)=0, \quad \lim_{y \rightarrow \infty}\underline{v}=(U_{\infty},0)\end{equation*}
-```
-
 ## Navier-Stokes equations for viscous flow
 
 We assume that the scales of local acceleration, inertia and pressure are comparable so that the following non-dimensionalisations of time and velocity are sensible:
@@ -197,3 +126,36 @@ Organisms that inhabit a low Reynolds number world employ a variety of exotic sw
 
 I also recommend watching a portion (from 25:00) of [this lecture](https://www.youtube.com/watch?v=51-6QCJTAjU) by the legendary fluid dynamicist G.I. Taylor, given over half a century ago.
 ```
+
+## Chapter exercises 
+
+An incompressible fluid of uniform density $\rho$ and viscosity $\nu$ flows steadily past a long, flat plate at $y=0$, which is parallel to the free stream velocity $(U_{\infty},0)$ as shown.
+
+<br>
+
+```{image} navstok_img/boundary.png
+---
+name: channel
+alt: channel flow
+align: center
+scale: 80%
+---
+```
+<br>
+
+Write down the complete two-dimensional Cartesian equations of motion for the velocity components $(u,v)$ in scalar form.
+
+Then, assuming there is no pressure gradient in the downstream direction, rewrite the $x$-component of the conservation of momentum equation in terms of non-dimensional variables
+
+\begin{equation*}
+\hat{x}=\frac{x}{L}, \quad \hat{y}=\frac{y}{\delta}, \quad \hat{u}=\frac{u}{U_{\infty}}, \quad \hat{v}=\frac{Lv}{\delta U_{\infty}},
+\end{equation*}
+
+where the unspecified dimensional constants $L$, $\delta$, are characteristic length scales of the motion in the horizontal and vertical directions. Show that the resulting equation may be written as
+
+\begin{equation*}
+\label{momeq}\tag{*}
+\frac{\partial \hat{u}}{\partial \hat{x}}+\frac{\partial \hat{u}}{\partial \hat{y}}-\frac{1}{R}\left[\frac{\partial^2 \hat{u}}{\partial \hat{x}^2}+\left(\frac{L}{\delta}\right)^2\frac{\partial^2\hat{v}}{\partial \hat{y}^2}\right], \quad R=\frac{U_{\infty} L}{\nu}.
+\end{equation*}
+
+Identify the convective terms and the inertial terms in equation (*), given above. Assuming that the Reynolds number $R$ is large, which of the four terms of this equation do you expect to balance and which can be neglected?

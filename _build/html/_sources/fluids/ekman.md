@@ -155,27 +155,22 @@ This can lead to the formation of circulating currents called [ocean gyres](http
 
 Estimates using the earth's rotation rate and the molecular viscosity of water lead to Ekman thickness estimates of around 10cm. However, observational data shows that Ekman layers can have a thickness of tens of metres. This is because turbulent mixing in the ocean affects shear stress in a similar way to viscosity, resulting in an effective viscosity some 1000 times greater.
 
+## References
 
-`````{exercise}
+```{bibliography}
+:filter: docname in docnames
+```
+
+## Chapter exercises 
+
 Read [Chapter 3 (pp27-44) of Threats to the Arctic](https://www.sciencedirect.com/science/article/pii/B9780128215555000012). Write a 200 word summary explaining what the Beaufort Gyre (BG) is and how it affects the freshwater composition of the Atlantic. What do you think would happen if the Arctic Ocean became a low pressure system due to the rising of warm air?
-````{panels}
-:card: border-0
+
 Hint: The BG is driven by Northern Hemisphere anticyclonic (clockwise) winds. Due to the Corilolis force, the net Ekman transport is to the right of the wind direction, i.e. towards the centre of the gyre. This results in downwelling at the centre of the gyre.
----
+
 ```{image} navstok_img/anticyclone.jpg
 :name: anticyclonic gyre
 :alt: anticyclonic gyre
 :align: center
 :scale: 100%
 ```
-````
 image: {cite}`geoflu`
-`````
-
-
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

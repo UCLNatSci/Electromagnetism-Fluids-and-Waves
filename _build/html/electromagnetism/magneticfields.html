@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>18. Magnetism &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="19. Magnetic Forces" href="magneticforces.html" />
     <link rel="prev" title="17. Energy in an Electric Field" href="Efieldenergy.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -585,9 +587,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="magnetism">
-<h1><span class="section-number">18. </span>Magnetism<a class="headerlink" href="#magnetism" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">18. </span>Magnetism<a class="headerlink" href="#magnetism" title="Permalink to this heading">#</a></h1>
 <section id="gausss-law-for-magnetism">
-<h2><span class="section-number">18.1. </span>Gauss’s Law for Magnetism<a class="headerlink" href="#gausss-law-for-magnetism" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">18.1. </span>Gauss’s Law for Magnetism<a class="headerlink" href="#gausss-law-for-magnetism" title="Permalink to this heading">#</a></h2>
 <p>Now that we have got electric fields under control, we should turn our head to magnetic fields.  There are clearly some relationships between the two, as well
 discovering currents, fields and magnets all may interact.  Lets consider a bar magnet, as shown in <a class="reference internal" href="#barmagnetbfield"><span class="std std-numref">Fig. 18.1</span></a>, the field lines show the
 circulation of magnetic field lines from the North pole and into the South pole.  A simple way we can observe this is with iron filings or a compass, to trace
@@ -621,7 +623,7 @@ only magnetic dipoles, with north and south poles, hence the sum of the all the 
 own is not a very useful way to understand magnetic systems.  However we can find the magnetic flux through <em> open surfaces </em> to be useful, as we will see later.</p>
 </section>
 <section id="like-and-opposite-poles">
-<h2><span class="section-number">18.2. </span>Like and Opposite Poles<a class="headerlink" href="#like-and-opposite-poles" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">18.2. </span>Like and Opposite Poles<a class="headerlink" href="#like-and-opposite-poles" title="Permalink to this heading">#</a></h2>
 <p>We can see that the addition of different magnetic poles can produce magnetic flux, as <a class="reference internal" href="#likeoppositepoles"><span class="std std-numref">Fig. 18.3</span></a> shows.  Drawing a surface between the poles
 in the middle of the diagram shows that if the net flux is zero, we have the presence of like poles.  If however there is a next flux out of (or in to) a
 surface, then there is a net presence of a north (or south pole) in or near the surface.</p>
@@ -642,7 +644,7 @@ depicted in <a class="reference internal" href="#isingmodel"><span class="std st
 </figure>
 </section>
 <section id="magnetic-fields-currents-and-biot-savart-law">
-<h2><span class="section-number">18.3. </span>Magnetic Fields, Currents and Biot-Savart Law<a class="headerlink" href="#magnetic-fields-currents-and-biot-savart-law" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">18.3. </span>Magnetic Fields, Currents and Biot-Savart Law<a class="headerlink" href="#magnetic-fields-currents-and-biot-savart-law" title="Permalink to this heading">#</a></h2>
 <p>Experimentally we observe that a currents flowing in wires produce magnetic fields, as seen in <a class="reference internal" href="#bfieldcurrent"><span class="std std-numref">Fig. 18.5</span></a>.  As the iron flings pattern shows,  larger currents
 (here from more current carrying wire) produce stronger magnetic fields, so lets posit <span class="math notranslate nohighlight">\(B \propto I\)</span>.</p>
 <figure class="align-default" id="bfieldcurrent">
@@ -714,7 +716,7 @@ carrying current <span class="math notranslate nohighlight">\(I\)</span> at a di
 <span class="eqno">(18.5)<a class="headerlink" href="#equation-infinitewirebfield" title="Permalink to this equation">#</a></span>\[{\bf B} = \frac{\mu_0\,I}{2\pi\,r}\,\hat{{\bf \theta}} \]</div>
 </section>
 <section id="magnetic-field-around-a-finite-wire">
-<h2><span class="section-number">18.4. </span>Magnetic Field around a Finite Wire<a class="headerlink" href="#magnetic-field-around-a-finite-wire" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">18.4. </span>Magnetic Field around a Finite Wire<a class="headerlink" href="#magnetic-field-around-a-finite-wire" title="Permalink to this heading">#</a></h2>
 <p>Solving the Biot-Savart law for different situations looking tricky, however for a finite wire we can think about the system in terms of angles,
 as depicted in <a class="reference internal" href="#bslawangles"><span class="std std-numref">Fig. 18.9</span></a>.</p>
 <figure class="align-default" id="bslawangles">

@@ -139,44 +139,6 @@ According to Bernoulli's theorem $p_1-p_0=\rho g h$, so using the result for the
 \begin{equation}u_0=\sqrt{\frac{2gh}{1-A^2/B^2}}.\end{equation}
 If we know the ratio of the two cross-sectional areas, then by measuring height $h$ in the fluid column we may determine the flow speed through the narrow part of the pipe.
 
-````{exercise}
-
-Water flows along a horizontal pipe, through a contraction and out into the atmosphere, as shown. Given that the volumetric flow rate is $Q$, estimate the maximum height $h$ for which water can be drawn into the main flow from a lower reservoir that is open to the atmosphere.
-
-<br>
-
-```{image} navstok_img/reservoir.png
----
-name: reservoir
-alt: a particle moving through a potential field
-align: center
-scale: 80%
----
-```
-<br>
-````
-
-```{toggle}
-Taking the speed of the fluid on a central streamline to be $u_A,u_B$ at $A,B$, mass conservation gives
-
-\begin{equation*}u_A=\frac{Q}{A}, \quad u_B=\frac{Q}{B}\end{equation*}
-
-Taking the pressure to be $p_A,p_B$ at $A,B$, Bernoulli's theorem for the central streamline gives
-
-\begin{equation*}p_B+\frac{1}{2}\rho u_B^2=p_A+\frac{1}{2}\rho u_A^2\end{equation*}
-
-And Bernoulli's equation for particles drawn from the reservoir gives
-
-$p_0=p_A+\rho g h$
-
-where $p_0$ is atmospheric pressure, and we also have $p_0=p_B$ since the pipe is open at $B$.
-
-Combining the equations gives the result
-
-\begin{equation*}h=\frac{Q^2}{2g}\left(\frac{1}{A^2}-\frac{1}{B^2}\right)\end{equation*}
-```
-
-
 ### A rotating bucket
 
 Consider an ideal fluid of zero viscosity, rotating under gravity $g$ about the $z$ axis with constant angular velocity $\Omega=\dot{\theta}$.
@@ -226,8 +188,23 @@ align: center
 scale: 60%
 ---
 ```
+
+## Chapter exercises 
+
+**Question 1**<br>
+Water flows along a horizontal pipe, through a contraction and out into the atmosphere, as shown. Given that the volumetric flow rate is $Q$, estimate the maximum height $h$ for which water can be drawn into the main flow from a lower reservoir that is open to the atmosphere.
+
 <br>
 
-```{exercise}
-Produce a figure similar to the one above, by plotting the vector field, streamlines and isosurface in Python. You can take arbitrary values for $p_0,\Omega,\rho,g$, since they do not affect the shape.
+```{image} navstok_img/reservoir.png
+---
+name: reservoir
+alt: a particle moving through a potential field
+align: center
+scale: 80%
+---
 ```
+<br>
+
+**Question 2**<br>
+Produce a figure similar to the one above, by plotting the vector field, streamlines and isosurface in Python. You can take arbitrary values for $p_0,\Omega,\rho,g$, since they do not affect the shape.

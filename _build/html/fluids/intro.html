@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>25. Introduction &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -58,7 +60,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="26. Mathematical background" href="mathideas.html" />
     <link rel="prev" title="24. Energy in an Electromagnetic field" href="../electromagnetism/EMenergy.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -277,18 +279,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -297,23 +299,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -516,7 +518,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1><span class="section-number">25. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">25. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>Fluid dynamics is the study of flow. Since anything that flows can be thought of as a fluid, this field of study covers a tremendous range of applications, including aerodynamics, meteorology, hydraulics, oceanography, astrophysical dynamics, acoustics, hemodynamics (blood flow) and mucus flows. Principles of fluid dynamics have even been applied to the study of granular flows, such as dry sand, vehicular traffic and crowd dynamics.</p>
 <p>Despite the vast range of applications, most of these phenomena can be examined by just three unifying principles:</p>
 <ul class="simple">
@@ -533,18 +535,23 @@ title="Print to PDF"
 <br>
 <p>In actuality, the concept of “density” does not apply very meaningfully at the microscopic level, since the density at each point is defined by either being “inside” or “outside” an atom.</p>
 <h2> About this book: </h2>
-<p>In <strong>chapters 26-29</strong> we introduce some of the mathematical ideas that are required to discuss and mathematically analyse fluid behaviours. We consider different ways of describing fluid motion and distinguish between streamlines and particle paths. We introduce the important concepts of divergence, vorticity, potential flow.</p>
-<p>In <strong>chapters 30-31</strong> the equations of motion are introduced from first principles. The concept of viscosity is given a detailed treatment, through which we start to consider the interesting behaviours of some fluids such as ketchup, paint, and blood.</p>
-<p>In <strong>chapters 32-33</strong> we look at the steady form of the Navier-Stokes equations. For the viscous case we derive flow profiles for some simple geometries. For the inviscid (Euler) case we derive Bernoulli’s equation, which relates pressure and velocity along a streamline.</p>
-<p>In <strong>chapter 34</strong> we begin to consider how scaling arguments can be used to compare the results of different experiments and to simplify the theory by establishing rational ways to make approximations. Here, we introduce the famous Reynolds number, as well as some other non-dimensional parameters of interest.</p>
-<p>In <strong>chapter 35</strong> we briefly introduce perturbation techniques that can be used to investigate nearly steady flows and develop models of laminar-turbulent transition. We also introduce the important concept of a boundary layer, and touch upon a mathematical technique that is used to identify and study different layers in the fluid.</p>
-<p>In <strong>chapter 36</strong> it is shown that vorticity can only arise in a viscous flow, and that by neglecting viscosity we encounter the unphysical result that an aeroplane can fly without experiencing any drag. Nevertheless, the inviscid result is useful here and helps us to understand where lift comes from.</p>
+<p>In <strong>chapter 26</strong> we introduce some of the mathematical ideas that are required to discuss and mathematically analyse fluid behaviours.</p>
+<p>In <strong>chapter 27</strong> we consider different ways of describing fluid motion and distinguish between streamlines and particle paths.</p>
+<p>In <strong>chapter 28</strong> We introduce the important concepts of divergence and vorticity from a mathematical and physical (fluid) perspective</p>
+<p>In <strong>chapters 29</strong> the equations of motion are introduced from first principles and given in vector and component form.</p>
+<p>In <strong>chapter 30</strong> The concept of viscosity is given a detailed treatment, through which we start to consider the interesting behaviours of some fluids such as ketchup, paint, and blood.</p>
+<p>In <strong>chapter 31</strong> we begin to consider how scaling arguments can be used to compare the results of different experiments and to simplify the theory by establishing rational ways to make approximations.</p>
+<p>In <strong>chapters 32</strong> we look at the steady form of the Navier-Stokes equations and we derive flow profiles for some simple geometries.</p>
+<p>In <strong>chapter 33</strong> we examine the concept of scalar potential in more detail, in preparation for the following chapters.</p>
+<p>In <strong>chapter 34</strong> we derive Bernoulli’s equation for the inviscid (Euler) case, which relates pressure and velocity along a streamline.</p>
+<p>In <strong>chapter 35</strong> it is shown that vorticity can only arise in a viscous flow, and that by neglecting viscosity we encounter the unphysical result that an aeroplane can fly without experiencing any drag. Resolving the paradox helps us to understand where lift comes from.</p>
+<p>In <strong>chapter 36</strong> we briefly introduce techniques that can be used to investigate nearly steady flows and to develop models of laminar-turbulent transition. We also introduce the important concept of a boundary layer.</p>
 <p>In <strong>chapters 37-38</strong> we take a brief look at water waves and sound waves. These two types of waves are generated by very different mechanisms. Surface water waves are gravity driven and can be treated by assuming that the fluid is both incompressible and irrotational. Sound waves are pressure driven and require compressibility to be taken into account.</p>
 <p>In <strong>chapters 39-40</strong> we look at some geophysical phenomena that relate to rotating fluids such as hurricanes, tornadoes and ocean gyres. We also explain the famous “tea leaf paradox”. The material in these two chapters it is not strictly necessary for this course, and could be skimmed or skipped entirely, though it will be discussed in lecture.</p>
 <br>
-<div class="admonition-please-kindly-note admonition">
-<p class="admonition-title">Please kindly note</p>
-<p>These notes on fluid dynamics are new (2022). Therefore it is highly likely that they will contain some errors and omissions. If you spot anything in the notes that seems <em>suspect</em>, please let me know so that it can be corrected or explained.</p>
+<div class="admonition-in-case-of-errors admonition">
+<p class="admonition-title">In case of errors</p>
+<p>If you spot anything in the notes that seems <em>suspect</em>, please let me know so that it can be corrected or explained.</p>
 <p>–Ella.</p>
 </div>
 </section>

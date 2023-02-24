@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>15. Electrostatics &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="16. Solving Electrostatic Systems" href="solvingEsystems.html" />
     <link rel="prev" title="14. Mathematical Preliminaries" href="EMmaths.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -609,9 +611,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="electrostatics">
-<h1><span class="section-number">15. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">15. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this heading">#</a></h1>
 <section id="coulombs-law">
-<h2><span class="section-number">15.1. </span>Coulombs Law<a class="headerlink" href="#coulombs-law" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.1. </span>Coulombs Law<a class="headerlink" href="#coulombs-law" title="Permalink to this heading">#</a></h2>
 <p>Lets start with the basics, Coulombs law in Equation <a class="reference internal" href="#equation-coulombslaw">(15.1)</a>, tells us that a repulsive force between two
 charges <span class="math notranslate nohighlight">\(Q_i\)</span>, <span class="math notranslate nohighlight">\(Q_1\)</span> at the origin and <span class="math notranslate nohighlight">\(Q_2\)</span> at distance <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-coulombslaw">
@@ -639,11 +641,11 @@ and in the direction a positive charge would follow (here outwards as like charg
 describe electric fields from point charges, where does is arrive from? Will it work in more complicated situations?</p>
 </section>
 <section id="superposition-of-charges">
-<h2><span class="section-number">15.2. </span>Superposition of charges<a class="headerlink" href="#superposition-of-charges" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.2. </span>Superposition of charges<a class="headerlink" href="#superposition-of-charges" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="infinitesimal-coulombs-law">
-<h2><span class="section-number">15.3. </span>Infinitesimal Coulombs law<a class="headerlink" href="#infinitesimal-coulombs-law" title="Permalink to this headline">#</a></h2>
-<p>Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in <a class="reference internal" href="#semicirculararcofcharge"><span class="std std-numref">Fig. 15.2</span></a></p>
+<h2><span class="section-number">15.3. </span>Infinitesimal Coulombs law<a class="headerlink" href="#infinitesimal-coulombs-law" title="Permalink to this heading">#</a></h2>
+<p>Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in <a class="reference internal" href="solvingEsystems.html#semicirculararcofcharge"><span class="std std-numref">Fig. 16.9</span></a></p>
 <figure class="align-default" id="semicirculararcofcharge">
 <img alt="../_images/SemiCircularArcofCharge.png" src="../_images/SemiCircularArcofCharge.png" />
 <figcaption>
@@ -654,7 +656,7 @@ describe electric fields from point charges, where does is arrive from? Will it 
 <span class="math notranslate nohighlight">\(\mathrm{d} Q = \lambda \mathrm{d} \ell\)</span>.  Given that for a circular arc <span class="math notranslate nohighlight">\(\ell = r \theta\)</span> and since <span class="math notranslate nohighlight">\(L = \pi r\)</span>, therefore</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{d} Q = \frac{\lambda\,L}{\pi} \mathrm{d} \theta\]</div>
-<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is an angle that moves round the arc, as we define in <a class="reference internal" href="#angulararcofcharge"><span class="std std-numref">Fig. 15.3</span></a>.</p>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is an angle that moves round the arc, as we define in <a class="reference internal" href="solvingEsystems.html#angulararcofcharge"><span class="std std-numref">Fig. 16.10</span></a>.</p>
 <figure class="align-default" id="angulararcofcharge">
 <img alt="../_images/SemiCircularArcofCharge2.png" src="../_images/SemiCircularArcofCharge2.png" />
 <figcaption>
@@ -680,8 +682,8 @@ these infitesimal charge elements as point charges, the magnitude of the electri
 \sin(\theta)\,\hat{\bf j} \Big)\,\mathrm{d} \theta\\
 {\bf E} &amp;=&amp;\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}\end{split}\]</div>
 <section id="rectilinear-rod">
-<h3><span class="section-number">15.3.1. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this headline">#</a></h3>
-<p>Lets return to the rod in <a class="reference internal" href="solvingEsystems.html#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, we can set this system up in <a class="reference internal" href="#finitelineofcharge2"><span class="std std-numref">Fig. 15.4</span></a>, trying to make the rod as symmetric as possible:</p>
+<h3><span class="section-number">15.3.1. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this heading">#</a></h3>
+<p>Lets return to the rod in <a class="reference internal" href="solvingEsystems.html#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, we can set this system up in <a class="reference internal" href="solvingEsystems.html#finitelineofcharge2"><span class="std std-numref">Fig. 16.11</span></a>, trying to make the rod as symmetric as possible:</p>
 <figure class="align-default" id="finitelineofcharge2">
 <img alt="../_images/FiniteLineOfCharges3.png" src="../_images/FiniteLineOfCharges3.png" />
 <figcaption>
@@ -726,7 +728,7 @@ field at a distance <span class="math notranslate nohighlight">\(R\)</span> from
 </section>
 </section>
 <section id="gausss-law">
-<h2><span class="section-number">15.4. </span>Gauss’s law<a class="headerlink" href="#gausss-law" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4. </span>Gauss’s law<a class="headerlink" href="#gausss-law" title="Permalink to this heading">#</a></h2>
 <p>Lets now look at electric fields from the point of view of an a containing surface and flux crossing the surface boundary.  Starting with a charge
 <span class="math notranslate nohighlight">\(Q\)</span>, we can surround this in three dimensions by a sphere, as seen in Figure <a class="reference internal" href="#efieldflux"><span class="std std-numref">Fig. 15.5</span></a>.</p>
 <figure class="align-default" id="efieldflux">
@@ -783,7 +785,7 @@ we should really write Gauss’s law as:</p>
 \[\iint_A {\bf E} \cdot \mathrm{d} {\bf A} = \frac{Q_{enclosed}}{\epsilon_0}\]</div>
 </section>
 <section id="gravitational-analogue">
-<h2><span class="section-number">15.5. </span>Gravitational Analogue<a class="headerlink" href="#gravitational-analogue" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.5. </span>Gravitational Analogue<a class="headerlink" href="#gravitational-analogue" title="Permalink to this heading">#</a></h2>
 <p>One of the grand goals of physics is to understand nature through the same equations but on different scales - so called <b>universality</b>.  We
 find that the equations in electrostatics can be used to discuss Newton’s law of gravitation.  We notice that the equations are essentially just a
 redefinition of fields and constants:</p>

@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>31. Shear stress and viscosity &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>30. Shear stress and viscosity &#8212; Electromagnetism, Fluids and Waves</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="32. Steady solutions" href="steadysoln.html" />
-    <link rel="prev" title="30. Conservation law derivations" href="conservation.html" />
+    <link rel="next" title="31. Scaling arguments" href="scaling.html" />
+    <link rel="prev" title="29. Conservation law derivations" href="conservation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -517,39 +519,44 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-inviscid-case">
-   31.1. The inviscid case
+   30.1. The inviscid case
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-newtonian-case">
-   31.2. The Newtonian case
+   30.2. The Newtonian case
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-non-newtonian-case">
-   31.3. The non-Newtonian case
+   30.3. The non-Newtonian case
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nonlinear-response-to-shear">
-     31.3.1. Nonlinear response to shear
+     30.3.1. Nonlinear response to shear
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#viscoelasticity">
-     31.3.2. Viscoelasticity
+     30.3.2. Viscoelasticity
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-equations">
-   31.4. Navier-Stokes equations
+   30.4. Navier-Stokes equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-in-cylindrical-coordinates">
-   31.5. Navier-Stokes in cylindrical coordinates
+   30.5. Navier-Stokes in cylindrical coordinates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   30.6. Chapter exercises
   </a>
  </li>
 </ul>
@@ -573,39 +580,44 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-inviscid-case">
-   31.1. The inviscid case
+   30.1. The inviscid case
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-newtonian-case">
-   31.2. The Newtonian case
+   30.2. The Newtonian case
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-non-newtonian-case">
-   31.3. The non-Newtonian case
+   30.3. The non-Newtonian case
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nonlinear-response-to-shear">
-     31.3.1. Nonlinear response to shear
+     30.3.1. Nonlinear response to shear
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#viscoelasticity">
-     31.3.2. Viscoelasticity
+     30.3.2. Viscoelasticity
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-equations">
-   31.4. Navier-Stokes equations
+   30.4. Navier-Stokes equations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navier-stokes-in-cylindrical-coordinates">
-   31.5. Navier-Stokes in cylindrical coordinates
+   30.5. Navier-Stokes in cylindrical coordinates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   30.6. Chapter exercises
   </a>
  </li>
 </ul>
@@ -619,7 +631,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="shear-stress-and-viscosity">
-<span id="ch-navstok"></span><h1><span class="section-number">31. </span>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this headline">#</a></h1>
+<span id="ch-navstok"></span><h1><span class="section-number">30. </span>Shear stress and viscosity<a class="headerlink" href="#shear-stress-and-viscosity" title="Permalink to this heading">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What does the viscosity of a fluid measure?</p></li>
@@ -628,10 +640,10 @@ title="Print to PDF"
 <li><p>Do the famous Navier-Stokes equations apply to all fluids?</p></li>
 </ul>
 <section id="the-inviscid-case">
-<h2><span class="section-number">31.1. </span>The inviscid case<a class="headerlink" href="#the-inviscid-case" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">30.1. </span>The inviscid case<a class="headerlink" href="#the-inviscid-case" title="Permalink to this heading">#</a></h2>
 <p>At the end of the last section we saw that if there is no shear stress within the fluid then we obtain the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-consofmom7">
-<span class="eqno">(31.1)<a class="headerlink" href="#equation-consofmom7" title="Permalink to this equation">#</a></span>\[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
+<span class="eqno">(30.1)<a class="headerlink" href="#equation-consofmom7" title="Permalink to this equation">#</a></span>\[\frac{\partial \underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\underline{F}.\]</div>
 <p>This circumstance would occur within a body of fluid that is moving uniformly, as shown in the flow profile below. Each fluid element moves in perfect lockstep with its neighbours and so no shear force is exerted.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/uniform.png" id="uniform-flow"><img alt="alternative description" class="align-center" id="uniform-flow" src="../_images/uniform.png" style="width: 288.0px; height: 179.20000000000002px;" /></a>
@@ -647,10 +659,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="the-newtonian-case">
-<span id="newtonian-case"></span><h2><span class="section-number">31.2. </span>The Newtonian case<a class="headerlink" href="#the-newtonian-case" title="Permalink to this headline">#</a></h2>
+<span id="newtonian-case"></span><h2><span class="section-number">30.2. </span>The Newtonian case<a class="headerlink" href="#the-newtonian-case" title="Permalink to this heading">#</a></h2>
 <p>The amount of internal friction depends on properties of the fluid. In a so-called “Newtonian” fluid the shear stress is linearly proportional to the velocity gradient, which may be written as</p>
 <div class="math notranslate nohighlight" id="equation-consofmom6">
-<span class="eqno">(31.2)<a class="headerlink" href="#equation-consofmom6" title="Permalink to this equation">#</a></span>\[\underline{\tau}_{i,j}=\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)\]</div>
+<span class="eqno">(30.2)<a class="headerlink" href="#equation-consofmom6" title="Permalink to this equation">#</a></span>\[\underline{\tau}_{i,j}=\mu\left(\frac{\partial u_i}{\partial x_j}+\frac{\partial u_j}{\partial x_i}\right)\]</div>
 <p>The figure below illustrates a flow profile with a nonlinear shear velocity gradient <span class="math notranslate nohighlight">\(\displaystyle \frac{\partial u}{\partial z}\)</span>. We will see later on that this type of flow profile tends to arise near to a solid boundary, due to fluid particles “sticking” to the boundary.</p>
 <br>
 <a class="reference internal image-reference" href="../_images/blasius.png" id="strong-shear"><img alt="a strong shear" class="align-center" id="strong-shear" src="../_images/blasius.png" style="width: 288.0px; height: 233.60000000000002px;" /></a>
@@ -663,10 +675,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="the-non-newtonian-case">
-<h2><span class="section-number">31.3. </span>The non-Newtonian case<a class="headerlink" href="#the-non-newtonian-case" title="Permalink to this headline">#</a></h2>
-<p>The Newtonian fluid relationship <a class="reference internal" href="#equation-consofmom6">(31.2)</a> is an experimental result. It holds under a wide range of conditions for a wide range of fluids, including air, water and most oils and syrups. However, it does not hold for all fluids under all conditions. In fact, due to the abundance of long-chain polymers in biological fluids, Newtonian behaviour may be the exception in biological contexts, rather than the rule.</p>
+<h2><span class="section-number">30.3. </span>The non-Newtonian case<a class="headerlink" href="#the-non-newtonian-case" title="Permalink to this heading">#</a></h2>
+<p>The Newtonian fluid relationship <a class="reference internal" href="#equation-consofmom6">(30.2)</a> is an experimental result. It holds under a wide range of conditions for a wide range of fluids, including air, water and most oils and syrups. However, it does not hold for all fluids under all conditions. In fact, due to the abundance of long-chain polymers in biological fluids, Newtonian behaviour may be the exception in biological contexts, rather than the rule.</p>
 <section id="nonlinear-response-to-shear">
-<h3><span class="section-number">31.3.1. </span>Nonlinear response to shear<a class="headerlink" href="#nonlinear-response-to-shear" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">30.3.1. </span>Nonlinear response to shear<a class="headerlink" href="#nonlinear-response-to-shear" title="Permalink to this heading">#</a></h3>
 <p>In real fluids there may be a nonlinear relationship between the shear stress and the velocity gradient. This may also be interpreted as an increase/decrease in the effective viscosity under application of shear. Examples  of shear-thinning fluids include paint, whipped cream, blood, saliva, lava and toothpaste. Examples of shear-thickening fluid include oobleck (which is a mixture of cornstarch and water) and the synovial fluid that lubricates our joints. Some fluids exhibit these properties only above/below a certain shear threshold.</p>
 <p><strong>Fun demonstrations:</strong></p>
 <ul class="simple">
@@ -676,7 +688,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="viscoelasticity">
-<h3><span class="section-number">31.3.2. </span>Viscoelasticity<a class="headerlink" href="#viscoelasticity" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">30.3.2. </span>Viscoelasticity<a class="headerlink" href="#viscoelasticity" title="Permalink to this heading">#</a></h3>
 <p>Some fluids become elastic when they are compressed or stretched, in the manner of an elastic solid. For these fluids, the application of a strain results in a stress in the same direction. Such fluids are called <em>viscoelastic</em> fluids. Examples include polyelectrolytes in which the electrostatic forces resist a change of shape, and liquid polymers in which the tangled polymers act as springs.</p>
 <p>The relationship between stress and strain is generally Hookean (i.e. linear) and so the equations of motion can be modified adding a stress term that is proportional to the strain.</p>
 <p><strong>Fun demonstrations:</strong></p>
@@ -684,56 +696,41 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=fZSUToTkkW0&amp;t=275s">Boger fluid (constant viscosity elastic fluid)</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=MCHw6fUyLMY">Viscoelastic fluid simulation</a></p></li>
 </ul>
-<div class="exercise admonition" id="fluids/navstok-exercise-0">
-
-<p class="admonition-title"><span class="caption-number">Exercise 31.1 </span></p>
-<section id="exercise-content">
-<p>Research one example of a non-Newtonian fluid, and write 150 words about why it is non-Newtonian.</p>
-</section>
-</div>
 </section>
 </section>
 <section id="navier-stokes-equations">
-<span id="navstokeqn"></span><h2><span class="section-number">31.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this headline">#</a></h2>
+<span id="navstokeqn"></span><h2><span class="section-number">30.4. </span>Navier-Stokes equations<a class="headerlink" href="#navier-stokes-equations" title="Permalink to this heading">#</a></h2>
 <p>The conservation of momentum equation for a Newtonian fluid, together with the conservation of mass equation for incompressible flow are called the Navier-Stokes equations. The equations are given below, where <span class="math notranslate nohighlight">\(p\)</span> is the hydrostatic pressure (mean normal stress), and <span class="math notranslate nohighlight">\(\nu=\frac{\mu}{\rho}\)</span> is called the kinematic viscosity.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5c149312-c81c-40df-b63f-596d5d377367">
-<span class="eqno">(31.3)<a class="headerlink" href="#equation-5c149312-c81c-40df-b63f-596d5d377367" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0e1ea2ca-a5c5-4acf-bfdc-b0891656acfb">
-<span class="eqno">(31.4)<a class="headerlink" href="#equation-0e1ea2ca-a5c5-4acf-bfdc-b0891656acfb" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-92edf92e-91aa-4a9d-ba44-d31129db41ee">
+<span class="eqno">(30.3)<a class="headerlink" href="#equation-92edf92e-91aa-4a9d-ba44-d31129db41ee" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{\partial\underline{u}}{\partial t}+\underline{u}.\nabla\underline{u}=-\frac{1}{\rho}\nabla p+\nu \nabla^2 \underline{u}+\underline{F},\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-529cdce2-aaa5-454c-9f28-9e64278dcf89">
+<span class="eqno">(30.4)<a class="headerlink" href="#equation-529cdce2-aaa5-454c-9f28-9e64278dcf89" title="Permalink to this equation">#</a></span>\[\begin{equation}\nabla.\underline{u}=0.\end{equation}\]</div>
 <p>The first equation (conservation of mass) represents a balance between convective acceleration, pressure forces and viscous diffusion. The second equation represents the incompressibility condition.</p>
 <div class="theorem admonition">
 <p class="admonition-title">Euler’s equations</p>
 <p>The inviscid form of the Navier-Stokes equations (with <span class="math notranslate nohighlight">\(\nu=0\)</span>) is called Euler’s equations.</p>
 </div>
 <p>These equations were first derived and studied in the 1800s. However, despite many decades of research it has still not been proven that the problem is well-defined in the sense of having smooth solutions in all geometries. At the turn of the century the Clay Mathematics institute announced this unsolved problem as one of its seven “<a class="reference external" href="https://www.claymath.org/millennium-problems">Millennium Prize Problems</a>”, with $1 million offered for a solution. The problem remains unsolved today. Nevertheless, mathematicians, scientists and engineers have been using them for nearly 200 years to very good effect for modelling fluid behaviour. The equations have been used for nearly any fluid phenomenon you can think of, from modelling mucous transport to making racing cars as good as they can be, to studying sunspots or the rings of Jupiter!</p>
-<div class="exercise admonition" id="ex-navstok">
-
-<p class="admonition-title"><span class="caption-number">Exercise 31.2 </span></p>
-<section id="exercise-content">
-<p>Taking the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> to be zero, write out the Navier-Stokes equations in component form, where <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span> and <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span>. For the conservation of momentum equation, you may write each of the <span class="math notranslate nohighlight">\((x,y,z)\)</span> components as a separate equation.</p>
-</section>
-</div>
-<div class="toggle docutils container">
-<div class="amsmath math notranslate nohighlight" id="equation-152a0cdc-66f5-4135-b583-30e48fcf9eee">
-<span class="eqno">(31.5)<a class="headerlink" href="#equation-152a0cdc-66f5-4135-b583-30e48fcf9eee" title="Permalink to this equation">#</a></span>\[\begin{align}
-\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+\frac{\partial^2 u}{\partial z^2}\right)\\
-\frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}+\frac{\partial^2 v}{\partial z^2}\right)\\
-\frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\left(\frac{\partial^2 w}{\partial x^2}+\frac{\partial^2 w}{\partial y^2}+\frac{\partial^2 w}{\partial z^2}\right)\\
-\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}+\frac{\partial w}{\partial z}&amp;=0\end{align}\]</div>
-</div>
 </section>
 <section id="navier-stokes-in-cylindrical-coordinates">
-<span id="navstok-cylindrical"></span><h2><span class="section-number">31.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this headline">#</a></h2>
+<span id="navstok-cylindrical"></span><h2><span class="section-number">30.5. </span>Navier-Stokes in cylindrical coordinates<a class="headerlink" href="#navier-stokes-in-cylindrical-coordinates" title="Permalink to this heading">#</a></h2>
 <p>Written out in cylindrical coordinates, the components of the Navier-Stokes equations for <span class="math notranslate nohighlight">\(\underline{u}=(u_r,u_{\theta},u_z)\)</span> are given by</p>
 <p><strong>Conservation of momentum:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ece0772-ec17-4337-a9b8-25d6e6f12887">
-<span class="eqno">(31.6)<a class="headerlink" href="#equation-1ece0772-ec17-4337-a9b8-25d6e6f12887" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-24ca3652-b0e8-40f3-a242-1a0c5ccb2045">
+<span class="eqno">(30.5)<a class="headerlink" href="#equation-24ca3652-b0e8-40f3-a242-1a0c5ccb2045" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\partial u_r}{\partial t}+(\underline{u}.\nabla)u_r-\frac{u_{\theta}^2}{r} &amp;=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\nabla^2 u_r-\frac{u_r}{r^2}-\frac{2}{r^2}\frac{\partial u_{\theta}}{\partial \theta}\right)\\ \frac{\partial u_{\theta}}{\partial t}+(\underline{u}.\nabla)u_{\theta}+\frac{u_r u_{\theta}}{r}&amp;=-\frac{1}{\rho r}\frac{\partial p}{\partial \theta}+\nu\left(\nabla^2u_{\theta}+\frac{2}{r^2}\frac{\partial u_r}{\partial \theta}-\frac{u_{\theta}}{r^2}\right)\\ \frac{\partial u_z}{\partial t}+(\underline{u}.\nabla)u_z&amp;=-\frac{1}{\rho}\frac{\partial p}{\partial z}+\nu\nabla^2 u_z \end{align}\]</div>
 <p><strong>Incompressibility:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-28da3d61-e3d6-4393-894a-1bb04c182859">
-<span class="eqno">(31.7)<a class="headerlink" href="#equation-28da3d61-e3d6-4393-894a-1bb04c182859" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9f61a0e6-991c-4ca1-bc9e-3e15c26785a3">
+<span class="eqno">(30.6)<a class="headerlink" href="#equation-9f61a0e6-991c-4ca1-bc9e-3e15c26785a3" title="Permalink to this equation">#</a></span>\[\begin{equation}\frac{1}{r}\frac{\partial}{\partial r}(r u_r)+\frac{1}{r}\frac{\partial u_{\theta}}{\partial \theta}+\frac{\partial u_z}{\partial z}=0\end{equation}\]</div>
 <p>where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b1392258-2294-478d-b6d1-c5266edc3ba5">
-<span class="eqno">(31.8)<a class="headerlink" href="#equation-b1392258-2294-478d-b6d1-c5266edc3ba5" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fd7d4516-7350-4732-985e-9fdf07f9f04d">
+<span class="eqno">(30.7)<a class="headerlink" href="#equation-fd7d4516-7350-4732-985e-9fdf07f9f04d" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}.\nabla = u_r\frac{\partial}{\partial r}+\frac{u_{\theta}}{\partial \theta}+u_z\frac{\partial}{\partial z}\qquad \qquad \nabla^2=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2} \end{equation}\]</div>
+</section>
+<section id="chapter-exercises">
+<h2><span class="section-number">30.6. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
+<p><strong>Question 1</strong><br>
+Research one example of a non-Newtonian fluid, and write 150 words about why it is non-Newtonian.</p>
+<p><strong>Question 2</strong><br>
+Taking the body force <span class="math notranslate nohighlight">\(\underline{F}\)</span> to be zero, write out the Navier-Stokes equations in component form, where <span class="math notranslate nohighlight">\(\underline{x}=(x,y,z)\)</span> and <span class="math notranslate nohighlight">\(\underline{u}=(u,v,w)\)</span>. For the conservation of momentum equation, you may write each of the <span class="math notranslate nohighlight">\((x,y,z)\)</span> components as a separate equation.</p>
 </section>
 </section>
 
@@ -768,13 +765,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">30. </span>Conservation law derivations</p>
+            <p class="prev-next-title"><span class="section-number">29. </span>Conservation law derivations</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="steadysoln.html" title="next page">
+    <a class='right-next' id="next-link" href="scaling.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">32. </span>Steady solutions</p>
+        <p class="prev-next-title"><span class="section-number">31. </span>Scaling arguments</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

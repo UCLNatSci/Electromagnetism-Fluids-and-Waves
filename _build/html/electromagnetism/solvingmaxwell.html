@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>23. Solutions to Maxwell’s Equations &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="24. Energy in an Electromagnetic field" href="EMenergy.html" />
     <link rel="prev" title="22. Differential Forms and Maxwell’s Equations" href="maxwelleqns.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -585,9 +587,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="solutions-to-maxwells-equations">
-<h1><span class="section-number">23. </span>Solutions to Maxwell’s Equations<a class="headerlink" href="#solutions-to-maxwells-equations" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">23. </span>Solutions to Maxwell’s Equations<a class="headerlink" href="#solutions-to-maxwells-equations" title="Permalink to this heading">#</a></h1>
 <section id="electromagnetic-waves">
-<h2><span class="section-number">23.1. </span>Electromagnetic Waves<a class="headerlink" href="#electromagnetic-waves" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">23.1. </span>Electromagnetic Waves<a class="headerlink" href="#electromagnetic-waves" title="Permalink to this heading">#</a></h2>
 <p>Using Maxwell’s equations, we can see that there are two scalar equations and two vector equations, in the form of coupled ODEs.  Lets rewrite these in terms of
 one field and then try to solve.  Recall the Lagrange identity for <span class="math notranslate nohighlight">\(\nabla\)</span> with a vector <span class="math notranslate nohighlight">\({\bf A}\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -623,7 +625,7 @@ polarised and circularly polariesed waves.</p>
 </figure>
 </section>
 <section id="polarisation-of-waves">
-<h2><span class="section-number">23.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">23.2. </span>Polarisation of Waves<a class="headerlink" href="#polarisation-of-waves" title="Permalink to this heading">#</a></h2>
 <p>Plugging in wave solutions into Maxwell’s equations in vacuum:</p>
 <div class="math notranslate nohighlight" id="equation-kebperp">
 <span class="eqno">(23.3)<a class="headerlink" href="#equation-kebperp" title="Permalink to this equation">#</a></span>\[\begin{split}\nabla \cdot {\bf E} &amp;= \,0 \Longrightarrow {\bf k} \cdot {\bf E}_0 = 0 \\
@@ -666,7 +668,7 @@ in a perpendicular <span class="math notranslate nohighlight">\(z\)</span> dimen
 \end{bmatrix} \end{split}\]</div>
 </section>
 <section id="drude-model">
-<h2><span class="section-number">23.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">23.3. </span>Drude Model<a class="headerlink" href="#drude-model" title="Permalink to this heading">#</a></h2>
 <p>In addition to solving Maxwell’s for single electric charges, magnetic dipoles or in vacuum, we can also find other simple solutions.  Within a conductor,
 with an electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> present, we can think about Ohm’s law</p>
 <div class="math notranslate nohighlight">
@@ -705,7 +707,7 @@ conductors.</p>
 <p>If we calculate the energy of waves travelling through this media, the dispersion part corresponds to the energy losses of the electromagnetic field.</p>
 </section>
 <section id="electromagnetic-scalar-and-vector-potentials">
-<h2><span class="section-number">23.4. </span>Electromagnetic Scalar and Vector Potentials<a class="headerlink" href="#electromagnetic-scalar-and-vector-potentials" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">23.4. </span>Electromagnetic Scalar and Vector Potentials<a class="headerlink" href="#electromagnetic-scalar-and-vector-potentials" title="Permalink to this heading">#</a></h2>
 <p>There is a different way to view Maxwell’s equations using the rules of vector calculus. We begin by expressing the
 electric field <span class="math notranslate nohighlight">\({\bf E}\)</span> in terms of a potential:</p>
 <div class="math notranslate nohighlight" id="equation-electricpotential1">

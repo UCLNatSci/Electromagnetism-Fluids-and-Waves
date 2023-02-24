@@ -93,62 +93,6 @@
 # [Khan Academy](https://www.khanacademy.org/math/multivariable-calculus/greens-theorem-and-stokes-theorem/divergence-theorem-articles/a/3d-divergence-theorem)
 # ```
 # 
-# ```{exercise}
-# :label: ex-divergence
-# Calculate the divergence of the potential flow you looked at in {numref}`pot-fun`, and produce a grayscale plot of the divergence on the range $-2\leq x,y \leq 2.$
-# ```
-
-# In[1]:
-
-
-from myst_nb import glue
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-x=np.linspace(-2, 2, 100)
-y=np.linspace(-2, 2, 100)
-
-X,Y = np.meshgrid(x, y)
-Z=4*X*(X**2+Y**2-2)*np.exp(-X**2-Y**2)
-
-# options to prettify the plot
-fig,ax=plt.subplots(figsize=(5,5))
-ax.axis([-2,2,-2,2])
-ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
-
-# The "pcolormesh" function can be used to make a density plot.
-ax.pcolormesh(X,Y,Z,shading='auto',cmap=cm.gray)
-
-glue("strfun_fig", fig, display=False)
-
-
-# ````{toggle}
-# 
-# $\nabla.\underline{u}=\nabla^2\phi=\frac{\partial^2\phi}{\partial x^2}+\frac{\partial^2\phi}{\partial y^2}=4x(x^2+y^2-2)e^{-x^2-y^2}$
-# 
-# ```{python}
-# x=np.linspace(-2, 2, 100)
-# y=np.linspace(-2, 2, 100)
-# 
-# X,Y = np.meshgrid(x, y)
-# Z=4*X*(X**2+Y**2-2)*np.exp(-X**2-Y**2)
-# 
-# # options to prettify the plot
-# fig,ax=plt.subplots(figsize=(5,5))
-# ax.axis([-2,2,-2,2])
-# ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
-# 
-# # The "pcolormesh" function can be used to make a density plot.
-# ax.pcolormesh(X,Y,Z,shading='auto',cmap=cm.gray)
-# plt.show()
-# ```
-# 
-# ```{glue:} strfun_fig
-# ```
-# 
-# ````
-# 
-# 
 # ## What is **vorticity**?
 # Vorticity is a measure of the local rotation or spin of fluid particles. It is defined as the curl of the velocity vector $(u,v,w)$:
 # 
@@ -185,7 +129,7 @@ glue("strfun_fig", fig, display=False)
 # 
 # This flow is a rectilinear flow; meaning that it is not rotating as a whole, as can be seen from the image below. However, the vorticity is non-zero since fluid particles are rotated by the shearing force, as would be seen by an observer following the fluid.
 
-# In[2]:
+# In[1]:
 
 
 import matplotlib.pyplot as plt
@@ -219,7 +163,7 @@ plt.show()
 # 
 # This flow is a swirling motion with velocity decreasing in the radial direction like $\frac{1}{r}$, as illustrated in the figure below for the case where $k=1$.
 
-# In[3]:
+# In[2]:
 
 
 import matplotlib.pyplot as plt
@@ -257,55 +201,22 @@ plt.show()
 # 
 # \begin{equation}\underline{F}=\nabla \phi +(\nabla \times \underline{A})\end{equation}
 # 
-# The first term is irrotational (curl-free) from the vector identity “curlgrad=$\underline{0}$”
-# The second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.
+# * The first term is irrotational (curl-free) from the vector identity “curlgrad=$\underline{0}$”.
+# * The second term is solenoidal (divergence-free) from the vector identity “divcurl=0”.
 # 
 # We will not prove this result, but we will use it to simplify the equations of motion in some scenarios. The full version of Helmholtz' theorem also tells us how to calculate $\phi$ and $\underline{A}$, but we will not need those results.
 # 
+# ```{note}
+# Note: A negative sign is often included in the gradient term by convention, so that work done against a force increases the potential, but mathematically we do not need the minus sign (since $\phi$ can be negative!)
+# ```
 # 
-# ```{exercise}
-# :label: ex-3d-straining
+# ## Chapter exercises
+# 
+# **Question 1**<br>
+# Calculate the divergence of the potential flow you looked at in {numref}`pot-fun`, and produce a grayscale plot of the divergence on the range $-2\leq x,y \leq 2.$
+# 
+# 
+# **Question 2**<br>
 # For the steady flow $\underline{u}=(2x,3y,-5z)$, determine the trajectories of particles starting on the ring defined by $x=\cos(\theta)$, $y=\sin(\theta)$, $z=1$.
 # 
 # Show that the flow is both irrotational and solenoidal, and describe the motion of the fluid particles in words.
-# ```
-# 
-# ````{toggle}
-# 
-# **Particle paths:**
-# 
-# $\frac{\mathrm{d}x}{\mathrm{d}t}=2x, \quad \frac{\mathrm{d}y}{\mathrm{d}t}=3y, \quad \frac{\mathrm{d}z}{\mathrm{d}t}=-5z$
-# 
-# Solution: $x=x_0e^{2t}, \quad y=y_0e^{3t}, \quad z=z_0e^{-5t}$.
-# 
-# Fluid particles that initially lie on the ring $x_0=\cos(\theta)$, $y_0=\sin(\theta)$, $z_0=1$ are described in parametric form by
-# 
-# $x=\cos(\theta)e^{2t}, \quad y=\sin(\theta)e^{3t}, \quad z=e^{-5t}$
-# 
-# The equations can also be written as
-# 
-# $\left(\frac{x}{e^{2t}}\right)^2+\left(\frac{y}{e^{3t}}\right)^2=1, \quad z=e^{-5t}.$
-# 
-# The equations describe an ellipse parallel to the $(x,y)$ plane at height $z=e^{-5t}$. The ellipse has major axis $e^{3t}$ parallel to $x$ and minor axis $e^{2t}$ parallel to $y$.
-# 
-# Particles that initially lie on the ring are therefore swept towards the $(x,y)$ plane and away from the $z$ axis. This type of motion is called a straining motion.
-# 
-# <br>
-# 
-# ```{image} navstok_img/straining.png
-# ---
-# name: uniform flow
-# alt: alternative description
-# align: center
-# scale: 80%
-# ---
-# ```
-# <br>
-# 
-# Irrotational: $\nabla\times\underline{u}=\begin{vmatrix}\underline{e}_x & \underline{e}_y & \underline{e}_z\\\frac{\partial}{\partial x} & \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\ 2x & 3y & -5z\end{vmatrix}=0\underline{e}_x+0\underline{e}_y+0\underline{e}_z$
-# 
-# Solenoidal: $\nabla.\underline{u} = \frac{\partial}{\partial x}\left(2x\right)+\frac{\partial}{\partial y}\left(3y\right)+\frac{\partial}{\partial z}\left(-5z\right)=0$
-# 
-# ````
-# 
-# Note: A negative sign is often included in the gradient term by convention, so that work done against a force increases the potential, but mathematically we do not need the minus sign (since $\phi$ can be negative!)

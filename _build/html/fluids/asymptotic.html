@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>35. Perturbations and asymptotics &#8212; Electromagnetism, Fluids and Waves</title>
+    <title>36. Perturbations and asymptotics &#8212; Electromagnetism, Fluids and Waves</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="36. Vortex transport" href="vorticity.html" />
-    <link rel="prev" title="34. Scaling arguments" href="scaling.html" />
+    <link rel="next" title="37. Unsteady: Water waves" href="waterwaves.html" />
+    <link rel="prev" title="35. Vortex transport" href="vorticity.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="bernoulli.html">
-   33. Bernoulli’s equation
+  <a class="reference internal" href="potential.html">
+   33. The velocity potential
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   35. Perturbations and asymptotics
+  <a class="reference internal" href="bernoulli.html">
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -517,39 +519,44 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-background">
-   35.1. General background
+   36.1. General background
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#perturbation-analysis">
-   35.2. Perturbation analysis
+   36.2. Perturbation analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matched-asymptotics">
-   35.3. Matched asymptotics
+   36.3. Matched asymptotics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stokes-paradox">
-     35.3.1. Stokes’ paradox
+     36.3.1. Stokes’ paradox
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dalemberts-paradox">
-   35.4. D’Alembert’s paradox
+   36.4. D’Alembert’s paradox
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-perturbed-boundary-layer">
-   35.5. The perturbed boundary layer
+   36.5. The perturbed boundary layer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   35.6. References
+   36.6. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   36.7. Chapter exercises
   </a>
  </li>
 </ul>
@@ -573,39 +580,44 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-background">
-   35.1. General background
+   36.1. General background
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#perturbation-analysis">
-   35.2. Perturbation analysis
+   36.2. Perturbation analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matched-asymptotics">
-   35.3. Matched asymptotics
+   36.3. Matched asymptotics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stokes-paradox">
-     35.3.1. Stokes’ paradox
+     36.3.1. Stokes’ paradox
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dalemberts-paradox">
-   35.4. D’Alembert’s paradox
+   36.4. D’Alembert’s paradox
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-perturbed-boundary-layer">
-   35.5. The perturbed boundary layer
+   36.5. The perturbed boundary layer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   35.6. References
+   36.6. References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-exercises">
+   36.7. Chapter exercises
   </a>
  </li>
 </ul>
@@ -619,7 +631,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="perturbations-and-asymptotics">
-<span id="ch-asymptotic"></span><h1><span class="section-number">35. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this headline">#</a></h1>
+<span id="ch-asymptotic"></span><h1><span class="section-number">36. </span>Perturbations and asymptotics<a class="headerlink" href="#perturbations-and-asymptotics" title="Permalink to this heading">#</a></h1>
 <p><strong>In this section:</strong></p>
 <ul class="simple">
 <li><p>What is laminar-turbulent transition and why is it important?</p></li>
@@ -628,19 +640,19 @@ title="Print to PDF"
 <li><p>Problems with linear asymptotic theories - an area of active research.</p></li>
 </ul>
 <section id="general-background">
-<h2><span class="section-number">35.1. </span>General background<a class="headerlink" href="#general-background" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">36.1. </span>General background<a class="headerlink" href="#general-background" title="Permalink to this heading">#</a></h2>
 <p>Asymptotic methods are a class of mathematical techniques for solving complicated problems by exploiting the presence of a large or small parameter. These methods typically involve expanding unknown quantities using series expansion and equating terms at each order (power) in the expansion.</p>
 <p>To be strictly accurate, we assume that the parameter appearing in the expansion is strictly infinitesimal and so the techniques may be formally justified only in extreme circumstances such as at very high Reynolds numbers or for very small amplitude waves. However, the techniques are very often used to make quantitative approximations and inferences in regimes where this assumption must be relaxed, for instance by treating <span class="math notranslate nohighlight">\(\epsilon\sim 0.1\)</span> as an asymptotically small quantity.</p>
 <p>To determine what can be treated as “small” often requires an amount of heuristic reasoning, which can be justified be comparison to theoretical claims and/or experimental and numerical investigations.</p>
-<p>In this chapter we discuss some general principles and uses of asymptotic methods, though we do not demonstrate the full mathematics, which is too involved for a first year course. Asymptotic expansion methods are also featured in chapters <a href="#id1"><span class="problematic" id="id2">:numeref:`water-waves`</span></a> and <a class="reference internal" href="soundwaves.html#sound-waves"><span class="std std-numref">Section 38</span></a> to study small amplitude water and sound waves.</p>
+<p>In this chapter we discuss some general principles and uses of asymptotic methods, though we do not demonstrate the full mathematics, which is too involved for a first year course. Asymptotic expansion methods are also featured in chapters <a class="reference internal" href="waterwaves.html#water-waves"><span class="std std-numref">Section 37</span></a> and <a class="reference internal" href="soundwaves.html#sound-waves"><span class="std std-numref">Section 38</span></a> to study small amplitude water and sound waves.</p>
 </section>
 <section id="perturbation-analysis">
-<h2><span class="section-number">35.2. </span>Perturbation analysis<a class="headerlink" href="#perturbation-analysis" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">36.2. </span>Perturbation analysis<a class="headerlink" href="#perturbation-analysis" title="Permalink to this heading">#</a></h2>
 <p>In chapter <a class="reference internal" href="steadysoln.html#steady-soln"><span class="std std-numref">Section 32</span></a> we looked at some steady solutions. Fluid dynamicists wish to understand what happens to these steady flow profiles when they are perturbed by small disturbances. We want to know if the disturbances will grow by feeding off the energy of the main flow, or if they will be damped out by effects such as friction or swept away by convection. Understanding the dynamics of small amplitude disturbances is key to understanding laminar-turbulent transition. A laminar flow is an orderly flow characterised by fluid layers moving smoothly past one another, whilst a turbulent state is characterised by disordered, chaotic motion occurring a “cascade” of length scales. If small-amplitude perturbations are amplified, they may eventually become large enough to trigger this instability through their nonlinear interactions.</p>
 <p>A good understanding of the features of the conditions that lead to turbulence could help with engineers learn to control transition. For an example discussion, see <a class="reference external" href="https://www.youtube.com/watch?v=GMmNKUlXXDs">this video [2:30-8:05]</a>. Sometimes the desire may be to facilitate turbulence, for instance as an efficient mechanism of heat transfer or a means of achieving liquid-jet breakup in fuel injection systems. Conversely, in aerodynamic applications turbulent skin-friction drag can be as much as ten times that of laminar flow at the same Reynolds number, and accounts for 50% of the total drag experienced by a subsonic aircraft. This means that any reduction in turbulence offers huge potential for fuel savings as well as reduction of greenhouse gases and other pollutants.</p>
 <p>In perturbation analysis, we assume a flow profile of the following form, in which <span class="math notranslate nohighlight">\(\underline{u}_0\)</span> is a steady flow solution and <span class="math notranslate nohighlight">\(\epsilon\)</span> is a small (strictly infinitesimal) parameter:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7e225c06-fed5-4ea6-a9ea-86c10b622482">
-<span class="eqno">(35.1)<a class="headerlink" href="#equation-7e225c06-fed5-4ea6-a9ea-86c10b622482" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-46ffe06d-d3dd-4df9-90e0-2a17ce987024">
+<span class="eqno">(36.1)<a class="headerlink" href="#equation-46ffe06d-d3dd-4df9-90e0-2a17ce987024" title="Permalink to this equation">#</a></span>\[\begin{equation}\underline{u}=\underline{u}_0+\epsilon\underline{u}_1.\end{equation}\]</div>
 <p>By substituting into the equations of motion and equating coefficients of <span class="math notranslate nohighlight">\(\epsilon\)</span> we can obtain equations governing the perturbation dynamics. An especially important case is concerned with the dynamics of wavy (e.g. sinusoidal) perturbations and wavepackets, which emerge as particular solutions in the case of flow past a boundary. The perturbations represent tiny background fluid motions such as vibrations. By making assumptions about the length and time scales governing the perturbation dynamics and by relating <span class="math notranslate nohighlight">\(\epsilon\)</span> to a power of the Reynolds number, the dominating evolution mechanisms can be studied.</p>
 <div class="admonition-example-pipe-flow admonition">
 <p class="admonition-title">Example: pipe flow</p>
@@ -649,30 +661,30 @@ title="Print to PDF"
 </div>
 </section>
 <section id="matched-asymptotics">
-<h2><span class="section-number">35.3. </span>Matched asymptotics<a class="headerlink" href="#matched-asymptotics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">36.3. </span>Matched asymptotics<a class="headerlink" href="#matched-asymptotics" title="Permalink to this heading">#</a></h2>
 <p>We have seen that under certain conditions we can make mathematical progress by approximating the full NS equations with simplified versions. Up to now we assumed that any approximations such as neglecting viscous effects have been valid throughout the entire flow. However, our assumptions may break down in some regions of the fluid and lead to inconsistencies. For example, it is now well-known that we cannot realistically treat fluid close to a boundary such as a wall as inviscid. However, the inviscid approximation may be a good one elsewhere in the fluid and we do not want to abandon it!</p>
 <p>The theory of matched asymptotics provides a formal framework for separating the fluid geometry into different regions or layers where different approximations may be valid. Within each layer, variables in the full non-dimensional NS equations are related to powers of the <span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> by scaling arguments based on physical assumptions such as the distance to a boundary. The different scalings used in each layer result in balancing different physical effects in the equations.</p>
 <p>Although the history of matched asymptotics is strongly associated with fluid dynamics, it has wide applications to areas including quantum mechanics.</p>
 <p>Two important historic paradoxes that can be addressed using the theory of matched asymptotics are presented below. The case investigated by Prandtl is especially important and celebrated, as it ushered in a whole new era of fluid dynamics based on <em>boundary layer</em> theory. Boundary layers are ubiquitous in fluid dynamics, as they occur whenever a viscous fluid meets a boundary. This could include the interface between two fluids such as between a liquid jet and surrounding air. The dynamics and stability properties of boundary layers are an extremely active area of research.</p>
 <p>We will not study the mathematical techniques of matched asymptotics as it is a very involved subject, which is often first encountered in graduate level courses.</p>
 <section id="stokes-paradox">
-<h3><span class="section-number">35.3.1. </span>Stokes’ paradox<a class="headerlink" href="#stokes-paradox" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">36.3.1. </span>Stokes’ paradox<a class="headerlink" href="#stokes-paradox" title="Permalink to this heading">#</a></h3>
 <p>Consider a cylinder placed into an oncoming highly viscous 2D fluid flow of velocity <span class="math notranslate nohighlight">\(U\)</span>, as shown in the image below. This type of flow is known as Hele-Shaw flow.
 <br></p>
 <a class="reference internal image-reference" href="../_images/hele-shaw.png" id="hele-shaw"><img alt="Hele-Shaw" class="align-center" id="hele-shaw" src="../_images/hele-shaw.png" style="width: 512.0px; height: 311.20000000000005px;" /></a>
 <br>
 <p>If we define the following ratio, where <span class="math notranslate nohighlight">\(a\)</span> is the diameter of the cylinder, then the effect of inertia will apparently be negligible near to the cylinder:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71de5839-9218-4081-ad2a-784c3a468830">
-<span class="eqno">(35.2)<a class="headerlink" href="#equation-71de5839-9218-4081-ad2a-784c3a468830" title="Permalink to this equation">#</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-49c1f226-2681-457a-997c-54096b261e93">
+<span class="eqno">(36.2)<a class="headerlink" href="#equation-49c1f226-2681-457a-997c-54096b261e93" title="Permalink to this equation">#</a></span>\[\begin{equation}\mathrm{Re}=\frac{Ua}{\nu}.\end{equation}\]</div>
 <p>However, away from the boundary the characteristic length scale associated with changes in velocity is larger, as the flow becomes more and more uniform. Therefore the effects of inertia are more important in the outer flow regions. In fact, if the effects of inertia are neglected away from the surface of the sphere then the mathematical equations are ill-posed and it becomes impossible to satisfy appropriate boundary conditions for the far-field. This is known as Stokes’ paradox.</p>
 <p>The paradox can be resolved by taking a different approximation away from the boundary, that includes inertial terms; and blending or “matching” the expressions obtained from the inner and outer layers of fluid.</p>
 </section>
 </section>
 <section id="dalemberts-paradox">
-<h2><span class="section-number">35.4. </span>D’Alembert’s paradox<a class="headerlink" href="#dalemberts-paradox" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">36.4. </span>D’Alembert’s paradox<a class="headerlink" href="#dalemberts-paradox" title="Permalink to this heading">#</a></h2>
 <p>Consider a cylinder placed into an oncoming flow, which is at high speed. Early experimenters and mathematicians did not have the techniques of high speed photography available to them, and there was disagreement about what happens at the fluid boundary. Many believed that fluid particles would “stick” to the boundary and transfer momentum, whilst others believed that the flow would move smoothly past the boundary.</p>
 <p>Neither approach fitted well with the equations of motion. On one hand, transfer of momentum within the fluid requires viscosity, and it would be impossible to satisfy the no-slip condition at the boundary if these effects were neglected. On the other hand, it is plain from scaling arguments that for high speed flows of low viscosity fluid such as air the effects of viscosity should be much less important than inertia.</p>
-<p>We will also see in <a class="reference internal" href="vorticity.html#dalembert-paradox"><span class="std std-numref">Section 36.3</span></a> that ignoring the no slip condition results in D’Alembert’s paradox of zero drag, and zero lift - meaning that aeroplanes would never fly!</p>
+<p>We will also see in <a class="reference internal" href="vorticity.html#dalembert-paradox"><span class="std std-numref">Section 35.3</span></a> that ignoring the no slip condition results in D’Alembert’s paradox of zero drag, and zero lift - meaning that aeroplanes would never fly!</p>
 <p>The difficulty was eventually understood by Prandtl (1904), who reasoned for the existence of a narrow region called a <strong>boundary layer</strong>, in which the horizontal velocity increases rapidly in the direction away from the plate. In this region, viscous terms are comparable in magnitude to inertial terms, and act to decelerate the flow at the surface by diffusion of momentum. The viscous solution is then matched to the inviscid solution at the edge of the boundary layer to form a composite solution that is valid throughout the entire flow field. Matched asymptotics again!</p>
 <p>An illustration of the concept of a boundary layer is provided below. The image comes from <a class="reference external" href="https://doi.org/10.1063/1.2169443">this paper</a> about the history of boundary layer theory, which I think is written in a way that is fairly accessible to undergraduate physicists.</p>
 <br>
@@ -688,32 +700,29 @@ title="Print to PDF"
 </div>
 </section>
 <section id="the-perturbed-boundary-layer">
-<h2><span class="section-number">35.5. </span>The perturbed boundary layer<a class="headerlink" href="#the-perturbed-boundary-layer" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">36.5. </span>The perturbed boundary layer<a class="headerlink" href="#the-perturbed-boundary-layer" title="Permalink to this heading">#</a></h2>
 <p>To study the stability of boundary layers, we must combine the use of matched asymptotics with perturbation analysis, which results in a relationship between the assumed size of the disturbance and the thickness of the boundary layer. For wavy disturbances, the linear (first order) theory provides a dispersion relation in which either/both the frequency or wavenumber is permitted to be complex to model spatial or temporal growth.</p>
 <p>A well-studied example is the case of the Blasius boundary layer, which describes the developed flow profile over a flat plate. For length and velocity scales appropriate to subsonic aircraft flight, the range of relevant Reynolds numbers is on the order of a few hundred to a few thousand. In this regime the linear theory predicts that disturbances introduced near to the leading edge of the plate will experience a short period of amplitude growth as they are swept downstream by the main flow.</p>
 <p>The predictions can be compared to experiments in which a very carefully controlled airstream is passed over a flat plate. A loudspeaker embedded in the plate can be used to produce small amplitude disturbances at selected frequencies, and downstream apparatus such as hot wire anemometers can be used to measure the evolution of these disturbances.</p>
 <p>The theoretical predictions roughly match the experiments in the very early stages of flow evolution, but the growth rates predicted by the linear theory are too modest and do not do a good job of predicting laminar-turbulent transition. This implies that a nonlinear theory is needed, and this remains an active area of theoretical research.</p>
-<p>It has been hypothesised that a resonant-type interaction may be responsible for “explosive growth” of small disturbances in the Blasius boundary layer <span id="id3">[<a class="reference internal" href="../markdown.html#id8" title="ADD Craik and JA Adam. Evolution in space and time of resonant wave triads-i. the'pump-wave approximation'. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences, 363(1713):243–255, 1978.">CA78</a>]</span>. The theory is contentious, but <a class="reference external" href="https://eprints.keele.ac.uk/193/1/Metcalfe%20PhD%202013.pdf">pragmatic investigation</a> at finite Reynolds numbers has provided quantified estimates that appear to be a close match for the findings of experimenters <span id="id4">[<a class="reference internal" href="../markdown.html#id7" title="SJ Metcalfe. A blow-up mechanism in boundary layer transition. PhD thesis, Keele University, 2013.">Met13</a>]</span>.</p>
-<div class="exercise admonition" id="fluids/asymptotic-exercise-0">
-
-<p class="admonition-title"><span class="caption-number">Exercise 35.1 </span></p>
-<section id="exercise-content">
-<p>Find one example of fluid dynamics research that involved modelling a boundary layer, and write a tweet about it (280 characters). You could choose a piece of recent research or you could choose a historical example that you would like to bring to wider attention.</p>
-</section>
-</div>
+<p>It has been hypothesised that a resonant-type interaction may be responsible for “explosive growth” of small disturbances in the Blasius boundary layer <span id="id1">[<a class="reference internal" href="../markdown.html#id8">CA78</a>]</span>. The theory is contentious, but <a class="reference external" href="https://eprints.keele.ac.uk/193/1/Metcalfe%20PhD%202013.pdf">pragmatic investigation</a> at finite Reynolds numbers has provided quantified estimates that appear to be a close match for the findings of experimenters <span id="id2">[<a class="reference internal" href="../markdown.html#id7">Met13</a>]</span>.</p>
 </section>
 <section id="references">
-<h2><span class="section-number">35.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id5">
-<dl class="citation">
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id3">CA78</a></span></dt>
-<dd><p>ADD Craik and JA Adam. Evolution in space and time of resonant wave triads-i. the'pump-wave approximation'. <em>Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences</em>, 363(1713):243–255, 1978.</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">Met13</a></span></dt>
-<dd><p>SJ Metcalfe. <em>A blow-up mechanism in boundary layer transition</em>. PhD thesis, Keele University, 2013.</p>
-</dd>
-</dl>
+<h2><span class="section-number">36.6. </span>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<p id="id3"><div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">CA78</a><span class="fn-bracket">]</span></span>
+<p>ADD Craik and JA Adam. Evolution in space and time of resonant wave triads-i. the'pump-wave approximation'. <em>Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences</em>, 363(1713):243–255, 1978.</p>
 </div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Met13</a><span class="fn-bracket">]</span></span>
+<p>SJ Metcalfe. <em>A blow-up mechanism in boundary layer transition</em>. PhD thesis, Keele University, 2013.</p>
+</div>
+</div>
+</p>
+</section>
+<section id="chapter-exercises">
+<h2><span class="section-number">36.7. </span>Chapter exercises<a class="headerlink" href="#chapter-exercises" title="Permalink to this heading">#</a></h2>
+<p>Find one example of fluid dynamics research that involved modelling a boundary layer, and write a tweet about it (280 characters). You could choose a piece of recent research or you could choose a historical example that you would like to bring to wider attention.</p>
 </section>
 </section>
 
@@ -744,17 +753,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="scaling.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="vorticity.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">34. </span>Scaling arguments</p>
+            <p class="prev-next-title"><span class="section-number">35. </span>Vortex transport</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="vorticity.html" title="next page">
+    <a class='right-next' id="next-link" href="waterwaves.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">36. </span>Vortex transport</p>
+        <p class="prev-next-title"><span class="section-number">37. </span>Unsteady: Water waves</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

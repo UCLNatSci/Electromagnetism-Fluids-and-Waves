@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>14. Mathematical Preliminaries &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="15. Electrostatics" href="electrostatics.html" />
     <link rel="prev" title="13. Introduction" href="introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -575,9 +577,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="mathematical-preliminaries">
-<h1><span class="section-number">14. </span>Mathematical Preliminaries<a class="headerlink" href="#mathematical-preliminaries" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">14. </span>Mathematical Preliminaries<a class="headerlink" href="#mathematical-preliminaries" title="Permalink to this heading">#</a></h1>
 <section id="flux">
-<h2><span class="section-number">14.1. </span>Flux<a class="headerlink" href="#flux" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.1. </span>Flux<a class="headerlink" href="#flux" title="Permalink to this heading">#</a></h2>
 <p>Lets think about a house pipe, as depicted in <a class="reference internal" href="#hosepipe"><span class="std std-numref">Fig. 14.1</span></a> with water of density <span class="math notranslate nohighlight">\(\rho\)</span>, moving through a hose pipe of cross sectional
 area <span class="math notranslate nohighlight">\(A\)</span> with a velocity of <span class="math notranslate nohighlight">\(\bf v\)</span>,</p>
 <figure class="align-default" id="hosepipe">
@@ -635,7 +637,7 @@ perpendicular <span class="math notranslate nohighlight">\(\bf F_\perp\)</span> 
 \[\Phi = \iint_A \left({\bf F} \cdot {\bf n}\right) \,\mathrm{d} A = \iint_A {\bf F} \cdot \mathrm{d} {\bf A}\]</div>
 </section>
 <section id="divergence-and-stokes-theorems">
-<h2><span class="section-number">14.2. </span>Divergence and Stokes Theorems<a class="headerlink" href="#divergence-and-stokes-theorems" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.2. </span>Divergence and Stokes Theorems<a class="headerlink" href="#divergence-and-stokes-theorems" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>For a vector field <span class="math notranslate nohighlight">\(\bf F\)</span> within some volume <span class="math notranslate nohighlight">\(V\)</span>, bounded by a surface area <span class="math notranslate nohighlight">\(A\)</span> with surface normal <span class="math notranslate nohighlight">\(\bf n\)</span>, as depicted in
 <a class="reference internal" href="#divergencetheorem"><span class="std std-numref">Fig. 14.5</span></a>, then we can relate:</p></li>
@@ -661,7 +663,7 @@ perpendicular <span class="math notranslate nohighlight">\(\bf F_\perp\)</span> 
 </figure>
 </section>
 <section id="helmholtz-decomposition">
-<h2><span class="section-number">14.3. </span>Helmholtz Decomposition<a class="headerlink" href="#helmholtz-decomposition" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">14.3. </span>Helmholtz Decomposition<a class="headerlink" href="#helmholtz-decomposition" title="Permalink to this heading">#</a></h2>
 <p>The Helmholtz decomposition, shown in Equation <a class="reference internal" href="#equation-helmholtzdecomp">(14.1)</a> states that a suitably smooth vector field <span class="math notranslate nohighlight">\(\bf F\)</span> can, in general, be decomposed
 into two components:</p>
 <div class="math notranslate nohighlight" id="equation-helmholtzdecomp">

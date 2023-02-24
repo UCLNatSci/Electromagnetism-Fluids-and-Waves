@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>16. Solving Electrostatic Systems &#8212; Electromagnetism, Fluids and Waves</title>
     
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -37,7 +37,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
@@ -53,14 +55,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="17. Energy in an Electric Field" href="Efieldenergy.html" />
     <link rel="prev" title="15. Electrostatics" href="electrostatics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -279,18 +281,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/potential.html">
-   29. The velocity potential
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../fluids/conservation.html">
-   30. Conservation law derivations
+   29. Conservation law derivations
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/navstok.html">
-   31. Shear stress and viscosity
+   30. Shear stress and viscosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/scaling.html">
+   31. Scaling arguments
   </a>
  </li>
  <li class="toctree-l1">
@@ -299,23 +301,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/potential.html">
+   33. The velocity potential
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../fluids/bernoulli.html">
-   33. Bernoulli’s equation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/scaling.html">
-   34. Scaling arguments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fluids/asymptotic.html">
-   35. Perturbations and asymptotics
+   34. Bernoulli’s equation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../fluids/vorticity.html">
-   36. Vortex transport
+   35. Vortex transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fluids/asymptotic.html">
+   36. Perturbations and asymptotics
   </a>
  </li>
  <li class="toctree-l1">
@@ -657,9 +659,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="solving-electrostatic-systems">
-<h1><span class="section-number">16. </span>Solving Electrostatic Systems<a class="headerlink" href="#solving-electrostatic-systems" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">16. </span>Solving Electrostatic Systems<a class="headerlink" href="#solving-electrostatic-systems" title="Permalink to this heading">#</a></h1>
 <section id="the-tools">
-<h2><span class="section-number">16.1. </span>The Tools<a class="headerlink" href="#the-tools" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.1. </span>The Tools<a class="headerlink" href="#the-tools" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Our first tool for solving electric field system is <em>Gauss’s law</em>:</p></li>
 </ul>
@@ -683,7 +685,7 @@ understand the charge distribution enclosed by this area, <span class="math notr
 <p>and understanding the spatial distribution of <span class="math notranslate nohighlight">\(Q\)</span> can help us to calculate this integral.</p>
 </section>
 <section id="spheres-of-charge">
-<h2><span class="section-number">16.2. </span>Spheres of Charge<a class="headerlink" href="#spheres-of-charge" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.2. </span>Spheres of Charge<a class="headerlink" href="#spheres-of-charge" title="Permalink to this heading">#</a></h2>
 <p>Lets consider the case of a spherical insulator (the key idea here being the charges are fixed), which carries a net charge of <span class="math notranslate nohighlight">\(+Q\)</span>.  In the first
 instance we consider that the charge is uniformly distributed throughout the sphere, which has some radius <span class="math notranslate nohighlight">\(a\)</span>, as can be seen in <a class="reference internal" href="#sphericalinsulator"><span class="std std-numref">Fig. 16.1</span></a></p>
 <figure class="align-default" id="sphericalinsulator">
@@ -760,7 +762,7 @@ present at the boundary, although very different radial dependencies <span class
 </figure>
 </section>
 <section id="conductors">
-<h2><span class="section-number">16.3. </span>Conductors<a class="headerlink" href="#conductors" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.3. </span>Conductors<a class="headerlink" href="#conductors" title="Permalink to this heading">#</a></h2>
 <p>If we place a conductor in an exterior electric field, the mobile charge carriers now have the possibility to move.  This system seeks
 to reach an equilibrium to minimise their energy configuration.  The total electric field inside the conductor is made up of:</p>
 <div class="math notranslate nohighlight">
@@ -777,7 +779,7 @@ to reach an equilibrium to minimise their energy configuration.  The total elect
 </figure>
 </section>
 <section id="sheets-of-charge">
-<h2><span class="section-number">16.4. </span>Sheets of Charge<a class="headerlink" href="#sheets-of-charge" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.4. </span>Sheets of Charge<a class="headerlink" href="#sheets-of-charge" title="Permalink to this heading">#</a></h2>
 <p>We can consider a uniform infinite sheet of charge, carrying a total charge <span class="math notranslate nohighlight">\(Q\)</span> over an area <span class="math notranslate nohighlight">\(A_{tot}\)</span>, with a uniform
 charge for unit area <span class="math notranslate nohighlight">\(\sigma = Q/A_{tot}\)</span>.  Here we want to find a Gauss’s law surface to find the flux crossing,
 for a sheet like this we can pick a cylinder, as we see in <a class="reference internal" href="#sheetofcharge"><span class="std std-numref">Fig. 16.5</span></a>.</p>
@@ -811,7 +813,7 @@ product looks like</p>
    \end{cases}\end{split}\]</div>
 </section>
 <section id="capacitors">
-<h2><span class="section-number">16.5. </span>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.5. </span>Capacitors<a class="headerlink" href="#capacitors" title="Permalink to this heading">#</a></h2>
 <p>A good example for a system where sheets of charge play a role is a capacitor, which we can think of as two sheets of charge, each one carrying an
 equal and opposite sets of charges <span class="math notranslate nohighlight">\(\pm Q\)</span> as depicted in <a class="reference internal" href="#capacitorelectricfield"><span class="std std-numref">Fig. 16.6</span></a>.  Obviously this system is idealised, because these sheets of
 charge are <em>finite</em> - however here we will ignore edge effects.</p>
@@ -847,7 +849,7 @@ therefore carry a bigger charge and therefore will result in a larger capacitanc
 <span class="math notranslate nohighlight">\(\epsilon_0 \rightarrow \epsilon = \epsilon_0(1+\chi_E)\)</span> within a medium, we can increase the capacitence.</p>
 </section>
 <section id="infinite-lines-of-charge">
-<h2><span class="section-number">16.6. </span>Infinite Lines of Charge<a class="headerlink" href="#infinite-lines-of-charge" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.6. </span>Infinite Lines of Charge<a class="headerlink" href="#infinite-lines-of-charge" title="Permalink to this heading">#</a></h2>
 <p>We can consider a uniform infinite line of charges, with charge per unit length <span class="math notranslate nohighlight">\(\lambda\)</span>.  Again consider a cylinder as our Gauss’s law surface area for
 flux to cross, but the normal vector now is directed in the radial direction away from the charges and its the long side area that we are concerned with,
 as depicted in <a class="reference internal" href="#lineofcharge"><span class="std std-numref">Fig. 16.7</span></a>.</p>
@@ -869,7 +871,7 @@ area is given by <span class="math notranslate nohighlight">\(\lambda L\)</span>
 this expression.</p>
 </section>
 <section id="finite-lines-of-charge">
-<h2><span class="section-number">16.7. </span>Finite Lines of Charge<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.7. </span>Finite Lines of Charge<a class="headerlink" href="#finite-lines-of-charge" title="Permalink to this heading">#</a></h2>
 <p>Equation <a class="reference internal" href="#equation-infinitechargelineefield">(16.1)</a> is only true for an infinite line of charge, if we have a finite collection of charges, as depicted in
 <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, then we loose some of the symmetries of the system, however the superposition method is a better way to proceed here.</p>
 <figure class="align-default" id="finitelineofcharge">
@@ -879,7 +881,7 @@ this expression.</p>
 </figcaption>
 </figure>
 <section id="semicircular-arc">
-<h3><span class="section-number">16.7.1. </span>Semicircular Arc<a class="headerlink" href="#semicircular-arc" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">16.7.1. </span>Semicircular Arc<a class="headerlink" href="#semicircular-arc" title="Permalink to this heading">#</a></h3>
 <p>Lets start with a simpler problem first though, a semicircular arc of charge, as depicted in <a class="reference internal" href="#semicirculararcofcharge"><span class="std std-numref">Fig. 16.9</span></a></p>
 <figure class="align-default" id="semicirculararcofcharge">
 <img alt="../_images/SemiCircularArcofCharge.png" src="../_images/SemiCircularArcofCharge.png" />
@@ -918,7 +920,7 @@ these infitesimal charge elements as point charges, the magnitude of the electri
 {\bf E} &amp;=\,  \frac{\lambda}{4\,\epsilon_0\,L}  \Big[\sin(\theta)\,\hat{\bf i} - \cos(\theta)\,\hat{\bf j}\Big]_{-\pi/2}^{\pi/2} = \frac{\lambda}{2\,\epsilon_0\,L} \,\hat{\bf i} + 0\,\hat{\bf j}\end{split}\]</div>
 </section>
 <section id="rectilinear-rod">
-<h3><span class="section-number">16.7.2. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">16.7.2. </span>Rectilinear Rod<a class="headerlink" href="#rectilinear-rod" title="Permalink to this heading">#</a></h3>
 <p>Lets return to the rod in <a class="reference internal" href="#finitelineofcharge"><span class="std std-numref">Fig. 16.8</span></a>, we can set this system up in <a class="reference internal" href="#finitelineofcharge2"><span class="std std-numref">Fig. 16.11</span></a>, trying to make the rod as symmetric as possible:</p>
 <figure class="align-default" id="finitelineofcharge2">
 <img alt="../_images/FiniteLineOfCharges3.png" src="../_images/FiniteLineOfCharges3.png" />
@@ -964,7 +966,7 @@ field at a distance <span class="math notranslate nohighlight">\(R\)</span> from
 </section>
 </section>
 <section id="bf-d-field">
-<h2><span class="section-number">16.8. </span><span class="math notranslate nohighlight">\({\bf D}\)</span> Field*<a class="headerlink" href="#bf-d-field" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">16.8. </span><span class="math notranslate nohighlight">\({\bf D}\)</span> Field*<a class="headerlink" href="#bf-d-field" title="Permalink to this heading">#</a></h2>
 <p>We find it is possible to have conductors carry a net charge, say <span class="math notranslate nohighlight">\(+Q\)</span>, however electrostatic fields do not permeate far through a conductor, the charge is
 essentially carried at the surface.  If we have an oscillating electric field <span class="math notranslate nohighlight">\({\bf E}(\omega)\)</span>, then the <b>Skin Effect</b> is observed in a conductor and
 there is a measurable <b>Skin Depth</b>, <span class="math notranslate nohighlight">\(\delta(\omega)\)</span> of the field in the conductor.</p>

@@ -10,11 +10,11 @@
 # ## What is a **field**?
 # A field is a map of a physical quantity at each point in space and time. You are probably already familiar with graphical representations of fields, via the example of weather maps showing temperature, pressure and wind velocity :
 # 
-# | Physical quantity      | Example notation | Type of field     |
-# | :---        |    :----:   |          ---: | ---: |
-# | Temperature | $T(x,y,z,t)$       | Scalar (magnitude only)  |
-# | Pressure | $p(x,y,z,t)$       | Scalar (magnitude only)  |
-# | Wind velocity  | $\underline{u}(x,y,z,t)$        | Vector (magnitude and direction) |
+# | Physical quantity | Example notation         | Type of field                    |
+# | :---              |    :----:                |              ---:                |
+# | Temperature       | $T(x,y,z,t)$             | Scalar (magnitude only)          |
+# | Pressure          | $p(x,y,z,t)$             | Scalar (magnitude only)          |
+# | Wind velocity     | $\underline{u}(x,y,z,t)$ | Vector (magnitude and direction) |
 # 
 # A **scalar field** can be represented using a surface plot, contour plot, or a colour/grayscale map. On weather maps the pressure is normally represented using contours (called pressure isobars) and the temperature is normally represented using a colour map. The example below shows a grayscale map of the scalar field defined by
 # \begin{equation}
@@ -96,6 +96,7 @@ plt.show()
 
 
 # In the case where the field represents velocity of a fluid, the field lines are known as "streamlines". In the next chapter we will discuss the difference between *streamlines*, *streaklines* and *particle paths*,for the case where the fluid velocity is a time-dependent field $\underline{u}(\underline{x},t)$.
+# 
 # 
 # ````{exercise}
 # :label: streamlinesq
@@ -210,7 +211,7 @@ glue("saddle_fig", fig, display=False)
 # <br>
 # 
 # (dir-deriv)=
-# ## The directional derivative
+# ## Directional derivative
 # 
 # According to the multivariate chain rule for a scalar function $\phi(\underline{x})$, where $\underline{x}=(x(s),y(s),z(s))$,
 # 
@@ -220,23 +221,25 @@ glue("saddle_fig", fig, display=False)
 # 
 # ```{math}
 # :label: mvarchain
-# \frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{u}, \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right),
+# \frac{\mathrm{d}\phi}{\mathrm{d}s} = (\nabla\phi).\underline{u},
 # ```
 # 
-# where the gradient $\nabla\phi$ is given by
+# where the gradient $\nabla\phi$ and direction vector $\underline{u}$ are given by
 # 
 # ```{math}
 # :label: gradient
-# \nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right).
+# \nabla\phi = \left(\frac{\partial\phi}{\partial x},\frac{\partial\phi}{\partial y},\frac{\partial\phi}{\partial z}\right), \qquad \underline{u}=\left(\frac{\mathrm{d}x}{\mathrm{d}s},\frac{\mathrm{d}y}{\mathrm{d}s},\frac{\mathrm{d}z}{\mathrm{d}s}\right).
 # ```
 # 
 # Formula {eq}`mvarchain` looks strikingly similar to the one-dimensional chain rule, with the factor $\nabla\phi$ capturing variations in $\phi$ due to $\underline{x}$ and the second factor $\underline{u}$ capturing variations in $\underline{x}$ due to $s$.  
 # 
-# If we evaluate $\nabla\phi$ at a given point $\underline{x}_0$, the multivariate chain rule gives us the rate of change of $\phi$ in direction $\underline{u}$ at the point. Since the parameterisation $\underline{x}(s)$ is arbitrary, we can choose a direction that we are interested in. This result is called the *directional derivative*. It is usually assumed that $\underline{u}$ is a unit vector, so the result may be denoted as follows:
+# If we evaluate $\nabla\phi$ at a given point $\underline{x}_0$, the multivariate chain rule gives us the rate of change of $\phi$ in direction $\underline{u}$ at the point. 
+# 
+# Since the parameterisation $\underline{x}(s)$ is arbitrary, we can choose a direction that we are interested in. This result is called the *directional derivative*. It is usually assumed that $\underline{u}$ is a unit vector, so the result may be denoted as follows:
 # 
 # \begin{equation}D_{\hat{\underline{u}}}(\phi)=(\nabla\phi).\hat{\underline{u}}\end{equation}.
 # 
-# Notice that the result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.
+# The result is simply the projection of the gradient vector onto the direction that we are intested in. The gradient vector characterises the local rates of change parallel to each axis.
 # 
 # ```{exercise}
 # :label: ex-dir_deriv
@@ -252,7 +255,7 @@ glue("saddle_fig", fig, display=False)
 # $D_{\underline{u}}\phi\biggr|_{\underline{x}_0}=\frac{1}{13}(3,-4,12).(12,-8,-6)=-\frac{68}{13}$
 # ```
 # 
-# ## The gradient direction
+# ## Gradient
 # 
 # **The gradient is perpendicular to the level sets**  
 # Since level sets are defined by the relationship $\phi=c$, differentiation gives $\frac{\mathrm{d}\phi}{\mathrm{d}s}=0$. Using the result {eq}`mvarchain`, we find that on a level set
@@ -271,8 +274,10 @@ glue("saddle_fig", fig, display=False)
 # 
 # The result is largest when $\theta=0$. Therefore, $\nabla \phi$ points in the direction of maximum increase of the function $\phi$ and has magnitude equal to the rate of maximum increase.  
 # 
-# ````{exercise}
-# :label: pot-fun
+# 
+# 
+# ## Chapter exercises
+# 
 # Some velocity fields, called *potential fields*, may be defined as the gradient of a scalar potential $\phi(x,y,z)$. For example, the gravitational field $\underline{g}=(0,0,-g)$ can be made to satisfy $\underline{g}=\nabla\phi$ by taking $\phi=-gz$.
 # 
 # Consider a two-dimensional velocity field $\underline{u}=(u,v)$, which is defined by a potential function
@@ -283,53 +288,7 @@ glue("saddle_fig", fig, display=False)
 # * On the same plot, illustrate some of the contours of the scalar potential.
 # * In which direction are the contours of $\phi$, relative to $\underline{u}$ ?
 # 
-# The function needed to plot contours is part of the matplotlib library. Usage guidelines can be found [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contour.html).
-# ````
-
-# In[ ]:
-
-
-x=np.linspace(-2, 2, 30)
-y=np.linspace(-2, 2, 30)
-
-X,Y = np.meshgrid(x, y)  
-(U,V)=(1-2*X**2,-2*X*Y)*np.exp(-X**2-Y**2)
-
-# options to prettify the plot
-fig,ax=plt.subplots(figsize=(5,5))
-ax.axis([-2,2,-2,2])
-ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
-
-ax.quiver(X,Y,U,V)
-
-ax.contour(X,Y,X*np.exp(-X**2-Y**2),levels=10)
-
-glue("contour_fig", fig, display=False)
-
-
-# ````{toggle}
+# _Hint_ :
+# The function needed to plot contours is part of the matplotlib library. To get a contour plot of a scalar field $Z(X,Y)$ with 10 contour levels, you can type:
 # 
-# ```python
-# x=np.linspace(-2, 2, 30)
-# y=np.linspace(-2, 2, 30)
-# 
-# X,Y = np.meshgrid(x, y)  
-# (U,V)=(1-2*X**2,-2*X*Y)*np.exp(-X**2-Y**2)
-# 
-# # options to prettify the plot
-# fig,ax=plt.subplots(figsize=(5,5))
-# ax.axis([-2,2,-2,2])
-# ax.xaxis.set_ticks([]), ax.yaxis.set_ticks([])
-# 
-# ax.quiver(X,Y,U,V)
-# 
-# ax.contour(X,Y,X*np.exp(-X**2-Y**2),levels=10)
-# 
-# plt.show()
-# ```
-# 
-# ```{glue:} contour_fig
-# ```
-# 
-# The contours of the scalar function are perpendicular to the vector field.
-# ````
+# `plt.contour(X,Y,Z,levels=10)`
